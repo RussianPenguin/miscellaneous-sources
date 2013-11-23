@@ -1,0 +1,729 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\wiz.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\22_32x32_256.ico"
+IDI_ICON1               ICON    DISCARDABLE     "RES\\copy.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\icon3.ico"
+IDI_ICON4               ICON    DISCARDABLE     "res\\icon4.ico"
+IDI_ICON6               ICON    DISCARDABLE     "res\\icon6.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "1"
+    BEGIN
+        MENUITEM SEPARATOR
+    END
+END
+
+IDR_MENU2 MENU DISCARDABLE 
+BEGIN
+    POPUP "1"
+    BEGIN
+        MENUITEM "DOS",                         ID_1_DOS
+        MENUITEM "Win",                         ID_1_WIN1251
+        MENUITEM "KOI",                         ID_1_ISO
+    END
+END
+
+IDR_TEMPL MENU DISCARDABLE 
+BEGIN
+    POPUP "1"
+    BEGIN
+        MENUITEM "PAGE",                        ID_1_PAGE
+        MENUITEM "PERS",                        ID_1_PERS
+        MENUITEM "DATE",                        ID_1_DATEMMDD
+        MENUITEM "TIME",                        ID_1_TIME
+        MENUITEM "DAY",                         ID_1_DAYOFWEEK
+        MENUITEM "PATH",                        ID_1_PATH
+        MENUITEM "NAME",                        ID_1_FILENAME
+        MENUITEM "KB",                          ID_1_KB
+        MENUITEM "BOOKM_#",                     ID_1
+        MENUITEM "TEXT ",                       ID_1_TEXT
+        MENUITEM "USER ",                       ID_1_USER
+        MENUITEM "BOOKM_TEXT",                  ID_1_BOOKMARKTEXT
+        POPUP "Statistics (speed...)"
+        BEGIN
+            MENUITEM "SPEED",                       ID_1_SPEED
+            MENUITEM "?_SEC_PER_PAGE",              ID_1_AVERAGESPEED
+            MENUITEM "?_SEC_PER_100WORDS",          ID_1_AVERAGESPEED2
+            MENUITEM "?_WORDS_PER_10SEC",           ID_1_AVERAGESPEED3
+            MENUITEM "WORDS_IN_PAGE",               ID_1_WORDSINPAGE
+            MENUITEM "READ_PAGES",                  ID_1_READPAGES
+        END
+    END
+END
+
+IDR_MENU3 MENU DISCARDABLE 
+BEGIN
+    POPUP "1"
+    BEGIN
+        MENUITEM "Copy",                        ID_1_COPY
+        MENUITEM "to Bookmark(s)",              ID_1_BOOKMARK
+        MENUITEM "to File",                     ID_1_SAVETEXT
+        MENUITEM "to Memo",                     ID_1_MEMO
+        MENUITEM "Jump..",                      ID_1_JUMP
+        MENUITEM SEPARATOR
+        MENUITEM "Select A&ll",                 ID_1_SELECTALL
+        MENUITEM "Delete",                      ID_1_DELETE
+    END
+END
+
+IDR_ABOUT MENU DISCARDABLE 
+BEGIN
+    POPUP "1"
+    BEGIN
+        MENUITEM "&How to Register ?",          ID_1_HOWTOREGISTER
+        MENUITEM "Prices",                      ID_1_PRICES
+        MENUITEM "&Enter Registration Code",    ID_1_ENTERREGISTRATIONCODE
+        MENUITEM SEPARATOR
+        POPUP "Web &books storages "
+        BEGIN
+            MENUITEM "Moshkov's Lybrary \thttp://www.lib.ru", 
+                                                    ID_1_WEBBOOKSSTORAGE_WWWMOSHKOV
+
+            MENUITEM "Inkwell\thttp://.../inkwell", ID_1_WEBBOOKSSTORAGE_WWWINKWEELRU
+
+            MENUITEM "Sympad \thttp://www.sympad.net", 
+                                                    ID_1_WEBBOOKSSTORAGES_SYMPAD
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&WWW  home page",             ID_1_WWW
+        MENUITEM "Send &FeedBack",              ID_1_FEEDBAK_BAGREPORT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "11.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "res\\bitmap3.bmp"
+IDB_BITMAP4             BITMAP  DISCARDABLE     "res\\bitmap4.bmp"
+IDB_BITMAP8             BITMAP  DISCARDABLE     "RES\\logo.bmp"
+IDB_BITMAP6             BITMAP  DISCARDABLE     "res\\bitmap6.bmp"
+IDB_BITMAP7             BITMAP  DISCARDABLE     "res\\bitmap7.bmp"
+IDB_BITMAP9             BITMAP  DISCARDABLE     "res\\bitmap9.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 227, 184
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Memo"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Сохр. как",IDC_BUTTON21,5,164,50,14,0,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT8,3,4,222,154,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | NOT WS_BORDER | 
+                    WS_VSCROLL | WS_HSCROLL,WS_EX_STATICEDGE
+    PUSHBUTTON      "&Clear",IDC_BUTTON22,60,164,50,14,0,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Print",IDC_BUTTON23,22,170,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED,WS_EX_CLIENTEDGE
+    RTEXT           "Static",IDC_STATIC1,143,165,80,8
+    LTEXT           "Max = 30000",IDC_STATIC,186,175,38,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING2             "Quick Options"
+    IDS_STRING6             "History"
+    IDS_STRING9             "Charset"
+    IDS_FONT                "Choosing font"
+    IDS_STRING4             "dec string"
+    IDS_STRING3             "add string to viewrange"
+    IDS_STRING5             "open file"
+    IDS_STRING7             "Minimize"
+    IDS_STRING8             "Close"
+    IDS_STRING10            "Set / Clear bookmark"
+    IDS_STRING11            "Bokmarks"
+    IDS_STRING20            "&Copy"
+    IDS_STRING21            "&Memo"
+    IDS_STRING26            "Select all"
+    IDS_STRING23            "&Find"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING27            "Go to .."
+    IDS_STRING24            "&Save"
+    IDS_STRING25            "&Print"
+    IDS_STRING19            "Start Timer"
+    IDS_STRING30            "04VIhZPOkTHRgfHOjvUlwlteByOpjR7nPfJlivYVE87ohZVJcau2jLYVcbH2cBNG8nAlcCDJhbdKkTFWc8AloZ9zha9vgytec8Alc8Alc8Alc8Alc8Alc8Alc8Alc8AlFqAuFImWifAOByNlc8Alc8Alc8Alc8Alc8Alc8Alc8Alc87SkMy1cD7mkLKScBcTByNlc8Alc8Alc8Alc8Alc8Alc8Alc8Alc87oiaKzjvV2kv9vcCDzhfmmjLHKkltec8Alc8Alc8Alc8Alc8Alc8Alc8Alc8AleBAtFqcOcBktEoluEoJ3ByNG8J9RcDGKhI7NhZ43cbH2kaKqcah2kn70jTdKcaK1hL61"
+    IDS_STRING32            "KlPGgZHIhZDJhfclkvK1hv4Kca4OgvY1kvplkbdOgvK1hSNG8ltec8AldBpG8l=="
+    IDS_STRING33            "LHObjv9JcaKJhZDScaD1h87phfGtiZVMwltec8AlHfPMhZVVcDdmgL0OjlteByO7jaP2kLKtiauSwltec8AlYnVFgZ0SiauOcCVmkLDSiZuNgZUG8nAlcCG2haYbPfducDPKgKGOPapG8lteIZumhvYScCHKkvKMjqNG8nAlcCKMjTclHfhJjv0OjZ9v"
+    IDS_STRING34            "NAYpiaD1iTFlhL9RcDdKhvKSPbdmPaK2jnAm"
+    IDS_STRING35            "aphpiaKScb7RjvPRgZtlifFlkbd2PLKJhZylPa6lQZ9ucah2kn7KPLDzPZDtiZ91cb7ukM72kvYSElteByOdhn7VjTplhLK1h87GgZHIhZDJhfclPfGKhMYzcaD1h87TifGNcbH2caG2jMHOjMYKcbYSiZVMcaKtE873jaYmkvpG8LhOjLylPamKcbHOjZplPa6lkLYMifGthfclify1cCKLcbK2PI7JjvVtcbPmjMylPa6lPfGKcbHNhI73kL9MkLD0caD1QI7LPfHNhfczByO3jaYmkvplkLY0jThKcaKtkR7qjT7VcahRjvtlQZ9ukn7JifGscbPOPamOjn7tiaplkaYRiZ9JcbGtgfHKh87OjlteYamKcC4OgvY1gvplyZPRhZY0hZVtEl=="
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WIZ_DIALOG DIALOGEX 0, 0, 346, 12
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_STATICEDGE | WS_EX_APPWINDOW
+FONT 9, "Arial"
+BEGIN
+    PUSHBUTTON      "Color",ID_COLOR,0,0,18,12,BS_BITMAP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Bookmark",IDC_BUTTON1,33,0,69,12,BS_LEFT | NOT 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "^",IDC_hist2,101,0,10,12,BS_BITMAP | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Open",IDC_OPEN,127,0,20,12,BS_BITMAP,WS_EX_STATICEDGE
+    PUSHBUTTON      "^",IDC_hist,146,0,10,12,BS_BITMAP | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "encode",IDC_code,178,0,20,12,BS_LEFT,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT1,198,0,64,12,ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "hide",ID_hide,306,0,18,12,BS_BITMAP | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Exit",ID_close,328,0,17,12,BS_BITMAP | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    LTEXT           "0% - 0 page",IDC_STATIC3,268,2,37,10
+END
+
+IDD_DIALOGBAR DIALOGEX 0, 0, 227, 183
+STYLE DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Ask for Bookmark text",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,16,91,10,0,HIDC_CHECK1
+    CONTROL         "Lock Screensaver",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,27,88,10,0,HIDC_CHECK2
+    CONTROL         "Show Tool tips",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,38,81,10,0,HIDC_CHECK3
+    CONTROL         "Big icons (menu)",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,60,87,10,0,HIDC_CHECK7
+    CONTROL         "Show flat bookmarks",IDC_CHECK5,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,49,92,10,0,HIDC_CHECK5
+    CONTROL         "Open last file at Startup",IDC_CHECK9,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,111,16,87,10,0,HIDC_CHECK9
+    CONTROL         "Go to last bookm...",IDC_CHECK10,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,120,26,87,10,0,HIDC_CHECK10
+    CONTROL         "AM/PM time format",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,38,94,10,0,HIDC_CHECK11
+    EDITTEXT        IDC_EDIT1,182,139,35,13,ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    ES_NUMBER | NOT WS_VISIBLE,0,HIDC_EDIT1
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK | NOT WS_VISIBLE,207,142,8,14,0,HIDC_SPIN2
+    EDITTEXT        IDC_EDIT3,13,93,33,13,ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    ES_NUMBER,0,HIDC_EDIT3
+    CONTROL         "Spin2",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK,34,92,8,14,0,HIDC_SPIN3
+    LTEXT           "Strings in 1 Page :",IDC_STATIC0,173,142,54,8,NOT 
+                    WS_VISIBLE,0,HIDC_STATIC0
+    LTEXT           "sec.",IDC_STATIC,49,98,14,8,0,0,HIDC_STATIC
+    GROUPBOX        " Options: ",IDC_STATIC,3,6,220,69,0,0,HIDC_STATIC
+    LTEXT           "Press <Ctrl> for context Help",IDC_STATICH,3,173,150,8,
+                    NOT WS_VISIBLE
+    GROUPBOX        "",IDC_STATIC,4,80,90,74,0,0,HIDC_STATIC
+    CONTROL         "Start Timer",IDC_CHECK15,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,120,139,49,10
+    CONTROL         "Reading pointer",IDC_CHECK16,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,140,65,10
+    COMBOBOX        IDC_COMBO5,165,85,51,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Info position:",IDC_STATIC5,124,88,38,8
+    CONTROL         "1 page",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,13,112,
+                    37,10
+    CONTROL         "",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,133,168,8,8
+    CONTROL         "",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,13,126,8,8
+    CONTROL         "Page runner",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,79,49,10
+    EDITTEXT        IDC_EDIT23,142,166,33,13,ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    ES_NUMBER | NOT WS_VISIBLE
+    CONTROL         "Spin1",IDC_SPIN11,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK | NOT WS_VISIBLE,168,169,8,14
+    EDITTEXT        IDC_EDIT24,22,124,33,13,ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN12,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK,46,129,8,14
+    LTEXT           "bytes",IDC_STATIC,178,171,18,8,NOT WS_VISIBLE,0,
+                    HIDC_STATIC
+    LTEXT           "words",IDC_STATIC,58,128,19,8,0,0,HIDC_STATIC
+    COMBOBOX        IDC_COMBO6,165,101,51,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Panel position:",IDC_STATIC6,117,103,45,8
+    LTEXT           "* (need restart)",IDC_STATIC7,167,113,45,8
+    CONTROL         "Use previlious instance",IDC_CHECK18,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,110,50,109,
+                    10
+END
+
+IDD_DIALOGBAR1 DIALOGEX 0, 0, 146, 18
+STYLE DS_SYSMODAL | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Bookmark text"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT2,2,2,121,12,ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "Ok",IDOK,125,1,19,14,0,WS_EX_STATICEDGE
+END
+
+IDD_DIALOGBAR2 DIALOGEX 0, 0, 225, 182
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_CHILD | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Printer"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO3,132,9,84,55,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Choose Font",IDC_BUTTON2,13,33,50,14,0,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT7,11,66,170,12,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "?",IDC_BUTTON1,185,66,12,12,0,WS_EX_STATICEDGE
+    GROUPBOX        "Margins",IDC_STATIC,34,115,149,43,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    LTEXT           "Left:",IDC_STATIC,53,127,13,8,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT2,68,124,31,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_VISIBLE | WS_DISABLED | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    LTEXT           "Right:",IDC_STATIC,49,142,18,8,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT6,68,140,31,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_VISIBLE | WS_DISABLED | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    LTEXT           "Top:",IDC_STATIC,123,127,15,8,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT9,143,124,31,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_VISIBLE | WS_DISABLED | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    LTEXT           "Bottom:",IDC_STATIC,116,142,24,8,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    EDITTEXT        IDC_EDIT8,143,140,31,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_VISIBLE | WS_DISABLED | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    GROUPBOX        "&Fonts",IDC_STATIC,4,19,213,68
+    LTEXT           "Item:",IDC_STATIC,110,11,15,8
+    LTEXT           "Font sample",IDC_STATIC1,68,27,147,27,SS_CENTERIMAGE
+    LTEXT           "Template:",IDC_STATIC2,12,57,32,8
+    LTEXT           "Press <Ctrl> for context Help",IDC_STATICH,3,173,150,8,
+                    NOT WS_VISIBLE
+END
+
+IDD_DIALOGBAR3 DIALOGEX 0, 0, 225, 183
+STYLE DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Find"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT20,47,7,171,12,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Find",IDC_BUTTON9,182,29,37,12,WS_DISABLED,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Find all",IDC_BUTTON4,182,74,37,12,WS_DISABLED,
+                    WS_EX_STATICEDGE
+    CONTROL         "Up",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,119,38,25,10
+    CONTROL         "Down",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,119,48,31,
+                    10
+    CONTROL         "List2",IDC_LIST2,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | NOT WS_VISIBLE | 
+                    WS_GROUP | WS_TABSTOP,8,75,171,92,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Bookm...",IDC_BUTTON8,182,44,37,12,WS_DISABLED,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "?",IDC_BUTTON1,18,47,12,12,NOT WS_VISIBLE | WS_DISABLED,
+                    WS_EX_STATICEDGE
+    GROUPBOX        "Direction",IDC_STATIC,112,27,52,34
+    LTEXT           "Find What:",IDC_STATIC,11,9,33,8
+    PUSHBUTTON      "Stop",IDC_BUTTON6,53,52,37,12,NOT WS_VISIBLE | 
+                    WS_DISABLED,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT2,8,73,171,9,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,69,213,1
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",NOT 
+                    WS_VISIBLE,7,73,167,9
+    LTEXT           "Press <Ctrl> for context Help",IDC_STATICH,137,175,86,8,
+                    NOT WS_VISIBLE
+    CONTROL         "Match case",IDC_CHECK17,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,32,51,10
+END
+
+IDD_DIALOGBAR5 DIALOGEX 0, 0, 225, 183
+STYLE DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "About , Registration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Registration , WWW , ...",IDC_BUTTON25,4,153,58,26,
+                    BS_MULTILINE,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT1,104,71,109,12,ES_RIGHT | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT21,82,97,131,82,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | 
+                    WS_VSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,101,52,116,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,82,92,135,1
+    RTEXT           "MadReader version 1.1 (20.08.2000)\nAuthor and Programming: Alex Shilonosov.\n\n© 2000,2001 Alex Shilonosov",
+                    IDC_STATIC1,89,14,124,33
+    RTEXT           "Registered to:",IDC_STATIC,167,57,46,8
+    CONTROL         "",IDC_STATIC5,"Static",SS_BITMAP,5,9,75,67
+    EDITTEXT        IDC_EDIT4,75,109,139,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT5,75,138,140,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "Licence owner:",IDC_STATIC2,74,99,52,8,NOT WS_VISIBLE
+    LTEXT           "MadReader Key:",IDC_STATIC3,75,128,52,8,NOT WS_VISIBLE
+    PUSHBUTTON      "Ok",IDC_BUTTON1,165,155,50,14,NOT WS_VISIBLE,
+                    WS_EX_STATICEDGE
+END
+
+IDD_DIALOGBAR6 DIALOGEX 0, 0, 225, 183
+STYLE DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Fonts..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO4,127,17,84,55,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Font",IDC_BUTTON2,11,34,26,14,0,WS_EX_STATICEDGE
+    CONTROL         "clr",IDC_BUTTON14,"Button",BS_OWNERDRAW | WS_TABSTOP,44,
+                    35,18,12
+    CONTROL         "bk",IDC_BUTTON13,"Button",BS_OWNERDRAW | WS_TABSTOP,66,
+                    35,18,12
+    COMBOBOX        IDC_COMBO3,125,68,84,55,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT7,11,86,182,27,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | NOT WS_BORDER | 
+                    WS_VSCROLL,WS_EX_STATICEDGE
+    PUSHBUTTON      "?",IDC_BUTTON1,195,102,12,11,0,WS_EX_STATICEDGE
+    LTEXT           "Font sample / образец",IDC_STATIC1,88,33,122,19,
+                    SS_CENTERIMAGE
+    GROUPBOX        "Fonts",IDC_STATIC,6,6,210,48
+    GROUPBOX        "Templaits ",IDC_STATIC,5,59,210,59
+    LTEXT           "Item:",IDC_STATIC,106,71,15,8
+    LTEXT           "Item:",IDC_STATIC,107,19,15,8
+    LTEXT           "Press <Ctrl> for context Help",IDC_STATICH,3,173,150,8,
+                    NOT WS_VISIBLE
+END
+
+IDD_GOTO DIALOGEX 0, 0, 188, 61
+STYLE DS_SYSMODAL | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Go To "
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT2,71,7,47,12,ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_HOTTRACK,118,3,11,19
+    PUSHBUTTON      "Ok",IDOK,138,25,44,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON23,138,44,44,14
+    CONTROL         "Page",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,14,11,33,
+                    10
+    CONTROL         "Percent",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,14,22,
+                    39,10
+    CONTROL         "Offset",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,14,33,33,
+                    10
+    DEFPUSHBUTTON   "Go To...",IDC_BUTTON21,138,6,44,14
+    GROUPBOX        "Mode",IDC_STATIC,3,1,63,46
+    LTEXT           "Static",IDC_STATIC20,5,48,132,8
+END
+
+IDD_REG DIALOG DISCARDABLE  0, 0, 290, 90
+STYLE DS_SYSMODAL | DS_3DLOOK | WS_POPUP | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Ok",IDOK,183,70,47,17
+    PUSHBUTTON      "Cancel",IDCANCEL,237,70,47,17
+    CTEXT           "This is Evaluated Version !",IDC_STATIC1,6,7,244,55
+    ICON            IDR_MAINFRAME,IDC_STATIC,261,17,20,20
+    LTEXT           "30 days left.",IDC_STATIC2,9,73,106,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOGBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 223
+        VERTGUIDE, 9
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_DIALOGBAR1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 139
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 11
+    END
+
+    IDD_DIALOGBAR2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOGBAR3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_DIALOGBAR5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        VERTGUIDE, 69
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_DIALOGBAR6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 218
+        VERTGUIDE, 69
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_GOTO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_REG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOGBAR2 DLGINIT
+BEGIN
+    IDC_COMBO3, 0x403, 12, 0
+0x6548, 0x6461, 0x7265, 0x7420, 0x7865, 0x0074, 
+    IDC_COMBO3, 0x403, 13, 0
+0x6f43, 0x746e, 0x6e65, 0x2074, 0x6574, 0x7478, "\000" 
+    IDC_COMBO3, 0x403, 12, 0
+0x6f46, 0x746f, 0x7265, 0x7420, 0x7865, 0x0074, 
+    0
+END
+
+IDD_DIALOGBAR6 DLGINIT
+BEGIN
+    IDC_COMBO4, 0x403, 10, 0
+0x6946, 0x656c, 0x7420, 0x7865, 0x0074, 
+    IDC_COMBO4, 0x403, 10, 0
+0x6e49, 0x6f66, 0x7420, 0x7865, 0x0074, 
+    IDC_COMBO3, 0x403, 10, 0
+0x6e49, 0x6f66, 0x7420, 0x7865, 0x0074, 
+    IDC_COMBO3, 0x403, 15, 0
+0x654d, 0x6f6d, 0x7320, 0x7065, 0x7261, 0x7461, 0x726f, "\000" 
+    IDC_COMBO3, 0x403, 18, 0
+0x6f42, 0x6b6f, 0x616d, 0x6b72, 0x2820, 0x2031, 0x696c, 0x656e, 0x0029, 
+
+    IDC_COMBO3, 0x403, 15, 0
+0x6153, 0x6576, 0x6620, 0x6c69, 0x2065, 0x616e, 0x656d, "\000" 
+    IDC_COMBO3, 0x403, 12, 0
+0x6957, 0x646e, 0x776f, 0x7420, 0x7865, 0x0074, 
+    0
+END
+
+IDD_DIALOGBAR DLGINIT
+BEGIN
+    IDC_COMBO5, 0x403, 9, 0
+0x6f54, 0x2070, 0x654c, 0x7466, "\000" 
+    IDC_COMBO5, 0x403, 11, 0
+0x6f54, 0x2070, 0x6952, 0x6867, 0x2074, "\000" 
+    IDC_COMBO5, 0x403, 7, 0
+0x6543, 0x746e, 0x7265, "\000" 
+    IDC_COMBO5, 0x403, 12, 0
+0x6f42, 0x7474, 0x6d6f, 0x4c20, 0x6665, 0x0074, 
+    IDC_COMBO5, 0x403, 14, 0
+0x6f42, 0x7474, 0x6d6f, 0x5220, 0x6769, 0x7468, 0x0020, 
+    IDC_COMBO6, 0x403, 4, 0
+0x6f54, 0x0070, 
+    IDC_COMBO6, 0x403, 7, 0
+0x6f42, 0x7474, 0x6d6f, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_POINTER_COPY        CURSOR  DISCARDABLE     "arrowcop.cur"
+IDC_POINTER_COPY1       CURSOR  DISCARDABLE     "res\\pointer_.cur"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\wiz.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

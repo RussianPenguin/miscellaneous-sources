@@ -1,0 +1,44 @@
+<APPLET CODE="SIRfileToTable.class" WIDTH=800 HEIGHT=341 ARCHIVE="SIRfileToTable.jar">
+<PARAM NAME="Title" VALUE="Houses for Sale">
+<PARAM NAME="TitleFont" VALUE="1">
+<PARAM NAME="BGcolor" VALUE="5">
+<PARAM NAME="LNcolor" VALUE="3">
+<PARAM NAME="TXTcolor" VALUE="1">
+<PARAM NAME="TXTfont" VALUE="1">
+<PARAM NAME="Brdrwidth" VALUE="1">
+<PARAM NAME="BrdrColor" VALUE="2">
+<PARAM NAME="nFonts" VALUE="3">
+<PARAM NAME="nColors" VALUE="6">
+<PARAM NAME="nColumns" VALUE="10">
+<PARAM NAME="maxRows" VALUE="100">
+<PARAM NAME="CellBGcolor" VALUE="5">
+<PARAM NAME="CellTXTcolor" VALUE="2">
+<PARAM NAME="Cellfont" VALUE="3">
+<PARAM NAME="Colfont" VALUE="2">
+<PARAM NAME="Delimiter" VALUE="|">
+<PARAM NAME="FileLocation" VALUE="flatfile1.txt">
+
+<PARAM NAME="FONT1" VALUE="Helvetica|B|16">
+<PARAM NAME="FONT2" VALUE="Helvetica|N|14">
+<PARAM NAME="FONT3" VALUE="Courier|N|14">
+
+<PARAM NAME="Color1" VALUE="255|255|255">
+<PARAM NAME="Color2" VALUE="0|0|0">
+<PARAM NAME="Color3" VALUE="30|30|191">
+<PARAM NAME="Color4" VALUE="115|115|255">
+<PARAM NAME="Color5" VALUE="103|143|255">
+<PARAM NAME="Color6" VALUE="50|50|50">
+
+<PARAM NAME="COL1" VALUE="Address|2|150|3|1">
+<PARAM NAME="COL2" VALUE="Asking Price|2|105|3|1">
+<PARAM NAME="COL3" VALUE="House Type|2|125|3|1">
+<PARAM NAME="COL4" VALUE="Situation|2|85|3|1">
+<PARAM NAME="COL5" VALUE="Reception Rooms|1|115|3|1">
+<PARAM NAME="COL6" VALUE="Bedrooms|1|105|3|1">
+<PARAM NAME="COL7" VALUE="Garage|2|105|3|1">
+<PARAM NAME="COL8" VALUE="Garden|2|105|3|1">
+<PARAM NAME="COL9" VALUE="Central Heating|2|105|3|1">
+<PARAM NAME="COL10" VALUE="Conservatory|2|105|3|1">
+
+
+</APPLET>

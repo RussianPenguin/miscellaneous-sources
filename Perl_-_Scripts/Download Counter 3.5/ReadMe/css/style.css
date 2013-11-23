@@ -1,0 +1,58 @@
+.IEform2 {
+	FONT-SIZE: 11px;
+	WIDTH: 155px;
+	HEIGHT: 20px
+}
+textarea {
+	font: 8pt Verdana, Arial, Helvetica, sans-serif
+}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif
+}
+
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif
+; font-size: 8pt
+}
+
+.send-button {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 8pt; 
+	font-weight: bold; 
+	color: #FFFFFF; 
+	background-color: #336666
+}
+
+a:visited {
+	color: #000066
+}
+
+.arial {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 8pt
+}
+
+a:link {  
+	color: #000076
+}
+
+a:active {  
+	color: #000066
+}
+
+A:visited.white {  color: #FFFFFF}
+A:link.white {  color: #FFFFFF}
+A:active.white {  color: #FFFFFF}
+
+A:visited.green {  color: #004600}
+A:link.green {  color: #004600}
+A:active.green {  color: #004600}
+
+A:visited.blue {  color: #000066}
+A:link.blue {  color: #000066}
+A:active.blue {  color: #000066}
+
+
+input { 
+	font: 8pt Verdana, Arial, Helvetica, sans-serif} 

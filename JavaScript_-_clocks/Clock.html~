@@ -1,0 +1,150 @@
+<html>
+	<head>
+	<title>
+		������ �� JavaScript
+	</title>
+	<script language="JavaScript">
+	<!-- hide
+		var browseOK = false;
+		var pics;
+		var points;
+		var ObjCount;
+		var timeStr;
+		var dateStr;
+		var sec = false;
+	// -->
+	</script>
+	<script language="JavaScript1.1">
+	<!--
+		browserOK = true;
+		pics = new Array();
+		points = new Array();
+		ObjCount = 0;
+	// -->
+	</script>
+	</script>
+	<script language="JavaScript">
+	<!-- hide
+		function preload(name, zero, one, two, three, fore, five, six, seven, eight, nine)
+		{
+			if(browserOK)
+			{
+				pics[ObjCount] = new Array(11);
+				pics[ObjCount][0] = new Image();
+				pics[ObjCount][0].src = zero;
+				pics[ObjCount][1] = new Image();
+				pics[ObjCount][1].src = one;
+				pics[ObjCount][2] = new Image();
+				pics[ObjCount][2].src = two;
+				pics[ObjCount][3] = new Image();
+				pics[ObjCount][3].src = three;
+				pics[ObjCount][4] = new Image();
+				pics[ObjCount][4].src = fore;
+				pics[ObjCount][5] = new Image();
+				pics[ObjCount][5].src = five;
+				pics[ObjCount][6] = new Image();
+				pics[ObjCount][6].src = six;
+				pics[ObjCount][7] = new Image();
+				pics[ObjCount][7].src = seven;
+				pics[ObjCount][8] = new Image();
+				pics[ObjCount][8].src = eight;
+				pics[ObjCount][9] = new Image();
+				pics[ObjCount][9].src = nine;
+				pics[ObjCount][10] = name;
+				ObjCount++;
+			}
+		}
+		function preloadpoint()
+		{
+			if(browserOK)
+			{
+				points[0] = new Array(2);
+				points[0][0] = new Image();
+				points[0][0].src = "white.GIF";
+				points[0][1] = new Image();
+				points[0][1].src = "points.GIF";
+			}
+		}
+		preload("one","0.GIF","1.GIF","2.GIF","3.GIF","4.GIF","5.GIF","6.GIF","7.GIF","8.GIF","9.GIF");
+		preload("two","0.GIF","1.GIF","2.GIF","3.GIF","4.GIF","5.GIF","6.GIF","7.GIF","8.GIF","9.GIF");
+		preload("three","0.GIF","1.GIF","2.GIF","3.GIF","4.GIF","5.GIF","6.GIF","7.GIF","8.GIF","9.GIF");
+		preload("fore","0.GIF","1.GIF","2.GIF","3.GIF","4.GIF","5.GIF","6.GIF","7.GIF","8.GIF","9.GIF");
+		preload("five","0.GIF","1.GIF","2.GIF","3.GIF","4.GIF","5.GIF","6.GIF","7.GIF","8.GIF","9.GIF");
+		preload("six","0.GIF","1.GIF","2.GIF","3.GIF","4.GIF","5.GIF","6.GIF","7.GIF","8.GIF","9.GIF");
+		preloadpoint();
+		function StartTime()
+		{
+			if(browserOK)
+			{
+				now = new Date();
+				// �����
+				hours = now.getHours();
+				hour1 = ((Math.ceil(hours/10)) > (hours/10) ? Math.ceil(hours/10) - 1 : Math.ceil(hours/10));
+				hour2 = hours - hour1*10;
+				minutes = now.getMinutes();
+				min1 = ((Math.ceil(minutes/10)) > (minutes/10) ? Math.ceil(minutes/10) - 1 : Math.ceil(minutes/10));
+				min2 = minutes - min1*10;
+				seconds = now.getSeconds();
+				sec1 = ((Math.ceil(seconds/10)) > (seconds/10) ? Math.ceil(seconds/10) - 1 : Math.ceil(seconds/10));
+				sec2 = seconds - sec1*10;
+				document.images[pics[0][10]].src = pics[0][((hour1 > 0) ? hour1 : 0)].src;
+				document.images[pics[1][10]].src = pics[1][((hour2 > 0) ? hour2 : 0)].src;
+				document.images[pics[2][10]].src = pics[2][((min1 > 0) ? min1 : 0)].src;
+				document.images[pics[3][10]].src = pics[3][((min2 > 0) ? min2 : 0)].src;
+				document.images[pics[4][10]].src = pics[4][((sec1 > 0) ? sec1 : 0)].src;
+				document.images[pics[5][10]].src = pics[5][((sec2 > 0) ? sec2 : 0)].src;
+				if(sec)
+				{
+					document.images["point1"].src = points[0][1].src;
+					document.images["point2"].src = points[0][1].src;
+					sec = false;
+				}
+				else
+				{
+					document.images["point1"].src = points[0][0].src;
+					document.images["point2"].src = points[0][0].src;
+					sec = true;
+				}
+				// �����
+				// date = now.getDate();
+				// month = now.getMonth() + 1;
+				// year = now.getYear() + 1900;
+			}
+			setTimeout("StartTime()",1000);
+		}
+	// -->
+	</script>
+</head>
+	<body onLoad="StartTime()" bgcolor=#000000>
+	<center>
+	<table border=0 cellspacing=0 cellpadding=0 bgcolor="000000">
+		<tr>
+			<td><!-- ���� -->
+				<img name="one" src="0.GIF">
+			</td>
+			<td>
+				<img name="two" src="0.GIF">
+			</td>
+			<td><!-- ����������� -->
+				<img name="point1" src="points.GIF">
+			</td>
+			<td><!-- ������ -->
+				<img name="three" src="0.GIF">
+			</td>
+			<td>
+				<img name="fore" src="0.GIF">
+			</td>
+			<td><!-- ����������� -->
+				<img name="point2" src="points.GIF">
+			</td>
+			<td><!-- ������� -->
+				<img name="five" src="0.GIF">
+			</td>
+			<td>
+				<img name="six" src="0.GIF">
+			</td>
+		</tr>
+	</table>
+	</center>
+	</body>
+</html>

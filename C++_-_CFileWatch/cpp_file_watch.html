@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body>
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h3 align="center"><font color="#a0a099">CFileWatch </font></h3>
+    <hr>
+    <p>Автор: <a href="mailto:herbertgriebel@yahoo.com">Herbert Griebel</a>.</p>
+    <p><img height="140" src="FileWatch.jpg" width="345"></p>
+    <p><u>Требования:</u> VC6 SP4 Win2000 </p>
+    <p>Данный класс поможет Вам отслеживать изменения
+    в файлах наподобие DevStudio. Если файл будет
+    модифицирован другим приложением, то выскочит
+    окошко информирующее Вас об этом.</p>
+    <p>Итак, внесём некоторые изменения в ViewClass и
+    DocumentClass:</p>
+    <p><u>В заголовок класса документа:</u></p>
+    <pre>class CFileWatchAppDoc : public CRichEditDoc
+{
+&nbsp;&nbsp;&nbsp; ....
+public:
+&nbsp;&nbsp;&nbsp; void OnFileReload();
+protected:
+&nbsp;&nbsp;&nbsp; DWORD m_hFileWatch;
+};</pre>
+    <p><u>В исходник класса документа:</u></p>
+    <pre>#include &quot;FileWatch.h&quot;
+
+CFileWatchAppDoc::CFileWatchAppDoc()
+{
+&nbsp;&nbsp;&nbsp; m_hFileWatch = NULL;
+}
+
+CFileWatchAppDoc::~CFileWatchAppDoc()
+{
+&nbsp;&nbsp;&nbsp; CFileWatch::RemoveHandle(m_hFileWatch);
+}
+
+BOOL CFileWatchAppDoc::OnSaveDocument(LPCTSTR lpszPathName)&nbsp;
+{
+&nbsp;&nbsp;&nbsp; CFileWatch::RemoveHandle(m_hFileWatch);
+&nbsp;&nbsp;&nbsp; BOOL bSuccess = CRichEditDoc::OnSaveDocument(lpszPathName);
+&nbsp;&nbsp;&nbsp; m_hFileWatch = CFileWatch::AddFileFolder(lpszPathName, NULL, 
+&nbsp;&nbsp;&nbsp;                                          this, 0);
+&nbsp;&nbsp;&nbsp; return bSuccess;
+}
+
+void CFileWatchAppDoc::SetPathName(LPCTSTR lpszPathName, 
+                                      BOOL bAddToMRU)
+{
+&nbsp;&nbsp;&nbsp; CFileWatch::RemoveHandle(m_hFileWatch);
+&nbsp;&nbsp;&nbsp; m_hFileWatch = CFileWatch::AddFileFolder(lpszPathName, 
+&nbsp;&nbsp;&nbsp;                                          NULL, this, 0);
+&nbsp;&nbsp;&nbsp; CRichEditDoc::SetPathName(lpszPathName, bAddToMRU);
+}
+
+void CFileWatchAppDoc::OnFileReload()
+{
+&nbsp;&nbsp;&nbsp; SetModifiedFlag(FALSE);
+&nbsp;&nbsp;&nbsp; if (CDocument::OnOpenDocument(GetPathName()))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UpdateAllViews(NULL);
+}</pre>
+    <p><u>В заголовочный файл view-класса:</u></p>
+    <p>&nbsp;</p>
+    <p>class CFileWatchAppView : public CRichEditView {&nbsp;&nbsp;&nbsp;&nbsp; ... protected:
+    &nbsp;&nbsp;&nbsp;&nbsp; //{{AFX_MSG(CFileWatchAppView) &nbsp;&nbsp;&nbsp;&nbsp;
+    //}}AFX_MSG&nbsp;&nbsp;&nbsp;&nbsp; afx_msg LRESULT OnFileWatchNotification(WPARAM
+    wParam,&nbsp;&nbsp;&nbsp;&nbsp; LPARAM lParam); &nbsp;&nbsp;&nbsp;&nbsp;
+    DECLARE_MESSAGE_MAP() }; </p>
+    <p><u>В исходник view-класса:</u></p>
+    <pre>BEGIN_MESSAGE_MAP(CFileWatchAppView, CRichEditView)
+  //{{AFX_MSG_MAP(CFileWatchAppView)
+  //}}AFX_MSG_MAP
+  ON_THREAD_MESSAGE(WM_FILEWATCH_NOTIFY, OnFileWatchNotification)
+END_MESSAGE_MAP()
+
+LRESULT CFileWatchAppView::OnFileWatchNotification(WPARAM wParam, 
+                                                   LPARAM lParam)
+{
+&nbsp;&nbsp;&nbsp; LPCTSTR lpszPathName = (LPCTSTR)lParam;
+
+    if (AfxMessageBox(GetDocument()-&gt;GetPathName()+
+         &quot;\n\nThis file has been modified outside of the editor.&quot; +
+         &quot;\nDo you want to reload it and lose all the changes made?&quot;,
+         MB_YESNO|MB_ICONQUESTION)==IDYES)
+
+              GetDocument()-&gt;OnFileReload();
+
+&nbsp;&nbsp;&nbsp; return 0;
+}</pre>
+    <p><b>Будьте осторожны:</b> Тестовая функция <b>void
+    CFileWatchAppDoc::OnFileModify()</b> не будет работать!</p>
+    <p>&nbsp;</p>
+    <h3>Downloads</h3>
+    <a href="FileWatchApp.zip"><p>Скачать демонстрационный проект
+    - 60 Kb</a><br>
+    <a href="FileWatchSource.zip">Скачать исходник - 3 Kb</a> </p>
+    <p><br>
+    <br>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+
+</body>
+</html>

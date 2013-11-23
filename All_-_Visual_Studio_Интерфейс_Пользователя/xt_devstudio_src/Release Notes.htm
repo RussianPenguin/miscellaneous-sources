@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>Xtreme Toolkit Software Release Notes</title>
+
+</head>
+
+<body>
+
+  <center>
+  <table border="0" width="600" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" valign="top" align="left">
+        
+		  <h2>Xtreme Toolkit v1.2 Demo</h2>
+
+      <h5>Release Notes:</h5>
+
+      <p>The following notes are to help users of the CJLibrary migrate to using the Xtreme Toolkit. Not every
+      possible scenario could be covered here, however in the event that you experience trouble migrating your 
+      application from CJLibrary, please contact customer support at <a href="mailto:support@codejock.com">support@codejock.com</a>. </p>
+
+      <p>&nbsp;For your convenience, the file CJLibrary.h 
+      file has been included in the include subdirectory. This file contains several macros that will help make
+      your conversion from CJLibrary to Xtreme Toolkit much easier. </p>
+
+      <p>If you are a Visual C++ 5.0 user, make sure you use the *.dsp.v5 project files (you will need to rename 
+      them to *.dsp). </p>
+
+      <p><b>Getting Started:</b><hr noshade color="#0000FF">
+
+          <p>To get started to used the toolkit with your existing application, make
+          sure that the .\lib, .\bin and .\include directories where the toolkit
+          was installed have been added to DevStudio's directories list, also,
+          you should include the .\bin directory in your systems path, or build
+          your executable to this directory so that your application can find
+          the Xtreme Toolkit dll.<br>
+          <br>
+          Next, make you have included the following line in your stdafx.h
+          file:</p>
+
+<pre><tt>
+#include &lt;XTToolkit.h&gt;		// Xtreme Toolkit MFC extensions
+</tt></pre>
+
+          <p>Next, make sure that you have done the following:</p>
+
+          <ul>
+            <li>Your frame class is derived either from <b> CXTFrameWnd</b> or <b> CXTMDIFrameWnd</b></li>
+            <li>Your child frame class is derived from <b> CXTMDIChildWnd</b></li>
+            <li>All of your toolbars are derived from <b> CXTToolBar</b></li>
+            <li>Your dialog bars are derived from <b> CXTDialogBar</b></li>
+            <li>Your docking windows are derived from <b> CXTDockWindow</b></li>
+            <li>Your tab bar is derived from <b> CXTTabCtrlBar</b></li>
+          </ul>
+          <p>You may find other standard MFC class that you will want to use the
+          Xtreme Toolkit version of as well, if this is an older <i> CJLibrary
+          application</i>, you can search and replace CCJ with CXT, or use the CCJLibrary.h file that
+          has been included.<br>
+          </p>
+
+      <p><b>Menus:</b><hr noshade color="#0000FF">
+
+      <p>Cool menu support has never been easier, you can forget about overriding such methods as OnMeasureItem(), 
+      OnMenuChar() and OnInitMenuPopup(), or having to instantiate a CCJMenu object each time you need a popup menu 
+      and calling InitializeMenu(), the CCJMenu class is obsolete in this
+      release.</p>
+
+      <p>To use the new cool menus, call 
+      <b>InstallCoolMenus(const UINT* nIDToolBars, int nSize)</b> where nIDToolBars points to an array of toolbar resource 
+      ids, and nSize indicates the number of members in the array. You can also call <b> InstallCoolMenus(const UINT 
+      nIDToolBar)</b> if you just want to pass in a single toolbar id.  The best place to do this is just before your 
+      CMainFrame::OnCreate method looses scope.</p>
+
+      <p><b>Toolbars and Control Bars:</b><hr noshade color="#0000FF">
+
+          <p>When creating a control bar based object such as a toolbar or
+          docking window, you must&nbsp; define a unique resource id for each control bar that you create.&nbsp;
+          These ids must fall in the range between <b> 0x04268</b> (
+          XT_IDW_CONTROLBAR_MIN ) and <b> 0x0445C</b> ( XT_IDW_CONTROLBAR_MAX ).</p>
+
+          <p>It is not necessary to define a unique id for the menubar since it
+          already uses the constant AFX_IDW_MENUBAR, or if your application only has one
+          toolbar, you can just use the constant AFX_IDW_TOOLBAR. Keep in mind that
+          all docking windows must fall in this range as well, you can simply
+          add these definitions to your resource.h file, for example:</p>
+
+<pre><tt>
+#define IDR_TOOLBAR1    0x04268
+#define IDR_TOOLBAR2    0x04269
+#define IDR_TOOLBAR3    0x0426A
+#define IDR_TOOLBAR4    0x0426B
+</tt></pre>
+
+          <p>And your toolbar creation code might look something like:</p>
+
+<pre><tt>
+// Menubar uses a default resource id.
+if (!m_wndMenuBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP
+    | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
+    !m_wndMenuBar.LoadMenuBar(IDR_MAINFRAME))
+{
+    TRACE0(&quot;Failed to create menubar\n&quot;);
+    return -1;      // fail to create
+}
+
+// Toolbar 1
+if (!m_wndToolBar1.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP
+    | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC, CRect(0,0,0,0), IDR_TOOLBAR1) ||
+!m_wndToolBar1.LoadToolBar(IDR_MAINBAR1))
+{
+    TRACE0(&quot;Failed to create file toolbar\n&quot;);
+    return -1;      // fail to create
+}
+m_wndToolBar1.SetWindowText(_T(&quot;Toolbar One&quot;));
+
+// Toolbar 2
+if (!m_wndToolBar2.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP
+    | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC, CRect(0,0,0,0), IDR_TOOLBAR2) ||
+!m_wndToolBar2.LoadToolBar(IDR_MAINBAR2))
+{
+    TRACE0(&quot;Failed to create file toolbar\n&quot;);
+    return -1;      // fail to create
+}
+m_wndToolBar2.SetWindowText(_T(&quot;Toolbar Two&quot;));
+
+// Toolbar 3
+if (!m_wndToolBar3.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP
+    | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC, CRect(0,0,0,0), IDR_TOOLBAR3) ||
+!m_wndToolBar3.LoadToolBar(IDR_MAINBAR3))
+{
+    TRACE0(&quot;Failed to create file toolbar\n&quot;);
+    return -1;      // fail to create
+}
+m_wndToolBar3.SetWindowText(_T(&quot;Toolbar Three&quot;));
+
+// Toolbar 4
+if (!m_wndToolBar4.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP
+    | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC, CRect(0,0,0,0), IDR_TOOLBAR4) ||
+!m_wndToolBar4.LoadToolBar(IDR_MAINBAR4))
+{
+    TRACE0(&quot;Failed to create file toolbar\n&quot;);
+    return -1;      // fail to create
+}
+m_wndToolBar4.SetWindowText(_T(&quot;Toolbar Four&quot;));
+</tt></pre>
+
+          <p>Your application will give you some very strange results if you do
+          not follow these guidelines. Some of the things you may experience are
+          not saving or restoring control position correctly or right click
+          popup menu activation will not working correctly.</p>
+
+      <p><b>Toolbars:</b><hr noshade color="#0000FF">
+
+      <p>Many things have changed with the toolbar classes. A couple of things that you should be aware of is that the method 
+      InsertControl has changed in that it is now your responsibility to create the control first, then pass in
+      the address of the control to be inserted for example:</p>
+
+<pre><tt>
+if (!m_wndComboBox.Create( WS_CHILD|WS_VISIBLE|CBS_DROPDOWN,
+  CRect(0,0,200,150), &amp;m_wndToolBar, ID_PLACEHOLDER ))
+{
+  TRACE0(&quot;Failed to create flat toolbar.\n&quot;);
+  return -1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // fail to create
+}
+
+m_wndToolBar.InsertControl(&amp;m_wndComboBox);
+</tt></pre>
+
+      <p>This allows much more flexibility with adding controls to toolbars. Additionally, you no longer need
+      to define a TOOLBARINFO struct array if you want to add customization to your toolbars, customization is 
+      automatic now, and you can remove these calls.</p>
+
+      <p><b> Docking Windows:</b><hr noshade color="#0000FF">
+
+      <p><i><b><font color="#808080">CCJSizeDockBar</font> </b> </i>class has been removed and merged with the class 
+      <i><b>CXTDockBar</b></i>. <i><font color="#808080"><b>EnableDockingSizeBar()</b></font></i> has been removed from 
+      the <b>CXTFrameWnd</b> classes and is no longer needed. <i><b><font color="#808080">EnableDockingOnSizeBar()</font></b>
+      </i>and <i><b><font color="#808080">DockSizeBar()</font></b> </i>methods have been removed and replaced with the 
+      default <i><b>EnableDocking()</b></i> and <i><b>DockControlBar()</b></i>. These changes were necessary in order to remove
+      code redundancy and to implement standard CControlBar styles and behavior. The  <b>CXTControlBars</b> now will 
+      dock with standard control bars and toolbars.</p>
+
+      <p><i>m_eChildBorder </i>to set the control bar display style for the child area has been removed. In order to 
+      set the control bars styles you can now make a call to <i>SetXTBarStyle( DWORD dwStyle )</i> to set the desired 
+      CBRS_XT_ styles for the control  bar. Does not affect the WS_ (window style) or or CBRS_ control bar style) settings.</p>
+
+      <p>The control bar style can be one or more of the following:</p>
+
+      <p><b>CBRS_XT_BUTTONS:</b><br>The control bar has a minimize and close button when docked.</p>
+
+      <p><b>CBRS_XT_GRIPPER:</b><br>The control bar has a gripper when docked.</p>
+  
+      <p><b>CBRS_XT_GRIPPER_FLAT:</b><br>The control bar has a flat gripper, use with CBRS_XT_GRIPPER.</p>
+
+      <p><b>CBRS_XT_GRIPPER_GRAD:</b><br>The control bar has a gradient flat gripper use with CBRS_XT_GRIPPER_FLAT.</p>
+
+      <p><b>CBRS_XT_GRIPPER_TEXT:</b><br>The control bar draws text in the gripper area, use with CBRS_XT_GRIPPER.</p>
+
+      <p><b>CBRS_XT_BUTTONS_FLAT:</b><br>The control bar min and max buttons are flat, use with CBRS_XT_BUTTONS.</p>
+
+      <p><b>CBRS_XT_BORDERS_FLAT:</b><br>The control bar borders are flat.</p>
+
+      <p><b>CBRS_XT_CLIENT_OUTLINE:</b><br>Draw an edge outline around the client area.</p>
+
+      <p><b>CBRS_XT_CLIENT_STATIC:</b><br>Draw a static rect around the client area.</p>
+
+      <p><b>CBRS_XT_CLIENT_MODAL:</b><br>Draw a modal rect around the client area.</p>
+
+      <p><b>CBRS_XT_ALL_FLAT:</b><br>The following styles combined by using the bitwise OR (|) operator CBRS_XT_GRIPPER_FLAT, CBRS_XT_BUTTONS_FLAT and CBRS_XT_BORDERS_FLAT.</p>
+
+      <p><b>CBRS_XT_DEFAULT:</b><br>The following styles combined by using the bitwise OR (|) operator CBRS_XT_BUTTONS, CBRS_XT_GRIPPER, CBRS_XT_GRIPPER_TEXT.</p>
+
+      <p>You can set the styles for the splitter bars that separate the docked control bars by calling:<b> CXTFrameWnd::EnableDockingEx
+      (DWORD dwDockStyle, DWORD dwFlatStyle); </b>instead of CXTFrameWnd::EnableDocking(). You can also the control bar style by
+      calling the same method <b>CXTControlBar::EnableDockingEx(DWORD dwDockStyle, DWORD dwFlatStyle);</b></p>
+
+      <p>Your docking window creation code might look something like:</p>
+      
+<pre><tt>
+// Initialize docking window m_wndWorkspace
+if( !m_wndWorkspace.Create(this, ID_VIEW_WORKSPACE,
+	_T(&quot;Workspace&quot;), CSize(225,100), CBRS_LEFT ))
+{
+	TRACE0(&quot;Failed to create dialog bar m_wndWorkspace\n&quot;);
+	return -1;		// fail to create
+}
+
+// You can just use EnableDocking if you don't want to change the
+// default appearance of the control bars.
+
+m_wndWorkspace.EnableDockingEx( CBRS_ALIGN_ANY, CBRS_XT_SEMIFLAT );
+EnableDockingEx( CBRS_ALIGN_ANY, CBRS_XT_SEMIFLAT );
+DockControlBar( &amp;m_wndWorkspace );
+</tt></pre>
+
+      <p><b>Outlook Bar Control:</b><hr noshade color="#0000FF">
+
+      <p>These definitions replace the following enums found in the Outlook Bar Control.</p>
+
+<pre><tt>
+#define WS_OB_SMALLICON        0x00000001L            // fSmallIcon
+#define WS_OB_LARGEICON        0x00000002L            // fLargeIcon
+#define WS_OB_EDITGROUPS       0x00000004L            // fEditGroups
+#define WS_OB_EDITITEMS        0x00000008L            // fEditItems
+#define WS_OB_REMOVEGROUPS     0x00000010L            // fRemoveGroups
+#define WS_OB_REMOVEITEMS      0x00000020L            // fRemoveItems
+#define WS_OB_ADDGROUPS        0x00000040L            // fAddGroups
+#define WS_OB_DRAGITEMS        0x00000080L            // fDragItems
+#define WS_OB_ANIMATION        0x00000100L            // fAnimation
+#define WS_OB_SELHIGHLIGHT     0x00000200L            // fSelHighlight
+#define WS_OB_DEFAULT          0x000001FCL
+
+#define RC_OB_ICON             0x00000001L            // ircIcon
+#define RC_OB_LABEL            0x00000002L            // ircLabel
+#define RC_OB_BOTH             0x00000003L            // ircAll
+</tt></pre>
+
+      </td>
+    </tr>
+  </table>
+  </center>
+
+</body>
+</html>

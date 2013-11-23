@@ -1,0 +1,67 @@
+; Example.Inf - install information file
+;  Created 2 feb 2003 by SVP
+[Version]
+Signature="$Chicago$"
+Class=Unknown
+Provider=%SVPBook%
+DriverVer=02/22/2003,1.0.0.2
+
+[Manufacturer]
+%SVPBook%=SVP.Science
+
+[SVP.Science]
+%Example%=Example.Install, *svpBook\Example
+
+[DestinationDirs]
+Example.Files.Driver=10,System32\Drivers  ; куда копировать для Win98
+Example.Files.Driver.NTx86=10,System32\Drivers ; куда копировать для NT
+
+[SourceDisksNames]
+1="Example build directory",,,       ;  первая цифра -- единица
+
+[SourceDisksFiles]
+Example.sys=1,drv\w98   ; где находится новый драйвер для Win98
+
+[SourceDisksFiles.x86]
+Example.sys=1,drv\nt   ; где находится новый драйвер для NT
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Windows 98
+[Example.Install]
+CopyFiles=Example.Files.Driver
+AddReg=Example.AddReg
+
+[Example.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,Example.sys
+[Example.Files.Driver]
+Example.sys
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Windows 2000, XP, Server 2003
+[Example.Install.NTx86]
+CopyFiles=Example.Files.Driver.NTx86
+
+[Example.Files.Driver.NTx86]
+Example.sys,,,%COPYFLG_NOSKIP%
+
+[Example.Install.NTx86.Services]
+AddService = Example, %SPSVCINST_ASSOCSERVICE%, Example.Service
+
+[Example.Service]
+DisplayName    = %Example.ServiceName%
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_AUTO_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %10%\System32\Drivers\Example.sys
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Strings
+[Strings]
+SVPBook="Introduction to Driver Programming"
+Example="Example driver: checked build"
+Example.ServiceName="Example NTDDK driver (V.001)"
+
+SPSVCINST_ASSOCSERVICE=0x00000002
+COPYFLG_NOSKIP=2	; Do not allow user to skip file
+SERVICE_KERNEL_DRIVER=1
+SERVICE_AUTO_START=2
+SERVICE_DEMAND_START=3 ;  см. п. 11.1.10
+SERVICE_ERROR_NORMAL=1

@@ -1,0 +1,9 @@
+Автор: Селин Дмитрий aka Demo_S <s_deamon@yahoo.com>
+Просьба не удалять копирайты из AboutBox.
+Не буду писать много и нудно.
+Софтварь поставляеться как есть, без всяких гарантий, и 
+за любые траблы автор не несет ответственности.
+
+Author: Selin Dmitry <s_daemon@yahoo.com>
+//if ypu want to use this program in commercial purposes, you have to mail me about it
+Software is developed under GNU license

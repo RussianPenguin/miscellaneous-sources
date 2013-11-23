@@ -1,0 +1,1279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>5</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<div align="center"><center>
+
+<table border="0" cellpadding="0" width="650" cellspacing="0">
+  <tr>
+    <td><p align="center"><font face="Times New Roman" size="2"><b>МЕНЮ</b></font></p>
+    <p align="center"><font face="Times New Roman" size="2">ПОДКЛЮЧЕНИЕ МЕНЮ К
+    ОКНУ</font> </p>
+    <p><font face="Times New Roman" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    В этой главе мы должны научиться подключать меню
+    к нашему окну и, естественно, научиться
+    реагировать на сообщения, исходящие от меню. Мы
+    узнаем о том, какие типы меню и элементов меню
+    бывают, изучим различные способы построения
+    меню.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Любой, кто хоть немного
+    работал в Windows, знает, что меню располагаются
+    сразу под заголовком окна и позволяют
+    пользователю осуществить выбор возможностей,
+    предоставляемых программой. Помимо этого,
+    существуют также всплывающие меню, которые могут
+    появляться в любой точке экрана. Обычно их
+    содержание зависит от того, на каком окне
+    щелкнули клавишей мыши. Их изучение начнем с
+    характеристик меню.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Давайте
+    представим себе главное меню программы как
+    древовидную структуру. Основная часть - корень
+    нашего дерева - это непосредственно главное меню.
+    Само по себе оно представляет только структуру в
+    памяти, не отображается на экране, не содержит ни
+    одного элемента, но хранит указатель на список
+    структур, описывающих подключаемые к нему
+    элементы и всплывающие (popup) меню. Если читатель
+    вспомнит свой опыт работы с Windows, он согласитсяс
+    тем, что в окне в качестве основного меню
+    отображается именно набор рорир-меню. В свою
+    очередь, рорир-меню должно указать на список
+    структур очередного, более низкого уровня и т. д.
+    Конечные элементы меню никаких указателей на
+    списки не имеют, но хранят некий идентификатор
+    действия (назовем его идентификатором элемента
+    меню), которое должна произвести программа при
+    выборе данного элемента меню. Используя эти
+    структуры, мы можем построить меню практически
+    любой глубины и сложности.</font> </p>
+    <p><font face="Times New Roman" size="2">Эта многоуровневая
+    древовидная структура описывается в файле
+    ресурсов. Описание меню имеет вид:</font> </p>
+    <p align="center"><font face="Times New Roman" size="2">MenuName MENU [параметры]
+    // это - главное меню</font> </p>
+    <p align="center"><font face="Times New Roman" size="2">{ Описание всех
+    рорир-меню и элементов меню второго уровня</font> </p>
+    <p><font face="Arial" size="2">}</font> </p>
+    <p><font face="Times New Roman" size="2">В данном случае MenuName - это
+    имя создаваемого нами меню. Слово MENU обозначает
+    начало определения меню. Параметры мы пока, до
+    изучения работы с памятью, расматривать не будем.</font>
+    </p>
+    <p><font face="Times New Roman" size="2">В Win32 API для описания .меню
+    существуют два ключевых слова. Первое - POPUP -
+    специфицирует всплывающее меню. Второе -MENUITEM -
+    описывает обычный элемент меню.</font> </p>
+    <p><font face="Times New Roman" size="2">Всплывающие меню
+    описывается следующим образом:</font> </p>
+    <p align="center"><font face="Times New Roman" size="2">POPUP «Имя»
+    [.параметры] // &lt;- описание рорир-меню</font> </p>
+    <p align="center"><font face="Times New Roman" size="2">{ Описание всех
+    рорир-меню и элементов очередного уровня</font> </p>
+    <p><font face="Times New Roman" size="2">У конечного элемента меню
+    в его описании есть еще одна характеристика - тот
+    самый идентификатор действия:</font> </p>
+    <p><font face="Times New Roman" size="2">MENUITEM «Имя», MenuID [.параметры]</font>
+    </p>
+    <p><font face="Times New Roman" size="2">В обоих случаях «Имя» - это
+    тот текст, который будет выведен на эк-. ран при
+    отображении меню (обратите внимание - при
+    описании главного меню выводимого на экран
+    текста нет!). В том случае, когда вместо имени окна
+    записано слово SEPARATOR (без кавычек!), на ме сте
+    элемента меню появляется горизонтальная линия.
+    Обычно эти горизонтальные линии (сепараторы или
+    разделители) используются для разделения
+    элементов подменю на логические группы (логика
+    определяется только программистом и никаких
+    особенностей не содержит).</font> </p>
+    <p><font face="Times New Roman" size="2">Если в имени меню
+    встречается символ «&amp;», то следующий за
+    амперсандом символ на экране будет подчеркнут
+    одинарной чертой. Этот элемент меню можно будет
+    вызывать с клавиатуры посредством
+    одновременного нажатия клавиши Alt и
+    подчеркнутого символа.</font> </p>
+    <p><font face="Times New Roman" size="2"><b>'Таблица. Параметры,
+    описывающие элемент меню в файле ресурсов</b></font> </p>
+    <table border="1" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><font face="Times New Roman" size="1">Флаг</font></td>
+        <td><font face="Times New Roman" size="1">Значение</font></td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="2">CHECKED</font></td>
+        <td><font face="Times New Roman" size="2">Рядом с именем элемента
+        может отображаться небольшой значок, говорящий о
+        том, что соответствующий флаг установлен</font></td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="2">ENABLED</font></td>
+        <td><font face="Times New Roman" size="2">Элемент меню доступен</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="2">DISABLED</font></td>
+        <td><font face="Times New Roman" size="2">Элемент меню недоступен,
+        но отображается как обычный</font></td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="2">GRAYED</font></td>
+        <td><font face="Times New Roman" size="2">Элемент меню недоступен и
+        отображается серым цветом</font></td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="2">MENUBREAK</font></td>
+        <td><font face="Times New Roman" size="2">Горизонтальные меню
+        размещают следующие элементы в новой строке, а
+        вертикальные - в новом столбце</font></td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="2">MENUBARBREAK</font></td>
+        <td><font face="Times New Roman" size="2">То же, что и предыдущее, но
+        в случае вертикального меню столбцы разделяются
+        вертикальной линией</font></td>
+      </tr>
+    </table>
+    <p><font face="Times New Roman" size="2">MenuID - идентификатор
+    действия. Он может быть передан функции окна,
+    содержащего меню. Значение идентификатора
+    определяется пользователем. Функция окна в
+    зависимости от полученного MenuID производит
+    определенные действия.</font> </p>
+    <p><font face="Times New Roman" size="2">Параметры же описывают
+    способ появления элемента на экране. Возможные
+    значения параметров приведены в табл..</font> </p>
+    <p><font face="Times New Roman" size="2">Попробуем создать
+    описание небольшого меню. Горизонтальное меню
+    (menubar) позволит выбирать подменю «File», «Examples» и
+    конечный элемент «Help». Подменю «File» будет
+    содержать элементы «Open » и «Exit», разделенные
+    горизонтальной линией, а подменю «Examples»
+    -несколько конечных элементов.</font> </p>
+    <p><font face="Times New Roman" size="2">Ниже приведен текст
+    скрипта для этого меню:</font> </p>
+    <p><font face="Times New Roman" size="2">МуMenu&nbsp; MENU</font> <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; <font face="Arial" size="3">{</font><br>
+    <font face="Arial" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font
+    face="Times New Roman" size="2">POPUP &quot;&amp;File&quot;</font> <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <font face="Arial" size="2">{</font><br>
+    <font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Times New Roman" size="2">MENUITEM &quot;&amp;0pen&quot;, 101<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    MENUITEM SEPARATOR<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    MENUITEM &quot;E&amp;xit&quot;, 102<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POPUP
+    &quot;&amp;Examples&quot;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    POPUP &quot;Example 1&quot;</font><br>
+    <font face="Times New Roman" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Arial" size="2">{</font><br>
+    <font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Times New Roman" size="2">MENUITEM &quot;l&amp;l&quot;, 103 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    MENUITEM &quot;1&amp;2&quot;, 104<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    POPUP &quot;Example &amp;2&quot;</font><br>
+    <font face="Times New Roman" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Arial" size="2">{</font><br>
+    <font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Times New Roman" size="2">MENUITEM &quot;2&amp;1&quot;, 105<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    MENUITEM &quot;2&amp;2&quot;, 106<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    MENUITEM &quot;&amp;Help&quot;, 111<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font> </p>
+    <p><font face="Times New Roman" size="2">Следует обратить внимание
+    на то, что идентификаторы действия есть только у
+    MENUITEM'ов. Popup-меню идентификаторов не содержат.</font>
+    </p>
+    <p><font face="Times New Roman" size="2">Теперь необходимо сделать
+    так, чтобы меню стало доступным программе. В
+    интегрированной среде это делается следующим
+    образом:</font> </p>
+    <p><font face="Times New Roman" size="2">к проекту добавляется файл
+    ресурсов (желательно, чтобы имя файла ресурсов
+    совпадало с именем программы);</font></p>
+    <p><font face="Times New Roman" size="2">в текст программы вносится
+    изменение - при определении класса окна полю
+    IpszMenuName структуры типа WNDCLASS присваивается
+    указатель на строку, содержащую имя меню. В
+    данном случае WndClass.lpszMenuName = «MyMenu»;</font> </p>
+    <p><font face="Times New Roman" size="2">производится
+    перекомпиляция проекта.</font> </p>
+    <p><font face="Times New Roman" size="2">Если читатель работает не
+    в интегрированной среде, то ему необходимо до
+    момента линкрвания откомпилировать ресурсы, а
+    затем с помощью линкера присоединить их к
+    исполняемому файлу. Попробуйте произвести эти
+    действия с тем проектом, в котором вы создавали
+    нашу первую программу. Если вы все сделали
+    правильно, то у окна должно появиться меню, с
+    которым можно немного поиграть. Попробуйте
+    поэкспериментиро-вдть с описанием меню в файле
+    ресурсов и видоизменить и непосредственно ^ёню, и
+    внешний вид рорир-меню и элементов меню.</font> </p>
+    <p><font face="Times New Roman" size="2">Таким образом, с помощью
+    добавления к программе меню мы определили
+    функциональность нашей программы. Конечно, тот
+    пример, который здесь приведен, предназначен
+    только для того, чтобы продемонстрировать
+    возможности по управлению меню с помощью
+    ресурсов. Более того, из сказанного можно сделать
+    вывод, что возможности Win32 по управлению меню с
+    помощью ресурсов достаточно скудны. Да, это так.
+    Существует еще масса функций, позволяющих
+    манипулировать меню. Мы приступим к их
+    рассмотрению после того, как научимся
+    реагировать на манипуляции, производимые с меню.</font>
+    </p>
+    <p><font face="Times New Roman" size="2"><i>Реакция окна на
+    сообщения от меню</i></font> </p>
+    <p><font face="Times New Roman" size="2">Как уже было сказано выше,
+    элементы в меню могут быть обычными,
+    запрещенными и «серыми». Для пользователя
+    обычные и запрещенные элементы выглядят
+    одинаково, а текст в «серых» элементах напечатан
+    серым шрифтом. Но только обычные элементы
+    позволяют пользователю произвести выбор.
+    Запрещенные и «серые» элементы меню могут быть
+    только подсвечены, но с их помощью произвести
+    выбор нельзя. Кроме этого, существуют отмечаемые
+    элементы меню. В них слева от текста может
+    находиться какой-либо значок. Если значок есть,
+    то считают, что флажок, определяемый этим
+    элементом, установлен. Если флажок сброшен, то
+    значок отсутствует.</font> </p>
+    <p><font face="Times New Roman" size="2">С другой стороны, в
+    элементе меню может находиться как текст, так и
+    картинка (bitmap). С точки зрения пользователя
+    никакой разницы в применении меню с текстом или с
+    картинкой нет.</font> </p>
+    <p><font face="Times New Roman" size="2">Перед тем, как начать
+    серьезный разговор о меню, напомню, что основному
+    меню и всем всплывающим меню Windows присваивает
+    хэндлы</font> </p>
+    <p><font face="Times New Roman" size="2">(другими словами, все они
+    являются структурами в памяти). Этот факт в
+    дальнейшем будет играть важную роль.</font> </p>
+    <p><font face="Times New Roman" size="2">Давайте попробуем
+    поговорить о меню с точки зрения сообщений. При
+    смене подсвеченного элемента меню (если, к
+    примеру, пользователь «пробегает» по элементам
+    меню с помощью клавиш со стрелками вверх и вниз) в
+    оконную процедуру посылается сообщение WM_MENUSELECT.
+    Это сообщение посылают все элементы меню. Когда
+    же пользователь производит выбор (нажимает
+    клавишу «Enter», к примеру), сообщение WM_COMMAND оконной
+    процедуре посылают только обычные элементы меню.
+    Запрещенные и «серые» элементы меню в этом
+    случае никаких сообщений не посылают. В
+    элементах wParam и IParam посылаемых сообщений
+    хранится информация, достаточная для того, чтобы
+    программа смогла определить, какие действия ей
+    необходимо выполнить случае выбора
+    пользователем того или иного элемента меню.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Вспомним,
+    что помимо обычного меню у окна в большинстве
+    случаев есть еще и системное меню. Сказанное
+    относится и к системному меню. Отличие между
+    обычным меню и системным состоит в том, что
+    оконной процедуре посылаются сообщения WM_SYSMENUSELECT
+    и WM_SYSCOMMAND. Кроме этого, сообщения WM_SYSCOMMAND оконная
+    процедура получает и в случае нажатия кнопок
+    минимизации, максимизации и закрытия окна,
+    которые находятся не в системном меню, а в правом
+    углу заголовка окна.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Рассмотрим
+    параметры сообщения WM_MENUSELECT более подробно. В
+    младшем слове wParam оконная процедура получает
+    сведения о том, какой элемент стал подсвеченным.
+    Если учесть, что макросы LOWORDO и HIWORD() выделяют
+    соответственно младшее и старшее слово 32-битного
+    аргумента, и назвать источник сообщения ultem, то
+    можно записать:</font> </p>
+    <p><font face="Times New Roman" size="2">ultem = (UINT) LOWORD(wParam);</font> </p>
+    <p><font face="Times New Roman" size="2">В зависимости от
+    обстоятельств смысл ultem различается:</font> </p>
+    <p><font face="Times New Roman" size="2">если подсвеченный элемент
+    является конечным и не влечет за собой вызов
+    рорир-меню, то ultem содержит идентификатор
+    элемента меню;</font> </p>
+    <p><font face="Times New Roman" size="2">если подсвеченный элемент
+    при выборе влечет за собой вызов рорир-меню, то
+    ultem содержит номер (индекс) этого элемента в том
+    меню, в котором оно находится;</font> </p>
+    <p><font face="Times New Roman" size="2">В старшем слове wParam
+    содержатся характеристики подсвеченного
+    элемента. Аналогично предыдущему, fuFlags = (UINT)
+    HIWORD(wParani);</font> </p>
+    <p><font face="Times New Roman" size="2">Возможные значения fuFlags
+    приведены в табл.</font></p>
+    <hr>
+    <p><font face="Times New Roman" size="2"><b>Таблица. Характеристики
+    подсвеченного элемента меню</b></font> </p>
+    <table align="left" border="1">
+<TBODY>
+      <tr>
+        <td><font face="Times New Roman" size="1">Флаг</font> </td>
+        <td><font face="Times New Roman" size="1">Значение</font> </td>
+        <td><font face="Times New Roman" size="1">Описание</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MFB1TMAP</font> </td>
+        <td><font face="Times New Roman" size="1">Ox00000004L</font> </td>
+        <td><font face="Times New Roman" size="1">Вместо строки в качестве
+        элемента меню</font> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><font face="Times New Roman" size="1">применяется bitmap</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF CHECKED</font> </td>
+        <td><font face="Times New Roman" size="1">Ox00000008L</font> </td>
+        <td><font face="Times New Roman" size="1">Элемент отмечаемый (со
+        «значком»)</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF DISABLED</font> </td>
+        <td><font face="Times New Roman" size="1">Ox00000002L</font> </td>
+        <td><font face="Times New Roman" size="1">Элемент запрещен</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MFGRAYED</font> </td>
+        <td><font face="Times New Roman" size="1">0х00000001L</font> </td>
+        <td><font face="Times New Roman" size="1">Элемент запрещен и
+        отображается серым</font> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><font face="Times New Roman" size="1">цветом</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF HILITE</font> </td>
+        <td><font face="Times New Roman" size="1">OxOOOOOOSOL</font> </td>
+        <td><font face="Times New Roman" size="1">Элемент подсвечен</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF MOUSESELECT</font> </td>
+        <td><font face="Times New Roman" size="1">OxOOOOSOOOL</font> </td>
+        <td><font face="Times New Roman" size="1">Элемент выбран мышью</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MFOWNERDRAW</font> </td>
+        <td><font face="Times New Roman" size="1">0х00000100L</font> </td>
+        <td><font face="Times New Roman" size="1">За прорисовку элемента
+        отвечает не система,</font> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><font face="Times New Roman" size="1">а программа</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MFPOPUP</font> </td>
+        <td><font face="Times New Roman" size="1">0х00000010L</font> </td>
+        <td><font face="Times New Roman" size="1">Элемент вызывает
+        появление рорир-меню</font> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><font face="Times New Roman" size="1">более низкого уровня</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MFSYSMENU</font> </td>
+        <td><font face="Times New Roman" size="1">Ox00002000L</font> </td>
+        <td><font face="Times New Roman" size="1">Элемент из системного
+        меню</font> </td>
+      </tr>
+</TBODY>
+    </table>
+    <p><br clear="all">
+    </p>
+    <p><font face="Times New Roman" size="2">IParam содержит в себе хэндл
+    того меню, которому принадлежит подсвеченный
+    элемент. Обозначив хэндл меню как hMenu, получим:</font>
+    </p>
+    <p><font face="Times New Roman" size="2">hMenu - (HMENU) IParam;</font> </p>
+    <p><font face="Times New Roman" size="2">Теперь пришла очередь
+    рассмотрения сообщения WM_COMMAND. Как и в случае с
+    WMJSELECTMENU, младшее слово wParam содержит сведения об
+    источнике сообщения. Так как сообщение WM_COMMAND
+    посылается только конечными элементами меню, то
+    в младшем слове wParam содержится идентификатор
+    выбранного элемента меню. На языке С</font> </p>
+    <p><font face="Times New Roman" size="2">wID = LOWORD(wParam);</font> </p>
+    <p><font face="Times New Roman" size="2">Старшее слово wParam
+    указывает, от какого управляющего элемента
+    пришло сообщение. Если сообщение пришло от меню,
+    то это слово равно нулю, т. е.</font> </p>
+    <p><font face="Times New Roman" size="2">wNotifyCode = HIWORD(wParam) = 0;</font> </p>
+    <p><font face="Times New Roman" size="2">IParam в случае сообщения от
+    меню ВСЕГДА равно NULL!</font> </p>
+    <p><font face="Times New Roman" size="2">Теперь мы знаем вполне
+    достаточно, чтобы написать программу,
+    реагирующую на манипуляции с меню. Но я хотел бы,
+    чтобы читатель набрался терпения и изучил еще
+    одну тему. Ранее мы пришли к выводу о том, что
+    возможности языка управления ресурсами
+    достаточно скудны. Тем не менее, в Win32 существует
+    множество функций, позволяющих манипулировать
+    меню. Остановимся на этих функциях и выясним,
+    каким образом можно реализовать меню без
+    обращения к ресурсам.</font> </p>
+    <p><font face="Times New Roman" size="2"><i>Меню без использования
+    ресурсов</i></font> </p>
+    <p><font face="Times New Roman" size="2">Перед тем, как начать
+    рассмотрение функций, предназначенных для
+    работы с меню, я хотел бы сказать, что являюсь
+    сторонником комбинированного использования
+    меню, определенного в виде ресурса, и функций Win32.
+    Решение об использовании того или иного способа
+    должен принимать программист в соответствии с
+    задачами, которые должна решать разрабатываемая
+    программа. Если в примере я придерживаюсь
+    какого-то одного способа, то читатель Должен
+    понимать, что пример - это всего-навсего
+    демонстрация возможностей Win32, а не призыв всегда
+    и везде делать именно так, как сделано в
+    предлагаемом примере. Еще раз повторю -
+    программист свободен в выборе применяемых
+    технологий.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Как
+    было сказано выше, меню имеет строгую
+    древовидную структуру, которая начинается с меню
+    первого уровня (оно обычно называется главным
+    меню программы или menubar'ом и располагается сразу
+    под заголовком окна). К этому меню первого уровня
+    могут быть присоединены как конечные элементы
+    меню, так и элементы, выбор которых приводит к
+    появлению так называемых всплывающих (popup) меню, к
+    которым, в свою очередь, присоединяются элементы
+    очередного уровня и т. д. Перед началом создания
+    меню вся его структура должна быть тщательно
+    продумана. Неплохо, если бы программист имел
+    перед глазами графическое представление этого
+    меню. Если все предварительные вопросы решены, то
+    мы готовы приступить к созданию меню.</font> </p>
+    <p><font face="Times New Roman" size="2">Итак, для создания меню
+    необходимо выполнить следующие действия:</font> </p>
+    <p><font face="Times New Roman" size="2">выбрать подменю самого
+    низкого уровня, которые содержат только конечные
+    элементы меню, и создать их с помощью функций
+    CreateMenu() или CreatePopupMenu() в зависимости от
+    потребностей. Эти функции возвращают хэндл
+    созданного меню. Меню создается пустым;</font> </p>
+    <p><font face="Times New Roman" size="2">посредством функции AppendMenuQ
+    добавляем в них требуемые элементы;</font> </p>
+    <p><font face="Times New Roman" size="2">создаем меню следующего,
+    более высокого уровня, и добавляем в них
+    требуемые элементы и меню, созданные нами на
+    предыдущем шаге;</font> </p>
+    <p><font face="Times New Roman" size="2">повторяем эти шаги до тех
+    пор, пока создание всех подменю не будет
+    закончено;</font> </p>
+    <p><font face="Times New Roman" size="2">создаем главное меню
+    программы посредством использования функции
+    CreateMenu();</font> </p>
+    <p><font face="Times New Roman" size="2">присоединяем созданные
+    подменю самого высокого уровня к главному меню
+    программы с помощью функции AppendMenuQ;</font> </p>
+    <p><font face="Times New Roman" size="2">присоединяем меню к окну
+    посредством использования функции SetMenu();</font> </p>
+    <p><font face="Times New Roman" size="2">прорисовываем меню с
+    помощью функции DrawMenuBar().<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Если в ходе программы сложилась
+    такая ситуация, что меню оказалось не
+    присоединенным к окну, перед выходом из
+    программы обязательно уничтожаем его, вызывая
+    функцию DestroyMenu() (присоединенное к окну меню
+    уничтожается автоматически при уничтожении
+    окна).<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Для того
+    чтобы проиллюстрировать сказанное, давайте
+    разберем небольшую программу. Я постарался
+    написать эту программу так, чтобы в ней имелись
+    основные типы элементов меню, и была бы
+    возможность обработать выдаваемые меню
+    сообщения. Чтобы придать программе
+    функциональность, информация о получении
+    сообщения будет выдаваться в строку состояния -
+    небольшую область внизу окна (возможности строки
+    состояния мы будем изучать позже). При запуске у
+    окна возникав меню. Внизу экрана появляется
+    строка состояния, в которой будет отображаться
+    информация о выбранном элементе меню. Основное
+    меню окна состоит из двух всплывающих меню, «File»
+    и «Help», и элемента меню, в котором вместо строки
+    отображается bitmap. В первом всплывающем меню
+    находятся два элемента, «Enable exit» и «Exit», во втором
+    -один элемент, «About», который остается
+    запрещенным в течение всего периода
+    существования окна. Кроме этого, элемент «Exit» при
+    запуске объявляется «серым», т. е. из программы
+    можно выйти только через системное меню. Однако в
+    случае выбора элемента «Enable exit» «Exit» становится
+    обычным, а вместо «Enable exit» возникает «Disable exit».
+    При выборе элемента с bitmap'ом отображается окно
+    сообщений с текстом о том, что выбран именно этот
+    элемент. На этом возможности программы
+    исчерпываются.</font> </p>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font style="font-size: 10pt" size="2" face="Tahoma"><b>Листинг
+        № З. Программа, демонстрирующая возможности по
+        манипулированию меню.</b></font></td>
+      </tr>
+    </table>
+    <p><font face="Times New Roman" size="2">#include &lt;windows.h&gt;<br>
+    #include &lt;commctrl.h&gt;</font> </p>
+    <p><font face="Times New Roman" size="2">const IDM_Enable_Disable = 0;</font> <br>
+    <font face="Times New Roman" size="2">const IDM_Exit = l;</font><br>
+    <font face="Times New Roman" size="2">const IDM_About = 2;</font><br>
+    <font face="Times New Roman" size="2">const IDP_File=3;</font><br>
+    <font face="Times New Roman" size="2">const IDP_Help = 4;</font></p>
+    <p><font face="Times New Roman" size="2">char* pMessages[]</font> <br>
+    <font face="Arial" size="2">{</font><br>
+    <font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Times New Roman"
+    size="2">&quot;Enable or disable exit&quot;,<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">&quot;Exit from the
+    program&quot;,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;About this program&quot;,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;File operations&quot;,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Help operations&quot;,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Menu example&quot;,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;System menu&quot;<br>
+    };</font> </p>
+    <p><font face="Times New Roman" size="2">LRESULT CALLBACK MenuDemoWndProc (HWND, UINT,
+    UINT, LONG);</font> </p>
+    <p><font face="Times New Roman" size="2">HWND hStatusWindow;<br>
+    UINT wid;<br>
+    HMENU hMenu,hFileMenu,hHelpMenu;<br>
+    HINSTANCE hinst;</font> </p>
+    <p><font face="Times New Roman" size="2">int APIENTRY WinMain (HINSTANCE hinstance,
+    HINSTANCE hPrevInstance, LPSTR IpszCmdParam, int nCmdShow )</font><br>
+    {<br>
+    <font face="Times New Roman" size="2">&nbsp;&nbsp; HWND hWnd ;<br>
+    &nbsp;&nbsp; WNDCLASS WndClass;<br>
+    &nbsp;&nbsp; MSG Msg;</font> </p>
+    <p><font face="Times New Roman" size="2">&nbsp;&nbsp; hinst = hinstance;<br>
+    &nbsp;&nbsp; /* Registering our window class */<br>
+    &nbsp;&nbsp; /* Fill WNDCLASS structure */<br>
+    &nbsp;&nbsp; WndClass.style = CS_HREDRAW ¦ CS_VREDRAW;<br>
+    &nbsp;&nbsp; WndClass.lpfnWndProc = (WNDPROC) MenuDemoWndProc;<br>
+    &nbsp;&nbsp; WndClass.cbClsExtra = 0;<br>
+    &nbsp;&nbsp; WndClass.cbWndExtra = 0;<br>
+    &nbsp;&nbsp; WndClass.hInstance = hinstance ;<br>
+    &nbsp;&nbsp; WndClass.hIcon = Loadlcon (NULL, IDI_APPLICATION);<br>
+    &nbsp;&nbsp; WndClass.hCursor = LoadCursor (NULL, IDC_ARROW);<br>
+    &nbsp;&nbsp; WndClass.hbrBackground= (HBRUSH) GetStockObject (WHITE_BRUSH);<br>
+    &nbsp;&nbsp; WndClass.lpszMenuName = NULL;<br>
+    &nbsp;&nbsp; WndClass.lpszClassName = &quot;MenuExample&quot;;<br>
+    <br>
+    &nbsp;&nbsp; if( !RegisterClass(&amp;WndClass))&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBox(NULL,&quot;Cannot register
+    class&quot; .&quot;Error&quot; ,MB_OK);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;</font><br>
+    <font face="Times New Roman" size="2">&nbsp;&nbsp; </font><font face="Arial" size="2">}<br>
+    </font><br>
+    <font face="Arial" size="2">&nbsp;&nbsp; </font><font face="Times New Roman" size="2">hWnd
+    = CreateWindow(&quot; MenuExample&quot;, &quot;Program No 2&quot;,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    WS_OVERLAPPEDWINDOW,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    CW_USEDEFAULT,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    CW_USEDEFAULT,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    CW_USEDEFAULT,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    CW_USEDEFAULT,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    NULL, NULL,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    hInstance.NULL);<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; if(!hWnd)</font>&nbsp; <font face="Times New Roman" size="2">{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBox(NULL, &quot;Cannot
+    create window&quot;, &quot;Error&quot;, MB_OK);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br>
+    &nbsp;&nbsp; }<br>
+    &nbsp;&nbsp; InitCommonControlsO;<br>
+    &nbsp;&nbsp; hStatusWindow = CreateStatusWindow(WS_CHILD ¦ WS_VISIBLE,&quot;Menu
+    sample&quot;, hWnd, wId);<br>
+    &nbsp;&nbsp; if(!hStatusWindow) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBox(NULL, &quot;Cannot create
+    status window&quot;, &quot;Error&quot;, MB_OK);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retum 0;<br>
+    &nbsp;&nbsp; }<br>
+    /* Try to create menu */<br>
+    &nbsp;&nbsp; AppendMenu( (hFileMenu=CreatePopupMenu()), MF_ENABLED, MF_STRING, <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    IDM_Enable_Disable, &quot;&amp;Enable exit&quot;);<br>
+    &nbsp;&nbsp; AppendMenu(hFileMenu, MF_GRAYED ¦ MF_STRING,
+    IDM_Exit,&quot;E&amp;xit&quot;);<br>
+    &nbsp;&nbsp; AppendMenu((hHelpMenu=CreatePopupMenu()),MF_DISABLED MF_STRING, IDM_About,
+    &quot;&amp;About&quot;);<br>
+    </font>&nbsp;&nbsp; <font face="Times New Roman" size="2">hMenu = CreateMenu();<br>
+    &nbsp;&nbsp; AppendMenu(hMenu, MF_ENABLED ¦ MF_POPUP, (UINT) hFileMenu,
+    &quot;&amp;File&quot;);<br>
+    &nbsp;&nbsp; AppendMenu(hMenu, MF_ENABLED ¦ MF_POPUP, (UINT) hHelpMenu,
+    &quot;&amp;Help&quot;);<br>
+    &nbsp;&nbsp; SetMenu(hWnd, hMenu);<br>
+    /* Show our window */<br>
+    &nbsp;&nbsp; ShowWindow(hWnd, nCmdShow);<br>
+    &nbsp;&nbsp; UpdateWindow(hWnd);<br>
+    &nbsp;&nbsp; DrawMenuBar(hWnd);</font><br>
+    <font face="Arial" size="2"><br>
+    /* Beginning of messages cycle */<br>
+    &nbsp;&nbsp; while(GetMessage(&amp;Msg, NULL, 0, 0))&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TranslateMessage(&amp;Msg);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DispatchMessage(&amp;Msg);<br>
+    &nbsp;&nbsp; }<br>
+    &nbsp;&nbsp; retum Msg.wParam;<br>
+    }</font> </p>
+    <p><font face="Times New Roman" size="2">LRESULT CALLBACK MenuDemoWndProc (HWND hWnd, UINT
+    Message,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    UINT wParam, LONG IParam )<br>
+    {<br>
+    &nbsp;&nbsp; RECT Rect;<br>
+    &nbsp;&nbsp; static UINT nFlag = MF_ENABLED;<br>
+    &nbsp;&nbsp; char* pContentQ<br>
+    &nbsp;&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Enable exit&quot;,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Disable exit&quot;<br>
+    &nbsp;&nbsp; };<br>
+    &nbsp;&nbsp; static UINT nindex = 0;<br>
+    &nbsp;&nbsp; static HBITMAP hBitmap;<br>
+    &nbsp;&nbsp; int nDimension;<br>
+    <br>
+    &nbsp;&nbsp; switch(Message)&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; caseWM CREATE:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    nDimension = GetSystemMetrics(SM_CYMENU);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    hBitmap = Loadlmage(hlnst, &quot;msdogs.bmp&quot;, IMAGE_BITMAP,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    nDimension • 2, nDimension, LR_LOADFROMFILE);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    AppendMenu(GetMenu(hWnd), MF_BITMAP, IDM_Bitmap, hBitmap);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    break;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case WM_COMMAND:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    switch (wParam)&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    case IDM_Enable_Disable:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    EnableMenuItem(hFileMenu, IDM_Exit, MF_BYCOMMAND ¦ nFlag);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    nFlag = (nFlag == MF_ENABLED) ? MF_GRAYED : MF_ENABLED;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    nindex = ( nindex == 0) ? 1 : 0;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ModifyMenu(hFileMenu, IDM_Enable_Disable, MF_BYCOMMAND ¦<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    MF_STRING, IDM_Enable_Disable, pContent[nIndex]);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    break;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    case IDM_Exit:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    SendMessage(hWnd, WM_CLOSE, NULL, NULL);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    break;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case WM_SIZE:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    SendMessage(hStatusWindow, WM_SIZE, wParam, IParam);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    GetClientRect(hWnd, &amp;Rect);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return 0;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case WM_MENUSELECT:<br>
+    // Selection is losted<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    if( ((UINT) HIWORD(wParam) == Oxffff) &amp; ((HMENU) IParam == 0))&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    SendMessage(hStatusWindow ,SB_SETTEXT, (WPARAM) 0, (LPARAM) pMessages[5]);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return 0;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    if ((UINT) HIWORD (wParam) &amp; MF_SYSMENU)</font>&nbsp; <font face="Arial" size="2">{</font><br>
+    <font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Times New Roman" size="2">SendMessage(hStatusWindow, SB_SETTEXT,
+    (WPARAM) 0, (LPARAM) pMessages[6]);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return 0;</font><br>
+    <font face="Times New Roman" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Arial" size="2">}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ((UINT)
+    HIWORD(wParam) &amp; MF_POPUP)&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    SendMessage(hStatusWindow, SB_SETTEXT, (WPARAM) 0,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (LPARAM) pMessages[3 + LOWORD(wParam)]);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return 0;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font><br>
+    <font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Times New Roman" size="2">SendMessage(hStatusWindow, SB_SETTEXT,
+    (WPARAM) 0, (LPARAM) pMessages[LOWORD(wParam)]);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return 0;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case WM_DESTROY:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    DeleteObject(hBitmap);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PostQuitMessage(0);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    return 0;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+    &nbsp;&nbsp; return DefWindowProc(hWnd,Message,wParam, IParam);</font><br>
+    <font face="Arial" size="2">}</font> </p>
+    <p><font face="Times New Roman" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Как и в
+    случае нашей первой программы для Windows, давайте
+    рассмотрим эту программу. Естественно, включаем
+    файлы заголовков Win32. Включение файла «commctrl.h»
+    обусловлено вызовом функций для работы со
+    строкой состояния, заголовки которых находятся в
+    этом файле. Далее идут многочисленные описания и
+    определения, объяснять которые я не буду, они
+    сразу же становятся понятными при разборе
+    программы. В функции WinMain() все ясно до момента
+    вызова функции InitCommonControls(). Но и здесь нет ничего
+    страшного. Эта функция вызывается всегда перед
+    использованием библиотеки общих элементов
+    управления, к которым относится и строка
+    состояния. К меню и нашей задаче эта функция
+    имеет весьма далекое отношение. Интерес вызывает
+    фрагмент, который начинается после строки
+    комментария /* Try to create menu */.</font></p>
+    <p align="center"><font face="Times New Roman" size="2"><b>Таблица. Битовые
+    флаги, определяющие поведение и вид элемента
+    меню</b></font> </p>
+    <table align="left" border="1">
+<TBODY>
+      <tr>
+        <td><font face="Times New Roman" size="1">Флаг</font> </td>
+        <td><font face="Times New Roman" size="1">Назначение</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_BITMAP</font> </td>
+        <td><font face="Times New Roman" size="1">Вместо строки символов в
+        качестве элемента меню</font> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><font face="Times New Roman" size="1">используется изображение
+        (bitmap)</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_CHECKED</font> </td>
+        <td><font face="Times New Roman" size="1">Отмечаемый элемент меню</font>
+        </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_DISABLED</font> </td>
+        <td><font face="Times New Roman" size="1">Запрещенный, но не «серый»
+        элемент меню</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_ENABLED</font> </td>
+        <td><font face="Times New Roman" size="1">Разрешенный элемент меню</font>
+        </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_GRAYED</font> </td>
+        <td><font face="Times New Roman" size="1">Запрещенный «серый»
+        элемент меню</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_MENUBARBREAK</font> </td>
+        <td><font face="Times New Roman" size="1">То же, что и следующее, но
+        вертикальные столбцы отделя</font> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><font face="Times New Roman" size="1">ются вертикальной чертой</font>
+        </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_MENUBKEAK</font> </td>
+        <td><font face="Times New Roman" size="1">Очередной элемент меню
+        размещают в новой строке</font> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><font face="Times New Roman" size="1">(menubar) или в новом столбце</font>
+        </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_OWNERDRAW</font> </td>
+        <td><font face="Times New Roman" size="1">За прорисовку элемента
+        отвечает программа, а не Windows</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_POPUP</font> </td>
+        <td><font face="Times New Roman" size="1">Выбор элемента влечет за
+        собой появление меню более</font> </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><font face="Times New Roman" size="1">низкого уровня</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_SEPARATOR</font> </td>
+        <td><font face="Times New Roman" size="1">Горизонтальная черта</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_STRING</font> </td>
+        <td><font face="Times New Roman" size="1">В качестве элемента меню
+        используется строка символов</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_UNCHECKED</font> </td>
+        <td><font face="Times New Roman" size="1">Неотмечаемый элемент меню</font>
+        </td>
+      </tr>
+</TBODY>
+    </table>
+    <p><br clear="all">
+    </p>
+    <p><font face="Times New Roman" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Как уже
+    было сказано, сначала мы создаем меню с помощью
+    вызова функции CreatePopupMenu(), которая возвращает нам
+    хэндл созданного меню hFileMenu. В это меню мы с
+    помощью функции AppendMenu() добавляем два элемента,
+    «Enable exit» и «Exit». Функция AppendMenu() заслуживает того,
+    чтобы поговорить о ней подробнее.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">При
+    вызове функции AppendMenu() она получает четыре
+    аргумента. Аргумент первый - хэндл того меню, в
+    которое добавляется элемент. Ничего сложного или
+    интересного в этом вызове нет. Второй аргумент
+    -комбинация битовых флагов, определяющих внешний
+    вид и поведение добавляемого элемента меню.
+    Перечень и назначение флагов приведены в табл.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Заметим, что некоторые
+    флаги не могут быть установлены одновременно.
+    Например, MF_BITMAP, MF_STRING и MF_POPUP, MFJENABLED, MFJDISABLED и MF_GRAYED.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Интерпретация
+    третьего параметра зависит от того, установлен
+    ли во втором параметре флаг MF_POPUP, т. е. является ли
+    добавляемый элемент меню конечным элементом или
+    влечет за собой вызов очередного меню. В первом
+    случае - конечный элемент - параметр содержит
+    идентификатор этого элемента. Если же
+    добавляется меню, то параметр содержит хэндл
+    добавляемого меню.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">И
+    последний параметр тоже интерпретируется в
+    зависимости от установленных флагов. Установлен
+    флаг MF_BITMAP - параметр содержит хэндл bitmap'а.
+    Установлен флаг MF_STRING - параметр содержит
+    указатель на строку символов. Установлен MF_OWNERDRAW -
+    параметр содержит информацию, используемую
+    программой при прорисовке элемента.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Разобравшись
+    с функцией AppendMenu(), мы можем не останавливаться на
+    последующих ее вызовах и остановиться на вызове
+    функции SetMenu().<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Что
+    означает «создать меню»? Это, как и в случае
+    создания окна, означает всего лишь создание и
+    последующее заполнение некоторых структур в
+    памяти. После создания меню не принадлежит
+    никакому окну и до поры до времени бесполезно
+    блуждает в глубинах памяти. Для того чтобы меню
+    могло выполнять свои функции, оно должно быть
+    «закреплено» за одним из окон. Функция SetMenu() и
+    привязывает меню к конкретному окну. Аргументы
+    этой функции очевидны - хэндл закрепляемого меню
+    и хэндл окна, к которому меню прикрепляется.
+    После вызова этой функции указатель на меню
+    включается в структуру окна и может нормально
+    использоваться.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">После
+    отображения и прорисовки окна вызывается
+    функция DrawMenuBar() для прорисовки меню. И у этой
+    функции очевидно наличие одного аргумента -
+    хэндла окна, которому принадлежит
+    прорисовываемое меню.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">К этому
+    моменту мы произвели все действия, требующиеся
+    для создания меню. Далее программа запускает
+    цикл обработки сообщений и начинает посылать
+    сообщения функции окна. Перейдем к рассмотрению
+    оконной функции. Перед этим я прошу читателя не
+    пугаться, увидев обращение к функции SendMessage(). Она
+    только посылает окну (хэндл окна-адресата -
+    первый аргумент) сообщение (второй аргумент) с
+    заданными wParam (третий аргумент) и IParam (четвертый
+    аргумент). В данном случае посылаются сообщения
+    строке состояния для того, чтобы в ней
+    отобразился текст, на который указывает IParam.<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">При
+    этом оконная функция самостоятельно
+    обрабатывает только четыре сообщения - WM_COMMAND,
+    WM_MENUSELECT, WM_SIZE и WM_DESTROY. WM_DESTROY мы уже рассматривали.
+    WM_SIZE в этом примере используется для того, чтобы
+    при изменении размеров окна строка состояния
+    могла бы нормально перерисоваться, т. е. сейчас
+    это сообщение нас не интересует. В настоящий
+    момент интерес представляют только сообщения
+    WM_MENUSELECT и WM_COMMAND.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Начнем с рассмотрения WM_MENUSELECT. У
+    этого сообщения есть одна особенность. Если поле
+    fuFIags, т. е. старшее слово wParam, равно ОхППи при этом
+    поле hMenu (т. е. IParam) равно NULL, то это означает, что
+    меню закрылось (не стало выделенных элементов),
+    так как пользователь нажал Escape или щелкнул
+    мышкой где-нибудь вне меню. В этом случае в строке
+    состояния появляется текст, описывающий
+    назначение программы в целом («Menu example»). При
+    получении сообщения от системного меню в строке
+    состояния возникает «System menu». Во всех остальных
+    случаях текст в строке состояния описывает
+    назначение подсвеченного элемента меню.
+    Непосредственно ход обработки этого сообщения
+    ясен из листинга и особых пояснений не требует.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Но обработка WM_MENUSELECT - это всего
+    лишь прелюдия к настоящей работе, которая
+    происходит тогда, когда пользователь выбирает
+    конечный элемент меню посредством нажатия
+    клавиши «Enter» или щелкнет левой клавишей мышки на
+    элементе. В этом случае оконная процедура
+    получает сообщение WM_COMMAND. Для того чтобы
+    определить, как реагировать на сообщение, мы
+    должны проанализировать младшее слово wParam,
+    которое хранит идентификатор элемента меню, и в
+    зависимости от его значения предпринимать те или
+    иные действия. В данном случае оконная функция
+    может получать WM_COMMAND только с двумя
+    идентификаторами - IDM_Enab)e_Disable и IDM_Exit. При
+    получении последнего мы осуществляем выход из
+    программы. При обработке первого я демонстрирую
+    использование двух функций -EnableMenuItem() и ModifyMenu().<br>
+    </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">При
+    получении WM_COMMAND, младшее слово wParam которого
+    равно IDM_Enable_Disable, производятся следующие
+    действия:<br>
+    &nbsp; - с помощью функции EnableMenuItem() запрещается или
+    делается доступным элемент «Exit»;<br>
+    </font>- <font face="Times New Roman" size="2">с помощью функции
+    ModifyMenuQ изменяется текст элемента, вы-бор*которого
+    приводит к состоянию элемента «Exit».<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Эти функции достаточно
+    показательны и их разбор поможет читателю еще
+    глубже понять функции, работающие с меню.<br>
+    </font>&nbsp;&nbsp;&nbsp; <font face="Times New Roman" size="2">Функция
+    EnableMenuItem() позволяет программисту изменять
+    состояние элемента (разрешенный, запрещенный,
+    «серый») меню по своему усмотрению. При вызове
+    функции, ей передаются три аргумента. Первый
+    аргумент - хэндл того меню, которому принадлежит
+    элемент. В нашем случае меняется состояние
+    элемента, находящегося в меню «File», хэндл
+    которого hFileMenu. Второй аргумент определяет тот
+    элемент, состояние которого изменяется, но каким
+    способом происходит определение, а также в какое
+    состояние переходит элемент, зависит от третьего
+    аргумента, который в очередной раз представляет
+    комбинацию битовых флагов.</font> </p>
+    <p><font face="Times New Roman" size="2"><b>Таблица</b>.<b> Флаги,
+    используемые при вызове функции</b> EnableMenuItem()</font> </p>
+    <table align="left" border="1">
+<TBODY>
+      <tr>
+        <td><font face="Times New Roman" size="1">Флаг</font> </td>
+        <td><font face="Times New Roman" size="1">Значение</font> </td>
+      </tr>
+      <tr>
+        <td><font face="Times New Roman" size="1">MF_BYCOMMAND<br>
+        MF_BYPOSITION<br>
+        MF_ENABLED<br>
+        MF_DISABLED<br>
+        MF_GRAYED</font></td>
+        <td><font face="Times New Roman" size="1">Изменяемый элемент меню
+        определяется по его идентификатору<br>
+        Изменяемый элемент меню определяется по его
+        номеру (индексу)в меню<br>
+        После вызова функции элемент становится
+        разрешенным<br>
+        После вызова функции элемент становится
+        запрещенным<br>
+        После вызова функции элемент становится «серым»</font></td>
+      </tr>
+</TBODY>
+    </table>
+    <p><br clear="all">
+    </p>
+    <p><font face="Times New Roman" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; После
+    изменения состояния элемента «Exit» с
+    разрешенного на серое и наоборот, необходимо
+    изменить текст в элементе, от которого зависит
+    это состояние. Это изменение производится
+    посредством вызова функции ModifyMenu(), которой
+    передаются пять аргументов. Первые два аргумента
+    функционально подобны аргументам EnableMenuItem(), т. е.
+    первый аргумент - хэндл меню, которому
+    принадлежит изменяемый элемент, а второй
+    аргумент определяет непосредственно изменяемый
+    элемент. Можно было бы сказать, что и третий
+    аргумент функционально подобен, но он
+    представляет собой комбинацию флагов, во-первых,
+    определяющих элемент, подлежащий изменению
+    (MF_BYCOMMAND или MF_BYPOSITION), а во-вторых, определяющих
+    состояние элемента после изменения (перечень
+    этих флагов в точности соответствует
+    приведенному в табл). Четвертый аргумент
+    указывает или идентификатор измененного
+    элемента, или хэндл нового меню (если, конечно, в
+    третьем аргументе установлен флаг MF_POPUP). И
+    наконец, последний аргумент - новое содержание
+    измененного элемента. В зависимости от того,
+    какой флаг установлен в третьем аргументе (MF_BITMAP,
+    MF_STRING или MF_OWNERDRAW), последний аргумент содержит
+    хэндл bitmap'a, указатель на строку или информацию,
+    используемую при прорисовке элемента.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Таким образом, с помощью только
+    функций Win32 мы создали меню и изменили его
+    состояние.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Надеюсь, что при чтении этого
+    раздела и разборе приведенного примера читатель
+    понял технические приемы работы с меню, и теперь
+    может применять полученные знания при
+    разработке собственных программ. Описанными
+    функциями отнюдь не исчерпываются возможности
+    Win32 по управлению меню. Например, в меню можно не
+    добавлять, а вставлять элементы посредством
+    функции InsertMenu(), функция DeleteMenu() удаляет элемент
+    из меню, информацию о меню можно получить с
+    помощью функций GetMenu(), GetMenuString(), GetMenuItemCount() и
+    других.</font> </p>
+    <p><br>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

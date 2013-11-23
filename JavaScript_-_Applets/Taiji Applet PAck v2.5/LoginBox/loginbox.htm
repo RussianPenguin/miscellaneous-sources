@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body bgcolor="#000000">
+
+<h1 align="center"><u><strong><font color="#FFFF00">LoginBox sample</font></strong></u></h1>
+
+<p>&nbsp;</p>
+
+<p><font color="#FFFFFF">This applet provides a small login window which purpose is to
+restrict access of a part of your web site. Allowed users need a <br>
+login and a password, you can set one URL per login/password. The applet size is 2x2 or
+something like that because the grey applet zone is no use for this applet. All the
+logins, passwords and URLs are in the text file 'pass.txt'</font></p>
+
+<p><font color="#FFFFFF"><strong>WARNING:</strong> A bad person could manage to decompile
+the applet and then try to find the 'pass.txt' file so don't protect too important things
+with this applet. A better solution is a CGI script.<br>
+<br>
+</font></p>
+
+<p align="center">
+<applet code="LoginBox.class" WIDTH="5" HEIGHT="5">
+  <param name="background_color" value="#80FF80">
+  <param name="registration_code" value="register to stop the popup online">Please activate Java...
+</applet>
+</p>
+</body>
+</html>

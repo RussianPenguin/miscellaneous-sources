@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="cpp_cool_calendar.files/filelist.xml">
+<link rel=Edit-Time-Data href="cpp_cool_calendar.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Администратор</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Администратор</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2002-07-01T12:41:00Z</o:Created>
+  <o:LastSaved>2002-07-01T12:42:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>438</o:Words>
+  <o:Characters>2500</o:Characters>
+  <o:Company>MySoft</o:Company>
+  <o:Lines>20</o:Lines>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>2933</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>75</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b:hover {color:#7785FF;}
+.c:hover {color:#FFFFFF;}
+
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+code
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	color:blue;}
+p.b, li.b, div.b
+	{mso-style-name:b;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:red;}
+p.c, li.c, div.c
+	{mso-style-name:c;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1102455446;
+	mso-list-template-ids:796659058;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Обычная таблица";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+<meta
+content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources"
+name=keywords>
+<meta name=RESOURCE-TYPE
+content="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white lang=RU link=blue vlink=blue style='tab-interval:35.4pt'
+topmargin=0 leftmargin=0 marginwidth=0 marginheigth=0>
+
+<div class=Section1>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=680
+ style='width:510.0pt;mso-cellspacing:0cm;mso-padding-alt:0cm 0cm 0cm 0cm'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <h3 align=center style='text-align:center'><span style='color:#A0A099'><!-- Spidersoft WebZIP Banner Ad Insert --><!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->Календарь</span></h3>
+  <div class=MsoNormal align=center style='text-align:center'>
+  <hr size=2 width="100%" align=center>
+  </div>
+  <p>Автор: <a href="mailto:nalmond@hotmail.com"><span class=SpellE>Norm</span>
+  <span class=SpellE>Almond</span></a>.</p>
+  <p class=MsoNormal><a href="CalendarApp.zip"><o:p></o:p></a></p>
+  <p><u><span style='color:blue'><a href="CalendarApp.zip">Скачать <span
+  class=SpellE>исходник</span> с примером - 44Kb</a></span></u> </p>
+  <p><img border=0 width=414 height=392 id="_x0000_i1040" src=CoolCalendar.gif></p>
+  <h2>Описание</h2>
+  <p>Позволяет задавать описание к любому дню месяца, ведёт лог. Для
+  программистов здесь будут <span class=SpellE>интересены</span> некоторые
+  реализации элементов управления. Также устранены недостатки многих календарей
+  присутствующих на рынке программного обеспечения.</p>
+  <h2>Интерфейс</h2>
+  <table class=MsoNormalTable border=1 cellpadding=0 width="100%"
+   style='width:100.0%;mso-cellspacing:1.5pt'>
+   <tr style='mso-yfti-irow:0'>
+    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span class=SpellE><code><span style='font-size:10.0pt'>COleDateTime</span></code></span><code><span
+    style='font-size:10.0pt'> <span class=SpellE>GetDate</span>()</span></code></p>
+    </td>
+    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal>Получаем выделенную дату</p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span class=SpellE><code><span style='font-size:10.0pt'>void</span></code></span><code><span
+    style='font-size:10.0pt'> <span class=SpellE>ShowSpinner</span>(BOOL <span
+    class=SpellE>bShow</span>);</span></code></p>
+    </td>
+    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal>Показывает или скрывает полосу прокрутки</p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><code><span style='font-size:10.0pt'>BOOL <span
+    class=SpellE>SetDate</span>(<span class=SpellE>COleDateTime</span> <span
+    class=SpellE>tm</span>);</span></code></p>
+    </td>
+    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal>Устанавливает текущую дату</p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3'>
+    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><code><span lang=EN-US style='font-size:10.0pt;
+    mso-ansi-language:EN-US'>BOOL <span class=SpellE>AddNote</span>(<span
+    class=SpellE>COleDateTime</span>&amp; date, <span class=SpellE>CString</span>
+    <span class=SpellE>strNote</span>, BOOL <span class=SpellE>bReplace</span>);</span></code><span
+    lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+    </td>
+    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal>Присоединяет к дате описание</p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:4'>
+    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span class=SpellE><code><span style='font-size:10.0pt'>void</span></code></span><code><span
+    style='font-size:10.0pt'> <span class=SpellE>DeleteNote</span>(<span
+    class=SpellE>COleDateTime&amp;</span> <span class=SpellE>date</span>);</span></code></p>
+    </td>
+    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal>Удаляет описание даты</p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+    <td width="75%" style='width:75.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal><span class=SpellE><code><span style='font-size:10.0pt'>void</span></code></span><code><span
+    style='font-size:10.0pt'> <span class=SpellE>ClearAllNotes</span>();</span></code></p>
+    </td>
+    <td width="25%" style='width:25.0%;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal>Стирает все описания</p>
+    </td>
+   </tr>
+  </table>
+  <h2>Использование</h2>
+  <h3>Файлы:</h3>
+  <ul type=disc>
+   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span class=SpellE>CalWnd.h</span>
+       &amp; <span class=SpellE>CalWnd.cpp</span> (Тело календаря) </li>
+   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span class=SpellE>CalBtn.h</span>
+       &amp; <span class=SpellE>CalBtn.cpp</span> (объекты-кнопки на календаре)
+       </li>
+   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span class=SpellE>Popup.h</span>
+       &amp; <span class=SpellE>Popup.cpp</span> (Всплывающее контекстное меню)
+       </li>
+   <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+       auto;mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span class=SpellE>NoEdit.h</span>
+       &amp; <span class=SpellE>NoEdit.cpp</span> (Запрещает <span
+       class=SpellE>edit</span> <span class=SpellE>box</span>) </li>
+  </ul>
+  <p>В заголовочный файл необходимо включить &quot;<span class=SpellE>calwnd.h</span>&quot;
+  </p>
+  <pre>// Добавление календаря и зависимых файлов</pre><pre>#<span
+  class=SpellE>include</span> &quot;<span class=SpellE>CalWnd.h</span>&quot;</pre>
+  <p>Теперь создаём объект <span class=SpellE>CCalWnd</span> как член вашего <span
+  class=SpellE>Вашего</span> класса окна</p>
+  <pre><span lang=EN-US style='mso-ansi-language:EN-US'>class <span
+  class=SpellE>CMyWnd</span><o:p></o:p></span></pre><pre><span lang=EN-US
+  style='mso-ansi-language:EN-US'>{<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'>public:<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'>... </span>другие<span
+  style='mso-ansi-language:EN-US'> </span>объявления<span lang=EN-US
+  style='mso-ansi-language:EN-US'><o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'>protected:<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>    </span><span
+  class=SpellE>CCalWnd</span><span style='mso-tab-count:1'>    </span><span
+  class=SpellE>m_wndCalendar</span>;<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></pre>
+  <p>Теперь<span style='mso-ansi-language:EN-US'> </span>создаём<span
+  style='mso-ansi-language:EN-US'> </span>окно<span style='mso-ansi-language:
+  EN-US'> </span>календаря<span lang=EN-US style='mso-ansi-language:EN-US'>.<o:p></o:p></span></p>
+  <pre><span class=SpellE><span lang=EN-US style='mso-ansi-language:EN-US'>int</span></span><span
+  lang=EN-US style='mso-ansi-language:EN-US'> <span class=SpellE>CChildView::OnCreate</span>(LPCREATESTRUCT <span
+  class=SpellE>lpCreateStruct</span>) <o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'>{<span style='mso-tab-count:1'>       </span><o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>// </span>Сперва<span
+  style='mso-ansi-language:EN-US'> </span>вызываем<span lang=EN-US
+  style='mso-ansi-language:EN-US'> <span class=SpellE>OnCreate</span> </span>базового<span
+  style='mso-ansi-language:EN-US'> </span>класса<span lang=EN-US
+  style='mso-ansi-language:EN-US'><o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>if (<span
+  class=SpellE>CWnd</span> ::<span class=SpellE>OnCreate</span>(<span
+  class=SpellE>lpCreateStruct</span>) == -1)<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:2'>               </span></span><span
+  class=SpellE>return</span> -1;</pre><pre><span style='mso-tab-count:1'>        </span></pre><pre><o:p>&nbsp;</o:p></pre><pre><span
+  style='mso-tab-count:1'>        </span>// Теперь создаём наш календарь</pre><pre><span
+  style='mso-tab-count:1'>        </span>// при создании окна задаются координаты лева и верха.</pre><pre><span
+  style='mso-tab-count:1'>        </span>// размер календаря устанавливается автоматически ...</pre><pre><span
+  style='mso-tab-count:1'>        </span><span class=SpellE>if</span> (<span
+  class=SpellE>m_wndCalendar.Create</span>(NULL,&quot;<span class=SpellE>Calendar</span>&quot;,</pre><pre><span style='mso-spacerun:yes'>               </span><span
+  class=SpellE><span lang=EN-US style='mso-ansi-language:EN-US'>WS_VISIBLE|WS_CHILD,CRect</span></span><span
+  lang=EN-US style='mso-ansi-language:EN-US'>(20,20,0,0),this,0x0101) == -1)<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:2'>               </span></span><span
+  class=SpellE>return</span> -1;</pre><pre><span style='mso-tab-count:1'>        </span>... другой код</pre>
+  <p>Так же Вам необходимо включить обработчик сообщения об изменении даты.
+  (Когда пользователь <span class=SpellE>кликает</span> по дате). Он
+  вставляется в .<span class=SpellE>cpp</span> файл Вашего главного окна.
+  Поместить его надо за пределами комментария AFX_MSG_MAP. </p>
+  <pre>BEGIN_MESSAGE_MAP(<span class=SpellE>CChildView,CWnd</span> )</pre><pre><span
+  style='mso-tab-count:1'>        </span><span lang=EN-US style='mso-ansi-language:
+  EN-US'>//{{AFX_MSG_MAP(<span class=SpellE>CChildView</span>)<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>ON_WM_PAINT()<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>ON_WM_CREATE()<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>ON_WM_LBUTTONDBLCLK()<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>//}}AFX_MSG_MAP<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>ON_MESSAGE(<span
+  class=SpellE>WM_DATE_NOTIFY,OnDateNotify</span>) // &lt;--- </span>СЮДА<span
+  lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></pre><pre>END_MESSAGE_MAP()</pre>
+  <p>И, соответственно, в .<span class=SpellE>h</span> файл. <span
+  class=SpellE>Естевственно</span> за пределами AFX_MSG_MAP комментария. </p>
+  <pre><span lang=EN-US style='mso-ansi-language:EN-US'>//{{AFX_MSG(<span
+  class=SpellE>CChildView</span>)<o:p></o:p></span></pre><pre><span lang=EN-US
+  style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span><span
+  class=SpellE>afx_msg</span> void <span class=SpellE>OnPaint</span>();<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>//}}AFX_MSG<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>void OnDateNotify(UINT nId); // &lt;--- </span>СЮДА<span
+  lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span></span>DECLARE_MESSAGE_MAP()</pre>
+  <p>И в заключении сам обработчик. </p>
+  <pre><span lang=EN-US style='mso-ansi-language:EN-US'>LRESULT CChildView::OnDateNotify(WPARAM wParam, LPARAM nControlId)<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'>{<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>COleDateTime tm = m_wndCalendar.GetDate();<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>TRACE(&quot;Date Selected %s for Control ID %d\n&quot;,<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>                                      </span>tm.Format(&quot;%c&quot;), nControlId);<o:p></o:p></span></pre><pre><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-tab-count:1'>        </span>return 0;<o:p></o:p></span></pre><pre>}</pre>
+  <p>Ну а более подробно о принципе работы календаря можно посмотреть в <span
+  class=SpellE>исходнике</span> :)</p>
+  <p>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=3 cellpadding=0 width=468
+ style='width:351.0pt;mso-cellspacing:2.2pt;mso-padding-alt:0cm 0cm 0cm 0cm'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td width=154 style='width:115.5pt;padding:0cm 0cm 0cm 0cm'><!-- LBE_LITE -->
+  <p class=MsoNormal><script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+  </script><br style='mso-special-character:line-break'>
+  <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+  <![endif]><noscript></p>
+  </td>
+ </tr>
+ </noscript><!-- LBE_LITE -->
+</table>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

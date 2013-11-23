@@ -1,0 +1,40 @@
+[Version]
+Signature="$CHICAGO$"
+Class=Unknown
+;ClassGuid={d0fbbbe6-8631-11d2-b162-0060b0efd4aa}
+;Provider="OSR Open Systems Resources, Inc."
+
+;[SourceDisksNames]
+;1="OSR Install Disk 1"
+
+[DestinationDirs]
+DefaultDestDir=12
+OSR.CopyFiles=10,system32\drivers
+
+;[ClassInstall]
+;Addreg=OsrClassReg
+
+;[OsrClassReg]
+;HKR,,,,"Osr Example Drivers"
+;HKR,,Icon,,-21
+
+[Manufacturer]
+%Mfg%=OSR
+
+[OSR]
+%OsrDeviceDesc% = OsrWdm,PCI\VEN_10E8&DEV_4750
+
+[OsrWdm]
+CopyFiles=Osr.CopyFiles
+AddReg=Osr.AddReg
+
+[Osr.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,osrwdm.sys
+
+[Osr.CopyFiles]
+osrwdm.sys
+
+[Strings]
+Mfg = "Open Systems Resources, Inc."
+OsrDeviceDesc = "OSR WDM PCI Sample Driver V1.0"

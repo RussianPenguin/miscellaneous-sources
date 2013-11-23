@@ -1,0 +1,6 @@
+ 
+
+<FONT SIZE=2 Color=#000000 FACE='Verdana,Arial'><b>testo</b><small>(11/16/99 2:13:40 AM)</small>:</FONT>hej<br>
+<FONT SIZE=2 Color=#000000 FACE='Verdana,Arial'><b>testo</b><small>(11/16/99 2:13:51 AM)</small>:</FONT>:-)<br>
+
+<FONT SIZE=2 FACE='Vedana,Arial' Color=#808080><b>***[testo has exited (11/16/99 2:16:02 AM)]***</b></FONT><br>

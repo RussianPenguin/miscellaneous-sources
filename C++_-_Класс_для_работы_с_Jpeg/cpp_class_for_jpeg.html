@@ -1,0 +1,549 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>5</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h2>Класс для работы с Jpeg </h2>
+    <p>Автор <a href="mailto:jratcliff@verant.com">John W. Ratcliff</a> </p>
+    <p>Данный класс позволять производить компрессию
+    и декомпрессию изображений в формате Jpeg,
+    используя библиотеку Intel Jpeg Library.</p>
+    <p>Эта библиотека позволяет оперировать
+    изображением с помощью всего одной DLL. Для работы
+    с этой библиотекой достаточно добавить в Ваш
+    проект файлы из бибилиотеки IJL.H, IJL.LIB, IJL.DLL. Саму
+    бибилиотеку можно найти по адресу<br>
+    <a href="http://www-cs.intel.com/support/performancetools/libraries/ijl/index.htm">http://www-cs.intel.com/support/performancetools/libraries/ijl/index.htm</a>
+    .<br>
+    Там Вас попросят зарегистрироваться и ждать
+    письма на почтовый ящик о регистрации (на мой
+    взгляд довольно утомительно) , а <a
+    href="IJL1.5BW-B7.exe">здесь</a> можно взять без
+    регистрации.</p>
+    <p>В библиотеку включены несколько примеров,
+    которые помогут Вам разобраться с Интеловким
+    классом.</p>
+    <p>Скачать: <font color="#ffffff" face="Verdana, Helvetica, Arial" size="1"><b><a
+    href="jpeg.cpp">jpeg.cpp</a></b></font></p>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        Листинг (пример использования библиотеки для
+        работы с Jpeg изображениями)</b></font></td>
+      </tr>
+    </table>
+    <pre><font color="#000000" face="Courier, Courier New">
+<font color="#007f00">// *** The JPEG.H wrapper layer header file.</font>
+
+<font
+color="#0000ff">#ifndef</font> JPEG_H
+
+<font color="#0000ff">#define</font> JPEG_H
+
+<font
+color="#007f00">//############################################################################</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  JPEG.H                                                                ##</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  Wrapper class to compress or decompress a jpeg from a block of memory ##</font>
+<font
+color="#007f00">//##  using the Intel Jpeg Library.                                         ##</font>
+<font
+color="#007f00">//##  OpenSourced 2/4/2000 by John W. Ratcliff                              ##</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  No warranty expressed or implied.  Released as part of the triangle   ##</font>
+<font
+color="#007f00">//##  throughput testbed project.                                           ##</font>
+<font
+color="#007f00">//############################################################################</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  Contact John W. Ratcliff at jratcliff@verant.com                      ##</font>
+<font
+color="#007f00">//############################################################################</font>
+
+<font
+color="#0000ff">class</font> Jpeg
+{
+<font color="#0000ff">public</font>:
+
+  <font color="#0000ff">static</font> <font
+color="#0000ff">void</font> *ReadImage(<font color="#0000ff">int</font> &amp;width,   // </font><font
+face="Courier, Courier New" color="#007f00">ширина загружаемой картинки.</font><font
+color="#000000" face="Courier, Courier New">
+                         <font color="#0000ff">int</font> &amp;height,  // </font><font
+face="Courier, Courier New" color="#007f00">высота загружаемой картинки.</font><font
+color="#000000" face="Courier, Courier New">
+                         <font color="#0000ff">int</font> &amp;bpp,     // </font><font
+face="Courier, Courier New" color="#007f00">БАЙТ (не бит) НА ПИКСЕЛЬ.</font><font
+color="#000000" face="Courier, Courier New">
+                         <font color="#0000ff">const</font> <font
+color="#0000ff">void</font> *buffer, // </font><font face="Courier, Courier New"
+color="#007f00">адрес памяти, в котором хранятся
+                                        // сжатые jpeg-ом данные.</font><font
+color="#000000" face="Courier, Courier New">
+                         <font color="#0000ff">int</font> sizebytes); // </font><font
+face="Courier, Courier New" color="#007f00">размер сжатых jpeg-ом данных.</font><font
+color="#000000" face="Courier, Courier New">
+
+
+  <font color="#0000ff">static</font> <font
+color="#0000ff">void</font> * Compress(<font color="#0000ff">const</font> <font
+color="#0000ff">void</font> *buffer, // </font><font face="Courier, Courier New"
+color="#007f00">адрес картинки в памяти</font><font color="#000000"
+face="Courier, Courier New">
+                         <font color="#0000ff">int</font> width, // </font><font
+face="Courier, Courier New" color="#007f00">ширина картинки в пикселах</font><font
+color="#000000" face="Courier, Courier New">
+                         <font color="#0000ff">int</font> height, // </font><font
+face="Courier, Courier New" color="#007f00">высота картинки в пикселах.</font><font
+color="#000000" face="Courier, Courier New">
+                         <font color="#0000ff">int</font> bpp, // *</font><font
+face="Courier, Courier New" color="#007f00">БАЙТ* на пиксель изображения 1 или 3</font><font
+color="#000000" face="Courier, Courier New">
+                         <font color="#0000ff">int</font> &amp;len, // </font><font
+face="Courier, Courier New" color="#007f00">возвращённая длина сжатых данных</font><font
+color="#000000" face="Courier, Courier New">
+                         <font color="#0000ff">int</font> quality=75); // </font><font
+face="Courier, Courier New" color="#007f00">качество картинки в процентах</font><font
+color="#000000" face="Courier, Courier New">
+
+};
+
+<font color="#0000ff">#endif</font>
+
+
+<font
+color="#007f00">// ** JPEG.CPP, the code used to wrap IJL</font>
+
+<font color="#0000ff">#include</font> &lt;stdio.h&gt;
+<font
+color="#0000ff">#include</font> &lt;stdlib.h&gt;
+<font color="#0000ff">#include</font> &lt;string.h&gt;
+<font
+color="#0000ff">#include</font> &lt;assert.h&gt;
+
+<font color="#007f00">//############################################################################</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  JPEG.CPP                                                              ##</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  Wrapper class to load a jpeg from a block of memory.                  ##</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  OpenSourced 2/4/2000 by John W. Ratcliff                              ##</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  No warranty expressed or implied.  Released as part of the triangle   ##</font>
+<font
+color="#007f00">//##  throughput testbed project.                                           ##</font>
+<font
+color="#007f00">//############################################################################</font>
+<font
+color="#007f00">//##                                                                        ##</font>
+<font
+color="#007f00">//##  Contact John W. Ratcliff at jratcliff@verant.com                      ##</font>
+<font
+color="#007f00">//############################################################################</font>
+<font
+color="#0000ff">#include</font> &quot;jpeg.h&quot;
+<font color="#0000ff">#include</font> &quot;ijl.h&quot; // </font><font
+face="Courier, Courier New" color="#007f00">заголовочный файл Интелевской библиотеки jpeg.</font><font
+color="#000000" face="Courier, Courier New">
+
+// </font><font face="Courier, Courier New"
+color="#007f00">читаем картинку в этот буфер.</font><font
+color="#000000" face="Courier, Courier New">
+<font color="#0000ff">void</font> * Jpeg::ReadImage(<font
+color="#0000ff">int</font> &amp;width,
+                       <font color="#0000ff">int</font> &amp;height,
+                       <font
+color="#0000ff">int</font> &amp;nchannels,
+                       <font color="#0000ff">const</font> <font
+color="#0000ff">void</font> *buffer,
+                       <font color="#0000ff">int</font> sizebytes)
+{
+  JPEG_CORE_PROPERTIES jcprops;
+
+  <font
+color="#0000ff">if</font> ( ijlInit(&amp;jcprops) != IJL_OK )
+  {
+    ijlFree(&amp;jcprops);
+    <font
+color="#0000ff">return</font> 0;
+  }
+
+  jcprops.JPGBytes = (<font color="#0000ff">unsigned</font> <font
+color="#0000ff">char</font> *) buffer;
+  jcprops.JPGSizeBytes = sizebytes;
+  jcprops.jquality = 100;
+
+  <font
+color="#0000ff">if</font> ( ijlRead(&amp;jcprops,IJL_JBUFF_READPARAMS) != IJL_OK )
+  {
+    ijlFree(&amp;jcprops);
+    <font
+color="#0000ff">return</font> 0;
+  }
+
+  width  = jcprops.JPGWidth;
+  height = jcprops.JPGHeight;
+  IJLIOTYPE mode;
+
+  mode = IJL_JBUFF_READWHOLEIMAGE;
+  nchannels = jcprops.JPGChannels;
+  <font
+color="#0000ff">unsigned</font> <font color="#0000ff">char</font> * pixbuff = <font
+color="#0000ff">new</font> <font color="#0000ff">unsigned</font> <font color="#0000ff">char</font>[width*height*nchannels];
+  <font
+color="#0000ff">if</font> ( !pixbuff )
+  {
+    ijlFree(&amp;jcprops);
+    <font color="#0000ff">return</font> 0;
+  }
+
+  jcprops.DIBWidth  = width;
+  jcprops.DIBHeight = height;
+  jcprops.DIBChannels = nchannels;
+  jcprops.DIBPadBytes = 0;
+  jcprops.DIBBytes = (<font
+color="#0000ff">unsigned</font> <font color="#0000ff">char</font> *)pixbuff;
+
+  <font
+color="#0000ff">if</font> ( jcprops.JPGChannels == 3 )
+  {
+    jcprops.DIBColor = IJL_RGB;
+    jcprops.JPGColor = IJL_YCBCR;
+    jcprops.JPGSubsampling = IJL_411;
+    jcprops.DIBSubsampling = (IJL_DIBSUBSAMPLING) 0;
+  }
+  <font
+color="#0000ff">else</font>
+  {
+    jcprops.DIBColor = IJL_G;
+    jcprops.JPGColor = IJL_G;
+    jcprops.JPGSubsampling = (IJL_JPGSUBSAMPLING) 0;
+    jcprops.DIBSubsampling = (IJL_DIBSUBSAMPLING) 0;
+  }
+
+  <font
+color="#0000ff">if</font> ( ijlRead(&amp;jcprops, mode) != IJL_OK )
+  {
+    ijlFree(&amp;jcprops);
+    <font
+color="#0000ff">return</font> 0;
+  }
+
+  <font color="#0000ff">if</font> ( ijlFree(&amp;jcprops) != IJL_OK ) <font
+color="#0000ff">return</font> 0;
+
+  <font color="#0000ff">return</font> (<font color="#0000ff">void</font> *)pixbuff;
+}
+
+
+<font
+color="#0000ff">void</font> * Jpeg::Compress(<font color="#0000ff">const</font> <font
+color="#0000ff">void</font> *source,
+                      <font color="#0000ff">int</font> width,
+                      <font
+color="#0000ff">int</font> height,
+                      <font color="#0000ff">int</font> bpp,
+                      <font
+color="#0000ff">int</font> &amp;len,
+                      <font color="#0000ff">int</font> quality)
+{
+  JPEG_CORE_PROPERTIES jcprops;
+
+  <font
+color="#0000ff">if</font> ( ijlInit(&amp;jcprops) != IJL_OK )
+  {
+    ijlFree(&amp;jcprops);
+    <font
+color="#0000ff">return</font> <font color="#0000ff">false</font>;
+  }
+
+  jcprops.DIBWidth    = width;
+  jcprops.DIBHeight   = height;
+  jcprops.JPGWidth    = width;
+  jcprops.JPGHeight   = height;
+  jcprops.DIBBytes    = (<font
+color="#0000ff">unsigned</font> <font color="#0000ff">char</font> *) source;
+  jcprops.DIBPadBytes = 0;
+  jcprops.DIBChannels = bpp;
+  jcprops.JPGChannels = bpp;
+
+  <font
+color="#0000ff">if</font> ( bpp == 3 )
+  {
+    jcprops.DIBColor = IJL_RGB;
+    jcprops.JPGColor = IJL_YCBCR;
+    jcprops.JPGSubsampling = IJL_411;
+    jcprops.DIBSubsampling = (IJL_DIBSUBSAMPLING) 0;
+  }
+  <font
+color="#0000ff">else</font>
+  {
+    jcprops.DIBColor = IJL_G;
+    jcprops.JPGColor = IJL_G;
+    jcprops.JPGSubsampling = (IJL_JPGSUBSAMPLING) 0;
+    jcprops.DIBSubsampling = (IJL_DIBSUBSAMPLING) 0;
+  }
+
+  <font
+color="#0000ff">int</font> size = width*height*bpp;
+
+  <font color="#0000ff">unsigned</font> <font
+color="#0000ff">char</font> * buffer = <font color="#0000ff">new</font> <font color="#0000ff">unsigned</font> <font
+color="#0000ff">char</font>[size];
+
+  jcprops.JPGSizeBytes = size;
+  jcprops.JPGBytes     = buffer;
+
+  jcprops.jquality = quality;
+
+
+  <font
+color="#0000ff">if</font> ( ijlWrite(&amp;jcprops,IJL_JBUFF_WRITEWHOLEIMAGE) != IJL_OK )
+  {
+    ijlFree(&amp;jcprops);
+    <font
+color="#0000ff">delete</font> buffer;
+    <font color="#0000ff">return</font> 0;
+  }
+
+
+  <font
+color="#0000ff">if</font> ( ijlFree(&amp;jcprops) != IJL_OK )
+  {
+    <font color="#0000ff">delete</font> buffer;
+    <font
+color="#0000ff">return</font> 0;
+  }
+
+  len = jcprops.JPGSizeBytes;
+  <font color="#0000ff">return</font> buffer;
+}
+</font>
+</pre>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

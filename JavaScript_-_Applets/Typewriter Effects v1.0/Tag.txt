@@ -1,0 +1,19 @@
+<applet width="407" height="36" code="SIRtype.class" archive="SIRtype.jar">
+  <param name="AfterEffect" value="Shrink|NoEffect|Shrink|ScrollUp|FadeOut|Shrink|Shrink|Shrink|Shrink|Shrink|Shrink|Shrink|ScrollUp|FadeOut">
+  <param name="AfterEffectSpeed" value="20|20|20|20|20|20|20|20|20|20|20|20|20|60">
+  <param name="BgColor" value="75,69,56">
+  <param name="Font" value="Helvetica|Helvetica|Helvetica|Helvetica|Helvetica|Helvetica|Helvetica|Helvetica|TimesRoman|TimesRoman">
+  <param name="FontBold" value="Yes">
+  <param name="FontColor" value="230,230,170|230,230,170|230,230,170|230,230,170|230,230,170|230,230,170|230,230,170|230,230,170|230,230,170|255,0,0|255,255,0">
+  <param name="FontItalic" value="No">
+  <param name="FontSize" value="16|16|22|22|22|16|16|16|26">
+  <param name="Link" value="http://www.1stjavasoft.com">
+  <param name="Sound" value="none|none|none|none|none|none|none|none|none|none|none|none|type.au|type.au">
+  <param name="Text" value="Sirius presents the Typewriter Applet|It has three special effects|Shrink To The Centre|Scroll Up|Fade Out|Align text to the LEFT|To the RIGHT|and back to the CENTRE|Have different fonts and font sizes|Have different text colors and background colors|Have has many colors as you want with in the RGB values|Have an unlimited number of messages|Have a sound effect play every time a letter is displayed|Custimise all the speeds for each line of text">
+  <param name="TextAlignment" value="CENTRE|CENTRE|CENTRE|CENTRE|CENTRE|LEFT|RIGHT">
+  <param name="TextHold" value="2500|2500|2000|1500|1500|2000|2000|2000|2000|2000|2000|2000|2000|3000">
+  <param name="TypeSpeed" value="30|30|30|30|30|30|30|30|30|30|30|30|30|100">
+  <param name="TypeWait" value="5000|0|0|0|0|0|0|0|0|0|0|0|0|0|0">
+  <param name="Repeat" value"Yes">
+  <param name="LinkAtEnd" value"No">
+</applet>

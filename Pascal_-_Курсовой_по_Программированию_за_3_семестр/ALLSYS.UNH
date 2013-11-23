@@ -1,0 +1,151 @@
+
+
+extern real  sin(real         n);
+   
+extern real  cos(real         n);
+   
+extern real  tan(real         n);
+   
+extern real  sqr(real         n);
+   
+extern real  sqrt(real         n);
+   
+extern longint trunc(real         r);
+   
+extern real  round(real         r);
+   
+extern real  int(real         r);
+
+   
+extern integer pred(integer      b);
+   
+extern integer succ(integer      b);
+   
+extern integer ord(char         c);
+   
+extern word  hi(word         w);
+   
+extern word  lo(word         w);
+
+   
+extern longint memavail(void);
+   
+extern longint maxavail(void);
+   
+extern void  dispose(void *       ptr);
+   
+extern void  mark(void *       ptr);
+   
+extern void  release(void *       ptr);
+
+   
+extern void  assign(text *       fd,
+                    char *       name);
+   
+extern void  reset(text *       fd);
+   
+extern void  rewrite(text *       fd);
+   
+extern void  append(text *       fd);
+   
+extern void  settextbuf(text *       fd,
+                        void *       buffer,
+                        word         size);
+   
+extern void  seek(text *       fd,
+                  word         rec);
+   
+extern boolean seekeof(text *       fd);
+
+   extern integer paramcount; 
+   
+extern char * paramstr(integer      n);
+
+   
+extern void  delete(char *       s,
+                    integer      posit,
+                    integer      number);
+   
+extern char * copy(char *       s,
+                  integer      from,
+                  integer      len);
+   
+extern void  val(char *       s,
+                 real *       res,
+                 integer *    code);
+   
+extern void  move(void *       tomem,
+                  void *       fmmem,
+                  word         bytes);
+   
+extern void  fillchar(void *       dest,
+                      integer      size,
+                      char         value);
+
+
+   /*
+    * Standard procedures with replacement names or modified
+    * parameter types
+    *
+    */ 
+
+   
+extern boolean eof(text *       fd);  /*         as feof; */ 
+   
+extern void  flush(text *       fd);  /*               as fflush; */ 
+   
+extern void  close(text *       fd);  /*               as fclose; */ 
+   
+extern char  upcase(char         c);  /*          as toupper; */ 
+   
+extern integer length(char *       s);  /*     as strlen; */ 
+
+   
+extern void  inc(byte         b);  /* tptcmac.h macros */ 
+   
+extern void  dec(byte         b);
+
+   
+      typedef setrec /* char */ setrec; 
+
+     /* ... */ 
+extern setrec setof(byte         element);
+   
+extern boolean inset(setrec       theset,
+                   byte         item);
+
+     /* ... */ 
+extern char * scat(char *       control);
+
+   
+extern char * ctos(char         c);
+
+     /* ... */ 
+extern void  sbld(char *       dest,
+                  char *       control);
+
+   
+extern integer spos(char *       key,
+                  char *       str);
+
+   
+extern integer cpos(char         key,
+                  char *       str);
+
+     /* ... */ 
+extern integer fscanv(text *       fd,
+                    char *       control);
+
+   
+extern void  msdos(void *       reg);
+   
+extern void  intr(integer      fun,
+                  void *       reg);
+
+   
+      extern text  lst; 
+      extern text  con; 
+      extern text  output; 
+      extern text  input; 
+
+

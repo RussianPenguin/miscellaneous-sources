@@ -1,0 +1,53 @@
+; White Tiger WWW Board. File of patterns
+; and definitions of contextual replacements
+;
+;    Note: at "Submit" the replacement is carried out according to the direct 
+;    order of an arrangement of definitions, at quoting of the text -
+;    according to the return order of an arrangement of definitions
+;
+;    Keychars:
+;      # - replace only in subject                        П
+;      @ - replace only in body                           У I, only first
+;      * - replace both                                   Г position
+;      ; - commentary                                     й
+;      % - enable regexp                                  - II, after I
+;      ! - allow to stop replace by user                  - III, after I and II
+;      > - replace text-to-message at submit the message  Т IV, after I, II
+;      < - replace message-to-form at get the form        й and III
+;      \ - begin of pattern                               - only after all
+;
+;
+; Common replacements
+  ;;&nbsp;&nbsp;\;/twin space replacement
+ - ;; &#151; \;/defice replacement
+--;;&#151;\;/twin defice replacement
+&-&-;;--
+;
+;
+; Replacements for submit, only in body, regexps enabled
+@%>\\*{(.+?)}\*;;'<b>'.$1.'</b>'\;/bold text
+@%>\(^|[^\wР-пр-џ])\*(\S+?)\*($|[^\wР-пр-џ]);;$1.'<b>'.$2.'</b>'.$3\;/bold word
+@%>\\_\_{(.+?)}\_\_;;'<u>'.$1.'</u>'\;/underlined text
+@%>\(^|[^\wР-пр-џ])\_\_(\S+?)\_\_($|[^\wР-пр-џ]);;$1.'<u>'.$2.'</u>'.$3\;/underlined word
+@%>\\_{(.+?)}\_;;'<i>'.$1.'</i>'\;/italic text
+@%>\(^|[^\wР-пр-џ])\_(\S+?)\_($|[^\wР-пр-џ]);;$1.'<i>'.$2.'</i>'.$3\;/italic word
+@%>\\-{(.+?)}\-;;'<s>'.$1.'</s>'
+@%>\(^|[^\wР-пр-џ])\-(\S+?)\-($|[^\wР-пр-џ]);;$1.'<s>'.$2.'</s>'.$3\;/separated word
+@%>\(\A|\s)\"(.+?)\";;$1.'&#171;'.$2.'&#187;'\;/<< and >> replacement
+@%!>\([^>=\"]|\s|\A)((((https?)|(ftp)|(news)|(nntp)|(wais)|(wysiwyg)|(gopher)|(javascript)|(castanet)|(about)):\/\/)([\w\/\\\~\?\-=_#&:%\(\)\[\]\.]+))(\W|\Z);;$1.'<a href='.$2.'>'.$2.'</a>'.$16;\;/URL selecting by http...
+@%!>\([^>=\"\/]?\s|\A)((((www)|(news)|(fido))[0-9]?\.)([\w\.\/\\\~\?\-=_#&:%\(\)\[\]]+))(\W|\Z);;$1.'<a href=http://'.$2.'>'.$2.'</a>'.$9\;/URL selecting by www...
+@%!>\([^>=\"\/]?\s|\A)(ftp[0-9]?\.([\w\.\/\\\~\?\-=_#&:%\(\)\[\]]+))(\W|\Z);;$1.'<a href=ftp://'.$2.'>'.$2.'</a>'.$4\;/URL selecting by ftp
+@%!>\(\s|\A|\"|\')(\w+(\.\w+)*?@.+?)((\Z)|(\.\Z)|(\. )|(\? )|\,|\s|\;|\:|!|\"|\'|\(|\)|\[|\]|\*|\/);;$1.'<a href=mailto:'.$2.'>'.$2.'</a>'.$4\;/e-mail selecting
+;
+; Replacements for answer form, only in body, regexps enabled
+@%<\'*{'.$1.'}*';;<b>(.+?)<\/b>\;/reverse bold text
+@%<\$1.'*'.$2.'*'.$3;;(^|[^\wР-пр-џ])<b>(\S+?)<\/b>($|[^\wР-пр-џ])\;/reverse bold word
+@%<\'_{'.$1.'}_';;<i>(.+?)<\/i>\;/reverse italic text
+@%<\$1.'_'.$2.'_'.$3;;(^|[^\wР-пр-џ])<i>(\S+?)<\/i>($|[^\wР-пр-џ])\;/reverse italic word
+@%<\'__{'.$1.'}__';;<u>(.+?)<\/u>\;/reverse underlined text
+@%<\$1.'__'.$2.'__'.$3;;(^|[^\wР-пр-џ])<u>(\S+?)<\/u>($|[^\wР-пр-џ])\;/reverse underlined word
+@%<\'-{'.$1.'}-';;<s>(.+?)<\/s>
+@%<\$1.'-'.$2.'-'.$3;;(^|[^\wР-пр-џ])<s>(\S+?)<\/s>($|[^\wР-пр-џ])\;/reverse separated word
+@%!<\$1;;<a href="?.+?"?>(.+?)<\/a>\;/URL deselecting
+@%!<\$1;;<a href=mailto:.+?>(.+?)<\/a>\;/e-mail deselecting
+@%<\'"'.$1.'"';;&#171;(.*?)&#187;

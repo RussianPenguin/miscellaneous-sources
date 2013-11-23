@@ -1,0 +1,22 @@
+Creating the help file .\dict.hlp.
+
+Processing D:\projects\wiz3dial\help\.\dict.rtf
+    HC3111: Warning: topic #2 of D:\projects\wiz3dial\help\.\dict.rtf : 
+	This topic contains keywords but no title.
+    HC3111: Warning: topic #3 of D:\projects\wiz3dial\help\.\dict.rtf : 
+	This topic contains keywords but no title.
+
+Resolving keywords...
+Adding bitmaps...
+4	Topics
+2	Jumps
+4	Keywords
+1	Bitmap
+
+Created D:\projects\wiz3dial\help\dict.fts, 10,752 bytes
+Created D:\projects\wiz3dial\help\dict.hlp, 14,189 bytes
+Bitmaps: 6,456 bytes
+Hall+Zeck compression INCREASED help file by 47 bytes.
+Compile time: 0 minutes, 7 seconds
+0 notes, 2 warnings
+

@@ -1,0 +1,239 @@
+<HTML>
+<HEAD>
+   	<META NAME="description" content="The consulting.com horizontal text scroller applet">
+   	<META NAME="keywords" content="consulting.com Java Horizontal Text Scrolling Applet">
+
+	<TITLE>The consulting.com Horizontal Scrolling Text Applet</TITLE>
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+	<img src="./logo.gif">
+	
+	<TABLE width=640>
+	<tr><td colspan=2>
+		<font face="Verdana,Arial" size=2 color=red>
+		ConsultTicker Horizontal Text Scroller Version 1.0
+		</font>
+	<hr>
+	</td></tr>
+	<TR>
+	   <TD align=center width=300>					
+		<APPLET CODE="HorScrollerEval.class" WIDTH=500 HEIGHT=30>
+			<param name=text value="This is sample text from an applet parameter.">
+			<param name=copyright value="ConsultScroll Horizontal Scroller v1.0 Copyright (c) 1999, consulting.com Inc.">
+			<param name=backgroundColor value="black">
+			<param name=textColor value="white">
+			<param name=border value="yes">
+			<param name=borderColor value="lightGray">
+			<param name=borderRaised value="yes">
+			<param name=fontStyle value="ITALIC">
+			<param name=font value="TimesRoman">
+			<param name=fontSize value="15">
+		</APPLET>
+	</TD>
+	</TR>
+	<TR>
+	<td>
+		<font face="Verdana,Arial" size=2>
+		<b>Purchasing The Applet</b>
+		<br>
+		<p>When using the free evaluation version of the Horizontal Text Scroller,
+		the message "free applets at www.consultcom.com" will be displayed
+		in the browser's status bar.
+		The purchased version does not display this message.
+		<p>
+		To order the purchased version of the Horizontal Text Scroller, please visit
+		<a href="http://www.consultcom.com">http://www.consultcom.com</a>
+		and browse to the Horizontal Scroller page in our Software section.
+		<p>
+		<b>Easy Setup</b>
+		<BR>
+		The easiest way to set up the applet on your site is to start with the applet code 
+		found on <a href="Sample.txt">this page</a>. Use notepad and cut and paste the applet code from this sample
+		file into your HTML file. Then try it out and customize it for your site. 
+		Please note, after you change the HTML file you must 
+		hit 'reload' on your browser to view the changes (sometimes you must close the browser 
+		and reopen it to see the changes).
+		<p>
+		Note: It is very important that you do not modify or remove the <i>copyright</i>
+		parameter. This will cause a message stating that the applet is "unregistered."	
+		</p>
+		</font>
+	</td>
+	</TR>
+	<tr><td colspan=2>
+	<hr>
+	</td></tr>
+	</TABLE>
+
+	<TABLE width=640>
+	<TR><TD align=center>
+		<P><IMG SRC="new.gif" BORDER=0  ALIGN=BOTTOM>
+		<font face="Verdana,Arial" size=2>
+		<STRONG>Now supporting text file input of lines!
+		Edit a simple text file and dynamically change what the scroller displays.
+		</STRONG>
+		</FONT>
+		<BR>
+	</TD></TR>
+
+	<TR><TD>
+		<HR>
+		<CENTER> <FONT face="Verdana,Arial" size=4 color=red>Applet parameters</FONT></CENTER>
+		<P><B><FONT face="Verdana,Arial" size=3 color=black>Required parameters:</FONT></B> 
+		<FONT face="Verdana,Arial" size=2>
+
+
+
+		<P><B>copyright</B> 
+		<BR>The copyright parameter must be included, and may not be altered, or the scroller
+		will display a message stating the applet is 'unregistered'. 
+		The value for this parameter must be:<br>
+		<font size =1>
+		ConsultScroll Horizontal Scroller v1.0 Copyright (c) 1999, consulting.com Inc.
+		</font>
+
+		<P><B>backgroundColor</B> 
+		<BR>This is the background color of the applet. There are two different ways to specify this parameter:
+		by color name or by RGB color values.
+
+		<P> To use a color name, use one of the following colors below: 
+
+		<PRE>
+		black
+		blue
+		cyan
+		darkGray
+		gray
+		green
+		lightGray
+		magenta
+		orange
+		pink
+		red
+		white
+		yellow
+		</PRE>
+
+		<P>Or,  you can specify the red, green, and blue values for a unique
+		RGB color: specify three number from 0 - 255 separated by commas.
+
+
+		<P>For example code this for the color red:
+		<BR><FONT COLOR="#000000"><i>&lt;param name=backgroundColor value="255,0,0"&gt;</i></FONT>
+
+		<P><B>textColor</B> 
+		<BR>This is the color of the scrolling text. Colors supported are the same
+		as the backgroundColor parameter.
+
+
+		<P><B>border</B> 
+		<BR>Set to either <i>yes</i> or <i>no</i> to indicate whether or not 
+		a border should appear around the scrolling text. 
+
+		<P><B>borderColor</B> 
+		<BR>Sets the color of the border. Colors supported are the same
+		as the backgroundColor parameter.
+
+		<P><B>borderRaised</B> 
+		<BR>Set to either <i>yes</i> or <i>no</i> to indicate whether or not 
+		a the border will appear three dimensional. 
+
+		<P><B>font</B> 
+		<BR>This is the font for all lines. Use one of the following:
+		<PRE>
+		Dialog
+		Helvetica
+		TimesRoman
+		Courier
+		</PRE>
+
+		<P><B>fontSize</B> 
+		<BR>The size of the text in the scroller.
+
+		<p><B>fontStyle</B> 
+		<BR>This is the font style for the scrolling text. Use one of the following
+		below: 
+		<PRE>
+		PLAIN
+		ITALIC
+		BOLD
+		</PRE>
+
+		<P><B>text</B>
+		<BR>This is the text that will be displayed in the scroller. Please note,
+		if you are using the <i>textFile</i> parameter to input the text from
+		a text file, then this parameter will be ignored. Text may either come
+		from the <i>text</i> parameter or the <i>textFile</i> parameter, but not both.
+
+
+		<p><B>textFile</B>
+		<BR>If you are using a text file as input to the scroller, this parameter 
+		identifies the name of the text file. Make sure the text file is spelled
+		correctly, upper and lower case matter. Put the text file in the same 
+		directory as the class file: HorScroller.class.
+		<P>
+		For example, if your text file is named scroll.txt, enter the following parameter:
+		<BR><B><FONT COLOR="#ff0000">&lt;param name=textFile value="scroll.txt"&gt;</FONT></B>
+		<P>
+
+	</TD></TR>
+
+	<TR><TD>
+		<hr>
+		<CENTER>
+		<FONT face="Verdana,Arial" COLOR="#FF0000" SIZE=4>
+		Frequently Asked Questions
+		</FONT>
+		</CENTER>
+
+		<FONT face="Verdana,Arial" SIZE=2>
+		<BR>
+		<B>
+		<FONT COLOR="#3333FF">
+		I added the applet parameters to my HTML file and the applet
+		doesn't load. <br>
+		</FONT></B>
+		Try the following three steps:
+		<ol>
+		      <li>clear your browsers cache</li>
+		      <li>close your browser</li>
+		      <li>open your browser, and reload the page</li>
+	    	</ol>
+
+		<B><FONT COLOR="#3333FF">I get the error message: class HorScrollerEval not found:</FONT></B>&nbsp;
+		<BLOCKQUOTE>
+		If the applet doesn't start and your browser displays the error message above, make sure the file HorScrollerEval.class
+		is on your web server in the same directory as your HTML file. Also make sure it's spelled correctly,
+		upper and lower case matter (spell it exactly like this: <FONT COLOR="#FF0000">HorScrollerEval.class</FONT>).
+		</BLOCKQUOTE>
+
+
+		<B><FONT COLOR="#3333FF">I get the error message: Applet exception: security violation: security.class from local disk
+		 trying to access url.</FONT></B>&nbsp;
+		<BLOCKQUOTE>
+		If you're testing the applet with a text file on your local machine (not on a web server), 
+		Netscape Communicator may not start the applet
+		and complain about a security error. Don't worry, the applet works fine, 
+		this is a bug in Netscape. Move the applet
+		to your web server and try it there.
+		</BLOCKQUOTE>
+
+
+		<P><B><FONT COLOR="#3333FF">I have a problem that is not listed here.</FONT></B>&nbsp;
+
+		<p>Email <a href="mailto:support@consultcom.com">support@consultcom.com</a> and include your
+		 site's URL and we'll take a look at it. If you have ordered the applet, please include your
+		 transaction number in all emails. 
+		&nbsp;</TD>
+		</font>
+	</TD></TR>
+
+</TABLE>
+
+</BODY>
+</HTML>
+
+
+
+

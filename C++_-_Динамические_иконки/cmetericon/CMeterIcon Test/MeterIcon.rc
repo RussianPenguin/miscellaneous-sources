@@ -1,0 +1,124 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_MAIN DIALOG DISCARDABLE  0, 0, 227, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CMeterIcon Test"
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,195,5,25,15
+    ICON            "",IDC_STATIC_32,15,15,20,20,SS_REALSIZEIMAGE
+    PUSHBUTTON      "Redraw",IDC_BUTTON_REDRAW,10,85,40,15
+    GROUPBOX        "Customize",IDC_STATIC,5,45,215,60
+    EDITTEXT        IDC_EDIT_SPACING,10,65,40,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VAL1,55,65,35,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VAL2,95,65,35,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_VAL3,135,65,35,15,ES_AUTOHSCROLL
+    CTEXT           "Bar 1",IDC_STATIC,55,55,35,10,SS_CENTERIMAGE
+    CTEXT           "Bar 2",IDC_STATIC,95,55,35,10,SS_CENTERIMAGE
+    CTEXT           "Bar 3",IDC_STATIC,135,55,35,10,SS_CENTERIMAGE
+    CTEXT           "Spacing",IDC_STATIC,10,55,40,10,SS_CENTERIMAGE
+    GROUPBOX        "Meters",IDC_STATIC,5,5,65,35
+    EDITTEXT        IDC_EDIT_MAXVAL,175,65,35,15,ES_AUTOHSCROLL
+    CTEXT           "Max Value",IDC_STATIC,175,55,35,10,SS_CENTERIMAGE
+    PUSHBUTTON      "Animate",IDC_BUTTON_ANIMATE,55,85,35,15
+    EDITTEXT        IDC_EDIT_ABOUT,75,5,115,35,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | 
+                    WS_VSCROLL
+    ICON            "",IDC_STATIC_16,45,15,21,20,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_FRAME          ICON    DISCARDABLE     "icon_fra.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

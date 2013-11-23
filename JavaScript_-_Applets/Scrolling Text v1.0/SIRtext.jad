@@ -1,0 +1,326 @@
+// Decompiled by DJ v1.5.5.28 Copyright 2000 Atanas Neshkov  Date: 09/05/2000 21:58:52
+// Home page : http://www.geocities.com/nasko_1999
+// Decompiler options: packimports(3) 
+// Source File Name:   SIRtext.java
+
+import java.applet.Applet;
+import java.applet.AppletContext;
+import java.awt.*;
+import java.io.PrintStream;
+import java.util.StringTokenizer;
+
+public class SIRtext extends Applet
+    implements Runnable
+{
+
+    public void init()
+    {
+        APPLETCONTEXT = getAppletContext();
+        new Evaluation();
+        FIRST = 0;
+        NEXTPAGE = 0;
+        WIDTH = getSize().width;
+        HEIGHT = getSize().height;
+        FONTS = new Font[11];
+        for(i = 1; i < 11; i++)
+        {
+            FT = parmgetstr("FONT" + i, "Courier|N");
+            st = new StringTokenizer(FT, "|");
+            if(st.hasMoreTokens())
+                Fonttype = st.nextToken();
+            else
+                Fonttype = "Courier";
+            if(st.hasMoreTokens())
+                Fontstyle = st.nextToken();
+            else
+                Fontstyle = "N";
+            if(st.hasMoreTokens())
+                Fontsize = Integer.parseInt(st.nextToken());
+            else
+                Fontsize = 10;
+            if(Fontstyle.equals("B"))
+                FONTS[i] = new Font(Fonttype, 1, Fontsize);
+            else
+            if(Fontstyle.equals("I"))
+                FONTS[i] = new Font(Fonttype, 2, Fontsize);
+            else
+            if(Fontstyle.equals("BI") || Fontstyle.equals("IB"))
+                FONTS[i] = new Font(Fonttype, 3, Fontsize);
+            else
+                FONTS[i] = new Font(Fonttype, 0, Fontsize);
+        }
+
+        FONTS[0] = new Font("Helvetica", 0, 10);
+        COLORS = new Color[13];
+        for(i = 0; i < 10; i++)
+        {
+            SC = getParameter("COLOR" + (i + 1));
+            if(SC == null)
+                if(i == 0)
+                    SC = "0|0|0";
+                else
+                    SC = "255|255|255";
+            st = new StringTokenizer(SC, "|");
+            COLORS[i + 1] = new Color(Math.abs(Integer.parseInt(st.nextToken())), Math.abs(Integer.parseInt(st.nextToken())), Math.abs(Integer.parseInt(st.nextToken())));
+        }
+
+        COLORS[0] = new Color(255, 255, 255);
+        COLORS[11] = new Color(148, 148, 148);
+        COLORS[12] = new Color(0, 0, 0);
+        TITLE = parmgetstr("TITLE", " ");
+        TITLEFONT = parmgetint("TITLEFONT", 0, 0, 9);
+        TITLECOLOR = parmgetint("TITLECOLOR", 12, 1, 10);
+        BGCOLOR = parmgetint("BGCOLOR", 0, 1, 10);
+        BORDERWIDTH = parmgetint("BORDERWIDTH", 0, 0, 20);
+        BORDERCOLOR = parmgetint("BORDERCOLOR", 0, 1, 10);
+        SCROLLSPEED = parmgetint("SCROLLSPEED", 97, 0, 100);
+        DISPLAYTIME = parmgetint("DISPLAYTIME", 50, 0, 1000);
+        MAXLINES = parmgetint("MAXLINES", 1, 1, 10000);
+        SPEED = 105 - SCROLLSPEED;
+        if(SPEED < 5)
+            SPEED = 5;
+        TEXTFONT = new int[MAXLINES];
+        TEXTCOLOR = new int[MAXLINES];
+        TEXTLINES = new String[MAXLINES];
+        for(i = 0; i < MAXLINES; i++)
+        {
+            SC = parmgetstr("TEXTLINE" + (i + 1), "1|1| ");
+            if(SC == null)
+                SC = "1|1| ";
+            st = new StringTokenizer(SC, "|");
+            TEXTFONT[i] = Math.abs(Integer.parseInt(st.nextToken()));
+            TEXTCOLOR[i] = Math.abs(Integer.parseInt(st.nextToken()));
+            if(st.hasMoreTokens())
+                TEXTLINES[i] = st.nextToken();
+            else
+                TEXTLINES[i] = " ";
+            if(TEXTCOLOR[i] > 11)
+                TEXTCOLOR[i] = 12;
+            if(TEXTCOLOR[i] < 1)
+                TEXTCOLOR[i] = 0;
+            if(TEXTFONT[i] > 10 || TEXTFONT[i] < 1)
+                TEXTFONT[i] = 0;
+        }
+
+        FIRSTLINE = 0;
+        TXTWIDTH = WIDTH - 2 * BORDERWIDTH;
+        if(TITLE.equals(" "))
+        {
+            TXTHEIGHT = HEIGHT - 2 * BORDERWIDTH;
+            return;
+        } else
+        {
+            fontMetrics = getFontMetrics(FONTS[TITLEFONT]);
+            TXTHEIGHT = HEIGHT - 2 * BORDERWIDTH - fontMetrics.getHeight();
+            return;
+        }
+    }
+
+    public void start()
+    {
+        mainthread = new Thread(this);
+        threadflag = true;
+        mainthread.start();
+    }
+
+    public void stop()
+    {
+        threadflag = false;
+    }
+
+    public void run()
+    {
+        while(threadflag) 
+        {
+            fontMetrics = getFontMetrics(FONTS[TEXTFONT[FIRSTLINE]]);
+            k = fontMetrics.getHeight();
+            if(YOFFSET < k)
+            {
+                YOFFSET = YOFFSET + 1;
+            } else
+            {
+                YOFFSET = 0;
+                FIRSTLINE++;
+            }
+            if(FIRSTLINE >= MAXLINES)
+                FIRSTLINE = 0;
+            repaint();
+            if(FIRSTLINE == NEXTPAGE)
+            {
+                waiting = true;
+                NEXTPAGE = CURRENTLINE - 1;
+                if(NEXTPAGE < 0 || NEXTPAGE < FIRSTLINE)
+                    NEXTPAGE = 0;
+            }
+            if(waiting)
+            {
+                try
+                {
+                    Thread.sleep(10 * DISPLAYTIME);
+                }
+                catch(InterruptedException _ex)
+                {
+                    System.out.println("Error - The thread failed to sleep");
+                }
+                waiting = false;
+            } else
+            {
+                try
+                {
+                    Thread.sleep(SPEED);
+                }
+                catch(InterruptedException _ex)
+                {
+                    System.out.println("Error - The thread failed to sleep");
+                }
+            }
+        }
+    }
+
+    public void update(Graphics g)
+    {
+        paint(g);
+    }
+
+    public void paint(Graphics g)
+    {
+        if(FIRST < 1)
+        {
+            CreateBG();
+            buffer = createImage(WIDTH, HEIGHT);
+            pad = buffer.getGraphics();
+            FIRST = 1;
+            pad.drawImage(buffer2, 0, 0, this);
+        }
+        CreateText();
+        pad.drawImage(buffer3, BORDERWIDTH, HEIGHT - TXTHEIGHT - BORDERWIDTH, this);
+        g.drawImage(buffer, 0, 0, this);
+    }
+
+    public void CreateText()
+    {
+        buffer3 = createImage(TXTWIDTH, TXTHEIGHT);
+        TEXT = buffer3.getGraphics();
+        TEXT.setColor(COLORS[BGCOLOR]);
+        TEXT.fillRect(0, 0, TXTWIDTH, TXTHEIGHT);
+        x = 5;
+        y = -YOFFSET;
+        CURRENTLINE = FIRSTLINE;
+        do
+        {
+            fontMetrics = getFontMetrics(FONTS[TEXTFONT[CURRENTLINE]]);
+            y = y + fontMetrics.getHeight();
+            TEXT.setColor(COLORS[TEXTCOLOR[CURRENTLINE]]);
+            TEXT.setFont(FONTS[TEXTFONT[CURRENTLINE]]);
+            TEXT.drawString(TEXTLINES[CURRENTLINE], x, y);
+            CURRENTLINE = CURRENTLINE + 1;
+            if(CURRENTLINE >= MAXLINES)
+                CURRENTLINE = 0;
+        } while(y < TXTHEIGHT);
+    }
+
+    public void CreateBG()
+    {
+        buffer2 = createImage(WIDTH, HEIGHT);
+        BGpad = buffer2.getGraphics();
+        BGpad.setColor(COLORS[BORDERCOLOR]);
+        BGpad.fillRect(0, 0, WIDTH, HEIGHT);
+        if(TITLE.equals(" "))
+        {
+            return;
+        } else
+        {
+            fontMetrics = getFontMetrics(FONTS[TITLEFONT]);
+            y = fontMetrics.getHeight();
+            x = fontMetrics.stringWidth(TITLE);
+            BGpad.setColor(COLORS[BGCOLOR]);
+            BGpad.fillRect(BORDERWIDTH, BORDERWIDTH, WIDTH - 2 * BORDERWIDTH, BORDERWIDTH + y);
+            BGpad.setColor(COLORS[TITLECOLOR]);
+            BGpad.setFont(FONTS[TITLEFONT]);
+            BGpad.drawString(TITLE, (WIDTH - x) / 2, BORDERWIDTH + y);
+            return;
+        }
+    }
+
+    public int parmgetint(String s, int l, int i1, int j1)
+    {
+        String s1 = getParameter(s);
+        int k1;
+        if(s1 == null)
+        {
+            k1 = l;
+        } else
+        {
+            k1 = Integer.parseInt(s1);
+            if(k1 > j1)
+                k1 = j1;
+            if(k1 < i1)
+                k1 = i1;
+        }
+        return k1;
+    }
+
+    public String parmgetstr(String s, String s1)
+    {
+        String s3 = " ";
+        String s2 = getParameter(s);
+        if(s2 == null)
+            s3 = s1;
+        else
+            s3 = s2;
+        return s3;
+    }
+
+    public SIRtext()
+    {
+        threadflag = false;
+        waiting = false;
+    }
+
+    int i;
+    int j;
+    int k;
+    int x;
+    int y;
+    int NEXTPAGE;
+    int FIRST;
+    int FIRSTLINE;
+    int CURRENTLINE;
+    int YOFFSET;
+    int SPEED;
+    String SC;
+    String FT;
+    String Fonttype;
+    String Fontstyle;
+    int Fontsize;
+    StringTokenizer st;
+    FontMetrics fontMetrics;
+    int WIDTH;
+    int HEIGHT;
+    int TXTWIDTH;
+    int TXTHEIGHT;
+    String TITLE;
+    int TITLEFONT;
+    int TITLECOLOR;
+    int BGCOLOR;
+    int BORDERWIDTH;
+    int BORDERCOLOR;
+    int SCROLLSPEED;
+    int DISPLAYTIME;
+    int MAXLINES;
+    Color COLORS[];
+    Font FONTS[];
+    String TEXTLINES[];
+    int TEXTCOLOR[];
+    int TEXTFONT[];
+    public Image buffer;
+    public Image buffer2;
+    public Image buffer3;
+    Graphics pad;
+    Graphics BGpad;
+    Graphics TEXT;
+    Thread mainthread;
+    boolean threadflag;
+    boolean waiting;
+    static AppletContext APPLETCONTEXT;
+}

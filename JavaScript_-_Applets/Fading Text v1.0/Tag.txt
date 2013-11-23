@@ -1,0 +1,20 @@
+<APPLET CODE="SIRbanner.class" width="500" height="35" ARCHIVE="SIRbanner.jar">
+  <param name="BgColor" value="40|70|40">
+  <param name="FontName" value="TimesRoman">
+  <param name="FontBold" value="No">
+  <param name="FontItalic" value="No">
+  <param name="FontSize" value="16">
+  <param name="ForeColor" value="White">
+  <param name="Link" value="http://www.1stjavasoft.com">
+  <param name="Message"
+  value="Sirius Java Productions - Fading Text
+|This applet is great for banners.
+|It is a lot more eye catching than static banners.
+|This applet goes through as many messages as you want.
+|You can adjust the font to your liking.
+|Fading speed can easily be changed.
+|You can choose how long to display the images.
+|You can specify a hyperlink.">
+  <param name="Speed" value="60">
+  <param name="Wait" value="50">
+</APPLET>

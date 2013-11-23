@@ -1,0 +1,53 @@
+ConsultTicker v1.0, Copyright (c) 1999, consulting.com, Inc.
+http://www.consultcom.com
+support: support@consultcom.com
+
+
+License Agreement
+
+You should carefully read the following terms and conditions
+before using this software. With your use of this software you
+indicate your acceptance of this license agreement and warranty.
+
+This software is provided "as is" without warranty of any kind, 
+either express or implied, including without limitation warranties 
+of merchantability, fitness for a particular purpose, or noninfringement. 
+consulting.com, Inc. makes reasonable efforts to develop and produce 
+useful software as well as accurate and up-to-date documentation regarding
+the use of such software, it does not, however, make any warranties or 
+representations as to its usability, accuracy or completeness. Under no 
+circumstances and under no legal theory shall consulting.com, or any other 
+party involved in distributing consulting.com's software be liable to you
+or any other person for damages resulting from your use of this software 
+and its documentation.
+
+The evaluator/user/buyer/owner of consulting.com software will indemnify, 
+hold harmless, and defend consulting.com, against lawsuits, claims,
+costs associated with defense or accusations that result from the use 
+of consulting.com software. 
+
+consulting.com is not responsible for any damages whatsoever, including 
+loss of information, interruption of business, personal injury and/or 
+any damage or consequential damage without limitation, incurred before,
+during or after the use of our products. Our entire liability, without
+exception, is limited to the customers' reimbursement of the purchase
+price of the software (maximum being the suggested retail price as 
+listed by consulting.com) in exchange for the return of the product,
+all copies, registration papers and manuals, and all materials that 
+constitute a transfer of ownership from the customer back to consulting.com.
+
+Each registered copy of the software may be displayed in multiple locations, 
+but on only one web site (one domain).
+
+The sale of and/or distribution of registered copies of this software 
+is strictly forbidden. It is a violation of this agreement to loan, 
+rent, lease, borrow, or transfer the use of registered copies of 
+consulting.com software products.
+
+The software is made available for downloading solely for use by 
+end users according to the License Agreement. Any reproduction or 
+redistribution of the software not in accordance with the License 
+Agreement is expressly prohibited by law, and may result in severe 
+civil and criminal penalties. Violators will be prosecuted to the 
+maximum extent possible.
+

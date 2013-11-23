@@ -1,0 +1,139 @@
+<!-- 2000 copyright AML development -->
+
+<HTML>
+<HEAD>
+	<TITLE>Scriptsnetwork ::: Демонстрационная версия</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+<SCRIPT LANGUAGE="Javascript">
+
+<!--//
+//Autor: AARON A.ZADONICK 
+
+browser_name = navigator.appName;
+browser_version = parseFloat(navigator.appVersion); 
+if (browser_name == "Netscape" && browser_version < 2.0)
+	{
+	roll = 'false';
+	}
+else if (browser_name == "Netscape" && browser_version == 2.0)
+	{
+	roll = 'false';
+	}
+else if (browser_name == "Netscape" && browser_version >= 3.0)
+	{
+	roll = 'true';
+	}
+else if (browser_name == "Microsoft Internet Explorer" && browser_version <= 2.0)
+	{
+	roll = 'false';
+	}
+else if (browser_name == "Microsoft Internet Explorer" && browser_version >= 3.0)
+	{
+	roll = 'true';
+	}
+else
+	{
+	roll = 'false';
+	}
+function msover(img,ref)
+
+	{
+
+		if (roll == 'true')
+			{
+			document.images[img].src = ref;
+			}
+	}
+function msout(img,ref)
+	{
+		if (roll == 'true')
+			{
+			document.images[img].src = ref;
+			}
+	}
+function msover2(img1,ref1,img2,ref2)
+	{
+		if (roll == 'true')
+			{
+			document.images[img1].src = ref1;
+			document.images[img2].src = ref2;
+			}
+	}
+function msout2(img1,ref1,img2,ref2)
+	{
+		if (roll == 'true')
+			{
+			document.images[img1].src = ref1;
+			document.images[img2].src = ref2;
+			}
+	}
+//-->
+
+</SCRIPT>
+
+	</HEAD>
+<style type="text/css">
+A:link	 	{ color: #003399; text-decoration: underline	}
+A:visited	{ color:#003399;	text-decoration: underline	}
+A:hover		{ color:#003399; text-decoration: none      }
+.copy	 {  font: 8pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333}
+.copy1	 {  font: bold 10pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333 }
+.copy2	 {  font: 9pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333 }
+
+</style>
+<BODY bgcolor="#FFFFFF">
+<div align="center">
+<table border="0" width="500" cellspacing="0" cellpadding="0">
+<tr>
+    <td><a href="http://www.cgi.ru"><img src="topl.gif" width=500 height=29 border=0 alt="Scriptsnetwork"></a></td>
+</tr>
+</table>
+<table border="0" width="500" cellspacing="2" cellpadding="2">
+<tr>
+    <td align="center" class="copy1" valign="top">
+	Демонстрационная версия!
+	</td>
+</tr>
+<tr>
+    <td align="center" class="copy2" valign="top">
+	<br><br><br>
+
+
+
+
+Версия со сменой одной картинки<BR>
+
+<A HREF="http://www.cgi.ru" onMouseOver="msover('roll','i3.gif');" onMouseOut="msout('roll','i2.gif');">
+<IMG SRC="i1.gif" WIDTH=100 HEIGHT=100 BORDER=0 NAME="image1"></A>
+<IMG SRC="i2.gif" WIDTH=100 HEIGHT=100 BORDER=0 NAME="roll">
+<p>
+Версия со сменой двух картинок<BR>
+<A HREF="http://www.cgi.ru" onMouseOver="msover2('image2','i4.gif','roll2','i3.gif');" onMouseOut="msout2('image2','i1.gif','roll2','i2.gif');">
+<IMG SRC="i1.gif" WIDTH=100 HEIGHT=100 BORDER=0 NAME="image2"></A>
+<IMG SRC="i2.gif" WIDTH=100 HEIGHT=100 BORDER=0 NAME="roll2">
+
+
+
+	
+	<br><br><br>
+	</td>
+</tr>
+</table>
+<table border="0" width="500" cellspacing="2" cellpadding="2">
+<tr>
+    <td align="center" class="copy" valign="top">
+	<hr noshade size="1">
+	<a href="http://www.cgi.ru">Посетите наш сервер и подпишитесь на наши рассылки!</a>
+	<hr noshade size="1">
+2000 Copyright &copy <a class="copy" href="http://www.cgi.ru">scriptsnetwork</a>. All rights reserved.<br>
+	</td>
+
+</tr>
+</table>
+
+
+</div>
+</BODY>
+</HTML>

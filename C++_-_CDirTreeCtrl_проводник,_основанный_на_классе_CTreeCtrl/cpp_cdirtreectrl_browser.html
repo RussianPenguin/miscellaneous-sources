@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body>
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding=" ">
+  <tr>
+    <td><hr>
+    <h3 align="center"><font color="#a0a099">CDirTreeCtrl: проводник,
+    основанный на классе CTreeCtrl </font></h3>
+    <hr>
+    <p>Автор: <a href="mailto:delfinon@altavista.net">Nicola Delfino</a>. </p>
+    <p><img src="DirTreeCtrl.gif" width="462" height="339"> </p>
+    <p>CDirTreeCtrl это надстройка для CTreeCtrl и позволяет
+    просматривать структуру директорий файловой
+    системы ввиде дерева, наподобие виндузового
+    проводника. В то время, как древовидное окно
+    проводника Windows показывает только директории,
+    этот браузер показывает так же и файлы.<br>
+    <br>
+    Используется этот класс путём вызова метода <u>Initialize(
+    )</u> в методе OnCreate( ) главного окна.<br>
+    <br>
+    В методе MatchExtension можно добавить код, позволяющий
+    задать - какие файлы будут отображаться вместе с
+    директориями. Например, чтобы отображались
+    только директории, метод MatchExtension должен
+    выглядеть следующим образом:</p>
+    <p><tt><font color="#990000">bool CMyDirTreeCtrl::MatchExtension(CString file){<br>
+    &nbsp;&nbsp;&nbsp; return false;<br>
+    } </font></tt></p>
+    <p>если Вы хотите, чтобы показывались только файлы
+    .exe и .gif ...</p>
+    <p><tt><font color="#990000">bool CMyDirTreeCtrl::MatchExtension(CString file){<br>
+    &nbsp;&nbsp;&nbsp; if (file.Right(4)==CString(&quot;.exe&quot;)) return true;<br>
+    &nbsp;&nbsp;&nbsp; if (file.Right(4)==CString(&quot;.gif&quot;)) return true;<br>
+    &nbsp;&nbsp;&nbsp; return false;<br>
+    } </font></tt></p>
+    <p>и наконец, чтобы показывались все файлы: </p>
+    <p><tt><font color="#990000">bool CMyDirTreeCtrl::MatchExtension(CString file){<br>
+    &nbsp;&nbsp;&nbsp; return true;<br>
+    } </font></tt></p>
+    <p>DirTreeCtrl содержит также 2 дополнительных метода: <u>SetPath(
+    )</u> , который позволяет устанавливать браузер на
+    определённую директорию и <u>GetPath( )</u> , который
+    возвращает (полный) путь выбранного элемента
+    дерева. </p>
+    <p>DirTreeCtrl (и демонстрашка) были написаны и
+    протестированы в Visual Studio 6 Service Pack1. Возможно они
+    будут работать и в предыдущих версиях DevStudio и MFC.</p>
+    <p><a href="DirTreeCtrl_demo.zip">Скачать демонстрашку - 43 KB</a></p>
+    <p><a href="DirTreeCtrl_src.zip">Скачать исходник класса - 5 KB</a> </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</center></div>
+
+</body>
+</html>

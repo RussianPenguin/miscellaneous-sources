@@ -1,0 +1,486 @@
+<HTML><HEAD><TITLE>Информационный сервер для программистов - исходники со всего света.</TITLE>
+<STYLE type=text/css>A.black:link {
+</HEAD>
+<BODY bgColor=white leftMargin=0 topMargin=0 marginheigth="0" marginwidth="0">
+
+<TABLE width=600>
+  <TBODY>
+  <TR>
+    <TD>
+      <CENTER><B>Программирование на php на примере галереи в 3 вариантах (с 
+      применением файлов и mysql).</B><BR><B>Добрый день!</B></CENTER>
+      <P><BR>Предлагаю вашему вниманию пример программирования на языке php с 
+      использованием баз данных mysql (в одном из вариантов программы) на 
+      примере создания галереи фотографий, картинок и т.п. Картинки в 
+      предпросмотре должны быть определенной ширины (чтобы не расползалась 
+      страница). Подобный вариант используется мной <A 
+      href="http://www.czar-club.ru/avrora/galery/galery_regats.php"><B>здесь</B></A> 
+      (2 вариант) и <A 
+      href="http://www.czar-shop.ru/tovar/byb/byb.php"><B>здесь</B></A> (1 
+      вариант).</P>
+      <P>Галерея имеет следующие свойства: </P>
+      <UL>
+        <LI>предпросмотр; 
+        <LI>навигация "вперед-назад"; 
+        <LI>навигация по номерам страниц галереи; 
+        <LI>наличие описаний к картинкам; 
+        <LI>администрирование описаний к картинкам; 
+        <LI>варианты 2 и 3 имеют возможность изменять порядок вывода картинок; 
+        <LI>вариант 3 сделан с использованием базы mysql 
+        <LI>варианты 1 и 3 легко преобразуемы в галерею с возможностью 
+        дополнения галереи посетителями; 
+        <LI>если вы обнаружили еще какие-то свойства галереи, буду рад выслушать 
+        ваше мнение по адресу <A 
+        href="mailto:totoeval@mtu-net.ru">totoeval@mtu-net.ru</A> </LI></UL>
+      <CENTER><B>Вариант 1</B></CENTER>
+      <P>Программа ищет файлы картинок в указанном ей каталоге с маленькими 
+      картинками (предпросмотр). Затем она ищет описания для выводимых картинок 
+      в текстовом файле. Определяет кол-во картинок и создает навигацию по 
+      галерее. Определяет размеры картинок и выводит их с описаниями и с 
+      яваскриптом на каждой картинке, который открывает большой вариант картинки 
+      в новом окне с размерами на 40 пикселей больше размера картинки с 
+      возможностью скроллинга, если таковой окажется необходим для просмотра 
+      картинки полностью (при малом размере экрана). </P>
+      <P>Вот собственно и код 
+      варианта:<BR><BR>&lt;<B>html</B>&gt;<BR>&lt;<B>head</B>&gt;<BR>&lt;TITLE&gt;Photo-galery&lt;/TITLE&gt;<BR>&lt;META 
+      HTTP-EQUIV="Content-Type" CONTENT="text/<B>html</B>; 
+      charset=Windows-1251"&gt;<BR>&lt;LINK REL=STYLESHEET TYPE="text/css" 
+      href="../../style.css"&gt;<BR><BR>&lt;/<B>head</B>&gt;<BR>&lt;body 
+      leftmargin=0 topmargin=0 marginwidth="0" 
+      marginheight="0"&gt;<BR><BR>&lt;table width=650 cellspacing=0 
+      cellpadding=5 border=0 cols=2&gt;&lt;tr&gt;&lt;td&gt;<BR>&lt;div 
+      align="center"&gt;<BR>&lt;br&gt;<BR>&lt;p align="center" 
+      class="zag-main"&gt;Картинная галерея.&lt;/p&gt;<BR>&lt;?<BR>// Пишем 
+      переменные, которые зависят от Вас<BR>//<BR>$scrpic=10; // максимальное 
+      кол-во фоток на <BR>странице$big='../pic/big_regats/'; // путь к большим 
+      картинкам<BR>$small='../pic/small_regats/'; // путь к малым 
+      картинкам<BR>$ini=<B>$DOCUMENT_ROOT</B>.'/avrora/pic/read/read_regats.ini'; 
+      // путь к файлу с текстами к картинкам<BR>//<BR>//В данном случае, файл 
+      строится так: строка с названием картинки (без расширения 
+      файла)<BR>//затем строка с подписью к картинке<BR>//затем название 
+      следующей картинки и так далее.<BR>//<BR>//Например:<BR>//1<BR>//Моя 
+      первая фотография<BR>//rt<BR>//моя фотография rt.jpg<BR>//.... и так до 
+      последней картинки. Если подписи к картинке нет, то надо оставлять пустую 
+      строку.<BR>//<BR>//<BR>$kav="'"; // одинарные кавычки пригодятся нам потом 
+      в таком виде<BR>// для отображения в браузере в яваскрипте. Там необходимо 
+      иметь оба вида кавычек,<BR>// а для php надо еще поставить выводимое 
+      выражение в кавычки.<BR>$podp='увеличить'; // надпись под картинкой,<BR>// 
+      побуждающая клиента нажать на картинку для 
+      увеличения<BR>//<BR>$style_zag2='zag2-main'; // стили текста на 
+      странице<BR>$style_osn='osn-main'; // стили текста на 
+      странице<BR>$style_link='link'; // стили текста на 
+      странице<BR>//<BR>//<BR>//сама программа<BR>$text=<B>file</B>($ini); // 
+      читаем файл с подписями к картинкам в массив $text<BR>$dir=$small; // 
+      указываем путь к каталогу малых фотографий<BR>$handle=opendir($dir); // 
+      читаем заголовок каталога<BR>$si=0; // счетчик файлов в 
+      папке<BR><B>while</B> ($file = <B>readdir</B>($handle)) { // читаем файл, 
+      пока не закончатся<BR><B>if</B> ($file!="..") { // исключаем из списка 
+      файлов "." и ".." (корень и верхний каталог).<BR>$pic[$si]=$file; // 
+      присваиваем текущему элементу массива с именами файлов имя текущего 
+      файла<BR>$si++; // плюсуем к счетчику файлов в папке 1<BR>}<BR>} // 
+      следующий файл<BR>$maxpic=<B>count</B>($pic)-1; // сколько файлов в папке 
+      с малыми картинками<BR><BR><B>if</B> ($begin=="") { // если на страницу 
+      зашли впервые, то $begin присваеваем 
+      1<BR>$begin=1;<BR>}<BR>$end=$begin+$scrpic-1; // $end - номер последней 
+      картинки на странице<BR><B>if</B> ($end&gt;$maxpic) { // если последний 
+      номер на странице больше кол-во картинок в папке,<BR>// то он равен 
+      последнему<BR>$end=$maxpic;<BR>}<BR>$beginrew=$begin-$scrpic; // при 
+      переходе назад, начинаем показывать картинки с номера,<BR>//равному 
+      "первый номер текущей страницы минус кол-во картинок на 
+      странице"<BR>$beginfw=$begin+$scrpic; // при переходе вперед, начинаем 
+      показывать картинки с номера,<BR>//равному "первый номер текущей страницы 
+      плюс кол-во картинок на странице"<BR>$hrefrew='&lt;a 
+      href='.<B>$PHP_SELF</B>.'?begin='.$beginrew.' 
+      class='.$style_zag2.'&gt;назад&lt;/a&gt;';<BR>// создаем ссылку 
+      "назад"<BR>$hreffw='&lt;a href='.<B>$PHP_SELF</B>.'?begin='.$beginfw.' 
+      class='.$style_zag2.'&gt;вперед&lt;/a&gt;';<BR>// создаем ссылку 
+      "вперед"<BR>$navig=$hrefrew.' || '.$hreffw; // ставим между ссылками 
+      "назад-вперед" символ "||"<BR><B>if</B> ($beginrew&lt;=0) { // если мы на 
+      первой странице, то ссылка назад не нужна<BR>// $hrefrew='&lt;a 
+      href='.<B>$PHP_SELF</B>.'?begin='.$beginrew.' 
+      class='.$style_zag2.'&gt;назад&lt;/a&gt;';<BR>$navig=$hreffw;<BR>}<BR><B>if</B> 
+      ($beginfw&gt;$maxpic) { // если мы на последней странице, то ссылка вперед 
+      не нужна<BR>// $hreffw='&lt;a href='.<B>$PHP_SELF</B>.'?begin='.$beginfw.' 
+      class='.$style_zag2.'&gt;вперед&lt;/a&gt;';<BR>$navig=$hrefrew;<BR>}<BR>// 
+      вывод на экран номеров страниц 
+      галереи<BR>$scrmax=<B>ceil</B>($maxpic/$scrpic); // вычисляем, сколько 
+      страниц с картинками<BR><B>for</B> ($scr=1; $scr&lt;=$scrmax; $scr++) { // 
+      начиная с первого номера до кол-ва страниц 
+      галереи<BR>$beginsrc=($scr-1)*$scrpic+1; // вычисляем номер 
+      картинки,<BR>// с которого будут выводиться картинки на 
+      странице<BR><B>if</B> ($beginsrc==$begin) { // если страница 
+      текущая,<BR>// то ее номер выводим в виде простого текста, а не 
+      ссылки<BR><B>echo</B> '&nbsp;&nbsp;&lt;span 
+      class='.$style_zag2.'&gt;'.$scr.'&lt;/span&gt;&nbsp;&nbsp;';<BR>}<BR><B>else</B> 
+      { // если страница не текущая, то выводим ссылку на нее и передаем 
+      параметры:<BR>// номер картинки, с которой начать выводить на этой 
+      странице<BR><B>echo</B> '&nbsp;&lt;a 
+      href='.<B>$PHP_SELF</B>.'?begin='.$beginsrc.' 
+      class='.$style_zag2.'&gt;&nbsp;'.$scr.'&nbsp;&lt;/a&gt;&nbsp;';<BR>}<BR>}<BR><B>echo</B> 
+      '&lt;p align=center class='.$style_zag2.'&gt;'.$navig.'&lt;/p&gt;';<BR>// 
+      вывод на экран навигации "вперед-назад"<BR><BR><B>for</B> ($i=$begin; 
+      $i&lt;=$end; $i++) { // начиная с первой картинки на странице,<BR>// 
+      перебираем картинки вплоть до последней на странице<BR><B>for</B> ($j=0; 
+      $j&lt;<B>sizeof</B>($text); $j++) { // читаем файл ини и собираем 
+      описания<BR>$name_file=<B>explode</B>(".",$pic[$i]); //выделяем в названии 
+      файла его имя (без расширения)<BR><B>if</B> 
+      (<B>trim</B>($text[$j])==$name_file[0]) { // ищем название картинки,<BR>// 
+      предварительно обрезав пробелы вокруг названия картинки в файле<BR>// 
+      (если текущее название картинки $pic[$i] совпадает с проверяемым 
+      $text[$j])<BR>$descript=<B>trim</B>($text[$j+1]);<BR>// если картинка 
+      найдена, то в $descript пишем описание к картинке<BR>}<BR><B>else</B> { // 
+      если название картинки не совпадает с искомым, то плюем на 
+      него<BR>}<BR>}<BR>$photo=$big.$pic[$i]; <BR>// присваиваем $photo имя 
+      малого файла+путь к папке с большими 
+      картинками<BR>$size=<B>getimagesize</B>($photo); // читаем информацию о 
+      картинке<BR>$width=$size[0]+40; // получаем ширину картинки и + 40 
+      (свободное поле вокруг картинки)<BR>$height=$size[1]+40; // получаем 
+      высоту картинки и + 40 (свободное поле вокруг картинки)<BR>$sxp=$size[2]; 
+      // получаем тип (расширение файла картинки)<BR>$smphoto=$small.$pic[$i]; 
+      <BR>// присваиваем $smphoto имя малого файла+путь к папке с малыми 
+      картинками<BR>$smsize=<B>getimagesize</B>($smphoto); // читаем информацию 
+      о картинке<BR>$smwidth=$smsize[0]; // получаем ширину 
+      картинки<BR>$smheight=$smsize[1]; // получаем высоту 
+      картинки<BR>$smexp=$smsize[2]; // получаем тип (расширение файла 
+      картинки)<BR>$winstat='toolbar=0,<B>location</B>=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1,width='.$width.',height='.$height; 
+      // статус открываемого окна с большой картинкой<BR><BR>// выводим таблицу 
+      галереи.<BR>// если номер картинки четный, то картинка слева, а описание 
+      справа и наоборот<BR>// делаем это для неужасного внешнего вида 
+      галереи<BR>// Вы можете разположить картинки как Вам 
+      заблагорассудится.<BR>// итак:<BR>?&gt;&lt;table width=420 cellspacing=0 
+      cellpadding=5 border=0 cols=2&gt;&lt;tr&gt;&lt;? <BR>// выводим одинаковую 
+      часть кода таблицы дл ячейки картинки<BR>//Далее выводим картинки в 
+      ячейках таблиц с описаниями. Делаем все с 
+      "предпросмотром"<BR>//"предпросмотр предпочтителен, потому что не надо 
+      сразу грузить большие файлы,<BR>//а клиент если захочет, сам загрузит то, 
+      что его заинтересовало в новых окнах.<BR>//<BR><B>if</B> 
+      ($i/2==<B>ceil</B>($i/2)) { // если номер картинки на странице 
+      четный<BR><B>echo</B> '&lt;td width=210 rowspan=2&gt;<BR>&lt;p align=right 
+      class='.$style_osn.'&gt;'.$descript.'&lt;/p&gt;<BR>&lt;/td&gt;&lt;td 
+      hight='.($smheight+2).'&gt;<BR>&lt;table width=202 cellspacing=1 
+      cellpadding=0 border=0 bgcolor="#000000" 
+      border=0&gt;&lt;tr&gt;&lt;td&gt;<BR>&lt;a href='.$photo.' target="'.$i.'" 
+      onclick="window.open('.$kav.$photo.$kav.', '.$kav.$i.$kav.', 
+      '.$kav.$winstat.$kav.');"&gt;<BR>&lt;img src='.$smphoto.' 
+      width='.$smwidth.' height='.$smheight.' border=0 
+      alt="увеличить"&gt;<BR>&lt;/a&gt;<BR>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;<BR>&lt;/td&gt;&lt;/tr&gt;<BR>&lt;tr&gt;&lt;td 
+      valign=top&gt;<BR>&lt;center&gt;<BR>&lt;a href='.$photo.' target="'.$i.'" 
+      onclick="window.open('.$kav.$photo.$kav.', '.$kav.$i.$kav.', 
+      '.$kav.$winstat.$kav.');" 
+      CLASS='.$style_link.'&gt;'.$podp.'<BR>&lt;/a&gt;<BR>&lt;/center&gt;<BR>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';<BR>}<BR><B>else</B> 
+      { // если номер картинки нечетный<BR><B>echo</B> '&lt;td 
+      align=left&gt;&lt;table width=202 cellspacing=1 cellpadding=0 border=0 
+      bgcolor="#000000"&gt;&lt;tr&gt;<BR>&lt;td 
+      hight='.($smheight+2).'&gt;<BR>&lt;a href='.$photo.' target="'.$i.'" 
+      onclick="window.open('.$kav.$photo.$kav.', '.$kav.$i.$kav.', 
+      '.$kav.$winstat.$kav.');"&gt;<BR>&lt;IMG SRC='.$smphoto.' 
+      width='.$smwidth.' height='.$smheight.' border=0 
+      alt="увеличить"&gt;<BR>&lt;/a&gt;<BR>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;<BR>&lt;/td&gt;<BR>&lt;td 
+      width=210 rowspan=2&gt;<BR>&lt;p align=left 
+      class='.$style_osn.'&gt;'.$descript.'&lt;/p&gt;<BR>&lt;/td&gt;&lt;/tr&gt;<BR>&lt;tr&gt;&lt;td 
+      valign=top&gt;<BR>&lt;center&gt;<BR>&lt;a href='.$photo.' target="'.$i.'" 
+      onclick="window.open('.$kav.$photo.$kav.', '.$kav.$i.$kav.', 
+      '.$kav.$winstat.$kav.');" 
+      CLASS='.$style_link.'&gt;'.$podp.'<BR>&lt;/a&gt;<BR>&lt;/center&gt;<BR>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';<BR>}<BR>}<BR>// 
+      вывод на экран "вперед-назад"<BR><B>echo</B> '&lt;p align=center 
+      class='.$style_zag2.'&gt;'.$navig.'&lt;/p&gt;';<BR>// вывод на экран 
+      номеров страниц<BR><B>echo</B> '&lt;div align=center&gt;';<BR><B>for</B> 
+      ($scr=1; $scr&lt;=$scrmax; $scr++) 
+      {<BR>$beginsrc=($scr-1)*$scrpic+1;<BR><B>if</B> ($beginsrc==$begin) 
+      {<BR><B>echo</B> '&nbsp;&nbsp;&lt;span 
+      class='.$style_zag2.'&gt;'.$scr.'&lt;/span&gt;&nbsp;&nbsp;';<BR>}<BR><B>else</B> 
+      {<BR><B>echo</B> '&nbsp;&lt;a 
+      href='.<B>$PHP_SELF</B>.'?begin='.$beginsrc.' 
+      class='.$style_zag2.'&gt;&nbsp;'.$scr.'&nbsp;&lt;/a&gt;&nbsp;';<BR>}<BR>}<BR><BR>?&gt;<BR><BR>&lt;/div&gt;<BR>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;<BR>&lt;/body&gt;<BR>&lt;/<B>html</B>&gt;<BR><BR><BR><BR><B>Программа 
+      администрирования текстов описаний:</B><BR><BR>Была применена в моей 
+      статье <A 
+      href="http://cit<b>for</b>um.ru/internet/articles/weather.s<b>html</b>">Импортирование 
+      информации с чужого сайта на свой сайт в свой дизайн</A>. Я считаю этот 
+      способ самым проостым для начинающего программиста. Более сложный способ 
+      обновления я собираюсь сделать в будущих статьях.<BR>Конечно, можно делать 
+      более серьезные интерфейсы, но в этом варианте, который конечно не 
+      рассчитан на ламера, можно быстро править сразу все позиции.<BR>Вот 
+      собственно 
+      код:<BR><BR><BR>&lt;<B>html</B>&gt;<BR>&lt;<B>head</B>&gt;<BR>&lt;title&gt;admin 
+      weather&lt;/title&gt;<BR>&lt;/<B>head</B>&gt;<BR>&lt;body&gt;<BR>&lt;?php<BR>$adr=<B>$DOCUMENT_ROOT</B>."/avrora/pic/read/read_regats.ini"; 
+      // адрес файла, в котором и будут записываться названия файлов с 
+      описаниями<BR>$password='pass'; // простенькая система 
+      авторизации<BR>$eror='Password eror!';<BR>$old=<B><B>file</B></B>($adr); 
+      // читаем то, что сейчас есть в файле<BR><B>if</B> ($submit) { // 
+      проверяем на нажатость кнопки<BR><B>if</B> ($pass==$password) 
+      {<BR>$fp=<B>fopen</B>($adr,"w");<BR><B>fwrite</B> ($fp, $ini); // 
+      записываем в файл измененные 
+      данные<BR><B>fclose</B>($fp);<BR>$old=<B><B>file</B></B>($adr);<BR>}<BR><B><B>else</B></B> 
+      {<BR><B><B>echo</B></B> $eror;<BR>}<BR>}<BR>?&gt;<BR><BR>&lt;<B>for</B>m 
+      method=post action="&lt;?php <B>echo</B> <B>$PHP_SELF</B>?&gt;"&gt; // 
+      информация, введенная в форму, обрабатывается этим же 
+      файлом<BR>password:&lt;input type=text 
+      name=pass&gt;&lt;br&gt;<BR>inicialisation:&lt;textarea name="ini" rows=15 
+      cols=60&gt;<BR>&lt;?<BR><B><B>for</B></B> ($i=0; 
+      $i&lt;<B><B>sizeof</B></B>($old); $i++) {<BR><B><B>echo</B></B> $old[$i], 
+      ""; // выводим на экран текущий вариант 
+      файла<BR>}<BR>?&gt;<BR>&lt;/textarea&gt;<BR>&lt;br&gt;<BR>&lt;input 
+      type=submit name="submit" 
+      value="Enter"&gt;<BR>&lt;/<B>for</B>m&gt;<BR><BR>&lt;/body&gt;<BR>&lt;/<B>html</B>&gt;<BR><BR><BR><BR>В 
+      этом варианте, файл создаем так, как написано в комментарии к 
+      программе:<BR>1<BR>Моя первая фотография<BR>rt<BR>моя фотография 
+      rt.jpg<BR><BR><BR>, где 1 и rt - имена файлов, а строки под ними 
+      соответственно описания к ним.<BR><BR><BR></P>
+      <CENTER><B>Вариант 2</B></CENTER><BR><BR>Отличие этого варианта 
+      отпредыдущего в том, что:<BR>Программа читает файл инициализации 
+      галереи.<BR>В каждой строке такая конструкция (<B>так надо заполнять файл 
+      для этого варианта!</B>):<BR>1.jpg|Моя первая фотография<BR>rt.jpg|моя 
+      фотография rt.jpg<BR>где символ "|" - это разделитель между описанием и 
+      именем файла картинки.<BR><BR>Как видно, в этом варианте надо писать в 
+      файле имя файла картинки с расширением. Если это вам это очень мешает, то 
+      можете переделать так, чтобы было в файле только имя, а расширение 
+      определялось бы автоматически, основываясь на первом примере.<BR>Алгоритм 
+      такого варианта будет:<BR>определитьимя картинки, считать имена файлов в 
+      папке с файлами, обрезая у имен файлов расширения, находим нужный, 
+      сравнивая каждый раз с тем, что взяли из файла. Именно совпавший и будет 
+      искомым.<BR><BR>Далее программа, создав массив из имен и описаний 
+      картинок, определяет, на какой странице галереи клиент находится и выводит 
+      ему соответственно ту или иную страницу.<BR>Сам движок галереи остается 
+      тем же, как вы наверное заметили.<BR>Изменяются некоторые его 
+      части.<BR>Вот сам 
+      код:<BR><BR><BR>&lt;<B>html</B>&gt;<BR>&lt;<B>head</B>&gt;<BR>&lt;TITLE&gt;Photo-galery&lt;/TITLE&gt;<BR>&lt;META 
+      HTTP-EQUIV="Content-Type" CONTENT="text/<B>html</B>; 
+      charset=Windows-1251"&gt;<BR>&lt;LINK REL=STYLESHEET TYPE="text/css" 
+      href="../../style.css"&gt;<BR><BR>&lt;/<B>head</B>&gt;<BR>&lt;body 
+      leftmargin=0 topmargin=0 marginwidth="0" 
+      marginheight="0"&gt;<BR><BR>&lt;table width=650 cellspacing=0 
+      cellpadding=5 border=0 cols=2&gt;&lt;tr&gt;&lt;td&gt;<BR>&lt;div 
+      align="center"&gt;<BR>&lt;br&gt;<BR>&lt;p align="center" 
+      class="zag-main"&gt;Картинная галерея.&lt;/p&gt;<BR>&lt;?<BR>// Пишем 
+      переменные, которые зависят от Вас<BR>//<BR>$scrpic=10; // максимальное 
+      кол-во фоток на <BR>странице$big='../pic/big_regats/'; // путь к большим 
+      картинкам<BR>$small='../pic/small_regats/'; // путь к малым 
+      картинкам<BR>$ini=<B>$DOCUMENT_ROOT</B>.'/avrora/pic/read/read_regats1.ini'; 
+      // путь к файлу с текстами к картинкам<BR>//<BR>//В данном случае, файл 
+      строится так: строка с названием картинки (без расширения 
+      файла)<BR>//затем строка с подписью к картинке<BR>//затем название 
+      следующей картинки и так далее.<BR>//<BR>//Например:<BR>//1|Моя первая 
+      фотография<BR>//rt|моя фотография rt.jpg<BR>//.... и так до последней 
+      картинки. Если подписи к картинке нет, то надо оставлять пустую 
+      строку.<BR>//<BR>//<BR>$kav="'"; // одинарные кавычки пригодятся нам потом 
+      в таком виде<BR>// для отображения в браузере в яваскрипте. Там необходимо 
+      иметь оба вида кавычек,<BR>// а для php надо еще поставить выводимое 
+      выражение в кавычки.<BR>$podp='увеличить'; // надпись под картинкой,<BR>// 
+      побуждающая клиента нажать на картинку для 
+      увеличения<BR>//<BR>$style_zag2='zag2-main'; // стили текста на 
+      странице<BR>$style_osn='osn-main'; // стили текста на 
+      странице<BR>$style_link='link'; // стили текста на 
+      странице<BR>//<BR>//<BR>//сама программа<BR>$text=<B>file</B>($ini); // 
+      читаем файл с подписями к картинкам в массив $text<BR><B>for</B> ($i=0; 
+      $si&lt;<B>sizeof</B>($text); $i++) { // читаем файл ини и сохраняем имена 
+      картинок.<BR>$si=$i+1;<BR>$string=<B>explode</B>("|",$text[$i]);<BR>$pic[$si]=$string[0]; 
+      // присваиваем текущему элементу массива с именами файлов имя текущего 
+      файла<BR>$description[$si]=$string[1];<BR>}<BR><BR>$maxpic=<B>count</B>($pic); 
+      // сколько файлов в папке с малыми картинками<BR><BR><B>if</B> 
+      ($begin=="") { // если на страницу зашли впервые, то $begin присваеваем 
+      1<BR><BR>$begin=1;<BR>}$end=$begin+$scrpic-1; // $end - номер последней 
+      картинки на странице<BR><B>if</B> ($end&gt;$maxpic) { // если последний 
+      номер на странице больше кол-во картинок в папке,<BR>// то он равен 
+      последнему<BR>$end=$maxpic;<BR>}<BR>$beginrew=$begin-$scrpic; // при 
+      переходе назад, начинаем показывать картинки с номера,<BR>//равному 
+      "первый номер текущей страницы минус кол-во картинок на 
+      странице"<BR>$beginfw=$begin+$scrpic; // при переходе вперед, начинаем 
+      показывать картинки с номера,<BR>//равному "первый номер текущей страницы 
+      плюс кол-во картинок на странице"<BR>$hrefrew='&lt;a 
+      href='.<B>$PHP_SELF</B>.'?begin='.$beginrew.' 
+      class='.$style_zag2.'&gt;назад&lt;/a&gt;';<BR>// создаем ссылку 
+      "назад"<BR>$hreffw='&lt;a href='.<B>$PHP_SELF</B>.'?begin='.$beginfw.' 
+      class='.$style_zag2.'&gt;вперед&lt;/a&gt;';<BR>// создаем ссылку 
+      "вперед"<BR>$navig=$hrefrew.' || '.$hreffw; // ставим между ссылками 
+      "назад-вперед" символ "||"<BR><B>if</B> ($beginrew&lt;=0) { // если мы на 
+      первой странице, то ссылка назад не нужна<BR>// $hrefrew='&lt;a 
+      href='.<B>$PHP_SELF</B>.'?begin='.$beginrew.' 
+      class='.$style_zag2.'&gt;назад&lt;/a&gt;';<BR>$navig=$hreffw;<BR>}<BR><B>if</B> 
+      ($beginfw&gt;$maxpic) { // если мы на последней странице, то ссылка вперед 
+      не нужна<BR>// $hreffw='&lt;a href='.<B>$PHP_SELF</B>.'?begin='.$beginfw.' 
+      class='.$style_zag2.'&gt;вперед&lt;/a&gt;';<BR>$navig=$hrefrew;<BR>}<BR>// 
+      вывод на экран номеров страниц 
+      галереи<BR>$scrmax=<B>ceil</B>($maxpic/$scrpic); // вычисляем, сколько 
+      страниц с картинками<BR><B>for</B> ($scr=1; $scr&lt;=$scrmax; $scr++) { // 
+      начиная с первого номера до кол-ва страниц 
+      галереи<BR>$beginsrc=($scr-1)*$scrpic+1; // вычисляем номер 
+      картинки,<BR>// с которого будут выводиться картинки на 
+      странице<BR><B>if</B> ($beginsrc==$begin) { // если страница 
+      текущая,<BR>// то ее номер выводим в виде простого текста, а не 
+      ссылки<BR><B>echo</B> '&nbsp;&nbsp;&lt;span 
+      class='.$style_zag2.'&gt;'.$scr.'&lt;/span&gt;&nbsp;&nbsp;';<BR>}<BR><B>else</B> 
+      { // если страница не текущая, то выводим ссылку на нее и передаем 
+      параметры:<BR>// номер картинки, с которой начать выводить на этой 
+      странице<BR><B>echo</B> '&nbsp;&lt;a 
+      href='.<B>$PHP_SELF</B>.'?begin='.$beginsrc.' 
+      class='.$style_zag2.'&gt;&nbsp;'.$scr.'&nbsp;&lt;/a&gt;&nbsp;';<BR>}<BR>}<BR><B>echo</B> 
+      '&lt;p align=center class='.$style_zag2.'&gt;'.$navig.'&lt;/p&gt;';<BR>// 
+      вывод на экран навигации "вперед-назад"<BR><BR><B>for</B> ($i=$begin; 
+      $i&lt;=$end; $i++) { // начиная с первой картинки на странице,<BR>// 
+      перебираем картинки вплоть до последней на 
+      странице<BR>$descript=$description[$i];<BR>$photo=$big.$pic[$i]; <BR>// 
+      присваиваем $photo имя малого файла+путь к папке с большими 
+      картинками<BR>$size=<B>getimagesize</B>($photo); // читаем информацию о 
+      картинке<BR>$width=$size[0]+40; // получаем ширину картинки и + 40 
+      (свободное поле вокруг картинки)<BR>$height=$size[1]+40; // получаем 
+      высоту картинки и + 40 (свободное поле вокруг картинки)<BR>$sxp=$size[2]; 
+      // получаем тип (расширение файла картинки)<BR>$smphoto=$small.$pic[$i]; 
+      <BR>// присваиваем $smphoto имя малого файла+путь к папке с малыми 
+      картинками<BR>$smsize=<B>getimagesize</B>($smphoto); // читаем информацию 
+      о картинке<BR>$smwidth=$smsize[0]; // получаем ширину 
+      картинки<BR>$smheight=$smsize[1]; // получаем высоту 
+      картинки<BR>$smexp=$smsize[2]; // получаем тип (расширение файла 
+      картинки)<BR>$winstat='toolbar=0,<B>location</B>=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1,width='.$width.',height='.$height; 
+      // статус открываемого окна с большой картинкой<BR><BR>// выводим таблицу 
+      галереи.<BR>// если номер картинки четный, то картинка слева, а описание 
+      справа и наоборот<BR>// делаем это для неужасного внешнего вида 
+      галереи<BR>// Вы можете разположить картинки как Вам 
+      заблагорассудится.<BR>// итак:<BR>?&gt;&lt;table width=420 cellspacing=0 
+      cellpadding=5 border=0 cols=2&gt;&lt;tr&gt;&lt;? <BR>// выводим одинаковую 
+      часть кода таблицы дл ячейки картинки<BR>//Далее выводим картинки в 
+      ячейках таблиц с описаниями. Делаем все с 
+      "предпросмотром"<BR>//"предпросмотр предпочтителен, потому что не надо 
+      сразу грузить большие файлы,<BR>//а клиент если захочет, сам загрузит то, 
+      что его заинтересовало в новых окнах.<BR>//<BR><B>if</B> 
+      ($i/2==<B>ceil</B>($i/2)) { // если номер картинки на странице 
+      четный<BR><B>echo</B> '&lt;td width=210 rowspan=2&gt;&lt;p align=right 
+      CLASS='.$style_osn.'&gt;'.$descript.'&lt;/p<BR>&gt;&lt;/td&gt;&lt;td 
+      hight='.($smheight+2).'&gt;&lt;table width=202 cellspacing=1 cellpadding=0 
+      border=0 bgcolor="#000000" border=0&gt;&lt;tr&gt;&lt;td&gt;&lt;A 
+      HREF='.$photo.' target="'.$i.'" onclick="window.open('.$kav.$photo.$kav.', 
+      '.$kav.$i.$kav.', '.$kav.$winstat.$kav.');"&gt;<BR>&lt;IMG 
+      SRC='.$smphoto.' WIDTH='.$smwidth.' HEIGHT='.$smheight.' BORDER=0 
+      alt="увеличить"&gt;&lt;/A&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table<BR>&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td 
+      valign=top<BR>&gt;&lt;center&gt;&lt;A HREF='.$photo.' target="'.$i.'" 
+      onclick="window.open('.$kav.$photo.$kav.', '.$kav.$i.$kav.', 
+      '.$kav.$winstat.$kav.');" 
+      CLASS='.$style_link.'&gt;'.$podp.'&lt;/a&gt;&lt;/center&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';<BR>}<BR><B>else</B> 
+      { // если номер картинки нечетный<BR><B>echo</B> '&lt;td 
+      align=left&gt;&lt;table width=202 cellspacing=1 cellpadding=0 border=0 
+      bgcolor="#000000"&gt;&lt;tr&gt;&lt;td hight='.($smheight+2).'&gt;&lt;A 
+      HREF='.$photo.' target="'.$i.'" onclick="window.open('.$kav.$photo.$kav.', 
+      '.$kav.$i.$kav.', '.$kav.$winstat.$kav.');"&gt;&lt;IMG SRC='.$smphoto.' 
+      WIDTH='.$smwidth.' HEIGHT='.$smheight.' BORDER=0 
+      alt="увеличить"&gt;&lt;/A&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td 
+      width=210 rowspan=2&gt;&lt;p align=left 
+      CLASS='.$style_osn.'&gt;'.$descript.'&lt;/p<BR>&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td 
+      valign=top<BR>&gt;&lt;center&gt;&lt;A HREF='.$photo.' target="'.$i.'" 
+      onclick="window.open('.$kav.$photo.$kav.', '.$kav.$i.$kav.', 
+      '.$kav.$winstat.$kav.');" 
+      CLASS='.$style_link.'&gt;'.$podp.'&lt;/a&gt;&lt;/center&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';<BR>}<BR>}<BR>// 
+      вывод на экран "вперед-назад"<BR><B>echo</B> '&lt;p align=center 
+      class='.$style_zag2.'&gt;'.$navig.'&lt;/p&gt;';<BR>// вывод на экран 
+      номеров страниц<BR><B>echo</B> '&lt;div align=center&gt;';<BR><B>for</B> 
+      ($scr=1; $scr&lt;=$scrmax; $scr++) 
+      {<BR>$beginsrc=($scr-1)*$scrpic+1;<BR><B>if</B> ($beginsrc==$begin) 
+      {<BR><B>echo</B> '&nbsp;&nbsp;&lt;span 
+      class='.$style_zag2.'&gt;'.$scr.'&lt;/span&gt;&nbsp;&nbsp;';<BR>}<BR><B>else</B> 
+      {<BR><B>echo</B> '&nbsp;&lt;a 
+      href='.<B>$PHP_SELF</B>.'?begin='.$beginsrc.' 
+      class='.$style_zag2.'&gt;&nbsp;'.$scr.'&nbsp;&lt;/a&gt;&nbsp;';<BR>}<BR>}<BR><BR>?&gt;<BR><BR>&lt;/div&gt;<BR>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;<BR>&lt;/body&gt;<BR>&lt;/<B>html</B>&gt;<BR><BR><BR><BR>Программа 
+      администрирования та же, что и в варианте 1.<BR><BR><BR>
+      <CENTER><B>Вариант 3</B></CENTER>
+      <P><BR><BR>В этом варианте используется база данных mysql вместо 
+      текстового файла для хранения описаний, имен картинок и порядка их 
+      следования.<BR>Здесь тоже в базе хранятся именя файлов с расширениями (при 
+      варианте без расширений, будет тратиться время на пиоск картинки по 
+      описанному выше алгоритму, а при заливке картинок через вэбинтерфейс проще 
+      хранить имена файлов с расширениями).<BR>Алгоритм работы программы такой 
+      же, что и в предыдущем примере. Однако, вместо считывания файла, 
+      считывается база галереи. Для ускорения можно было бы поместить операцию 
+      считывания в цикл вывода картинок на экран и не считывать все строки 
+      базы.<BR>Для создания таблицы базы картинок используйте этот 
+      скрипт:<BR><BR>&lt;?<BR>//инициализация 
+      mysql:<BR>$mysql_login='login';<BR>$mysql_host='host';<BR>$mysql_pass='password';<BR>$mysql_db='db';<BR>//<BR><BR><B>mysql_connect</B>($mysql_host,$mysql_login,$mysql_pass);<BR><B>mysql_select_db</B>($mysql_db);<BR><B>mysql_query</B>("set 
+      CHARACTER SET cp1251_koi8") or die ("!--не могу записать"); // эта 
+      строка<BR>используется, если сайт в кодировке win, а база в кодировке 
+      кои-8.<BR>Если кодировки совпадают, строку надо 
+      закомментировать.<BR><BR>$query="<B>CREATE TABLE</B> galery_regats (numer 
+      tinyint(4) NOT NULL, name text NOT NULL, description text NOT 
+      NULL)";<BR>$res=<B>mysql_query</B>($query) or die ("!--не могу создать 
+      таблицу");<BR><BR><BR><B>head</B>er("<B>location</B>: admin.php"); // 
+      переход на страницу администрирования<BR><BR>?&gt;<BR><BR><BR>Программа 
+      администрирования: 
+      <BR><BR>&lt;<B>html</B>&gt;<BR>&lt;<B>head</B>&gt;<BR>&lt;title&gt;Admin 
+      galery&lt;/title&gt;<BR>&lt;link rel=stylesheet type="text/css" 
+      href="../../style.css"&gt;<BR>&lt;/<B>head</B>&gt;<BR>&lt;body 
+      bgcolor=#eeeeee&gt;<BR>&lt;br&gt;<BR><BR>&lt;?<BR>// 
+      логин/пароль<BR>$log='total';<BR>$pas='total';<BR>//инициализация 
+      <BR>mysql:<BR>$mysql_login='login';<BR>$mysql_host='host';<BR>$mysql_pass='password';<BR>$mysql_db='db';<BR>//<BR>$style_zag2='zag2-main'; 
+      // стили текста на странице<BR>$style_osn='osn-main'; // стили текста на 
+      <BR>странице$style_link='link'; // стили текста на 
+      странице<BR>$kon_str="\n"; // конец строки<BR>$razdel="|"; // разделитель 
+      между именем картинки и описанием<BR>?&gt;<BR>&lt;p align="center" 
+      class="&lt;? <B>echo</B> $style_zag2; ?&gt;"&gt;Картинная 
+      галерея.&lt;/p&gt;<BR>&lt;?<BR><B>mysql_connect</B>($mysql_host,$mysql_login,$mysql_pass);<BR><B>mysql_select_db</B>($mysql_db);<BR><B>mysql_query</B>("set 
+      CHARACTER SET cp1251_koi8") or die ("!--не могу записать");</P>
+      <P><BR>switch ($prov) { // проверяем состояние переменной $prov<BR>case 
+      "edit":</P>
+      <P><BR>// если пишем новый вариант базы:<BR><B>if</B> ($login!=$log || 
+      $pass!=$pas) { <B>echo</B> "Введите правильно логин/пароль"; } // если 
+      пароль неверен<BR><B>else</B> {</P>
+      <P><BR>// удаляем текущую базу картинок и создаем пустую таблицу</P>
+      <P><BR>$query="DROP TABLE 
+      galery_regats"<BR>$res=<B>mysql_query</B>($query) or die ("!--не могу 
+      удалить таблицу");<BR>$query="<B>CREATE TABLE</B> galery_regats (numer 
+      tinyint(4) NOT NULL, name text NOT NULL, description text NOT 
+      NULL)";<BR>$res=<B>mysql_query</B>($query) or die ("!--не могу создать 
+      таблицу");<BR>$pics=<B>explode</B>($kon_str,$block); // бьем наш список по 
+      символу переноса строки<BR><B>for</B> ($i=0; $i&lt;<B>sizeof</B>($pics); 
+      $i++) { // пишем в базу 
+      данные<BR>$string=<B>explode</B>($razdel,$pics[$i]); // бьем строки по 
+      символу разделителя<BR>$query="insert into galery_regats (number, name, 
+      description) values ('$i', '$string[0]', 
+      '$string[1]')";<BR><B>mysql_query</B>($query) or die ("!--не могу 
+      записать"); // пишем в таблицу<BR>}<BR>}<BR>break;<BR>default: <BR>// если 
+      мы зашли не по нажатию на ентер:<BR>// читаем базу картинок и сохраняем в 
+      массивы<BR>$zapros="<B>select</B> * <B>from</B> galery_regats <B>order 
+      by</B> 
+      <BR>numer";$res=<B>mysql_query</B>($zapros);<BR>$kol=<B>mysql_num_rows</B>($res);<BR><B>if</B> 
+      ($kol==0) {<BR><B>echo</B> "&lt;span class=$style_osn&gt;Нет картинок в 
+      галерее.&lt;/span&gt;";<BR>}<BR><B>for</B> ($i=0; $i&lt;$kol; $i++) { // 
+      читаем базу и сохраняем имена 
+      картинок.<BR>$pic[$i]=<B>mysql_result</B>($res,$i,"name"); // присваиваем 
+      текущему элементу 
+      массива<BR>$description[$i]=<B>mysql_result</B>($res,$i,"description");<BR>}<BR>break;<BR>}<BR>}<BR>?&gt;<BR>&lt;<B>for</B>m 
+      method=post action="&lt;? <B>echo</B> <B>$PHP_SELF</B>; 
+      ?&gt;"&gt;<BR>&lt;textarea name="block" rows="40" 
+      cols="40"&gt;<BR>&lt;?<BR>// выводим текущее состояние базы 
+      картинок<BR><B>for</B> ($i=0; $i&lt;<B>sizeof</B>($pic); $i++) 
+      {<BR><B>echo</B> 
+      $pic[$i].$razdel.$description[$i].$kon_str;<BR>}<BR>?&gt;<BR>&lt;/textarea&gt;<BR>&lt;input 
+      type="text" name="login" size="10"&gt;<BR>&lt;input type="text" 
+      name="pass" size="10"&gt;<BR>&lt;input type="hidden" name="prov" 
+      <BR>value="edit"&gt;&lt;input type="submit" name="enter" 
+      value="Enter"&gt;<BR>&lt;/<B>for</B>m&gt;<BR>&lt;/body&gt;<BR>&lt;/<B>html</B>&gt;<BR><BR><BR>Форма 
+      заполняется как и во втором варианте.<BR><BR>А для получения 3-го варианта 
+      в коде программы 2-го варианта строки от строки <BR><I>//сама 
+      программа</I><BR>до строки<BR><I>$maxpic=<B>count</B>($pic); // сколько 
+      файлов в папке с малыми картинками</I><BR><BR>которые являются блоком 
+      считывания файла в массивы,<BR>заменяются на 
+      блок:<BR><BR><BR><B>mysql_connect</B>($mysql_host,$mysql_login,$mysql_pass); 
+      // соединение с базой (коннект)<BR><B>mysql_select_db</B>($mysql_db); // 
+      выбор базы<BR><B>mysql_query</B>("set CHARACTER SET cp1251_koi8") or die 
+      ("-------------не могу записать");<BR>// Если кодировки базы и сайта 
+      совпадают - закомментировать эту строку<BR><BR>$zapros="<B>select</B> * 
+      <B>from</B> galery_regats <B>order by</B> 
+      numer";<BR>$res=<B>mysql_query</B>($zapros);<BR>$kol=<B>mysql_num_rows</B>($res);<BR><B>if</B> 
+      ($kol==0) {<BR><B>echo</B> "<SPAN class=$style_osn>Нет картинок в 
+      галерее.</SPAN>";<BR>}<BR><B>for</B> ($i=0; $i&lt;$kol; $i++) { // читаем 
+      файл ини и сохраняем имена 
+      картинок.<BR>$si=$i+1;<BR>$pic[$si]=<B>mysql_result</B>($res,$i,"name"); 
+      // присваиваем текущему элементу массива с именами файлов имя текущего 
+      файла<BR>$description[$si]=<B>mysql_result</B>($res,$i,"description");<BR>}<BR><BR>Результат 
+      работы блока точно такой же, что и во втором варианте - массивы $pic и 
+      $description, где храним имена файлов картинок и описания к ним. Но 
+      работает такая галерея быстрее. Однако, каждый раз, когда хотите залить 
+      новую картинку, надо администрить галерею, даже если не нужно описание. А 
+      в первом варианте стоит только лишь закинуть в папки файлы 
+      картинок.<BR><BR><BR>Таким образом, получаем 3 рабочих варианта программы 
+      галереи. Если будут возникать вопросы по работе программы, адаптации под 
+      "свой сайт" или по принципам, пишите мне по адресу <A 
+      href="mailto:totoeval@mtu-net.ru">totoeval@mtu-net.ru</A><BR><BR><BR>Тотоев 
+      Александр <BR><A href="http://www.czar.ru/">http://www.czar.ru/</A><BR><A 
+      href="http://www.nova-wings.ru/">http://www.nova-wings.ru/</A><BR><BR><BR></P></TD></TR></TBODY></TABLE>
+<HR>
+</BODY></HTML>

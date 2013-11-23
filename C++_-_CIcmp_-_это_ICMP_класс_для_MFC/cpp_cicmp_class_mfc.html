@@ -1,0 +1,686 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>6</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h3 align="center"><font color="#a0a099">CIcmp - это ICMP класс для MFC </font></h3>
+    <hr>
+    <p>Автор <a href="mailto:jay@earthwalkdesigns.com">JayWheeler</a>. </p>
+    <p><br>
+<!-- The article... -->    <b><u>CIcmp - это ICMP класс для MFC</u></b> <ul>
+      <dl>
+        <dt><a href="#Overview">Описание</a> </dt>
+        <dt><a href="#Class">Требования для класса</a> </dt>
+        <dt><a href="#Methods">Методы класса</a> </dt>
+        <dt><a href="#Variables">Переменные класса</a> </dt>
+        <dt><a href="#Install">Инсталляция в проект</a> </dt>
+        <dt><a href="#Demo">EWDPing - Демонтсрационный проект</a> </dt>
+        <h3>Документы RFC</h3>
+        <dl>
+          <dt><a href="http://www.cis.ohio-state.edu/htbin/rfc/rfc791.html">RFC791 - Internet Protocol
+            Спецификация</a> </dt>
+          <dt><a href="http://www.cis.ohio-state.edu/htbin/rfc/rfc792.html">RFC792 - Internet Control
+            Message Protocol Спецификация</a> </dt>
+        </dl>
+      </dl>
+    </ul>
+    <p align="center">&nbsp;</p>
+    <hr width="50%" align="center">
+    <p><a name="Overview"><b><u>Описание ICMP</u></b></a> <br>
+    <ul>
+      <p>В ICMP определены следующие типы сообщений:<br>
+      <ul>
+        <table border="1">
+<TBODY>
+          <tr>
+            <th>Номер Сообщения </th>
+            <th>Тип Сообщения </th>
+            <th>Описание </th>
+          </tr>
+          <tr>
+            <td align="middle">0 </td>
+            <td>Echo Reply </td>
+            <td>Ответ на Эхо-запрос </td>
+          </tr>
+          <tr>
+            <td align="middle">3 </td>
+            <td>Destination Unreachable </td>
+            <td>Неизвесная Сеть или Host </td>
+          </tr>
+          <tr>
+            <td align="middle">4 </td>
+            <td>Source Quench </td>
+            <td>Слишком длинное сообщение или вернулось
+            слишком быстро </td>
+          </tr>
+          <tr>
+            <td align="middle">5 </td>
+            <td>Redirect </td>
+            <td>The host can be reached through a different gateway </td>
+          </tr>
+          <tr>
+            <td align="middle">8 </td>
+            <td>Echo Request </td>
+            <td>Запрос шлюзу/узлу вернуть посланный пакет </td>
+          </tr>
+          <tr>
+            <td align="middle">11 </td>
+            <td>Time Exceeded </td>
+            <td>TTL exceeded </td>
+          </tr>
+          <tr>
+            <td align="middle">12 </td>
+            <td>Parameter Problem </td>
+            <td>Неверные параметры в заголовке сообщения </td>
+          </tr>
+          <tr>
+            <td align="middle">13 </td>
+            <td>Timestamp </td>
+            <td>Requests gateway/host time in mSec </td>
+          </tr>
+          <tr>
+            <td align="middle">14 </td>
+            <td>Timestamp Reply </td>
+            <td>Gateway/host time in mSec </td>
+          </tr>
+          <tr>
+            <td align="middle">15 </td>
+            <td>Information Request </td>
+            <td>Request host network number </td>
+          </tr>
+          <tr>
+            <td align="middle">16 </td>
+            <td>Information Reply </td>
+            <td>Host network number </td>
+          </tr>
+</TBODY>
+        </table>
+      </ul>
+    </ul>
+    <p><a name="Class"><b><u>CIcmp требования</u></b> </p>
+    <p>&nbsp;<ul>
+      <p>The <b>CIcmp</b> класс наследуется от MFC класса<b><i>CSocket</i></b>.
+      Этот класс был разработан, используя Microsoft VisualC++
+      версии 4.2 и MFC, и был протестирован как на WindowsNT 4.0
+      Workstation так и на Server используя WindowsNT Winsock 2.</p>
+      <p>Эта версия класса <b>CIcmp</b> включает в себя только
+      <b>Эхо-запросы</b> описаные в RFC792. Для более
+      детального изучения, почитайте <b>RFC792 - Internet Control
+      Message Protocol, DARPA Internet Program, Protocol Specification</b>. <b>CIcmp</b>
+      может быть легко расширен для полной поддержки
+      спецификации RFC792. </p>
+    </ul>
+    <p align="center">&nbsp;</p>
+    <hr width="50%" align="center">
+    <p></a><a name="Methods"><b>Методы класса</b></a> <ul>
+      <p><b>CIcmp</b> содержит следующие методы для системы
+      WindowsNT 4.0 включающей интерфейс WindowsNT Winsock 2: </p>
+      <p><a href="#CloseIcmpSocket">CloseIcmpSocket</a> <br>
+      <a href="#Connect">Connect</a> <br>
+      <a href="#DisplayError">DisplayError</a> <br>
+      <a href="#GetIPAddress">GetIPAddress</a> <br>
+      <a href="#IcmpChecksum">IcmpChecksum</a> <br>
+      <a href="#OpenNewSocket">OpenNewSocket</a> <br>
+      <a href="#Ping">Ping</a> <br>
+      <a href="#Receive">Receive</a> <br>
+      <a href="#SetAsynchNotification">SetAsynchNotification</a> <br>
+      <a href="#SetTTL">SetTTL</a> <br>
+      </p>
+    </ul>
+    <p align="center">&nbsp;</p>
+    <hr width="50%" align="center">
+    <p>&nbsp;<ul>
+      <b><a name="OpenNewSocket"><p>BOOL OpenNewSocket</a> <ul>
+        <p>(HWND hWnd, <br>
+        unsigned int NotificationMessage, <br>
+        long NotifyEvents)</b> </p>
+      </ul>
+      <p><b>BOOL OpenNewSocket <ul>
+        <p>(HWND hWnd, <br>
+        unsigned int NotificationMessage, <br>
+        long NotifyEvents, <br>
+        int AFamily, <br>
+        int AType, <br>
+        int AProtocol)</b> </p>
+      </ul>
+      <ul>
+        <p>Открывает SOCKET типа <b><i>AType</i></b> семейства <b><i>AFamily</i></b>
+        и протоколом <b><i>AProtocol</i></b>. Если <b><i>AFamily</i></b>, <b><i>AType</i></b>
+        и <b><i>AProtocol</i></b> не поддерживаются, то SOCKET
+        становится <b>RAW</b> сокетом с ICMP протоколом. </p>
+        <p><b><i>hWnd</i></b> это хэндл (<b>GetSafeHwnd</b>) окна, которое
+        будет обрабатывать сообщения поступающие с
+        ассинхронного сокета, <b><i>NotificationMessage</i></b>
+        сообщения, которые должен обрабатывать сокет, и <b><i>NotifyEvents</i></b>
+        это сообщение, которое будет поступать в окно при
+        возникновении на сокете события. </p>
+        <p><b><i>icmpSocketError</i></b> и <b><i>icmpSocketErrorMod</i></b> будут
+        содержать <b>TRUE</b> при удачном завершении
+        операции, иначе <b>FALSE</b>. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b><a name="Connect">BOOL Connect</a> <ul>
+        <p>(LPINT ReceiveTimeout, <br>
+        LPINT SendTimeout)</b> </p>
+      </ul>
+      <p><b>BOOL Connect <ul>
+        <p>(LPINT ReceiveTimeout, <br>
+        LPINT SendTimeout, <br>
+        int AFamily, <br>
+        int AType, <br>
+        int AProtocol)</b> </p>
+      </ul>
+      <ul>
+        <p>Connects a <b>CIcmp</b> object to a socket of specified family (<b><i>AFamily</i></b>),
+        type (<b><i>AType</i></b>) and protocol (<b><i>AProtocol</i></b>). If <b><i>AFamily</i></b>,
+        <b><i>AType</i></b> and <b><i>AProtocol</i></b> are not provided, connects a <b>CIcmp</b>
+        object to a <b>RAW</b> socket with ICMP protocol. </p>
+        <p><b><i>ReceiveTimeout</i></b> and <b><i>SendTimeout</i></b> specifies the receive and
+        transmit timeouts. </p>
+        <p>Sets <b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> to indicate the
+        type of error, and returns <b>TRUE</b> if successful, else <b>FALSE</b>. </p>
+        <p><b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> are preserved until
+        the next operation on this <b>CIcmp</b> object is performed. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b><a name="CloseIcmpSocket">int CloseIcmpSocket</a>(void)</b> <ul>
+        <p>Closes a socket associated with a <b>CIcmp</b> object. </p>
+        <p>Sets <b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> to indicate the
+        type of error, and returns the integer result of the operation. </p>
+        <p><b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> are preserved until
+        the next operation on this <b>CIcmp</b> object is performed. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b><a name="SetAsynchNotification">int SetAsynchNotification</a> <ul>
+        <p>(HWND hWnd, <br>
+        unsigned int Message, <br>
+        long Events)</b> </p>
+      </ul>
+      <ul>
+        <p>Sets the window (process) to notify when a network event on the socket associated with
+        the <b>CIcmp</b> object occurs. </p>
+        <p><b><i>Message</i></b> is the message number to send to the window, and <b><i>Events</i></b>
+        is the event mask to notify on. </p>
+        <p>Sets <b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> to indicate the
+        type of error, and returns the integer result of the operation. </p>
+        <p><b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> are preserved until
+        the next operation on this <b>CIcmp</b> object is performed. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b><a name="SetTTL">int SetTTL</a> (int TTL)</b> <ul>
+        <p>Set the TTL (Time-To-Live) option on the socket associated with a <b>CIcmp</b> object.
+        The TTL value specifies the number of <b>seconds</b> an Internet datagram is to exist. </p>
+        <p>Since each gateway encountered along the trip to the specified host decrements the TTL
+        value by 1, TTL specifies the number of hops (gateways) to query before a response is
+        returned. By incrementing the TTL from 1 to (number of hops to final destination), a
+        TraceRoute function can be performed. In order to reach a designated host, TTL must be at
+        least the number of gateways encountered on the way to the host, plus 1 (for the host
+        itself). </p>
+        <p>Sets <b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> to indicate the
+        type of error, and returns the integer result of the operation. </p>
+        <p><b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> are preserved until
+        the next operation on this <b>CIcmp</b> object is performed. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b>int <a name="Ping">Ping</a> (LPSTR pIcmpBuffer, int IcmpBufferSize)</b> <ul>
+        <p>Sends an ICMP <b>Echo Request</b> (ping) message to the host indicated in the <b>CIcmp</b>
+        variable <b><i>icmpSockAddr</i></b>. The <b>CIcmp</b> variables <b><i>icmpCurSeq</i></b>
+        and <b><i>icmpCurId</i></b> are sent in the buffer referenced by <b><i>pIcmpBuffer</i></b>.
+        The referenced buffer must be large enough to hold <b><i>DataLen</i></b> bytes plus the
+        size of the ICMP message header. </p>
+        <p>The <b>CIcmp</b> variable <b><i>icmpPingSentAt</i></b> is set to the time value at the
+        time the ping message is sent. </p>
+        <p>Sets <b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> to indicate the
+        type of error, and returns the integer result of the operation. </p>
+        <p><b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> are preserved until
+        the next operation on this <b>CIcmp</b> object is performed. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b>unsigned short <a name="IcmpChecksum">IcmpChecksum</a> (unsigned short FAR *lpBuf,
+      int Len)</b> <ul>
+        <p>Computes the ICMP checksum of the data in the buffer referenced by <i><b>lpBuf</b></i>
+        for <b><i>Len</i></b> bytes. </p>
+        <p>Returns an unsigned integer value of the computed checksum. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b>unsigned long <a name="GetIPAddress">GetIPAddress</a> (LPSTR iHostName)</b> <ul>
+        <p>Returns the value of the IP address of the host pointed by <b><i>iHostName</i></b> as
+        an unsigned long in network byte order, as described in inet_aton. </p>
+        <p>Sets <b><i>iHostName</i></b> to the value of the host name returned in <b><i>icmpHostEnt</i></b>.
+        </p>
+        <p>Requires the message number to send to the window, and the events to notify on. </p>
+        <p>Sets <b>CIcmp</b> variable <b><i>icmpSockAddr</i></b> fields appropriately, leaving the
+        IP address in <b><i>icmpSockAddr.sin_addr</i></b>, and the type of address in <b><i>icmpSockAddr.sin_family</i></b>.
+        Also sets <i><b>icmpHostEnt</b></i> fields appropriately </p>
+        <p>Sets <b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> to indicate the
+        type of error, and returns the integer result of the operation. </p>
+        <p><b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> are preserved until
+        the next operation on this <b>CIcmp</b> object is performed. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b>int <a name="Receive">Receive</a> (LPSTR pIcmpBuffer, int IcmpBufferSize)</b> <ul>
+        <p>Reads the socket associated with the <b>CIcmp</b> object and returns the number of
+        bytes read, or SOCKET_ERROR, if an error occurs. </p>
+        <p><b><i>pIcmpBuffer</i></b> is the address of the buffer to store the incoming message
+        and <b><i>IcmpBufferSize</i></b> is the integer buffer size. The buffer must be large
+        enough to contain the incoming message. In the case of an ICMP <b>Echo Reply</b>, the size
+        would be the size of the outgoing message plus the size of an ICMP header plus the size of
+        an IP header. </p>
+        <p>Sets <b><i>icmpRcvLen</i></b> to the length of the message received, <b><i>icmpPingReceivedAt</i></b>
+        to the time the receive command is issued, <b><i>icmpRoundTripTime</i></b> to the
+        difference between <b><i>icmpPingSentAt</i></b> and <b><i>icmpPingReceivedAt</i></b>, <b><i>icmpCurSeq</i></b>
+        to the incoming sequence number and <b><i>icmpCurId</i></b> to the incoming id field. </p>
+        <p>Sets <b><i>rcvSockAddr</i></b> fields appropriately. </p>
+        <p>Sets <b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> to indicate the
+        type of error, and returns the integer result of the operation. </p>
+        <p><b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b> are preserved until
+        the next operation on this <b>CIcmp</b> object is performed. </p>
+      </ul>
+      <hr width="50%" align="center">
+      <p><b>void <a name="DisplayError">DisplayError</a> (CString ErrorType, CString
+      FunctionName)</b> <ul>
+        <p>Displays the provided <b><i>ErrorType</i></b> message prior to the decoded error
+        message in <b><i>icmpSocketError</i></b> and <b><i>icmpSocketErrorMod</i></b>. </p>
+        <p>Sets the message box title to <b><i>FunctionName</i></b>. </p>
+        <p>The message is displayed in a modal box, requiring an OK response before the thread
+        containing this method can progress. </p>
+      </ul>
+    </ul>
+    <p align="center">&nbsp;</p>
+    <hr width="50%" align="center">
+    <p><a name="Variables"><b><u>Class Variables</u></b></a> </p>
+    <p>The <b>CIcmp</b> class contains the following public variables: </p>
+    <p>&nbsp;<ul>
+      <a href="#icmpCurId"><p>icmpCurId</a> <br>
+      <a href="#icmpCurSeq">icmpCurSeq</a> <br>
+      <a href="#icmpHops">icmpHops</a> <br>
+      <a href="#icmpHostAddress">icmpHostAddress</a> <br>
+      <a href="#icmpMaxHops">icmpMaxHops</a> <br>
+      <a href="#icmpPingReceivedAt">icmpPingReceivedAt</a> <br>
+      <a href="#icmpPingSentAt">icmpPingSentAt</a> <br>
+      <a href="#icmpRcvLen">icmpRcvLen</a> <br>
+      <a href="#icmpRoundTripTime">icmpRoundTripTime</a> <br>
+      <a href="#icmpSockAddr">icmpSockAddr</a> <br>
+      <a href="#icmpSocket">icmpSocket</a> <br>
+      <a href="#icmpPingTimer">icmpPingTimer</a> <br>
+      <a href="#icmpSocketError">icmpSocketError</a> <br>
+      <a href="#icmpSocketErrorMod">icmpSocketErrorMod</a> <br>
+      <a href="#pIcmpHeader">pIcmpHeader</a> <br>
+      <a href="#pIpHeader">pIpHeader</a> <br>
+      <a href="#rcvSockAddr">rcvSockAddr</a> <br>
+      </p>
+    </ul>
+    <p>&nbsp;<dl>
+      <hr width="50%" align="center">
+      <dt><a name="pIcmpHeader"><b>LPIcmpHeader pIcmpHeader</b></a> </dt>
+      <dd><ul>
+          <li>Указатель на структуру IcmpHeader; </li>
+          <li>Usually mapped to the current ICMP buffer. </li>
+        </ul>
+      </dd>
+      <dt><a name="pIpHeader"><b>LPIpHeader pIpHeader</b></a> </dt>
+      <dd><ul>
+          <li>Указатель на структуру IpHeader; </li>
+          <li>Usually mapped to the current receive buffer. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpSocket"><b>SOCKET icmpSocket</b></a> </dt>
+      <dd><ul>
+          <li>An <b>asynchronous</b> socket. See CSocket class for implementation; </li>
+          <li>Contains the current socket for this <b>CIcmp</b> object; </li>
+          <li>Default is INVALID_SOCKET for unopened/unassigned socket. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpSockAddr"><b>SOCKADDR_IN icmpSockAddr</b></a> </dt>
+      <dd><ul>
+          <li>Socket address structure for outgoing (send) socket communication; </li>
+          <li>Refer to SOCKADDR_IN structure in VisualC++ help or MFC documentation. </li>
+        </ul>
+      </dd>
+      <dt><a name="rcvSockAddr"><b>SOCKADDR_IN rcvSockAddr</b></a> </dt>
+      <dd><ul>
+          <li>Socket address structure for incoming (recvfrom) socket communication; </li>
+          <li>Refer to SOCKADDR_IN structure in VisualC++ help or MFC documentation. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpRoundTripTime"><b>DWORD icmpRoundTripTime</b></a> </dt>
+      <dd><ul>
+          <li>Time between sending a message and receiving the echo; </li>
+          <li>in mSec. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpHostAddress"><b>unsigned long icmpHostAddress</b></a> </dt>
+      <dd><ul>
+          <li>Host address in network byte order; </li>
+          <li>Maintained external to the <b>CIcmp</b> class; </li>
+          <li>see inet_aton for format. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpPingSentAt"><b>DWORD icmpPingSentAt</b></a> </dt>
+      <dd><ul>
+          <li>System time when the last ICMP message was sent; </li>
+          <li>in mSec. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpPingReceivedAt"><b>DWORD icmpPingReceivedAt</b></a> </dt>
+      <dd><ul>
+          <li>System time when the last ICMP message was received; </li>
+          <li>in mSec. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpRcvLen"><b>int icmpRcvLen</b></a> </dt>
+      <dd><ul>
+          <li>integer length of the last message received; </li>
+          <li>set by <b>Receive</b>. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpHops"><b>int icmpHops</b></a> </dt>
+      <dd><ul>
+          <li>Number of hops (routers contacted) in a trace route operation; </li>
+          <li>Set to zero by <b>Connect</b> method; </li>
+          <li>Maintained external to class (by application program). </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpMaxHops"><b>int icmpMaxHops</b></a> </dt>
+      <dd><ul>
+          <li>A limit set for trace route operations which fail to complete gracefully; </li>
+          <li>Defaults to 30 in the <b>CIcmp</b> constructor; </li>
+          <li>Maintained external to class (by application program). </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpCurSeq"><b>int icmpCurSeq</b></a> </dt>
+      <dd><ul>
+          <li>Current ICMP message sequence number; </li>
+          <li>Set by application program before calling <b>Ping</b>; </li>
+          <li>Set by <b>Receive</b> after processing an incoming (recvfrom) message. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpCurId"><b>int icmpCurId</b></a> </dt>
+      <dd><ul>
+          <li>ICMP <b>id</b> field; </li>
+          <li>Set to current process id by <b>Connect</b>; </li>
+          <li>Assigned to outgoing ICMP message by <b>Ping</b>; </li>
+          <li>Set to incoming ICMP <b>id</b> field by <b>Receive</b> </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpPingTimer"><b>int icmpPingTimer</b></a> </dt>
+      <dd><ul>
+          <li>send (<b>Ping</b>) timeout in mSec; </li>
+          <li>recvfrom (<b>Receive</b>) timeout in mSec. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpSocketError"><b>int icmpSocketError</b></a> </dt>
+      <dd><ul>
+          <li>The WSAGetLastError for the last <b>error</b> which occurred; </li>
+          <li>Preserved until the next socket error occurs. </li>
+        </ul>
+      </dd>
+      <dt><a name="icmpSocketErrorMod"><b>int icmpSocketErrorMod</b></a> </dt>
+      <dd><ul>
+          <li>The entry level in the processing routine at which icmpSocketError occurred; </li>
+          <li>Preserved until the next socket error occurs. </li>
+        </ul>
+      </dd>
+    </dl>
+    <p align="center">&nbsp;</p>
+    <hr width="50%" align="center">
+    <p><a name="Install"><b>Инсталляция</b></a> </p>
+    <p>&nbsp;<ul>
+      <p>To use this class, <ol>
+        <li>Скопируйте файлы Icmp.cpp, Icmp.h и Icmp.rc в директорию
+          Вашего проекта; </li>
+        <li>Включите Icmp.cpp и Icmp.rc в Ваш проект. Может
+          выскочить сообщение об ошибке, это потому что .rc
+          может использоваться...пропустите, далее мы это
+          исправим; </li>
+        <li>Откройте файл Icmp.rc, выберите таблицу строк, и
+          выделите все сообщения; </li>
+        <li>Скопируйте строковые ресурсы в клипбоард
+          (кнопка copy); </li>
+        <li>Open the projects' string table and paste the strings into the next available slot
+          (paste button); </li>
+        <li>Close both string tables and remove (delete) the file Icmp.rc from your project; </li>
+        <li>Add Icmp.h to any modules in which you make reference to <b>CIcmp</b> or one of its'
+          methods or variables. This will normally take the form of <ul>
+            <p>#include &quot;Icmp.h&quot; </p>
+          </ul>
+          <p>in the header files in which the <b>CIcmp</b> object is declared. </p>
+        </li>
+      </ol>
+    </ul>
+    <p align="center">&nbsp;</p>
+    <hr width="50%" align="center">
+    <p><a name="Demo"><b><u>EWDPing - демонстрирует использование
+    класса CIcmp</u></b></a> <ul>
+      <p>EWDPing is a sample program which illustrates the use of the <b>CIcmp</b> class. </p>
+      <p>This program implements the ICMP <b>Echo Request</b> message (commonly known as PING)
+      to check the on-line status of an Internet host, and uses TTL to trace the route to an
+      Internet host. </p>
+      <p>The <i>.zip</i> file contains the source for EWDPing as well as the source for the
+      other custom classes used in the project: <ul>
+        <dl>
+          <dt><b>CIcmp</b> </dt>
+          <dd>An object class derived from the MFC CSocket object class to provide access to RAW
+            sockets and ICMP (Internet Control Message Protocol) functions. </dd>
+          <dt><b>CRegKey</b> </dt>
+          <dd>An object class to provide to WindowsNT/95 system registry objects. </dd>
+          <dt><b>CSysTCPIP</b> </dt>
+          <dd>An object class to provide access to some of the TCP/IP related information stored in
+            the system registry on Windows NT using Microsoft's Winsock 2 interface. </dd>
+        </dl>
+      </ul>
+      <p>The program also makes use of a system timer to prevent &quot;hanging&quot; on a
+      non-responsive gateway. </p>
+      <p>Documentation for the methods and variables are provided within the <i>.zip</i> file. </p>
+    </ul>
+    <p><a href="cicmpdem.zip">Скачать Демо программку - 151KB</a> <br>
+    <a href="cicmpsrc.zip">Скачать исходник класса - 26KB</a></td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!--
+
+Solar System Demo
+Copyright (C) 1998 Dan Steinman
+http://www.dansteinman.com/dynduo/
+
+-->
+<HTML>
+<HEAD>
+<TITLE>Solar System Demo</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="dynlayer.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="circle.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function init() {
+	earth = new DynLayer("earthDiv")
+	earth.circle = new Circle("earth","circle")
+	moon = new DynLayer("moonDiv")
+	moon.circle = new Circle("moon","circle")
+
+	earth.circle.play(125,1.5,0,null,20)
+	moon.circle.play(40,4,0,null,20)
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#000000" BACKGROUND="stars.gif" onLoad="init()">
+
+<DIV ID="nametext" STYLE="position:absolute; left:5; top:5; width:450;">
+<B><FONT COLOR="#FFFFFF" SIZE=2><FONT SIZE=4>S</FONT>OLAR <FONT SIZE=4>S</FONT>YSTEM <FONT SIZE=4>D</FONT>EMO</FONT></B>
+<FONT COLOR="#C0C0C0"> - view the source code to see how it was done.</FONT>
+</DIV>
+
+<DIV ID="sun" STYLE="position:absolute; left:214; top:174; width:71;">
+<IMG SRC="sun.gif" WIDTH=71 HEIGHT=71 BORDER=0>
+</DIV>
+
+<!--
+Just like the real thing, the Moon revolves around the Earth, and the Earth revloves
+around the Sun.  These motions are independent of eachother.  Since the Moon layer is
+nested within the Earth, it too will follow whatever motion the earth does.
+//-->
+<DIV ID="earthDiv" STYLE="position:absolute; left:325; top:160; width:100; height:100;">
+	<DIV ID="earthImg" STYLE="position:absolute; left:34; top:34; width:32; height:32;">
+		<IMG SRC="earth.gif" WIDTH=32 HEIGHT=32 BORDER=0>
+	</DIV>
+	<DIV ID="moonDiv" STYLE="position:absolute; left:80; top:40; width:20; height:20;">
+		<IMG SRC="moon.gif" WIDTH=20 HEIGHT=20 BORDER=0>
+	</DIV>
+</DIV>
+
+</BODY>
+</HTML>

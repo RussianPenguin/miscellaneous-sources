@@ -1,0 +1,103 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>GuestBook parameters</title>
+</head>
+
+<body background="../ressources/taijibackground.gif">
+
+<h2 align="center"><u><font color="#000000"><strong>GuestBook version 1.1</strong></font></u></h2>
+
+<p align="left">The GuestBook applet provides a zone where visitors can send you a message
+by email. Once you have received the mail you decide or not to put the messages in the
+file&nbsp;&quot;guestbook.txt&quot;.&nbsp;The applet displays the messages in this
+file.&nbsp;As applets can't connect to remote hosts, this applet connects to your local
+server. So your web server must&nbsp; also be a mail server. To know if it's true open a
+Telnet session and try this : 'telnet yourhost 25', for example: 'telnet chez.com 25' If
+it works (no errors) your web server is also a mail server.<br>
+This is the &quot;guestbook.txt&quot; structure :</p>
+
+<p align="left">first line : the date : mm/dd/yy<br>
+second line : the name, following by &quot; : &quot;, following by the email<br>
+following lines : the text </p>
+
+<p align="left"><u>sample :</u> <br>
+10/25/99<br>
+taiji99 : taijisoftware@netcourrier.com<br>
+hello !! it's a test</p>
+<div align="left">
+
+<table border="3" width="755" height="45">
+  <tr>
+    <td width="128" height="35"><p align="center"><strong>Name</strong></td>
+    <td width="384" height="35"><p align="center"><strong>Description</strong></td>
+    <td width="116" height="35"><p align="center"><strong>Default</strong></td>
+    <td width="97" height="35"><strong><p align="center">Status</strong></td>
+  </tr>
+  <tr>
+    <td width="128" height="302" valign="top"><p align="center">background_color</p>
+    <p align="center">email</p>
+    <p align="center">text1</p>
+    <p align="center">text2</p>
+    <p align="center">text3</p>
+    <p align="center">text4</p>
+    <p align="center">text5</p>
+    <p align="center">none</p>
+    <p align="center">registration_code<br>
+    </td>
+    <td width="384" height="302" valign="top"><p align="center">the background color</p>
+    <p align="center">the recipient email where the messages are send to</p>
+    <p align="center">name field label</p>
+    <p align="center">email field label</p>
+    <p align="center">message box label</p>
+    <p align="center">send button label</p>
+    <p align="center">message box mabel when sent</p>
+    <p align="center">message to display when there is no message in the guestbook</p>
+    <p align="center">the registration code</td>
+    <td width="116" height="302" valign="top"><p align="center">usual applet grey</p>
+    <p align="center">-</p>
+    <p align="center">&quot;Name :&quot;</p>
+    <p align="center">&quot;E-mail:&quot;</p>
+    <p align="center">&quot;your message...&quot;</p>
+    <p align="center">&quot;Send message&quot;</p>
+    <p align="center">&quot;message sent !!&quot;</p>
+    <p align="center">&quot;no mesage&quot;</p>
+    <p align="center">-</td>
+    <td width="97" height="302" valign="top"><p align="center">required</p>
+    <p align="center">required</p>
+    <p align="center">required</p>
+    <p align="center">required</p>
+    <p align="center">required</p>
+    <p align="center">required</p>
+    <p align="center">required</p>
+    <p align="center">required</p>
+    <p align="center">required</td>
+  </tr>
+</table>
+</div>
+
+<p>&nbsp;</p>
+<div align="left">
+
+<table border="1" width="758" height="115">
+  <tr>
+    <td width="758" height="25"><p align="center"><strong>Special notes</strong></td>
+  </tr>
+  <tr>
+    <td width="758" height="78">* The background color format is hexadecimal format like this
+    : blue is &quot;#0000ff&quot;&quot;, red is &quot;#ff0000&quot; ... If you want that the
+    background color is the same as the one of the page, look at the html source file and find
+    the balise : &lt;body bgcolor=&quot;#00FFFF&quot;&gt; then copy the value, here it's
+    &quot;#00ffff&quot;. Use the &quot;HexColor&quot; applet to convert RGB color to
+    hexadecimal color. </td>
+  </tr>
+</table>
+</div>
+
+<p>Copyright 1999-2000 Taiji Software<br>
+All Rights Reserved<br>
+<a href="http://www.taijisoftware.com">http://www.taijisoftware.com</a><br>
+<a href="mailto:support@taijisoftware.com">support@taijisoftware.com</a></p>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<TITLE>Анимация текста</TITLE>
+
+
+<STYLE type=text/css>A:link {
+	TEXT-DECORATION: none
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+P.main {
+	FONT-FAMILY: Arial; FONT-SIZE: 16pt; FONT-WEIGHT: bold
+}
+</STYLE>
+<SCRIPT language=Javascript>
+
+<!-- Hiding
+
+
+
+bname=navigator.appName;
+
+bversion=parseInt(navigator.appVersion)
+
+if ((bname=="Netscape" && bversion>=4) || (bname=="Microsoft Internet Explorer" && bversion>=4)){
+
+if (bname=="Netscape")
+
+brows=true
+
+else
+
+brows=false
+
+var z=0;
+
+var msg=0;
+
+var rgb=0;
+
+var message= new Array();
+
+var value=0;
+
+var timer1;
+
+var timer2;
+
+var convert = new Array()
+
+var hexbase= new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F");
+
+var bgcolor="#FFFFFF"; //Цвет фона
+
+var color="#0000FF";  //Цвет букв
+
+// Здесь можно редактировать сообщения которые будут появляться
+
+message[0]='SB Studio'
+
+message[1]='Коллекция оригинальных скриптов'
+
+message[2]='TOP-100 Super Links'
+
+message[3]='SB Banner Exchange'
+
+message[4]='Форум по дизайну'
+
+message[5]='И многое другое'
+
+
+
+// Здесь можно добавлять дополнительные сообщения
+
+
+
+for (x=0; x<16; x++){
+
+for (y=0; y<16; y++){
+
+convert[value]= hexbase[x] + hexbase[y];
+
+value++;
+
+}
+
+}
+
+
+
+redx=color.substring(1,3);
+
+greenx=color.substring(3,5);
+
+bluex=color.substring(5,7);
+
+hred=eval(parseInt(redx,16));
+
+hgreen=eval(parseInt(greenx,16));
+
+hblue=eval(parseInt(bluex,16));
+
+eredx=bgcolor.substring(1,3);
+
+egreenx=bgcolor.substring(3,5);
+
+ebluex=bgcolor.substring(5,7);
+
+ered=eval(parseInt(eredx,16));
+
+egreen=eval(parseInt(egreenx,16));
+
+eblue=eval(parseInt(ebluex,16));
+
+red=ered;
+
+green=egreen;
+
+blue=eblue;
+
+
+
+function start(){
+
+if (brows)
+
+res=document.layers['textanim'].top
+
+else
+
+res=textanim.style.top
+
+timer1=window.setInterval('up()',1)
+
+}
+
+
+
+function stopf(){
+
+window.clearInterval(timer1);
+
+window.clearInterval(timer2);
+
+for (x=0; x<2000; x++){}
+
+}
+
+
+
+function up(){
+
+if (red<hred){
+
+if ((red+15)<hred){
+
+red+=15;
+
+redx = convert[red]
+
+}
+
+else{
+
+red=hred
+
+redx = convert[red]
+
+}
+
+}
+
+
+
+if (red>hred){
+
+if ((red-15)>hred){
+
+red-=15;
+
+redx = convert[red]
+
+}
+
+else{
+
+red=hred
+
+redx = convert[red]
+
+}
+
+}
+
+
+
+if (green<hgreen){
+
+if ((green+15)<hgreen){
+
+green+=15;
+
+greenx = convert[green]
+
+}
+
+else{
+
+green=hgreen
+
+greenx = convert[green]
+
+}
+
+}
+
+
+
+if (green>hgreen){
+
+if ((green-15)>hgreen){
+
+green-=15;
+
+greenx = convert[green]
+
+}
+
+else{
+
+green=hgreen
+
+greenx = convert[green]
+
+}
+
+}
+
+
+
+if (blue<hblue){
+
+if ((blue+15)<hblue){
+
+blue+=15;
+
+bluex = convert[blue]
+
+}
+
+else{
+
+blue=hblue
+
+bluex = convert[blue]
+
+}
+
+}
+
+
+
+if (blue>hblue){
+
+if ((blue-15)>hblue){
+
+blue-=15;
+
+bluex = convert[blue]
+
+}
+
+else{
+
+blue=hblue
+
+bluex = convert[blue]
+
+}
+
+}
+
+
+
+rgb = "#"+redx+greenx+bluex;
+
+if (brows){
+
+document.layers['textanim'].document.linkColor=rgb;
+
+document.layers['textanim'].document.vlinkColor=rgb;
+
+document.layers['textanim'].document.writeln('<Pre><P Class="main" Align="Center"><font color="'+rgb+'">'+message[msg]+'</font></P></Pre>')
+
+document.layers['textanim'].document.close();
+
+}
+
+else
+
+textanim.innerHTML='<Pre><P Class="main" Align="Center"><font color="'+rgb+'">'+message[msg]+'</font></P></Pre>'
+
+
+
+if (z<19){
+
+if (brows)
+
+document.layers['textanim'].top-=2
+
+else
+
+textanim.style.posTop-=2
+
+z++
+
+}
+
+else
+
+{
+
+window.clearInterval(timer1);
+
+timer2=window.setInterval('down()',1)
+
+}
+
+}
+
+
+
+
+
+function down(){
+
+if (red<ered){
+
+if ((red+15)<ered){
+
+red+=15;
+
+redx = convert[red]
+
+}
+
+else{
+
+red=ered
+
+redx = convert[red]
+
+}
+
+}
+
+
+
+if (red>ered){
+
+if ((red-15)>ered){
+
+red-=15;
+
+redx = convert[red]
+
+}
+
+else{
+
+red=ered
+
+redx = convert[red]
+
+}
+
+}
+
+
+
+if (green<egreen){
+
+if ((green+15)<egreen){
+
+green+=15;
+
+greenx = convert[green]
+
+}
+
+else{
+
+green=egreen
+
+greenx = convert[green]
+
+}
+
+}
+
+
+
+if (green>egreen){
+
+if ((green-15)>egreen){
+
+green-=15;
+
+greenx = convert[green]
+
+}
+
+else{
+
+green=egreen
+
+greenx = convert[green]
+
+}
+
+}
+
+
+
+if (blue<eblue){
+
+if ((blue+15)<eblue){
+
+blue+=15;
+
+bluex = convert[blue]
+
+}
+
+else{
+
+blue=eblue
+
+bluex = convert[blue]
+
+}
+
+}
+
+
+
+if (blue>eblue){
+
+if ((blue-15)>eblue){
+
+blue-=15;
+
+bluex = convert[blue]
+
+}
+
+else{
+
+blue=eblue
+
+bluex = convert[blue]
+
+}
+
+}
+
+
+
+rgb = "#"+redx+greenx+bluex;
+
+if (brows){
+
+document.layers['textanim'].document.linkColor=rgb;
+
+document.layers['textanim'].document.vlinkColor=rgb;
+
+document.layers['textanim'].document.writeln('<Pre><P Class="main" Align="Center"><font color="'+rgb+'">'+message[msg]+'</font></P></Pre>')
+
+document.layers['textanim'].document.close();
+
+}
+
+else
+
+textanim.innerHTML='<Pre><P Class="main" Align="Center"><font color="'+rgb+'">'+message[msg]+'</font></P></Pre>'
+
+
+
+if (z<38){
+
+if (brows)
+
+document.layers['textanim'].top-=2
+
+else
+
+textanim.style.posTop-=2
+
+z++
+
+}
+
+else
+
+{
+
+if (brows){
+
+document.layers['textanim'].document.writeln('')
+
+document.layers['textanim'].document.close();
+
+}
+
+else
+
+textanim.innerHTML='';
+
+window.clearInterval(timer2);
+
+if(msg<message.length-1){
+
+msg++;
+
+z=0;
+
+if (brows)
+
+document.layers['textanim'].top=res;
+
+else
+
+textanim.style.top=res;
+
+window.setTimeout('start()',100);
+
+}
+
+else
+
+{
+
+msg=0;
+
+z=0;
+
+if (brows)
+
+document.layers['textanim'].top=res;
+
+else
+
+textanim.style.top=res;
+
+window.setTimeout('start()',2000);
+
+}
+
+}
+
+}
+
+}
+
+
+
+// done hiding -->
+
+</SCRIPT>
+</HEAD>
+<BODY bgColor=#ffffff 
+onload=start()>
+      <DIV align=center id=textanim 
+      style="LEFT: 4px; POSITION: absolute; TOP: 180px"></DIV>
+</BODY>
+</HTML>

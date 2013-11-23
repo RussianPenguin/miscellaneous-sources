@@ -1,0 +1,157 @@
+iSlide Pro Studio for websites & intranets
+
+WINDOWS 95/98 VERSION
+
+IMPORTANT: To run this software you must have Microsoft Internet
+Explorer 4.0 or higher installed. (See below for more details).	
+Do NOT try to install this in the same directory as the IMINT 
+indexing system! If you are using Windows 2000, please download
+the Windows 2000 version.
+
+PACKAGE VERSION: No.11 (June 2000)
+
+PACKAGE CONTENTS
+
+iSlide Pro Studio 1.17
+ - Applet Menu Designer
+ - Resource Library
+ - Documentation
+iSlide Pro-X Navigation Applets (Trial Versions)
+ - Tree
+iSlide Pro Navigation Applets (Trial Versions)
+ - Tree I 
+ - Tree II 
+ - Sliding Buttons 
+ - Hook / Expanding Buttons 
+ - MenuBar 
+iSlide Express Navigation Applets (Trial Versions)
+ - Tree 
+ - Sliding Buttons 
+ - Expanding Buttons 
+
+
+The iSlide Pro Studio is a java application and an environment
+for developing your website navigation files and pages.
+An application is not applet. That means that it will not 
+work if embedded in an HTML page. A java application, like 
+any other programme, is designed to run on a single computer 
+in a stand-alone fashion. A java application uses a stand-alone 
+interpreter called a java viewer to run on the file system. 
+It does not use a browser. The java viewer is part of the 
+operating system and should already be present on your 
+computer. For further information, please refer to the 
+HTML documentation contained in this package or see below.
+
+The package also contains a number of trial applets which
+you may access via the documentation. The applets are
+indeed applets, and therefore run in webpages and on
+intranets. The applets are much more widely tested and
+widely compatible than the development environment. This is
+because you will only need the development environment on
+your own computer, but the applets will have to stand the
+test of being used by everyone who visits your website.
+The applets are therefore JDK 1.0.2 compatible and can be
+used on java-compatible versions of Netscape 3 and MSIE 3
+as well as the later versions of these and other browsers.
+
+
+SYSTEM REQUIREMENTS FOR iSlide Pro Studio
+
+The application has been optimised for a 800x600
+screen. A smaller screen will not work. A larger one
+is OK.
+
+You must have Microsoft's java viewer version 4.79.2339 
+or later installed in the main Windows directory (not
+a sub-directory). The easiest way to ensure that this
+is the case is to have Microsoft Internet Explorer 4.0
+(or higher) installed, as this installs the necessary 
+software for you. It is not necessary to install the
+Active Desktop components of MSIE 4.
+
+
+USING OR TRYING OUT THE APPLETS
+
+No special installation is required. After installing
+iSlide Pro Studio, you will find a large amount of
+HTML documentation included. Start any of this documentation
+and you should find it easy to navigate to large selection
+of demonstrations of the applets. iSlide Pro Studio can be
+used for making further example implementations.
+
+
+STARTING iSlide Pro Studio
+
+This can only be started by clicking the icons created
+on the Windows interface when installing it.
+
+
+UPDATE HISTORY FOR iSlide Pro Studio
+
+For an applet update history, please refer to the HTML
+documentation on our website. This applies only to the
+development environment, not the applets.
+
+iSlide Pro Studio 0.9.3 (Beta Package 3)
+	* inclusion of development options for hook/expanding buttons
+	* additional shadow options on panel 2
+	* additional controls for stylesheets (reset and global setting)
+	* additional demos and resources
+	* image size checking on panel 4 overhauled
+iSlide Pro Studio 0.9.4 (Beta Package 4)
+	* java viewer version check
+	* conversion of index files to parameters moved from index editor
+	  to page generator; much easier to do now - single click and no 
+	  extra files
+	* automatic resource management completely overhauled
+	* now tracks about a dozen working resource directories
+	* PPF files work properly even after "output" directory has been tidied
+	* "output" directory generally remains tidier
+	* created pages can be output anywhere with resource sub-directory
+	  systems automatically generated as well
+	* application GUI alignment error removed
+	* HTML background emulation implemented in WYSIWYG display
+	* cosmetic GUI improvements
+iSlide Pro Studio 1.0 (Package 5)
+	* PPF file management rewritten
+	* several dozen PPF files included in package
+	  (i.e. numerous applet designs are now preset for you)
+	* the preset applet designs have additional and more convenient
+	  access from within the applet designer
+	* the colouring of the applications has been improved
+	* error in path-finding when saving indices corrected
+	* further improvements to automatic image size finding
+	* documentation additions and improvements
+iSlide Pro Studio 1.01 (Package 6)
+	* changes to dovetail with automatic installation
+	* front end added to switch conveniently between the two applications
+	* index templates added
+iSlide Pro Studio 1.1 (Package 7)
+	* integration of 4 further foundation applets
+	* menu editor file-separator bug fixed
+	* index->parameter conversion bug fixed
+	* new graphic user interface for applet designer
+	* resources added for menu bar applet
+	* number of templates increased to 68
+iSlide Pro Studio 1.11 (Package 8)
+	* inclusion of more recent trial versions of applets
+	* documentation update
+	* polygon drawing under W98 corrected
+iSlide Pro Studio 1.12 (Package 9)
+	* indexing system moved to separate package
+iSlide Pro Studio 1.16 (Package 10)
+	* numbering realigned with indexing system
+	* start.bat added as an additional launch option
+	* trial applets updated to various much more recent versions
+	* additional templates in an additional demonstration package
+iSlide Pro Studio 1.17 (Package 11)
+	* documentation for Windows 2000
+	* addition of iSlide Pro-X applet trial version
+
+
+INSOLUBLE PROBLEMS
+
+Please contact info@imint.com if you get irretrievably stuck
+or puzzled. Remember to read the FAQ's first!
+
+

@@ -1,0 +1,685 @@
+// Decompiled by Jad v1.5.7d. Copyright 2000 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/SiliconValley/Bridge/8617/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   SIRtype.java
+
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.PrintStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.StringTokenizer;
+
+public class SIRtype extends Applet
+    implements MouseListener, Runnable
+{
+
+    public void init()
+    {
+        APPLETCONTEXT = getAppletContext();
+        new Evaluation();
+        String s = parmgetstr("BgColor", "255,255,255");
+        String s1 = parmgetstr("FontColor", "0,0,0");
+        message = parmgetstr("Text", "No Messages Have Been Put in the Parameters");
+        parmAfterEffect = parmgetstr("AfterEffect", "");
+        String s2 = parmgetstr("AfterEffectSpeed", "30");
+        parmfontNAME = parmgetstr("Font", "Helvetica");
+        parmfontSIZE = parmgetstr("FontSize", "12");
+        String s3 = parmgetstr("TextAlignment", "LEFT");
+        String s4 = parmgetstr("TypeWait", "0");
+        String s5 = parmgetstr("TypeSpeed", "60");
+        String s6 = parmgetstr("TextHold", "2000");
+        String s7 = parmgetstr("Repeat", "Yes");
+        String s8 = parmgetstr("LinkAtEnd", "No");
+        parmfontITALIC = new String(parmgetstr("FontItalic", "No"));
+        parmfontBOLD = new String(parmgetstr("FontBold", "No"));
+        parmsoundNAME = parmgetstr("Sound", "none");
+        try
+        {
+            newURL = new URL(parmgetstr("Link", "none"));
+            noURL = false;
+        }
+        catch(MalformedURLException _ex)
+        {
+            noURL = true;
+        }
+        StringTokenizer stringtokenizer = new StringTokenizer(message, "|");
+        text = new String[stringtokenizer.countTokens() + 1];
+        textEFFECT = new int[stringtokenizer.countTokens() + 1];
+        while(stringtokenizer.hasMoreTokens()) 
+            text[++textNUMBER] = stringtokenizer.nextToken();
+        stringtokenizer = new StringTokenizer(s, ",");
+        backgroundCOLOR = new Color(Integer.parseInt(stringtokenizer.nextToken()), Integer.parseInt(stringtokenizer.nextToken()), Integer.parseInt(stringtokenizer.nextToken()));
+        setBackground(backgroundCOLOR);
+        stringtokenizer = new StringTokenizer(s1, "|");
+        textCOLOR = new Color[textNUMBER + 1];
+        textCOLOR[1] = new Color(0, 0, 0);
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                {
+                    String s9 = stringtokenizer.nextToken();
+                    StringTokenizer stringtokenizer1 = new StringTokenizer(s9, ",");
+                    textCOLOR[++tokenNUMBER] = new Color(Integer.parseInt(stringtokenizer1.nextToken()), Integer.parseInt(stringtokenizer1.nextToken()), Integer.parseInt(stringtokenizer1.nextToken()));
+                } else
+                {
+                    textCOLOR[++tokenNUMBER] = textCOLOR[1];
+                }
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        fadeCOLOR = textCOLOR[1];
+        if(s7.equalsIgnoreCase("No"))
+            repeatRoutine = false;
+        if(s8.equalsIgnoreCase("Yes"))
+            linkatend = true;
+        stringtokenizer = new StringTokenizer(parmAfterEffect, "|");
+        AfterEffect = new String[textNUMBER + 1];
+        AfterEffect[1] = " ";
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    AfterEffect[++tokenNUMBER] = stringtokenizer.nextToken();
+                else
+                    AfterEffect[++tokenNUMBER] = AfterEffect[1];
+                textEFFECT[tokenNUMBER] = 0;
+                if(AfterEffect[tokenNUMBER].equalsIgnoreCase("shrink"))
+                    textEFFECT[tokenNUMBER] = 1;
+                if(AfterEffect[tokenNUMBER].equalsIgnoreCase("scrollup"))
+                    textEFFECT[tokenNUMBER] = 2;
+                if(AfterEffect[tokenNUMBER].equalsIgnoreCase("fadeout"))
+                    textEFFECT[tokenNUMBER] = 3;
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        stringtokenizer = new StringTokenizer(s2, "|");
+        aeSPEED = new int[textNUMBER + 1];
+        aeSPEED[1] = 30;
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    aeSPEED[++tokenNUMBER] = Integer.parseInt(stringtokenizer.nextToken());
+                else
+                    aeSPEED[++tokenNUMBER] = aeSPEED[1];
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        stringtokenizer = new StringTokenizer(parmfontNAME, "|");
+        fontNAME = new String[textNUMBER + 1];
+        fontNAME[1] = "Helvetica";
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    fontNAME[++tokenNUMBER] = stringtokenizer.nextToken();
+                else
+                    fontNAME[++tokenNUMBER] = fontNAME[1];
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        stringtokenizer = new StringTokenizer(parmfontITALIC, "|");
+        fontITALIC = new String[textNUMBER + 1];
+        fontITALIC[1] = "No";
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    fontITALIC[++tokenNUMBER] = stringtokenizer.nextToken();
+                else
+                    fontITALIC[++tokenNUMBER] = fontITALIC[1];
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        stringtokenizer = new StringTokenizer(parmfontBOLD, "|");
+        fontBOLD = new String[textNUMBER + 1];
+        fontBOLD[1] = "No";
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    fontBOLD[++tokenNUMBER] = stringtokenizer.nextToken();
+                else
+                    fontBOLD[++tokenNUMBER] = fontBOLD[1];
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        stringtokenizer = new StringTokenizer(parmfontSIZE, "|");
+        fontSIZE = new int[textNUMBER + 1];
+        fontSIZE[1] = 12;
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    fontSIZE[++tokenNUMBER] = Integer.parseInt(stringtokenizer.nextToken());
+                else
+                    fontSIZE[++tokenNUMBER] = fontSIZE[1];
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        if(fontITALIC[1].equalsIgnoreCase("Yes"))
+            fontTYPE = 2;
+        if(fontBOLD[1].equalsIgnoreCase("Yes"))
+            fontTYPE = 1;
+        if(fontBOLD[1].equalsIgnoreCase("Yes") && fontITALIC[1].equalsIgnoreCase("Yes"))
+            fontTYPE = 3;
+        font = new Font(fontNAME[1], fontTYPE, fontSIZE[1]);
+        fontMETRICS = getFontMetrics(font);
+        stringtokenizer = new StringTokenizer(s3, "|");
+        textALIGNMENT = new int[textNUMBER + 1];
+        textALIGNMENT[1] = 1;
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                {
+                    textALIGNMENT[++tokenNUMBER] = 1;
+                    String s10 = stringtokenizer.nextToken();
+                    if(s10.equalsIgnoreCase("CENTRE"))
+                        textALIGNMENT[tokenNUMBER] = 2;
+                    else
+                    if(s10.equalsIgnoreCase("RIGHT"))
+                        textALIGNMENT[tokenNUMBER] = 3;
+                } else
+                {
+                    textALIGNMENT[++tokenNUMBER] = textALIGNMENT[1];
+                }
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        switch(textALIGNMENT[1])
+        {
+        default:
+            break;
+
+        case 1: // '\001'
+            textX = 10;
+            break;
+
+        case 2: // '\002'
+            textX = (size().width - fontMETRICS.stringWidth(text[textCOUNT])) / 2;
+            if(textX <= 9)
+                textX = 10;
+            break;
+
+        case 3: // '\003'
+            textX = size().width - fontMETRICS.stringWidth(text[textCOUNT]) - 10;
+            if(textX <= 9)
+                textX = 10;
+            break;
+        }
+        textY = (size().height + fontMETRICS.getHeight()) / 2;
+        bufferWIDTH = size().width;
+        bufferHEIGHT = size().height;
+        stringtokenizer = new StringTokenizer(s6, "|");
+        textHOLD = new int[textNUMBER + 1];
+        textHOLD[1] = 2000;
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    textHOLD[++tokenNUMBER] = Integer.parseInt(stringtokenizer.nextToken());
+                else
+                    textHOLD[++tokenNUMBER] = textHOLD[1];
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        stringtokenizer = new StringTokenizer(s5, "|");
+        typeSPEED = new int[textNUMBER + 1];
+        typeSPEED[1] = 60;
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    typeSPEED[++tokenNUMBER] = Integer.parseInt(stringtokenizer.nextToken());
+                else
+                    typeSPEED[++tokenNUMBER] = typeSPEED[1];
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        stringtokenizer = new StringTokenizer(s4, "|");
+        typeWAIT = new int[textNUMBER + 1];
+        typeWAIT[1] = 0;
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                    typeWAIT[++tokenNUMBER] = Integer.parseInt(stringtokenizer.nextToken());
+                else
+                    typeWAIT[++tokenNUMBER] = typeWAIT[1];
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        stringtokenizer = new StringTokenizer(parmsoundNAME, "|");
+        soundNAME = new String[textNUMBER + 1];
+        soundFLAG = new boolean[textNUMBER + 1];
+        type = new AudioClip[textNUMBER + 1];
+        soundNAME[1] = "none";
+        while(stringtokenizer.hasMoreTokens() || tokenNUMBER <= textNUMBER - 1) 
+            if(tokenNUMBER <= textNUMBER - 1)
+            {
+                if(stringtokenizer.hasMoreTokens())
+                {
+                    soundNAME[++tokenNUMBER] = stringtokenizer.nextToken();
+                    if(soundNAME[tokenNUMBER].endsWith(".au"))
+                    {
+                        soundFLAG[tokenNUMBER] = true;
+                        type[tokenNUMBER] = getAudioClip(getDocumentBase(), soundNAME[tokenNUMBER]);
+                    }
+                } else
+                {
+                    soundNAME[++tokenNUMBER] = soundNAME[1];
+                    if(soundNAME[tokenNUMBER].endsWith(".au"))
+                    {
+                        soundFLAG[tokenNUMBER] = true;
+                        type[tokenNUMBER] = getAudioClip(getDocumentBase(), soundNAME[tokenNUMBER]);
+                    }
+                }
+            } else
+            {
+                new String(stringtokenizer.nextToken());
+            }
+        tokenNUMBER = 0;
+        subText = new String(" ");
+        addMouseListener(this);
+    }
+
+    public void start()
+    {
+        thread = new Thread(this);
+        flag = true;
+        thread.start();
+    }
+
+    public void stop()
+    {
+        flag = false;
+    }
+
+    public void run()
+    {
+        while(flag) 
+        {
+            if(textLENGTH >= text[textCOUNT].length())
+            {
+                textLENGTH = 0;
+                try
+                {
+                    Thread.sleep(textHOLD[textCOUNT]);
+                }
+                catch(InterruptedException _ex)
+                {
+                    System.out.println("The thread failed to sleep");
+                }
+                switch(textEFFECT[textCOUNT])
+                {
+                case 1: // '\001'
+                    shrinkout = true;
+                    break;
+
+                case 2: // '\002'
+                    rollup = true;
+                    break;
+
+                case 3: // '\003'
+                    fadeout = true;
+                    break;
+                }
+                if(shrinkout)
+                {
+                    textBUFFER = true;
+                    while(bufferHEIGHT >= 1 || bufferWIDTH >= 1) 
+                    {
+                        bufferHEIGHT -= size().height / 20;
+                        bufferWIDTH -= size().width / 20;
+                        if(bufferHEIGHT <= -1)
+                            bufferHEIGHT = 0;
+                        if(bufferWIDTH <= -1)
+                            bufferWIDTH = 0;
+                        bufferX = (size().width - bufferWIDTH) / 2;
+                        bufferY = (size().height - bufferHEIGHT) / 2;
+                        repaint();
+                        try
+                        {
+                            Thread.sleep(aeSPEED[textCOUNT]);
+                        }
+                        catch(InterruptedException _ex)
+                        {
+                            System.out.println("The thread failed to sleep");
+                        }
+                    }
+                    textBUFFER = false;
+                    bufferHEIGHT = size().height;
+                    bufferWIDTH = size().width;
+                    bufferX = 0;
+                    bufferY = 0;
+                }
+                if(rollup)
+                {
+                    textBUFFER = true;
+                    while(bufferHEIGHT >= 1) 
+                    {
+                        bufferHEIGHT -= size().height / 20;
+                        if(bufferHEIGHT <= -1)
+                            bufferHEIGHT = 0;
+                        repaint();
+                        try
+                        {
+                            Thread.sleep(aeSPEED[textCOUNT]);
+                        }
+                        catch(InterruptedException _ex)
+                        {
+                            System.out.println("The thread failed to sleep");
+                        }
+                    }
+                    textBUFFER = false;
+                    bufferHEIGHT = size().height;
+                }
+                if(fadeout)
+                {
+                    int i = textCOLOR[textCOUNT].getRed();
+                    int j = textCOLOR[textCOUNT].getGreen();
+                    int k = textCOLOR[textCOUNT].getBlue();
+                    int l = backgroundCOLOR.getRed();
+                    int i1 = backgroundCOLOR.getGreen();
+                    for(int j1 = backgroundCOLOR.getBlue(); i != l || j != i1 || k != j1;)
+                    {
+                        if(i != l)
+                        {
+                            if(i >= l)
+                                i -= 10;
+                            else
+                                i += 10;
+                            if(i - l <= 9 && i - l >= -9)
+                                i = l;
+                        }
+                        if(j != i1)
+                        {
+                            if(j >= i1)
+                                j -= 10;
+                            else
+                                j += 10;
+                            if(j - i1 <= 9 && j - i1 >= -9)
+                                j = i1;
+                        }
+                        if(k != j1)
+                        {
+                            if(k >= j1)
+                                k -= 10;
+                            else
+                                k += 10;
+                            if(k - j1 <= 9 && k - j1 >= -9)
+                                k = j1;
+                        }
+                        fadeCOLOR = new Color(i, j, k);
+                        repaint();
+                        try
+                        {
+                            Thread.sleep(aeSPEED[textCOUNT]);
+                        }
+                        catch(InterruptedException _ex)
+                        {
+                            System.out.println("The thread failed to sleep");
+                        }
+                    }
+
+                    fadeCOLOR = textCOLOR[textCOUNT];
+                }
+                shrinkout = false;
+                rollup = false;
+                fadeout = false;
+                if(textCOUNT < textNUMBER && !repeatRoutine)
+                {
+                    subText = new String("");
+                    repaint();
+                }
+                if(textCOUNT >= textNUMBER)
+                    if(repeatRoutine)
+                    {
+                        textCOUNT = 0;
+                    } else
+                    {
+                        if(!noURL && linkatend)
+                            getAppletContext().showDocument(newURL);
+                        flag = false;
+                        textLENGTH = -1;
+                    }
+                textCOUNT++;
+                fadeCOLOR = textCOLOR[textCOUNT];
+                fontTYPE = 0;
+                if(fontITALIC[textCOUNT].equalsIgnoreCase("Yes"))
+                    fontTYPE = 2;
+                if(fontBOLD[textCOUNT].equalsIgnoreCase("Yes"))
+                    fontTYPE = 1;
+                if(fontBOLD[textCOUNT].equalsIgnoreCase("Yes") && fontITALIC[textCOUNT].equalsIgnoreCase("Yes"))
+                    fontTYPE = 3;
+                font = new Font(fontNAME[textCOUNT], fontTYPE, fontSIZE[textCOUNT]);
+                fontMETRICS = getFontMetrics(font);
+                switch(textALIGNMENT[textCOUNT])
+                {
+                default:
+                    break;
+
+                case 1: // '\001'
+                    textX = 10;
+                    break;
+
+                case 2: // '\002'
+                    textX = (size().width - fontMETRICS.stringWidth(text[textCOUNT])) / 2;
+                    if(textX <= 9)
+                        textX = 10;
+                    break;
+
+                case 3: // '\003'
+                    textX = size().width - fontMETRICS.stringWidth(text[textCOUNT]) - 10;
+                    if(textX <= 9)
+                        textX = 10;
+                    break;
+                }
+                try
+                {
+                    Thread.sleep(typeWAIT[textCOUNT]);
+                }
+                catch(InterruptedException _ex)
+                {
+                    System.out.println("The thread failed to sleep");
+                }
+            }
+            textLENGTH++;
+            subText = new String(text[textCOUNT].substring(0, textLENGTH));
+            if(textX + fontMETRICS.stringWidth(subText) >= size().width - 9)
+                textX = size().width - fontMETRICS.stringWidth(subText) - 10;
+            if(soundFLAG[textCOUNT])
+                type[textCOUNT].play();
+            repaint();
+            try
+            {
+                Thread.sleep(typeSPEED[textCOUNT]);
+            }
+            catch(InterruptedException _ex)
+            {
+                System.out.println("The thread failed to sleep");
+            }
+        }
+    }
+
+    public void paint(Graphics g)
+    {
+        buffer = createImage(size().width, size().height);
+        pad = buffer.getGraphics();
+        if(textBUFFER)
+        {
+            textDISPLAY = createImage(size().width, size().height);
+            textPAD = textDISPLAY.getGraphics();
+            textPAD.setFont(font);
+            textPAD.setColor(fadeCOLOR);
+            textPAD.drawString(subText, textX, textY);
+            pad.drawImage(textDISPLAY, bufferX, bufferY, bufferWIDTH, bufferHEIGHT, this);
+        } else
+        {
+            pad.setFont(font);
+            pad.setColor(fadeCOLOR);
+            pad.drawString(subText, textX, textY);
+        }
+        g.drawImage(buffer, 0, 0, this);
+    }
+
+    public void update(Graphics g)
+    {
+        paint(g);
+    }
+
+    public synchronized void mouseEntered(MouseEvent mouseevent)
+    {
+        if(!noURL)
+        {
+            setCursor(new Cursor(12));
+            showStatus(newURL.toString());
+        }
+    }
+
+    public synchronized void mouseExited(MouseEvent mouseevent)
+    {
+        setCursor(new Cursor(0));
+        showStatus("");
+    }
+
+    public void mouseClicked(MouseEvent mouseevent)
+    {
+        if(!noURL)
+            getAppletContext().showDocument(newURL);
+    }
+
+    public void mousePressed(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseReleased(MouseEvent mouseevent)
+    {
+    }
+
+    public int parmgetint(String s, int i, int j, int k)
+    {
+        String s1 = getParameter(s);
+        int l;
+        if(s1 == null)
+            l = i;
+        else
+            l = Integer.parseInt(s1);
+        if(l > k)
+            l = k;
+        if(l < j)
+            l = j;
+        return l;
+    }
+
+    public String parmgetstr(String s, String s1)
+    {
+        String s3 = " ";
+        String s2 = getParameter(s);
+        if(s2 == null)
+            s3 = s1;
+        else
+            s3 = s2;
+        return s3;
+    }
+
+    public SIRtype()
+    {
+        fontTYPE = 0;
+        textCOUNT = 1;
+        fadeout = false;
+        rollup = false;
+        shrinkout = false;
+        textBUFFER = false;
+        repeatRoutine = true;
+        linkatend = false;
+    }
+
+    Thread thread;
+    AudioClip type[];
+    URL newURL;
+    Graphics pad;
+    Graphics textPAD;
+    Image buffer;
+    Image textDISPLAY;
+    Color textCOLOR[];
+    Color fadeCOLOR;
+    Color backgroundCOLOR;
+    Font font;
+    FontMetrics fontMETRICS;
+    int fontTYPE;
+    int fontSIZE[];
+    int textEFFECT[];
+    int textLENGTH;
+    int textNUMBER;
+    int textCOUNT;
+    int textALIGNMENT[];
+    int textHOLD[];
+    int typeWAIT[];
+    int textX;
+    int textY;
+    int bufferX;
+    int bufferY;
+    int bufferWIDTH;
+    int bufferHEIGHT;
+    int typeSPEED[];
+    int fRed;
+    int fGreen;
+    int fBlue;
+    int bRed;
+    int bGreen;
+    int bBlue;
+    int tokenNUMBER;
+    int aeSPEED[];
+    boolean flag;
+    boolean soundFLAG[];
+    boolean fadeout;
+    boolean rollup;
+    boolean shrinkout;
+    boolean textBUFFER;
+    boolean noURL;
+    boolean repeatRoutine;
+    boolean linkatend;
+    String text[];
+    String subText;
+    String parmsoundNAME;
+    String soundNAME[];
+    String parmfontSIZE;
+    String parmfontNAME;
+    String fontNAME[];
+    String parmfontITALIC;
+    String fontITALIC[];
+    String parmfontBOLD;
+    String fontBOLD[];
+    String message;
+    String parmAfterEffect;
+    String AfterEffect[];
+    static AppletContext APPLETCONTEXT;
+}

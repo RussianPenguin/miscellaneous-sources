@@ -1,0 +1,80 @@
+*********************************************************************
+                          HOW TO REGISTER ?
+*********************************************************************
+
+
+The Applet Pack is a shareware.
+The unregistered version is for trial use only. 
+Applets in a unregistered Applet Pack can work off line and popup to
+the TaijiSoftware site on line.
+When you register you get a password which let you get the value to
+put with the "registration_code" parameter. By doing this there is 
+no more window and you can get for free all the future versions of 
+the Applet Pack (registration code remains valid).
+You can register on line at :
+http://www.taijisoftware.com
+
+HOW TO ENTER REGISTRATION INFORMATION ?
+Put the code you received at www.getsoftware.com in each applet 
+html code you want to use. Put the code in the line:
+
+<param name="registration_code" value="PUT THE CODE HERE">
+
+
+
+---> PRICES AT THE 09/28/2000 :
+
+1) Online (Credit card, Check, Fax, Phone) : Price is $19.95. 
+
+- Go to http://www.taijisoftware.com
+- Go in the " Register " section
+- Follow the on-line order process
+
+
+2) Cash :   17 euros.
+            or 100 french francs.                                   
+Fill the form below and include the check.
+To get the address and the order person please email at sales@taijisoftware.com       
+Once your payment received you will receive the registration code by email.
+    
+
+------------------------------------------------------------------------------                        
+                            The Applet Pack
+                         ^^^^^^^^^^^^^^^^^^^^^^
+		          *** Order Form ***
+
+
+Please register me as a user of the Applet Pack and send me
+by e-mail the registration code.
+
+For registration, I enclose either : a cheque for euros 17 .
+                                     or - a cheque for french francs 100. 
+      
+
+    Name:____________________________
+
+ Address:____________________________
+
+	 ____________________________
+
+	 ____________________________
+
+	 ____________________________
+
+   Phone:____________________________
+
+     Fax:____________________________
+
+   E-Mail:____________________________ 
+
+
+Comments:
+
+____________________________________________________________________________
+
+____________________________________________________________________________
+
+____________________________________________________________________________
+
+____________________________________________________________________________
+

@@ -1,0 +1,561 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.blue:link {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.blue:visited {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.blue:hover {COLOR: #2776FA; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+PRE.a {color: black;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta name="RESOURCE-TYPE" content="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx"><title>Информационный сервер для программистов - исходники со всего света.</title></head>
+
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor="white">
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0" cellspacing="0" width="750">
+    <tbody><tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tbody><tr>
+          <td colspan="2" bgcolor="#a5e4a7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma" style="font-size: 8pt;" size="-1" color="#ffffff">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma" style="font-size: 8pt;" size="-1" color="#ffffff">java.sources.ru</font></b></td>
+          <td bgcolor="#c0c0c0" valign="middle" align="center"><font face="Tahoma" style="font-size: 8pt;" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#a5e4a7" valign="middle" align="center"><font face="Tahoma" style="font-size: 8pt;" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#c0c0c0" valign="middle" align="center"><font face="Tahoma" style="font-size: 8pt;" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#a5e4a7" valign="middle" align="center"><font face="Tahoma" style="font-size: 8pt;" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma" style="font-size: 8pt;" size="-1" color="#ffffff">api.sources.ru</font></b></td>
+        </tr>
+      </tbody></table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+          <td><font style="font-size: 8pt;" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit" value="Поиск"><font size="1"><input type="radio" name="stype" value="AND" checked="checked">"AND" <input type="radio" name="stype" value="OR">"OR"</font>
+
+
+<!--TopList COUNTER--><a target="_top" href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><img src="www_statya_weather_files/counter.gif" alt="TopList" border="0" height="1" width="1"><!-- <noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="www_statya_weather_files/top100.gif" alt="Rambler's Top100" width="1" height="1" border="0"></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ 
+"&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><a href="http://u1624.10.spylog.com/cnt?f=3&amp;p=1&amp;rn=0.31204934691403413" target="_blank"><img src="www_statya_weather_files/cnt.gif" border="0" width="1" height="1" alt="SpyLOG"></a><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+
+<!-- HotLog -->
+<script language="javascript">
+hotlog_js="1.0";hotlog_d=document; hotlog_n=navigator;hotlog_rn=Math.random();
+hotlog_n_n=(hotlog_n.appName.substring(0,3)=="Mic")?0:1;
+hotlog_r=""+hotlog_rn+"&s=14399&r="+escape(hotlog_d.referrer)+"&pg="+
+escape(window.location.href);
+hotlog_d.cookie="hotlog=1"; hotlog_r+="&c="+(hotlog_d.cookie?"Y":"N");
+hotlog_d.cookie="hotlog=1; expires=Thu, 01-Jan-70 00:00:01 GMT"</script>
+<script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+<script language="javascript1.2">
+hotlog_js="1.2";hotlog_s=screen;
+hotlog_r+="&wh="+hotlog_s.width+'x'+hotlog_s.height+"&px="+((hotlog_n_n==0)?
+hotlog_s.colorDepth:hotlog_s.pixelDepth)</script>
+<script language="javascript1.3">hotlog_js="1.3"</script>
+<script language="javascript">hotlog_r+="&js="+hotlog_js;
+hotlog_d.write("<img src=\"http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&\" border=0 width=1 height=1>")</script><img src="www_statya_weather_files/count.txt" border="0" width="1" height="1">
+<noscript><img src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=14399" border=0 
+width=1 height=1></noscript>
+<!-- /HotLog -->
+
+
+
+</td>
+        </tr>
+      </tbody></table>
+      </td>
+      <td align="center">
+        <a class="blue" href="http://pascal.sources.ru/cd/index.htm"><img border="0" height="14" width="14" src="www_statya_weather_files/cd0.html">
+        <b>Все исходники с сайта на компакт-диске!</b>
+<!--
+        <font style="font-size: 15pt" color="#4904B1" size="4"
+        face="Times New Roman">Информационный сервер</font>
+-->
+      </a></td>
+    </tr>
+    <tr>
+      <td>
+
+
+
+
+<!-- БАННЕР -->
+
+	<center>
+<script language="JavaScript"> var loc = ''; </script>
+<script language="JavaScript1.4">try{ var loc = escape(top.location.href); }catch(e){;}</script>
+<script language="JavaScript">
+ document.write("<SC"+"RIPT language='JavaScript' src='http://ad.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2845047&pg=2&r=js&ssi=nofillers&vbn=188&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>");
+</script><script language="JavaScript" src="www_statya_weather_files/bb.html">
+</script><a target="_blank" href="http://ad.tbn.ru/bb.cgi?cmd=go&amp;pubid=2845047&amp;pg=2&amp;gobn=64630_132&amp;frameref=http%3A%2F%2Fwww.sources.ru%2Fwww%2Fwww_statya_weather.shtml&amp;ssi=agava.ru%2Fcgi%2Fg.cgi%3Fp%3D46001211%26u%3Dagava.ru%2Fpartners&amp;loc=http%3A//www.sources.ru/www/www_statya_weather.shtml"><img src="www_statya_weather_files/64630_132.gif" border="0" width="468" height="60" alt=""></a>
+</center>
+<center><font size="1"><a href="http://www.tbn.ru/" target="_top">TBN.ru - СЕТЬ, ЖИВУЩАЯ ПО ПРАВИЛАМ</a></font></center>
+
+
+<!-- БАННЕР -->
+
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tbody><tr>
+          <td align="center" width="11%" bgcolor="#e0e0c6"><a href="http://www.sources.ru/"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#e0e0c6"><a href="http://www.sources.ru/subscribe.shtml"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#e0e0c6"><a href="http://forum.sources.ru/"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="9%" bgcolor="#e0e0c6"><a href="http://www.sources.ru/books.shtml"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="9%" bgcolor="#e0e0c6"><a href="http://www.mastak.ru/p/2724"><font color="#000000" size="2">Хостинг</font></a></td>
+          <td align="center" width="13%" bgcolor="#e0e0c6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#e0e0c6"><b>9</b> пользователей на сервере.
+</td>
+        </tr>
+      </tbody></table>
+      </td>
+    </tr>
+  </tbody></table>
+</form>
+
+<table>
+  <tbody><tr>
+    <td width="700">
+<b>Импортирование информации с чужого сайта на свой сайт в свой дизайн. (На примере импортирования прогнозов погоды с Yahoo.)</b><br><br>
+Добре, господа!
+<br><br>
+Пример предназначен для тех, кто начинает работать с php, и не только для них.
+<br><br>
+Результатом работы программы(скрипта) является прогноз погоды на 5 дней
+для любого, интересующего Вас города, выводимый в виде, который
+нравится именно Вам, а не дизайнерам сайта-донора.<br><br>
+Информация в таких случаях берется с известных серверов прогноза погоды
+(где не пишут фразу "запрещено использование информации" и т.п.). В
+данном случае используется сервер <a href="http://weather.yahoo.com/">http://weather.yahoo.com</a>
+, на котором есть страницы с погодой для довольно большого количества
+городов, и практически всегда можно найти если не интересующий Вас
+город, то ближайший ему и идентичный по погодным условиям.
+<br>
+Это законченный проект, работающий на сайте <a href="http://sim-sim.ru/">http://sim-sim.ru</a> в разделе туризма "погода в мире".
+<br>Единственным недостатком является лишь то, что админу приходится
+вводить в текстовый файл (возможен вариант с mysql, но в том случае мне
+было проще сделать в файле) название населенного пункта на родном языке
+и ссылку на страницу с прогнозом погоды на него на сервере Яхо. Но
+никто за Вас этого делать не будет.
+<br>
+Посему, скрипт состоит из 2-х частей:
+<br>1. Файл с администрированием (вводится в первую строку название
+города, на следующей строке - ссылка). Разбирать работу данной части,
+думаю, не стоит, комментариев более чем достаточно.
+<br>2. Файл с самой программой. Работа программы будет подробно описана ниже.
+<br><br>
+	<center><b>1. Администрирование.</b></center>
+<br>
+<br>
+Выводим на экран форму с паролем pass.
+В окне вводятся:
+номера
+названия
+ссылки
+
+Затем, после нажатия на кнопку и проверки пароля, записываем новый список в файл.
+
+<br>
+<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;admin weather&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+
+&lt;body&gt;<br>
+
+&lt;?php<br>
+
+$adr=$DOCUMENT_ROOT."/weather/weather.ini"; // адрес файла, в котором и будут записываться названия городов со  ссылками<br>
+$password='pass'; // простенькая система авторизации<br>
+$eror='Password eror!';<br>
+$old=<b>file</b>($adr); // читаем то, что сейчас есть в файле<br>
+
+<b>if</b> ($submit) { // проверяем на нажатость кнопки<br>
+	<b>if</b> ($pass==$password) {<br>
+		$fp=<b>fopen</b>($adr,"w");<br>
+		<b>fwrite</b> ($fp, $ini); // записываем в файл измененные данные<br>
+		<b>fclose</b>($fp);<br>
+		$old=<b>file</b>($adr);<br>
+	}<br>
+	<b>else</b> {<br>
+		<b>echo</b> $eror;<br>
+	}<br>
+}<br>
+?&gt;<br>
+
+<br>
+&lt;form method=post action="&lt;?php echo $PHP_SELF?&gt;"&gt; // информация, введенная в форму, обрабатывается этим же файлом<br>
+password:&lt;input type=text name=pass&gt;&lt;br&gt;<br>
+inicialisation:&lt;textarea name="ini" rows=15 cols=60&gt;<br>
+&lt;?<br>
+<b>for</b> ($i=0; $i&lt;<b>sizeof</b>($old); $i++) {<br>
+    <b>echo</b> $old[$i], ""; // выводим на экран текущий вариант файла<br>
+}<br>
+?&gt;<br>
+&lt;/textarea&gt;<br>
+&lt;br&gt;<br>
+&lt;input type=submit name="submit" value="Enter"&gt;<br>
+&lt;/form&gt;<br>
+
+<br>
+
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+<br>
+После ввода информации в файл в виде, получаем:<br>
+50<br>
+Ларнака<br>
+http://weather.yahoo.com/forecast/Larnaca_CY_f.html<br>
+51<br>
+Пафос<br>
+http://weather.yahoo.com/forecast/Paphos_CY_f.html<br>
+<br>
+"44" - номер города.<br>
+"Ларнака" - название города.<br>
+"http://weather.yahoo.com/forecast/Larnaca_CY_f.html" - ссылка на погоду в городе Ларнака на Яхе.<br>
+<br>
+Ссылки на города организовываются по принципу:<br>
+&lt;a href=http://www.sim-sim.ru/catalogue/weather.php?weather=50&gt;Ларнака&lt;/a&gt;<br>
+<a href="http://www.sim-sim.ru/catalogue/report.php">пример:</a><br><br>
+А можно так:<br>
+&lt;a href=http://www.sim-sim.ru/catalogue/weather.php?city=Ларнака&gt;Ларнака&lt;/a&gt;<br>
+Но если город из друх слов, то в пробелах пишем "%20"<br>
+В таком случае, номера городов в списке не нужны:<br>
+Ларнака<br>
+http://weather.yahoo.com/forecast/Larnaca_CY_f.html<br>
+Пафос<br>
+http://weather.yahoo.com/forecast/Paphos_CY_f.html<br>
+<br>
+<br>
+Если у нас не текстовый файл, а mysql, то все проще.<br>
+Если кому понадобится вариант с mysql, пишите мне <a href="mailto:totoeval@mtu-net.ru">totoeval@mtu-net.ru</a><br>
+<br>
+<br>
+<br>
+
+
+
+
+
+	<center><b>2. Программа (собственно, адаптер чужого кода к Вашему сайту).</b></center>
+
+<br>
+<br>
+&lt;table width=100% border=0 cellspacing=0 cellpadding=2 bgcolor=&lt;? <b>echo</b> $brdcolor; ?&gt;&gt;<br>
+&lt;tr&gt;<br>
+	&lt;td&gt;<br>
+
+&lt;br&gt;<br>
+&lt;!----------------------- FORECAST -------------------------&gt;<br>
+
+&lt;?php<br>
+
+$ini=$DOCUMENT_ROOT.'/weather/weather.ini';<br>
+$region=<b>file</b>($ini); // читаем файл со списком городов-ссылок а массив $region<br>
+<br>
+<br>
+// определение координат искомого города<br>
+<b>for</b> ($i=0; $i&lt;<b>sizeof</b>($region); $i++) { <br>
+	<b>if</b> (<b>trim</b>($region[$i])==$weather) { // ищем номер города в списке<br>
+		$city=trim($region[$i+1]); // название города<br>
+		$adr=trim($region[$i+2]); // адрес страницы<br>
+	}<br>
+	<b>else</b> {<br>
+	}<br>
+}<br>
+<br>
+// если у нас передается информация не номером города, а названием, то:<br>
+<b>for</b> ($i=0; $i&lt;<b>sizeof</b>($region); $i++) { <br>
+	$city=<b>str_replace</b>($city,"%20"," "); // заменяем "%20" на " "<br>
+	<b>if</b> (<b>trim</b>($region[$i])==$city) { // ищем название города в списке<br>
+		$adr=<b>trim</b>($region[$i+1]); // адрес страницы<br>
+	}<br>
+	<b>else</b> {<br>
+	}<br>
+}<br>
+<br>
+<br>// Входная информация для дальнейшего кода - $adr (адрес страницы
+прогноза погоды для города на сайте http://weather.yahoo.com) и $city -
+название города на родном языке.<br>
+// <br>
+
+<br>
+
+// фразы для поиска полезной информации. Оригинал фраз можно обнаружить на странице, например, <a href="http://weather.yahoo.com/forecast/Larnaca_CY_f.html">этой</a>, проанализировав код.<br><br>
+// здесь заводим в переменные фразы, по которым будем искать нужную
+информацию (градусы, описания погоды, картинки). Используем фразы до и
+после необходимой информации. <br>Этот
+блок в будущем придется изменять, когда на оригинале
+(weather.yahoo.com) изменится код страниц. На 14 авг. 2001 он работает.<br>
+
+$begin_screen='FORECAST ----'; // начальная фраза таблицы с прогнозом погоды<br>
+$end_screen='&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'; // последняя фраза таблицы<br>
+$post_gradus='&lt;/font&gt;&lt;/b&gt;&lt;'; // после градусов<br>
+$before_gradus='&lt;font size="3" face="arial"&gt;'; //  перед градусами<br>
+$before_image='http://us.i1.yimg.com/us.yimg.com/i/we/fc/'; // перед картинкой<br>
+$post_image='.gif'; // после картинки<br>
+$before_forecast='top&gt;&lt;font face="arial" size="2"&gt;'; // перед фразой погоды<br>
+$post_forecast='&lt;/font&gt;&lt;/td&gt;&lt;td&gt;'; // после фразы погоды<br>
+<br>
+<br>
+// массивы для переводов даты и описаний погоды с английского языка на
+родной (в данном случае использован вариант перевода с буржуйского на
+язык, которым разговаривал Ленин.<br>
+$endat=array("
+","Mon","Tue","Wed","Thu","Fri","Sat","Sun","May","Jul","Jun","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr");
+// английские даты<br>
+$rudat=array("
+","понедельник","вторник","среда","четверг","пятница","суббота","воскресенье","мая","июля","июня","августа","сентября","октября","ноября","декабря","января","февраля","марта","апреля");
+// родные даты<br>
+$eng=array(" ","Thunderstorms","Sunny","Partly
+Cloudy","Showers","Rain","Mostly
+Cloudy","Tstorms","Drizzle","Cloudy","Flurries","Fog","High","Low","Clear","Sleet","Rain/snow","Snow
+Showers","Mixed Snow", "Rain", "Snow","Mixed"); // английские описания
+погоды<br>
+$rus=array(" ","гроза","ясно","переменная
+облачность","ливень","дожди","облачно","гроза","изморось","пасмурно","снегопад","туман","день","ночь","ясно","дождь
+со снегом","дождь со снегом","мокрый снег","снег с
+дождем","снег","переменно"); // российские аналоги погоды<br>
+<br>
+$brdcolor='#ffffff'; // цвет рамки таблицы прогноза (белый)<br>
+$bgcolor='#eeeeee'; //цвет фона ячеек таблицы (лучше - цвет фона страницы)<br>
+<br>
+<br>
+// А Здесь начинается код программы, который изменять не придется.<br>
+<br>
+
+<br>
+// занимаемся созданием даты, выводимой на экран.<br>
+Функция time() даст нам текущее время. Функцией date(d." ".M,$t[$i])
+получаем дату текущего и последующих 4 дней, а date(D,$t[$i]) дает нам
+дни недели всех 5 дней. А затем переводим даты с английского языка на
+родной.<br>
+$t=array(4);<br>
+$d=array(4);<br>
+$dn=array(4);<br>
+<b>for</b> ($i=0; $i&lt;=4; $i++) {<br>
+	$t[$i]=<b>time</b>()+$i*86400;<br>
+	$d[$i]=<b>date</b>(d." ".M,$t[$i]);<br>
+	$dn[$i]=<b>date</b>(D,$t[$i]);<br>
+	<b>for</b> ($j=0; $j&lt;<b>sizeof</b>($endat); $j++) { // переводим слова в дате и получаем даты на родном языке<br>
+		$d[$i]=<b>str_replace</b>($endat[$j],$rudat[$j],$d[$i]);<br>
+		$dn[$i]=<b>str_replace</b>($endat[$j],$rudat[$j],$dn[$i]);<br>
+	} // и получаем даты на языке, которым разговаривает наш нонешний Вова<br>
+}<br>
+<br>
+// начинаем обрабатывать страницу.<br>
+// Выясняем строки начала и конца таблицы с прогнозом погоды. Затем, будем работать именно с этим блоком.
+<br>
+<br>
+<br>
+$screen=<b>file</b>($adr); // читаем страницу с прогнозом погоды в переменную $screen<br>
+<br>
+
+for ($i=1; $i&lt;sizeof($screen); $i++) { // обрабатываем строки с первой по последнюю<br>
+	if (<b>strpos</b>($screen[$i],$begin_screen)==false) { //находим начало таблицы с прогнозом<br>
+		if (<b>strpos</b>($screen[$i],$end_screen)==false) { //находим ее конец<br>
+		}<br>
+		<b>else</b> {$m=$i; // $m - номер последней строки таблицы<br>
+		}<br>
+	}<br>
+	<b>else</b> {$k=$i; // $k - номер первой строки таблицы<br>
+	}<br>
+} // Получаем с $screen[$k] по $screen[$m] - нашу таблицу с погодой.
+Потом будемработать именно с ней, чтобы не было лишних совпадений, и
+быстро работала программа.<br>
+// Можно ее выводить в "родном дизайне, но нам это не нравится<br>
+// Начинаем искать полезную информацию.<br>
+
+$grad=array(9); // массив из 10 чисел градусов температуры окружающей среды<br>
+
+$zed=0; // счетчик градусов<br>
+<b>for</b> ($i=$k; $i&lt;=$m; $i++) { //работаем с градусами<br>
+	if (<b>strpos</b>($screen[$i],$before_gradus,0)==<b>false</b>) { //если нет градусов в строке (если нет фразы, стоящей перед градусами.<br>
+	}<br>
+	<b>else</b> {// если есть градусы в строке<br>
+		$string_grad=$screen[$i]; // сохраняем строку с градусами в переменную<br>
+		$string_grad=<b>explode</b>($before_gradus,$string_grad);
+// разбиваем строку на массив строк по разделителю, которым является
+фраза перед градусами, таким образом, мы получаем в 1 элементе массива
+строку, которая начинается собственно с самого градуса погоды.<br>
+		$end_grad=<b>strpos</b>($string_grad[1],$post_gradus,0); // определяем позицию начала фразы, идущей после градуса.<br>
+		$grad[$zed]=<b>substr</b>($string_grad[1],0,$end_grad); // первый градус получаем, как подстрока, с 0-го символа до начала фразы после градуса.<br>
+		$zed++; // инкремент счетчика градусов<br>
+		$end_grad=<b>strpos</b>($string_grad[2],$post_gradus,0);<br>
+		$grad[$zed]=<b>substr</b>($string_grad[2],0,$end_grad); // второй градус<br>
+		$zed++; // инкремент счетчика градусов<br>
+	}<br>
+} // в результате чего, мы получили все градусы на нашей странице<br>
+
+// переводим фаренгейты в цельсии<br>
+<b>for</b> ($i=0; $i&lt;=9; $i++) {$grad[$i]=<b>round</b>(5/9*($grad[$i]-32));<br>
+}<br>
+// в варианте с забиранием информации со страницы с цельсиями<br>
+// эту строку стоит просто закомментировать. Я оставил так, просто каприз.<br>
+// переводим фаренгейты в цельсии<br>
+
+// находим слова погоды абсолютно аналогично поиску градусов<br>
+$zed=0; // счетчик описаний погоды<br>
+<b>for</b> ($i=$k; $i&lt;=$m; $i++) { //работаем с описаниями<br>
+	<b>if</b> (<b>strpos</b>($screen[$i],$before_forecast,0)==<b>false</b>) { //если нет описания погоды в строке<br>
+	}<br>
+	<b>else</b> {// если есть описания в строке<br>
+		$string_grad=$screen[$i]; // сохраняем строку с описаниями в переменную<br>
+		$string_grad=<b>explode</b>($before_forecast,$string_grad);<br>
+		$end_grad=<b>strpos</b>($string_grad[1],$post_forecast,0);<br>
+		$forec[$zed]=<b>substr</b>($string_grad[1],0,$end_grad);<br>
+		<b>for</b> ($j=0; $j&lt;<b>sizeof</b>($eng); $j++) { // перебираем все варианты слов в описаниях<br>
+			$forec[$zed]=<b>str_replace</b>($eng[$j],$rus[$j],$forec[$zed]); // переводим слова<br>
+		}<br>
+		$zed++; // инкремент счетчика описаний<br>
+	}<br>
+} // в результате чего, мы получили все описания погоды на нашей странице<br>
+
+$zed=0; // счетчик слов картинок аналогично<br>
+<b>for</b> ($i=$k; $i&lt;$m; $i++) { //работаем с картинками<br>
+	<b>if</b> (<b>strpos</b>($screen[$i],$before_image,0)==<b>false</b>) { //если нет описания погоды в строке<br>
+	}<br>
+	<b>else</b> {// если есть картинки в строке<br>
+		$string_grad=$screen[$i]; // сохраняем строку с картинками в переменную<br>
+		$string_grad=<b>explode</b>($before_image,$string_grad);<br>
+		$end_grad=<b>strpos</b>($string_grad[1],$post_image,0);<br>
+		$for_img[$zed]=<b>substr</b>($string_grad[1],0,$end_grad);<br>
+		$zed++; // инкремент счетчика картинок<br>
+	}<br>
+} // в результате чего, мы получили все картинки на нашей странице<br>
+<br>
+<br>
+<br>
+
+?&gt;<br>
+// публикуем результаты:<br>
+&lt;table width=100% cellpadding=0 cellspacing=0 border=0&gt;<br>
+&lt;tr&gt;&lt;td width=20% align=center&gt;&lt;font size=3&gt;&lt;b<br>
+&gt;&lt;? echo $city; // выводим название города, для которого отображается прогноз погоды<br>
+?&gt;&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table<br>
+&gt;&lt;table width=100% cellpadding=0 cellspacing=0 border=0&gt;<br>
+&lt;tr&gt;&lt;?<br>
+<b>for</b> ($i=0; $i&lt;=4; $i++) { // выводим на экран ячейки с датами и днями<br>
+	<b>echo</b> "&lt;td width=20% align=center&gt;&lt;font size=2&gt;&lt;b&gt;$d[$i]&lt;br&gt;$dn[$i]&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;";<br>
+}<br>
+?&gt;&lt;/tr<br>
+&gt;&lt;/table<br>
+&gt;&lt;table width=100% cellpadding=0 cellspacing=0 border=0 bgcolor=&lt;? <b>echo</b> $brdcolor; ?&gt;<br>
+&gt;&lt;tr&gt;&lt;td<br>
+&gt;&lt;table width=100% cellpadding=2 cellspacing=1 border=0<br>
+&gt;&lt;tr&gt;&lt;?<br>
+$zed=0; // счетчик выводимых градусов<br>
+<b>for</b> ($i=0; $i&lt;=4; $i++) { // выводим ячейки с прогнозами - картинки, градусы, описания<br>
+	$zed1=$zed+1;<br>
+	<b>echo</b>
+"&lt;td width=20% align=center bgcolor=$bgcolor
+valign=middle&gt;&lt;img src=../pic/".$for_img[$i].".gif border=0
+alt=".$forec[$i]."&gt;&lt;br&gt;&lt;br&gt;&lt;font
+size=2&gt;".$forec[$i]."&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font
+size=3&gt;&lt;b&gt;".$grad[$zed]."°C&lt;br&gt;".$grad[$zed1]."°C&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;";<br>
+	$zed=$zed+2;<br>
+}<br>
+?&gt;<br>
+&lt;/tr&gt;&lt;/table&gt;<br>
+<br>
+// картинки можно привязать к картинкам Яхи (названия аналогичных по
+погоде совпадают, как в моем случае), а можно сделать массивы
+соответствия слов-описаний погоды и Ваших картинок. Это по-желанию. Что
+долговечнее, трудно судить. И фразы-описания они могут изменить, и
+картинки переименовать. Можно, конечно договориться с админом Яхи,
+чтобы они не меняли один из этих элементов и отталкиваться от него, но
+у меня не было его телефона:о)<br>
+<br>
+
+
+<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+<br>
+<br>
+Теперь программа работает, и ее можно вставлять в свой дизайн.
+Вот вариант: <a href="http://www.sim-sim.ru/catalogue/weather.php?weather=50">вышеупомянутая Ларнака</a><br>
+<br>
+Если кого заинтересуют "вариации на тему" или возникнут вопросы, прошу писать мне <a href="mailto:totoeval@mtu-net.ru">totoeval@mtu-net.ru</a>.
+А также, пишите все, кто  сможет посоветовать другие варианты. Всегда рад критике и возможности повысить свой уровень.<br>
+<br>
+<br>
+Тотоев Александр <br><a href="http://www.czar.ru/">www.czar.ru</a><br><a href="http://www.nova-wings.ru/">www.nova-wings.ru</a><br>
+<br>
+<br>
+    </td>
+  </tr>
+</tbody></table>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tbody><tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script><a href="http://lite.lbe.ru/cgi-bin/href/castle?4609" target="_blank"><img src="www_statya_weather_files/castle.gif" width="468" height="60" border="0" alt="LBE_LITE" ismap="ismap"></a><br> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</tbody></table>
+</center></div>
+</body></html>

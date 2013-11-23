@@ -1,0 +1,261 @@
+<html>
+<head>
+<title>FORUM</title>
+
+<LINK REL=STYLESHEET TYPE="text/css" HREF="forum_st.css">
+
+</head>
+
+<body> 
+
+<table width="90%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+
+<h2>PHP3/MySQL Forum</h2>
+
+<table width="50%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+    <td>
+Information:
+<br>
+<a href="http://forum.actimind.com/README">README</a>
+<br>
+<a href="http://forum.actimind.com/ChangeLog">ChangeLog</a>
+<br>
+    </td>
+    <td>
+Download: 
+<br>
+<a href="http://forum.actimind.com/forum_2_0_12.tgz">forum_2_0_12.tgz</a>
+<br>
+<a href="http://forum.actimind.com/forum_2_0_12.zip">forum_2_0_12.zip</a>
+    </td>
+</tr>
+</table>
+
+<center><h3>Forum demo</h3></center>
+<a href="http://forum.actimind.com/admin.php3">Administration demo</a> (login: admin, password: change_it)
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+function NewMsg (days,lang) {
+    winname = "newmsg";
+    if (window.name == winname) {
+        winname = "new1";
+    }
+    w = window.open ("newmsg.php3?id=0&days=" + days + "&lang=" + lang, winname, "directories=no,height=440,width=720,location=no,menubar=no,resizable=yes,scrollbars,status=no,toolbar=no");
+    w.focus();
+    return "#";
+}
+
+
+//-->
+</SCRIPT>
+
+<FORM ACTION="search.php3" METHOD=GET>
+<input type="hidden" name=js value=1>
+<input type="hidden" name=lang value=en>
+<table border="0" cellpadding="2" cellspacing="0" bgcolor="#d0d0d0">
+<TR>
+<TD>
+<table border=0 cellspacing=1 cellpadding=3>
+<tr align=center bgcolor="#e8f2fd"><TD colspan=2 >
+<INPUT name=what size=30 value="" >
+<input type=submit value="Search"></td>
+<tr align=center bgcolor="#ffffff">
+<td class=t>
+Keywords :</td><td class=t>
+<input name=rule value="EXACT" type=radio CHECKED >&nbsp;exact&nbsp; &nbsp; 
+<input name=rule value="AND" type=radio >&nbsp;all&nbsp; &nbsp; 
+<input name=rule value="OR" type=radio >&nbsp;any</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</FORM>
+
+<p><a href="http://forum.actimind.com/newmsg.php3?id=0&days=14&lang=en" OnClick="this.href=NewMsg(14,'en');"  onMouseOver='window.status="Create message in new thread"; return true;' onMouseOut='window.status=""; return true;' >Create message in new thread</a> 
+<br><br>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+function ReadMsg (id,pid,days,js,lang) {
+    if ( window.name != "newmsg" && (1 == 1) ) {
+        w = window.open ("readmsg.php3?id=" + id + "&pid=" + pid +"&days="+days+"&js="+js+"&lang="+lang, "newmsg", "directories=no,height=440,width=720,location=no,menubar=no,resizable=yes,scrollbars,status=no,toolbar=no");
+        w.focus();
+    }
+    else {
+        return 'readmsg.php3?id=' + id + '&pid=' + pid +'&days=' +days +'&js=' +js +'&lang=' +lang;
+    }
+    
+    return '#';
+}
+//-->
+</SCRIPT>
+
+
+<!-- FORUM TABLE -->
+<table align="left" border="0" cellpadding="2" cellspacing="0" bgcolor="#d0d0d0" width="100%"><TD><table border=0 cellspacing="0" cellpadding="0" width="100%">
+<tr valign="middle" bgcolor="#d0d0d0">
+ <td class="t"><b>Subject</b></td>
+ <td width="20%" class="t"><b>Author</b></td>
+ <td width="20%" class="t"><b>Date</b></td></tr>
+<tr valign="center" bgcolor="#e8f2fd" height=10><td valign="center">
+<a href="http://forum.actimind.com/index.php3?days=14&js=1&lang=en&open=a%3A1%3A%7Bi%3A3%3Bi%3A1%3B%7D"  onMouseOver='window.status=""; return true;' onMouseOut='window.status=""; return true;' ><img src="b4000000.gif" width=20 height=20 border=0 vspace=0 hspace=0 align=left></a> <nobr><a class="s" href="http://forum.actimind.com/readmsg.php3?id=3&pid=0&days=14&js=1&lang=en" OnClick="window.status=''; this.href = ReadMsg(3,0,14,1,'en');"  onMouseOver='window.status="View article"; return true;' onMouseOut='window.status=""; return true;'  >Re: asdf</a><img src="new00000.gif" border=0 hspace=8 vspace=0></nobr>
+ </TD><td class=t><a class="a" href="mailto:asdf@adf.com">hello</a></td>
+ <td class="d"><font size="-2">23/03/2001 16:59</font></td>
+</tr>
+<tr valign="center" bgcolor="#ffffff" height=10><td valign="center">
+<img src="b2000000.gif" width=20 height=20 border=0 vspace=0 hspace=0 align=left> <nobr><a class="s" href="http://forum.actimind.com/readmsg.php3?id=6&pid=3&days=14&js=1&lang=en" OnClick="window.status=''; this.href = ReadMsg(6,3,14,1,'en');"  onMouseOver='window.status="View article"; return true;' onMouseOut='window.status=""; return true;'  >Re: asdf</a><img src="new00000.gif" border=0 hspace=8 vspace=0></nobr>
+ </TD><td class=t><a class="a" href="mailto:oh@farm.de">olaf</a></td>
+ <td class="d"><font size="-2">23/03/2001 17:54</font></td>
+</tr>
+<tr valign="center" bgcolor="#e8f2fd" height=10><td valign="center">
+<a href="http://forum.actimind.com/index.php3?days=14&js=1&lang=en&open=a%3A2%3A%7Bi%3A3%3Bi%3A0%3Bi%3A4%3Bi%3A1%3B%7D"  onMouseOver='window.status=""; return true;' onMouseOut='window.status=""; return true;' ><img src="b4000000.gif" width=20 height=20 border=0 vspace=0 hspace=0 align=left></a> <nobr><a class="s" href="http://forum.actimind.com/readmsg.php3?id=4&pid=0&days=14&js=1&lang=en" OnClick="window.status=''; this.href = ReadMsg(4,0,14,1,'en');"  onMouseOver='window.status="View article"; return true;' onMouseOut='window.status=""; return true;'  >Re: asdf</a><img src="new00000.gif" border=0 hspace=8 vspace=0></nobr>
+ </TD><td class=t><a class="a" href="mailto:oh@farm.de">olaf</a></td>
+ <td class="d"><font size="-2">23/03/2001 17:52</font></td>
+</tr>
+<tr valign="center" bgcolor="#ffffff" height=10><td valign="center">
+<img src="b2000000.gif" width=20 height=20 border=0 vspace=0 hspace=0 align=left> <nobr><a class="s" href="http://forum.actimind.com/readmsg.php3?id=5&pid=4&days=14&js=1&lang=en" OnClick="window.status=''; this.href = ReadMsg(5,4,14,1,'en');"  onMouseOver='window.status="View article"; return true;' onMouseOut='window.status=""; return true;'  >Re: asdf</a><img src="new00000.gif" border=0 hspace=8 vspace=0></nobr>
+ </TD><td class=t><a class="a" href="mailto:oh@farm.de">olaf</a></td>
+ <td class="d"><font size="-2">23/03/2001 17:54</font></td>
+</tr>
+<tr valign="center" bgcolor="#e8f2fd" height=10><td valign="center">
+<a href="http://forum.actimind.com/index.php3?days=14&js=1&lang=en&open=a%3A3%3A%7Bi%3A3%3Bi%3A0%3Bi%3A4%3Bi%3A0%3Bi%3A7%3Bi%3A1%3B%7D"  onMouseOver='window.status=""; return true;' onMouseOut='window.status=""; return true;' ><img src="b4000000.gif" width=20 height=20 border=0 vspace=0 hspace=0 align=left></a> <nobr><a class="s" href="http://forum.actimind.com/readmsg.php3?id=7&pid=0&days=14&js=1&lang=en" OnClick="window.status=''; this.href = ReadMsg(7,0,14,1,'en');"  onMouseOver='window.status="View article"; return true;' onMouseOut='window.status=""; return true;'  >Test new thread</a><img src="new00000.gif" border=0 hspace=8 vspace=0></nobr>
+ </TD><td class=t><a class="a" href="mailto:Barrigao">Mateus</a></td>
+ <td class="d"><font size="-2">23/03/2001 23:29</font></td>
+</tr>
+</table></table>
+<!-- /FORUM TABLE -->
+
+<br clear=all>
+<P>
+<FORM METHOD=get ACTION="/index.php3" name=daysfrm>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<td>
+<div align="left">
+<SMALL>
+View articles for the last&nbsp;&nbsp;<SELECT name=days onChange="xxx=daysfrm.elements['days']; if (xxx.options[xxx.selectedIndex].value != 14) {daysfrm.submit();}">
+<option value="7"  > 7 days </option>
+<option value="14"  SELECTED > 14 days </option>
+<option value="30" > 30 days </option>
+<option value="60" > 60 days </option>
+<option value="10000" > all </option>
+</SELECT>
+</SMALL>
+</div>
+</td>
+<td>
+<div align="right">
+<SMALL>
+<SELECT name=setlang onChange="xxx=daysfrm.elements['setlang']; if (xxx.options[xxx.selectedIndex].value != 'en') {daysfrm.submit();}">
+<option value="en"  SELECTED > english </option>
+<option value="ru" > russian </option>
+<option value="es" > spanish </option>
+<option value="de" > germany </option>
+<option value="fr" > french </option>
+<option value="hu" > hungarian </option>
+<option value="dk" > danish </option>
+<option value="id" > indonesian </option>
+<option value="br" > brazilian </option>
+<option value="du" > dutch </option>
+<option value="lt" > lithuanian </option>
+<option value="no" > norwegian </option>
+<option value="pl" > polish </option>
+</SELECT>
+ 
+</SMALL>
+</div>
+</td>
+</table> 
+<input type="hidden" name="js" value="1">
+<input type="hidden" name="open" value="a:3:{i:3;i:0;i:4;i:0;i:7;i:0;}">
+</FORM>
+</td></tr>
+</table>
+
+<br>
+<center>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><A HREF="http://forum.astrive.ru/"><img src="forum_lo.gif" alt="FORUM logo" border=0 width=90 height=36></a></td>
+<td>&nbsp;<b>powered by</b>&nbsp;</td>
+<td><A href="http://www.php.net/"><img src="php_logo.gif" alt="PHP3 logo" border=0 width=96 height=50 valign=top></a></td>
+<td>&nbsp;<b>&</b>&nbsp;&nbsp;</td>
+<td><A href="http://www.mysql.org/"><img src="mysql_lo.gif" alt="MySQL logo" border=0 width=88 height=31></a></td>
+</tr>
+</table>
+
+<p>
+
+
+
+
+
+<!-- SpyLOG v2 f:0211 --> 
+                  <script language="javascript"> 
+                  u="u156.38.spylog.com";d=document;nv=navigator;na=nv.appName;t="";p=0; 
+                  sz=" width=88 height=31 "; 
+                  hl=history.length;d.cookie="b=b";c=0; 
+                  bv=Math.round(parseFloat(nv.appVersion)*100); 
+                  if (d.cookie) c=1;n=(na.substring(0,2)=="Mi")?0:1; 
+                  if((n==0)||(bv >= 300)){rn=Math.random();t=(new Date()).getTimezoneOffset();} else {rn=0;} 
+                  z="p="+p+"&rn="+rn+"&t="+t+"&c="+c+"&hl="+hl; 
+                  if (self != top) { fr=1;} else { fr=0;} 
+                  r=escape(d.referrer);r1=""; 
+                  sl="1.0";h=0; 
+                  </script> 
+                  <script language="javascript1.1"> 
+                  pl="";sl="1.1"; 
+                  if((n==1) && (bv >= 300)) 
+                  { for(var i = 0; i < nv.plugins.length; i++) 
+                  pl += nv.plugins[i].name+":"; } 
+                  j = (navigator.javaEnabled() ? "Y" : "N"); 
+                  </script> 
+                  <script language=javascript1.2> 
+                  sl="1.2";s=screen;wh=s.width+'x'+s.height; 
+                  px=(n==0)?screen.colorDepth:screen.pixelDepth;z+="&wh="+wh+"&px="+px; 
+                  </script> 
+                  <script language=javascript1.3> 
+                  sl="1.3" 
+                  </script> 
+                  <script language="javascript"> 
+                  y=""; 
+                  y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+                  y+="<img src='http://"+u+"/cnt?"; 
+                  y+=z+"&j="+j+"&sl="+sl+"&r="+r+"&r1="+r1+"&fr="+fr+"&pg="+escape(window.location.href)+"&pl="+escape(pl); 
+                  y+="' border=0 "+sz+" alt='SpyLOG'>"; 
+                  y+="</a>"; 
+                  d.write(y); 
+                  </script> 
+                  <script language="javascript1.2"><!-- 
+                  if (n == 0) { d.write("<");d.write("!--"); } 
+                  //--></script> 
+                  <noscript> 
+                  <a href="http://u156.38.spylog.com/cnt?f=3&p=0" target=_blank> 
+                  <img src="http://u156.38.spylog.com/cnt?p=0" alt='SpyLOG' border='0' width=88 height=31 > 
+                  </a> 
+                  </noscript> 
+                  <script language="javascript1.2"><!-- 
+                  if (n == 0) { d.write("--");d.write(">"); } 
+                  //--></script> 
+                  <!-- SpyLOG -->
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+</body>
+</html>
+
+<!-- This document source from http://forum.actimind.com/index.php3?js=1&days=14&lang=en -->

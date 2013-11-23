@@ -1,0 +1,647 @@
+// Decompiled by DJ v1.5.5.28 Copyright 2000 Atanas Neshkov  Date: 09/03/2000 00:13:21
+// Home page : http://www.geocities.com/nasko_1999
+// Decompiler options: packimports(3) 
+// Source File Name:   SIRvmenuPRO.java
+
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.*;
+import java.io.PrintStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.StringTokenizer;
+
+public class SIRvmenuPRO extends Applet
+    implements MouseMotionListener, MouseListener
+{
+
+    public void init()
+    {
+        APPLETCONTEXT = getAppletContext();
+
+        addMouseMotionListener(this);
+        addMouseListener(this);
+        SBGCOLOR = parmgetcolor("STARTUPCOLOR", "255|255|255");
+        setBackground(SBGCOLOR);
+    }
+
+    public void startUp(Graphics g)
+    {
+        started = true;
+        String s = parmgetstr("LOADINGMESSAGE", "Loading Please Wait...");
+        FontMetrics fontmetrics = getFontMetrics(g.getFont());
+        g.setColor(parmgetcolor("STEXTCOLOR", "0|0|0"));
+        g.drawString(s, (size().width - fontmetrics.stringWidth(s)) / 2, (size().height + fontmetrics.getHeight()) / 2);
+        WIDTH = getSize().width;
+        HEIGHT = getSize().height;
+        BGCOLOR = new Color(255, 255, 255);
+        SL_BGCOLOR = new Color(255, 255, 255);
+        SL_HBGCOLOR = new Color(0, 0, 0);
+        SL_TXTCOLOR = new Color(0, 0, 0);
+        SL_HTXTCOLOR = new Color(255, 255, 255);
+        IMAGES = parmgetstr("IMAGES", " ");
+        BGIMAGE = parmgetstr("BGIMAGE", " ");
+        TITLEIMG = parmgetstr("TITLEIMG", " ");
+        TITLEALIGN = parmgetstr("TITLEALIGN", "center");
+        BORDER = parmgetint("BORDER", 0, 0, WIDTH / 2);
+        BUTTONALIGN = parmgetstr("BUTTONALIGN", "center");
+        SC = parmgetstr("BGCOLOR", "255|255|255");
+        if(SC == null)
+            SC = "255|255|255";
+        st = new StringTokenizer(SC, "|");
+        if(st.hasMoreTokens())
+            RED = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            RED = 0;
+        if(st.hasMoreTokens())
+            GREEN = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            GREEN = 0;
+        if(st.hasMoreTokens())
+            BLUE = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            BLUE = 0;
+        BGCOLOR = new Color(RED, GREEN, BLUE);
+        SC = parmgetstr("MBGCOLOR", "255|255|255");
+        if(SC == null)
+            SC = "255|255|255";
+        st = new StringTokenizer(SC, "|");
+        if(st.hasMoreTokens())
+            RED = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            RED = 0;
+        if(st.hasMoreTokens())
+            GREEN = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            GREEN = 0;
+        if(st.hasMoreTokens())
+            BLUE = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            BLUE = 0;
+        SL_BGCOLOR = new Color(RED, GREEN, BLUE);
+        SC = parmgetstr("MHBGCOLOR", "0|0|0");
+        if(SC == null)
+            SC = "255|255|255";
+        st = new StringTokenizer(SC, "|");
+        if(st.hasMoreTokens())
+            RED = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            RED = 0;
+        if(st.hasMoreTokens())
+            GREEN = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            GREEN = 0;
+        if(st.hasMoreTokens())
+            BLUE = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            BLUE = 0;
+        SL_HBGCOLOR = new Color(RED, GREEN, BLUE);
+        SC = parmgetstr("MTXTCOLOR", "0|0|0");
+        if(SC == null)
+            SC = "255|255|255";
+        st = new StringTokenizer(SC, "|");
+        if(st.hasMoreTokens())
+            RED = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            RED = 0;
+        if(st.hasMoreTokens())
+            GREEN = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            GREEN = 0;
+        if(st.hasMoreTokens())
+            BLUE = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            BLUE = 0;
+        SL_TXTCOLOR = new Color(RED, GREEN, BLUE);
+        SC = parmgetstr("MHTXTCOLOR", "255|255|255");
+        if(SC == null)
+            SC = "255|255|255";
+        st = new StringTokenizer(SC, "|");
+        if(st.hasMoreTokens())
+            RED = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            RED = 0;
+        if(st.hasMoreTokens())
+            GREEN = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            GREEN = 0;
+        if(st.hasMoreTokens())
+            BLUE = Math.abs(Integer.parseInt(st.nextToken()));
+        else
+            BLUE = 0;
+        SL_HTXTCOLOR = new Color(RED, GREEN, BLUE);
+        FT = parmgetstr("FONT", "Courier|N|12");
+        st = new StringTokenizer(FT, "|");
+        if(st.hasMoreTokens())
+            Fonttype = st.nextToken();
+        else
+            Fonttype = "Courier";
+        if(st.hasMoreTokens())
+            Fontstyle = st.nextToken();
+        else
+            Fontstyle = "N";
+        if(st.hasMoreTokens())
+            Fontsize = Integer.parseInt(st.nextToken());
+        else
+            Fontsize = 12;
+        if(Fontstyle.equals("B"))
+            SL_FONT = new Font(Fonttype, 1, Fontsize);
+        else
+        if(Fontstyle.equals("I"))
+            SL_FONT = new Font(Fonttype, 2, Fontsize);
+        else
+        if(Fontstyle.equals("BI") || Fontstyle.equals("IB"))
+            SL_FONT = new Font(Fonttype, 3, Fontsize);
+        else
+            SL_FONT = new Font(Fonttype, 0, Fontsize);
+        NO_BUTTONS = 0;
+        BUTTONARRAY = new String[1000];
+        TEMPSTR = getParameter("BUTTON" + (NO_BUTTONS + 1));
+        do
+        {
+            BUTTONARRAY[NO_BUTTONS] = TEMPSTR;
+            NO_BUTTONS++;
+            TEMPSTR = getParameter("BUTTON" + (NO_BUTTONS + 1));
+        } while(TEMPSTR != null && NO_BUTTONS < 1000);
+        BTNSIZE = new int[NO_BUTTONS][7];
+        BTNINFO = new String[NO_BUTTONS][3];
+        BTNAUDIO = new AudioClip[NO_BUTTONS];
+        STATE = new int[NO_BUTTONS];
+        BtnImg = new Image[NO_BUTTONS][3];
+        SL_NITEMS = new int[NO_BUTTONS][2];
+        SL_ARRAY = new String[NO_BUTTONS][100][3];
+        SL_COORDS = new int[NO_BUTTONS][100][5];
+        for(i = 0; i < NO_BUTTONS; i++)
+        {
+            SL_NITEMS[i][0] = 0;
+            SL_NITEMS[i][1] = 0;
+        }
+
+        y = 0;
+        if(IMAGES.equals(" "))
+            NOBUTTONS = true;
+        else
+            Btnimage = downloadImage(IMAGES);
+        if(!BGIMAGE.equals(" "))
+            BACKIMAGE = downloadImage(BGIMAGE);
+        if(!TITLEIMG.equals(" "))
+        {
+            TITLEIMAGE = downloadImage(TITLEIMG);
+            TITLEHEIGHT = TITLEIMAGE.getHeight(this);
+            TITLEWIDTH = TITLEIMAGE.getWidth(this);
+        }
+        TITLEx = WIDTH / 2 - TITLEWIDTH / 2;
+        TITLEy = BORDER;
+        TA = TITLEALIGN.substring(0, 1);
+        if(TA.equals("l") || TA.equals("L"))
+            TITLEx = BORDER;
+        if(TA.equals("r") || TA.equals("R"))
+            TITLEx = WIDTH - BORDER - TITLEWIDTH;
+        BALIGN = 1;
+        BA = BUTTONALIGN.substring(0, 1);
+        if(BA.equals("l") || BA.equals("L"))
+            BALIGN = 0;
+        if(BA.equals("r") || BA.equals("R"))
+            BALIGN = 2;
+        FontMetrics fontmetrics1 = getFontMetrics(SL_FONT);
+        FONTOFFSET = fontmetrics1.getHeight() / 3;
+        if(!NOBUTTONS)
+            for(i = 0; i < NO_BUTTONS; i++)
+            {
+                st = new StringTokenizer(BUTTONARRAY[i], "|");
+                if(st.hasMoreTokens())
+                    BTNSIZE[i][0] = Math.abs(Integer.parseInt(st.nextToken()));
+                else
+                    BTNSIZE[i][0] = 0;
+                if(st.hasMoreTokens())
+                    BTNSIZE[i][1] = Math.abs(Integer.parseInt(st.nextToken()));
+                else
+                    BTNSIZE[i][0] = 0;
+                if(st.hasMoreTokens())
+                    BTNINFO[i][0] = st.nextToken();
+                else
+                    BTNINFO[i][0] = " ";
+                if(st.hasMoreTokens())
+                    BTNINFO[i][1] = st.nextToken();
+                else
+                    BTNINFO[i][1] = " ";
+                if(st.hasMoreTokens())
+                    BTNAUDIO[i] = getAudioClip(getDocumentBase(), st.nextToken());
+                BtnImg[i][0] = createImage(new FilteredImageSource(Btnimage.getSource(), new CropImageFilter(0, y, BTNSIZE[i][0], BTNSIZE[i][1])));
+                BtnImg[i][1] = createImage(new FilteredImageSource(Btnimage.getSource(), new CropImageFilter(BTNSIZE[i][0], y, BTNSIZE[i][0], BTNSIZE[i][1])));
+                BtnImg[i][2] = createImage(new FilteredImageSource(Btnimage.getSource(), new CropImageFilter(2 * BTNSIZE[i][0], y, BTNSIZE[i][0], BTNSIZE[i][1])));
+                if(BALIGN == 0)
+                    BTNSIZE[i][2] = BORDER;
+                if(BALIGN == 1)
+                    BTNSIZE[i][2] = WIDTH / 2 - BtnImg[i][0].getWidth(this) / 2;
+                if(BALIGN == 2)
+                    BTNSIZE[i][2] = WIDTH - BORDER - BtnImg[i][STATE[i]].getWidth(this);
+                BTNSIZE[i][3] = y + BORDER + TITLEHEIGHT;
+                BTNSIZE[i][4] = BTNSIZE[i][2] + BTNSIZE[i][0];
+                BTNSIZE[i][5] = y + BORDER + TITLEHEIGHT + BTNSIZE[i][1];
+                if(st.hasMoreTokens())
+                    BTNINFO[i][2] = st.nextToken();
+                else
+                    BTNINFO[i][2] = " ";
+                if(st.hasMoreTokens())
+                    BTNSIZE[i][6] = Math.abs(Integer.parseInt(st.nextToken()));
+                else
+                    BTNSIZE[i][6] = -1;
+                y = y + BTNSIZE[i][1];
+                STATE[i] = 0;
+                if(!BTNINFO[i][2].equals(" "))
+                {
+                    if(BTNSIZE[i][6] == 0)
+                    {
+                        SLY = BTNSIZE[i][3] - fontmetrics1.getHeight() - 4;
+                        UPDOWN = -1;
+                    } else
+                    {
+                        SLY = BTNSIZE[i][5];
+                        UPDOWN = 1;
+                    }
+                    TEMPSTR = getParameter(BTNINFO[i][2] + (SL_NITEMS[i][0] + 1));
+                    if(TEMPSTR != null)
+                        do
+                        {
+                            st3 = new StringTokenizer(TEMPSTR, "|");
+                            if(st3.hasMoreTokens())
+                                SL_ARRAY[i][SL_NITEMS[i][0]][0] = st3.nextToken();
+                            else
+                                SL_ARRAY[i][SL_NITEMS[i][0]][0] = " ";
+                            if(st3.hasMoreTokens())
+                                SL_ARRAY[i][SL_NITEMS[i][0]][1] = st3.nextToken();
+                            else
+                                SL_ARRAY[i][SL_NITEMS[i][0]][0] = " ";
+                            if(st3.hasMoreTokens())
+                                SL_ARRAY[i][SL_NITEMS[i][0]][2] = st3.nextToken();
+                            else
+                                SL_ARRAY[i][SL_NITEMS[i][0]][0] = " ";
+                            SL_COORDS[i][SL_NITEMS[i][0]][0] = BTNSIZE[i][2] + 10;
+                            SL_COORDS[i][SL_NITEMS[i][0]][1] = SLY;
+                            SL_COORDS[i][SL_NITEMS[i][0]][2] = BTNSIZE[i][0];
+                            SL_COORDS[i][SL_NITEMS[i][0]][3] = fontmetrics1.getHeight() + 4;
+                            SL_COORDS[i][SL_NITEMS[i][0]][4] = 0;
+                            SLY = SLY + UPDOWN * SL_COORDS[i][SL_NITEMS[i][0]][3];
+                            SL_NITEMS[i][0]++;
+                            TEMPSTR = getParameter(BTNINFO[i][2] + (SL_NITEMS[i][0] + 1));
+                        } while(TEMPSTR != null && SL_NITEMS[i][0] < 100);
+                }
+            }
+
+    }
+
+    public void update(Graphics g)
+    {
+        paint(g);
+    }
+
+    public void paint(Graphics g)
+    {
+        if(!started)
+            startUp(g);
+        buffer = createImage(WIDTH, HEIGHT);
+        pad = buffer.getGraphics();
+        if(NOBUTTONS)
+        {
+            pad.setColor(BGCOLOR);
+            pad.fillRect(0, 0, WIDTH, HEIGHT);
+            pad.setColor(parmgetcolor("STEXTCOLOR", "0|0|0"));
+            pad.drawString("ERROR", 0, 30);
+            pad.drawString("Button Images not Found", 0, 50);
+            pad.drawString("Menu Cannot Start.", 0, 70);
+        } else
+        {
+            pad.setColor(BGCOLOR);
+            pad.fillRect(0, 0, WIDTH, HEIGHT);
+            if(!BGIMAGE.equals(" "))
+                pad.drawImage(BACKIMAGE, 0, 0, this);
+            if(!TITLEIMG.equals(" "))
+                pad.drawImage(TITLEIMAGE, TITLEx, TITLEy, this);
+            y = BORDER + TITLEHEIGHT;
+            for(i = 0; i < NO_BUTTONS; i++)
+            {
+                pad.drawImage(BtnImg[i][STATE[i]], BTNSIZE[i][2], y, this);
+                y = y + BTNSIZE[i][1];
+            }
+
+            for(i = 0; i < NO_BUTTONS; i++)
+                if(SL_NITEMS[i][1] == 1 && SL_NITEMS[i][0] > 0)
+                    for(k = 0; k < SL_NITEMS[i][0]; k++)
+                        if(SL_COORDS[i][k][4] == 0)
+                        {
+                            pad.setColor(SL_BGCOLOR);
+                            pad.fillRect(SL_COORDS[i][k][0], SL_COORDS[i][k][1], SL_COORDS[i][k][2], SL_COORDS[i][k][3]);
+                            pad.setFont(SL_FONT);
+                            pad.setColor(SL_TXTCOLOR);
+                            pad.drawString(SL_ARRAY[i][k][0], SL_COORDS[i][k][0] + 5, (SL_COORDS[i][k][1] + SL_COORDS[i][k][3]) - FONTOFFSET);
+                        } else
+                        {
+                            pad.setColor(SL_HBGCOLOR);
+                            pad.fillRect(SL_COORDS[i][k][0], SL_COORDS[i][k][1], SL_COORDS[i][k][2], SL_COORDS[i][k][3]);
+                            pad.setFont(SL_FONT);
+                            pad.setColor(SL_HTXTCOLOR);
+                            pad.drawString(SL_ARRAY[i][k][0], SL_COORDS[i][k][0] + 5, (SL_COORDS[i][k][1] + SL_COORDS[i][k][3]) - FONTOFFSET);
+                        }
+
+
+        }
+        g.drawImage(buffer, 0, 0, this);
+    }
+
+    public Color parmgetcolor(String s, String s1)
+    {
+        String s2 = parmgetstr(s, s1);
+        StringTokenizer stringtokenizer = new StringTokenizer(s2, "|");
+        int j = Integer.parseInt(stringtokenizer.nextToken());
+        int l = Integer.parseInt(stringtokenizer.nextToken());
+        int i1 = Integer.parseInt(stringtokenizer.nextToken());
+        return new Color(j, l, i1);
+    }
+
+    public int parmgetint(String s, int j, int l, int i1)
+    {
+        String s1 = getParameter(s);
+        int j1;
+        if(s1 == null)
+        {
+            j1 = j;
+        } else
+        {
+            j1 = Integer.parseInt(s1);
+            if(j1 > i1)
+                j1 = i1;
+            if(j1 < l)
+                j1 = l;
+        }
+        return j1;
+    }
+
+    public String parmgetstr(String s, String s1)
+    {
+        String s3 = " ";
+        String s2 = getParameter(s);
+        if(s2 == null)
+            s3 = s1;
+        else
+            s3 = s2;
+        return s3;
+    }
+
+    public void mousePressed(MouseEvent mouseevent)
+    {
+        int j = mouseevent.getX();
+        int l = mouseevent.getY();
+        boolean flag = false;
+        k2 = 0;
+        SUBMENU2 = false;
+        do
+        {
+            if(SL_NITEMS[k2][1] == 1)
+                for(i = 0; i < SL_NITEMS[k2][0]; i++)
+                    if(j > SL_COORDS[k2][i][0] && j < SL_COORDS[k2][i][2] + SL_COORDS[k2][i][0] && l >= SL_COORDS[k2][i][1] && l <= SL_COORDS[k2][i][3] + SL_COORDS[k2][i][1])
+                        SUBMENU2 = true;
+                    else
+                        SL_COORDS[k2][i][4] = 0;
+
+            k2++;
+        } while(k2 < NO_BUTTONS);
+        k2 = 0;
+        do
+        {
+            if(j > BTNSIZE[k2][2] && j < BTNSIZE[k2][4] && l > BTNSIZE[k2][3] && l < BTNSIZE[k2][5] && !SUBMENU2)
+            {
+                flag = true;
+                STATE[k2] = 2;
+                paint(getGraphics());
+                BTNAUDIO[k2].play();
+                if(BTNINFO[k2][0] != null && !BTNINFO[k2][0].equals(" "))
+                    try
+                    {
+                        URL url = new URL(getDocumentBase(), BTNINFO[k2][0]);
+                        getAppletContext().showDocument(url, BTNINFO[k2][1]);
+                    }
+                    catch(MalformedURLException malformedurlexception)
+                    {
+                        malformedurlexception.printStackTrace();
+                    }
+            }
+            if(SL_NITEMS[k2][1] == 1)
+                for(i = 0; i < SL_NITEMS[k2][0]; i++)
+                    if(j > SL_COORDS[k2][i][0] && j < SL_COORDS[k2][i][2] + SL_COORDS[k2][i][0] && l >= SL_COORDS[k2][i][1] && l < SL_COORDS[k2][i][3] + SL_COORDS[k2][i][1])
+                    {
+                        BTNAUDIO[k2].play();
+                        if(SL_ARRAY[k2][i][1] != null && !SL_ARRAY[k2][i][1].equals(" "))
+                            try
+                            {
+                                URL url1 = new URL(getDocumentBase(), SL_ARRAY[k2][i][1]);
+                                getAppletContext().showDocument(url1, SL_ARRAY[k2][i][2]);
+                            }
+                            catch(MalformedURLException malformedurlexception1)
+                            {
+                                malformedurlexception1.printStackTrace();
+                            }
+                    }
+
+            k2++;
+        } while(!flag && k2 < NO_BUTTONS);
+    }
+
+    public void mouseReleased(MouseEvent mouseevent)
+    {
+        for(i = 0; i < NO_BUTTONS; i++)
+            STATE[i] = 0;
+
+        paint(getGraphics());
+    }
+
+    public void mouseEntered(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseExited(MouseEvent mouseevent)
+    {
+        for(i = 0; i < NO_BUTTONS; i++)
+            STATE[i] = 0;
+
+        paint(getGraphics());
+    }
+
+    public void mouseDragged(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseClicked(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseMoved(MouseEvent mouseevent)
+    {
+        setCursor(new Cursor(0));
+        for(i = 0; i < NO_BUTTONS; i++)
+            STATE[i] = 0;
+
+        int j = mouseevent.getX();
+        int l = mouseevent.getY();
+        k = 0;
+        OFF = true;
+        SUBMENU = false;
+        do
+        {
+            if(SL_NITEMS[k][1] == 1)
+                for(i = 0; i < SL_NITEMS[k][0]; i++)
+                    if(j > SL_COORDS[k][i][0] && j < SL_COORDS[k][i][2] + SL_COORDS[k][i][0] && l >= SL_COORDS[k][i][1] && l <= SL_COORDS[k][i][3] + SL_COORDS[k][i][1])
+                        SUBMENU = true;
+                    else
+                        SL_COORDS[k][i][4] = 0;
+
+            k++;
+        } while(k < NO_BUTTONS);
+        k = 0;
+        do
+        {
+            if(SL_NITEMS[k][1] == 1)
+                for(i = 0; i < SL_NITEMS[k][0]; i++)
+                    if(j > SL_COORDS[k][i][0] && j < SL_COORDS[k][i][2] + SL_COORDS[k][i][0] && l >= SL_COORDS[k][i][1] && l <= SL_COORDS[k][i][3] + SL_COORDS[k][i][1])
+                    {
+                        SL_COORDS[k][i][4] = 1;
+                        OFF = false;
+                        setCursor(new Cursor(12));
+                    } else
+                    {
+                        SL_COORDS[k][i][4] = 0;
+                    }
+
+            if(j > BTNSIZE[k][2] && j < BTNSIZE[k][4] && l >= BTNSIZE[k][3] && l <= BTNSIZE[k][5] && !SUBMENU)
+            {
+                SL_NITEMS[k][1] = 1;
+                STATE[k] = 1;
+                OFF = false;
+                if(BTNINFO[k][0] != null && !BTNINFO[k][0].equals(" "))
+                    setCursor(new Cursor(12));
+            }
+            if(OFF)
+                SL_NITEMS[k][1] = 0;
+            k++;
+            OFF = true;
+        } while(k < NO_BUTTONS);
+        paint(getGraphics());
+    }
+
+    public Image downloadImage(String s)
+    {
+        MediaTracker mediatracker = new MediaTracker(this);
+        Image image = getImage(getCodeBase(), s);
+        mediatracker.addImage(image, 0);
+        try
+        {
+            showStatus("Loading Image...");
+            mediatracker.waitForID(0);
+            showStatus("");
+        }
+        catch(InterruptedException _ex)
+        {
+            return createImage(size().width, size().height);
+        }
+        int j = image.getWidth(this);
+        int l = image.getHeight(this);
+        pixs = new int[j * l];
+        PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, j, l, pixs, 0, j);
+        try
+        {
+            pixelgrabber.grabPixels();
+        }
+        catch(InterruptedException _ex)
+        {
+            System.err.println("interrupted waiting for pixels!");
+            showStatus("Image loading error");
+            return createImage(size().width, size().height);
+        }
+        if((pixelgrabber.status() & 0x80) != 0)
+        {
+            System.err.println("image fetch aborted or errored");
+            showStatus("Image loading error");
+            return createImage(size().width, size().height);
+        } else
+        {
+            Image image1 = createImage(new MemoryImageSource(j, l, pixs, 0, j));
+            index = 0;
+            return image1;
+        }
+    }
+
+    public SIRvmenuPRO()
+    {
+        started = false;
+        NOBUTTONS = false;
+        OFF = true;
+        SUBMENU = false;
+        SUBMENU2 = false;
+    }
+
+    boolean started;
+    boolean NOBUTTONS;
+    boolean OFF;
+    boolean SUBMENU;
+    boolean SUBMENU2;
+    int pixs[];
+    int index;
+    String SC;
+    int RED;
+    int GREEN;
+    int BLUE;
+    int y;
+    int i;
+    int k;
+    int k2;
+    String TEMPSTR;
+    StringTokenizer st;
+    StringTokenizer st2;
+    StringTokenizer st3;
+    String FT;
+    String Fonttype;
+    String Fontstyle;
+    int Fontsize;
+    int SLY;
+    int UPDOWN;
+    int FONTOFFSET;
+    int WIDTH;
+    int HEIGHT;
+    int TITLEHEIGHT;
+    int TITLEWIDTH;
+    int TITLEx;
+    int TITLEy;
+    Image BACKIMAGE;
+    Image TITLEIMAGE;
+    int BALIGN;
+    Color SBGCOLOR;
+    Color BGCOLOR;
+    String IMAGES;
+    String BGIMAGE;
+    String TITLEIMG;
+    String TITLEALIGN;
+    String BUTTONALIGN;
+    int BORDER;
+    String BUTTONARRAY[];
+    int NO_BUTTONS;
+    String TA;
+    String BA;
+    public Image buffer;
+    Graphics pad;
+    Image BtnImg[][];
+    Image Btnimage;
+    int BTNSIZE[][];
+    String BTNINFO[][];
+    AudioClip BTNAUDIO[];
+    int STATE[];
+    Color SL_BGCOLOR;
+    Color SL_HBGCOLOR;
+    Color SL_TXTCOLOR;
+    Color SL_HTXTCOLOR;
+    Font SL_FONT;
+    int SL_NITEMS[][];
+    String SL_ARRAY[][][];
+    int SL_COORDS[][][];
+    static AppletContext APPLETCONTEXT;
+}

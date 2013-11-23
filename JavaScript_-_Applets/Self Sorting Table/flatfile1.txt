@@ -1,0 +1,34 @@
+14 Wood Drive|£ 175,000|Detached|Town|2|4|Yes|Yes|Yes|No
+11B Chorley Road|£  35,000|Flat|Town|1|1|No|No|Yes|No
+21A Chorley Road|£  32,500|Flat|Town|1|1|No|No|Yes|No
+114C Smyth Street|£  17,000|Flat|City|1|1|No|No|No|No
+96A Surrey Road|£  42,000|Flat|Town|1|2|No|Yes|Yes|No
+42 London Road|£  85,000|Terraced|Town|2|2|No|Yes|Yes|No
+43 London Road|£  85,500|Terraced|Town|2|2|No|Yes|Yes|No
+132 London Road|£  86,000|Terraced|Town|2|2|No|Yes|Yes|No
+209 London Road|£  85,750|Terraced|Town|2|2|No|Yes|Yes|No
+11 London Road|£  84,500|Terraced|Town|2|2|No|Yes|Yes|No
+27 London Road|£  87,750|Terraced|Town|2|2|No|Yes|Yes|Yes
+83 London Road|£  75,000|Terraced|Town|2|2|No|Yes|No|No
+342 London Road|£ 115,000|Semi Detached|City|2|3|Yes|Yes|Yes|No
+12 Mole Close|£ 155,000|Bungalow|Town|2|3|Yes|Yes|Yes|No
+21 High Street|£  95,000|Terraced|Village|2|2|No|Yes|Yes|Yes
+Southacres Farm|£ 175,000|Detached|Rural|2|4|Yes|Yes|Yes|No
+92 Southland Road|£ 155,000|Detached|Town|2|4|Yes|Yes|Yes|No
+61 Norton Drive|£ 170,000|Detached|Village|2|4|Yes|Yes|Yes|No
+11 Westland Close|£ 235,000|Detached|Town|3|4|Yes|Yes|Yes|No
+4 Temple Drive|£ 375,000|Detached|Village|3|5|Yes|Yes|Yes|Yes
+142 High Street|£ 125,000|Semi Detached|Town|2|3|Yes|Yes|Yes|No
+91 Low Road|£ 105,000|Semi Detached|City|2|3|No|Yes|No|No
+67 New Street|£ 145,000|Semi Detached|City|2|4|Yes|Yes|Yes|No
+92 Southland Road|£ 155,000|Detached|Town|2|4|Yes|Yes|Yes|No
+61 Norton Drive|£ 170,000|Detached|Village|2|4|Yes|Yes|Yes|No
+11 Westland Close|£ 235,000|Detached|Town|3|4|Yes|Yes|Yes|No
+4 Temple Drive|£ 375,000|Detached|Village|3|5|Yes|Yes|Yes|Yes
+142 High Street|£ 125,000|Semi Detached|Town|2|3|Yes|Yes|Yes|No
+91 Low Road|£ 105,000|Semi Detached|City|2|3|No|Yes|No|No
+67 New Street|£ 145,000|Semi Detached|City|2|4|Yes|Yes|Yes|No
+
+
+
+

@@ -1,0 +1,270 @@
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body>
+<p align="center"><a href="mailto:ilya@mayor.kht.ru">И В Радинский (c) .. ,
+18.07.1999</a>.</p>
+
+<hr>
+
+<p>Часто при работе с БД, или просто с отдельной
+таблицей приходиться сталкиваться с делемой -
+как отобразить в табличном виде содержимое того
+или иного запроса. Использовать DbGrid?
+Использовать DataGrid? А может Microsoft FlexGrid? Или лучьше
+Microsoft Hierarchical FlexGrid? Обилие Grid-ов смущает и вносит
+сумятицу, тратишь пол-дня на тестирование
+очередного Grid-а, чтобы в конце концов от него
+отказаться - обычное дело, когда пару месяцов их
+не используешь. А ведь часто надо просто
+отобразить данные, безо всякого модифицирования
+данных! Вот тут и всоминаешь про CListCtrl. Всю эту
+рутину по заполнению данными я оформил в класс
+CListCtrlDb. </p>
+
+<p><small><font face="Courier New"><font color="#008000">/////////////////////////////////////////////////////////////////////////////<br>
+// CListCtrlDb window<br>
+</font><font color="#0000FF">class</font></font><font color="#008000" face="Courier New"> </font><font
+face="Courier New" color="#000000">CListCtrlDb :</font><font color="#008000"
+face="Courier New"> </font><font face="Courier New" color="#0000FF">public</font><font
+color="#008000" face="Courier New"> </font><font face="Courier New" color="#000000">CListCtrl<br>
+{</font><font color="#008000" face="Courier New"><br>
+// Construction<br>
+</font><font face="Courier New" color="#0000FF">public</font><font face="Courier New"
+color="#000000">:<br>
+&nbsp;&nbsp;&nbsp; CListCtrlDb();</font><font color="#008000" face="Courier New"><br>
+<br>
+// Implementation<br>
+</font><font face="Courier New" color="#0000FF">public</font><font color="#008000"
+face="Courier New">:<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">void</font><font
+color="#008000" face="Courier New"> </font><font face="Courier New" color="#000000">FillControl();<br>
+&nbsp;&nbsp;&nbsp; BOOL SetSQL(LPCTSTR szSQL);<br>
+&nbsp;&nbsp;&nbsp; BOOL OpenRecordset();<br>
+&nbsp;&nbsp;&nbsp; BOOL PrepareColumns();</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">void</font><font
+color="#008000" face="Courier New"> </font><font face="Courier New" color="#000000">PrepareControl();<br>
+&nbsp;&nbsp;&nbsp; BOOL SetRecordset(CRecordset *pRecordset);</font><font color="#008000"
+face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">virtual</font><font
+color="#008000" face="Courier New"> </font><font face="Courier New" color="#000000">~CListCtrlDb();</font><font
+color="#008000" face="Courier New"><br>
+<br>
+</font><font face="Courier New" color="#0000FF">protected</font><font face="Courier New"
+color="#000000">:<br>
+&nbsp;&nbsp;&nbsp; CRecordset* m_pRecordset;<br>
+&nbsp;&nbsp;&nbsp; CString m_strSQL;</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">int</font><font
+color="#008000" face="Courier New"> </font><font face="Courier New" color="#000000">nFieldCount;<br>
+};</font></small><font color="#008000" face="Courier New"><br>
+</font></p>
+
+<p><small><font color="#008000" face="Courier New">/////////////////////////////////////////////////////////////////////////////<br>
+// CListCtrlDb<br>
+<br>
+</font><font face="Courier New" color="#000000">CListCtrlDb::CListCtrlDb()<br>
+{<br>
+&nbsp;&nbsp;&nbsp; m_pRecordset = NULL;<br>
+&nbsp;&nbsp;&nbsp; nFieldCount = </font><font face="Courier New" color="#FF0000">0</font><font
+face="Courier New" color="#000000">;<br>
+}<br>
+<br>
+CListCtrlDb::~CListCtrlDb()<br>
+{<br>
+}<br>
+<br>
+BOOL CListCtrlDb::SetRecordset(CRecordset *pRecordset)<br>
+{</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; // проверим параметры <br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; ASSERT(pRecordset);<br>
+</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; // теперь можно и установить Recordset<br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; m_pRecordset =
+pRecordset;<br>
+</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">return</font><font
+color="#008000" face="Courier New"> </font><font face="Courier New" color="#000000">TRUE;<br>
+}</font><font color="#008000" face="Courier New"><br>
+<br>
+</font><font face="Courier New" color="#0000FF">void</font><font color="#008000"
+face="Courier New"> </font><font face="Courier New" color="#000000">CListCtrlDb::PrepareControl()<br>
+{<br>
+&nbsp;&nbsp;&nbsp; ASSERT(::IsWindow(m_hWnd));<br>
+<br>
+&nbsp;&nbsp;&nbsp; DWORD dwStyle = GetWindowLong(m_hWnd, GWL_STYLE); <br>
+&nbsp;&nbsp;&nbsp; dwStyle &amp;= ~(LVS_TYPEMASK); dwStyle &amp;= ~(LVS_EDITLABELS); <br>
+<br>
+&nbsp;&nbsp;&nbsp; SetWindowLong( m_hWnd, GWL_STYLE, dwStyle | LVS_REPORT | <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LVS_SHOWSELALWAYS | LVS_SINGLESEL);</font><font
+color="#008000" face="Courier New"><br>
+<br>
+&nbsp;&nbsp;&nbsp; // Полнострочное выделение <br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; DWORD styles =
+LVS_EX_FULLROWSELECT;<br>
+<br>
+&nbsp;&nbsp;&nbsp; ListView_SetExtendedListViewStyleEx(m_hWnd, styles, styles );<br>
+}<br>
+<br>
+BOOL CListCtrlDb::PrepareColumns()<br>
+{<br>
+</font><font color="#008000" face="Courier New">&nbsp;&nbsp;&nbsp; // проверим
+m_pRecordset <br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; ASSERT(m_pRecordset);<br>
+&nbsp;&nbsp;&nbsp; ASSERT(m_pRecordset-&gt;IsOpen());<br>
+</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; // Удалим все колонки <br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">while</font><font
+face="Courier New" color="#000000">(DeleteColumn(</font><font face="Courier New"
+color="#FF0000">0</font><font face="Courier New" color="#000000">));</font><font
+color="#008000" face="Courier New"><br>
+<br>
+&nbsp;&nbsp;&nbsp; // Получим колличество полей в запросе <br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; nFieldCount =
+m_pRecordset-&gt;GetODBCFieldCount();<br>
+</font><font color="#008000" face="Courier New"><br>
+&nbsp;</small>&nbsp; // Добавим столько колонок, сколько в
+запросе,<br>
+&nbsp;&nbsp; // причем названия колонок берутся из
+самого запроса<br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; </font></p>
+
+<p><small><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; </font><font
+face="Courier New" color="#0000FF">for</font><font face="Courier New" color="#000000"> (</font><font
+face="Courier New" color="#0000FF">int</font><font face="Courier New" color="#000000"> i =
+</font><font face="Courier New" color="#FF0000">0</font><font face="Courier New"
+color="#000000">; i &lt; nFieldCount; i++)<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CODBCFieldInfo fi;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_pRecordset-&gt;GetODBCFieldInfo(i, fi);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InsertColumn(i, fi.m_strName);<br>
+&nbsp;&nbsp;&nbsp; }<br>
+<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">return</font><font
+face="Courier New" color="#000000"> TRUE;<br>
+}<br>
+<br>
+BOOL CListCtrlDb::OpenRecordset()<br>
+{<br>
+</font><font color="#008000" face="Courier New">&nbsp;&nbsp; // если это
+длительная операция, то пользователь </small><br>
+<small>&nbsp;&nbsp; // должен хотябы догадываться об этом <br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; CWaitCursor wait;<br>
+<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">return</font><font
+face="Courier New" color="#000000"> m_pRecordset-&gt;Open(CRecordset::snapshot, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_strSQL, CRecordset::readOnly);<br>
+}<br>
+<br>
+BOOL CListCtrlDb::SetSQL(LPCTSTR szSQL)<br>
+{<br>
+</font><font color="#008000" face="Courier New">&nbsp;&nbsp;&nbsp; // РТПЧЕТЙН
+РБТБНЕФТЩ<br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; ASSERT(szSQL);<br>
+<br>
+&nbsp;&nbsp;&nbsp; m_strSQL = szSQL;<br>
+<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">return</font><font
+face="Courier New" color="#000000"> TRUE;<br>
+}<br>
+<br>
+void CListCtrlDb::FillControl()<br>
+{<br>
+</font><font color="#008000" face="Courier New">&nbsp;&nbsp;&nbsp; // РТПЧЕТЙН
+m_pRecordset<br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; ASSERT(m_pRecordset);<br>
+&nbsp;&nbsp;&nbsp; ASSERT(m_pRecordset-&gt;IsOpen());<br>
+</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; // ЕУМЙ ЬФП ДМЙФЕМШОБС ПРЕТБГЙС, ФП
+РПМШЪПЧБФЕМШ <br>
+&nbsp;&nbsp;&nbsp; // ДПМЦЕО ИПФСВЩ ДПЗБДЩЧБФШУС ПВ ЬФПН<br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; CWaitCursor wait;<br>
+</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; // ХДБМЙН ЧУЕ ЮФП ВЩМП<br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp; DeleteAllItems();<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; LVITEM lvItem;<br>
+&nbsp;&nbsp;&nbsp; lvItem.mask = LVIF_TEXT;<br>
+<br>
+&nbsp;&nbsp;&nbsp; CString strItem;<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">int</font><font
+face="Courier New" color="#000000"> nItem = </font><font face="Courier New"
+color="#FF0000">0</font><font face="Courier New" color="#000000">;<br>
+</font><font color="#008000" face="Courier New"><br>
+&nbsp;&nbsp;&nbsp; // ЪБРПМОЙН ListCtrlDb<br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp;
+m_pRecordset-&gt;MoveFirst();<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">do</font><font
+face="Courier New" color="#000000"><br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">for</font><font
+face="Courier New" color="#000000"> (</font><font face="Courier New" color="#0000FF">int</font><font
+face="Courier New" color="#000000"> nSubItem = </font><font face="Courier New"
+color="#FF0000">0</font><font face="Courier New" color="#000000">; nSubItem &lt;
+nFieldCount; nSubItem++)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m_pRecordset-&gt;GetFieldValue(nSubItem, strItem);&nbsp;&nbsp;&nbsp; <br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lvItem.iItem = nItem;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lvItem.iSubItem =
+nSubItem;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lvItem.pszText =
+strItem.GetBuffer(strItem.GetLength() + </font><font face="Courier New" color="#FF0000">1</font><font
+face="Courier New" color="#000000">);<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (nSubItem == </font><font
+face="Courier New" color="#FF0000">0</font><font face="Courier New" color="#000000">)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+InsertItem(&amp;lvItem);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SetItem(&amp;lvItem);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_pRecordset-&gt;MoveNext();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nItem++;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">while</font><font
+face="Courier New" color="#000000">(!m_pRecordset-&gt;IsEOF());<br>
+<br>
+}<br>
+</font><font color="#008000" face="Courier New">/////////////////////////////////////////////////////////////////////////////</font></small></p>
+
+<p>йУПМШЪПЧБОЙЕ ЛМБУУБ ДПЧПМШОП РТПУФП: 
+
+<ol>
+  <li>дПВБЧЙФШ РЕТЕНЕООХА ФЙРБ CListCtrlDb Ч ДЙБМПЗ, Ч
+    ЛПФПТПН ЙУРПМШЪХЕФУС ListCtrl.</li>
+  <li>б ДБМШЫЕ РТЙНЕТОП ФБЛ:</li>
+</ol>
+
+<p><small><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp;
+m_ctrlList.SetRecordset(m_pRecordset);<br>
+&nbsp;&nbsp;&nbsp; m_ctrlList.SetSQL(</font><font face="Courier New" color="#000080">&quot;select
+* from Streets&quot;</font><font face="Courier New" color="#000000">);<br>
+</font><font face="Courier New" color="#008000"><br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">if</font><font
+face="Courier New" color="#008000"> </font><font face="Courier New" color="#000000">(!m_ctrlList.OpenRecordset())</font><font
+face="Courier New" color="#008000"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">return</font><font
+face="Courier New" color="#000000">;</font><font face="Courier New" color="#008000"><br>
+<br>
+&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">if</font><font
+face="Courier New" color="#008000"> </font><font face="Courier New" color="#000000">(!m_ctrlList.PrepareColumns())</font><font
+face="Courier New" color="#008000"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Courier New" color="#0000FF">return</font><font
+face="Courier New" color="#000000">;</font><font face="Courier New" color="#008000"><br>
+<br>
+</font><font face="Courier New" color="#000000">&nbsp;&nbsp;&nbsp;
+m_ctrlList.FillControl();<br>
+</font></small></p>
+
+<p>й&nbsp; ЧУЕ!</p>
+
+</body>
+</html>

@@ -1,0 +1,1494 @@
+Main
+{
+	number = 07.05 (79)
+	month = Июль 2005
+	intro = 0
+	file = .\data\video\xintro.avi
+	music = 0
+	file = .\data\music\01.mp3
+	music = 1
+	file = .\data\music\02.mp3
+	music = 2
+	file = .\data\music\03.mp3
+}
+Block
+{
+	name = _root
+	showlist = 1242388
+	Article
+	{
+		name = INTRO
+		uplash = .\data\design\razdel_intro.dzn
+		textline = Как обычно, на втором диске ты найдешь и впоследствии заюзаешь весь софт, описанный в статьях июльского "Х", посмотришь видео по взлому и прохождение конкурса. Когда все это надоест, предлагаю почитать .pdf вариант журналов "Хакер", "ХакерСпец", "Железо", "Mobile Computers" и "Лучшие Цифровые Камеры" за май месяц. Ну и совсем уж отдыха ради, можно посмотреть демки.
+		textline = <br>
+		textline = Обновления баз AVP и продление лицензионных ключей для AVP и AntiHacker'а также присутствуют
+	}
+	Block
+	{
+		name = MAGAZINE
+		uplash = .\data\design\razdel_sofm_mag.dzn
+		showlist = 1
+		Block
+		{
+			name = PC ZONE
+			showlist = 1
+			Entry
+			{
+				name = Построй сеть своей мечты
+				url = www.xakep.ru
+				executable = .\files\magazine\pc zone\построй сеть своей мечты\boson.zip
+				textline = Софт из статьи "Построй сеть своей мечты":
+				textline = - Boson Router Simulator.
+			}
+			Entry
+			{
+				name = Сага о "попугаях"
+				url = www.xakep.ru
+				textline = Софт из данной статьи будет выложен
+				textline = на следующем диске по техническим причинам.
+			}
+			Entry
+			{
+				name = Ринг-тон своими руками
+				url = www.xakep.ru
+				executable = .\files\magazine\pc zone\ринг-тон своими руками\
+				textline = Софт из статьи "Ринг-тон своими руками":
+				textline = - mpTrim,
+				textline = - PsmPlayer 5,
+				textline = - WSC-MA2,
+				textline = - IntelliScore,
+				textline = - TS-Audio To MIDI Realtime Converter,
+				textline = - MP3 to WAV Converter.
+			}
+		}
+		Block
+		{
+			name = ВЗЛОМ
+			showlist = 1
+			Entry
+			{
+				name = СПЛОЙТ ДЛЯ WEB'а
+				url = www.xakep.ru
+				executable = .\files\magazine\vzlom\сплойт для web'а\
+				textline = Софт из статьи "СПЛОЙТ ДЛЯ WEB'а":
+				textline = * te2.pl - перловый сплойт для Loki
+				textline = из статьи, ознакомительная
+				textline = обучающая регулярным выражениям версия.
+			}
+			Entry
+			{
+				name = Удар по сниферу
+				url = www.xakep.ru
+				executable = .\files\magazine\vzlom\удар по сниферу\
+				textline = Софт из статьи "Удар по сниферу":
+				textline = * ARPWatch - программа для Linux/BSD-маршрутизаторов,
+				textline = фиксирующая изменения в
+				textline = ARP-таблице.
+				textline = * ARP Antidot - патч для ядра 2.4.х,
+				textline = который блокирует ARP-poison путем добавления
+				textline = некоторого механизма в протокол ARP.
+				textline = * PromiScan 3.0 - Софтина, аналогичная
+				textline = предыдущей, только платная.
+				textline = * The sentinel 1.0 - тестирование сети
+				textline = на наличие сниферов (для Linux/BSD)
+				textline = * Cтатья с void.ru, описывающая некоторые
+				textline = методы и работу программ.
+			}
+			Entry
+			{
+				name = Внедрение в кластер
+				url = www.xakep.ru
+				executable = .\files\magazine\vzlom\внедрение в кластер\
+				textline = Софт из статьи "Внедрение в кластер":
+				textline = * PPTP Bruter - программа для брутфорса
+				textline = паролей на VPN.
+				textline = * Hydra 4.6 - новая версия универсального
+				textline = многопоточного брутфорсера
+				textline = * Vlogger 2.1.1 - ядерный модуль, который
+				textline = незаметно подключается к кернелу и локально
+				textline = снифает команды всех пользователей.
+				textline = Этот LKM также создает удобочитаемый
+				textline = лог с настраиваемой детализацией
+				textline = * Secure delete 3.1 - программа для
+				textline = параноиков.
+				textline = Из названия понятно, что программа служит
+				textline = для безопасного удаления файлов.
+				textline = Она перезатирает область на диске от
+				textline = 15 до 30 раз, не давая шансов восстановить
+				textline = секретную или провокационную информацию.
+			}
+			Entry
+			{
+				name = Гиви ломает университет
+				url = www.xakep.ru
+				executable = .\files\magazine\vzlom\гиви ломает университет\x_07_vzlom_giwi_hacks_university_cd.rar
+				textline = Софт из статьи "Гиви ломает университет".
+			}
+			Entry
+			{
+				name = Смена командования
+				url = www.xakep.ru
+				executable = .\files\magazine\vzlom\смена командования\
+				textline = Софт из статьи "Смена командования":
+				textline = * оффлайновый архив статей по внутреннему
+				textline = устройству червей и ботнетов с кучей
+				textline = технических подробностях, интересных
+				textline = любому хакеру (на английском языке):
+				textline = * заплатка для VMWare, скрывающая ее
+				textline = присутствие от глаз червя, без этого
+				textline = Agobot и многие другие ботнеты просто
+				textline = не будут работать! http://honeynet.rstack.org/tools/vmpatch.c
+				textline = * IRSSI - бесплатный консольный IRC-клиент,
+				textline = распространяемый в исходных
+				textline = текстах.
+			}
+			Entry
+			{
+				name = Лекарство для CuteFTP
+				url = www.xakep.ru
+				executable = .\files\magazine\vzlom\лекарство для cuteftp\
+				textline = Софт из статьи "Лекарство для CuteFTP":
+				textline = * CuteFTP,
+				textline = * IDA,
+				textline = * OllyDbg,
+				textline = * HiEW,
+				textline = * PE Explorer,
+				textline = * MASM32,
+				textline = * Исходники патча: patch_src.rar.
+			}
+			Entry
+			{
+				name = Кружка кофе
+				url = www.xakep.ru
+				executable = .\files\magazine\vzlom\кружка кофе\nr.php.tar.gz
+				textline = Софт из статьи "Кружка кофе":
+				textline = * NIX REMOTE WEB SHELL 0.5a Lite(NRWS).
+			}
+		}
+		Block
+		{
+			name = UNIXOID
+			showlist = 1
+			Entry
+			{
+				name = Будь в курсе!
+				url = www.xakep.ru
+				executable = .\files\magazine\unixoid\будь в курсе!\
+				textline = Софт из статьи "Будь в курсе!":
+				textline = - sysstat,
+				textline = - lsof 4.75,
+				textline = - IPTraf 2.70,
+				textline = - lm_sensors 2.9.1,
+				textline = - smartmontools 5.33,
+				textline = - hddtemp 0.3-13.
+			}
+			Entry
+			{
+				name = Захват нулевого кольца
+				url = www.xakep.ru
+				executable = .\files\magazine\unixoid\захват нулевого кольца\
+				textline = Софт из статьи "Захват нулевого кольца":
+				textline = - Linux Kernel 2.6.11.12,
+				textline = - Linux Kernel 2.4.31,
+				textline = - Linux Kernel 2.2.26.
+			}
+		}
+		Block
+		{
+			name = КОДИНГ
+			showlist = 1
+			Entry
+			{
+				name = Легкий путь к великим делам
+				url = www.xakep.ru
+				executable = .\files\magazine\coding\легкий путь к великим делам\asp.rar
+				textline = Софт из статьи "Легкий путь к великим
+				textline = делам".
+			}
+			Entry
+			{
+				name = Управление RAT
+				url = www.xakep.ru
+				executable = .\files\magazine\coding\управление rat\delphi.rar
+				textline = Софт из статьи "Управление RAT":
+				textline = (delphi.rar) - сорцы к статье.
+				textline = Внутри архива:
+				textline = (BindShell.rar) - программа, открывающая
+				textline = шелл (сорцы),
+				textline = (Downloader.rar) - примитивный скачиватель
+				textline = файлов (сорцы),
+				textline = (SendMail.rar) - реализованная работа
+				textline = с SMTP,
+				textline = (MiniIRC.rar) - библиотека Mini IRC
+				textline = Delphi Library.
+			}
+			Entry
+			{
+				name = Стряпаем MBR
+				url = www.xakep.ru
+				executable = .\files\magazine\coding\стряпаем mbr\
+				textline = (asm.rar) - сорцы к статье.
+				textline = Внутри архива:
+				textline = (ge2000.asm) - тщательно откоментированный
+				textline = Stealth-вирус, подменяющий системный
+				textline = загрузчик своим собственным. Не опасен,
+				textline = может
+				textline = быть использован только в учебных целях.
+				textline = (mbr.asm) - предельно простой, но полнофункциональный
+				textline = загрузчик с поддержкой разделов свыше
+				textline = 8 Гбайт, но увы - без комментариев.
+				textline = (boot.asm) - отличный менеджер мултизагрузки
+				textline = с подробными комментариями, переходит
+				textline = в защищенный режим, может грузиться
+				textline = с дискеты, компакт-диска, zip'а, винчестера
+				textline = и т.д., поддерживает разделы свыше 8
+				textline = Гбайт, показывает индикатор загрузки
+				textline = и делает множество других
+				textline = полезных вещей, которые не помешает
+				textline = изучить.
+				textline = (cd-hack.SCSI.zip) - фрагмент книги
+				textline = "Техника защиты компакт-дисков от копирования",
+				textline = описывающий различные способы низкоуровневым
+				textline = управлением приводов с прикладного уровня
+				textline = под Windows, главным образом относится
+				textline = к оптическим накопителям, но во многом
+				textline = подходит и для жестких.
+			}
+			Entry
+			{
+				name = Обзор компонентов
+				url = www.xakep.ru
+				executable = .\files\magazine\coding\обзор компонентов\obzor.rar
+				textline = Софт из статьи "Обзор компонентов":
+				textline = (jmm.zip) - Memory Map
+				textline = (StickyNotes.zip) - Sticky Notes 
+				textline = (Tuxidow_src.zip) - Linux-раздел для
+				textline = Windows
+				textline = (MSIC.zip) - MiTeC – SystemInformation.
+			}
+		}
+		Block
+		{
+			name = ЮНИТЫ
+			showlist = 1
+			Entry
+			{
+				name = ШароWAREZ: SCARABAY v 2.7
+				url = www.alnichas.info
+				executable = .\files\magazine\units\шароwarez\scarabay v 2.7\sc_set27.exe
+				status = FreeWare
+				author = 828kb
+				small_image = .\thumbs\scarabay.jpg
+				image = .\images\scarabay.jpg
+				textline = Мега-удобный хранитель паролей. Но серьезным
+				textline = дядям и тетям, у которых одних только
+				textline = кредитных карточек десять штук, он,
+				textline = скорей всего, не понравится – слишком
+				textline = уж прост. СКАРАБЕЙ не умеет группировать
+				textline = записи по типам, не позволяет менять
+				textline = формат базы данных, не поддерживает
+				textline = макросы и не обучен автозаполнению веб-форм.
+				textline = С другой стороны, если у тебя, как и
+				textline = у большинства обычных пользователей,
+				textline = всего несколько UIN'ов, парочка почтовых
+				textline = ящиков и десяток учетных записей на
+				textline = различных форумах, значит все эти навороты
+				textline = тебе и даром не нужны. Тебе нужно другое
+				textline = – удобство использования. А в этом плане
+				textline = СКАРАБЕЙ откровенно рулит. Его самая
+				textline = шикарная фишечка – возможность ввода
+				textline = логина/пароля простым перетаскиванием
+				textline = из окна программ в нужное поле ввода.
+				textline = И все! И никаких тебе левых телодвижений
+				textline = типа "выделил-и-вставил", и никакого
+				textline = заучивания горячих клавиш! Уже за одно
+				textline = только это я мог бы простить СКАРАБЕЮ
+				textline = все что угодно, но, к счастью, прощать-то
+				textline = особенно и нечего. С точки зрения рядового
+				textline = пользователя прога реализована на пять
+				textline = с плюсом: она приятно выглядит, мало
+				textline = весит, не вносит изменений в систему,
+				textline = хранит все данные в зашифрованном файле
+				textline = и работает без установки с любого носителя.
+				textline = При желании юзер может воспользоваться
+				textline = встроенным в программу генератором безопасных
+				textline = паролей, а также скачать с домашней
+				textline = странички патч для русификации ее интерфейса.
+				textline = Ну а самое главное – денег за свои услуги
+				textline = СКАРАБЕЙ не требует. Хотя за такую славную
+				textline = прогу, честное слово, не жалко и заплатить!
+			}
+			Entry
+			{
+				name = ШароWAREZ: Cool Reader v 2.0
+				url = buggins.fromru.com
+				executable = .\files\magazine\units\шароwarez\cool reader v 2.0\
+				status = FreeWare
+				author = 503kb
+				small_image = .\thumbs\cool reader.jpg
+				image = .\images\cool reader.jpg
+				textline = Продвинутая "читалка" двойного действия.
+				textline = Она не только выводит текст на экран,
+				textline = но и, по твоей команде, может читать
+				textline = его тебе вслух, используя установленные
+				textline = на компьютере голосовые движки. Разумеется,
+				textline = качество синтезированной речи далеко
+				textline = от идеала. Но Cool Reader способен успешно
+				textline = бороться с главной проблемой - неправильным
+				textline = произношением. Для этого в программе
+				textline = предусмотрена возможность работы со
+				textline = словарями произношения. Это очень важный
+				textline = момент, так как подключение, скажем,
+				textline = к самому популярному движку Digalo словаря
+				textline = Digalo.Michelangelo (почти тридцать
+				textline = тысяч правил) в корне улучшает ситуацию.
+				textline = После этого остаются лишь немногочисленные
+				textline = баги, которые легко добиваются прямо
+				textline = по ходу чтения – двойной щелчок по неправильно
+				textline = произнесенному слову вызывает в Cool
+				textline = Reader'e появление окна пополнения словаря,
+				textline = позволяющее быстро указать правильный
+				textline = вариант произношения. Также с помощью
+				textline = этой проги ты можешь записать аудиокнигу
+				textline = в формате MP3. Причем Cool Reader обладает
+				textline = ценным умением разбивать текст на части
+				textline = и записывать каждую часть в виде отдельного
+				textline = звукового файла. 
+				textline = Прога поддерживает MS SpeechAPI 4.0
+				textline = и 5.1. Осуществляет чтение файлов в
+				textline = формате .fb2 .txt, .doc, .html, и .rtf
+				textline = с автоматическим распознаванием кодировки
+				textline = и формата текста. Нормально распознает
+				textline = форматирование псевдо-html с lib.ru
+				textline = и без труда извлекает книги из архивов
+				textline = ZIP, RAR, ARJ, HA, LZH.
+			}
+			Entry
+			{
+				name = ШароWAREZ: Adrenaliner v 1.139
+				url = www.adrenaliner.com/ru
+				executable = .\files\magazine\units\шароwarez\adrenaliner v 1.139\adrenaliner.zip
+				status = FreeWare
+				author = 927kb
+				small_image = .\thumbs\adrenaliner.jpg
+				image = .\images\adrenaliner.jpg
+				textline = Уже давно в Сети не появлялось приличных
+				textline = прог-розыгрышей. Видимо, делать подлянки
+				textline = ближнему своему стало уже не модно.
+				textline = Зато вовсю набирает обороты увлечение
+				textline = мазохизмом. Ярким доказательством этого
+				textline = утверждения является популярность проекта
+				textline = Adrenaliner, пропагандирующего уникальный
+				textline = метод "борьбы со скукой и однообразием".
+				textline = Суть этого метода заключается в том,
+				textline = что ты ДОБРОВОЛЬНО устанавливаешь себе
+				textline = программу, которая регулярно скачивает
+				textline = и запускает на ТВОЕЙ машине разного
+				textline = рода шуточки. Причем многие эти шуточки
+				textline = старательно копируют эффекты самых злобных
+				textline = заподлянок типа "непослушного курсора"
+				textline = и "севшего монитора". М-да... От такого
+				textline = действительно не заскучаешь. Впрочем,
+				textline = стоит признать, что большинство шуточек
+				textline = все-таки не отличаются особой злобностью.
+				textline = Улетающий вдаль экран, бегающая по десктопу
+				textline = овца, глаза, пристально следящие за
+				textline = движениями указателя мыши, - все эти
+				textline = эффекты выглядят довольно симпатично,
+				textline = и, допускаю, вполне способны отвлечь
+				textline = от работы, заставить пользователя немного
+				textline = расслабиться и отдохнуть. Эх, да что
+				textline = там говорить! Я даже знаю парочку товарищей,
+				textline = которые особенно нуждаются в стимуляции
+				textline = бодрости духа. Очень жаль, что незаметно
+				textline = для юзера программа Adrenaliner работать
+				textline = не умеет (ее иконка постоянно маячит
+				textline = в системном трее), а то бы я с радостью
+				textline = прописал им это чудесное средство. Сугубо
+				textline = в лечебных целях, само собой.
+			}
+			Entry
+			{
+				name = ШароWAREZ: NovA FileRenamer v 1.8
+				url = computeria.narod.ru
+				executable = .\files\magazine\units\шароwarez\nova filerenamer v 1.8\
+				status = FreeWare
+				author = 659kb
+				small_image = .\thumbs\nova filerenamer.jpg
+				image = .\images\nova filerenamer.jpg
+				textline = Одна из лучших утилит для пакетного
+				textline = переименования файлов или папок по заданным
+				textline = правилам. Крайне необходимая вещь для
+				textline = всех тех, чьи бытовые MP3 и Divx-плееры,
+				textline = не переваривают русские символы в именах
+				textline = AVI'шек и MP3'шек. 
+				textline = NovA FileRenamer одинаково легко осуществляет
+				textline = как прямую, так и обратную транслитерацию.
+				textline = Естественно, переименование mp3-файлов
+				textline = может производиться по содержащейся
+				textline = в них ID3 информации (ID3Tag v1.0 -
+				textline = v2.4). NovA FileRenamer допускает гибкаю
+				textline = настройка регистра букв в имени файла,
+				textline = выполняет поиск и замену с использованием
+				textline = регулярных выражений, переименование
+				textline = файлов/папок по шаблону, перекодирование
+				textline = имен файлов из KOI8 в Win1251. Есть
+				textline = возможность переименования HTML-файлов
+				textline = согласно заголовку (тег TITLE) и первому
+				textline = заголовку (теги H1-H6) с учетом кодировки
+				textline = страницы и вместе с папкой ресурсов
+				textline = *.files с исправлением всех ссылок.
+				textline = FileRenamer не требует инсталляции,
+				textline = и процедура установки сводится к простому
+				textline = копированию файлов из архива в любое
+				textline = место на диске. Хотя, при желании, прога
+				textline = легко встраивается в оболочку Windows
+				textline = Explorer. Есть поддержка drag-and-drop,
+				textline = русскоязычный интерфейс, файл справки.
+				textline = Да, забыл отметить – прога бесплатная!
+				textline = А ведь это же тоже не может не радовать.
+			}
+			Entry
+			{
+				name = ШароWAREZ: Maxapt QuickEye v 1.1
+				url = www.maxapt.ru
+				executable = .\files\magazine\units\шароwarez\maxapt quickeye v 1.1\quickeye.zip
+				status = ShareWare
+				author = 3662kb
+				small_image = .\thumbs\maxapt quickeye.jpg
+				image = .\images\maxapt quickeye.jpg
+				textline = Инструмент для сбора и анализа статистики
+				textline = работы компьютера. Хорошо подходит для
+				textline = непрофессионального применения, поскольку
+				textline = отличается простотой и наглядностью.
+				textline = Данные, собранные Maxapt QuickEye не
+				textline = надо никуда экспортировать – вся информация
+				textline = о времени работы активного использования
+				textline = отдельных программ и компьютеров сразу
+				textline = выводится на удобных для просмотра графиках
+				textline = и таблицах. Имеется возможность группировки
+				textline = программ, которой я с радость воспользовался,
+				textline = чтобы получить четкое представление
+				textline = о том, сколько времени у меня уходит
+				textline = на работу (офис, почта), сколько на
+				textline = игры, а сколько – на бесполезную болтовню
+				textline = в аське. Картинка получилась неутешительная
+				textline = – сразу выяснилось, что свое рабочее
+				textline = время я распределяю крайне нерационально.
+				textline = Если верить статистике, можно работать
+				textline = меньше, а успевать больше. Триальный
+				textline = период Maxapt QuickEye – 15 дней. Думаю,
+				textline = за это время я успею собрать достаточно
+				textline = информации о вредных привычках, вынуждающих
+				textline = меня просиживать за компьютером дольше
+				textline = необходимого.
+				textline = Допускается и принудительное развертывание
+				textline = целой "шпионской сети" Maxapt QuickEye
+				textline = в компьютерных классах и на рабочих
+				textline = местах. Этому изрядно содействует способность
+				textline = программы собирать статистику с удаленных
+				textline = машин и скрытность функционирования
+				textline = ее следящих модулей.
+			}
+			Entry
+			{
+				name = ШароWAREZ: Saver v 1.0 beta
+				url = www.kurkov-software.com
+				executable = .\files\magazine\units\шароwarez\saver v 1.0 beta\saverbeta_setup.exe
+				status = FreeWare
+				author = 1963kb
+				small_image = .\thumbs\saver.jpg
+				image = .\images\saver.jpg
+				textline = Еще один интересный отечественный продукт
+				textline = - бесплатная программа для быстрого
+				textline = сохранения/восстановления настроек установленных
+				textline = на компьютере приложений. Не смотря
+				textline = на пестрый интерфейс, отличается серьезным
+				textline = подходом к работе: автоматически определяет
+				textline = имеющийся у юзера софт, копирует файлы
+				textline = настроек из каталогов отмеченных программ,
+				textline = сохраняет необходимые ключи реестра.
+				textline = В настоящий момент Saver опознает более
+				textline = полутора сотен прог и около шестидесяти
+				textline = игр, причем база данных активно пополняется.
+				textline = Есть и редактор скриптов – для тех,
+				textline = кто хочет сам натаскать программу на
+				textline = бэкап настроек всех неопознанных ею
+				textline = приложений. Хотя, надо сказать, что,
+				textline = ввиду своего происхождения, с большинством
+				textline = популярных у нас программ Saver уже
+				textline = работает без проблем. В общем, утилитка
+				textline = весьма полезная. И если ты вспомнишь,
+				textline = сколько времени после переустановки
+				textline = системы у тебя уходит на восстановление
+				textline = привычной рабочей среды, настройку любимых
+				textline = программ, то, думаю, ты со мной согласишься.
+			}
+			Entry
+			{
+				name = ШароWAREZ: FastStone Image Viewer v 2.12
+				url = www.faststonesoft.com
+				executable = .\files\magazine\units\шароwarez\faststone image viewer v 2.12\fsviewersetup.exe
+				status = FreeWare
+				author = 2594kb
+				small_image = .\thumbs\faststone image viewer.jpg
+				image = .\images\faststone image viewer.jpg
+				textline = Отличный вьювер графических файлов с
+				textline = поддержкой базовых функций конвертирования
+				textline = и редактирования. Я, признаться, не
+				textline = думал, что в этой области еще можно
+				textline = придумать что-то новое, однако эта прога
+				textline = мне приглянулась. В FastStone Image
+				textline = Viewer замечательно реализован режим
+				textline = полноэкранного просмотра, поскольку
+				textline = даже в этом режиме пользователь может
+				textline = получить мгновенный доступ к EXIF информации,
+				textline = настройкам, инструментам и браузеру
+				textline = изображений. Достигается это за счет
+				textline = использования скрытых панелей, которые
+				textline = появляются, когда ты касаешься курсором
+				textline = края экрана. Среди других особенностей
+				textline = программы хотелось бы отметить режим
+				textline = слайд-шоу (с музыкой в MP3 и большим
+				textline = количеством эффектов перехода), возможность
+				textline = сравнения двух изображений, цветокоррекции,
+				textline = нанесения водяных знаков, а также наличие
+				textline = функции вывода гистограммы, пакетной
+				textline = обработки файлов и инструмента для борьбы
+				textline = с эффектом "красных глаз". Короче говоря,
+				textline = стоящая вещь, которую можно смело качать
+				textline = и юзать. Тем более что FastStone Image
+				textline = Viewer бесплатен для домашнего использования,
+				textline = не содержит шпионских модулей и понимает
+				textline = все популярные графические форматы,
+				textline = включая BMP, JPEG, JPEG 2000, GIF, PNG,
+				textline = PCX, TIFF, WMF, ICO и TGA.
+			}
+			Entry
+			{
+				name = ШароWAREZ: Check&Get v 3.0 beta
+				url = activeurls.com
+				executable = .\files\magazine\units\шароwarez\check&get v 3.0 beta\
+				status = ShareWare
+				author = 6182kb
+				small_image = .\thumbs\check&get.jpg
+				image = .\images\check&get.jpg
+				textline = Менеджер закладок нового поколения.
+				textline = Единственный конкурент программы WebSite-Watcher
+				textline = (www.aignes.com). Мощнейший инструмент,
+				textline = хранящий в удобной форме закладки пользователя
+				textline = и автоматически проверяющий "заложенные"
+				textline = сайты на наличие обновлений и изменений.
+				textline = Копии всех обновившихся веб-страниц
+				textline = Check&Get записывает на диск для их
+				textline = последующего офлайнового просмотра.
+				textline = Этот просмотр обеспечивает встроенный
+				textline = браузер, который выводит страничку на
+				textline = экран, не забывая подсвечивать те ее
+				textline = участки, которые успели измениться со
+				textline = времени последней проверки. 
+				textline = Check&Get – одна из самых необходимых
+				textline = для меня прог. Без нее написание данной
+				textline = рубрики было бы невозможно, поскольку
+				textline = выполнять ежедневный мониторинг более
+				textline = пятидесяти моих любимых веб-сайтов вручную
+				textline = я просто не в состоянии.
+				textline = Впрочем, что я распинаюсь? Как человек
+				textline = продвинутый, ты, вероятно, с этой прогой
+				textline = и так хорошо знаком. Хотелось бы лишь
+				textline = обратить твое внимание на начало бета-тестирования
+				textline = долгожданной третьей версии Check&Get.
+				textline = Новые фишечки "тройки" наверняка тебя
+				textline = порадуют. Серьезно приработанный движок
+				textline = и целый ряд новых инструментов теперь
+				textline = позволяет свести ложные срабатывания
+				textline = Check&Get практически к нулю.
+			}
+			Entry
+			{
+				name = ШароWAREZ: Netcraft Toolbar for Firefox 1.0.1
+				url = toolbar.netcraft.com
+				executable = .\files\magazine\units\шароwarez\netcraft toolbar for firefox 1.0.1\netcraft toolbar.msi
+				status = FreeWare
+				author = 1000kb
+				small_image = .\thumbs\netcraft.jpg
+				image = .\images\netcraft.jpg
+				textline = Ты пока не стал жертвой фишинга? Сам
+				textline = этим делом уже грешишь? По-любому, тебе
+				textline = необходима софтина от легенды сетевой
+				textline = безопасности Netcraft. В данном случае
+				textline = предлагается небольшая приблуда для
+				textline = твоего браузера, которая защитит от
+				textline = атак злостных разводчиков. Они будут
+				textline = шифроваться под банки в Сети, чтобы
+				textline = захапать твои кровно заработанные дензнаки.
+				textline = Защита оказывается до неприличия простой
+				textline = – поклонники программы ведут стройный
+				textline = лог стремных сайтов и прога просто не
+				textline = пускает тебя на такие точки сетевого
+				textline = развода. Помимо основной функции, тулза
+				textline = умеет блокировать поп-апы и прочие браузерные
+				textline = вредности. Не пугайся заголовка, софтина
+				textline = существует как для модного FireFox,
+				textline = так и для старичка Осла.
+			}
+			Entry
+			{
+				name = ШароWAREZ: Chimera Virtual Desktop 1.2.18 Beta
+				url = chimera.hu
+				executable = .\files\magazine\units\шароwarez\chimera virtual desktop 1.2.18 beta\chimeravirtualdesktop.exe
+				status = ShareWare
+				author = 1177kb
+				small_image = .\thumbs\chimera.jpg
+				image = .\images\chimera.jpg
+				textline = Тебя когда-нибудь палил босс или препод
+				textline = за играми на рабочем компе? Нет, конечно,
+				textline = ты не лоханулся, просто вовремя поставил
+				textline = нужный софт – виртуальный десктоп. С
+				textline = такой байдой ты можешь заполучить сразу
+				textline = аж 9 разных десктопов с возможностью
+				textline = переключаться из одного в другой по
+				textline = щелчку мыши. Так, только что ты рубился
+				textline = в халфу, а через секунду уже утонул
+				textline = в бездонных таблицах Excel. Фактически,
+				textline = ты заполучил сразу 9 мониторов, на которых
+				textline = можно параллельно изучать кучу разных
+				textline = софтин в действии. Очень подходит для
+				textline = особ со страстным желанием взять все
+				textline = под контроль своих мускулистых пальцев.
+			}
+			Entry
+			{
+				name = ШароWAREZ: CrashDoctor 1.0
+				url = www.intellectualheaven.com
+				executable = .\files\magazine\units\шароwarez\crashdoctor 1.0\crashdoctor_unicode.zip
+				status = FreeWare
+				author = 162kb
+				small_image = .\thumbs\debug.jpg
+				image = .\images\debug.jpg
+				textline = Какие ассоциации у тебя вызывают слова
+				textline = "дебаггер" и "отладчик"? Совершенно
+				textline = разумно услышать: кодеры, сорцы, программерские
+				textline = косяки. Это все правильно, но какое
+				textline = до этого дело обыкновенному юзеру, который
+				textline = дальше тега <html> никуда не сунется?
+				textline = Дело лишь такое, что отныне бедному
+				textline = юзеру доступно одно из главных благ
+				textline = кодера – персональный дебаггер! Нет,
+				textline = править исходники тебя никто не заставит.
+				textline = Все обойдется малой кровью – запуском
+				textline = этой крохотной проги в бэкграунде. "Если
+				textline = кто-то кое-где у нас порой...". Да-да,
+				textline = если прога начинает косячить, CrashDoctor
+				textline = сразу поспешит донести сию печальную
+				textline = новость. Причем, оповещение приходит
+				textline = с опережением гнусного "Программа не
+				textline = отвечает..." от Винды. Помимо оповещения,
+				textline = прога сделает все возможное, чтобы вытянуть
+				textline = глюкавый софт из комы. Из моей краткой
+				textline = тестерской практики: получается все
+				textline = столь радужно, увы, далеко не всегда.
+				textline = Презервативы тоже, конечно, рвутся,
+				textline = но с ними все равно спокойнее :). Всем
+				textline = надеть CrashDoctor'a!
+			}
+			Entry
+			{
+				name = ШароWAREZ: LogMeister 2.1.6.0 
+				url = www.logmeister.com
+				executable = .\files\magazine\units\шароwarez\logmeister 2.1.6.0\logm2160.exe
+				status = ShareWare
+				author = 3322kb
+				small_image = .\thumbs\log.jpg
+				image = .\images\log.jpg
+				textline = Трудно быть Богом... Ты админишь кучу
+				textline = разных систем и всюду, как водится,
+				textline = случаются проблемы. Если все налажено
+				textline = правильно, ты узнаешь о появляющихся
+				textline = траблах вовремя. Если все налажено слишком
+				textline = правильно, то ты узнаешь слишком многое
+				textline = о потенциальных проблемах, 99% из которых
+				textline = вовсе не заслужили бы твоего внимания.
+				textline = Простой пример: ты настраиваешь оповещения
+				textline = о всех недочетах системы. Причем оповещения
+				textline = доходят самыми разными образами: почтой,
+				textline = по аське, логами на вебе, даже СМСками,
+				textline = в конце концов! Подобная перегрузка
+				textline = информацией доводит до психоза, пока
+				textline = на сцене не появляются специальные грабли
+				textline = для логов, которыми ты сможешь фильтровать
+				textline = поток сообщений и выцеплять только самое
+				textline = нужное. Прога умеет обрабатывать простой
+				textline = текст, csv, xml (читай RSS под контролем),
+				textline = и html. Практически все источники логов
+				textline = оказываются под контролем. Если ты находишься
+				textline = "вне зоны действия сети" для принятия
+				textline = адекватных мер, то прога даже сумеет
+				textline = исполнить нужный скрипт. Ты можешь составлять
+				textline = целые сценарии для данного центра оперативного
+				textline = реагирования. Увы, пилюль от жадности
+				textline = для этого релиза найдено не было! Теперь
+				textline = я боюсь пользоваться прогой – она очень
+				textline = удобная, но мне страшно привыкнуть,
+				textline = ибо по окончании триала авторы отберут
+				textline = у меня сотку баксов. Человечнее нужно
+				textline = быть, господа кодеры! Для работающих
+				textline = с win-системами подойдет и менее дорогое
+				textline = решение от тех же бойцов – EventMeister.
+			}
+			Entry
+			{
+				name = ШароWAREZ: IconLover 3.0
+				url = www.aha-soft.com
+				executable = .\files\magazine\units\шароwarez\iconlover 3.0\iconlove.exe
+				status = ShareWare
+				author = 1400kb
+				small_image = .\thumbs\icon.jpg
+				image = .\images\icon.jpg
+				textline = Знаешь, что самое опасное в жизни? Быть
+				textline = слишком серьезным. Даже самому прожженному
+				textline = софт-тестеру необходимо иногда играться
+				textline = с детсадовскими софтинами, делиться
+				textline = с тобой своим мнением о них. Так и здесь,
+				textline = для борьбы с грыже-угрожающей серьезностью,
+				textline = была взята дико примитивная, но забавная
+				textline = тема. Бывает так, что дописывая очередную
+				textline = глючную прогу, ты не решаешься сделать
+				textline = последний и самый главный шаг – выбрать
+				textline = иконку для будущего шедевра. Вроде как
+				textline = самому не хочется рисовать, когда столько
+				textline = готового добра по всему интернету разложено.
+				textline = Однако хочется сделать свой неповторимый
+				textline = штрих – подвигать фотожопом над готовым
+				textline = образцом. Да простят меня ревнители
+				textline = авторского права, но я очень неплохо
+				textline = провел время, перерисовывая казенные
+				textline = логотипы, вырванные с помощью IconLover.
+				textline = Помимо стандартных exe прога умеет выдавливать
+				textline = иконки из кучи других форматов - ICO,
+				textline = CUR, ANI, DLL, ICL, IL, NIL, OCX , SCR,
+				textline = CPL, BPL.
+			}
+			Entry
+			{
+				name = ШароWAREZ: SSL-Explorer for Windows 0.1.11
+				url = 3sp.com
+				executable = .\files\magazine\units\шароwarez\ssl-explorer for windows 0.1.11\sslexplorer_windows_0_1_11.zip
+				status = FreeWare
+				author = 19969kb
+				small_image = .\thumbs\ssl.jpg
+				image = .\images\ssl.jpg
+				textline = Повеселились? Теперь пора за дело. Так
+				textline = и я однажды решил, когда в голову постучалась
+				textline = идея открытия своего VPN-сервиса по
+				textline = классу VIP за огроменное бабло! Все
+				textline = складывалось так, как нужно, пока не
+				textline = встала потребность написания Win-клиента
+				textline = под нашу дико приватную сетку для шифрующихся
+				textline = творцов. Кодеры хмурились, не хотели
+				textline = лепить GUI на усладу клиентов. Нас бы
+				textline = так спасла данная open source-софтина!
+				textline = Сие оказывается простым и эффективным
+				textline = SSL-шлюзом, который поможет обособить
+				textline = сетку или даже несколько одновременно.
+				textline = Да так, что ты сможешь лазать по зашифрованным
+				textline = сетям, не выходя из привычного IE! Какой
+				textline = комфорт, какой восторг! И того и другого
+				textline = пока маловато – тулза будет еще долго
+				textline = нагонять 1.0-версию. Однако это не какой-нибудь
+				textline = mp3-плеер или "нюкер", так что активные
+				textline = юзеры, вероятно, не побоятся испачкать
+				textline = рук, исправляя код софтины под свои
+				textline = уникальные нужды. В последней версии
+				textline = проги заметно улучшились административные
+				textline = функции – ты можешь смело наблюдать
+				textline = за своими юзерами и их темными делишками.
+			}
+			Entry
+			{
+				name = UnixWAREZ: Azureus v 2.3.0.2
+				url = azureus.sf.net
+				executable = .\files\magazine\units\unixwarez\azureus v 2.3.0.2\azureus_2.3.0.2_linux.gtk.tar.bz2
+				status = GNU GPL
+				author = 6464kb
+				small_image = .\thumbs\azureus.png
+				image = .\images\azureus.png
+				textline = Azureus - программа для работы с протоколом
+				textline = BitTorrent, написанная на Java. Интерфейс
+				textline = очень прост, удобен и настраиваем, его
+				textline = основу составляют табы с "моими торрентами"
+				textline = (список всех закачек: как входящих,
+				textline = так и исходящих), "моими раздачами"
+				textline = (перечень расшаренных файлов/каталогов)
+				textline = и "моими трэкерами"; таким же образом
+				textline = открывается и конфигурация программы.
+				textline = Настройка обширна, разделена на дюжину
+				textline = разделов, многие из которых, в свою
+				textline = очередь на подсекции (например, у трэкеров
+				textline = есть отдельные параметры для конфигурации
+				textline = клиентской и серверной частей). Присутствуют
+				textline = стандартные возможности вроде ограничения
+				textline = скорости для входящего и исходящего
+				textline = трафика (причем лимиты устанавливаются
+				textline = и глобально, и для каждого торрента),
+				textline = подключений через прокси (к трекеру
+				textline = и для прямых соединений). Что важно,
+				textline = конфигурация позволяет плотно заняться
+				textline = многими опциями, нацеленными на главное
+				textline = -- оптимизацию процесса закачки по BitTorrent.
+				textline = Программа уже по умолчанию оснащена
+				textline = разносторонними плагинами, среди которых,
+				textline = в частности, поддержка работы с распределенными
+				textline = базами данных хэшей (актуально, когда
+				textline = трэкер уходит в offline) и даже простой
+				textline = IRC-клиент (используется PircBot Java
+				textline = IRC API) для восполнения недостатка
+				textline = общения во время затянувшихся закачек
+				textline = (его наличие объяснено желанием предоставить
+				textline = пользователям возможность оперативного
+				textline = получения помощи по всем возникающим
+				textline = вопросам).
+				textline = * Сборка для Linux/GTK+.
+			}
+			Entry
+			{
+				name = UnixWAREZ: Graveman! v 0.3.12.4
+				url = graveman.tuxfamily.org
+				executable = .\files\magazine\units\unixwarez\graveman! v 0.3.12.4\graveman-0.3.12-4.tar.bz2
+				status = GNU GPL
+				author = 742kb
+				small_image = .\thumbs\graveman.png
+				image = .\images\graveman.png
+				textline = Мощные консольные приложения первой
+				textline = необходимости всегда порождали массу
+				textline = надстроек и оболочек. Причем front-end'ы
+				textline = зачастую предоставляют функциональность
+				textline = наборов таких утилит, и, пожалуй, больше
+				textline = всех здесь удалось отличиться популярным
+				textline = приложениям для записи дисков и работы
+				textline = с аудио. Graveman! - очередная попытка
+				textline = создания самой (с ясной только для разработчиков
+				textline = позиции) удачной графической оболочки
+				textline = к cdrecord, mkisofs, readcd, cdrdao
+				textline = и dvd+rw-tools с интерфейсом GTK2. Перечень
+				textline = функций сведен к минимуму - по общим
+				textline = впечатлениям, авторы программы задались
+				textline = целью предельно упростить запись дисков.
+				textline = Так, для записи обычных CD и DVD с данными
+				textline = сразу после первого же запуска Graveman!
+				textline = потребуется всего 3 хода: добавление
+				textline = файлов/каталогов, очень скромный выбор
+				textline = свойств (скорость, число копий, включение
+				textline = режима фиксирования и/или симулирования;
+				textline = для CD также выбирается формат, режим
+				textline = записи и уровень ISO, необходимость
+				textline = использовния расширений Rock Ridge и
+				textline = Joilet, мультисессионности), ввод данных
+				textline = о содержимом (название, описание, копирайты
+				textline = и прочее). Кроме того, можно создавать
+				textline = аудиодиски из файлов различных форматов
+				textline = (помимо WAV это OGG, MP3 и Flac при
+				textline = наличии соответствующих утилит) с поддержкой
+				textline = режима DAO (без пауз), а также копировать
+				textline = диски. В "других операциях" осуществляется
+				textline = очистка носителей CD-RW (при желании,
+				textline = очистка может осуществляться автоматически
+				textline = перед записью данных на диск), форматирование
+				textline = DVD-RW и фиксирование CD. В настройках
+				textline = задаются некоторые общие опции (режим
+				textline = overburning, извлечение диска после
+				textline = записи и т.п.), базовая конфигурация
+				textline = интерфейса, кодировка, список внешних
+				textline = программ (для каждой можно указывать
+				textline = дополнительные ключи) и доступных устройств.
+			}
+			Entry
+			{
+				name = UnixWAREZ: LiVES v 0.9.5-pre3
+				url = www.xs4all.nl/~salsaman/lives
+				executable = .\files\magazine\units\unixwarez\lives v 0.9.5-pre3\lives-0.9.5-pre3.tar.gz
+				status = GNU GPL
+				author = 1233kb
+				small_image = .\thumbs\lives.png
+				image = .\images\lives.png
+				textline = LiVES - утилита, с которой ты можешь
+				textline = 'играть' с видео!" - таков лозунг проекта.
+				textline = Изначально аббревиатура LiVES обозначала
+				textline = Linux Video Editing System, однако затем
+				textline = программа была портирована на другие
+				textline = ОС, и теперь она просто "система редактирования
+				textline = видео". Немаловажную роль в LiVES играет
+				textline = другой открытый проект - MPlayer, -
+				textline = служащий основой (по умолчанию) для
+				textline = воспроизведения и редактирования видеоданных,
+				textline = что разом сняло многие проблемы с поддержкой
+				textline = различных форматов. Помимо банальных
+				textline = "игр" вроде изменения размеров изображения
+				textline = и покадровых вырезаний/перемещений в
+				textline = программе доступен широкий спектр эффектов,
+				textline = которые можно распространять как на
+				textline = отдельные кадры, так и на произвольные
+				textline = выделенные части видео. Если их будет
+				textline = мало, предусмотрена возможность создания
+				textline = собственных эффектов и утилит с помощью
+				textline = скриптов RFX, среда для для разработки
+				textline = которых встроена в LiVES (получившийся
+				textline = результат можно в дальнейшем импортировать/экспортировать).
+				textline = Закладка "Audio" позволяет проводить
+				textline = и базовые операции с аудиодорожкой:
+				textline = удаление ее частей и загрузка новой
+				textline = музыки из файлов и аудиодисков, изменение
+				textline = битрейта и других характеристик. Режим
+				textline = "VJ" эмулирует возможность переключения
+				textline = между видеороликами в реальном времени.
+				textline = При выполнении каких-то операций часто
+				textline = полезной оказывается функция предварительного
+				textline = просмотра.
+			}
+			Entry
+			{
+				name = UnixWAREZ: Feh v 1.3.3
+				url = linuxbrit.co.uk/feh/
+				executable = .\files\magazine\units\unixwarez\feh v 1.3.2\feh-1.3.3.tar.gz
+				status = GNU GPL
+				author = 368kb
+				small_image = .\thumbs\feh.png
+				image = .\images\feh.png
+				textline = Feh - основанная на imlib2 утилита просмотра
+				textline = изображений. В режиме по умолчанию не
+				textline = выводит список изображений из открытого
+				textline = каталога, однако указывает их общее
+				textline = количество и номер текущей картинки
+				textline = в заголовке, а также позволяет сортировать
+				textline = по названию или перемешивать случайным
+				textline = образом. В выпадающем (по правой кнопке
+				textline = мыши) меню также доступна краткая информация
+				textline = об изображении (имя и размер файла,
+				textline = тип, габариты), функция поворота на
+				textline = 90 градусов и сохранения/удаления. Любой
+				textline = файл из списка можно "прятать" (чтобы
+				textline = он не возникал при прокрутке картинок
+				textline = в дальнейшем), устанавливать в качестве
+				textline = фона для рабочего стола (центрируя/размножая/растягивая).
+				textline = Присутствует поддержка Xinerama и режима
+				textline = автоматического масштабирования до заданных
+				textline = размеров, а значительная часть функций
+				textline = программы задается в консоли, что наглядно
+				textline = демонстрирует вывод feh --help. Так,
+				textline = например, с помощью опций (-m, -c и
+				textline = -i) включаются режимы монтажа, коллажа
+				textline = и "Index" соответственно - все они решают
+				textline = проблему (?) отсутствия наглядного списка
+				textline = открытых файлов: первый упорядоченно
+				textline = отображает уменьшенные версии изображений,
+				textline = второй еще и распределяет их по окну
+				textline = случайным образом, а третий - аналог
+				textline = первого с указанием названий файлов.
+				textline = У него есть и расширенная версия (-I),
+				textline = где в дополнение к имени файла указываются
+				textline = его размер и габариты картинки. Через
+				textline = консольные опции задаются и некоторые
+				textline = параметры для отображения и для комбинаций
+				textline = клавиш. Кроме того, feh умеет генерировать
+				textline = текстовый список изображений указанного
+				textline = каталога с выводом кратких сведений
+				textline = о них (опция -l).
+				textline = * Требует библиотеку giblib того же
+				textline = автора (версия 1.2.4 в tar.gz занимает
+				textline = 281 КБ).
+			}
+			Entry
+			{
+				name = UnixWAREZ: rdesktop v 1.4.1
+				url = www.rdesktop.org
+				executable = .\files\magazine\units\unixwarez\rdesktop v 1.4.1\rdesktop-1.4.1.tar.gz
+				status = GNU GPL
+				author = 211kb
+				small_image = .\thumbs\rdesktop.png
+				image = .\images\rdesktop.png
+				textline = Несмотря на присущий многим юниксоидам
+				textline = фанатизм и существующие религиозные
+				textline = предубеждения, порой возникает потребность
+				textline = в управлении удаленной Windows-машиной
+				textline = из своей родной и любимой системы. Причем,
+				textline = несомненно, для этого есть определенные
+				textline = текстовые средства, но ведь работать
+				textline = с Windows бывает куда удобнее в ее графическом
+				textline = виде. И тогда на помощь приходит rdesktop
+				textline = - открытая реализация клиента, который
+				textline = по протоколу RDP (Remote Desktop Protocol)
+				textline = обеспечивает возможность удаленной работы
+				textline = в Windows с компьютеров с установленными
+				textline = POSIX-совместимыми системами (главным
+				textline = требованием программы является наличие
+				textline = системы X-Window). Преимущественно благодаря
+				textline = возможностям RDP взаимодействие проходит
+				textline = на хорошем уровне, не требует очень
+				textline = высокой пропускной способности, и, как
+				textline = результат, позволяет "окунуться" в среду
+				textline = Windows, работая с удаленной машиной,
+				textline = как со своей, из небольшого окна X-Window,
+				textline = в котором отображается привычный вид
+				textline = запущенной Windows. При этом сервер,
+				textline = к которому производится подключение,
+				textline = не нуждается ни в каком дополнительном
+				textline = программном обеспечении и будет нормально
+				textline = функционировать с rdesktop "as is".
+			}
+			Entry
+			{
+				name = UnixWAREZ: gnormalize v 0.30
+				url = gnormalize.sourceforge.net
+				executable = .\files\magazine\units\unixwarez\gnormalize v 0.30\gnormalize-0.30.tar.gz
+				status = GNU GPL
+				author = 317kb
+				small_image = .\thumbs\gnormalize.png
+				image = .\images\gnormalize.png
+				textline = gnormalize - графический интерфейс к
+				textline = утилите normalize, написанный на Perl
+				textline = с модулем для GTK2. Главное назначение
+				textline = программы, что видно из названия, -
+				textline = "нормализация", т.е. приведение музыкальных
+				textline = файлов к заданному общему стандарту.
+				textline = Поддерживаются форматы MP3/MP4, MPC,
+				textline = OGG Vorbis, APE, FLAC и WAV. Все, кроме
+				textline = последнего, предварительно переводятся
+				textline = в WAV, затем WAV-файлам задается настраиваемый
+				textline = уровень битрейта, качество сжатия, тип
+				textline = декодирования, частота и некоторые другие
+				textline = параметры (зависит от используемого
+				textline = кодера, а поддерживается lame, FAAC,
+				textline = eggenc, mppenc, FLAC и разные кодеры
+				textline = MAC), после чего они обратно конвертируются
+				textline = в нужный формат (вовсе не обязательно,
+				textline = чтобы он был тем же, что и изначально
+				textline = - так что можно, например, перевести
+				textline = коллекцию MP3 с 320 kbps в OGG/224).
+				textline = Разработчики уделили внимание и работе
+				textline = с обычными AudioCD: помимо того, что
+				textline = они вопроизводятся через cdcd или cdplay,
+				textline = или модуль Audio::CD, представлена функция
+				textline = "rip" (по умолчанию для этого используется
+				textline = cdparanoia) с поддержкой базы данных
+				textline = CDDB (реализована через Perl-модуль
+				textline = CDDB_get) и настраиваемым форматов файлов
+				textline = на выходе. Информация о композициях,
+				textline = указанная в тегах файлов, отображается
+				textline = в закладке "info".
+				textline = * Требуется сама утилита normalize (www1.cs.columbia.edu/~cvaill/normalize)
+				textline = и некоторые модули для Perl.
+			}
+			Entry
+			{
+				name = X-Toolz: ICQ new invisible checker
+				url = www.asechka.ru
+				executable = .\files\magazine\units\x-toolz\icq new invisible checker\inic.exe
+				status = FreeWare
+				author = 284kb
+				small_image = .\thumbs\icqnic.jpg
+				image = .\images\icqnic.jpg
+				textline = Четатиль (выражаясь падонкаффским йазыком),
+				textline = а помнишь ли ты описанные в старых выпусках
+				textline = "X-Toolz" программы DFM и USCA2004?
+				textline = Ну да, это которые еще с завидным бесстыдством
+				textline = помогали обнаружить врага, затаившегося
+				textline = в невидимом режиме. Так вот, можешь
+				textline = смело удалять обе софтины :(. Они тебе
+				textline = более не пригодятся - админы не спят
+				textline = ибо. Хотя и заметно тормозят: фиксить
+				textline = баг целый год - это надо уметь. Удалил?
+				textline = Не спеши огорчаться. На помощь приходит
+				textline = Burewar! Нет, Буревар - это не прога;
+				textline = это автор. Причем он бесспорно "жжот",
+				textline = так ак нашел новую брешь в работе протоколов
+				textline = ICQ и на данный момент его софтина ICQ
+				textline = new invisible checker - единственная
+				textline = РАБОТАЮЩАЯ в своем роде.
+				textline = Для того, чтобы опрелелить: не засел
+				textline = ли в инвизибл недруг убогий, ты должен
+				textline = залогиниться с любого рабочего номера
+				textline = аси (не своего; девятизначного какого-нибудь).
+				textline = Есть встроенная функция регистрации
+				textline = нового уина, так что напрягаться не
+				textline = придется. Можно включить опцию невидимого
+				textline = захода (на тот случай, если ты все-таки
+				textline = используешь в качестве определителя
+				textline = какой-то важный номер).
+				textline = Показывает Чекер отменно все статусы,
+				textline = т.е. не только invisible, и понимает
+				textline = нововведения пятой аськи. Настройки
+				textline = хранятся в простом .ini файле и могут
+				textline = быть легко отредактированы мануально
+				textline = в блокноте (чтобы почувствовать себя
+				textline = хакером крутым :).
+			}
+			Entry
+			{
+				name = X-Toolz: BPS Spyware & Adware Remover 9.2.0.8
+				url = www.bulletproofsoft.com
+				executable = .\files\magazine\units\x-toolz\bps spyware & adware remover 9.2.0.8\bpssr.exe
+				status = ShareWare
+				author = 8.1mb
+				small_image = .\thumbs\bps.jpg
+				image = .\images\bps.jpg
+				textline = Деньги на твоем интернет счете потихоньку
+				textline = уходят в неизвестность? Модем сам, когда
+				textline = ему вздумается, решает звонить куда
+				textline = подальше (например, в Тайвань), чтобы
+				textline = связаться с порносервером? (Хе-хе, Бивис,
+				textline = он сказал: "Порносервер!") Сидирум сам,
+				textline = без твоей на то ревизии, высовывает
+				textline = свой "язык" в такт шаманской музыке,
+				textline = непонятно откуда взявшейся на твоем
+				textline = харде? Одногруппники на парах читают
+				textline = логи твоих разговоров в чате, а также
+				textline = дневник, который ты ведешь на компе
+				textline = и вообще никогда никому не показываешь
+				textline = и нигде не публикуешь? БЕДА! Ты неудачник,
+				textline = убей себя. Убил? Теперь устанавливай
+				textline = BPS Spyware&Adware Remover. Установил?
+				textline = Все. Беды больше нет. Архиполезная софтина
+				textline = c необычным и приятным оформлением удалит
+				textline = из твоей системы известных ей троянских
+				textline = лошадочек, анализаторов ввода данных
+				textline = с клавиатуры (в миру - кейлоггеров),
+				textline = библиотеки для показа ненужных рекламных
+				textline = баннеров и шпионящее пэ о. Сканирование
+				textline = происходит в реестре и на жестких дисках,
+				textline = а также в оперативной памяти, что немаловажно.
+				textline = Я считаю, что большой вес этой, к сожалению,
+				textline = шароварной софтины (9 мегов) вполне
+				textline = оправдан.
+				textline = Ах да, прога поддерживает рашн ленгвидж!
+			}
+			Entry
+			{
+				name = X-Toolz: Atelier Remote Commander 5.57
+				url = www.atelierweb.com
+				executable = .\files\magazine\units\x-toolz\atelier remote commander 5.57\awrc557.zip
+				status = ShareWare
+				author = 2mb
+				small_image = .\thumbs\arc.jpg
+				image = .\images\arc.jpg
+				textline = Радминоподобные программы уже давно
+				textline = вошли в моду и размножаются, как кролики.
+				textline = Тем труднее выделить лучшего кролика.
+				textline = На сегодня это - Atelier Web Remote
+				textline = Commander. Программа предоставит грамотному
+				textline = админу (ну то есть нам с тобой, ага?)
+				textline = в распоряжение огромный набор средств
+				textline = для удаленного управления компьютером.
+				textline = Важное отличие от многих других аналогов:
+				textline = для работы софтины не требуется установка
+				textline = серверной части на железном коне подопечного.
+				textline = Обширность доступа просто не объять
+				textline = - подарок админу. Ты можешь полностью
+				textline = контролировать и экранить рабочий стол,
+				textline = лазить, как у себя дома, по чужим дискам,
+				textline = убивать процессы, запускать приложения...
+				textline = чатиться :). Вся хардверная информация
+				textline = клиента теперь будет как на ладоне.
+				textline = Наконец-то ты уличишь Витьку Резинкина
+				textline = (Витя, если твоя фамилия на самом деле
+				textline = Резинкин, то не обижайся и не подавай,
+				textline = плиз, на наш журнал в суд) во вранье:
+				textline = ведь он говорил, что обладает камнем
+				textline = с частотой 3000, а не 500, как есть
+				textline = на самом деле. Также ты сможешь изучить
+				textline = подробнейшие сетевые данные: статистику
+				textline = портов (нетстат), подключенные шары
+				textline = и многое другое. Возможностей у проги
+				textline = реально так много, что уложить их в
+				textline = килобайт описалова - просто нереально.
+				textline = Устанавливать соединение можно в безопасном
+				textline = режиме ("стронг энкрипшн" - это тебе
+				textline = не хвост собачий!), также для сеанса
+				textline = настраивается пароль, опция прокси-сервера
+				textline = и... А ты меня уже и не слушаешь - прогу
+				textline = устанавливаешь. Что ж, ты прав. Изучай!
+			}
+			Entry
+			{
+				name = X-Toolz: LockWin 4.976
+				url = www.pisoft.ru
+				executable = .\files\magazine\units\x-toolz\lockwin 4.976\lw4976.exe
+				status = FreeWare
+				author = 2mb
+				small_image = .\thumbs\lock.jpg
+				image = .\images\lock.jpg
+				textline = LockWin - программный продукт, разработанный
+				textline = для ограничения доступа к различным
+				textline = ресурсам компьютера по очень-очень многим
+				textline = критериям. Софтина работает в фоновом
+				textline = режиме: отсчитываетсопределенное настройками
+				textline = время работы тому или иному пользователю,
+				textline = по истечении которого блокирует компьютер
+				textline = и выводит на экран прощальное сообщение
+				textline = :). Есть возможность создавать несколько
+				textline = сеансов работы одновременно, разной
+				textline = длительности и разного уровня доступа
+				textline = (к программам, играм, документам и т.д.).
+				textline = Можно также создавать запрещенные для
+				textline = всех программы - в общем целый полигон
+				textline = для продуманных действий.
+				textline = Что касается интерфейса: в верхнем части
+				textline = специального рабочего стола есть окошко
+				textline = с подробной инфой о состоянии сеанса,
+				textline = а основную часть стола занимает пользовательское
+				textline = меню с программами и играми, разбитыми
+				textline = по группам. При помощи программы Locker
+				textline = эта софтина может управляться с удаленного
+				textline = компа. Данное программное обеспечение
+				textline = используется во многих известных игровых
+				textline = клубах Москвы.
+			}
+			Entry
+			{
+				name = X-Toolz: BootStar 8.29
+				url = www.bootstar.com
+				executable = .\files\magazine\units\x-toolz\bootstar 8.29\bootstar.zip
+				status = ShareWare
+				author = 986kb
+				small_image = .\thumbs\bootstar.jpg
+				image = .\images\bootstar.jpg
+				textline = "Звезда загрузки" поддерживает до 15
+				textline = дисковых разделов, с которых, собственно,
+				textline = и загружаются все известные на сегодняшний
+				textline = день операционные системы. Можно устанавливать
+				textline = несколько одинаковых операционнок на
+				textline = один диск. Программа универсальна и
+				textline = работает со всеми файловыми системами.
+				textline = Имеется встроенный аналог fdisk'а, предназначенный,
+				textline = как ты уже должен был догадаться, для
+				textline = разбиения харда на разделы.
+				textline = С помощью BootStar ты сможешь ограничить
+				textline = доступ к тем или иным разделам, просто
+				textline = поставив пароль. Главное, потом так
+				textline = же просто его не забудь :).
+			}
+		}
+	}
+	Block
+	{
+		name = VISUAL HACK ++
+		uplash = .\data\design\razdel_vidhack.dzn
+		showlist = 1
+		Block
+		{
+			name = Видео по взлому
+			showlist = 1
+			Entry
+			{
+				name = Установка руткита shv4
+				url = www.xakep.ru
+				executable = .\files\visualhack\shv4-rootkit_install.avi
+				status = FreeWare
+				author = 38.8mb
+				small_image = .\thumbs\1.jpg
+				image = .\images\1.jpg
+				image = .\images\2.jpg
+				textline = Любой хакер, взломав сервер, заботится
+				textline = о том, чтобы удержать за собой доступ
+				textline = к нему. Для того чтобы получать акцесс
+				textline = к захаксоринному компу вновь, конечно
+				textline = же, можно добавить нового юзера, назначив
+				textline = ему права супер-пользователя, и логиниться
+				textline = на серваке под ним. Но системный администратор,
+				textline = посмотрев логи, может заподозрить неладное,
+				textline = в результате чего хакер лишится доступа.
+				textline = Поэтому хаксоры со стажем устанавливают
+				textline = на похаканные сервера руткит – софтинку,
+				textline = которая скрывает присутствие взломщика
+				textline = в системе. В этом видео хакер устанавливает
+				textline = руткит shv4 на только что поломанный
+				textline = сервант. А вот что конкретно делает
+				textline = сетевой падонак.
+				textline = Для начала он выбирает жертву с бажным
+				textline = ядром, которую можно порутать простым
+				textline = ptrace-kmod эксплойтом. После этого
+				textline = хакер пытается установить на сервер
+				textline = connect-back backdoor, но для его компиляции
+				textline = ему не хватает прав. Но взломщик не
+				textline = сдается - он приконнекчивается к другому
+				textline = шеллу, компилирует утилиту там, и закачивает
+				textline = ее на сервер. После этих манипуляций
+				textline = он получает интерактивный шелл. Таким
+				textline = же способом он портирует бинарник эксплойта.
+				textline = После запуска сплойта хакер получает
+				textline = root-доступ к серверу. Теперь ему нужно
+				textline = закрепиться в системе. Закачав руткит
+				textline = shv4 на сервер, хакер разархивирует
+				textline = его. Для того, чтобы активировать только
+				textline = что слитую утилиту, мерзавцу остается
+				textline = выполнить команду: "./setup PASSWORD
+				textline = PORT", где PORT – номер порта, на котором
+				textline = будет висеть второй SSH-демон. Наш взломщик
+				textline = исполнил команду "./setup r00t 4321",
+				textline = установив тем самым слово "r00t" в качестве
+				textline = пароля. После того, как руткит успешно
+				textline = установился в системе, взломщик присоединился
+				textline = к 4231-порту по протоколу SSH, и залогинился
+				textline = под рутом с паролем "r00t". Проверив,
+				textline = что руткит не палится в netstat-листе,
+				textline = злоумышленник вышел из шелла.
+				textline = [Автор: Nitrex]
+			}
+		}
+		Block
+		{
+			name = Конкурс
+			showlist = 1
+			Entry
+			{
+				name = Прохождение июньского конкурса
+				url = www.xakep.ru
+				executable = .\files\visualhack\konk78.avi
+				status = FreeWare
+				author = 80.9mb
+				textline = Посмотри видеоролик, и все вопросы
+				textline = относительно июньского конкурса отпадут!
+			}
+		}
+	}
+	Block
+	{
+		name = PDF ARCHIVE
+		uplash = .\data\design\razdel_pdf.dzn
+		showlist = 1
+		Block
+		{
+			name = ][akep
+			showlist = 1
+			Entry
+			{
+				name = ][akep 2005 - 05 (77)
+				url = www.xakep.ru
+				executable = .\files\pdf\xa#05(77).pdf
+				status = FreeWare
+				small_image = .\thumbs\xa_pdf_077.jpg
+				image = .\images\xa_pdf_077.jpg
+				textline = Майский "Хакер" в электронной подшивке.
+			}
+		}
+		Block
+		{
+			name = ][akep Спец
+			showlist = 1
+			Entry
+			{
+				name = ][akep Спец 2005 - 05 (54)
+				url = www.xakep.ru
+				executable = .\files\pdf\xs#05(54).pdf
+				status = FreeWare
+				small_image = .\thumbs\xs_pdf_054.jpg
+				image = .\images\xs_pdf_054.jpg
+				textline = Майский номер журнала "Хакер спец"
+				textline = в электронной подшивке.
+			}
+		}
+		Block
+		{
+			name = Железо
+			showlist = 1
+			Entry
+			{
+				name = Железо 15 (05)
+				url = www.xakep.ru
+				executable = .\files\pdf\xh#05(15).pdf
+				status = FreeWare
+				small_image = .\thumbs\xard_pfd_015.jpg
+				image = .\images\xard_pfd_015.jpg
+				textline = Железо: как всегда ты можешь почитать
+				textline = хардварные
+				textline = тесты оборудования, FAQ и кучу другой
+				textline = полезной информации на соответствующую
+				textline = тематику.
+			}
+		}
+		Block
+		{
+			name = MC
+			showlist = 1
+			Entry
+			{
+				name = Mobile Computers 05 (56)
+				url = www.mconline.ru
+				executable = .\files\pdf\mc-05(56).pdf
+				status = FreeWare
+				small_image = .\thumbs\mc_pdf_056.jpg
+				image = .\images\mc_pdf_056.jpg
+				textline = "Мобильные компьютеры" не за апрель...
+				textline = а за май!
+			}
+		}
+		Block
+		{
+			name = Лучшие цифровые камеры
+			showlist = 1
+			Entry
+			{
+				name = Лучшие цифровые камеры 08
+				executable = .\files\pdf\dc#05(08).pdf
+				status = FreeWare
+				small_image = .\thumbs\camera_pdf_008.jpg
+				image = .\images\camera_pdf_008.jpg
+				textline = Майский выпуск журнала "Лучшие цифровые
+				textline = камеры".
+			}
+		}
+	}
+	Block
+	{
+		name = UPDATES
+		uplash = .\data\design\razdel_trash.dzn
+		showlist = 1
+		Block
+		{
+			name = Kaspersky Lab
+			showlist = 1
+			Entry
+			{
+				name = Лицензионные ключи
+				url = www.kaspersky.ru
+				executable = .\files\updates\avp\keys\
+				small_image = .\thumbs\avp.jpg
+				image = .\images\avp.jpg
+				textline = Лицензионные ключи для Антивируса Касперского
+				textline = Personal и Kaspersky Anti-Hacker. Ты
+				textline = продолжаешь находиться под непробиваемой
+				textline = защитой.
+				textline = (000AF41A.key - Kaspersky Anti Hacker)
+				textline = (000AF418.key - Антивирус Касперского
+				textline = Personal).
+			}
+			Entry
+			{
+				name = Обновление антивирусных баз
+				url = www.avp.ru
+				executable = .\files\updates\avp\bases\cumul.zip
+				small_image = .\thumbs\avp.jpg
+				image = .\images\avp.jpg
+				textline = Месячное обновление за июнь 2005
+				textline = года.
+			}
+		}
+	}
+	Block
+	{
+		name = TRASH
+		uplash = .\data\design\razdel_trash.dzn
+		showlist = 1
+		Block
+		{
+			name = Demos
+			showlist = 1
+			Entry
+			{
+				name = Scene.org
+				url = www.scene.org
+				executable = .\files\trash\demos\
+				textline = Последние демки за месяц с портала scene.org
+			}
+		}
+	}
+}

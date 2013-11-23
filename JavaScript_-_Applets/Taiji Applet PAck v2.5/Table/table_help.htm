@@ -1,0 +1,163 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Table parameters</title>
+</head>
+
+<body background="../ressources/taijibackground.gif">
+
+<h2 align="center"><u><font color="#000000"><strong>Table version 1.0</strong></font></u></h2>
+
+<p align="left">This applet reads a data file and displays the data in a table. The data
+file format must be the following: the lines in the file match the rows in the table. In a
+line, the data from different columns are separated by a ','. For instance:<br>
+cake,food,$3.95<br>
+monitor,computer,$200</p>
+
+<p align="left">You can have another sample by viewing the file &quot;data.txt&quot;. You
+can set the columns colors, add a border...</p>
+<div align="left">
+
+<table border="3" width="760" height="177">
+  <tr>
+    <td width="128" height="35"><p align="center"><strong>Name</strong></td>
+    <td width="370" height="35"><p align="center"><strong>Description</strong></td>
+    <td width="131" height="35"><p align="center"><strong>Default</strong></td>
+    <td width="101" height="35"><strong><p align="center">Status</strong></td>
+  </tr>
+  <tr>
+    <td width="128" height="434" valign="top"><p align="center">data_file</p>
+    <p align="center">background_color</p>
+    <p align="center">background_color2</p>
+    <p align="center"><br>
+    </p>
+    <p align="center">columns_color</p>
+    <p align="center">columns_color1<br>
+    columns_color2<br>
+    ...</p>
+    <p align="center">title_mode</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">title_row<br>
+    </p>
+    <p align="center">skip_first_row<br>
+    </p>
+    <p align="center">border</p>
+    <p align="center">border_color</p>
+    <p align="center">status_bar_text</p>
+    <p align="center">link</p>
+    <p align="center">target</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">registration_code<br>
+    </td>
+    <td width="370" height="434" valign="top"><p align="center">the data file. Format is
+    described above</p>
+    <p align="center">the background color</p>
+    <p align="center">fill this parameter to make the background color of the rows to be
+    alternated. One row background color will be &quot;background_color&quot;, the following
+    one will &quot;background_color2&quot;, next &quot;background_color&quot;, and so on</p>
+    <p align="center">the default color for the data in all columns</p>
+    <p align="center">if you want the data in a specify column to be colored with another
+    color than &quot;columns_color&quot; then add &quot;columns_colorN&quot;, where is the
+    column number</p>
+    <p align="center">you can separate the first row of the table to make it as the title row:<br>
+    &quot;0&quot;: no title<br>
+    &quot;1&quot;: the first line of the data file is used as title row<br>
+    &quot;2&quot;: use &quot;title_row&quot; as title</p>
+    <p align="center">the title row, if you have set &quot;title_mode&quot; to &quot;2&quot;,
+    for instance it could be: &quot;Stock ticker,Date,Open,Close&quot;</p>
+    <p align="center">1: skip the first line in the data file<br>
+    0: read the first line as the other ones</p>
+    <p align="center">the border size</p>
+    <p align="center">the border color</p>
+    <p align="center">the text to display in the status bar when the mouse is over</p>
+    <p align="center">URL linked page when click</p>
+    <p align="center">the target of the new page : <br>
+    - &quot;_blank&quot; : show in a new unnamed top-level window<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &quot;_self&quot; : show in the
+    current frame<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &quot;_parent&quot; : show
+    in the parent frame<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &quot;_top&quot; : show in
+    the top-most frame</p>
+    <p align="center">the registration code</td>
+    <td width="131" height="434" valign="top"><p align="center">-</p>
+    <p align="center">white</p>
+    <p align="center">blue</p>
+    <p align="center"><br>
+    </p>
+    <p align="center">black</p>
+    <p align="center">-</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">0</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">-<br>
+    </p>
+    <p align="center">0<br>
+    </p>
+    <p align="center">0</p>
+    <p align="center">black</p>
+    <p align="center">-<br>
+    <br>
+    _blank</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">-</td>
+    <td width="101" height="434" valign="top"><p align="center">required</p>
+    <p align="center">required</p>
+    <p align="center">optional</p>
+    <p align="center"><br>
+    </p>
+    <p align="center">optional</p>
+    <p align="center">optional</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">required</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">optional<br>
+    </p>
+    <p align="center">optional<br>
+    </p>
+    <p align="center">optional</p>
+    <p align="center">optional</p>
+    <p align="center">optional</p>
+    <p align="center">optional</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">required</td>
+  </tr>
+</table>
+</div>
+
+<p>&nbsp;</p>
+<div align="left">
+
+<table border="1" width="758" height="115">
+  <tr>
+    <td width="758" height="25"><p align="center"><strong>Special notes</strong></td>
+  </tr>
+  <tr>
+    <td width="758" height="78">* You can put relative URL (to target a file on your site) or
+    absolute (with &quot;http://...&quot;)<br>
+    URL. example:<br>
+    &nbsp;&nbsp;&nbsp; relative URL: ../home/home.html<br>
+    &nbsp;&nbsp;&nbsp; absolute URL: http://www.yahoo.com <br>
+    <br>
+    * The background color format is hexadecimal format like this : blue is
+    &quot;#0000ff&quot;&quot;, red is &quot;#ff0000&quot; ... If you want that the background
+    color is the same as the one of the page, look at the html source file and find the balise
+    : &lt;body bgcolor=&quot;#00FFFF&quot;&gt; then copy the value, here it's
+    &quot;#00ffff&quot;. Use the &quot;HexColor&quot; applet to convert RGB color to
+    hexadecimal color. </td>
+  </tr>
+</table>
+</div>
+
+<p>Copyright 1999-2000 Taiji Software<br>
+All Rights Reserved<br>
+<a href="http://www.taijisoftware.com">http://www.taijisoftware.com</a><br>
+<a href="mailto:support@taijisoftware.com">support@taijisoftware.com</a></p>
+</body>
+</html>

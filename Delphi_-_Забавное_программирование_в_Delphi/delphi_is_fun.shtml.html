@@ -1,0 +1,791 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ <HTML>
+    <HEAD>
+     <STYLE type="text/css">
+     A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:link {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:visited {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:hover {COLOR: #2776FA; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} .b {text-decoration: none; color:#FF0000;}  .b:hover {color:#7785FF;} .c {text-decoration: none; color:#000000;}  .c:hover {color:#FFFFFF;}  pre {color: blue;} PRE.a {color: black;} TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt} </STYLE>
+     <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+     <META content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+     <META NAME="RESOURCE-TYPE" CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+     <TITLE>
+    Информационный сервер для программистов - исходники со всего света.</TITLE>
+   </HEAD>
+    <BODY topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+      <FORM action="http://www.sources.ru/cgi-bin/sources/search/search.cgi" method="get" align="left">
+         <INPUT type="hidden" name="stpos" value="0">
+           <TABLE border="0" cellpadding="0"   cellspacing="0" width="750">
+	     <TR>
+	       <TD valign="top" rowspan="2">
+	    	 <TABLE border="0" cellpadding="0" cellspacing="0" width="287">
+	           <TR>
+		     <TD colspan="2" bgcolor="#A5E4A7" valign="middle" align="center">
+		     <B>WWW.ИСХОДНИКИ.РУ</B>
+		     </TD>
+		     <TD bgcolor="#000080" valign="middle" align="center">
+		     <B><FONT face="Tahoma" style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    cpp.sources.ru</FONT>
+		  </B>
+		</TD>
+	               </TR>
+	               <TR>
+		           <TD bgcolor="#000080" valign="middle" align="center">
+		  <B>
+		    <FONT face="Tahoma"           style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    java.sources.ru</FONT>
+		  </B>
+		</TD>
+		           <TD bgcolor="#C0C0C0" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    web.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#A5E4A7" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    soft.sources.ru</B>
+		  </FONT>
+		</TD>
+	               </TR>
+	               <TR>
+		           <TD bgcolor="#C0C0C0" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    jdbc.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#A5E4A7" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    asp.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#000080" valign="middle" align="center">
+		  <B>
+		    <FONT face="Tahoma"           style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    api.sources.ru</FONT>
+		  </B>
+		</TD>
+	      </TR>
+	    </TABLE>
+	    <TABLE border="0" cellpadding="0" cellspacing="0" width="100%">
+	      <TR>
+		<TD>
+		  <FONT style="font-size: 8pt" size="2" face="Tahoma">
+		    &nbsp; Поиск по           программированию :<BR>
+		             </FONT>
+		  &nbsp; <INPUT type="text" size="13" name="query">
+		   <INPUT type="submit"           value="Поиск">
+		  <FONT size="1">
+		    <INPUT TYPE="Radio" NAME="stype" VALUE="AND" checked>
+		    &quot;AND&quot; <INPUT TYPE="Radio"           NAME="stype" VALUE="OR">
+		  &quot;OR&quot;</FONT>
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="top10000.gif" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ 
+"&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+
+<!-- HotLog -->
+<script language="javascript">
+hotlog_js="1.0";hotlog_d=document; hotlog_n=navigator;hotlog_rn=Math.random();
+hotlog_n_n=(hotlog_n.appName.substring(0,3)=="Mic")?0:1;
+hotlog_r=""+hotlog_rn+"&s=14399&r="+escape(hotlog_d.referrer)+"&pg="+
+escape(window.location.href);
+hotlog_d.cookie="hotlog=1"; hotlog_r+="&c="+(hotlog_d.cookie?"Y":"N");
+hotlog_d.cookie="hotlog=1; expires=Thu, 01-Jan-70 00:00:01 GMT"</script>
+<script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+<script language="javascript1.2">
+hotlog_js="1.2";hotlog_s=screen;
+hotlog_r+="&wh="+hotlog_s.width+'x'+hotlog_s.height+"&px="+((hotlog_n_n==0)?
+hotlog_s.colorDepth:hotlog_s.pixelDepth)</script>
+<script language="javascript1.3">hotlog_js="1.3"</script>
+<script language="javascript">hotlog_r+="&js="+hotlog_js;
+hotlog_d.write("<img src=\"http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&\" border=0 width=1 height=1>")</script>
+<noscript><img src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=14399" border=0 
+width=1 height=1></noscript>
+<!-- /HotLog -->
+
+		 </TD>
+	       </TR>
+	     </TABLE>
+	   </TD>
+	   <TD align="center">
+	     <A class=blue href="http://pascal.sources.ru/cd/index.htm">
+	     <IMG border=0 height=14 width=14 src="cd000000.gif">
+	     <B>Все исходники с сайта на компакт-диске!</B>
+	     <!-- <font style="font-size: 15pt" color="#4904B1" size="4" face="Times New Roman">
+             Информационный сервер</FONT>
+	     -->
+       </TD>
+     </TR>
+     <TR>
+         <TD>
+
+
+
+
+  <!-- SCALA
+      <A href=http://bs.boro.ru/click.php?bs=996 target=_blank>
+      <IMG src=http://www.sources.ru/scala5.gif width=468 height=60 border=0 alt="Всемирный разработчик и поставщик программного обеспечения по управлению бизнесом, финансами и производством для местных и международных компаний.">
+    </A>
+    <BR>
+   SCALA -->
+
+
+
+ <!-- БАННЕР IMHO
+   <a href="http://santa.imho.ru/click.ng/impt=imp&place=sources468x60&id=280404" target="_blank">
+    <IMG src="http://santa.imho.ru/image.ng/impt=imp&place=sources468x60&id=280404" width=468 height=60 border=0>
+</A>
+    БАННЕР IMHO -->
+
+
+
+
+   <!-- БАННЕР TBN -->
+
+ 	<CENTER>
+ <SCRIPT language='JavaScript'>
+ var loc = ''; </SCRIPT>
+ <SCRIPT language='JavaScript1.4'>
+try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+ <SCRIPT language='JavaScript'>
+  document.write("<SC"+"RIPT language='JavaScript' src='http://ad.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2845047&pg=2&r=js&ssi=nofillers&vbn=188&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>"); </SCRIPT>
+ </CENTER>
+ <CENTER>
+  <FONT SIZE=1>
+    <A HREF="http://www.tbn.ru/" target = "_top" >
+    TBN.ru - СЕТЬ, ЖИВУЩАЯ ПО ПРАВИЛАМ</A>
+  </FONT>
+</CENTER>
+<!-- БАННЕР TBN-->
+
+
+
+           </TD>
+     </TR>
+     <TR>
+         <TD colspan="2">
+    <TABLE border="0" cellpadding="0" cellspacing="1" width="100%">
+               <TR>
+	           <TD align="center" width="11%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/index.html">
+	    <FONT color="#000000" size="2">
+	    На главную</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="20%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/subscribe.shtml">
+	    <FONT color="#000000" size="2">
+	    Подписаться на новости</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="11%" bgcolor="#E0E0C6">
+	  <A href="http://forum.sources.ru/">
+	    <FONT color="#000000" size="2">
+	    Форум</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="9%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/books/index.html">
+	    <FONT color="#000000" size="2">
+	    Книги</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="9%" bgcolor="#E0E0C6">
+	  <A href="http://www.titl.ru/">
+	    <FONT color="#000000" size="2">
+	    Хостинг</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="13%" bgcolor="#E0E0C6">
+	  <A href="http://www.countries.ru/">
+	    <FONT color="#000000" size="2">
+	    Страны мира</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="29%" bgcolor="#E0E0C6">
+	  <b>13</b> пользователей на сервере.
+
+	</TD>
+               </TR>
+           </TABLE>
+         </TD>
+     </TR>
+   </TABLE>
+ </FORM>
+
+<!-- ТЕКСТОВЫЙ БАННЕР CERTIFICATION   <center>
+ <TABLE border="1" width="322" cellspacing="0">
+     <TR>
+         <TD width="318">
+      <SMALL>
+	<FONT face="Arial">
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <B>
+	  Сертификация специалистов</B>
+	  <BR>
+	       - Как устроиться на высокооплачиваемую работу ?<BR>
+	       - Как получить прибавку к зарплате ?<BR>
+	       - Как завоевать уважение коллег ?<BR>
+	       - <A href="http://www.certifications.ru" target="_blank">
+	  Пройти     сертификацию</A>
+	   и продемонстрировать<BR>
+	       &nbsp;&nbsp; свой профессионализм. <A href="http://www.certifications.ru/about/whatgives.php" target="_blank">
+	  Подробнее...</A>
+	</FONT>
+      </SMALL>
+    </TD>
+     </TR>
+ </TABLE>
+ </CENTER>
+ТЕКСТОВЫЙ БАННЕР CERTIFICATION --> 
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h3>Забавное программирование в Delphi</h3>
+    <p>Приведённый здесь материал можно озаглавить не
+    иначе как &quot;Чем заняться программисту, если
+    нечего делать&quot;. На самом деле, Delphi настолько
+    интересная среда, что в ней наряду с разработкой
+    серьёзных приложений можно легко увлечься
+    созданием абсолютно бесполезных вещей.</p>
+    <p>Итак, поехали...</p>
+    <p>&nbsp;</p>
+    <h3>Автоматически нажимающаяся кнопка</h3>
+    <p>Этот компонент представляет из себя кнопку, на
+    которую не надо нажимать, чтобы получить событие
+    OnClick. Достаточно переместить курсор мышки на
+    кнопку. При создании такого компонента
+    традиционным способом, требуется довольно много
+    времени, так как необходимо обрабатывать мышку,
+    перехватывать её и т.д. Однако результат стоит
+    того!</p>
+    <p>Предлагаю взглянуть на две версии данного
+    компонента. В более простой версии обработчик
+    перемещения мышки просто перехватывает
+    сообщения Windows с нужным кодом и вызывает
+    обработчик события OnClick:</p>
+    <pre>type
+  TAutoButton1 = class(TButton)
+  private
+    procedure WmMouseMove (var Msg: TMessage);
+      message wm_MouseMove;
+  end;
+
+procedure TAutoButton1.WmMouseMove (var Msg: TMessage);
+begin
+  inherited;
+  if Assigned (OnClick) then
+    OnClick (self);
+end;
+</pre>
+    <p>Вторая версии имеет больше исходного кода, так
+    как в ней я просто пытаюсь повторить событие
+    мышки OnClick когда пользователь перемещает мышку
+    над кнопкой либо по истечении определённого
+    времени. Далее следует объявление класса: </p>
+    <pre>type
+  TAutoKind = (akTime, akMovement, akBoth);
+
+  TAutoButton2 = class(TButton)
+  private
+    FAutoKind: TAutoKind;
+    FMovements: Integer;
+    FSeconds: Integer;
+    // really private
+    CurrMov: Integer;
+    Capture: Boolean;
+    MyTimer: TTimer;
+    procedure EndCapture;
+    // обработчики сообщений
+    procedure WmMouseMove (var Msg: TWMMouse);
+      message wm_MouseMove;
+    procedure TimerProc (Sender: TObject);
+    procedure WmLBUttonDown (var Msg: TMessage);
+      message wm_LBUttonDown;
+    procedure WmLButtonUp (var Msg: TMessage);
+      message wm_LButtonUp;
+  public
+    constructor Create (AOwner: TComponent); override;
+  published
+    property AutoKind: TAutoKind
+      read FAutoKind write FAutoKind default akTime;
+    property Movements: Integer
+      read FMovements write FMovements default 5;
+    property Seconds: Integer
+      read FSeconds write FSeconds default 10;
+  end;
+</pre>
+    <p>Итак, когда курсор мышки попадает в область
+    кнопки (WmMouseMove), то компонент запускает таймер
+    либо счётчик количества сообщений о перемещении.
+    По истечении определённого времени либо при
+    получении нужного количества сообщений о
+    перемещении, компонент эмулирует событие
+    нажатия кнопкой.</p>
+    <pre>procedure TAutoButton2.WmMouseMove (var Msg: TWMMouse);
+begin
+  inherited;
+  if not Capture then
+  begin
+    SetCapture (Handle);
+    Capture := True;
+    CurrMov := 0;
+    if FAutoKind &lt;&gt; akMovement then
+    begin
+      MyTimer := TTimer.Create (Parent);
+      if FSeconds &lt;&gt; 0 then
+        MyTimer.Interval := 3000
+      else
+        MyTimer.Interval := FSeconds * 1000;
+      MyTimer.OnTimer := TimerProc;
+      MyTimer.Enabled := True;
+    end;
+  end
+  else // захватываем
+  begin
+    if (Msg.XPos &gt; 0) and (Msg.XPos &lt; Width)
+      and (Msg.YPos &gt; 0) and (Msg.YPos &lt; Height) then
+    begin
+      // если мы подсчитываем кол-во движений...
+      if FAutoKind &lt;&gt; akTime then
+      begin
+        Inc (CurrMov);
+        if CurrMov &gt;= FMovements then
+        begin
+          if Assigned (OnClick) then
+            OnClick (self);
+          EndCapture;
+        end;
+      end;
+    end
+    else // за пределами... стоп!
+      EndCapture;
+  end;
+end;
+
+procedure TAutoButton2.EndCapture;
+begin
+  Capture := False;
+  ReleaseCapture;
+  if Assigned (MyTimer) then
+  begin
+    MyTimer.Enabled := False;
+    MyTimer.Free;
+    MyTimer := nil;
+  end;
+end;
+
+procedure TAutoButton2.TimerProc (Sender: TObject);
+begin
+  if Assigned (OnClick) then
+    OnClick (self);
+  EndCapture;
+end;
+
+procedure TAutoButton2.WmLBUttonDown (var Msg: TMessage);
+begin
+  if not Capture then
+    inherited;
+end;
+
+procedure TAutoButton2.WmLButtonUp (var Msg: TMessage);
+begin
+  if not Capture then
+    inherited;
+end;
+</pre>
+    <p>&nbsp;</p>
+    <h3>Как осуществить ввод текста в компоненте Label ?</h3>
+    <p>Многие программисты задавая такой вопрос
+    получают на него стандартный ответ &quot;используй
+    edit box.&quot; На самом же деле этот вопрос вполне
+    решаем, хотя лейблы и не основаны на окне и,
+    соответственно не могут получать фокус ввода и,
+    соответственно не могут получать символы,
+    вводимые с клавиатуры. Давайте рассмотрим шаги,
+    которые были предприняты мной для разработки
+    данного компонента.</p>
+    <p>Первый шаг, это кнопка, которая может
+    отображать вводимый текст:</p>
+    <pre>type
+  TInputButton = class(TButton)
+  private
+    procedure WmChar (var Msg: TWMChar);
+      message wm_Char;
+  end;
+
+procedure TInputButton.WmChar (var Msg: TWMChar);
+var
+  Temp: String;
+begin
+  if Char (Msg.CharCode) = #8 then
+  begin
+    Temp := Caption;
+    Delete (Temp, Length (Temp), 1);
+    Caption := Temp;
+  end
+  else
+    Caption := Caption + Char (Msg.CharCode);
+end;
+</pre>
+    <p>С меткой (label) дела обстоят немного сложнее, так
+    как прийдётся создать некоторые ухищрения, чтобы
+    обойти её внутреннюю структуру. Впринципе,
+    проблему можно решить созданием других скрытых
+    компонент (кстати, тот же edit box). Итак, посмотрим на
+    объявление класса:</p>
+    <pre>type
+  TInputLabel = class (TLabel)
+  private
+    MyEdit: TEdit;
+    procedure WMLButtonDown (var Msg: TMessage);
+      message wm_LButtonDown;
+  protected
+    procedure EditChange (Sender: TObject);
+    procedure EditExit (Sender: TObject);
+  public
+    constructor Create (AOwner: TComponent); override;
+  end;
+</pre>
+    <p>Когда метка (label) создана, то она в свою очередь
+    создаёт edit box и устанавливает несколько
+    обработчиков событий для него. Фактически, если
+    пользователь кликает по метке, то фокус
+    перемещается на (невидимый) edit box, и мы используем
+    его события для обновления метки. Обратите
+    внимание на ту часть кода, которая подражает
+    фокусу для метки (рисует прямоугольничек),
+    основанная на API функции DrawFocusRect: </p>
+    <pre>constructor TInputLabel.Create (AOwner: TComponent);
+begin
+  inherited Create (AOwner);
+
+  MyEdit := TEdit.Create (AOwner);
+  MyEdit.Parent := AOwner as TForm;
+  MyEdit.Width := 0;
+  MyEdit.Height := 0;
+  MyEdit.TabStop := False;
+  MyEdit.OnChange := EditChange;
+  MyEdit.OnExit := EditExit;
+end;
+
+procedure TInputLabel.WMLButtonDown (var Msg: TMessage);
+begin
+  MyEdit.SetFocus;
+  MyEdit.Text := Caption;
+  (Owner as TForm).Canvas.DrawFocusRect (BoundsRect);
+end;
+
+procedure TInputLabel.EditChange (Sender: TObject);
+begin
+  Caption := MyEdit.Text;
+  Invalidate;
+  Update;
+  (Owner as TForm).Canvas.DrawFocusRect (BoundsRect);
+end;
+
+procedure TInputLabel.EditExit (Sender: TObject);
+begin
+  (Owner as TForm).Invalidate;
+end;
+</pre>
+    <p>&nbsp;</p>
+    <h3>Кнопка со звуком</h3>
+    <p>Когда Вы нажимаете на кнопку, то видите
+    трёхмерный эффект нажатия. А как же насчёт
+    четвёртого измерения, например звука ? Ну тогда
+    нам понадобится звук для нажатия и звук для
+    отпускания кнопки. Если есть желание, то можно
+    добавить даже речевую подсказку, однако не будем
+    сильно углубляться.</p>
+    <p>Компонент звуковой кнопки имеет два новых
+    свойства:</p>
+    <pre>type
+  TDdhSoundButton = class(TButton)
+  private
+    FSoundUp, FSoundDown: string;
+  protected
+    procedure MouseDown(Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer); override;
+    procedure MouseUp(Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer); override;
+  published
+    property SoundUp: string
+      read FSoundUp write FSoundUp;
+    property SoundDown: string
+      read FSoundDown write FSoundDown;
+  end;
+</pre>
+    <p>Звуки будут проигрываться при нажатии и
+    отпускании кнопки:</p>
+    <pre>procedure TDdhSoundButton.MouseDown(
+  Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  inherited;
+  PlaySound (PChar (FSoundDown), 0, snd_Async);
+end;
+
+procedure TDdhSoundButton.MouseUp(Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  inherited;
+  PlaySound (PChar (FSoundUp), 0, snd_Async);
+end;
+</pre>
+    <p>&nbsp;</p>
+    <h3>Экранный вирус</h3>
+    <p>Никогда не видели экранного вируса?
+    Представьте, что Ваш экран заболел и покрылся
+    красными пятнами :) А если эта болезнь нападёт на
+    какое-нибудь окно ? Всё, что нам надо, это получить
+    контекст устройства при помощи API функции GetWindowDC
+    и рисовать, что душе угодно.</p>
+    <p>К исходному коду особых комментариев не
+    требуется, скажу лишь только то, что основная
+    часть кода находится в обработчике события OnTimer:</p>
+    <pre>type
+  TScreenVirus = class(TComponent)
+  private
+    FTimer: TTimer;
+    FInterval: Cardinal;
+    FColor: TColor;
+    FRadius: Integer;
+  protected
+    procedure OnTimer (Sender: TObject);
+    procedure SetInterval (Value: Cardinal);
+  public
+    constructor Create (AOwner: TComponent); override;
+    procedure StartInfection;
+  published
+    property Interval: Cardinal
+      read FInterval write SetInterval;
+    property Color: TColor
+      read FColor write FColor default clRed;
+    property Radius: Integer
+      read FRadius write FRadius default 10;
+  end;
+
+constructor TScreenVirus.Create (AOwner: TComponent);
+begin
+  inherited Create (AOwner);
+  FTimer := TTimer.Create (Owner);
+  FInterval := FTimer.Interval;
+  FTimer.Enabled := False;
+  FTimer.OnTimer := OnTimer;
+  FColor := clRed;
+  FRadius := 10;
+end;
+
+procedure TScreenVirus.StartInfection;
+begin
+  if Assigned (FTimer) then
+    FTimer.Enabled := True;
+end;
+
+procedure TScreenVirus.SetInterval (Value: Cardinal);
+begin
+  if Value &lt;&gt; FInterval then
+  begin
+    FInterval := Value;
+    FTimer.Interval := Interval;
+  end;
+end;
+
+procedure TScreenVirus.OnTimer (Sender: TObject);
+var
+  hdcDesk: THandle;
+  Brush: TBrush;
+  X, Y: Integer;
+begin
+  hdcDesk := GetWindowDC (GetDesktopWindow);
+  Brush := TBrush.Create;
+  Brush.Color := FColor;
+  SelectObject (hdcDesk, Brush.Handle);
+  X := Random (Screen.Width);
+  Y := Random (Screen.Height);
+  Ellipse (hdcDesk, X - FRadius, Y - FRadius,
+    X + FRadius, Y + FRadius);
+  ReleaseDC (hdcDesk, GetDesktopWindow);
+  Brush.Free;
+end;
+</pre>
+    <p>&nbsp;</p>
+    <h3>Шутки над пользователем</h3>
+    <p>Некоторых пользователей врят ли можно будет
+    испугать экранным вирусом, однако можно
+    воспользоваться другими способами запугивания,
+    например: прозрачные окошки, недоступные пункты
+    меню с большим количеством подуровней, а так же
+    сообщения об ошибках, которые нельзя убрать.</p>
+    <p>В приведённом ниже примере при помощи обычного
+    диалогового окна пользователю показывается
+    сообщение об ошибке, причём кнопка &quot;close&quot;
+    накак не хочет нажиматься. У этого диалога есть
+    зависимое окно, которое показывается, при
+    нажатии кнопки &quot;details&quot;.</p>
+    <p>Поддельная форма с сообщением об ошибке имеет
+    кнопку &quot;details&quot;, которая открывает вторую
+    часть формы. Это достигается путём добавления
+    компонента за пределы самой формы:</p>
+    <pre>object Form2: TForm2
+  AutoScroll = False
+  Caption = 'Error'
+  ClientHeight = 93
+  ClientWidth = 320
+  OnShow = FormShow
+  object Label1: TLabel
+    Left = 56
+    Top = 16
+    Width = 172
+    Height = 65
+    AutoSize = False
+    Caption = 
+      'Программа выполнила недопустимую ' +
+	  'операцию. Если проблема повторится, ' +
+      'то обратитесь к разработчику программного обеспечения.'
+    WordWrap = True
+  end
+  object Image1: TImage
+    Left = 8
+    Top = 16
+    Width = 41
+    Height = 41
+    Picture.Data = {...}
+  end
+  object Button1: TButton
+    Left = 240
+    Top = 16
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 240
+    Top = 56
+    Width = 75
+    Height = 25
+    Caption = 'Details &gt;&gt;'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object Memo1: TMemo // за пределами формы!
+    Left = 24
+    Top = 104
+    Width = 265
+    Height = 89
+    Color = clBtnFace
+    Lines.Strings = (
+      'AX:BX    73A5:495B'
+      'SX:PK    676F:FFFF'
+      'OH:OH   7645:2347'
+      'Crash    3485:9874'
+      ''
+      'What'#39's going on here?')
+    TabOrder = 2
+  end
+end
+</pre>
+    <p>Когда пользователь нажимает кнопку &quot;details&quot;,
+    то программа просто изменяет размер формы:</p>
+    <pre>procedure TForm2.Button2Click(Sender: TObject);
+begin
+  Height := 231;
+end;
+</pre>
+    <p>Вторая форма, которая наследуется от первой
+    имеет перемещающуюся кнопку &quot;close&quot;: </p>
+    <pre>procedure TForm3.Button1Click(Sender: TObject);
+begin
+  Button1.Left := Random (ClientWidth - Button1.Width);
+  Button1.Top := Random (ClientHeight - Button1.Height);
+end;
+</pre>
+    <p>В заключении, можно сделать дырку в окне,
+    используя API функцию SetWindowRgn:</p>
+    <pre>procedure TForm1.Button4Click(Sender: TObject);
+var
+  HRegion1, Hreg2, Hreg3: THandle;
+  Col: TColor;
+begin
+  ShowMessage ('Ready for a real crash?');
+  Col := Color;
+  Color := clRed;
+  PlaySound ('boom.wav', 0, snd_sync);
+  HRegion1 := CreatePolygonRgn (Pts,
+    sizeof (Pts) div 8,
+    alternate);
+  SetWindowRgn (
+    Handle, HRegion1, True);
+  ShowMessage ('Now, what have you done?');
+  Color := Col;
+  ShowMessage ('Вам лучше купить новый монитор');
+end;
+</pre>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</center></div></TBODY>
+
+
+<p align="center"><br>
+<br>
+</p>
+
+
+<div align="center">
+<hr width="700">
+
+<SCRIPT language='JavaScript'> var loc = ''; </SCRIPT>
+<SCRIPT language='JavaScript1.4'>try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+<SCRIPT language='JavaScript'>
+ document.write("<SC"+"RIPT language='JavaScript' src='http://ad.strict.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2850676&pg=3&r=js&ssi=nofillers&vbn=353&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>");
+</SCRIPT>
+</div>
+</body>
+</html>
+
+<!-- This document saved from http://www.sources.ru/delphi/delphi_is_fun.shtml -->

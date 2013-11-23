@@ -1,0 +1,383 @@
+<html>
+
+<head>
+<title>CCPUTicker v1.21</title>
+</head>
+
+<body>
+
+<p><font face="Arial"><img src="cputicker.gif" width="50" height="57"><strong><font
+color="#000000" size="6">CCPUTicker v1.</font></font><font color="#000000" size="6"
+face="Arial">21</font></strong></p>
+
+<p><font face="Arial">Welcome to CCPUTicker, An ultra high precision MFC timing class for
+Pentium or greater CPU's. resolution timing<font color="#000000" size="3">.</font></font></p>
+
+<table border="0">
+  <tr>
+    <td><font size="5" face="Arial"><strong>Contents</strong></font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial"><a href="#Features">Features</a></font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial"><a href="#History">History</a></font></td>
+  </tr>
+  <tr>
+    <td><a class="normal" href="#reference"><font face="Arial">API Reference</font></a></td>
+  </tr>
+  <tr>
+    <td><font face="Arial"><a href="#Usage">Usage</a></font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial"><a href="#Contact">Contacting the Author</a></font></td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><big><a name="Features"><span class="fr"></span></a></big><font
+color="#000000" size="5"><strong>Features</strong></font><big> </big></font></p>
+
+<p><font face="Arial" size="3">This class</font><font face="Arial" size="4"> </font><font
+face="Arial" size="3">implements an MFC wrapper class for the Pentium-specific (or better)
+time stamp counter which can be accessed using the &quot;RDTSC&quot; assembly language
+instruction. This counter has a resolution in terms of PCLKS (processor clocks) so if you
+have a 200 MHz CPU then this class will give a frequency of 200 MHz. The value returned is
+an 64 bit integer so assuming your CPU runs at 200 MHz, the value will take roughly 3000
+years to roll over. As the value also starts counting from 0, the value returned is the
+number of cpu ticks since the computer was turned on.</font></p>
+
+<p><font face="Arial" size="3">Because the timer is part of the CPU hardware, it is
+unaffected by processor activity and workload. The class has only been tested on Intel
+CPU's (486, Pentium, Pentium Pro &amp; Pentium 2). Feedback about its behaviour on other
+CPU types would be appreciated. The class can also be used on Windows NT without any
+problems.</font></p>
+
+<p><font face="Arial" size="3">The class itself was developed originally by </font><a
+href="http://www.hussar.demon.co.uk/"><font face="Arial" size="3">J.M.McGuiness</font></a><font
+face="Arial" size="3"> and continues to be co-developed by both authors.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><big><a name="History"></a></big><font color="#000000" size="5"><strong>History</strong></font></font></p>
+
+<p><strong><font face="Arial" color="#000000" size="3">V1.0 (26 March 1996)</font><font
+face="Arial"> </font></strong>
+
+<ul>
+  <li><font face="Arial">Initial creation of the class by </font><a
+    href="http://www.hussar.demon.co.uk/"><font face="Arial" size="3">J.M.McGuiness</font></a><font
+    face="Arial" size="3">.</font></li>
+</ul>
+
+<p><strong><font face="Arial" color="#000000" size="3">V1.1 (16 July 1997)</font><font
+face="Arial"> </font></strong>
+
+<ul>
+  <li><font face="Arial">Support for running on Windows NT</font></li>
+  <li><font face="Arial">now uses the build-in 64 bit data type &quot;__int64&quot;</font></li>
+  <li><font face="Arial">Improved diagnostic info thanks to the above</font></li>
+  <li><font face="Arial">Usage of static variables to improve efficiency</font></li>
+  <li><font face="Arial">Addition of a function which will convert from CPU ticks to seconds</font></li>
+  <li><font face="Arial">Improved adherence to the MFC coding style and standards</font></li>
+</ul>
+
+<p><strong><font face="Arial" color="#000000" size="3">V1.2 (14 January 1999)</font><font
+face="Arial"> </font></strong>
+
+<ul>
+  <li><font face="Arial">Fixed a bug discovered by <a href="mailto:davidg@autodebit.com">David
+    Green-Seed</a> where he was experiencing access violations when the code was compiled with
+    optimisations turned on on a Pentium II. The problem was that (on a PII) the RDTSC
+    instruction touches more registers than expected. This has now been fixed by saving and
+    restoring the EAX and EBX registers around the call to RDTSC.</font></li>
+  <li><font face="Arial">Provision of HTML documentation (this file) for the class.</font></li>
+  <li><font face="Arial">A Visual C++ 5.0 workspace file is now provided as standard.</font></li>
+  <li><font face="Arial">Code now compiles cleanly at warning level 4.</font></li>
+  <li><font face="Arial">General code tidy up of const functions, parameters etc.</font></li>
+  <li><font face="Arial">Sample program now also reports the &quot;Up&quot; time of the
+    computer.</font></li>
+</ul>
+
+<p><strong><font face="Arial" color="#000000" size="3">V1.21 (18 January 1999)</font><font
+face="Arial"> </font></strong>
+
+<ul>
+  <li><font face="Arial">No code changes included. Just updated this file regarding some
+    development notes which may be of interest to the user of CCPUTicker. They were suggested
+    from feedback by </font><font face="Arial"><a href="mailto:davidg@autodebit.com">David
+    Green-Seed</a> and are included in the <a href="#Usage">Usage</a> section below</font></li>
+</ul>
+
+<p><strong><font face="Arial" color="#000000" size="3">21 January 1999</font><font
+face="Arial"> </font></strong>
+
+<ul>
+  <li><font face="Arial">No code changes included. Just updated this file regarding use on SMP
+    machines.</font></li>
+</ul>
+
+<p><strong><font face="Arial" color="#000000" size="3">27 January 1999</font><font
+face="Arial"> </font></strong>
+
+<ul>
+  <li><font face="Arial">No code changes included. Just updated this file regarding use on SMP
+    machines.</font></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><big><a name="reference"></a><font face="Arial"><big><strong>API Reference</strong></big></font></big></p>
+
+<p><font face="Arial">The API is made of the following public methods of the CCPUTicker
+class</font></p>
+
+<p><font face="Arial"><a href="#CCPUTicker">CCPUTicker()</a><br>
+<a href="#operator=">operator=()</a><br>
+<a href="#Measure">Measure()</a><br>
+<a href="#GetTickCountAsSeconds">GetTickCountAsSeconds()</a><br>
+<a href="#GetTickCount">GetTickCount()</a><br>
+<a href="#GetCPUFrequency">GetCPUFrequency()</a><br>
+<a href="#IsAvailable">IsAvailable()</a><br>
+<a href="#AssertValid">AssertValid()</a><br>
+<a href="#Dump">Dump()</a></font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><a name="CCPUTicker"></a><font face="Arial"><big><strong>CCPUTicker::CCPUTicker</strong></big></font></p>
+
+<p><font face="Arial"><strong><span class="op">CCPUTicker(</span> <span class="op">);</span></strong></font></p>
+
+<p><font face="Arial"><strong><span class="op">CCPUTicker(</span>const CCPUTicker&amp;
+ticker<span class="op">);</span></strong></font></p>
+
+<p><font face="Arial"><strong><span class="op">Parameters</span></strong></font></p>
+
+<p><font face="Arial"><span class="op"><em>ticker</em><strong> </strong>another instance
+of a CCPUTicker</span></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Standard constructor and copy constructor for the class which just
+initialise some internal variables.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="operator="></a><font face="Arial"><big><strong>CCPUTicker::operator=</strong></big></font></p>
+
+<p><font face="Arial"><strong><span class="op">CCPUTicker&amp; operator=(</span>const
+CCPUTicker&amp; ticker<span class="op">);</span></strong></font></p>
+
+<p><font face="Arial"><strong><span class="op">Parameters</span></strong></font></p>
+
+<p><font face="Arial"><span class="op"><em>ticker</em><strong> </strong>another instance
+of a CCPUTicker</span></font></p>
+
+<p><font face="Arial"><strong><span class="op">Return value</span></strong></font></p>
+
+<p><font face="Arial"><span class="op">Usual reference to this from a C++ operator=
+function.</span></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Standard operator= for the class.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="Measure"></a><font face="Arial"><big><strong>CCPUTicker::Measure</strong></big></font></p>
+
+<p><font face="Arial"><big><strong>void Measure();</strong></big></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Calling this function retrieves the current value of the RDTSC
+counter into this CCPUTicker instance.</font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><a name="GetTickCountAsSeconds"></a><big><strong>CCPUTicker::GetTickCountAsSeconds</strong></big></font></p>
+
+<p><font face="Arial"><big><strong>double GetTickCountAsSeconds() const;</strong></big></font></p>
+
+<p><font face="Arial"><strong><span class="op">Return value</span></strong></font></p>
+
+<p><font face="Arial"><span class="op">The current RDTSC counter value in seconds.</span></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Calling this function retrieves the stored value of the RDTSC
+counter from this instance as seconds. The number of seconds is the &quot;Up&quot; time of
+the computer. Because the counter is stored in clock ticks, the first time this function
+is called by any of your code, the processor clock frequency will be estimated using an
+internal timing routine. Please note that this can appear to hang the current process for
+up to 20 seconds when this is being performed. Please see the <a href="#Usage">Usage</a>
+section below for important development notes regarding this function.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="GetTickCount"></a><font face="Arial"><big><strong>CCPUTicker::GetTickCount</strong></big></font></p>
+
+<p><font face="Arial"><big><strong>__int64 GetTickCount() const;</strong></big></font></p>
+
+<p><font face="Arial"><strong><span class="op">Return value</span></strong></font></p>
+
+<p><font face="Arial"><span class="op">The current RDTSC counter value in clock ticks.</span></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Calling this function retrieves the stored value of the RDTSC
+counter from this instance as clock ticks. This function is a simple accessor on the value
+which the class will have obtained on the last call to its Measure method.</font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><a name="GetCPUFrequency"></a><big><strong>CCPUTicker::GetCPUFrequency</strong></big></font></p>
+
+<p><font face="Arial"><big><strong>static BOOL GetCPUFrequency(double&amp; frequency,
+double&amp; target_ave_dev,&nbsp; unsigned long interval = 1000, unsigned int max_loops =
+20) const;</strong></big></font></p>
+
+<p><font face="Arial"><strong><span class="op">Parameters</span></strong></font></p>
+
+<p><font face="Arial"><span class="op"><em>frequency</em> Upon successful return, this
+will contain the processor clock frequency in Hertz.</span></font></p>
+
+<p><font face="Arial"><span class="op"><em>target_ave_dev</em>&nbsp; Upon successful
+return, this will contain the estimated average deviation of the processor clock frequency
+in Hertz.</span></font></p>
+
+<p><font face="Arial"><span class="op"><em>interval</em> Interval in milliseconds for each
+timing loop.</span></font></p>
+
+<p><font face="Arial"><span class="op"><em>max_loops</em> The maximum number of timing
+loops to use to estimate the processor clock frequency with.</span></font></p>
+
+<p><font face="Arial"><strong><span class="op">Return value</span></strong></font></p>
+
+<p><font face="Arial"><span class="op">TRUE if the CPU frequency was returned
+successfully, otherwise FALSE. Use GetLastError to determine the cause if this happens.</span></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">This function will work out the processor clock frequency to a
+specified accuracy determined by the target average deviation required. Note that the
+worst average deviation of the result is less than 5MHz for a mean frequency of 90MHz. So
+basically the target average deviation is supplied only if you want a more accurate
+result, it won't let you get a worse one. (Units are Hz.). The average deviation is a
+better and more robust measure than it's cousin the standard deviation of a quantity. The
+item determined by each is essentially similar. See &quot;Numerical Recipies&quot;,
+W.Press et al for more details. This function will run for a maximum of 20 seconds by
+default before giving up on trying to improve the average deviation, with the average
+deviation actually achieved replacing the supplied target value. Use &quot;max_loops&quot;
+to change this. To improve the value the function converges to increase
+&quot;interval&quot; (which is in units of ms, default value=1000ms). Please see the <a
+href="#Usage">Usage</a> section below for important development notes regarding this
+function.</font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><a name="IsAvailable"></a><big><strong>CCPUTicker::IsAvailable</strong></big></font></p>
+
+<p><font face="Arial"><big><strong>BOOL IsAvailable() const;</strong></big></font></p>
+
+<p><font face="Arial"><strong><span class="op">Return value</span></strong></font></p>
+
+<p><font face="Arial"><span class="op">TRUE if this machine has the &quot;RDTSC&quot;
+instruction available for timing otherwise FALSE.</span></font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="AssertValid"></a><font face="Arial"><big><strong>CCPUTicker::AssertValid</strong></big></font></p>
+
+<p><font face="Arial"><big><strong>virtual void AssertValid() const;</strong></big></font></p>
+
+<p><font face="Arial"><strong><span class="op">Remarks</span></strong></font></p>
+
+<p><font face="Arial"><span class="op">Standard MFC diagnostic function.</span></font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><a name="Dump"></a><big><strong>CCPUTicker::Dump</strong></big></font></p>
+
+<p><font face="Arial"><big><strong>virtual void Dump(CDumpContext&amp; dc) const;</strong></big></font></p>
+
+<p><font face="Arial"><strong><span class="op">Remarks</span></strong></font></p>
+
+<p><font face="Arial"><span class="op">Standard MFC diagnostic function.</span></font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><a name="Usage"></a><font color="#000000" size="5"><strong>Usage</strong></font></font></p>
+<font face="Arial">
+
+<p>The sample app is a simple MFC message box based demonstration which will time the
+accuracy of a call to the SDK call &quot;Sleep(1000)&quot; and also report how long your
+machine has been &quot;Up&quot;.</font></p>
+
+<p><font face="Arial">To use CCPUTicker in your project simply include cputicker.cpp from
+the test application in your application and #include &quot;cputicker.h&quot; in whichever
+files you want to use the class in.</font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial">The following points should be born in mind when developing code
+with CCPUTicker</font></p>
+
+<p><font face="Arial"><em>Usage on SMP Machines(Symmetric Multiprocessing Machines) i.e.
+NT with 2 or more CPU's</em></font></p>
+
+<p><font face="Arial">Consider the following scenario: we intend to get an idea of how
+long (real time) something takes by taking two readings of RDTSC, and using the
+difference/frequency to give us a time reading. Suppose the first reading is taken from
+CPU0, and the second reading is taken from CPU1 (the process is not necessarily always run
+on the same CPU). Since the the CPU's RDTSC instructions are separate, the RDTSC on one
+CPU is not related at all to the RDTSC on the other CPU - so the readings would have no
+relation at all!. You should work around this problem at your application level. Detecting
+a SMP machine can be done by calling the GetSystemInfo SDK function and examining the
+dwNumberOfProcessors in the structure returned. You should also have a look at the
+SetProcessAffinityMask function to ensure that your code will always run on only a single
+CPU.</font></p>
+
+<p>&nbsp;</p>
+
+<p><em><font face="Arial">Re: APM, ACPI, CPU overheating</font></em></p>
+
+<p><font face="Arial">On many machines, the clock speed of the CPU can be slowed (and
+later increased) by these. Thus calculating real time from clock cycles may not be valid.
+(Suppose the clock was changed between the first and second reading, or suppose that the
+clock frequency was calculated at one speed, and later it was changed....). Please bear in
+mind that calls to GetCPUFrequency and GetTickCountAsSeconds are dependent on the CPU
+frequency being invariant over timer. If the CPU frequency does change over time then
+anything reported as seconds may not be accurate. If you just want to retrieve the up time
+of the computer, you should use the GetTickCount SDK function.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><big><big><a name="Contact"></a></big></big><font color="#000000"
+size="5"><strong>Contacting the Author</strong></font></font></p>
+
+<p><font face="Arial" color="#000000" size="3">PJ Naughter<br>
+Email: </font><font face="Arial" color="#000000" size="3"><a href="mailto:pjn@indigo..ie">pjn@indigo..ie</a><br>
+Web: </font><font face="Arial" color="#000000" size="3"><a href="http://indigo.ie/~pjn">http://indigo.ie/~pjn</a><br>
+27 January 1999</font></p>
+</body>
+</html>

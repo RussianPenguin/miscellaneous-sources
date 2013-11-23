@@ -1,0 +1,54 @@
+Microsoft (R) Help Compiler
+HCRTF 4.03.0002
+Copyright (c) Microsoft Corp 1990 - 1995. All rights reserved.
+dict.hpj
+    HC4010: Warning: 
+	There are more opening braces than closing braces.
+    HC1003: Note: topic #3 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	A paragraph marker is formatted as a hidden character.
+    HC1012: Note: topic #4 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1012: Note: topic #5 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1012: Note: topic #6 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1012: Note: topic #7 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1012: Note: topic #8 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1012: Note: topic #9 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1003: Note: topic #11 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	A paragraph marker is formatted as a hidden character.
+    HC1003: Note: topic #11 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	A paragraph marker is formatted as a hidden character.
+    HC1003: Note: topic #11 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	A paragraph marker is formatted as a hidden character.
+    HC1003: Note: topic #11 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	A paragraph marker is formatted as a hidden character.
+    HC1003: Note: topic #11 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	A paragraph marker is formatted as a hidden character.
+    HC1012: Note: topic #20 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1012: Note: topic #22 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1012: Note: topic #27 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC1012: Note: topic #35 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Table cell borders are not supported.
+    HC3048: Warning: topic #35 of C:\PROJECTS\WIZ\help\eng\reader.rtf : 
+	Nonscrolling region defined after scrolling region.
+    HC1010: Note: 
+	The following mapped Topic IDs were not used in any topic:
+	contxstat
+37	Topics
+17	Jumps
+0	Keywords
+1	Bitmap
+
+
+Created C:\PROJECTS\WIZ\help\eng\wiz.hlp, 33,953 bytes
+Bitmaps: 8,839 bytes
+Hall+Zeck compression decreased help file by 9,573 bytes.
+Compile time: 0 minutes, 5 seconds
+17 notes, 2 warnings

@@ -1,0 +1,539 @@
+<HTML>
+<HEAD>
+   	<META NAME="description" content="The consulting.com vertical text scroller applet">
+   	<META NAME="keywords" content="consulting.com Java Vertical Text Scrolling Applet">
+
+	<TITLE>The consulting.com ConsultTree Site Explorer Applet</TITLE>
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+	<img src="./logo.gif">
+	
+	<TABLE width=640>
+	<tr><td colspan=2>
+		<font face="Verdana,Arial" size=2 color=red>
+		<b>ConsultTree Site Explorer</b>
+		</font>
+	<hr>
+	</td></tr>
+	<TR><TD align=left width=220 valign=top>					
+		<applet code="ConsultTreeTrial.class" width="220" height="240">
+		    <param name=copyright value="ConsultTree v1.0 Copyright (c) 1998, consulting.com Inc.">
+
+		    <!param name=linkFrame value="">
+		    <param name=backgroundColor value="255,255,255">
+		    <param name=dotColor value="gray">
+		    <param name=boxColor value="gray">
+		    <param name=plusColor value="black">
+		    <param name=highliteColor value="200,183,240">
+    		    <param name=dragScrollHor value="no">
+    		    <param name=dragScrollVert value="no">
+		    <param name=scrollBar value="yes">
+		    <param name=border value="yes">
+		    <param name=borderColor value="grey">
+		    <param name=canvasSize value="300,800">
+		    <param name=borderRaised value="yes">
+		    <param name=folderColor value="tan">
+		    <param name=textColor value="blue">
+		    <param name=descriptionColor value="orange">
+		    <param name=descriptionBorder value="white">
+		    <param name=fontStyle value="ITALIC">
+		    <param name=treeIndex value="DemotreeIndex.txt">
+		    <param name=treeLink value="DemotreeLink.txt">
+		</applet>
+	
+	</TD>
+	<td align=left valign=top>
+		<FONT face="Verdana,Arial" size=4 color=red>
+			Purchasing the Applet
+		</FONT>
+		<font face="Verdana,Arial" size=2>
+		<p>When using the free evaluation version of ConsultTree Site Explorer,
+		the message "free applets at www.consultcom.com" will be displayed
+		in the browser's status bar every couple of seconds. <i>It is a
+		violation of this license agreement to intentionally overwrite
+		this message</i>.
+		The purchased version does not display this message.
+		<p>
+		To order the purchased version of Site Explorer, please visit
+		<a href="http://www.consultcom.com">http://www.consultcom.com</a>
+		and browse to the Site Explorer page in our Java Software section.
+		
+		</font>
+	</td>
+	</TR>
+	</table>
+
+	<table width=640>
+	<tr><td>		
+		<hr>
+		<FONT face="Verdana,Arial" size=4 color=red>
+			Easy Setup
+		</FONT>
+		<BR>
+		<font face="Verdana,Arial" size=2>
+		The easiest way to set up the applet on your site is to start with Tree 
+		found on this page. First, view the source code for this page in Notepad. 
+		Then use Notepad and cut and paste the applet code into your own HTML page. 
+		This is the code from<br>		
+		<i>&ltapplet code="ConsultTreeTrial.class" width="220" height="480"&gt</i> 
+		<br>to 
+		<br><i>&lt/applet&gt</i>
+		<p>
+		Please make sure that the following files are all in the same 
+		directory as your html file: 
+		<ul>
+		<li>ConsultTreeTrial.class
+		<li>ConsultCanvas.class
+		<li>ConsultFolder.class
+		<li>ConsultImageScroller.class
+		<li>blueOpenFolder.gif
+		<li>blueCloseFolder.gif
+		<li>tanOpenFolder.gif
+		<li>tanCloseFolder.gif
+		<li>bookOpenFolder.gif
+		<li>bookCloseFolder.gif
+		<li>Cross.gif 
+		</ul>
+		<font face="Verdana,Arial" size=2>
+		After you change your HTML file you must 
+		hit 'Reload' on your browser to view the changes. You may 
+		need to close and reopen the browser to see the changes.
+		<p>
+		Once you have this tree working within your own page, then begin to customize
+		the tree links for your site. You will do this by modifying two text files
+		that describe the structure of the tree and the urls that it links to. These two
+		files are described below under <b>treeLink</b> and <b>treeIndex</b>.
+		</font>
+	</td></tr>
+	<tr><td>
+		<hr>
+		<FONT face="Verdana,Arial" size=4 color=red>
+			Applet Usage
+		</FONT>
+		<p>
+		<font face="Verdana,Arial" size=2>
+		The purchased version of the ConsultTree Site Explorer may be 
+		displayed in multiple locations on one web site (one domain). 
+		Our free evaluation
+		version is for unlimited use, however it displays the consulting.com. Inc
+		url in the browser's status bar. The purchased version does not display 
+		our url.
+		For more information visit the 
+		<a href="http://www.consultcom.com">consulting.com, Inc. web site</a>. 
+		<hr>
+
+		<FONT face="Verdana,Arial" size=4 color=red>
+			Technical Support
+		</FONT>
+		
+		<p>If you encounter any problems setting up the Site Explorer
+		applet, please read the Frequently Asked Questions section
+		on our web site. Visit  
+		<a href="http://www.consultcom.com">http://www.consultcom.com</a>
+		and browse to the Site Explorer page in our Java Software section.
+		This page lists the solutions to the most common questions that arise 
+		when setting up the applet. If your question in not answered there,
+		then email your question to 
+		<a href="mailto:support@consultcom.com">support@consultcom.com</a>.
+		Please be as specific as possible when describing your problem.
+		Be sure to include your order number if it is available.
+		</font>
+		<hr>
+	</td></tr>
+	</TABLE>
+
+	<TABLE width=640 border=1 cellpadding=5>
+	<tr>
+		<td colspan=2 align=center>
+			<FONT face="Verdana,Arial" size=4 color=red>
+				<a name="Parameters">Applet parameters</a>
+			</FONT>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="linkFrame">linkFrame</a></B> 
+	    	</td>	
+	    	<td>		
+			<FONT face="Verdana,Arial" size=2>	
+			This controls which default frame is used when a hyperlink is
+			clicked. Use this parameter like the HTML Target attribute. Standard 
+			HTML frame rules apply. If your page does not have frames,
+			then do not include this parameter.
+			<p>
+			<i>_self</i> - load page in current frame<br>
+			<i>_parent</i> - load page in parent frame<br>
+			<i>_top</i> - load page in topmost frame<br>
+			<i>_blank</i> - load page in new unnamed top-level frame<br>
+			<i>BODY</i> - load page in new top level window named BODY.
+			<p>
+			It is possible to specify a different frame target for each link 
+			in the tree. This is discussed below under the <i>treeLink</i> 
+			parameter.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="backgroundColor">backgroundColor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			Specifies the background color of the applet. There are two ways 
+			to specify this parameter:
+			by color name or by RGB color values
+			<P> The following color names are supported:
+			<PRE>
+			black
+			blue
+			cyan
+			darkGray
+			gray
+			green
+			lightGray
+			magenta
+			orange
+			pink
+			red
+			white
+			yellow
+			</PRE>
+			You may also specify the red, green, and blue values for a unique
+			RGB color.  These three numbers must be separated 
+			by commas.
+
+			<P>For example, this parameter will set the background color
+			to red:
+			<BR><FONT COLOR="#000000"><i>&lt;param name=backgroundColor value="255,0,0"&gt;</i></FONT>
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="dotColor">dotColor</a></B> 
+		</td>
+		<td>	
+			<FONT face="Verdana,Arial" size=2>
+			This controls the color of the dotted lines connecting each folder. 
+			Colors supported are the same as for the <i>backgroundColor</i> 
+			parameter. 
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="boxColor">boxColor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			This controls the color of the boxes that contain the 
+			plus/minus signs. Colors supported are the
+			same as for the <i>backgroundColor</i> parameter.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>	
+			<B><a name="plusColor">plusColor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			This controls the color of the plus/minus signs. Colors supported 
+			are the same as for the <i>backgroundColor</i> parameter. 
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="highliteColor">highliteColor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			This controls the color of the link name when the mouse move over it. 
+			Colors supported are the
+			same as for the <i>backgroundColor</i> parameter.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="dragscrollHor">dragScrollHor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			Controls whether the applet can be scrolled horizontally. 
+			Set to either <i>yes</i> or <i>no</i>. Scrolling with this parameter
+			uses our unique drag-and-drop scrolling without scrollbars.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="dragscrollVert">dragScrollVert</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			Controls whether the applet can be scrolled vertically. 
+			Set to either <i>yes</i> or <i>no</i>. Scrolling with this parameter
+			uses our unique drag-and-drop scrolling without scrollbars.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="scrollBar">scrollBar</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			Controls whether a vertical scroll bar will be displayed. The scrollbar
+			will be automatically displayed when needed.
+			Set to either <i>yes</i> or <i>no</i>. 
+
+			Setting this parameter to <i>yes</i> will disable the <i>border</i>
+			parameter and both <i>dragScroll</i> parameters.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="border">border</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			Controls whether the applet has a border surrounding it. 
+			Set to either <i>yes</i> or <i>no</i>.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="borderColor">borderColor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			This controls the color of the applet's border. Colors 
+			supported are the
+			same as for the <i>backgroundColor</i> parameter.  
+			</font>
+		</td>
+	</tr>
+	<tr>	
+		<td valign=top>
+			<B><a name="borderRaised">borderRaised</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			Creates a three dimensional effect on the applet's border. 
+			Set to either <i>yes</i> or <i>no</i>.
+			</font>
+		</td>
+	</tr>
+	<tr>	
+		<td valign=top>
+			<B><a name="canvasSize">canvasSize</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			The size of the 'canvas' that the applet is displayed within. 
+			The horizontal size is specified first and then the vertical size, 
+			separated by a comma. The canvas
+			should be big enough to fit the entire tree when it is 
+			completely expanded.  
+			<p>
+			For example, in the sample applet on this page, the width and height 
+			of the applet is set as 
+			<pre>&lt;applet code="ConsultTree.class" width="200" height="480"&gt;</pre>
+			while the canvas size is set as
+			<pre>&lt;param name=canvasSize value="200,800"&gt;</pre>
+			The result is that the tree is only partially displayed, however the 
+			canvas size is set large enough to fit the entire tree.
+			<p>
+			If you have scrolling turned on,
+			and scrolling the tree causes a "trail" of trees to be displayed, 
+			this is a sure sign that your Canvas size is too small.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="folderColor">folderColor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			This specifies the picture that is used for nodes of the tree. 
+			Three values are supported:
+			"tan", "blue", and "book". (Yes, we know "book" is not a color!)
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="textColor">textColor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			The color of the text labels in the tree. Colors supported are the
+			same as for the <i>backgroundColor</i> parameter.  
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="fontStyle">fontStyle</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			This is the font style used in the tree. Use one of the following:
+			<PRE>
+			PLAIN
+			ITALIC
+			BOLD
+			</PRE>
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="descriptionColor">descriptionColor</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			The background color of the box surrounding the folder descriptions 
+			in the tree. Colors supported are the same as for the 
+			<i>backgroundColor</i> parameter. 
+			</font> 
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="descriptionBorder">descriptionBorder</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			Turns on and off the border surrounding the text descriptions 
+			in the tree. 
+			Set to either <i>yes</i> or <i>no</i>.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="treeIndex">treeIndex</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			This parameter identifies the name of the text file that describes the
+			structure of the tree. Make sure the text file name is spelled
+			correctly, upper and lower case matter, and that the file has a .txt 
+			extension. Put the text file in the same directory as the class
+			file ConsultTree.class (or ConsultTreeTrial.class if you have the trial version).
+			<P>
+			For example, if your text file is named DemoIndex.txt, enter the following parameter:
+			<BR><i>&lt;param name=textFile value="DemoIndex.txt"&gt;</i>
+			<P>		
+			The structure of this file is very simple. Each line in the file
+			describes one level of the
+			tree. You describe a level of the tree by listing the name of a 
+			folder followed by
+			the name of all folders that are 'beneath' it. Each folder name is 
+			separated by semicolons.
+			<b>The first folder listed must be the root folder of the tree, and
+			each line in the file
+			must end with a semicolon.</b>
+			<p>
+			Let's use the tree on this page as an example. The <i>Demo</i> folder has 
+			one folder 'beneath'
+			it -  <i>Parameters</i>. This is defined in the treeIndex
+			 file as:<br>
+			<i>Demo;Parameters;</i>
+			<p>The <i>Parameters</i> folder has many folders under it. This is 
+			defined in the
+			treeIndex file as:
+			<i>Parameters;linkFrame;backgroundColor;dotColor;boxColor;
+			plusColor;highliteColor;scrollHor;scrollVert;border;
+			borderColor;borderRaised;canvasSize;folderColor;textColor;
+			fontStyle;descriptionColor;descriptionBorder;treeIndex;
+			treeLink;copyright;
+			</i>
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="treeLink">treeLink</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			This parameter identifies the name of the text file that contains the
+			tree's links. Make sure the text file name is spelled
+			correctly, upper and lower case matter, and that the file has a .txt 
+			extension. Put the text file in the same directory as the class
+			file ConsultTree.class (or ConsultTreeTrial.class if you have the
+			trial version).
+			<P>
+			For example, if your text file is named DemoLink.txt, enter the 
+			following parameter:
+			<BR><i>&lt;param name=textFile value="DemoLink.txt"&gt;</i>
+			<p>The structure of this file is very simple. Each line contains the 
+			name of a folder,
+			followed by the url that it links to. <b>Each line must end with a
+			semicolon.</b>
+			For example, the topmost folder in the tree on
+			this page, <i>Demo</i>, is a link to the Demo.htm. This is defined in the 
+			treeIndex file as:<br>
+			<i>Demo;Demo.htm;</i>
+			
+			<p>In the sample tree on this page, we also provide links to anchors within 
+			the page. Clicking
+			on a specific parameter takes you directly to that parameter. Anchors 
+			are defined
+			in the treeLink file just as you would define them in a HREF tag, for 
+			example:<br>
+			<i>linkFrame;Demo.htm#linkFrame;</i>
+			
+			<p>If you wanted to link to a site on the web, you would define the 
+			folder as follows:<br>
+			<i>consulting.com;http://www.consultcom.com;</i>
+			
+			<p>
+			If you want to have have a folder that is not a link, but is just a 
+			directory containing other folders, you must still list the folder in this link file.
+			Just enter a blank space instead of a url. For example,<br>
+			<i>MyDirectory; ;</i>
+
+			<p>
+			You may specify a different frame target for each link in 
+			the tree.
+			At the end of each line, place the name of the frame followed by a 
+			semicolon. 
+			For example,<br>
+			<i>consulting.com;http://www.consultcom.com;_top;</i>
+			<p>
+			If the frame is not specified for a link, then the
+			value of the <i>linkFrame</i>
+			parameter is used as default.
+			</font>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<B><a name="copyright">copyright</a></B> 
+		</td>
+		<td>
+			<FONT face="Verdana,Arial" size=2>
+			The copyright parameter must be included or the tree
+			will not function properly. The value for this parameter must be:<br>
+			<font size =1>
+			ConsultTree v1.0 Copyright (c) 1998, consulting.com Inc.
+			</font>
+			</font>
+		</td>
+	</tr>
+	</table>
+</BODY>
+</HTML>
+
+
+
+

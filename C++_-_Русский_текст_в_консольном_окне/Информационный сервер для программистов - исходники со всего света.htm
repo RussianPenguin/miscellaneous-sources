@@ -1,0 +1,29 @@
+<HTML><HEAD><TITLE>Информационный сервер для программистов - исходники со всего света.</TITLE>
+</HEAD>
+<BODY bgColor=white leftMargin=0 topMargin=0 marginheigth="0" marginwidth="0">
+
+<DIV align=center>
+<CENTER>
+<TABLE cellPadding=0 cellSpacing=0 width=680>
+  <TBODY>
+  <TR>
+    <TD>
+      <HR>
+
+      <H3>Как вывести русский текст в консольном окне</H3>
+      <P>Для перекодировки используется функция CharToOem():</P><PRE>#include &lt;windows.h&gt;
+#include &lt;stdio.h&gt;
+
+void main()
+{
+	char src[10];
+	char dest[10];
+	strcpy(src,"Привет");
+	CharToOem(src,dest);
+	printf(dest);
+}</PRE>
+      <P>&nbsp;</P>
+      <P>&nbsp;</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<HR>
+
+</BODY></HTML>

@@ -1,0 +1,136 @@
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+<body>
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h2>CPing -- Простой ping хоста из под Windows 95 и Windows NT </h2>
+    <p>Автор <a href="mailto:zugzug@popmail.com">Robert Hamilton</a>.</p>
+    <p><u>Компилятор:</u> Visual C++ 5.0</p>
+    <h3>Что он делает?</h3>
+    <ul>
+      <p>Впринципе это аналог встроенной в Windows команды
+      ping. Данная команда позволяет узнать - работает ли
+      в интернете нужный сервер. Главный плюс данного
+      класса в том, что он работает сразу в двух
+      операционных системах Windows 95 и Windows NT, чего не
+      делают его аналоги. </p>
+    </ul>
+    <p><a name="How">&nbsp;</p>
+    <h3>Как его использовать?</a></h3>
+    <ul>
+      <li>Создайте MFC проект <ul>
+          <b><p>Не указывайте визарду, что хотите
+          использовать Windows Sockets<br>
+          Не включайте #include afxsock.h<br>
+          Не вызывайте AfxSocketInit()</b> </p>
+        </ul>
+      </li>
+      <li>Скопируйте CPing.cpp и CPing.h в директорию Вашего
+        проекта </li>
+      <li>Добавьте CPing.cpp в Ваш проект </li>
+      <li>В установках C++ Вашего проекта удалите
+        /Yu&quot;stdafx.h&quot; в отладочной и релизовой версиях </li>
+      <li>добавьте в Ваш stdafx.h #include &lt;winsock.h&gt; </li>
+      <li>В закладке линковщика добавьте WSOCK32.LIB </li>
+      <li>Добавьте #include &quot;CPing.h&quot; во все файлы которым
+        поторебуется использовать класс CPing </li>
+      <li>Создайте объект CPing и вызовите функцию-член Ping() </li>
+    </ul>
+    <p><a name="Function">&nbsp;</p>
+    <h3>Функция CPing::Ping()</a></h3>
+    <ul>
+      <b><p>CPing::Ping</b> <ul>
+        <p><b>BOOL Ping( char*</b> <i>strHost</i> <b>);</b></p>
+        <p><b>Возвращаемое значение</b></p>
+        <p>Ненулевое, если host указанный в <i>strHost</i> ответил;
+        иначе 0.</p>
+        <p><b>Параметры</b></p>
+        <p><i>strHost</i>&nbsp;&nbsp;&nbsp;указатель на имя или IP адрес
+        пингуемого узла (строка должна завершаться
+        нулём). Если <i>strHost</i> указывает на IP адрес, то он
+        должен быть в формате &quot;<tt>XXX.XXX.XXX.XXX</tt>&quot;.</p>
+        <p><b>Примечания</b></p>
+        <p>Если имя узла, указанного в <i>strHost</i> не может
+        быть вычислено, функция вернёт 0. Возвращаемое
+        значение в виде 0 так же может указывать на то что
+        узел не отвечает.</p>
+        <p><b>Пример</b></p>
+        <p>Следующий пример демонстрирует использование <b>CPing::Ping</b>.</p>
+        <pre><tt><font color="#990000">
+// пример для CPing::Ping
+
+CPing ping;
+
+//пингуем шлюз
+BOOL bResult = ping.Ping(&quot;192.168.0.254&quot;);
+
+if( bResult )
+{
+	//шлюз работает нормально
+	//давайте пинганём пару сайтов.
+	if(ping.Ping(&quot;www.codeguru.com&quot;) ||
+                              ping.Ping(&quot;www.netscape.com&quot;))
+	{
+		//работают нормально
+		AfxMessageBox(&quot;Everything is A OK.&quot;);
+	}
+	else
+	{
+		//ошибка DNS или узлы не отвечают.
+		AfxMessageBox(&quot;Can't ping outside the subnet.
+                 It may be a DNS problem or the ISP's fault.&quot;);
+	}
+}
+else
+{
+	//тогда шлюз выключен
+	AfxMessageBox(&quot;The gateway or router is down.&quot;);
+}
+</font></tt></pre>
+      </ul>
+    </ul>
+    <p><a name="Important">&nbsp;</p>
+    <h3>Некторые понятия, которые необходимо
+    запомнить</a></h3>
+    <ul>
+      <li>Этот класс использует ICMP.DLL. поэтому если у Вас
+        нет этого файла, то установите его.<br>
+        <br>
+      </li>
+      <li>Этот класс динамически загружает ICMP.DLL в
+        конструктор. <b>Поэтому не создавайте несколько
+        объектов CPing!</b><br>
+        <br>
+      </li>
+      <li>Этот класс также вызывает WSAStartup(); в
+        конструкторе и WSACleanup(); в деструкторе. <b>Поэтому
+        не создавайте несколько объектов CPing!</b> Также,
+        если Ваше приложение вызывает WSAStartup() и WSACleanup(), то
+        я предлагаю вытереть вызовы WSAStartup() и WSACleanup() в
+        моём конструкторе и деструкторе.<br>
+      </li>
+      <li>Данный класс не использует для своей работы
+        другие MFC классы. Поэтому если Вы не используете в
+        своём приложении MFC, то прийдётся создать файл
+        StdAfx.h file или взять #include &quot;StdAfx.h&quot; не из моего
+        класса. Надо будет добавить #include &lt;windows.h&gt; и #include
+        &lt;winsock.h&gt;.</li>
+      <p>&nbsp;</p>
+    </ul>
+    <p><a href="cping_exe.zip">Скачать откомпилированную
+    демонстрашку - 67.2 KB</a></p>
+    <p><a href="cping_demo.zip">Скачать исходник демонстрашки -
+    28.6 KB</a></p>
+    <p><a href="cping_src.zip">Скачать исходник - 1.93 KB</a> </p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0037)http://leechy.design.ru/controlstrip/ --><HTML><HEAD><TITLE>Index of / controlstrip</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<STYLE type=text/css>#stripBody {
+	LEFT: 0px; POSITION: absolute; TOP: 30px; VISIBILITY: hidden; WIDTH: 17px; Z-INDEX: 66
+}
+#stripHead {
+	LEFT: 0px; POSITION: absolute; TOP: 30px; VISIBILITY: hidden; WIDTH: 17px; Z-INDEX: 66
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+nn4 = (document.layers)? true : false;
+ie4 = (document.all)? true : false;
+stripClosed = true;
+
+clUpImg = new Image();
+clUpImg.src = "close.gif"
+clDnImg = new Image();
+clDnImg.src = "close-dn.gif"
+hdUpImg = new Image();
+hdUpImg.src = "head.gif"
+hdDnImg = new Image();
+hdDnImg.src = "head-dn.gif"
+
+function stripShowHide() {
+	StripB.left = (stripClosed)? 0 : 0 - stripWidth;
+	StripH.left = (stripClosed)? stripWidth : 0;
+	if (nn4) {
+		StripB.visibility = (stripClosed)? "show" : "hide";
+	} else {
+		StripB.visibility = (stripClosed)? "visible" : "hidden";
+	}
+	stripClosed = (stripClosed)? false : true;
+}
+
+function init() {
+	if (nn4 || ie4) {
+		StripB = (nn4)? document.stripBody : stripBody.style;
+		StripH = (nn4)? document.stripHead : stripHead.style;
+		stripWidth = (nn4)? StripB.document.width : stripBody.clientWidth;
+		StripB.left = 0 - stripWidth;
+		StripH.visibility = (nn4)? "show" : "visible";
+	}
+}
+
+</SCRIPT>
+
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY bgColor=#c0c0c0 leftMargin=21 onload=init(); marginwidth="21">
+<H1><A href="http://leechy.design.ru/">Index of /</A> controlstrip</H1>
+<P>Видите ярлычек, который показывается в слева? Если вы работали на Макинтоше, 
+то знаете, что это Control Strip - если нет, то нажмите на него... ну как?</P>
+<P>Это можно использовать например для ссылок "наверх", т.е. как вы добрались до 
+данной странице... или для чего угодно ;-)</P>
+<P>Скрипт работает во всех браузерах, чья версия старше 4, кроме... MSIE для 
+Макинтоша!!!</P>
+<DIV id=stripBody>
+<TABLE bgColor=#000000 border=0 cellPadding=0 cellSpacing=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE border=0 cellPadding=0 cellSpacing=1>
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff><A href="javascript:stripShowHide();" 
+            onclick=javascript:stripShowHide(); 
+            onmousedown="cl.src=clDnImg.src; return false;" 
+            onmouseout=cl.src=clUpImg.src; 
+            onmouseup="cl.src=clUpImg.src; stripShowHide();"><IMG border=0 
+            height=22 name=cl src="controlstrip.files/close.gif" 
+width=13></A></TD>
+          <TD bgColor=#ffffff><NOBR>&nbsp;<A 
+            href="http://leechy.design.ru/">Index of /</A> 
+            controlstrip&nbsp;</NOBR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV id=stripHead><A href="javascript:stripShowHide();" 
+onclick=javascript:stripShowHide(); 
+onmousedown="hd.src=hdDnImg.src; return false;" onmouseout=hd.src=hdUpImg.src; 
+onmouseup="hd.src=hdUpImg.src; stripShowHide();"><IMG border=0 height=24 name=hd 
+src="controlstrip.files/head.gif" width=17></A></DIV></BODY></HTML>

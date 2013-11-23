@@ -1,0 +1,639 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>6</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h1>Класс CFont. Вывод текста под наклоном.</h1>
+    <p>&nbsp;<b></p>
+    <p>Автор статьи: <a href="mailto:apopov@nm.ru">Alexander E. Popov</a></b> </p>
+    <p align="justify">Класс CFont (шрифт) инкапсулирует
+    графический объект Windows шрифт. Для создания
+    объекта этого класса существует конструктор без
+    параметров. Чтобы создать собственный шрифт,
+    можно вызвать одну из следующих функций: CreateFont,
+    CreateFontIndirect, CreatePointFont или CreatePointFontIndirect. </p>
+    <p align="justify">Для использования созданного шрифта
+    необходимо выбрать его в контекст устройства: <b></p>
+    <pre><font color="#264307">...
+LOGFONT lf={ ...};
+CPaintDC dc(this);
+CFont font;
+font.CreateFontIndirect(&amp;lf);
+CFont *pFont = dc.SelectObject(&amp;font);
+...</font></b></pre>
+    <p>После использования нужно вернуть ранее
+    установленный шрифт и удалить созданный шрифт: <b></p>
+    <pre><font color="#264307">dc.SelectObject(pFont);
+font.DeleteObject();
+</font></b></pre>
+    <p align="justify">Можно создать шрифт при помощи функции
+    <br>
+    <b>BOOL CreateFontIndirect( const LOGFONT* lpLogFont )</b><br>
+    Единственный параметр lpLogFont этой функции
+    указывает на структуру LOGFONT, которая и определяет
+    шрифт: <b></p>
+    <pre><font color="#264307">typedef struct tagLOGFONT { /* lf */
+   LONG lfHeight;
+   LONG lfWidth;
+   LONG lfEscapement;
+   LONG lfOrientation;
+   LONG lfWeight;
+   BYTE lfItalic;
+   BYTE lfUnderline;
+   BYTE lfStrikeOut;
+   BYTE lfCharSet;
+   BYTE lfOutPrecision;
+   BYTE lfClipPrecision;
+   BYTE lfQuality;
+   BYTE lfPitchAndFamily;
+   CHAR lfFaceName[LF_FACESIZE];
+} LOGFONT;
+</font></b></pre>
+    <p>Поле <b>lfHeight</b> определяет высоту символов
+    шрифта в логических единицах. Высота последних
+    определяется как разность между полной высотой
+    символа и размером области для отображения
+    специальных знаков, например, ударения. Это поле
+    интерпретируется в зависимости от знака
+    следующим образом: <ol>
+      <li>Если lfHeight&gt;0, то значение преобразуется в
+        единицы устройства вывода и используется для
+        выбора шрифта из имеющихся, соответствующего по
+        высоте символа </li>
+      <li>Если lfHeight=0, то для нахождения шрифта
+        используется значение высоты по умолчанию </li>
+      <li>Если lfHeight&lt;0, то значение преобразуется в
+        единицы устройства вывода и используется для
+        выбора шрифта из имеющихся, соответствующего по
+        высоте символа </li>
+    </ol>
+    <p>При поиске подходящего шрифта выбирается шрифт
+    с наибольшей высотой символа, не превышающей
+    требуемого значения. </p>
+    <p align="justify">Для режима отображения ММ_ТЕХТ высота
+    может быть определена через размер шрифта,
+    задаваемого в пунктах (points), следующим образом:<br>
+    lfHeight=-MulDiv(PointSize, dc.GetDeviceCaps(LOGPIXELSY), 72); </p>
+    <p align="justify">Поле <b>lfWidth</b> определяет определяет
+    среднюю ширину символов в логических единицах.
+    Если lfWidth=0, то выбирается шрифт, наиболее
+    подходящий конкретному устройству (device) по
+    возможностям масштабирования. </p>
+    <p align="justify">Поле <b>lfEscapement</b> определяет угол в
+    десятых долях градуса между каждой линией
+    выводимого текста (базовой линией) и
+    горизонталью. </p>
+    <p align="justify">Поле <b>lfOrientation</b> определяет угол в
+    десятых долях градуса между базовой линией
+    каждого символа и горизонталью. </p>
+    <p align="justify"><b>Примечание</b><br>
+    В Windows 95/98 значения полей lfEscapement и lfOrientation должны
+    совпадать, т.е. вся строка текста должна иметь
+    один и тот же наклон, при этом когда базовые линии
+    символов лежат на базовой линии строки. В Windows NT
+    при установке графического режима GM_ADVANCED (при
+    помощи Win32 API функции SetGraphicsMode) lfEscapement и lfOrientation не
+    обязательно должны быть равны. </p>
+    <p align="justify"><b>lfWeight</b> определяет толщину шрифта и
+    принимает значения в диапазоне от 0 до 1000. Если
+    lfWeight=0, то используется толщина(weight) по умолчанию. </p>
+    <table border="1" cellPadding="2" cellSpacing="2">
+<TBODY>
+      <tr>
+        <td>Weight</td>
+        <td>Value </td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>FW_DONTCARE </td>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>FW_THIN </td>
+      </tr>
+      <tr>
+        <td>200</td>
+        <td>FW_EXTRALIGHT </td>
+      </tr>
+      <tr>
+        <td>200</td>
+        <td>FW_ULTRALIGHT </td>
+      </tr>
+      <tr>
+        <td>300</td>
+        <td>FW_LIGHT </td>
+      </tr>
+      <tr>
+        <td>400</td>
+        <td>FW_NORMAL </td>
+      </tr>
+      <tr>
+        <td>400</td>
+        <td>FW_REGULAR </td>
+      </tr>
+      <tr>
+        <td>500</td>
+        <td>FW_MEDIUM </td>
+      </tr>
+      <tr>
+        <td>600</td>
+        <td>FW_SEMIBOLD </td>
+      </tr>
+      <tr>
+        <td>700</td>
+        <td>FW_DEMIBOLD </td>
+      </tr>
+      <tr>
+        <td>700</td>
+        <td>FW_BOLD </td>
+      </tr>
+      <tr>
+        <td>800</td>
+        <td>FW_EXTRABOLD </td>
+      </tr>
+      <tr>
+        <td>800</td>
+        <td>FW_ULTRABOLD </td>
+      </tr>
+      <tr>
+        <td>900</td>
+        <td>FW_HEAVY </td>
+      </tr>
+      <tr>
+        <td>900</td>
+        <td>FW_BLACK </td>
+      </tr>
+</TBODY>
+    </table>
+    <p align="justify">Поле <b>lfItalic</b> определяет установлено
+    ли курсивное начертание шрифта. </p>
+    <p align="justify">Поле <b>lfUnderline</b> определяет установлено
+    ли подчеркнутое начертание шрифта. </p>
+    <p align="justify">Поле <b>IfStrikeOut</b> определяет установлено
+    ли перечеркнутое начертание шрифта. </p>
+    <p align="justify">Поле <b>lfCharSet</b> определяет кодировку
+    шрифта. Определены следующие кодировки: ANSI_CHARSET,
+    DEFAULT_CHARSET, SYMBOL_CHARSET, SHIFTJIS_CHARSET, GB2312_CHARSET, HANGEUL_CHARSET,
+    CHINESEBIG5_CHARSET, OEM_CHARSET. В Windows 95 также определены:
+    JOHAB_CHARSET, HEBREW_CHARSET, ARABIC_CHARSET, GREEK_CHARSET, TURKISH_CHARSET,
+    THAI_CHARSET, EASTEUROPE_CHARSET, RUSSIAN_CHARSET, MAC_CHARSET, BALTIC_CHARSET. <br>
+    Значение OEM_CHARSET определяет кодировку, не
+    зависющую от операционной системы. <br>
+    Значение DEFAULT_CHARSET требует задания имени (поля
+    IfFaceName) и размера шрифта. Отсутствие
+    запрашиваемого шрифта может привести к
+    непредсказуемым результатам, т.к. он будет
+    подменен шрифтом, подходящим по другим
+    параметрам, но неизвестной кодировкой. Особенно
+    важно задание правильной кодировки при указании
+    имени шрифта в явном виде, т.к. именно кодировка в
+    первую очередь определяет набор установленных
+    шрифтов, среди которых будет произведен поиск по
+    имени. <br>
+    В системе могут существовать и шрифты с другими
+    кодировками. Если приложение использует шрифт с
+    неизвестной кодировкой, то оно не должно
+    пытаться перевести строки, которые должны быть
+    представлены этим шрифтом. <br>
+    Задавая имя шрифта (поле IfFaceName), убедитесь, что
+    значение lfCharSet совпадает с кодировкой шрифта с
+    именем, указанном в lfFaceName. </p>
+    <p align="justify">Поле <b>lfOutPrecision</b> определяет насколько
+    точно шрифт должен соответствовать
+    запрашиваемым параметрам шрифта, таким как
+    высота, ширина, ориентация и др. Оно может
+    принимать следующие значения: </p>
+    <table border="1">
+<TBODY>
+      <tr>
+        <td>OUT_CHARACTER_PRECIS </td>
+        <td>Не используется. </td>
+      </tr>
+      <tr>
+        <td>OUT_DEFAULT_PRECIS </td>
+        <td>Определяет механизм выбора шрифта, принятый по
+        умолчанию </td>
+      </tr>
+      <tr>
+        <td>OUT_DEVICE_PRECIS </td>
+        <td>Указывает, что должен быть выбран системный
+        шрифт (Device font), если в системе установлено
+        несколько шрифтов с одним и тем же именем. </td>
+      </tr>
+      <tr>
+        <td>OUT_OUTLINE_PRECIS </td>
+        <td>Windows NT: Указывает, что должен быть выбран шрифт
+        TrueType или векторный шрифт.<br>
+        Windows 95: Значение не используется. </td>
+      </tr>
+      <tr>
+        <td>OUT_RASTER_PRECIS </td>
+        <td>Указывает, что должен быть выбран растровый
+        шрифт, если в системе установлено несколько
+        шрифтов с одним и тем же именем. </td>
+      </tr>
+      <tr>
+        <td>OUT_STRING_PRECIS </td>
+        <td>Это значение не используется механизмом
+        выбора шрифтов, но оно возвращается при
+        перечислении растровых шрифтов. </td>
+      </tr>
+      <tr>
+        <td>OUT_STROKE_PRECIS </td>
+        <td>Windows NT: Это значение не используется механизмом
+        выбора шрифтов, но возвращается при перечислении
+        шрифтов TrueType, растровых или векторных шрифтов.<br>
+        Windows 95: Используется при выборе векторных шрифтов,
+        а также возвращается при перечислении векторных
+        шрифтов или шрифтов TrueType. </td>
+      </tr>
+      <tr>
+        <td>OUT_TT_ONLY_PRECIS </td>
+        <td>Указывает, что должен быть выбран шрифт TrueType.
+        Если в системе не установлено ни одного шрифта
+        TrueType, то используется механизм выбора шрифтов,
+        принятый по умолчанию. </td>
+      </tr>
+      <tr>
+        <td>OUT_TT_PRECIS </td>
+        <td>Указывает, что должен быть выбран шрифт TrueType,
+        если в системе установлено несколько шрифтов с
+        одним и тем же именем. </td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Приложение может использовать значения
+    OUT_DEVICE_PRECIS, OUT_RASTER_PRECIS, и OUT_TT_PRECIS для управления
+    механизмом выбора шрифта, если в ОС установлено
+    несколько шрифтов с одним и тем же именем. </p>
+    <p align="justify">Поле <b>lfClipPrecision</b> Определяет механизм
+    отсечения символов, т.е. как отсекаются символы,
+    частично находящиеся вне области вывода. Может
+    принимать следующие значения: CLIP_CHARACTER_PRECIS,
+    CLIP_DEFAULT_PRECIS, CLIP_STROKE_PRECIS. </p>
+    <p align="justify">Поле <b>lfQuality</b> определяет качество
+    вывода, т.е. насколько качественно graphics device interface
+    (GDI) должно попытаться найти шрифт. Может
+    принимать следующие значения: </p>
+    <table border="1">
+<TBODY>
+      <tr>
+        <td>DEFAULT_QUALITY </td>
+        <td>Качество вывода не имеет значения. </td>
+      </tr>
+      <tr>
+        <td>DRAFT_QUALITY </td>
+        <td>Качество вывода менее важно, чем при
+        использовании значения PROOF_QUALITY. Для растровых
+        шрифтов разрешается масштабирование. Жирное,
+        курсивное, подчеркнутое и перечеркнутое
+        начертания шрифта могут быть синтезированы при
+        необходимости. </td>
+      </tr>
+      <tr>
+        <td>PROOF_QUALITY </td>
+        <td>Качество символов более важно, чем сходство
+        остальных логических атрибутов шрифта. Для
+        растровых шрифтов (GDI fonts) масштабирование
+        недоступно и выбирается ближайший по размеру
+        шрифт. Может быть выбран шрифт не совсем
+        требуемого размера, зато качество шрифта высокое
+        и нет искажений при выводе символов. Жирное,
+        курсивное, подчеркнутое и перечеркнутое
+        начертания шрифта могут быть синтезированы при
+        необходимости. </td>
+      </tr>
+</TBODY>
+    </table>
+    <p align="justify">Поле <b>lfPitchAndFamily</b> определяет тип и
+    семейство шрифта. Два младших бита определяют
+    тип шрифта и могут принимать следующие значения:
+    DEFAULT_PITCH, FIXED_PITCH (непропорциональный шрифт, т.е. все
+    символы имеют одинаковый размер), VARIABLE_PITCH (пропорциональный
+    шрифт). <br>
+    Биты с 4 по 7 определяют семейство шрифта и могут
+    принимать следующие значения: </p>
+    <table border="1">
+<TBODY>
+      <tr>
+        <td>FF_DECORATIVE </td>
+        <td>Декоративный шрифт, например Old English. </td>
+      </tr>
+      <tr>
+        <td>FF_DONTCARE </td>
+        <td>Семейство шрифта не имеет значения. </td>
+      </tr>
+      <tr>
+        <td>FF_MODERN </td>
+        <td>Непропорциональный шрифт с засечками (serif) или
+        без, например Pica, Elite, CourierNew®) </td>
+      </tr>
+      <tr>
+        <td>FF_ROMAN </td>
+        <td>Пропорциональный шрифт с засечками, например
+        MS® Serif. </td>
+      </tr>
+      <tr>
+        <td>FF_SCRIPT </td>
+        <td>Шрифт, походящий на рукописный тескт, например
+        Script, Cursive. </td>
+      </tr>
+      <tr>
+        <td>FF_SWISS </td>
+        <td>Пропорциональный шрифт без засечек, например
+        MS® Sans Serif. </td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Значение поля lfPitchAndFamily может быть получено
+    применением логической операции OR к типу и
+    семейству шрифта. </p>
+    <p align="justify">Поле <b>lfFaceName</b> указывает на строку,
+    оканчивающуюся символом с кодом ноль (null-terminated
+    string), которая определяет имя (typeface name) шрифта.
+    Длина строки не должна превышать 32 символов.
+    Функция Windows EnumFonts() может быть использована для
+    перечисления typeface name всех доступных в настоящее
+    время шрифтов. Если lfFaceName=NULL, то GDI использует
+    typeface, принятый по умолчанию. </p>
+    <p align="justify"><br>
+    Создать шрифт можно с помощью функции <br>
+    BOOL CFont::<b>CreateFont</b>( int nHeight, int nWidth, int nEscapement, int nOrientation,
+    int nWeight, BYTE bItalic, BYTE bUnderline, BYTE cStrikeOut, BYTE nCharSet, BYTE
+    nOutPrecision, BYTE nClipPrecision, BYTE nQuality, BYTE nPitchAndFamily, LPCTSTR
+    lpszFacename ); <br>
+    Параметры последней принимают те же значения,
+    что и поля LOGFONT. </p>
+    <p align="justify">Также создать шрифт можно с помощью
+    функции <br>
+    BOOL CFont::<b>CreatePointFontIndirect</b>( const LOGFONT* lpLogFont, CDC* pDC = NULL );<br>
+    Где lpLogFont - указатель на уже знакомую структуру
+    LOGFONT, pDC - указатель на объект контекста
+    устройства, используемый для перевода высоты в
+    lfHeight в логические единицы. Если pDC=NULL, то в
+    качестве контекста устройства используется
+    контекст экрана. </p>
+    <p align="justify">И наконец шрифт можно создать с
+    помощью функции <br>
+    BOOL CFont::<b>CreatePointFont</b>( int nPointSize, LPCTSTR lpszFaceName, CDC* pDC = NULL
+    );<br>
+    Где nPointSize - высота шрифта в десятых долях пункта
+    (point). (Например, nPointSize=120 - соответствует шрифту с
+    высотой в 12 пунктов.); <br>
+    lpszFaceName - CString или указатель на null-terminated string,
+    определяет имя шрифта (Длина строки не должна
+    превышать 30 символов. Функция Windows EnumFontFamilies()
+    может быть использована для перечисления всех
+    доступных в данный момент шрифтов. Если
+    lpszFaceName=NULL, то GDI использует шрифт, независящий от
+    устройства); <br>
+    pDC - определяется, как и в предыдущей функции. </p>
+    <h3>Пример</h3>
+    <p>&nbsp;<b></p>
+    <pre><font color="#264307">
+void CCreateFontIndirectView::OnPaint() 
+{
+	CPaintDC dc(this); // device context for painting
+	
+	// TODO: Add your message handler code here
+	CRect rect;
+	GetClientRect ( &amp;rect ) ;
+	CFont font;
+	int angle=450;
+	LOGFONT lf =  { 32, 0, angle, angle, FW_BOLD, 0, 0, 0, 
+		RUSSIAN_CHARSET, OUT_TT_ONLY_PRECIS, CLIP_DEFAULT_PRECIS,
+		PROOF_QUALITY, VARIABLE_PITCH | FF_ROMAN, NULL } ;
+	font.CreateFontIndirect( &amp;lf ) ;
+	CFont * pFont = dc.SelectObject( &amp;font) ;
+
+	CString str(&quot;Hello world&quot;);
+	
+	rect.OffsetRect( 0, rect.Height()/3 );
+	dc.DrawText( str, rect, DT_NOCLIP ) ;
+
+	rect.OffsetRect( rect.Width()/3, rect.Height()/3 );
+	dc.SetBkMode( TRANSPARENT );
+	dc.DrawText( str, rect, DT_NOCLIP ) ;
+	
+	dc.SelectObject ( pFont ) ;
+	font.DeleteObject ( ) ;
+
+	// Do not call CView::OnPaint() for painting messages
+}
+
+</font></b></pre>
+    <h3>Download</h3>
+    <p>&nbsp;<a href="http://www.apopov.nm.ru/vc/misc/cfont.zip"></p>
+    <p>Проект на VC++ 5.0 и это описание</a> <br>
+<!-- *****BOTTOM BANNER***** -->    </p>
+    <pre>	</pre>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0037)http://www.superbest.com/examples/72/ -->
+<HTML><HEAD><TITLE>Ссылки по дням недели</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content=revealTrans(Duration=0.5,Transition=3) http-equiv=Page-Enter><LINK 
+href="mailto:webmaster@superbest.com" rev=made>
+<META 
+content="JavaScript, JavaScripts, Java, Script, Scripts, Perl, SQL, database, db, Javascripts, clickhere, Internet Services, Free, Repository, Forums, How-To, How, To, Guides, Documentation, Resources, SHOPPING, JOB BANK, Sign Up!, Find-A-Job, Post-A-Job, CLASSIFIEDS, Search Ads, Place Ad, Change Ad, Delete Ad, Cool Notify, Hot List, DIRECTORIES, ActiveX, ASP, C/C++, CGI, Databases, Emerging Tech, HTML/DHTML, Intranets, Java, JavaScript, Middleware, Perl, Visual Basic, XML, What's Cool, What's New, Russian Pages, REFERENCE, Online Reference Library, TRAINING CENTER, Course Catalog, Tutorials, Experts Q&amp;A, JOURNAL, Tech Focus, Tech Workshop, Staff Picks, Users' Choice, Profiles, NEWS CENTRAL, Archive, DOWNLOADS, Free Graphics, Free Scripts, COMMUNITY, Discussions, Whos Who, CALENDAR, Online Events, Industry Events, Conferences, ABOUT US, Who We Are, What We Do, News About Us, Advertising Info, Vendor Info, Job Openings, Awards, FAQs, email, highlights, developers, Current issue, 3d clock, superbest, superbest.com, www.superbest.com, SB Studio, webmaster, design, javascripts, java, scripts, goodies, games, examples, free, reference, menu, books, help, editor, search, clock, calendar, downloads, library, database, archive, samples, lesson, plan, guide, tutorials, type, training, repository, primers, directory, development, goody, programming, journal, alert, script, basic, creating, web, pages, creating, commercial, web, site, design, learn, javascript, programming, languages, scrolling, text, types, of, java, color, scripts, emerging, technology, Igor Rukavishnikov, online services, BYTE magazine, cascading style sheets, CMP Media, commerce, community, content, create button, calculator, calendar, clock, file, it professional, banner, information technology, implementation strategies millennium bug, reference library, object method, resource directories, script languages, software development, text editor, y2k, banners exchange, SQL, mouseover, source, files, JavaScripts Express, htmlgoodies, Allaire, Oracle, ITKnowledge, earthweb" name=keywords>
+<META 
+content="Если вставить в страницу этот скрипт, страница при открытии будет выезжать из-за экрана." 
+name=description>
+<META content=General name=rating>
+<META content=ALL name=ROBOTS>
+<SCRIPT language=JavaScript>
+<!--
+
+        function WinScroll(direction,xWidth,xHeight){
+            if ((navigator.appVersion.indexOf('4')!= -1)){
+            self.resizeTo(xWidth,xHeight)
+            if (direction == 1){ //Up
+                self.moveTo((screen.availWidth-xWidth)/2,screen.availHeight-10)
+                for (var c=1; c<=(screen.availHeight-(-xHeight))/2; c=c+4)
+                    self.moveTo((screen.availWidth-xWidth)/2,screen.availHeight-c)
+                }
+
+            if (direction == 2){  //Down
+                var x=screen.availHeight+screen.Height
+                self.moveTo((screen.availWidth-xWidth)/2,(screen.availHeight-x))
+                for (var c=0; c<=(screen.availHeight-(-xHeight/2)); c=c+4)
+                    self.moveTo((screen.availWidth-xWidth)/2,(screen.availHeight-x)+c)
+                }
+
+            if (direction == 3){  //left
+                var x=screen.availWidth-10
+                self.moveTo(x,(screen.availHeight-xHeight)/2)
+                for (var c=1; c<=(x-(-xWidth))/2; c=c+4)
+                    self.moveTo((x-c),(screen.availHeight-xHeight)/2)
+                }
+    
+            if (direction == 4){ //Right
+                var x=screen.availWidth+(xWidth-10)
+                self.moveTo((screen.availWidth-x),(screen.availHeight-xHeight)/2)
+                for (var c=1; c<=(screen.availWidth-(-xWidth))/2; c=c+4)
+                    self.moveTo(((screen.availWidth-x)+c),(screen.availHeight-xHeight)/2)
+                }
+        }
+    }   
+
+    WinScroll(4,800,600)
+    
+
+
+//-->
+</SCRIPT>
+
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY vLink=#0000ff>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="75%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD bgColor=#ffffff height=5>&nbsp;</TD></TR>
+  <TR vAlign=top>
+    <TD bgColor=#ccccff><FONT face=Arial,Helvetica size=-1><B>&nbsp;<A 
+      name=opis>Описание</A></B></FONT></TD></TR>
+  <TR>
+    <TD height=4><SPACER height="4" width="1" 
+type="block"></TD></TR></TBODY></TABLE>
+<P><FONT face="Arial, Helvetica" size=2>Если вставить в страницу этот скрипт, 
+страница при открытии будет выезжать из-за экрана. Для настройки скрипта 
+используется следующая строчка:<BR></FONT><FONT color=#ff0000 
+face="Arial, Helvetica" size=2><B>WinScroll(4,800,600)</B></FONT><FONT 
+face="Arial, Helvetica" size=2>&nbsp;<BR>Первая цифра может быть от 1 до 4 
+и&nbsp; означает с какой стороны будет выезжать страница.</FONT> </P>
+<P><FONT face="Arial, Helvetica" size=2>1 - снизу<BR>2 - сверху<BR>3 - 
+справа<BR>4 - слева</FONT> </P>
+<P><FONT face="Arial, Helvetica" size=2>Далее настраивается размер выезжаемой 
+страницы (в примере 800х600).</FONT> </P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="75%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD bgColor=#ffffff height=5>&nbsp;</TD></TR>
+  <TR vAlign=top>
+    <TD bgColor=#ccccff><FONT face=Arial,Helvetica size=-1><B>&nbsp;Код<A 
+      name=cod></A></B></FONT></TD></TR>
+  <TR>
+    <TD height=4><SPACER height="4" width="1" 
+type="block"></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="75%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD bgColor=#ffffff height=5></TD></TR>
+  <TR vAlign=top>
+    <TD>
+      <FORM action=../9/--WEBBOT-SELF-- method=post>
+      <P>
+      <SCRIPT language=JavaScript>
+function highlight(x){
+document.forms[x].elements[0].focus()
+document.forms[x].elements[0].select()
+}
+</SCRIPT>
+      <A href="javascript:highlight(2)"><IMG border=0 height=14 
+      src="Ссылки по дням недели_files/select.gif" width=96></A><BR><TEXTAREA cols=47 name=S1 rows=8 style="WIDTH: 98%" wrap=virtual>&lt;HTML&gt;
+&lt;HEAD&gt;
+
+&lt;META HTTP-EQUIV="Page-Enter" content="revealTrans(Duration=0.5,Transition=3)"&gt;
+
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!--
+
+        function WinScroll(direction,xWidth,xHeight){
+            if ((navigator.appVersion.indexOf('4')!= -1)){
+            self.resizeTo(xWidth,xHeight)
+            if (direction == 1){ //Up
+                self.moveTo((screen.availWidth-xWidth)/2,screen.availHeight-10)
+                for (var c=1; c&lt;=(screen.availHeight-(-xHeight))/2; c=c+4)
+                    self.moveTo((screen.availWidth-xWidth)/2,screen.availHeight-c)
+                }
+
+            if (direction == 2){  //Down
+                var x=screen.availHeight+screen.Height
+                self.moveTo((screen.availWidth-xWidth)/2,(screen.availHeight-x))
+                for (var c=0; c&lt;=(screen.availHeight-(-xHeight/2)); c=c+4)
+                    self.moveTo((screen.availWidth-xWidth)/2,(screen.availHeight-x)+c)
+                }
+
+            if (direction == 3){  //left
+                var x=screen.availWidth-10
+                self.moveTo(x,(screen.availHeight-xHeight)/2)
+                for (var c=1; c&lt;=(x-(-xWidth))/2; c=c+4)
+                    self.moveTo((x-c),(screen.availHeight-xHeight)/2)
+                }
+    
+            if (direction == 4){ //Right
+                var x=screen.availWidth+(xWidth-10)
+                self.moveTo((screen.availWidth-x),(screen.availHeight-xHeight)/2)
+                for (var c=1; c&lt;=(screen.availWidth-(-xWidth))/2; c=c+4)
+                    self.moveTo(((screen.availWidth-x)+c),(screen.availHeight-xHeight)/2)
+                }
+        }
+    }   
+
+    WinScroll(4,800,600)
+    
+
+
+//--&gt;
+&lt;/SCRIPT&gt;
+
+&lt;/HEAD&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/HTML&gt;</TEXTAREA></P></FORM></TD></TR>
+  <TR>
+    <TD height=4><SPACER height="4" width="1" 
+type="block"></TD></TR></TBODY></TABLE>
+<P align=right><B><FONT color=#ff0000 face=Arial,Helvetica size=1>Успешного 
+применения !</FONT></B></P>
+</BODY></HTML>

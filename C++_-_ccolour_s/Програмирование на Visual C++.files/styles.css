@@ -1,0 +1,21 @@
+A:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: red; TEXT-DECORATION: none
+}
+.base {
+	FONT-FAMILY: Tahoma; FONT-SIZE: 12px; LINE-HEIGHT: 1px; MARGIN-TOP: 10px; weight: medium
+}
+.base2 {
+	FONT-FAMILY: Tahoma; FONT-SIZE: 11px; LINE-HEIGHT: 5px; MARGIN-TOP: 10px; weight: medium
+}
+.comp {
+	COLOR: #000080; FONT-FAMILY: Tahoma; FONT-SIZE: 12px; LINE-HEIGHT: 12px; MARGIN-TOP: 10px; weight: medium
+}

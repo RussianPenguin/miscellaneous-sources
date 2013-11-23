@@ -1,0 +1,50 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+COMPRESS=12 Hall Zeck
+ERRORLOG=dict.log
+REVISIONS=No
+LCID=0x419 0x0 0x0 ; Русский
+REPORT=Yes
+CHARSET=204
+CONTENTS=main
+TITLE=Help Dictionar
+HLP=.\wiz.hlp
+
+[FILES]
+reader.rtf
+
+[MAP]
+Keyboard=1001
+contxstat=1085
+askbtxt=1049
+lockscrn=1052
+tips2=1053
+bigicons=1057
+flatbookm=1055
+startop=1058
+startbm=1050
+time24=1051
+str1page=1079
+str1page=1062
+str1page=1077
+runner=1054
+runner=1064
+runner=1078
+comboIt1=1061
+fnt_choose=1042
+clr_choose=1083
+clrbk_choose=1084
+preview=1080
+comboIt2=1060
+tpl_txt=1068
+tpl_menu=1040
+txt_memo=1069
+save_memo=1086
+clr_memo=1087
+prn_memo=1088
+fnd_all=1044
+pos_info = 1091
+pos_panel = 1094
+pointer = 1059
+find_all_lst = 1072

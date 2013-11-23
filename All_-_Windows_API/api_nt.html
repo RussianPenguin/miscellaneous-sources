@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>6</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+    Листинг 1 (создаёт в реестре NT учётную запись
+    сервиса) setup.cpp</b></font></td>
+  </tr>
+</table>
+
+<pre>
+include &lt;windows.h&gt;
+
+char infomes[512];
+char servicedir[MAX_PATH];
+
+int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nCmdShow)
+{
+	lstrcpy(infomes, &quot;Service succesful creat at path:\n&quot;);
+	lstrcpy(servicedir, &quot;%SystemRoot%\\System32\\service.exe&quot;);
+
+	SC_HANDLE scm=OpenSCManager(NULL,NULL,SC_MANAGER_CREATE_SERVICE);
+	if(scm!=NULL) {
+		SC_HANDLE svc=CreateService(scm,
+			&quot;Terra-Incognita&quot;,
+			&quot;Terra-Incognita&quot;,
+			0,
+			SERVICE_WIN32_OWN_PROCESS | SERVICE_INTERACTIVE_PROCESS,
+			SERVICE_AUTO_START,
+			SERVICE_ERROR_IGNORE,
+			servicedir,
+			NULL,
+			NULL,
+			NULL,
+			NULL,
+			NULL);
+	
+		if(svc!=NULL) {
+			CloseServiceHandle(svc);
+			strcat(infomes, servicedir);
+			MessageBox(NULL, infomes, &quot;Install&quot;, NULL);
+		}
+		CloseServiceHandle(scm);
+	}
+	else  {
+		MessageBox(NULL, &quot;Error: Could not create Service.&quot;, &quot;Install&quot;, NULL);
+	}
+
+	return 0;
+}
+</pre>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+    Листинг 2 (исходный код, который будет
+    обрабатывать управляющие сообщения от NT) service.cpp</b></font></td>
+  </tr>
+</table>
+
+<pre>
+#include <windows.h>
+#include &quot;service.h&quot;
+
+HMODULE g_module=NULL;
+
+DWORD WINAPI EntryPoint(LPVOID lpParameter)
+{	
+	STARTUPINFO si;
+	PROCESS_INFORMATION pi;
+	char svName[150];
+	char *svTarget=&quot;TERRA.EXE\0&quot;;
+	char svTargetName[150],*svFilePart;
+	char svComLine[2048];
+	char svFileName[512];
+
+	g_module=GetModuleHandle(NULL);
+	GetModuleFileName(g_module,svFileName,512);
+
+	GetSystemDirectory(svName,150-1);
+	lstrcat(svName,&quot;\\&quot;);
+	lstrcpyn(svName+lstrlen(svName),svTarget,150-lstrlen(svName));
+	GetFullPathName(svName,150,svTargetName,&amp;svFilePart);
+
+	lstrcpyn(svComLine,svTargetName,2048);
+	lstrcpyn(svComLine+lstrlen(svComLine),&quot; &quot;,2048-lstrlen(svComLine));
+	lstrcpyn(svComLine+lstrlen(svComLine),svFileName,2048-lstrlen(svComLine));
+
+	memset(&amp;si,0,sizeof(STARTUPINFO));
+	si.cb=sizeof(STARTUPINFO);
+	si.dwFlags=STARTF_FORCEOFFFEEDBACK;
+
+//	MessageBox(NULL,svComLine,&quot;Command Line before...&quot;,MB_OK);
+	CreateProcess(NULL,svComLine,NULL,NULL,0,0,NULL,NULL,&amp;si,&amp;pi);
+
+	return 0;
+}
+
+extern &quot;C&quot; int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nCmdShow);
+
+VOID WINAPI Handler( DWORD fdwControl ) 
+{
+	
+}
+
+void WINAPI ServiceMain(DWORD dwArgc,LPTSTR *lpszArgv)
+{
+	SERVICE_STATUS_HANDLE ssh=RegisterServiceCtrlHandler(WebPrice, &amp;Handler);
+
+	SERVICE_STATUS ss;
+	ss.dwServiceType=SERVICE_WIN32_OWN_PROCESS|SERVICE_INTERACTIVE_PROCESS;
+	ss.dwCurrentState=SERVICE_RUNNING;
+	ss.dwControlsAccepted=0;
+	ss.dwWin32ExitCode=NO_ERROR;
+	ss.dwCheckPoint=0;
+	ss.dwWaitHint=0;
+	SetServiceStatus(ssh,&amp;ss);
+
+	EntryPoint(GetModuleHandle(NULL));
+
+	ss.dwServiceType=SERVICE_WIN32_OWN_PROCESS|SERVICE_INTERACTIVE_PROCESS;
+	ss.dwCurrentState=SERVICE_STOPPED;
+	ss.dwControlsAccepted=0;
+	ss.dwWin32ExitCode=NO_ERROR;
+	ss.dwCheckPoint=0;
+	ss.dwWaitHint=0;
+	SetServiceStatus(ssh,&amp;ss);
+}
+
+int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nCmdShow)
+{
+	SERVICE_TABLE_ENTRY DispatcherTable[]=
+	{
+		{	WebPrice,
+			(LPSERVICE_MAIN_FUNCTION)ServiceMain },
+		{	NULL,
+			NULL }
+	};
+
+	StartServiceCtrlDispatcher(DispatcherTable);
+	return 0;
+}
+</pre>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+    Листинг 3 (service.h)</b></font></td>
+  </tr>
+</table>
+
+<pre>
+#include &lt;windows.h&gt;
+
+#ifndef __INC_MAIN_H
+#define __INC_MAIN_H
+
+#define WebPrice &quot;WebPrice&quot;
+extern DWORD WINAPI EntryPoint(LPVOID lpParameter);
+
+extern HMODULE g_module;
+
+#endif
+</pre>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+    Листинг 4 (программка удаляет из реестра NT наш
+    сервис) uninst.cpp</b></font></td>
+  </tr>
+</table>
+
+<pre>
+#include &lt;windows.h&gt;
+
+int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nCmdShow)
+{
+	
+	SC_HANDLE scm=OpenSCManager(NULL,NULL,SC_MANAGER_ALL_ACCESS);
+	if(scm!=NULL) {
+		SC_HANDLE svc=OpenService(scm, &quot;Terra-Incognita&quot;, STANDARD_RIGHTS_REQUIRED);
+		DeleteService(svc);
+	
+		if(svc!=NULL) {
+			CloseServiceHandle(svc);
+			MessageBox(NULL, &quot;Succesful&quot;, &quot;UnInstall&quot;, NULL);
+		}
+		CloseServiceHandle(scm);
+	}
+	else  {
+		MessageBox(NULL, &quot;Error: Could not uninstall Service.&quot;, &quot;UnInstall&quot;, NULL);
+	}
+
+	return 0;
+}
+</pre>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

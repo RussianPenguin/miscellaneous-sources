@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h3>GraphFX - Оболочка для рисования гистограмм</h3>
+    <p>Автор: <a href="mailto:nalmond@hotmail.com">Norm Almond</a></p>
+    <a href="graphfx_demo.zip"><p>Скачать демонстрашку - 192 Kb</a></p>
+    <p><img alt="Sample Image - graphfx.gif" src="graphfx.gif" width="714" height="410"></p>
+    <h2>Описание</h2>
+    <p>Пример показывает рисование давольно красивых
+    гистограмм, очень похожих на те, которые рисуют в
+    журналах при сравнении производительности
+    процессоров. На вид - много всяких возможностей.</p>
+    <p>Компилятор: Visual C++.</p>
+    <h2>Использование</h2>
+    <p>Для использования оболочки <code>CGraphFX</code> ,
+    включите в проект файлы GraphFX.h, GraphFX.cpp, Screen.h, Screen.cpp,
+    ItemArray.h, ItemArray.cpp, Item.h и Item.cpp.</p>
+    <p>Далее включите в заголовочный файл отображения
+    &quot;GraphViewFX.h&quot;</p>
+    <pre>#include &quot;GraphViewFX.h&quot;</pre>
+    <p>Потом наследуйте класс отображения от <code>CGraphViewFX</code>.</p>
+    <pre>class CGraphView : public CGraphViewFX</pre>
+    <p>Этого достаточно.</p>
+    <p>Для примера был использован произвольный
+    массив значений.</p>
+    <p>Функция <code>OnDraw</code> в Вашем классе отображения
+    должна сперва вызывать базовую <code>CGraphViewFX::OnDraw</code>
+    .</p>
+    <pre>
+</pre>
+    </td>
+  </tr>
+</table>
+</center></div></TBODY>
+
+
+<p align="center"><br>
+<br>
+</p>
+<hr>
+</body>
+</html>

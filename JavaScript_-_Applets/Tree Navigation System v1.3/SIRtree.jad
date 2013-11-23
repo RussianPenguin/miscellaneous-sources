@@ -1,0 +1,665 @@
+// Decompiled by DJ v1.5.5.28 Copyright 2000 Atanas Neshkov  Date: 09/02/2000 23:20:30
+// Home page : http://www.geocities.com/nasko_1999
+// Decompiler options: packimports(3) 
+// Source File Name:   SIRtree.java
+
+import java.applet.Applet;
+import java.applet.AppletContext;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.CropImageFilter;
+import java.awt.image.FilteredImageSource;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.StringTokenizer;
+
+public class SIRtree extends Applet
+    implements MouseMotionListener, MouseListener
+{
+
+    public void init()
+    {
+        APPLETCONTEXT = getAppletContext();
+        new Evaluation();
+        addMouseMotionListener(this);
+        addMouseListener(this);
+        WIDTH = getSize().width;
+        HEIGHT = getSize().height;
+        xoffset = 0;
+        yoffset = 0;
+        TITLE = parmgetstr("TITLE", " ");
+        ICONS = parmgetstr("ICONS", " ");
+        BGIMG = parmgetstr("BGIMG", " ");
+        if(TITLE.equals(" "))
+            TITLES = 0;
+        else
+            TITLES = 1;
+        FONTS = new Font[11];
+        for(i = 1; i < 11; i++)
+        {
+            FT = parmgetstr("FONT" + i, "Courier|N");
+            st = new StringTokenizer(FT, "|");
+            if(st.hasMoreTokens())
+                Fonttype = st.nextToken();
+            else
+                Fonttype = "Courier";
+            if(st.hasMoreTokens())
+                Fontstyle = st.nextToken();
+            else
+                Fontstyle = "N";
+            if(Fontstyle.equals("B"))
+                FONTS[i] = new Font(Fonttype, 1, 12);
+            else
+            if(Fontstyle.equals("I"))
+                FONTS[i] = new Font(Fonttype, 2, 12);
+            else
+            if(Fontstyle.equals("BI") || Fontstyle.equals("IB"))
+                FONTS[i] = new Font(Fonttype, 3, 12);
+            else
+                FONTS[i] = new Font(Fonttype, 0, 12);
+        }
+
+        FONTS[0] = new Font("Helvetica", 0, 12);
+        COLORS = new Color[13];
+        for(i = 0; i < 10; i++)
+        {
+            SC = getParameter("COLOR" + (i + 1));
+            if(SC == null)
+                if(i == 0)
+                    SC = "0|0|0";
+                else
+                    SC = "255|255|255";
+            st = new StringTokenizer(SC, "|");
+            COLORS[i + 1] = new Color(Math.abs(Integer.parseInt(st.nextToken())), Math.abs(Integer.parseInt(st.nextToken())), Math.abs(Integer.parseInt(st.nextToken())));
+        }
+
+        COLORS[0] = new Color(255, 255, 255);
+        COLORS[11] = new Color(148, 148, 148);
+        COLORS[12] = new Color(0, 0, 0);
+        BGCOLOR = parmgetint("BGCOLOR", 0, 1, 10);
+        TXTCOLOR = parmgetint("TXTCOLOR", 12, 1, 10);
+        HBGCOLOR = parmgetint("HBGCOLOR", 11, 1, 10);
+        HTXTCOLOR = parmgetint("HTXTCOLOR", TXTCOLOR, 1, 10);
+        LINECOLOR = parmgetint("LINECOLOR", 11, 1, 10);
+        TITLEFONT = parmgetint("TITLEFONT", 0, 0, 9);
+        NODEFONT = parmgetint("NODEFONT", 0, 0, 9);
+        BORDER = parmgetint("BORDER", 0, 0, 1);
+        if(TITLES < 1)
+        {
+            if(BORDER < 1)
+                yadj = 0;
+            else
+                yadj = 5;
+        } else
+        if(BORDER < 1)
+            yadj = 30;
+        else
+            yadj = 35;
+        NODE_IMG = new Image[100];
+        BG_IMG = getImage(getCodeBase(), BGIMG);
+        tempimage = getImage(getCodeBase(), ICONS);
+        for(i = 0; i < 100; i++)
+            NODE_IMG[i] = createImage(new FilteredImageSource(tempimage.getSource(), new CropImageFilter(0, i * 14, 14, 14)));
+
+        NO_NODES = 0;
+        NO_PARENTS = 1;
+        TEMPARRAY = new String[10000];
+        TEMPSTR = getParameter("NODE" + NO_NODES);
+        do
+        {
+            TEMPARRAY[NO_NODES] = TEMPSTR;
+            NO_NODES++;
+            TEMPSTR = getParameter("NODE" + NO_NODES);
+        } while(TEMPSTR != null && NO_NODES < 10000);
+        PARENT = new String[NO_NODES];
+        NODET = new String[NO_NODES][5];
+        NODEI = new int[NO_NODES][7];
+        PARENT[0] = "ROOT";
+        for(i = 0; i < NO_NODES; i++)
+        {
+            st = new StringTokenizer(TEMPARRAY[i], "|");
+            if(st.hasMoreTokens())
+                TEMPPARENT = st.nextToken();
+            if(st.hasMoreTokens())
+                NODET[i][0] = st.nextToken();
+            if(st.hasMoreTokens())
+                NODEI[i][1] = Integer.parseInt(st.nextToken());
+            if(st.hasMoreTokens())
+                NODET[i][1] = st.nextToken();
+            if(st.hasMoreTokens())
+                NODET[i][2] = st.nextToken();
+            if(st.hasMoreTokens())
+                NODET[i][3] = st.nextToken();
+            if(st.hasMoreTokens())
+                NODET[i][4] = st.nextToken();
+            if(st.hasMoreTokens())
+                NODEI[i][2] = Integer.parseInt(st.nextToken());
+            if(st.hasMoreTokens())
+                NODEI[i][4] = Integer.parseInt(st.nextToken());
+            else
+                NODEI[i][4] = -1;
+            if(st.hasMoreTokens())
+                NODEI[i][6] = Integer.parseInt(st.nextToken());
+            else
+                NODEI[i][6] = NODEI[i][1];
+            NODEI[i][3] = 0;
+            NODEI[i][5] = 0;
+            found = false;
+            end = false;
+            j = 0;
+            do
+            {
+                if(TEMPPARENT.equals(PARENT[j]))
+                    found = true;
+                j++;
+                if(j >= NO_PARENTS)
+                    end = true;
+            } while(!found && !end);
+            j--;
+            if(found)
+            {
+                NODEI[i][0] = j;
+            } else
+            {
+                PARENT[NO_PARENTS] = TEMPPARENT;
+                NODEI[i][0] = NO_PARENTS;
+                NO_PARENTS++;
+            }
+        }
+
+        Area = new int[10000][6];
+        for(i = 0; i < 10000; i++)
+            Area[i][0] = -1;
+
+        if(BORDER < 1)
+        {
+            Linset = 0;
+            Rinset = 0;
+            Binset = 0;
+        } else
+        {
+            Linset = 6;
+            Rinset = 5;
+            Binset = 5;
+        }
+        Tinset = yadj;
+        setLayout(layout);
+        vscrollbar = new Scrollbar(1, 0, 1, 0, NO_NODES);
+        vscrollbar.setPageIncrement(1);
+        add("East", vscrollbar);
+        hscrollbar = new Scrollbar(0, 0, 1, 0, 10);
+        hscrollbar.setPageIncrement(1);
+        add("South", hscrollbar);
+        MAX_LINES = (HEIGHT - 40) / 16;
+        MAX_X = WIDTH - 11;
+    }
+
+    public Insets insets()
+    {
+        return new Insets(Tinset, Linset, Binset, Rinset);
+    }
+
+    public void start()
+    {
+        hscrollbar.setVisible(false);
+        vscrollbar.setVisible(false);
+    }
+
+    public void update(Graphics g)
+    {
+        paint(g);
+    }
+
+    public void paint(Graphics g)
+    {
+        CreateBG();
+        if(FIRST < 1)
+        {
+            buffer = createImage(WIDTH, HEIGHT);
+            pad = buffer.getGraphics();
+            FIRST = 1;
+        }
+        pad.drawImage(buffer2, 0, 0, this);
+        CreateTree();
+        pad.drawImage(buffer3, 6, yadj, this);
+        g.drawImage(buffer, 0, 0, this);
+    }
+
+    public void CreateBG()
+    {
+        buffer2 = createImage(WIDTH, HEIGHT);
+        BGpad = buffer2.getGraphics();
+        BGpad.setColor(COLORS[BGCOLOR]);
+        BGpad.fillRect(0, 0, WIDTH, HEIGHT);
+        BGpad.drawImage(BG_IMG, 0, 0, this);
+        if(BORDER > 0)
+        {
+            BGpad.setColor(COLORS[0]);
+            BGpad.drawLine(0, 0, WIDTH, 0);
+            BGpad.drawLine(0, 0, 0, HEIGHT);
+            BGpad.drawLine(5, 30, WIDTH - 5, 30);
+            BGpad.drawLine(WIDTH - 5, 5, WIDTH - 5, 30);
+            BGpad.drawLine(5, HEIGHT - 5, WIDTH - 5, HEIGHT - 5);
+            BGpad.drawLine(WIDTH - 5, 34, WIDTH - 5, HEIGHT - 5);
+            BGpad.setColor(COLORS[11]);
+            BGpad.drawLine(WIDTH - 1, 0, WIDTH - 1, HEIGHT);
+            BGpad.drawLine(0, HEIGHT - 1, WIDTH - 1, HEIGHT - 1);
+            BGpad.drawLine(5, 5, WIDTH - 5, 5);
+            BGpad.drawLine(5, 5, 5, 30);
+            BGpad.drawLine(5, 34, WIDTH - 5, 34);
+            BGpad.drawLine(5, 34, 5, HEIGHT - 5);
+        }
+        if(TITLES > 0)
+        {
+            BGpad.setColor(COLORS[TXTCOLOR]);
+            BGpad.setFont(FONTS[TITLEFONT]);
+            fontMetrics = getFontMetrics(FONTS[TITLEFONT]);
+            y = fontMetrics.getHeight();
+            x = fontMetrics.stringWidth(TITLE);
+            BGpad.drawString(TITLE, (WIDTH - x) / 2, (30 + y) / 2);
+        }
+    }
+
+    public void CreateTree()
+    {
+        if(BORDER < 1)
+            buffer3 = createImage(WIDTH - 11, HEIGHT - yadj);
+        else
+            buffer3 = createImage(WIDTH - 11, HEIGHT - yadj - 5);
+        TREE = buffer3.getGraphics();
+        TREE.setColor(COLORS[BGCOLOR]);
+        TREE.fillRect(0, 0, WIDTH - 11, HEIGHT - yadj);
+        TREE.drawImage(BG_IMG, 0, 0, this);
+        AreaCount = 0;
+        y = 16;
+        int l = 10 - xoffset;
+        int i1 = 0;
+        NODES_DISP = 0;
+        LARGEST_X = 0;
+        DrawTheLeafs(i1, l);
+        checkScroll();
+    }
+
+    public void DrawTheLeafs(int l, int i1)
+    {
+        boolean flag = false;
+        int k1 = -1;
+        int l1 = y - yoffset;
+        TREE.setColor(COLORS[LINECOLOR]);
+        TREE.drawLine(i1, l1 - 11, i1, l1 - 16);
+        if(l1 < HEIGHT - yadj)
+        {
+            for(int j1 = 0; j1 < NO_NODES; j1++)
+            {
+                int i2 = y - yoffset;
+                if(NODEI[j1][0] == l)
+                {
+                    TREE.setColor(COLORS[LINECOLOR]);
+                    if(k1 > -1)
+                    {
+                        if(NODEI[j1 - 1][2] == 0)
+                            TREE.drawLine(i1, k1 - 7, i1, i2 - 11);
+                        else
+                            TREE.drawLine(i1, k1 - 2, i1, i2 - 11);
+                        k1 = -1;
+                    }
+                    TREE.drawLine(i1 + 5, i2 - 7, i1 + 8, i2 - 7);
+                    NODES_DISP++;
+                    if(i2 > -1)
+                    {
+                        if(NODEI[j1][2] == 1)
+                        {
+                            TREE.drawRect(i1 - 4, i2 - 11, 8, 8);
+                            AddArea(0, (i1 - 4) + 6, (i2 - 11) + yadj, i1 + 3 + 6, (i2 - 3) + yadj, j1);
+                            TREE.setColor(COLORS[LINECOLOR]);
+                            TREE.drawLine(i1 - 2, i2 - 7, i1 + 2, i2 - 7);
+                            if(NODEI[j1][3] == 0)
+                                TREE.drawLine(i1, i2 - 9, i1, i2 - 5);
+                        } else
+                        {
+                            TREE.drawLine(i1, i2 - 11, i1, i2 - 7);
+                            TREE.drawLine(i1, i2 - 7, i1 + 4, i2 - 7);
+                        }
+                        TREE.setFont(FONTS[NODEFONT]);
+                        fontMetrics = getFontMetrics(FONTS[NODEFONT]);
+                        StrWidth = fontMetrics.stringWidth(NODET[j1][0]);
+                        if(NODEI[j1][5] == 1)
+                        {
+                            TREE.setColor(COLORS[HBGCOLOR]);
+                            TREE.fillRect(i1 + 25, i2 - 13, StrWidth + 4, 16);
+                            TREE.setColor(COLORS[0]);
+                            TREE.drawRect(i1 + 25, i2 - 13, StrWidth + 4, 16);
+                            TREE.setColor(COLORS[11]);
+                            TREE.drawLine(i1 + 25, i2 + 3, i1 + 29 + StrWidth, i2 + 3);
+                            TREE.drawLine(i1 + 29 + StrWidth, i2 + 3, i1 + 29 + StrWidth, i2 - 13);
+                            TREE.setColor(COLORS[HTXTCOLOR]);
+                        } else
+                        {
+                            TREE.setColor(COLORS[TXTCOLOR]);
+                        }
+                        TREE.drawString(NODET[j1][0], i1 + 28, i2);
+                        if(NODEI[j1][3] == 1)
+                            TREE.drawImage(NODE_IMG[NODEI[j1][6]], i1 + 9, i2 - 12, this);
+                        else
+                            TREE.drawImage(NODE_IMG[NODEI[j1][1]], i1 + 9, i2 - 12, this);
+                        AddArea(1, i1 + 28 + 6, (i2 - 12) + yadj, i1 + 28 + StrWidth + 6, i2 + yadj, j1);
+                        if(i1 + 28 + StrWidth + 6 > LARGEST_X)
+                            LARGEST_X = i1 + 28 + StrWidth + 6;
+                        if(NODEI[j1][4] > -1)
+                        {
+                            if(NODEI[j1][5] == 2)
+                            {
+                                TREE.setColor(COLORS[HBGCOLOR]);
+                                TREE.fillRect(i1 + 31 + StrWidth, i2 - 13, 16, 16);
+                                TREE.setColor(COLORS[0]);
+                                TREE.drawRect(i1 + 31 + StrWidth, i2 - 13, 16, 16);
+                                TREE.setColor(COLORS[11]);
+                                TREE.drawLine(i1 + 31 + StrWidth, i2 + 3, i1 + 47 + StrWidth, i2 + 3);
+                                TREE.drawLine(i1 + 47 + StrWidth, i2 - 13, i1 + 47 + StrWidth, i2 + 3);
+                            }
+                            TREE.drawImage(NODE_IMG[NODEI[j1][4]], i1 + 32 + StrWidth, i2 - 12, this);
+                            AddArea(2, i1 + 32 + StrWidth + 6, (i2 - 12) + yadj, i1 + 46 + StrWidth + 6, i2 + 2 + yadj, j1);
+                            if(i1 + 46 + StrWidth + 6 > LARGEST_X)
+                                LARGEST_X = i1 + 46 + StrWidth + 6;
+                        }
+                    }
+                    k1 = i2;
+                    if(k1 < 0)
+                        k1 = 0;
+                    y = y + 16;
+                    if(NODEI[j1][3] == 1)
+                    {
+                        int j2 = 0;
+                        j = 0;
+                        do
+                        {
+                            if(NODET[j1][0].equals(PARENT[j]))
+                                j2 = j;
+                            j++;
+                        } while(j < NO_PARENTS && j2 == 0);
+                        if(j2 > 0)
+                            DrawTheLeafs(j2, i1 + 16);
+                    }
+                }
+            }
+
+        }
+    }
+
+    public void AddArea(int l, int i1, int j1, int k1, int l1, int i2)
+    {
+        if(AreaCount < 10000)
+        {
+            Area[AreaCount][0] = l;
+            Area[AreaCount][1] = i1 - 1;
+            Area[AreaCount][2] = j1 - 1;
+            Area[AreaCount][3] = k1 + 1;
+            Area[AreaCount][4] = l1 + 1;
+            Area[AreaCount][5] = i2;
+            AreaCount++;
+        }
+    }
+
+    public int parmgetint(String s, int l, int i1, int j1)
+    {
+        String s1 = getParameter(s);
+        int k1;
+        if(s1 == null)
+        {
+            k1 = l;
+        } else
+        {
+            k1 = Integer.parseInt(s1);
+            if(k1 > j1)
+                k1 = j1;
+            if(k1 < i1)
+                k1 = i1;
+        }
+        return k1;
+    }
+
+    public String parmgetstr(String s, String s1)
+    {
+        String s3 = " ";
+        String s2 = getParameter(s);
+        if(s2 == null)
+            s3 = s1;
+        else
+            s3 = s2;
+        return s3;
+    }
+
+    public void mousePressed(MouseEvent mouseevent)
+    {
+        int l = mouseevent.getX();
+        int i1 = mouseevent.getY();
+        boolean flag = false;
+        k = 0;
+        do
+        {
+            if(l > Area[k][1] && l < Area[k][3] && i1 > Area[k][2] && i1 < Area[k][4])
+            {
+                flag = true;
+                switch(Area[k][0])
+                {
+                default:
+                    break;
+
+                case 0: // '\0'
+                    if(NODEI[Area[k][5]][3] == 0)
+                        NODEI[Area[k][5]][3] = 1;
+                    else
+                        NODEI[Area[k][5]][3] = 0;
+                    break;
+
+                case 1: // '\001'
+                    if(NODET[Area[k][5]][1] == null)
+                        break;
+                    try
+                    {
+                        URL url = new URL(getDocumentBase(), NODET[Area[k][5]][1]);
+                        getAppletContext().showDocument(url, NODET[Area[k][5]][2]);
+                    }
+                    catch(MalformedURLException malformedurlexception)
+                    {
+                        malformedurlexception.printStackTrace();
+                    }
+                    break;
+
+                case 2: // '\002'
+                    if(NODET[Area[k][5]][3] == null)
+                        break;
+                    try
+                    {
+                        URL url1 = new URL(getDocumentBase(), NODET[Area[k][5]][3]);
+                        getAppletContext().showDocument(url1, NODET[Area[k][5]][4]);
+                    }
+                    catch(MalformedURLException malformedurlexception1)
+                    {
+                        malformedurlexception1.printStackTrace();
+                    }
+                    break;
+                }
+            }
+            k++;
+        } while(!flag && k < AreaCount);
+        repaint();
+    }
+
+    public void mouseReleased(MouseEvent mouseevent)
+    {
+        mouseevent.getX();
+        mouseevent.getY();
+        repaint();
+    }
+
+    public void mouseMoved(MouseEvent mouseevent)
+    {
+        int l = mouseevent.getX();
+        int i1 = mouseevent.getY();
+        boolean flag = false;
+        for(k = 0; k < AreaCount; k++)
+            NODEI[Area[k][5]][5] = 0;
+
+        k = 0;
+        do
+        {
+            if(l > Area[k][1] && l < Area[k][3] && i1 > Area[k][2] && i1 < Area[k][4])
+            {
+                flag = true;
+                switch(Area[k][0])
+                {
+                case 1: // '\001'
+                    NODEI[Area[k][5]][5] = 1;
+                    break;
+
+                case 2: // '\002'
+                    NODEI[Area[k][5]][5] = 2;
+                    break;
+                }
+            }
+            k++;
+        } while(!flag && k < AreaCount);
+        repaint();
+    }
+
+    public void mouseDragged(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseClicked(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseEntered(MouseEvent mouseevent)
+    {
+    }
+
+    public void mouseExited(MouseEvent mouseevent)
+    {
+    }
+
+    public boolean handleEvent(Event event)
+    {
+        if(event.target instanceof Scrollbar)
+        {
+            if(vscrollbar.isVisible())
+            {
+                yoffset = 16 * vscrollbar.getValue();
+                repaint();
+            }
+            if(hscrollbar.isVisible())
+            {
+                xoffset = 10 * hscrollbar.getValue();
+                repaint();
+            }
+            return true;
+        } else
+        {
+            boolean flag = super.handleEvent(event);
+            return flag;
+        }
+    }
+
+    public void checkScroll()
+    {
+        if(LARGEST_X + xoffset < MAX_X)
+        {
+            hscrollbar.setVisible(false);
+            xoffset = 0;
+            hscrollbar.setValue(0);
+        } else
+        {
+            hscrollbar.setMaximum((((LARGEST_X + xoffset) - (3 * WIDTH) / 4) + 25) / 10);
+            hscrollbar.setVisible(true);
+        }
+        if(NODES_DISP < MAX_LINES)
+        {
+            vscrollbar.setVisible(false);
+            yoffset = 0;
+            vscrollbar.setValue(0);
+            return;
+        } else
+        {
+            vscrollbar.setMaximum(NO_NODES);
+            vscrollbar.setVisible(true);
+            return;
+        }
+    }
+
+    public SIRtree()
+    {
+        yadj = 40;
+        xadj = 11;
+        layout = new BorderLayout();
+    }
+
+    boolean found;
+    boolean end;
+    int i;
+    int j;
+    int k;
+    int x;
+    int xoffset;
+    int y;
+    int yoffset;
+    int yadj;
+    int xadj;
+    int StrWidth;
+    int NODES_DISP;
+    int LARGEST_X;
+    int MAX_LINES;
+    int MAX_X;
+    String TEMPSTR;
+    String TEMPARRAY[];
+    String TEMPPARENT;
+    String SC;
+    String FT;
+    String Fonttype;
+    String Fontstyle;
+    StringTokenizer st;
+    Image tempimage;
+    FontMetrics fontMetrics;
+    int FIRST;
+    int WIDTH;
+    int HEIGHT;
+    String TITLE;
+    String ICONS;
+    String BGIMG;
+    int BGCOLOR;
+    int TXTCOLOR;
+    int HBGCOLOR;
+    int HTXTCOLOR;
+    int TITLEFONT;
+    int LINECOLOR;
+    int NODEFONT;
+    int BORDER;
+    int TITLES;
+    Color COLORS[];
+    Font FONTS[];
+    String PARENT[];
+    String NODET[][];
+    int NODEI[][];
+    int NO_NODES;
+    int NO_PARENTS;
+    int AreaCount;
+    int Area[][];
+    Image NODE_IMG[];
+    Image BG_IMG;
+    public Image buffer;
+    public Image buffer2;
+    public Image buffer3;
+    Graphics pad;
+    Graphics BGpad;
+    Graphics TREE;
+    Scrollbar vscrollbar;
+    Scrollbar hscrollbar;
+    boolean Vscroll;
+    boolean Hscroll;
+    int Linset;
+    int Rinset;
+    int Tinset;
+    int Binset;
+    BorderLayout layout;
+    static AppletContext APPLETCONTEXT;
+}

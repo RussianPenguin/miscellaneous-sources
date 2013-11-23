@@ -1,0 +1,38 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body bgcolor="#000000">
+
+<h1 align="center"><u><strong><font color="#FFFF00">WhoIsVisitor preview</font></strong></u></h1>
+
+<p>&nbsp;</p>
+
+<p><font color="#FFFFFF">The WhoIsVisitor applet sends you a mail with some informations
+about the visitors of your site: the OS name used, and also the last visited URL which can
+help you to know how people come on your site.&nbsp;As applets can't connect to remote
+hosts, this applet connects to your local server. So your web server must also be a mail
+server. To know if it's true open a Telnet session and try this : 'telnet yourhost 25',
+for example: 'telnet www.yahoo.com 25' If it works (no errors) your web server is also a
+mail server. The applet size is 3x3 or something like that because the grey applet zone is
+no use for this applet. Note that the code used in the html file is different, because the
+applet must use Javascript. See the exemple file to see the code source</font></p>
+
+<p>&nbsp;</p>
+
+<p align="center"><script LANGUAGE="JavaScript">
+<script LANGUAGE="JavaScript">
+<!--
+document.write("<APPLET CODE=WhoIsVisitor.class WIDTH=3 HEIGHT=3>");
+document.write("<PARAM NAME=recipient VALUE=\"home@taijisoftware.com\">");
+document.write("<PARAM NAME=sender VALUE=\"home@taijisoftware.com\">");
+document.write("<PARAM NAME=registration_code VALUE=\"register to stop the popup on line\">");
+document.write("<PARAM NAME=lastvisited VALUE=\"");
+document.write(escape(document.referrer));
+document.write("\"></APPLET>");
+// -->
+</script>
+</body>
+</html>

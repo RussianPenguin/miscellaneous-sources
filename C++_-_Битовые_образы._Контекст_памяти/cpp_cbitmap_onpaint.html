@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;}  
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;}  
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="680">
+    <h1>Битовые образы. Контекст памяти.</h1>
+    <p><b>&nbsp;</p>
+    <p>Автор статьи: <a href="mailto:apopov@nm.ru">Alexander E. Popov</a></B> </p>
+    <p align="justify">Зачем вообще нужен bitmap? Существуют как
+    минимум две проблемы, которые можно решить с
+    помощью bitmap. Во первых: при рисовании в окне,
+    полученный рисунок нигде не хранится, поэтому
+    если вы довольно долго формировали рисунок, и вам
+    понадобилось перерисовать окно, может
+    получиться, что перерисовка занимает довольно
+    много времени. Во вторых, например, вы в OnPaint
+    случайным образом рисуете 10000 прямоугольников,
+    после чего ваше окно перекрывет другое окно.
+    Затем вы опять возвращаетесь к вашему
+    приложению, но часть окна, которая была перекрыта
+    другим окном, заново перерисовывется, но там уже
+    возникают другие случайные прямоугольники.
+    Поэтому нужно сохранять участки отображения в
+    памяти. </p>
+    <p align="justify">Bitmap имеет определенную структуру:
+    количество цветов, длина, ширина, количество
+    плоскостей, ... <b><font color="#264307"></p>
+    <pre>CBitmap b; //пока не имеет размеров</FONT></B></pre>
+    <p>Bitmap имеет смысл создавать такой же, как область
+    экрана, т.е. bitmap должен быть совместим с данным
+    экраном, точнее с данным типом отображения. <b><font
+    color="#264307"></p>
+    <pre>b.CreateCompatibleBitmap( pDC, //указатель на CDC
+                          w,     //ширина
+                          h ) ;  //высота
+</FONT></B></pre>
+    <p align="justify">Не существует битовых образов для
+    обычных контекстов отображения (pDC - обычный
+    контекст). <b><font color="#264307"></p>
+    <pre>CBitmap b ;
+CClientDC dc ( this ) ;
+b.CreateCompatibleBitmap ( &amp;dc, 1024, 768 ) ; 
+</FONT></B></pre>
+    <p>Для того, чтобы рисовать на bitmap, нужно завести
+    специальный контекст, называемый контекстом
+    памяти, и выбрать этот bitmap в контекст памяти. <b><font
+    color="#264307"></p>
+    <pre>CDC memDC ; //оболочка MFC над объектом Windows. 
+            //Сам объект создается  по Create.
+memDC.CreateCompatibleDC(&amp;dc);
+//Выберем bitmap в контекст
+memDC.SelectObject( &amp;b ) ;
+//Теперь можно рисовать на bitmap. Хотя сейчас bitmap заполнен чем 
+//попало, поэтому если вы не будете заполнять полностью часть bitmap,
+//выводимую на экран, то сначала bitmap нужно очистить, например 
+//с помощью FillRect.
+memDC.Rectangle ( 10, 10, 100, 100 ) ;
+</FONT></B></pre>
+    <p>Выведем bitmap на экран:<br>
+    <img src="bitmap.gif" width="233" height="77"> <b><font color="#264307"></p>
+    <pre>dc.BitBlt( x, y, w, h, //параметры экрана (куда рисовать)
+           &amp;memDC,
+           x1, y1, //координаты левого верхнего угла, откуда рисовать 
+           SRCCOPY ) ; 
+</FONT></B></pre>
+    <p>SRCCOPY учитывет только цвет источника, а цвет
+    приемника и цвет текущей кисти игнорируются. <br>
+    Если режимы отображения различны (например: MM_TEXT
+    и MM_LOMETRIC), то произойдет преобразование координат
+    (может возникнуть проблема). <br>
+    Есть режим вывода bitmap, при котором он
+    растягивается или сжимается: <b><font color="#264307"></p>
+    <pre>dc.StretchBlt( x, y, w, h, //параметры экрана (куда рисовать)
+           &amp;memDC,
+           x1, y1, w1, h1, 
+           SRCCOPY ) ; 
+</FONT></B></pre>
+    <p>Чтобы использовать BitBlt и StretchBlt, не обязательно
+    иметь контекст памяти. <br>
+    <br>
+    <a href="#Top">Перейти в нaчало страницы</a> </p>
+    <h3>Упражнения</h3>
+    <ol>
+      <li>Нарисовать несколько объектов в окне. Поменять
+        местами половинки окна. <br>
+        <a href="bitmap_half.zip">Готовый проект на VC++ 5.0</a>. 
+ 
+      <li>Поменять местами половинки экрана. Примечание:
+        CreateDC ( "DISPLAY", 0, 0, 0) - контекст, позволяющий
+        работать со всем экраном. <br>
+        <a href="bitmap_half2.zip">Готовый проект на VC++ 5.0</a>. 
+ 
+      <li>Создать 10 000 случайных прямоугольников в bitmap.
+        Последнее сделать в C...View::OnInitialUpdate. Bitmap и memDС
+        создать как данные-члены C...View. memDC
+        инициализировать в C...View::OnInitialUpdate. <br>
+        <i>OnInitialUpdate:</i> <b><font color="#264307"><pre>for (int i=  0; i&lt; 10000; i++) 
+    memDC.Rectangle(...
+</font></b>
+<i>OnDraw:</i> <b><font
+color="#264307"></PRE>
+        <pre>pDC -&gt; BitBlt( ..., &amp;memDC, ...) ;</font></b>
+<a href="bitmap_rect.zip">Готовый проект на VC++ 5.0</a>  </PRE>
+      <li>Выполнить задание 3, добавив скролллинг. Для
+        чего представление породить от CScrollView. <br>
+        <i>В OnInitialUpdate добавть:</i> <b><font color="#264307"><pre>CSize sizeTotal (1024, 768) ;
+CSize sizePage (512, 384) ;
+CSize sizeLine (30, 30) ;
+SetScrollSizes(MM_TEXT, sizeTotal, sizePagem sizeLine) ;
+</font></b>Window пытается закрасить цветом кисти перед перерисовкой.  Чтобы этого
+избежать, в PreCreateWindow создать структуру класса с помощью
+AfxRegisterWndClass (необходимо присвоить нулевую кисть) и породить
+от него  окно. 
+<a
+href="bitmap_rect2.zip">Готовый проект на VC++ 5.0</a></PRE>
+      </li>
+    </ol>
+    </td>
+  </tr>
+</table><font 
+face=System></font>
+</center></div>
+</body>
+</html>

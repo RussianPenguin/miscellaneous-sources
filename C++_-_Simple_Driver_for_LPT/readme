@@ -1,0 +1,28 @@
+—одержимое этой директории рекомендуетс€ разместить на диске C:, например:
+
+C:\Example\install\
+C:\Example\obj\
+C:\Example\objchk_w2k\
+C:\Example\tester\
+C:\Example\Makefile
+C:\Example\readme
+C:\Example\sources
+C:\Example\init.cpp
+C:\Example\driver.h
+и т.п.
+
+или
+
+C:\Ex\install\
+C:\Ex\obj\
+C:\Ex\objchk_w2k\
+C:\Ex\tester\
+C:\Ex\Makefile
+C:\Ex\readme
+C:\Ex\sources
+C:\Ex\init.cpp
+C:\Ex\driver.h
+
+
+ѕри инсталл€ции через inf файл ћастеру установки следует указать директорию install,
+где он сможет найти inf файл и выполнить установку, см. раздел 3.10.2)

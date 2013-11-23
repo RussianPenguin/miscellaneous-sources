@@ -1,0 +1,465 @@
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><p align="center">&nbsp;</p>
+    <h3 align="center"><font color="#a0a099">ButtonST - плоские кнопки </font></h3>
+    <hr>
+    <p>Автор: <a href="mailto:davide_calabro@yahoo.com">Davide Calabro'</a>.<!-- Environment eg NT 4.0 SP3, VC6.0 SP1 --> </p>
+    <p><u>Требования:</u> Win95/98 NT4, VC 5.0<!-- Sample image - gif or jpg --> </p>
+    <p><img alt="ST_CButton flat" border="0" src="flat_button3_1.jpg"
+    tppabs="http://www.codeguru.com/buttonctrl/flat_button3_1.jpg" width="436" height="294"> <img
+    border="0" src="flat_button3_2.jpg"
+    tppabs="http://www.codeguru.com/buttonctrl/flat_button3_2.jpg" width="400" height="220"> </p>
+    <h4>Описание</h4>
+    <p>CButtonST это класс, наследуемый от MFC класса CButton.<br>
+    С этим классом в Вашем приложении можно
+    использовать как стандартные кнопки, так и
+    необычные и плоские кнопки. </p>
+    <h4>Возможности CButtonST: </h4>
+    <ul>
+      <li>Стандартные свойства CButton</li>
+      <li>поддержка иконок 16x16 32x32 48x48 16 и 256 цветов </li>
+      <li>Поддержка прозрачных кнопок </li>
+      <li>Изменение вида кнопки на лету с плоской в
+        стандартную </li>
+      <li>Кнопка может иметь две иконки. Одна, когда
+        курсор мыши на кнопке и другая, когда курсор за
+        пределами кнопки.</li>
+      <li>Возможнось использования в DLL </li>
+      <li>Возможность динамического создания </li>
+      <li>Каждая кнопка может иметь собственный курсор</li>
+      <li>компилировалось в Visual C++ v5.0 </li>
+      <li>Full source code included! </li>
+      <li>It's free! </li>
+    </ul>
+    <h4>Как включить CButtonST в Ваше приложение</h4>
+    <pre>    Добавьте в Ваш проект следующие файлы:
+    <font
+color="#990000">
+        BtnST.h
+        BtnST.cpp
+    </font>
+    С помощью редактора диалога создайте стандартную кнопку и назовите, например, IDOK
+    (Вам не нужно создавать собственный прорисовщик кнопки) и создайте переменную член:
+    <font
+color="#990000">
+        CButtonST m_btnOk;
+    </font>
+    Теперь с помощью редактора ресурсов, создайте иконку и назовите, например, IDI_OK256
+    Так же Вы можете импортировать её из уже существующей, такой как в демопроекте
+    (т.e. 32x32x256_Ok.ico).
+
+    Используйте иконки размером 32x32 пикселей. Иконки друго размера будут отображаться
+    неправильно.
+
+    Теперь свяжите кнопку с CButtonST. В процедуре OnInitDialog:
+    <font
+color="#990000">
+        // Вызываем базовый метод
+        CDialog::OnInitDialog();
+
+        // Создаём кнопку IDOK
+        m_btnOk.SubclassDlgItem(IDOK, this);
+        // Устанавливаем иконку для кнопки
+        m_btnOk.SetIcon(IDI_OK256);
+    </font>
+    Вы можете использовать для одной кнопки. Первая иконка отображается когда
+    курсор мышки находится на кнопке. Вторая иконка отображается когда
+    курсор мышки находится за пределами кнопки. Если Вы используете одну и ту же иконку,
+    но одну цветную, а другую чёрно белую, то получится красивый эффект!
+    <font
+color="#990000">
+        // Добавляем две иконки
+        m_btnOk.SetIcon(IDI_OK256, IDI_OK256_BW);
+    </font>
+    Иконки должны быть одинакового размера!
+
+    По умолчанию на кнопке иконка будет располагаться слева, а текст справа.
+    Если Вам нужно, чтобы иконка располагалась вверху, а текст внизу, то
+    необходимо установить выравнивание кнопки:
+    <font
+color="#990000">
+        // Выравниваем иконку вертикально
+        m_btnOk.SetAlign(CButtonST::ST_ALIGN_VERT);
+    </font>
+    Так же, по умолчанию, кнопка будет иметь плоский стиль. Если Вам нужна
+    стандартная кнопка, то используйте следующий код:
+    <font
+color="#990000">
+        // Рисуем стандартную кнопку
+        m_btnOk.SetFlat(FALSE);
+    </font>
+    Для плоских кнопок по умолчанию высвечивается бордюр, когда курсор мышки проходит
+    над кнопкой. Вы можете запретить этот эффект (в примере это кнопка с CD-ROM!)
+    <font
+color="#990000">
+        // Не прорисовывать бордюр для кнопки
+        m_btnOk.DrawBorder(FALSE);
+    </font>
+    Для каждой кнопки можно установить собственные цвета.
+        <font
+color="#990000">
+        // Устанавливаем цвета кнопок
+        COLORREF crStandard = ::GetSysColor(COLOR_BTNFACE);
+        m_btnOk.SetInactiveBgColor(crStandard - RGB(20,20,20));
+        m_btnOk.SetActiveBgColor(crStandard + RGB(20,20,20));
+        m_btnOk.SetInactiveFgColor(RGB(0,255,0));
+        m_btnOk.SetActiveFgColor(RGB(255,0,0));
+    </font>
+    Каждая кнопка может иметь свой курсор.
+    Например, кнопка, которая запускает интернет браузер, изменяет курсор мышки
+    на ручку, при наведении на неё курсора!
+    <font
+color="#990000">
+        // Устанавливаем ручку вместо курсора
+        m_btnOk.SetBtnCursor(IDC_HAND);
+    </font>
+    Каждый приличный элемент управления должен иметь свой текст в виде подсказки!
+    Небольшой текст отображается, когда курсор останавливается на кнопке.
+    <font
+color="#990000">
+        // Добавляем небольшой текст к кнопке
+        m_btnOk.SetTooltipText(IDS_TT_OK);
+    </font>
+    Для добавления красочности интерфейсу, можно задать прозрачность кнопке:
+        <font
+color="#990000">
+        // Делаем прозрачную кнопку
+        m_btnOk.DrawTransparent();
+    </font>
+    
+
+</pre>
+    <h4>CButtonST - функции члены</h4>
+    <p><font color="#990000" size="+1">&nbsp;</p>
+    <p>void SetIcon(int nIconInId, int nIconOutId = NULL) </font><br>
+    Устанавливаем иконку(и) для кнопки<ul>
+      <li>nIconInId<br>
+        Ресурс иконки (когда курсор мышки внутри) </li>
+      <li>nIconOutId<br>
+        Ресурс иконки (когда курсор мышки снаружи)<br>
+        Если NULL то будет использоваться только первая
+        иконка </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetIcon(IDI_OK256);<br>
+    m_btnOk.SetIcon(IDI_OK256, IDI_OK256_BW);<br>
+    m_btnOk.SetIcon(NULL); // Для получения кнопки без иконки </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetAlign(int nAlign) </font><br>
+    Устанавливаем положение иконки (если она
+    определена) <br>
+    <br>
+    аргументы функции: <ul>
+      <li>ST_ALIGN_HORIZ<br>
+        Иконка слева и текст справа (по умолчанию) </li>
+      <li>ST_ALIGN_VERT<br>
+        Иконка наверху и текст внизу </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetAlign(CButtonST::ST_ALIGN_VERT); </font><br>
+    <br>
+    <font color="#990000" size="+1">int GetAlign() </font><br>
+    Получаем текущее положение иконки (смотрите SetAlign
+    о возможных значениях) <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">int nRetValue = m_btnOk.GetAlign(); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetFlat(BOOL bState = TRUE) </font><br>
+    Установить стиль кнопки (&quot;плоский&quot; или
+    стандартный) <br>
+    <br>
+    Аргументы функции: <ul>
+      <li>TRUE<br>
+        Кнопка рисуется как &quot;плоская&quot; (по умолчанию) </li>
+      <li>FALSE<br>
+        Кнопка рисуется как стандартная </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetFlat();<br>
+    m_btnOk.SetFlat(FALSE); </font><br>
+    <br>
+    <font color="#990000" size="+1">BOOL GetFlat() </font><br>
+    Возвращает текущий стиль кнопки (смотрите SetFlat о
+    возможных значениях) <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">int nRetValue = m_btnOk.GetFlat(); </font><br>
+    <br>
+    <font color="#990000" size="+1">void DrawBorder(BOOL bEnable = TRUE) </font><br>
+    Отображение бордюра ON/OFF (только для
+    &quot;плоских&quot; кнопок) <br>
+    <br>
+    Входные значения: <ul>
+      <li>TRUE<br>
+        Бордюр кнопки отображается (по умолчанию) </li>
+      <li>FALSE<br>
+        Бордюр не отображается </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.DrawBorder();<br>
+    m_btnOk.DrawBorder(FALSE); </font><br>
+    <br>
+    <font color="#990000" size="+1">static const short GetVersionI()<br>
+    static const char* GetVersionC() </font><br>
+    Возвращает версию CButtonST <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">int nVer = CButtonST::GetVersionI(); // Делённое на 10
+    для получения глобального номера версии<br>
+    char szVer[20];<br>
+    strcpy(szVer, CButtonST::GetVersionC()); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetShowText(BOOL bShow = TRUE) </font><br>
+    Добавить или удалить текст (caption) из кнопки <br>
+    <br>
+    Входные значения: <ul>
+      <li>TRUE<br>
+        Текст отображается </li>
+      <li>FALSE<br>
+        Текст не отображается (но существует!) </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetShowText();<br>
+    m_btnOk.SetShowText(FALSE); </font><br>
+    <br>
+    <font color="#990000" size="+1">BOOL GetShowText() </font><br>
+    Возвращает текущее состояние текста
+    (отображается или нет) <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">int nRetValue = m_btnOk.GetShowText(); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetDefaultActiveFgColor() </font><br>
+    Устанавливает цвет текста по умолчанию (когда
+    курсор над кнопкой)<br>
+    Она автоматически вызывается, когда создаётся
+    кнопка. <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">m_btnOk.SetDefaultActiveFgColor(); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetDefaultActiveBgColor() </font><br>
+    Устанавливает цвет кнопки по умолчанию (когда
+    курсор над кнопкой)<br>
+    Она автоматически вызывается, когда создаётся
+    кнопка. <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">m_btnOk.SetDefaultActiveBgColor(); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetDefaultInactiveFgColor() </font><br>
+    Устанавливает цвет текста по умолчанию (когда
+    курсор за пределами кнопки)<br>
+    Она автоматически вызывается, когда создаётся
+    кнопка. <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">m_btnOk.SetDefaultInactiveFgColor(); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetDefaultInactiveBgColor() </font><br>
+    Устанавливает цвет кнопки по умолчанию (когда
+    курсор за пределами кнопки)<br>
+    Она автоматически вызывается, когда создаётся
+    кнопка. <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">m_btnOk.SetDefaultInactiveBgColor(); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetActiveFgColor(COLORREF crNew, BOOL bRepaint =
+    FALSE) </font><br>
+    Устанавливаем цвет текста (когда курсор над
+    кнопкой) <br>
+    <br>
+    Входные значения: <ul>
+      <li>crNew<br>
+        Новый цвет </li>
+      <li>bRepaint<br>
+        Если TRUE , то кнопка немедленно перерисовывается </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetActiveFgColor(RGB(255, 255, 0)); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetActiveBgColor(COLORREF crNew, BOOL bRepaint =
+    FALSE) </font><br>
+    Устанавливаем цвет кнопки (когда курсор над
+    кнопкой) <br>
+    <br>
+    Входные значения: <ul>
+      <li>crNew<br>
+        Новый цвет </li>
+      <li>bRepaint<br>
+        Если TRUE , то кнопка немедленно перерисовывается
+        &nbsp; </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetActiveBgColor(RGB(128, 128, 128));<br>
+    m_btnOk.SetActiveBgColor(::GetSysColor(COLOR_BTNFACE), TRUE); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetInactiveFgColor(COLORREF crNew, BOOL bRepaint =
+    FALSE) </font><br>
+    Устанавливаем цвет текста (когда курсор за
+    пределами кнопки) <br>
+    <br>
+    Входные значения: <ul>
+      <li>crNew<br>
+        Новый цвет&nbsp; </li>
+      <li>bRepaint<br>
+        Если TRUE , то кнопка немедленно перерисовывается </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetInactiveFgColor(RGB(255, 255, 255)); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetInactiveBgColor(COLORREF crNew, BOOL bRepaint =
+    FALSE) </font><br>
+    Устанавливаем цвет кнопки (когда курсор за
+    пределами кнопки) <br>
+    <br>
+    Входные значения: <ul>
+      <li>crNew<br>
+        Новый цвет </li>
+      <li>bRepaint<br>
+        Если TRUE , то кнопка немедленно перерисовывается </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetInactiveBgColor(RGB(128, 128, 128)); </font><br>
+    <br>
+    <font color="#990000" size="+1">const COLORREF GetActiveFgColor() </font><br>
+    Возвращает текущий цвет текста (когда курсор над
+    кнопкой) <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">COLORREF crCurrent = m_btnOk.GetActiveFgColor(); </font><br>
+    <br>
+    <font color="#990000" size="+1">const COLORREF GetActiveBgColor() </font><br>
+    Возвращает текущий цвет кнопки (когда курсор над
+    кнопкой) <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">COLORREF crCurrent = m_btnOk.GetActiveBgColor(); </font><br>
+    <br>
+    <font color="#990000" size="+1">const COLORREF GetInactiveFgColor() </font><br>
+    Возвращает текущий цвет текста (когда курсор за
+    пределами кнопки) <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">COLORREF crCurrent = m_btnOk.GetInactiveFgColor(); </font><br>
+    <br>
+    <font color="#990000" size="+1">const COLORREF GetInactiveBgColor() </font><br>
+    Возвращает текущий цвет кнопки (когда курсор за
+    пределами кнопки) <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">COLORREF crCurrent = m_btnOk.GetInactiveBgColor(); </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetFlatFocus(BOOL bDrawFlatFocus, BOOL bRepaint =
+    FALSE) </font><br>
+    Разрешить/Запретить прорисовку фокуса<br>
+    Это имеет значение только для &quot;плоских&quot;
+    кнопок; на стандартных кнопках всегда рисуется
+    фокус. <br>
+    <br>
+    Входные значения: <ul>
+      <li>bDrawFlatFocus<br>
+        Когда TRUE , то &quot;плоские&quot; кнопки будут иметь
+        фокус<br>
+        По умолчанию &quot;плоские&quot; кнопки не имеют
+        прямоугольника фокуса </li>
+      <li>bRepaint<br>
+        Если TRUE , то кнопка немедленно перерисовывается </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.SetFlatFocus(TRUE);<br>
+    m_btnOk.SetFlatFocus(FALSE, TRUE); </font><br>
+    <br>
+    <font color="#990000" size="+1">BOOL GetFlatFocus() </font><br>
+    Возвращает состояние фокуса<br>
+    Это имеет значение только для &quot;плоских&quot;
+    кнопок; на стандартных кнопках всегда рисуется
+    фокус. <br>
+    <br>
+    Возвращаемые знацения: <ul>
+      <li>TRUE<br>
+        Фокус прорисовывается </li>
+      <li>FALSE<br>
+        Фокус не прорисовывается </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">BOOL bDrawFlatFocus = m_btnOk.GetFlatFocus(); </font><br>
+    <br>
+    <font color="#990000" size="+1">BOOL SetBtnCursor(int nCursorId = -1) </font><br>
+    Присваивает определённый курсор кнопке<br>
+    Курсор мышки изменяется про попадании на кнопку. <br>
+    <br>
+    Входные значения: <ul>
+      <li>nCursorId<br>
+        Идентификатор ресурса иконки </li>
+    </ul>
+    <p>Выходные значения: <ul>
+      <li>TRUE<br>
+        Курсор присвоен </li>
+      <li>FALSE<br>
+        Не удаётся загрузить ресурс курсора </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">BOOL bRetValue = m_btnOk.SetBtnCursor(IDC_HAND);<br>
+    m_btnOk.SetBtnCursor(); // Для удаления присвоенного курсора
+    </font><br>
+    <br>
+    <font color="#990000" size="+1">void SetTooltipText(int nId, BOOL bActivate = TRUE)<br>
+    void SetTooltipText(CString* spText, BOOL bActivate = TRUE) </font><br>
+    Приваиваем небольшой текст кнопки <br>
+    <br>
+    Входные значения: <ul>
+      <li>nId<br>
+        Ресурс строки, содержащей текст </li>
+      <li>spText<br>
+        Указатель на объект CString содержащий небольшой
+        текст (не может быть NULL) </li>
+      <li>bActivate<br>
+        Если TRUE текст активен (и показывается, когда
+        курсор останавливается над кнопкой) </li>
+    </ul>
+    <p>Используйте ActivateTooltip(), чтобы
+    разрешить/запретить текст (см. ниже)<br>
+    <br>
+    Пример:<br>
+    <font color="#990000">m_btnOk.SetTooltipText(IDS_TT_OK);<br>
+    m_btnOk.SetTooltipText(&amp;CString(&quot;Some text&quot;), FALSE); // Assign a tooltip
+    but create it disabled </font><br>
+    <br>
+    <font color="#990000" size="+1">void ActivateTooltip(BOOL bEnable = TRUE) </font><br>
+    Разрешить/Запретить отображение краткого текста
+    <br>
+    <br>
+    Входные значения: <ul>
+      <li>bEnable<br>
+        Если TRUE - текст будет активным (и показываться,
+        если курсор мышки остановится на кнопке) </li>
+    </ul>
+    <p>Пример:<br>
+    <font color="#990000">m_btnOk.ActivateTooltip(FALSE); </font><br>
+    <br>
+    <font color="#990000" size="+1">void DrawTransparent() </font><br>
+    Рисует кнопку прозрачной <br>
+    <br>
+    Пример:<br>
+    <font color="#990000">m_btnOk.DrawTransparent(); </font><br>
+    <br>
+    </p>
+    <h3>Downloads</h3>
+    <p><a href="flat_button3_demo.zip">Скачать демо-проект - 249 KB</a> </p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</center>
+</body>
+</html>

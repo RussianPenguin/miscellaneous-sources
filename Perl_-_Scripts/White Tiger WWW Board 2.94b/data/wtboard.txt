@@ -1,0 +1,182 @@
+; White Tiger WWW Board ini-file (2.935b)
+
+[Board Options]
+registration=
+thekonf=Форум
+tokonf=на форум
+ofkonf=форума
+onkonf=на форуме
+admin=admin@host.com
+private=noprivate
+dirkonf=../wtboard
+dirrealkonf=../wtboard
+dircgi=../cgi-bin
+realpath=..
+quote=>
+quotebeg=<i>
+quoteend=</i>
+substip=on
+addip=off
+notag=0
+usecookie=on
+quoting=on
+individual=on
+includeform=on
+ext=shtml
+reply=Re
+paragraph=<dd>
+endparagraph=</dd>
+separator=<hr size=1 width=80% align=center>
+selectnew=360
+selecttag=<font color=#ff0000><b>New</b></font>
+nulcolor=#0000ff
+selectnul=2
+string=<a href=$href>$subj</a> &#151; <b>$name</b> <i>$fhour:$fmin:$fsec $fday/$fmonth/$fullyear</i> ($answers) $new
+months=января/февраля/марта/апреля/мая/июня/июля/августа/сентября/октября/ноября/декабря
+days=Понедельник,/Вторник,/Среда,/Четверг,/Пятница,/Суббота,/Воскресенье,
+allowedtags=a/b/i/u/font/sub/sup/br/p/center/dd/dl/dt/em/hr/ol/ul/li/pre/s/table/td/th/tr
+timeshift=0
+smiles=on
+allrestrict=0
+codepage=cp-1251
+answerlabel=* 
+arclabel=** 
+filter=off
+filterwords=
+indname=index.shtml
+verifydbl=1
+service=service.shtml
+maxshowsubj=500
+passstyle=1
+wrnpassbeg=<b><font color=#888888>&#63;</font></b> 
+wrnpassend=
+externalcalls=off
+overdefine=off
+preview=on
+resetbutton=off
+quotesize=0
+imgexts=jpg/jpeg/gif/png
+begbody=<body bgcolor="$errbgcolor" text="$errtcolor" link="$errlcolor" vlink="$errvlcolor" alink="$erralcolor" background="$errimg">
+endbody=</body></html>
+showsuccess=0
+selftimeout=1
+contextreplace=1
+copyright=
+allowroot=on
+setnroot=0
+faq=faq.htm
+expirescookie=Wednesday, 08-Dec-19 23:59:59
+replacedeleted=on
+treestyle=1
+movenewtop=on
+mestimeout=2400
+
+[Archive Options]
+timelimit=30
+meslimit=1000
+method=0
+dirarc=archive
+indexarc=index
+intervaltype=2
+setnewsarc=on
+archive=archive.htm
+sethtaccess=on
+arctimeout=3
+
+[Service Options]
+info=Информация о форуме
+userstat=on
+ipuserstat=off
+ignorstat=off
+advisenew=on
+adviseans=on
+statdays=15
+
+[Form Options]
+lenlogin=30
+lenpass=10
+lenemailmes=50
+lenemailans=30
+lensubj=50
+lenrows=12
+lencols=70
+lenurl=50
+lentitleurl=50
+lenimg=50
+seturl=on
+maxsubj=500
+maxurl=200
+setimg=on
+
+[Board Colors]
+indbgcolor=#c6e8da
+indtcolor=#800000
+indlcolor=#000000
+indvlcolor=#800000
+indalcolor=#ffffff
+indimg=
+mesbgcolor=#f0f0ff
+mestcolor=#000000
+meslcolor=#000000
+mesvlcolor=#800000
+mesalcolor=#ffffff
+mesimg=
+errbgcolor=#a8bfb4
+errtcolor=#000000
+errlcolor=#000000
+errvlcolor=#800000
+erralcolor=#ffffff
+errimg=
+
+[Board Strings]
+begmesform=<html><title>Отправление сообщения $tokonf</title>$begbody<center>[<a href=$dirkonf/>$thekonf</a>] [<a href=$dirkonf/$faq>Правила</a>] <p>$separator<P> <h2>Отправление сообщения $tokonf</h2> <P>$separator<P> <div align=left>
+endmesform=$endbody
+begansform=<html><title>Отправление ответа $tokonf на сообщение &#171;$subj&#187;</title><body bgcolor="$errbgcolor" text="$errtcolor" link="$errlcolor" vlink="$errvlcolor" alink="$erralcolor" background="$errimg"><center>[<a href=$dirkonf/>$thekonf</a>] [<a href=$dirkonf/$faq>Правила</a>] <p>$separator<P> <h3>Отправление ответа $tokonf на сообщение <br>&#171;$subj&#187;</h3> <P>$separator<P> <div align=left>
+endansform=$endbody
+begindex=<html><meta http-equiv="pragma" content="no-cache"><title>$thekonf</title><body bgcolor="$indbgcolor" text="$indtcolor" link="$indlcolor" vlink="$indvlcolor" alink="$indalcolor" background="$indimg"><center><h1>$thekonf</h1> <P>$separator<p> <!--#include virtual="$dircgi/wtbservice.cgi?fid=$fid&ins=news"-->[<a href="$dircgi/wtboard.cgi?fid=$fid&root=on">Написать сообщение</a>] [<a href=$dirkonf/$service>Сервис</a>] [<a href=$dirkonf/$archive>Архивы</a>] [<a href=$dirkonf/$faq>Правила</a>] <P>$separator<p> </center><div align=left>
+endindex=<!--end--></ul></ul></ul></ul></ul></ul></ul> <P><center>$separator<p> [<a href="$dircgi/wtboard.cgi?fid=$fid&root=on">Написать сообщение</a>] [<a href=$dirkonf/$service>Сервис</a>] [<a href=$dirkonf/$archive>Архивы</a>] [<a href=$dirkonf/$faq>Правила</a>] <P>$separator<p></center> <div align=left><font size="-1"><i>&copy; 2000, $thekonf<br>$cprt</I>$endbody
+begarchive=<html><title>Архив $ofkonf</title><body bgcolor="$indbgcolor" text="$indtcolor" link="$indlcolor" vlink="$indvlcolor" alink="$indalcolor" background="$indimg"><center><h1>Архив $ofkonf</h1> <P>$separator<p> [<a href=$dirkonf/>$thekonf</a>] [<a href=$dirkonf/$service>Сервис</a>] [<a href=$dirkonf/$faq>Правила</a>] <P>$separator<p> </center><div align=left>
+endarchive=</ul></ul></ul></ul></ul></ul></ul> <P><center>$separator<p> [<a href=$dirkonf/>$thekonf</a>] [<a href=$dirkonf/$service>Сервис</a>] [<a href=$dirkonf/$faq>Правила</a>] <P></center>$separator<p> <div align=left><font size="-1"><i>&copy; 2000, $thekonf<br>$cprt</i>$endbody
+begmes=<html><meta http-equiv="pragma" content="no-cache"><title>$subj</title><body bgcolor="$mesbgcolor" text="$mestcolor" link="$meslcolor" vlink="$mesvlcolor" alink="$mesalcolor" background="$mesimg"><center><h2><a name=top>$subj</a></h2> <p>$separator<p> [<a href=./>$thekonf</a>] [<a href=#ans>Ответы и комментарии</a>] [<a href="$dircgi/wtboard.cgi?$command">Написать ответ</a>]</center> <p>$separator<p> <div align=left>
+endmes=<center>$separator<p> [<a href=$dirkonf/>$thekonf</a>] [<a href=#top>Начало</a>] [<a href="$dircgi/wtboard.cgi?$command">Написать ответ</a>] [<a href="$dirkonf/$prev">Предыдущее сообщение</a>] [<a href="$dirkonf/$next">Следующее сообщение</a>]<p>$endbody
+searchmes=
+about=
+statistics=
+contexthelp=
+setnewsstring=
+regstring=
+regtext=
+warntext=
+begsettings=
+endsettings=
+savedsettings=
+newmesanstext=
+newmestext=
+newanstext=
+privatebegin=
+addedbegin=
+existbegin=
+wrnpasstext=
+nopasstext=
+nonametext=
+nosubjtext=
+prevmodetext=
+prevbuttontext=
+resetbuttontext=
+readonlybegin=
+noaccessbegin=
+delmesbegin=
+
+[External Calls]
+externalcall0=
+externalcall1=
+externalcall2=
+externalcall3=
+externalcall4=
+externalcall5=
+externalcall6=
+externalcall7=
+externalcall8=
+externalcall9=
+
+[Plugin Options]

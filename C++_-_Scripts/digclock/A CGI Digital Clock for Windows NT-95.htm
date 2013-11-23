@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0054)http://www.geocities.com/SiliconValley/6742/clock.html -->
+<HTML><HEAD><TITLE>A CGI Digital Clock for Windows NT/95</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Microsoft FrontPage 5.0" name=GENERATOR>
+<base target="_self">
+</HEAD>
+<BODY background="../../Autoplay/fon.jpg"><A name=toc>
+<H1 align=center>Digital Clock</H1></A>
+<H2 align=center><I>For Windows NT/95</I></H2>
+<CENTER><I>Version 2.0</I></CENTER>
+<P>
+<H3>Table Of Contents</H3>
+<UL>
+  <LI><A href="http://www.geocities.com/SiliconValley/6742/clock.html#download" 
+  onmouseover=" window.status='Skip to Downloading'; return true;">Downloading</A> 
+
+  <LI><A href="http://www.geocities.com/SiliconValley/6742/clock.html#install" 
+  onmouseover=" window.status='Skip to Installing Info'; return true;">Installing</A> 
+
+  <LI><A href="http://www.geocities.com/SiliconValley/6742/clock.html#usage" 
+  onmouseover=" window.status='Skip to Usage Info'; return true;">Usage</A> 
+  <LI><A href="http://www.geocities.com/SiliconValley/6742/clock.html#trouble" 
+  onmouseover=" window.status='Skip to Troubleshooting'; return true;">Troubleshooting</A> 
+
+  <LI><A href="http://www.geocities.com/SiliconValley/6742/clock.html#faq" 
+  onmouseover=" window.status='Skip to FAQ'; return true;">FAQ</A> 
+  <LI><A href="http://www.geocities.com/SiliconValley/6742/clock.html#credits" 
+  onmouseover=" window.status='Skip to Credits'; return true;">Credits</A> 
+</LI></UL>
+<HR>
+<A name=download>
+<H3>Downloading</H3></A>Download clock.zip by <A 
+href="http://www.geocities.com/SiliconValley/6742/clock.zip">clicking here</A>. 
+<P>Store it in your <TT>/cgi-bin/</TT> directory. 
+<P>And proceed to Installing... 
+<P><A href="http://www.geocities.com/SiliconValley/6742/clock.html#toc" 
+onmouseover="window.status='Return to Table Of Contents'; return true;">Back to 
+TOC</A> 
+<HR>
+<A name=install>
+<H3>Installing</H3></A>
+<OL>
+  <LI>Unzip clock.zip in your <TT>/cgi-bin</TT> directory. If you are using 
+  WinZip, be sure to have "Use Directory Names" turned on, and if you are using 
+  PKUnzip, make sure to use the -d option.<BR>The following directories and 
+  files are created: <PRE>/cgi-bin (or /cgi-shl)  &lt;--server's CGI directory
+  |
+  |--clock.exe          &lt;--the clock
+  |
+  |--\doc
+  |   |
+  |   |--clock.html     &lt;--this document
+  |   |--clock.readme   &lt;--readme for the clock
+  |   |--*.gif          &lt;--images used in this document
+  |
+  |--\digits
+      |
+      |--\led           
+          |
+          |--0.gif      &lt;--these gifs are used to create
+          |--1.gif         the clock image
+              .
+              .
+              .
+</PRE>The clock will create the file <TT>clock.err</TT> to record error 
+  messages (if any). 
+  <P>If you are already using the <A 
+  href="http://www.geocities.com/SiliconValley/6742/counter.html">counter</A>, 
+  it is OK to overwrite the GIFs in the <TT>\digits\led\</TT> directory, they 
+  are the same anyway (except that there are three additional GIFs, 
+  <TT>am.gif</TT>, <TT>pm.gif</TT>, and <TT>colon.gif</TT>. The 
+  <TT>\digits\led\</TT> directory is used to conserve disk space if you are also 
+  using the <A 
+  href="http://www.geocities.com/SiliconValley/6742/counter.html">counter</A>. 
+  <UL></UL>
+  <P><A href="http://www.geocities.com/SiliconValley/6742/clock.html#toc" 
+  onmouseover="window.status='Return to Table Of Contents'; return true;">Back 
+  to TOC</A> 
+  <HR>
+  <A name=usage>
+  <H3>Usage</H3></A>To use the clock, simply put this in your HTML: 
+  <P><NOBR><TT>&lt;img 
+  src="/cgi-bin/clock.exe?<I>arg1</I>=<I>value1</I>&amp;<I>arg2</I>=<I>value2</I>&amp;...&amp;<I>argn</I>=<I>valuen</I>"&gt;</TT> 
+  </NOBR>
+  <P>where the arguments are: 
+  <TABLE border=1 cellPadding=3 cellSpacing=1>
+    <TBODY>
+    <TR>
+      <TH>Argument (* means required)</TH>
+      <TH>Possible Values</TH>
+      <TH>Meaning</TH>
+    <TR>
+      <TD>format*</TD>
+      <TD>One of: 
+        <LI><TT>24hr 
+        <LI>normal 
+        <LI>secs</TT> </LI></TD>
+      <TD>See examples below. This argument is case-sensitive</TD></TR>
+    <TR>
+      <TD>simple</TD>
+      <TD><TT>yes</TT> or <TT>no</TT></TD>
+      <TD>Use a simple style if <TT>yes</TT>. See example below. The default 
+        is no.</TD></TR>
+    <TR>
+      <TD>bgcolour</TD>
+      <TD><TT>RRGGBB</TT> or <TT>trans</TT></TD>
+      <TD>When using the <TT>simple</TT> style, specifies the background 
+        colour of the image, or if <TT>trans</TT> is used, specifies a 
+        transparent background. RRGGBB should be 3 2-digit hex values in one 
+        string, similar to the HTML command <PRE>&lt;BODY BGCOLOR="RRGGBB"&gt;</PRE>. This argument has no meaning 
+        when simple is not <TT>yes</TT>. The default is <TT>000000</TT> 
+      (black).</TD></TR>
+    <TR>
+      <TD>fgcolour</TD>
+      <TD><TT>RRGGBB</TT></TD>
+      <TD>When using the <TT>simple=yes</TT>, specifies the foreground colour 
+        of the image. Same format as <TT>bgcolour</TT>. The default is 
+        <TT>FFFFFF</TT> (white).</TD></TR></TBODY></TABLE><B>Examples:</B> 
+  <P><NOBR><TT>&lt;img src="/cgi-bin/clock.exe?format=normal"&gt;</TT><BR>
+  <IMG 
+  src="A CGI Digital Clock for Windows NT-95.files/clock1.gif" width="75" height="20"> 
+  <P><TT>&lt;img src="/cgi-bin/clock.exe?format=secs"&gt;</TT><BR>
+  <IMG 
+  src="A CGI Digital Clock for Windows NT-95.files/clock2.gif" width="120" height="20"> 
+  <P><TT>&lt;img src="/cgi-bin/clock.exe?format=24hr"&gt;</TT><BR>
+  <IMG 
+  src="A CGI Digital Clock for Windows NT-95.files/clock3.gif" width="120" height="20"> 
+  <P><TT>&lt;img 
+  src="/cgi-bin/clock.exe?format=24hr&amp;simple=yes"&gt;</TT><BR>
+  <IMG 
+  src="A CGI Digital Clock for Windows NT-95.files/clock4.gif" width="62" height="19"> 
+  <P><TT>&lt;img 
+  src="/cgi-bin/clock.exe?format=normal&amp;simple=yes&amp;bgcolour=FF00FF&amp;fgcolour=00FF00"&gt;</TT><BR>
+  <IMG 
+  src="A CGI Digital Clock for Windows NT-95.files/clock5.gif" width="55" height="19"> </NOBR>
+  <P>The simple style requires less disk I/O, and should execute much more 
+  quickly. 
+  <P><A href="http://www.geocities.com/SiliconValley/6742/clock.html#toc" 
+  onmouseover="window.status='Return to Table Of Contents'; return true;">Back 
+  to TOC</A> 
+  <HR>
+  <A name=trouble>
+  <H3>TroubleShooting</H3></A><FONT size=+2>P</FONT>: <B>I get a broken-image 
+  icon where the clock should be</B> 
+  <P><FONT size=+2>S</FONT>: 1) Are you using <A 
+  href="http://www.geocities.com/SiliconValley/6742/emwacs.html">EMWACS or 
+  Purveyor</A>?<BR>2) Right-click on the broken image icon and select "View this 
+  image as..." <BR>
+  <UL>
+    <LI><B>It says "URL not found"</B><BR>
+    <OL>
+      <LI>You mistyped your HTML. Double check it 
+      <LI>You put clock.exe in the wrong spot. Check that it is in /cgi-bin 
+    </LI></OL>
+    <LI><B>It asks me configure a viewer for application/octet-stream?</B> 
+    <BR><B>It asks me if I want to save clock.exe?</B><BR>Your server doesn't 
+    know that /cgi-bin is a directory where executables should be 
+    <I>executed</I>, not downloaded. Recheck your configuration. Consult your 
+    manuals. 
+    <LI><B>It says the server is misconfigured</B> <BR>Check your configuration 
+    and manuals. 
+    <LI><B>It says something like Can't create child process?</B> <BR>Might be 
+    out of memory. More likely, especially if you are using WebSite, there are a 
+    thousand little files in your <TT>\TEMP</TT> directory called *.in and 
+    *.out: delete them. 
+    <LI><B>It says something else</B> <BR><A href="mailto:samm@cs.ubc.ca">E-mail 
+    me</A> the following info (after you've <A 
+    href="http://www.geocities.com/SiliconValley/6742/faq.html">read the 
+    FAQ</A>): 
+    <UL>
+      <LI>Your URL 
+      <LI>The message you do get (if any) 
+      <LI>the <A 
+      href="http://www.geocities.com/SiliconValley/6742/faq.html#server">server</A> 
+      you are using. 
+      <LI>whether or not there is a file called clock.err, and if there is such 
+      a file, what does it say? </LI></UL></LI></UL><FONT size=+2>P</FONT>: <B>I get 
+  an error message</B> 
+  <P><FONT size=+2>S</FONT>: Check for a file called clock.err, there is more 
+  specific error information there. 
+  <P><FONT size=+2>P</FONT>: <B>I specified a background colour and foreground 
+  colour but it came out white on black anyway when using the 
+  <TT>simple=yes</TT> argument.</B> 
+  <P><FONT size=+2>S</FONT>: You probably misspelled <TT>bgcolour</TT> or 
+  <TT>fgcolour</TT>. <B>Americans please note the U.</B> 
+  <P><FONT size=+2>P</FONT>: <B>My server has been crashing regularly since I 
+  started using your clock</B> 
+  <P><FONT size=+2>S</FONT>: 0) Read the <A 
+  href="http://www.geocities.com/SiliconValley/6742/disclaimer.html">disclaimer</A>. 
+  <BR>1) If you are using WebSite, delete all the *.in and *.out files in 
+  <TT>\TEMP</TT><BR>2) Try using the simple style to decrease the clock's 
+  execution time.<BR><B>None of those helps</B><BR>4) Buy more RAM<BR><B>Yeah, 
+  right</B><BR>5) Remove the clock.<BR><B>Still crashes</B><BR>6) Then it wasn't 
+  the clock: it was something else. 
+  <P><A href="http://www.geocities.com/SiliconValley/6742/clock.html#toc" 
+  onmouseover="window.status='Return to Table Of Contents'; return true;">Back 
+  to TOC</A> 
+  <HR>
+  <A name=faq>
+  <H3>FAQ</H3></A><FONT size=+2>Q</FONT>: <B>How do I change the digits?</B> 
+  <P><FONT size=+2>A</FONT>: Unfortunately you cannot. You can edit the GIFs in 
+  the <TT>/led</TT> directory if you wish, making sure you keep them all the 
+  same size, but this might screw you up if you are also using the <A 
+  href="http://www.geocities.com/SiliconValley/6742/counter.html">counter</A>. 
+  <P><FONT size=+2>Q</FONT>: <B>Can you make a CGI like this that displays the 
+  date?</B> 
+  <P><FONT size=+2>A</FONT>: Nope. I'm out of the CGI business now. 
+  <P><A href="http://www.geocities.com/SiliconValley/6742/clock.html#toc" 
+  onmouseover="window.status='Return to Table Of Contents'; return true;">Back 
+  to TOC</A> 
+  <HR>
+  <A name=credits>
+  <H3>Credits</H3></A>
+  <UL>
+    <LI>The counter uses the <A href="http://www.boutell.com/gd/" target=_top>gd 
+    library</A> by Thomous Boutell. The gd library is copyright © Thomous 
+    Boutell. 
+    <LI>The counter uses <A href="http://www.boutell.com/cgic/" 
+    target=_top>cgiC</A> by Thomous Boutell. cgiC is copyright © Thomous 
+    Boutell. 
+    <LI>Thanks also to <A 
+    href="http://www.cs.ubc.ca/spider/samm/dedication.html" target=_top>my 
+    dad</A>. </LI></UL><A 
+  href="http://www.geocities.com/SiliconValley/6742/clock.html#toc" 
+  onmouseover="window.status='Return to Table Of Contents'; return true;">Back 
+  to TOC</A> 
+  <HR>
+
+  <SCRIPT>
+
+document.write("<FONT SIZE=-2>Last Modified " + document.lastModified+"</FONT>")
+
+  </SCRIPT>
+<!-- text below generated by server. PLEASE REMOVE --></TABLE></SCRIPT></STYLE></NOSCRIPT></APPLET>
+  <SCRIPT language=JavaScript 
+  src="A CGI Digital Clock for Windows NT-95.files/ygIELib8.js"></SCRIPT>
+
+  <SCRIPT language=JavaScript>var yviContents='http://us.toto.geo.yahoo.com/toto?s=76001067&l=NE&b=1&t=985269352';</SCRIPT>
+  </SCRIPT>
+  <SCRIPT language=JavaScript>yviR='us';yfiEA(0);</SCRIPT>
+  </SCRIPT>
+  <SCRIPT language=JavaScript 
+  src="A CGI Digital Clock for Windows NT-95.files/geov2.js"></SCRIPT>
+
+  <SCRIPT language=javascript>geovisit();</SCRIPT>
+  <NOSCRIPT><IMG border=0 height=1 
+  src="A CGI Digital Clock for Windows NT-95.files/visit.gif" 
+  width=1></NOSCRIPT> <IMG alt=1 height=1 
+  src="A CGI Digital Clock for Windows NT-95.files/serv.gif" width=1> 
+</LI></OL></BODY></HTML>

@@ -1,0 +1,58 @@
+<html><title>јдминистрирование</title><body bgcolor="#c6e8d9" text="#800000" link="#000000" vlink="#800000" alink="#ffffff" background=""><br><center><h2>јдминистрирование форума</h2> <P><hr size=1 width=80%><p>
+
+<form action=../cgi-bin/wtbedit.cgi method=post><p><table width=100%><tr><td colspan=4><center><b><i><font size=+1>¬ыберите тип изменений:</font>
+</i></b></center><br>
+<ul>
+<li><b>»дентификатор форума</b> <input type=text name=fid value="0" size=10>
+
+<li><b>ќсновные параметры</b>
+<ul><input type=radio name=oper value=adminstatus>статус форума, администраторы, внешние вызовы и т. д. <sup><i>(a)</i>*</sup>
+<br><input type=radio name=oper value=admininterface checked>шаблоны интерфейса форума <sup><i>(i)</i></sup>
+<br><input type=radio name=oper value=adminform>форма сообщени€ <sup><i>(i)</i></sup>
+<br><input type=radio name=oper value=adminmessage>обработка сообщени€ <sup><i>(i)</i></sup>
+<br><input type=radio name=oper value=adminindex>основна€ страница <sup><i>(i)</i></sup>
+<br><input type=radio name=oper value=adminuser>участники <sup><i>(i)</i></sup>
+<br><input type=radio name=oper value=adminstat>статистика <sup><i>(i)</i></sup>
+</ul>
+
+<li><b>–едактирование</b>
+<ul><input type=radio name=oper value=sedit>редактирование основной страницы и сообщений <sup><i>(e)</i></sup>
+<br><input type=radio name=oper value=adminreplace>шаблоны контекстной замены <sup><i>(a)</i></sup>
+</ul>
+
+<li><b>ћодерирование</b>
+<ul>
+<input type=radio name=oper value=modif>удаление сообщений по номерам <sup>** <i>(d)</i></sup>
+<br><input type=radio name=oper value=modifsubj>удаление сообщений по темам <sup>** <i>(d)</i></sup>
+<br><input type=radio name=oper value=modifuser>удаление сообщений по участникам <sup>** <i>(d)</i></sup>
+<br><input type=radio name=oper value=ignor>изменение списка участников, игнор-лист <sup><i>(g)</i></sup>
+<br><input type=radio name=oper value=wronglog>log-файл событий <sup><i>(i)</i></sup>
+</ul>
+
+<li><b>ѕараметры самообслуживани€</b>
+<ul>
+<input type=radio name=oper value=selfservice>сервис самообслуживани€ форума <sup><i>(degs)</i></sup>
+<br><input type=radio name=oper value=arhiv>архиваци€ форума и установки автоархивации <sup>** <i>(h)</i></sup>
+<br><input type=radio name=oper value=selfmoder>параметры автомодерировани€ <sup><i>(dg)</i></sup>
+<br><input type=radio name=oper value=restore>сервис восстановлени€ Index <sup>** <i>(s)</i></sup>
+</ul>
+
+<li><b>ѕрочие операции</b>
+<ul><input type=radio name=oper value=news>операции с новостными строками <sup><i>(n)</i></sup>
+<br><input type=radio name=oper value=specarc>произвольна€ компресси€ <sup><i>(a)</i></sup><br>
+</ul>
+</ul>
+
+</td></tr><tr><td><p>&nbsp;</p></td></tr><tr><td width=10%><div
+align=right>»м€:</td> <td width=30%><input type=text name=login size=20></td>
+<td width=20%><div align=right>ѕароль:</td> <td width=30%><input type=password
+name=pass size=20></td></tr><tr><td><p>&nbsp;</p></td></tr><tr><td
+colspan=4><center><input type=submit
+value=ѕослать><input type=reset value=—брос></td></tr></table></form>
+<div align=left><font size=-1>
+<sup>*</sup> <i>&#151; в скобках указаны минимально необходимые права администратора дл€ доступа к разделу.</i><br>
+<sup>**</sup> <i>&#151; операции данного раздела производ€тс€ с индексной страницей форума.</i><br>
+<i>ƒл€ очищени€ значени€ текстового пол€ укажите величину &#171;<b>n/a</b>&#187;.</i></font></div>
+
+<P><hr size=1 width=80%><p><div align=left><font size=-1><i>&#169; 1998-2000,
+<a href=http://wtiger.ncport.ru>White Tiger</a></I><br></body></html>

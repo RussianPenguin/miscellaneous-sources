@@ -1,0 +1,154 @@
+<HTML><HEAD><TITLE>Jump Tracer</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<DIV align=left>&nbsp;&nbsp;&nbsp;<A class=title 
+href="http://pascal.sources.ru/hacker/index.htm">Хакерские 
+Штучки</A>&nbsp;&nbsp;&nbsp;&nbsp;<SMALL>&gt;&gt;</SMALL>&nbsp;&nbsp;&nbsp;&nbsp;jmptrace 
+<BR>&nbsp;&nbsp;&nbsp;<IMG align=top alt="" border=0 height=4 
+src="Jump Tracer.files/b.gif" width="50%"> <BR>&nbsp; </DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="97%">
+  <TBODY>
+  <TR class=subheader>
+    <TD colSpan=3><IMG height=2 src="Jump Tracer.files/1x1.gif" width=1></TD></TR>
+  <TR>
+    <TD class=subheader noWrap width="70%">&nbsp;Jump Tracer</TD>
+    <TD class=black noWrap>&nbsp;<IMG align=bottom border=0 
+      src="Jump Tracer.files/mail.gif">&nbsp;<A 
+      href="mailto:solar%20at%20openwall.com">Solar Designer</A></TD>
+    <TD align=right class=black>18.09.1996</TD></TR>
+  <TR vAlign=top>
+    <TD class=black><BR>
+      <P style="MARGIN-LEFT: 20px">Инструмент для анализа ветвлений (переходов) 
+      в исполняемой программе. Облегчает процесс взлома различных проверок. 
+      <BR><FONT color=#666666>this can be used to remove copy protection (this 
+      version of Jump Tracer uses only some simple methods to fool 
+      anti-debugging code, so it may not always work properly). To do it you 
+      need to trace the program to crack at least twice - the first time with 
+      the required keydisk, plug in LPT port, entering the correct password, 
+      etc.; and the second time without the key. </FONT></P></TD>
+    <TD align=right class=black colSpan=2><BR><A 
+      href="http://pascal.sources.ru/hacker/jmptrace.zip"><IMG align=middle 
+      border=0 src="Jump Tracer.files/dsk.gif"></A><BR>6k&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD></TR>
+  <TR class=subheader>
+    <TD colSpan=3><IMG height=2 src="Jump Tracer.files/1x1.gif" width=1></TD></TR>
+  <TR>
+    <TD colSpan=3><PRE><P style="MARGIN-LEFT: 50px"> Jump Tracer 
+-------------
+
+Well, I don't feel like writing complete dox right now - I'll do it
+after I add some missing features, such as making .CRK files,
+to Jump Tracer.
+
+I'll just try to explain the Jump Tracer's cracking method now.
+The main idea is to compare two or more different ways of program's
+execution and find where it branches. After that we can change or
+remove the condition so that the program will always run the desired
+way.
+
+For example, this can be used to remove copy protection (this version
+of Jump Tracer uses only some simple methods to fool anti-debugging
+code, so it may not always work properly). To do it you need to trace
+the program to crack at least twice - the first time with the
+required keydisk, plug in LPT port, entering the correct password,
+etc.; and the second time without the key.
+
+Also, you can crack games (Jump Tracer is especially useful when
+cracking things like making it possible to move through walls, that
+couldn't be done with Player's Tool or Game Wizard), remove shareware
+delays (it's done by enabling saving of jumps being executed for
+different periods of time - the first time while in delay loop and
+the second slightly before the loop ends) and finally you can simply
+change program's behavior (for example disable some annoying functions).
+
+ Usage Example
+---------------
+
+Let's suppose we need to disable the F1 key in Volcov Commander. ;)
+BTW, I'm still using its beta version because the 4.0 release does
+not support searching for hex bytes using Alt-F7. ;(
+
+Run Jump Tracer:
+
+jmptrace c:\vc\vc.com
+
+----------------------------------------------------------------------
+Jump Tracer Version 1.2  Copyright (c) 1995-96 by Solar Designer \ BPC
+
+Use &lt;Caps Lock&gt; to turn saving on/off while tracing, left &lt;Shift&gt; to
+abort Trace, Quit? T
+
+Enter program parameters:
+
+The Volkov Commander, Version 4.00.040 beta
+Copyright (C) 1991-1994 by VVV, Kiev.
+
+[Press &lt;Caps Lock&gt;, &lt;F1&gt;, &lt;Esc&gt;, &lt;F10&gt;, &lt;Enter&gt;, &lt;Caps Lock&gt;]
+
+Please, identify this state as:
+1st, 2nd, Nothing? 1
+
+You've saved 1 dump by now; at least 2 different dumps are required
+to crack
+
+Trace, Quit? T
+
+Enter program parameters:
+
+The Volkov Commander, Version 4.00.040 beta
+Copyright (C) 1991-1994 by VVV, Kiev.
+
+[Press &lt;Caps Lock&gt;, &lt;F10&gt;, &lt;Enter&gt;, &lt;Caps Lock&gt;]
+
+Please, identify this state as:
+1st, 2nd, Nothing? 2
+
+You've saved 2 dumps by now; you can compare them
+
+Trace, Compare, Quit? C
+
+Smartly comparing and filtering...
+
+?: Internal offset 364D: ? N
+
+[Some other lines may appear here if, for example, more than a second
+passed while tracing and clock in VC redrawn. If so, make more than 2
+dumps to find the exact offset]
+
+Return, Display? D
+
+The program will now be traced once more, you may have to enable
+saving for a long time to find the desired jump
+
+Enter offset: 364D
+Enter program parameters:
+
+The Volkov Commander, Version 4.00.040 beta
+Copyright (C) 1991-1994 by VVV, Kiev.
+
+[Press &lt;Caps Lock&gt;, &lt;F10&gt;, &lt;Enter&gt;, &lt;Caps Lock&gt;]
+
+PSP+0299:AFA6: 75 06 E8 CB C7 58 EB F1 44 44 C3 55 8B EC 83 EC
+Use 1st state: PATCH NOT AVAILABLE
+Use 2nd state: EB
+
+Please, identify this state as:
+1st, 2nd, Nothing? N
+
+Return, Display? R
+
+You've saved 2 dumps by now; you can compare them
+
+Trace, Compare, Quit? Q
+----------------------------------------------------------------------
+
+Here we got a pattern to search for in VC.COM - do it using VC itself
+and change the first pattern's byte value to EB. If you patch the
+first two bytes with 90 90 instead, you won't be able to exit help. ;)
+However, this state is unstable - that's why Jump Tracer said that
+such patch is not available. The same about question mark in the
+comparison result.</P></PRE></TD></TR>
+  </TBODY></TABLE></CENTER>
+</BODY></HTML>

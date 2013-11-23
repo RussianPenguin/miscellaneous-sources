@@ -1,0 +1,419 @@
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body>
+
+<div align="center"><center>
+
+<table width="650" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><br>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        Листинг 1 ( главный модуль DECODE.C )</b></font></td>
+      </tr>
+    </table>
+    <p><br>
+    #include &quot;std.h&quot;<br>
+    #include &quot;errs.h&quot;<br>
+    <br>
+    IMPORT TEXT *malloc(); /* Standard C library allocation */<br>
+    <br>
+    /* IMPORT INT get_byte()<br>
+    *<br>
+    * - This external (machine specific) function is expected to return<br>
+    * either the next byte from the GIF file, or a negative number, as<br>
+    * defined in ERRS.H.<br>
+    */<br>
+    IMPORT INT get_byte();<br>
+    <br>
+    /* IMPORT INT out_line(pixels, linelen)<br>
+    * UBYTE pixels[];<br>
+    * INT linelen;<br>
+    *<br>
+    * - This function takes a full line of pixels (one byte per pixel) and<br>
+    * displays them (or does whatever your program wants with them...). It<br>
+    * should return zero, or negative if an error or some other event occurs<br>
+    * which would require aborting the decode process... Note that the length<br>
+    * passed will almost always be equal to the line length passed to the<br>
+    * decoder function, with the sole exception occurring when an ending code<br>
+    * occurs in an odd place in the GIF file... In any case, linelen will be<br>
+    * equal to the number of pixels passed...<br>
+    */<br>
+    IMPORT INT out_line();<br>
+    <br>
+    /* IMPORT INT bad_code_count;<br>
+    *<br>
+    * This value is the only other global required by the using program, and<br>
+    * is incremented each time an out of range code is read by the decoder.<br>
+    * When this value is non-zero after a decode, your GIF file is probably<br>
+    * corrupt in some way...<br>
+    */<br>
+    IMPORT INT bad_code_count;<br>
+    <br>
+    #define NULL 0L<br>
+    #define MAX_CODES 4095<br>
+    <br>
+    /* Static variables */<br>
+    LOCAL WORD curr_size; /* The current code size */<br>
+    LOCAL WORD clear; /* Value for a clear code */<br>
+    LOCAL WORD ending; /* Value for a ending code */<br>
+    LOCAL WORD newcodes; /* First available code */<br>
+    LOCAL WORD top_slot; /* Highest code for current size */<br>
+    LOCAL WORD slot; /* Last read code */<br>
+    <br>
+    /* The following static variables are used<br>
+    * for seperating out codes<br>
+    */<br>
+    LOCAL WORD navail_bytes = 0; /* # bytes left in block */<br>
+    LOCAL WORD nbits_left = 0; /* # bits left in current byte */<br>
+    LOCAL UTINY b1; /* Current byte */<br>
+    LOCAL UTINY byte_buff[257]; /* Current block */<br>
+    LOCAL UTINY *pbytes; /* Pointer to next byte in block */<br>
+    <br>
+    LOCAL LONG code_mask[13] = {<br>
+    0,<br>
+    0x0001, 0x0003,<br>
+    0x0007, 0x000F,<br>
+    0x001F, 0x003F,<br>
+    0x007F, 0x00FF,<br>
+    0x01FF, 0x03FF,<br>
+    0x07FF, 0x0FFF<br>
+    };<br>
+    <br>
+    <br>
+    /* This function initializes the decoder for reading a new image.<br>
+    */<br>
+    LOCAL WORD init_exp(size)<br>
+    WORD size;<br>
+    {<br>
+    &nbsp;&nbsp;&nbsp; curr_size = size + 1;<br>
+    &nbsp;&nbsp;&nbsp; top_slot = 1 &lt;&lt; curr_size;<br>
+    &nbsp;&nbsp;&nbsp; clear = 1 &lt;&lt; size;<br>
+    &nbsp;&nbsp;&nbsp; ending = clear + 1;<br>
+    &nbsp;&nbsp;&nbsp; slot = newcodes = ending + 1;<br>
+    &nbsp;&nbsp;&nbsp; navail_bytes = nbits_left = 0;<br>
+    &nbsp;&nbsp;&nbsp; return(0);<br>
+    }<br>
+    <br>
+    /* get_next_code()<br>
+    * - gets the next code from the GIF file. Returns the code, or else<br>
+    * a negative number in case of file errors...<br>
+    */<br>
+    LOCAL WORD <b>get_next_code()</b>&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp; WORD i, x;<br>
+    &nbsp;&nbsp;&nbsp; ULONG ret;<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; if (nbits_left == 0)&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (navail_bytes &lt;= 0)&nbsp; {<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Out of bytes in
+    current block, so read next block*/<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pbytes = byte_buff;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ((navail_bytes =
+    get_byte()) &lt; 0)&nbsp;&nbsp; return(navail_bytes);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (navail_bytes)
+    &nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    for (i = 0; i &lt; navail_bytes; ++i)&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    if ((x = get_byte()) &lt; 0)&nbsp; return(x);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    byte_buff[i] = x;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1 = *pbytes++;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nbits_left = 8;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --navail_bytes;<br>
+    &nbsp;&nbsp;&nbsp; }<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; ret = b1 &gt;&gt; (8 - nbits_left);<br>
+    &nbsp;&nbsp;&nbsp; while (curr_size &gt; nbits_left)&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (navail_bytes &lt;= 0)&nbsp; {<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Out of bytes in
+    current block, so read next block*/<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pbytes = byte_buff;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ((navail_bytes =
+    get_byte()) &lt; 0)&nbsp;&nbsp; return(navail_bytes);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (navail_bytes)
+    &nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    for (i = 0; i &lt; navail_bytes; ++i)&nbsp; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    if ((x = get_byte()) &lt; 0)&nbsp;&nbsp; return(x);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    byte_buff[i] = x;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b1 = *pbytes++;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ret |= b1 &lt;&lt; nbits_left;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nbits_left += 8;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --navail_bytes;<br>
+    &nbsp;&nbsp;&nbsp; }<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; nbits_left -= curr_size;<br>
+    &nbsp;&nbsp;&nbsp; ret &amp;= code_mask[curr_size];<br>
+    &nbsp;&nbsp;&nbsp; return((WORD)(ret));<br>
+    }<br>
+    <br>
+    <br>
+    /* The reason we have these seperated like this instead of using<br>
+    * a structure like the original Wilhite code did, is because this<br>
+    * stuff generally produces significantly faster code when compiled...<br>
+    * This code is full of similar speedups... (For a good book on writing<br>
+    * C for speed or for space optomisation, see Efficient C by Tom Plum,<br>
+    * published by Plum-Hall Associates...)<br>
+    */<br>
+    LOCAL UTINY stack[MAX_CODES + 1]; /* Stack for storing pixels */<br>
+    LOCAL UTINY suffix[MAX_CODES + 1]; /* Suffix table */<br>
+    LOCAL UWORD prefix[MAX_CODES + 1]; /* Prefix linked list */<br>
+    <br>
+    /* WORD decoder(linewidth)<br>
+    * WORD linewidth; * Pixels per line of image *<br>
+    *<br>
+    * - This function decodes an LZW image, according to the method used<br>
+    * in the GIF spec. Every *linewidth* &quot;characters&quot; (ie. pixels) decoded<br>
+    * will generate a call to out_line(), which is a user specific function<br>
+    * to display a line of pixels. The function gets it's codes from<br>
+    * get_next_code() which is responsible for reading blocks of data and<br>
+    * seperating them into the proper size codes. Finally, get_byte() is<br>
+    * the global routine to read the next byte from the GIF file.<br>
+    *<br>
+    * It is generally a good idea to have linewidth correspond to the actual<br>
+    * width of a line (as specified in the Image header) to make your own<br>
+    * code a bit simpler, but it isn't absolutely necessary.<br>
+    *<br>
+    * Returns: 0 if successful, else negative. (See ERRS.H)<br>
+    *<br>
+    */<br>
+    <br>
+    WORD decoder(linewidth)<br>
+    WORD linewidth;<br>
+    {<br>
+    FAST UTINY *sp, *bufptr;<br>
+    UTINY *buf;<br>
+    FAST WORD code, fc, oc, bufcnt;<br>
+    WORD c, size, ret;<br>
+    <br>
+    /* Initialize for decoding a new image...<br>
+    */<br>
+    if ((size = get_byte()) &lt; 0)<br>
+    return(size);<br>
+    if (size &lt; 2 || 9 &lt; size)<br>
+    return(BAD_CODE_SIZE);<br>
+    init_exp(size);<br>
+    <br>
+    /* Initialize in case they forgot to put in a clear code.<br>
+    * (This shouldn't happen, but we'll try and decode it anyway...)<br>
+    */<br>
+    oc = fc = 0;<br>
+    <br>
+    /* Allocate space for the decode buffer<br>
+    */<br>
+    if ((buf = (UTINY *)malloc(linewidth + 1)) == NULL)<br>
+    return(OUT_OF_MEMORY);<br>
+    <br>
+    /* Set up the stack pointer and decode buffer pointer<br>
+    */<br>
+    sp = stack;<br>
+    bufptr = buf;<br>
+    bufcnt = linewidth;<br>
+    <br>
+    /* This is the main loop. For each code we get we pass through the<br>
+    * linked list of prefix codes, pushing the corresponding &quot;character&quot; for<br>
+    * each code onto the stack. When the list reaches a single &quot;character&quot;<br>
+    * we push that on the stack too, and then start unstacking each<br>
+    * character for output in the correct order. Special handling is<br>
+    * included for the clear code, and the whole thing ends when we get<br>
+    * an ending code.<br>
+    */<br>
+    while ((c = get_next_code()) != ending)<br>
+    {<br>
+    <br>
+    /* If we had a file error, return without completing the decode<br>
+    */<br>
+    if (c &lt; 0)<br>
+    {<br>
+    free(buf);<br>
+    return(0);<br>
+    }<br>
+    <br>
+    /* If the code is a clear code, reinitialize all necessary items.<br>
+    */<br>
+    if (c == clear)<br>
+    {<br>
+    curr_size = size + 1;<br>
+    slot = newcodes;<br>
+    top_slot = 1 &lt;&lt; curr_size;<br>
+    <br>
+    /* Continue reading codes until we get a non-clear code<br>
+    * (Another unlikely, but possible case...)<br>
+    */<br>
+    while ((c = get_next_code()) == clear)<br>
+    ;<br>
+    <br>
+    /* If we get an ending code immediately after a clear code<br>
+    * (Yet another unlikely case), then break out of the loop.<br>
+    */<br>
+    if (c == ending)<br>
+    break;<br>
+    <br>
+    /* Finally, if the code is beyond the range of already set codes,<br>
+    * (This one had better NOT happen... I have no idea what will<br>
+    * result from this, but I doubt it will look good...) then set it<br>
+    * to color zero.<br>
+    */<br>
+    if (c &gt;= slot)<br>
+    c = 0;<br>
+    <br>
+    oc = fc = c;<br>
+    <br>
+    /* And let us not forget to put the char into the buffer... And<br>
+    * if, on the off chance, we were exactly one pixel from the end<br>
+    * of the line, we have to send the buffer to the out_line()<br>
+    * routine...<br>
+    */<br>
+    *bufptr++ = c;<br>
+    if (--bufcnt == 0)<br>
+    {<br>
+    if ((ret = out_line(buf, linewidth)) &lt; 0)<br>
+    {<br>
+    free(buf);<br>
+    return(ret);<br>
+    }<br>
+    bufptr = buf;<br>
+    bufcnt = linewidth;<br>
+    }<br>
+    }<br>
+    else<br>
+    {<br>
+    <br>
+    /* In this case, it's not a clear code or an ending code, so<br>
+    * it must be a code code... So we can now decode the code into<br>
+    * a stack of character codes. (Clear as mud, right?)<br>
+    */<br>
+    code = c;<br>
+    <br>
+    /* Here we go again with one of those off chances... If, on the<br>
+    * off chance, the code we got is beyond the range of those already<br>
+    * set up (Another thing which had better NOT happen...) we trick<br>
+    * the decoder into thinking it actually got the last code read.<br>
+    * (Hmmn... I'm not sure why this works... But it does...)<br>
+    */<br>
+    if (code &gt;= slot)<br>
+    {<br>
+    if (code &gt; slot)<br>
+    ++bad_code_count;<br>
+    code = oc;<br>
+    *sp++ = fc;<br>
+    }<br>
+    <br>
+    /* Here we scan back along the linked list of prefixes, pushing<br>
+    * helpless characters (ie. suffixes) onto the stack as we do so.<br>
+    */<br>
+    while (code &gt;= newcodes)<br>
+    {<br>
+    *sp++ = suffix[code];<br>
+    code = prefix[code];<br>
+    }<br>
+    <br>
+    /* Push the last character on the stack, and set up the new<br>
+    * prefix and suffix, and if the required slot number is greater<br>
+    * than that allowed by the current bit size, increase the bit<br>
+    * size. (NOTE - If we are all full, we *don't* save the new<br>
+    * suffix and prefix... I'm not certain if this is correct...<br>
+    * it might be more proper to overwrite the last code...<br>
+    */<br>
+    *sp++ = code;<br>
+    if (slot &lt; top_slot)<br>
+    {<br>
+    suffix[slot] = fc = code;<br>
+    prefix[slot++] = oc;<br>
+    oc = c;<br>
+    }<br>
+    if (slot &gt;= top_slot)<br>
+    if (curr_size &lt; 12)<br>
+    {<br>
+    top_slot &lt;&lt;= 1;<br>
+    ++curr_size;<br>
+    } <br>
+    <br>
+    /* Now that we've pushed the decoded string (in reverse order)<br>
+    * onto the stack, lets pop it off and put it into our decode<br>
+    * buffer... And when the decode buffer is full, write another<br>
+    * line...<br>
+    */<br>
+    while (sp &gt; stack)<br>
+    {<br>
+    *bufptr++ = *(--sp);<br>
+    if (--bufcnt == 0)<br>
+    {<br>
+    if ((ret = out_line(buf, linewidth)) &lt; 0)<br>
+    {<br>
+    free(buf);<br>
+    return(ret);<br>
+    }<br>
+    bufptr = buf;<br>
+    bufcnt = linewidth;<br>
+    }<br>
+    }<br>
+    }<br>
+    }<br>
+    ret = 0;<br>
+    if (bufcnt != linewidth)<br>
+    ret = out_line(buf, (linewidth - bufcnt));<br>
+    free(buf);<br>
+    return(ret);<br>
+    }<br>
+    <br>
+    </p>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        Листинг 2 ( STD.H )</b></font></td>
+      </tr>
+    </table>
+    <p>#define LOCAL static<br>
+    #define IMPORT extern<br>
+    <br>
+    #define FAST register<br>
+    <br>
+    typedef short WORD;<br>
+    typedef unsigned short UWORD;<br>
+    typedef char TEXT;<br>
+    typedef unsigned char UTINY;<br>
+    typedef long LONG;<br>
+    typedef unsigned long ULONG;<br>
+    typedef int INT;<br>
+    </p>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        Листинг 3 ( ERRS.H )</b></font></td>
+      </tr>
+    </table>
+    <p>#define OUT_OF_MEMORY -10<br>
+    #define BAD_CODE_SIZE -20<br>
+    #define READ_ERROR -1<br>
+    #define WRITE_ERROR -2<br>
+    #define OPEN_ERROR -3<br>
+    #define CREATE_ERROR -4<br>
+    <br>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+</body>
+</html>

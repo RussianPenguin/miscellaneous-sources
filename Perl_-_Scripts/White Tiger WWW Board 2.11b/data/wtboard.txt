@@ -1,0 +1,85 @@
+; White Tiger WWW Board ini-file
+
+[Board Options]
+thekonf=Форум
+tokonf=на форум
+ofkonf=форума
+onkonf=на форуме
+admin=admin@host.com
+private=noprivate
+dirkonf=../wtboard
+dirrealkonf=../wtboard
+dircgi=../cgi-bin
+realpath=..
+quote=>
+substip=on
+setsize=off
+addip=off
+notag=0
+usecookie=on
+quoting=on
+individual=on
+includeform=on
+ext=shtml
+reply=Re
+paragraph=<dd>
+hr=<hr size=1 width=80% align=center>
+selectnew=360
+selecttag= <font color=#ff0000><b>New</b></font>
+nulcolor=#0000ff
+selectnul=on
+quotebeg=<i>
+quoteend=</i>
+seturl=on
+
+[Service Options]
+info=Информация о форуме
+userstat=on
+ipuserstat=off
+ignorstat=off
+
+[Form Options]
+lenlogin=30
+lenpass=10
+lenemailmes=50
+lenemailans=30
+lensubj=50
+lenrows=12
+lencols=70
+lenurl=50
+lentitleurl=50
+lenimg=50
+
+[Board Colors]
+indbgcolor=#c6e8d9
+indtcolor=#800000
+indlcolor=#000000
+indvlcolor=#800000
+indalcolor=#ffffff
+indimg=
+mesbgcolor=#f0f0ff
+mestcolor=#000000
+meslcolor=#000000
+mesvlcolor=#800000
+mesalcolor=#ffffff
+mesimg=
+errbgcolor=#a8bfb4
+errtcolor=#000000
+errlcolor=#000000
+errvlcolor=#800000
+erralcolor=#ffffff
+errimg=
+
+[Board Strings]
+begmesform=<html><title>Отправление сообщения $tokonf</title><body bgcolor="$errbgcolor" text="$errtcolor" link="$errlcolor" vlink="$errvlcolor" alink="$erralcolor" background="$errimg"><center>[<a href=$dirkonf/>$thekonf</a>] [<a href=$dirkonf/faq.htm>Правила</a>] <p>$separator <P><h2>Отправление сообщения $tokonf</h2><P> $separator<P><div align=left>
+endmesform=</body></html>
+begansform=<html><title>Отправление ответа $tokonf на сообщение &#171;$subj&#187;</title><body bgcolor="$errbgcolor" text="$errtcolor" link="$errlcolor" vlink="$errvlcolor" alink="$erralcolor" background="$errimg"><center>[<a href=$dirkonf/>$thekonf</a>] [<a href=$dirkonf/faq.htm>Правила</a>] <p>$separator<P><h3>Отправление ответа $tokonf на сообщение <br>&#171;$subj&#187;</h3> <P>$separator<P><div align=left>
+endansform=</body></html>
+begindex=<html><meta http-equiv="pragma" content="no-cache"><title>$thekonf</title><body bgcolor="$indbgcolor" text="$indtcolor" link="$indlcolor" vlink="$indvlcolor" alink="$indalcolor" background="$indimg"><center><h1>$thekonf</h1> <P>$separator<p><!--#include virtual="$dircgi/wtbservice.cgi?fid=$fid&ins=news"-->[<a href="$dircgi/wtboard.cgi?root=on&fid=$fid">Написать сообщение</a>] [<a href=service.shtml>Сервис</a>] [<a href=faq.htm>Правила</a>]<P>$separator<p></center><div align=left>
+endindex=<!--end--></ul></ul></ul></ul></ul></ul></ul><P><center>$separator<p>[<a href="$dircgi/wtboard.cgi?root=on&fid=$fid">Написать сообщение</a>] [<a href=service.shtml>Сервис</a>] [<a href=faq.htm>Правила</a>]<P></center>$separator<p><div align=left><font size="-1"><i>&copy; 1999, $thekonf<br>&copy; 1998-1999, <a href=http://wtiger.ncport.ru>White Tiger</a></I></body></html>
+begarchive=<html><title>Архив $ofkonf</title><body bgcolor="$indbgcolor" text="$indtcolor" link="$indlcolor" vlink="$indvlcolor" alink="$indalcolor" background="$indimg"><center><h1>Архив $ofkonf</h1> <P>$separator<p>[<a href=$dirkonf/>$thekonf</a>] [<a href=$dirkonf/service.shtml>Сервис</a>] [<a href=$dirkonf/faq.htm>Правила</a>]<P>$separator<p></center><div align=left>
+endarchive=<P><center>$separator<p>[<a href=$dirkonf/>$thekonf</a>] [<a href=$dirkonf/service.shtml>Сервис</a>] [<a href=$dirkonf/faq.htm>Правила</a>]<P></center>$separator<p><div align=left><font size="-1"><i>&copy; 1999, $thekonf<br>&copy; 1998-1999, <a href=http://wtiger.ncport.ru>White Tiger</a></i></body></html>
+begmes=<html><meta http-equiv="pragma" content="no-cache"><title>$subj</title><body bgcolor="$mesbgcolor" text="$mestcolor" link="$meslcolor" vlink="$mesvlcolor" alink="$mesalcolor" background="$mesimg"><center><h2><a name=top>$subj</a></h2> <p>$separator<p>[<a href=./>$thekonf</a>] [<a href=#ans>Ответы и комментарии</a>] [<a href="$dircgi/wtboard.cgi?$command">Написать ответ</a>]</center><p>$separator<p><div align=left>
+endmes=<center>$separator<p>[<a href=./>$thekonf</a>] [<a href=#top>Начало</a>] [<a href="$dircgi/wtboard.cgi?$command">Написать ответ</a>]<p></body></html>
+
+[Archives Section]

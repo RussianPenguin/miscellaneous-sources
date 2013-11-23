@@ -1,0 +1,17 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by wiz.rc
+//
+#define HIDC_CHECK1                     0x80670419    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_CHECK10                    0x8067041a    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_CHECK11                    0x8067041b    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_CHECK2                     0x8067041c    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_CHECK3                     0x8067041d    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_CHECK5                     0x8067041f    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_CHECK7                     0x80670421    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_CHECK9                     0x80670422    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_EDIT1                      0x80670426    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_EDIT3                      0x80670428    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_SPIN2                      0x80670435    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_SPIN3                      0x80670436    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_STATIC                     0x8067ffff    // IDD_DIALOGBAR [English (U.S.)]
+#define HIDC_STATIC0                    0x80670437    // IDD_DIALOGBAR [English (U.S.)]

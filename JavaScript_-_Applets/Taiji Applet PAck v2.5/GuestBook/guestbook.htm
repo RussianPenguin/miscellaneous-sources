@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body bgcolor="#000000">
+
+<h1 align="center"><font color="#FFFF00"><u><strong>GuestBook sample</strong></u></font></h1>
+
+<p><font color="#FFFFFF">&nbsp;</font></p>
+
+<p><font color="#FFFFFF">The GuestBook applet provides a zone where visitors can send you
+a message by email. Once you have received the mail you decide or not to put the messages
+in the file&nbsp;&quot;guestbook.txt&quot;.&nbsp;The applet displays the messages in this
+file.&nbsp;As applets can't connect to remote hosts, this applet connects to your local
+server. So your web server must&nbsp; also be a mail server. To know if it's true open a
+Telnet session and try this : 'telnet yourhost 25', for example: 'telnet chez.com 25' If
+it works (no errors) your web server is also a mail server.</font></p>
+
+<p><font color="#FFFFFF">&nbsp;</font></p>
+
+<p align="center">
+<applet code="GuestBook.class" WIDTH="500" HEIGHT="300">
+  <param name="background_color" value="#80FF80">
+  <param name="registration_code" value="register to stop the popup online">
+  <param name="email" value="home@taijisoftware.com">
+  Please activate Java...
+</applet>
+</p>
+</body>
+</html>

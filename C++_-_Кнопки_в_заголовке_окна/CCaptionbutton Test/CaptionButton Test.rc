@@ -1,0 +1,158 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CAPTIONBUTTONTEST   ICON    DISCARDABLE     "CaptionButton Test.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_CAPTIONBUTTONTEST MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_CAPTIONBUTTONTEST ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 76
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDI_CAPTIONBUTTONTEST,IDC_MYICON,14,9,20,20
+    LTEXT           "CaptionButton Test Version 1.0",IDC_STATIC,49,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001 Anish Mistry",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,14,WS_GROUP
+    LTEXT           "Created by Anish Mistry",IDC_STATIC,50,30,120,10,
+                    SS_CENTERIMAGE
+    LTEXT           "AM Productions Website http://am-productions.yi.org/",
+                    IDC_STATIC,50,55,120,20
+    LTEXT           "amistry@am-productions.yi.org",IDC_STATIC,50,40,125,10,
+                    SS_CENTERIMAGE
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_AM           BITMAP  DISCARDABLE     "bitmap1.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "bitmap2.bmp"
+IDB_SELECTION           BITMAP  DISCARDABLE     "selectio.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "bitmap3.bmp"
+IDB_BITMAP4             BITMAP  DISCARDABLE     "bitmap4.bmp"
+IDB_BITMAP6             BITMAP  DISCARDABLE     "bitmap6.bmp"
+IDB_BITMAP5             BITMAP  DISCARDABLE     "bitmap5.bmp"
+IDB_MOUSEOVER           BITMAP  DISCARDABLE     "mouseove.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "CaptionButton Test"
+    IDC_CAPTIONBUTTONTEST   "CAPTIONBUTTONTEST"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

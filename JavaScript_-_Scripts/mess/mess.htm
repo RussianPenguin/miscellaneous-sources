@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://www.superbest.com/examples/1/4.htm --><HTML><HEAD><TITLE>Сообщение в строке состояния слева направо</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff onload=startBanner()>
+<P align=center> </P>
+<SCRIPT language=JavaScript><!--
+
+
+var speed = 100 // decrease value to increase speed (must be positive)
+
+var pause = 1000 // increase value to increase pause
+
+var timerID = null
+var bannerRunning = false
+
+var ar = new Array()
+
+// Здесь вы вводите свой текст
+ar[0] = "Вывод текста в статусной строке слева направо."
+ar[1] = "Оживите свою страничку!"
+ar[2] = "Приходите ко мне ещё!"
+ar[3] = "Будет много интересного!!!"
+
+var currentMessage = 0
+
+var offset = 0
+
+function stopBanner() {
+		if (bannerRunning)
+		clearTimeout(timerID)
+
+		bannerRunning = false
+}
+
+function startBanner() {
+	stopBanner()
+
+		showBanner()
+}
+
+function showBanner() {
+		var text = ar[currentMessage]
+
+		if (offset < text.length) {
+		if (text.charAt(offset) == " ")
+				offset++			
+
+		var partialMessage = text.substring(0, offset + 1) 
+
+		window.status = partialMessage
+
+		offset++ // IE sometimes has trouble with "++offset"
+
+		timerID = setTimeout("showBanner()", speed)
+
+		bannerRunning = true
+	} else {
+		offset = 0
+
+		currentMessage++
+
+		if (currentMessage == ar.length)
+			currentMessage = 0
+
+		timerID = setTimeout("showBanner()", pause)
+
+		bannerRunning = true
+	}
+}
+
+// --></SCRIPT>
+
+<P align=center><B><FONT face="Arial, Helvetica" size=-1>Посмотрите вниз, на 
+статусную строку.</FONT></B></P></BODY></HTML>

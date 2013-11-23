@@ -1,0 +1,264 @@
+<HTML>
+<HEAD>
+<TITLE>A CGI Digital Clock for Windows NT/95</TITLE>
+</HEAD>
+
+<BODY>
+
+<A NAME="toc"><H1 ALIGN="CENTER">Digital Clock</H1></a>
+<H2 ALIGN="CENTER"><i>For Windows NT/95</i></H2>
+<CENTER><i>Version 2.0</i></CENTER>
+<p>
+
+<H3>Table Of Contents</H3>
+<ul>
+<li><a href="#download"
+onMouseOver=" window.status='Skip to Downloading'; return true;"
+>Downloading</a>
+<li><a href="#install"
+onMouseOver=" window.status='Skip to Installing Info'; return true;"
+>Installing</a>
+<li><a href="#usage"
+onMouseOver=" window.status='Skip to Usage Info'; return true;"
+>Usage</a>
+<li><a href="#trouble"
+onMouseOver=" window.status='Skip to Troubleshooting'; return true;"
+>Troubleshooting</a>
+<li><a href="#faq"
+onMouseOver=" window.status='Skip to FAQ'; return true;"
+>FAQ</a>
+<li><a href="#credits"
+onMouseOver=" window.status='Skip to Credits'; return true;"
+>Credits</a>
+</ul>
+<hr>
+<a name="download"><h3>Downloading</h3></a>
+
+Download clock.zip by <a href="clock.zip">clicking here</a>.
+<p>
+Store it in your <tt>/cgi-bin/</tt> directory.
+<p>
+And proceed to Installing...
+<p>
+<a href="#toc"
+onMouseOver="window.status='Return to Table Of Contents'; return true;"
+>Back to TOC</a>
+<hr>
+<a name="install"><h3>Installing</h3></a>
+
+<ol>
+<li>Unzip clock.zip in your <tt>/cgi-bin</tt> directory.  If you are
+using WinZip, be sure to have "Use Directory Names" turned on, and if
+you are using PKUnzip, make sure to use the -d option.<br>
+The following directories and files are created:
+<pre>
+/cgi-bin (or /cgi-shl)  <--server's CGI directory
+  |
+  |--clock.exe          <--the clock
+  |
+  |--\doc
+  |   |
+  |   |--clock.html     <--this document
+  |   |--clock.readme   <--readme for the clock
+  |   |--*.gif          <--images used in this document
+  |
+  |--\digits
+      |
+      |--\led           
+          |
+          |--0.gif      <--these gifs are used to create
+          |--1.gif         the clock image
+              .
+              .
+              .
+</pre>
+The clock will create the file <tt>clock.err</tt> to record
+error messages (if any).
+<p>
+If you are already using the <a href="counter.html">counter</a>, 
+it is OK to overwrite the GIFs in the <tt>\digits\led\</tt> directory, 
+they are the same anyway (except
+that there are three additional GIFs, <tt>am.gif</tt>, <tt>pm.gif</tt>,
+and <tt>colon.gif</tt>.  The <tt>\digits\led\</tt> directory is used
+to conserve disk space if you are also using the 
+<a href="counter.html">counter</a>.
+</ul>
+<p>
+<a href="#toc"
+onMouseOver="window.status='Return to Table Of Contents'; return true;"
+>Back to TOC</a>
+<hr>
+<a name="usage"><h3>Usage</h3></a>
+To use the clock, simply put this in your HTML:
+<p>
+<NOBR>
+<tt>&lt;img src="/cgi-bin/clock.exe?<i>arg1</i>=<i>value1</i>&<i>arg2</i>=<i>value2</i>&...&<i>argn</i>=<i>valuen</i>"&gt;</tt>
+</NOBR>
+<p>
+where the arguments are:
+<TABLE border=1 cellspacing=1 cellpadding=3>
+<TH>Argument (* means required)</TH> <TH>Possible Values</TH> <TH>Meaning</TH>
+<TR>
+	<TD>format*</TD> 
+	<TD>One of:
+		<li><tt>24hr
+		<li>normal
+		<li>secs</tt>
+	</TD> 
+	<TD>See examples below. This argument is
+	case-sensitive</TD>
+</TR>
+<TR>
+	<TD>simple</TD> <TD><tt>yes</tt> or <tt>no</tt></TD> <TD>Use a simple style if <tt>yes</tt>. See example below.
+	The default is no.</TD>
+</TR>
+<TR>
+	<TD>bgcolour</TD> <TD><TT>RRGGBB</TT> or <tt>trans</TT></TD>
+	<TD>When using the <tt>simple</tt> style, specifies the background colour of
+	the image, or if <tt>trans</tt> is used, specifies a transparent background.
+	RRGGBB should be 3 2-digit hex values in one string, similar to the
+	HTML command <PRE>&lt;BODY BGCOLOR="RRGGBB"&gt;</PRE>. This argument has no
+	meaning when simple is not <tt>yes</tt>. The default is
+	<tt>000000</tt> (black).</TD>
+</TR>
+<TR>
+	<TD>fgcolour</TD>
+	<TD><tt>RRGGBB</tt></TD>
+	<TD>When using the <tt>simple=yes</tt>, specifies the foreground colour
+	of the image.  Same format as <tt>bgcolour</tt>.  The default is
+	<tt>FFFFFF</tt> (white).</TD>
+</TR>
+</TABLE>
+<b>Examples:</b>
+<p>
+<NOBR>
+<tt>&lt;img src="/cgi-bin/clock.exe?format=normal"&gt;</tt><br>
+<img src="clock1.gif">
+<p>
+<tt>&lt;img src="/cgi-bin/clock.exe?format=secs"&gt;</TT><br>
+<img src="clock2.gif">
+<p>
+<tt>&lt;img src="/cgi-bin/clock.exe?format=24hr"&gt;</TT><br>
+<img src="clock3.gif">
+<p>
+<tt>&lt;img src="/cgi-bin/clock.exe?format=24hr&simple=yes"&gt;</TT><br>
+<img src="clock4.gif">
+<p>
+<tt>&lt;img src="/cgi-bin/clock.exe?format=normal&simple=yes&bgcolour=FF00FF&fgcolour=00FF00"&gt;</tt><br>
+<img src="clock5.gif">
+</NOBR>
+<p>
+The simple style requires less disk I/O, and should execute much more
+quickly.
+<p>
+<a href="#toc"
+onMouseOver="window.status='Return to Table Of Contents'; return true;"
+>Back to TOC</a>
+<hr>
+<a name="trouble"><h3>TroubleShooting</h3></a>
+
+<FONT SIZE=+2>P</FONT>: <b>I get a broken-image icon where the clock should 
+be</b>
+<p>
+<FONT SIZE=+2>S</FONT>: 1) Are you using <a href="emwacs.html">EMWACS or
+Purveyor</a>?<br>
+2) Right-click on the broken image icon and select "View this image as..."
+<br>
+<ul>
+<li><b>It says "URL not found"</b><br>
+<ol>
+<li>You mistyped your HTML. Double check it
+<li>You put clock.exe in the wrong spot. Check that
+it is in /cgi-bin
+</ol>
+<li><b>It asks me configure a viewer for application/octet-stream?</b>
+<br><b>It asks me if I want to save clock.exe?</b><br>
+Your server doesn't know that /cgi-bin is a directory where executables
+should be <i>executed</i>, not downloaded.  Recheck your configuration.
+Consult your manuals.
+<li><b>It says the server is misconfigured</b>
+<br>Check your configuration and manuals.
+<li><b>It says something like Can't create child process?</b>
+<br>
+Might be out of memory.  More likely, especially if you are using
+WebSite, there are a thousand little files in your <tt>\TEMP</tt>
+directory called *.in and *.out: delete them.
+<li><b>It says something else</b>
+<br><a href="mailto:samm@cs.ubc.ca">E-mail me</a> the following info
+(after you've <a href="faq.html">read the FAQ</a>):
+<ul>
+<li>Your URL
+<li>The message you do get (if any)
+	<li>the <a href="faq.html#server">server</a> you are using.
+	<li>whether or not there is a file called clock.err, and if there
+	is such a file, what does it say?
+</ul>
+</ul>
+<FONT SIZE=+2>P</FONT>: <b>I get an error message</b>
+<p>
+<FONT SIZE=+2>S</FONT>: Check for a file called clock.err, there is
+more specific error information there.
+<p>
+<FONT SIZE=+2>P</FONT>: <b>I specified a background colour and
+foreground colour but it came out white on black anyway when using
+the <tt>simple=yes</tt> argument.</B>
+<p>
+<FONT SIZE=+2>S</FONT>: You probably misspelled <tt>bgcolour</tt>
+or <tt>fgcolour</tt>.  <b>Americans please note the U.</b>
+<p>
+<FONT SIZE=+2>P</FONT>: <b>My server has been crashing regularly since I started
+using your clock</b>
+<p>
+<FONT SIZE=+2>S</FONT>: 0) Read the <a href="disclaimer.html">disclaimer</a>. <br>
+1) If you are using WebSite, delete all the *.in and *.out
+files in <tt>\TEMP</tt><br>
+2) Try using the simple style to decrease the clock's execution time.<br>
+<b>None of those helps</b><br>
+4) Buy more RAM<br>
+<b>Yeah, right</b><br>
+5) Remove the clock.<br>
+<b>Still crashes</b><br>
+6) Then it wasn't the clock: it was something else.
+<p>
+<a href="#toc"
+onMouseOver="window.status='Return to Table Of Contents'; return true;"
+>Back to TOC</a>
+<hr>
+<a name="faq"><h3>FAQ</h3></a>
+<FONT SIZE=+2>Q</FONT>: <b>How do I change the digits?</B>
+<p>
+<FONT SIZE=+2>A</FONT>: Unfortunately you cannot. You can edit the 
+GIFs in the <tt>/led</tt> directory if you wish, making sure you keep
+them all the same size, but this might screw you up if you
+are also using the <a href="counter.html">counter</a>.
+<p>
+<FONT SIZE=+2>Q</FONT>: <b>Can you make a CGI like this that displays
+the date?</b>
+<p>
+<FONT SIZE=+2>A</FONT>: Nope. I'm out of the CGI business now.
+<p>
+<a href="#toc"
+onMouseOver="window.status='Return to Table Of Contents'; return true;"
+>Back to TOC</a>
+<hr>
+<a name="credits"><h3>Credits</h3></a>
+<ul>
+<li>The counter uses the <a href="http://www.boutell.com/gd/" TARGET="_top">gd library</a>
+by Thomous Boutell. The gd library is copyright &copy; Thomous Boutell. 
+<li>The counter uses <a href="http://www.boutell.com/cgic/" TARGET="_top">cgiC</a> by Thomous
+Boutell.  cgiC is copyright &copy; Thomous Boutell.
+<li>Thanks also to 
+<a href="http://www.cs.ubc.ca/spider/samm/dedication.html" TARGET="_top">my 
+dad</a>.
+</ul>
+<a href="#toc"
+onMouseOver="window.status='Return to Table Of Contents'; return true;"
+>Back to TOC</a>
+<hr>
+<SCRIPT>
+
+document.write("<FONT SIZE=-2>Last Modified " + document.lastModified+"</FONT>")
+
+</SCRIPT>
+</BODY>
+</HTML>

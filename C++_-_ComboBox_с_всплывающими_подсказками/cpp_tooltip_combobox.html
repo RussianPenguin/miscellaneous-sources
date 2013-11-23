@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body>
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><p align="center">&nbsp;</p>
+    <h3 align="center"><font color="#a0a099">ComboBox с всплывающими
+    подсказками </font></h3>
+    <hr>
+    <p>Автор: <a href="mailto:eddi@freenet.am">Edward Antonyan</a>.</p>
+    <p><img src="TooltipComboBox.jpg" width="205" height="131"></p>
+    <p><u>Требования:</u> VC6 SP5, NT4 SP6 ( на других ОС не
+    тестировалось )</p>
+    <p>В примере описывается, как заменить
+    стандартный выпадающий список на виртуальный, с
+    той целью, чтобы к элементам списка можно было
+    добавить подсказки, а так же предотвратить
+    наличие двух идентичных списков.</p>
+    <p>Для использования данного combo box, сделайте
+    следующее:<ol>
+      <li>Включите в проект TooltipComboBox.h, TooltipComboBox.cpp,
+        TooltipListCtrl.h и TooltipListCtrl.cpp. </li>
+      <li>В редакторе ресурсов создайте droplist combobox. </li>
+      <li>В Визарде создайте переменную для combobox. </li>
+      <li>В Ваш .h файл включите TooltipComboBox.h и замените CComboBox
+        на CTooltipComboBox. Также включите afxtempl.h для поддержки
+        CMap. </li>
+      <li>Для того, чтобы создать свои собственные
+        подсказки, необходимо использовать функции
+        SetItemTip, SetComboTip, или заменить функцию <font color="#804040">GetItemTip</font>
+        в <font color="#804040">CTooltipListCtrl</font>, и функцию <font color="#804040">GetComboTip</font>
+        в <font color="#804040">CTooltipComboBox</font>. </li>
+    </ol>
+    <h3>Downloads</h3>
+    <a href="TooltipComboBox.zip"><p>Скачать исходник - 6 Kb</a> </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

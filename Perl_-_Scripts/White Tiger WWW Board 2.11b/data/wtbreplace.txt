@@ -1,0 +1,15 @@
+  ;;&nbsp;&nbsp;
+ - ;; &#151; 
+--;;&#151;
+:\);;<font face="Wingdings">&#74;</font>
+:-\);;<font face="Wingdings">&#74;</font>
+;\);;<font face="Wingdings">&#74;</font>
+;-\);;<font face="Wingdings">&#74;</font>
+:-\|;;<font face="Wingdings">&#75;</font>
+:\|;;<font face="Wingdings">&#75;</font>
+;\|;;<font face="Wingdings">&#75;</font>
+;-\|;;<font face="Wingdings">&#75;</font>
+:-\(;;<font face="Wingdings">&#76;</font>
+:\(;;<font face="Wingdings">&#76;</font>
+;\(;;<font face="Wingdings">&#76;</font>
+;-\(;;<font face="Wingdings">&#76;</font>

@@ -1,0 +1,5 @@
+TARGETNAME=Driver
+TARGETPATH=obj 
+TARGETTYPE=DRIVER 
+
+SOURCES=driver.c driver.rc

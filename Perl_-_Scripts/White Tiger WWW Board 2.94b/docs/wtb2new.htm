@@ -1,0 +1,510 @@
+<HTML>
+<HEAD>
+<TITLE>White Tiger WWW Board &#151; upgrade to 2.9(x)b</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#BFDCFB" LINK="#0000f0" VLINK="#5E5E5E" ALINK="#FF0000">
+
+<style type="text/css">
+th {font-family:arial,tahoma; font-size:10pt; align:center; text-align:left;}
+</style>
+
+<font face="Arial, Times New Roman" size=2>
+<div align=left>
+<center><P><B><FONT COLOR=#0000FF SIZE=+2>White Tiger<BR>
+</FONT><I><FONT COLOR=#008000 SIZE=+1>WWW Board &#151; система поддержки WWW-конференции
+<p>Руководство по переходу на последнюю версию скриптов</FONT></I></B></CENTER>
+
+<P><hr size=1 width=80% align=center><P>
+<center>[<a href=ewtboard.htm>English version here</a>]
+[<a href=wtboard.htm>Документация</a>]
+[<a href=http://wtiger.ncport.ru/wtboard>Демонстрация</a>]
+[<a href=wtboardhome.htm>Тестирование</a>]
+[Обновление]
+[<a href=wtboardplugs.htm>Разработка</a>]
+</center>
+<P><hr size=1 width=80% align=center><P>
+<dd>Изменения в версиях представлены таблицей, в которой описаны
+соответствующие параметры. Доступен полный список параметров форума в той
+последовательности, в которой он по умолчанию находится в файле
+&lt;wtboard.txt&gt; последней версии, с указанными настройками, принятыми
+по умолчанию.
+<dd>Дополнительные замечания, не связанные с изменением параметров,
+но необходимые для корректного обновления, также представлены в таблицах.
+
+<P><hr size=1 width=80% align=center><P>
+<i><ul>
+<li><a href=#full>Полный список</a>
+<li><a href=#to23b>Переход до версии 2.3b</a>
+<li><a href=#to24b>Переход до версии 2.4b</a>
+<li><a href=#to241b>Переход до версии 2.41b</a>
+<li><a href=#to244b>Переход до версии 2.44b</a>
+<li><a href=#to25b>Переход до версии 2.5b</a>
+<li><a href=#to26b>Переход до версии 2.6b</a>
+<li><a href=#to27b>Переход до версии 2.7b</a>
+<li><a href=#to28b>Переход до версии 2.8b</a>
+<li><a href=#to282b>Переход до версии 2.82b</a>
+<li><a href=#to283b>Переход до версии 2.83b Курбан-Байрам Edition</a>
+<li><a href=#to284b>Переход до версии 2.84b</a>
+<li><a href=#to29b>Переход до версии 2.9b</a>
+<li><a href=#to291b>Переход до версии 2.91b</a>
+<li><a href=#to292b>Переход до версии 2.92b</a>
+<li><a href=#to293b>Переход до версии 2.93b</a>
+</ul></i>
+
+
+<P><hr size=1 width=80% align=center><P>
+<a name=full>&nbsp;</a>
+<center><h3>Таблица параметров форума. Полный список параметров</center></h3>
+
+<table width=100% border=1>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>registration</th><th></th><th>Регистрационный код форума</th></tr>
+<tr><th>thekonf</th><th>Форум</th><th>Название конференции</th></tr>
+<tr><th>tokonf</th><th>на форум</th><th rowspan=3>Различные формы названия для подстановки в генерируемые страницы</th></tr>
+<tr><th>ofkonf</th><th>форума</th></tr>
+<tr><th>onkonf</th><th>на форуме</th></tr>
+<tr><th>admin</th><th>admin@host.com</th><th>Адрес e-mail администратора</th></tr>
+<tr><th>private</th><th>noprivate</th><th>noprivate &#151; общедоступный, private &#151; частный</th></tr>
+<tr><th>dirkonf</th><th>../wtboard</th><th>Путь к каталогу форума, доступный через браузер</th></tr>
+<tr><th>dirrealkonf</th><th>../wtboard</th><th>Физический путь к каталогу форума на сервере</th></tr>
+<tr><th>dircgi</th><th>../cgi-bin</th><th>Путь к каталогу скриптов, доступный через брайзер</th></tr>
+<tr><th>realpath</th><th>..</th><th>Физический путь к корневому каталогу форума на сервере</th></tr>
+<tr><th>quote</th><th>&gt;</th><th>Символ, определяющий цитату</th></tr>
+<tr><th>quotebeg</th><th>&lt;i&gt;</th><th rowspan=2>Теги, выделяющие цитату в конечном сообщении</th></tr>
+<tr><th>quoteend</th><th>&lt;/i&gt;</th></tr>
+<tr><th>substip</th><th>on</th><th>Автоматическая подстановка индивидуальных параметров в формы с учетом IP-адреса</th></tr>
+<tr><th>addip</th><th>off</th><th>Добавлять IP-адрес отправителя в сообщения</th></tr>
+<tr><th>notag</th><th>0</th><th>Режимы обработки тегов: 0 &#151; игнорировать; 1 &#151; преобразовывать в текст; 2 &#151; удалять теги; 3 &#151; удалять частично</th></tr>
+<tr><th>usecookie</th><th>on</th><th>Использовать cookie для идентификации</th></tr>
+<tr><th>quoting</th><th>on</th><th>Разрешить цитирование письма при ответе</th></tr>
+<tr><th>individual</th><th>on</th><th>Разрешить индивидуальные настройки пользователя</th></tr>
+<tr><th>includeform</th><th>on</th><th>Добавлять в сообщения форму ответа</th></tr>
+<tr><th>ext</th><th>shtml</th><th>Расширение сообщений. Варианты: htm, html, shtml, stm</th></tr>
+<tr><th>reply</th><th>Re</th><th>Признак ответа в теме сообщения, подставляется автоматически. При дальнейших ответах нумеруется</th></tr>
+<tr><th>paragraph</th><th>&lt;dd&gt;</th><th rowspan=2>Признаки начала и конца абзаца в генерируемом сообщении</th></tr>
+<tr><th>endparagraph</th><th>&lt;/dd&gt;</th></tr>
+<tr><th>separator</th><th>&lt;hr size=1 width=80% align=center&gt;</th><th>Элемент &#151; разделитель текстов</th></tr>
+<tr><th>selectnew</th><th>360</th><th>Время в минутах, в течение которого сообщение будет помечено как новое. При значении 0 пометки не происходит</th></tr>
+<tr><th>selecttag</th><th>&lt;font color=#ff0000&gt;&lt;b&gt;New&lt;/b&gt;&lt;/font&gt;</th><th>Признак новизны сообщения</th></tr>
+<tr><th>selectnul</th><th>2</th><th>Задает способ обработки пустых сообщений (не содержащих в теле текста). При значении 0 пустое сообщение не публикуется (во избежание чата); 1 &#151; публикуется как обычно; 2 &#151; публикуется с выделением цветом (nulcolor).</th></tr>
+<tr><th>nulcolor</th><th>#0000ff</th><th>Цвет для выделений сообщений нулевой длины</th></tr>
+<tr><th>string</th><th>&lt;a href=$href&gt;$subj&lt;/a&gt; &amp;#151; &lt;b&gt;$name&lt;/b&gt; &lt;i&gt;$fhour:$fmin:$fsec $fday/$fmonth/$fullyear&lt;/i&gt; ($answers) $new</th><th>Шаблон строки для регистрации сообщения на основной странице. Описание ключей в административном разделе</th></tr>
+<tr><th>months</th><th>января/февраля/марта/апреля/мая/июня/июля/ августа/сентября/октября/ноября/декабря</th><th>Названия месяцев, разделенные символом /</th></tr>
+<tr><th>days</th><th>Понедельник,/Вторник,/Среда,/Четверг, /Пятница,/Суббота,/Воскресенье,</th><th>Названия дней недели, разделенные символом /</th></tr>
+<tr><th>allowedtags</th><th>a/b/i/u/font/sub/sup/br/p/center/dd/dl/ dt/em/hr/ol/ul/li/pre/s/table/td/th/tr</th><th>Разрешенные к публикации теги (согласно параметру notag=3), разделенные символом /</th></tr>
+<tr><th>smiles</th><th>on</th><th>Обработка смайликов</th></tr>
+<tr><th>allrestrict</th><th>0</th><th>Режим ограничений: 0 &#151; без ограничений; 1 &#151; ограничить отмеченных; 2 &#151; ограничить кроме отмеченных. Ориентируется на параметр t в индивидуальных настройках участника форума (см. Список участников в административном разделе)</th></tr>
+<tr><th>codepage</th><th>cp-1251</th><th>Кодировка сообщений: cp-1251, koi8-r, iso-8859-5</th></tr>
+<tr><th>answerlabel</th><th>* </th><th>Признак ответа в корне дерева сообщений</th></tr>
+<tr><th>arclabel</th><th>** </th><th>Признак ответа на сообщение из архива в корне дерева сообщений</th></tr>
+<tr><th>filter</th><th>off</th><th>Мониторинг сообщений по запрещенным словам</th></tr>
+<tr><th>filterwords</th><th>&nbsp;</th><th>Слова для мониторинга</th></tr>
+<tr><th>indname</th><th>index.shtml</th><th>Название основной страницы форума</th></tr>
+<tr><th>verifydbl</th><th>1</th><th>Способ проверки наличия отсылаемого сообщения: 0 &#151; не проверять; 1 &#151; быстрая проверка, 80% надежности; 2 &#151; тщательная, но медленная проверка, 99% надежности</th></tr>
+<tr><th>service</th><th>service.shtml</th><th>Определяется название файла доступа к сервисным возможностям форума</th></tr>
+<tr><th>maxshowsubj</th><th>500</th><th>Определяет длину темы на основной странице. Если длина темы больше указанной, то урезается с подстановкой многоточия.</th></tr>
+<tr><th>externalcalls</th><th>off</th><th>Разрешает или запрещает выполнение внешних команд из раздела [External Calls].</th></tr>
+<tr><th>overdefine</th><th>off</th><th>Разрешает переопределение параметров, инициализированных согласно файлу &lt;wtboard.txt&gt;, одноименными параметрами из командной строки скрипта.</th></tr>
+<tr><th>timeshift</th><th>0</th><th>Задает смещение внутреннего времени форума относительно системного времени сервера (в минутах).</th></tr>
+<tr><th>preview</th><th>on</th><th>Разрешает предпросмотр сообщения.</th></tr>
+<tr><th>resetbutton</th><th>off</th><th>Разрешает добавление кнопки сброса в форму создания сообщения</th></tr>
+<tr><th>quotesize</th><th>0</th><th>Задает длину предложений для разбиения абзацев при цитировании. Если абзац получается длиннее указанной величины, он делится на несколько предложений. При значении <b>0</b> разбиение не производится.</th></tr>
+<tr><th>passstyle</th><th>1</th><th>Задает парольный режим форума. При значении 0 пароль не проверяется (соответственно нет поля для ввода пароля в форме создания сообщения); 1 &#151; при неверном пароле выдается предупреждение, сообщение не публикуется; 2 &#151; при неверном пароле сообщение публикуется с меткой.</th></tr>
+<tr><th>imgexts</th><th>jpg/jpeg/gif/png</th><th>Определяет расширения, разрешенные для файла изображения, публикуемого по указанной в форме ссылке</th></tr>
+<tr><th>begbody</th><th>&lt;body bgcolor="$errbgcolor" text="$errtcolor" link="$errlcolor" vlink="$errvlcolor" alink="$erralcolor" background="$errimg"&gt;</th><th>Позволяет определить начало технических сообщений форума; этот параметры также можно использовать в шаблонах ([Board Strings]), кроме того, он поддерживает контекстную замену всех прочих стандартных ключей</th></tr>
+<tr><th>endbody</th><th>&lt;/body&gt;&lt;/html&gt;</th><th>Позволяет определить конец технических сообщений форума; этот параметры также можно использовать в шаблонах ([Board Strings]), кроме того, он поддерживает контекстную замену всех прочих стандартных ключей</th></tr>
+<tr><th>showsuccess</th><th>0</th><th>Позволяет исключить демонстрацию подтверждения о приеме сообщения. 0 &#151; разрешить демонстрацию, 1 &#151; запретить, перенаправлять на сообщение, 2 &#151; запретить, перенаправлять на основную страницу</th></tr>
+<tr><th>selftimeout</th><th>1</th><th>Определяет периодичность сканирования состояния форума на предмет выполнения операций самообслуживания, в днях</th></tr>
+<tr><th>contextreplace</th><th>1</th><th>Определяет состояние контекстной замены в соответствии с файлом &lt;wtbreplace.txt&gt;. 0 &#151; отключено, 1 &#151; включено с предоставлением пользователю возможности игнорирования некоторых элементов, 2 &#151; включено безусловно</th></tr>
+<tr><th>copyright</th><th></th><th>Параметр для сохранения информации об авторских правах разработчиков плагинов</th></tr>
+<tr><th>allowroot</th><th>on</th><th>Параметр, определяющий необходимость добавления в форму ответа поля &#171;Поместить в корень&#187;.</th></tr>
+<tr><th>setnroot</th><th>0</th><th>Параметр, предписывающий автоматическую установку галочки &#171;Поместить в корень&#187; при достижении указанного числа ответов в ветке. При значении 0 отключено.</th></tr>
+<tr><th>faq</th><th>faq.htm</th><th>Определяет название файла с правилами</th></tr>
+<tr><th>expirescookie</th><th>Wednesday, 08-Dec-19 23:59:59</th><th>Определяет параметр Expires-Date для cookie. Так как значение является строгим по формату, для его изменения необходимо проконсультироваться с соответствующими справочниками.</th></tr>
+<tr><th>replacedeleted</th><th>on</th><th>Предписывает замещать удаляемые сообщения строкой, определенной в delmesbegin</th></tr>
+<tr><th>treestyle</th><th>1</th><th>Стиль основной страницы форума. <b>1</b> &#151; иерархическая структура, <b>2</b> &#151; список тем</th></tr>
+<tr><th>movenewtop</th><th>on</th><th>При стиле основной страницы &#171;список тем&#187; предписывает переносить последнюю активную тему в верх списка</th></tr>
+<tr><th>mestimeout</th><th>2400</th><th>При стиле основной страницы &#171;список тем&#187; предписывает удалять неактивную тему через указанное количество часов</th></tr>
+
+
+<tr><td colspan=3>Секция <i>[Archive Options]</i></td></tr>
+<tr><th>timelimit</th><th>30</th><th>Временной критерий автоматической архивации, в днях</th></tr>
+<tr><th>meslimit</th><th>1000</th><th>Критерий автоматической архивации по количеству сообщений</th></tr>
+<tr><th>method</th><th>0</th><th>Способ архивации: 0 &#151; нету; 1 &#151; обычная; 2 &#151; архивация с последующим сжатием в файл формата zip; 3 &#151; удаление архива; 4 &#151; архивация с последующим сжатием в файл формата rar</th></tr>
+<tr><th>dirarc</th><th>archive</th><th>Каталог для архивации по умолчанию</th></tr>
+<tr><th>indexarc</th><th>index</th><th>Фрагмент названия файла для архивации основной страницы</th></tr>
+<tr><th>intervaltype</th><th>2</th><th>Способ регистрации интервала: 1 &#151; с указанием номеров граничных сообщений; 2 &#151; с указанием дат</th></tr>
+<tr><th>setnewsarc</th><th>on</th><th>Создавать новостную строку с извещением о факте архивации</th></tr>
+<tr><th>archive</th><th>archive.htm</th><th>Название файла для регистрации архивов. В нем должно быть определено ключевое слово &lt;!--archive--&gt;</th></tr>
+<tr><th>sethtaccess</th><th>on</th><th>Определяет необходимость создания файла .htaccess при архивировании</th></tr>
+<tr><th>arctimeout</th><th>3</th><th>Параметр автоархивации, определяет количество последних дней, сообщения за которые не отправляются в архив</th></tr>
+
+
+<tr><td colspan=3>Секция <i>[Service Options]</i></td></tr>
+<tr><th>info</th><th>Информация о форуме</th><th>Строка, отображаемая при вызове пункта статистики &#171;О форуме&#187;</th></tr>
+<tr><th>userstat</th><th>on</th><th>Предписывает выводить в статистике форума имена участников</th></tr>
+<tr><th>ipuserstat</th><th>off</th><th>Предписывает указывать в статистике рядом с именем участника его последний зарегистрированный IP-адрес</th></tr>
+<tr><th>ignorstat</th><th>off</th><th>Предписывает выводить в статистике список игнорируемых хостов</th></tr>
+<tr><th>advisenew</th><th>on</th><th>Предписывает извещать пользователей о появлении новых сообщений с момента последнего посещения ими форума</th></tr>
+<tr><th>adviseans</th><th>on</th><th>Предписывает извещать пользователей о появлении новых ответов на их сообщения с момента последнего посещения ими форума</th></tr>
+<tr><th>statdays</th><th>15</th><th>Параметр, определяющий количество дней, по которым подсчитывается активность форума</th></tr>
+
+
+<tr><td colspan=3>Секция <i>[Form Options]</i></td></tr>
+<tr><th>lenlogin</th><th>30</th><th>Длина поля для ввода имени</th></tr>
+<tr><th>lenpass</th><th>10</th><th>Длина поля для ввода пароля</th></tr>
+<tr><th>lenemailmes</th><th>50</th><th>Длина поля для ввода адреса e-mail в форме создания сообщения</th></tr>
+<tr><th>lenemailans</th><th>30</th><th>Длина поля для ввода адреса e-mail в форме ответа. Должно быть меньше параметра lenemailmes, поскольку в этой же строке находится опция &#171;Поместить в корень&#187;</th></tr>
+<tr><th>lensubj</th><th>50</th><th>Длина поля для ввода темы</th></tr>
+<tr><th>lenrows</th><th>12</th><th rowspan=2>Высота (строк) и ширина (позиций) поля для ввода самого сообщения</th></tr>
+<tr><th>lencols</th><th>70</th></tr>
+<tr><th>lenurl</th><th>50</th><th>Длина поля для ввода ссылки</th></tr>
+<tr><th>lentitleurl</th><th>50</th><th>Длиня поля для ввода названия ссылки</th></tr>
+<tr><th>lenimg</th><th>50</th><th>Длина поля для ввода ссылки на рисунок</th></tr>
+<tr><th>seturl</th><th>on</th><th>Параметр, предписывающий включать в формы поля для ввода ссылок</th></tr>
+<tr><th>maxsubj</th><th>500</th><th>Максимальная длина строки темы</th></tr>
+<tr><th>maxurl</th><th>200</th><th>Максимальная длина строк ссылок</th></tr>
+<tr><th>setimg</th><th>on</th><th>Предписывает добавлять в форму создания сообщения ссылку на изображение в Internet</th></tr>
+
+
+<tr><td colspan=3>Секция <i>[Board Colors]</i></td></tr>
+<tr><th>indbgcolor</th><th>#c6e8d9</th><th rowspan=18>Параметры, определяющие значения, помещаемые согласно соответствующим ключам в шаблоны, определенные в секции [Board Strings], а также используемые в некоторых технических сообщениях форума</th></tr>
+<tr><th>indtcolor</th><th>#800000</th></tr>
+<tr><th>indlcolor</th><th>#000000</th></tr>
+<tr><th>indvlcolor</th><th>#800000</th></tr>
+<tr><th>indalcolor</th><th>#ffffff</th></tr>
+<tr><th>indimg</th><th></th></tr>
+<tr><th>mesbgcolor</th><th>#f0f0ff</th></tr>
+<tr><th>mestcolor</th><th>#000000</th></tr>
+<tr><th>meslcolor</th><th>#000000</th></tr>
+<tr><th>mesvlcolor</th><th>#800000</th></tr>
+<tr><th>mesalcolor</th><th>#ffffff</th></tr>
+<tr><th>mesimg</th><th></th></tr>
+<tr><th>errbgcolor</th><th>#a8bfb4</th></tr>
+<tr><th>errtcolor</th><th>#000000</th></tr>
+<tr><th>errlcolor</th><th>#000000</th></tr>
+<tr><th>errvlcolor</th><th>#800000</th></tr>
+<tr><th>erralcolor</th><th>#ffffff</th></tr>
+<tr><th>errimg</th><th></th></tr>
+</table>
+
+
+<table width=100% border=1>
+<tr><td colspan=3>Секция <i>[Board Strings]</i></td></tr>
+<tr><th>begmesform</th><th>&lt;html&gt;&lt;title&gt;Отправление сообщения $tokonf&lt;/title&gt;$begbody&lt;center&gt;[&lt;a href=$dirkonf/&gt;$thekonf&lt;/a&gt;] [&lt;a href=$dirkonf/$faq&gt;Правила&lt;/a&gt;] &lt;p&gt;$separator&lt;P&gt; &lt;h2&gt;Отправление сообщения $tokonf&lt;/h2&gt; &lt;P&gt;$separator&lt;P&gt; &lt;div align=left&gt;</th><th rowspan=2>Начало и конец формы создания сообщения</th></tr>
+<tr><th>endmesform</th><th>$endbody</th></tr>
+<tr><th>begansform</th><th>&lt;html&gt;&lt;title&gt;Отправление ответа $tokonf на сообщение &amp;#171;$subj&amp;#187;&lt;/title&gt;&lt;body bgcolor="$errbgcolor" text="$errtcolor" link="$errlcolor" vlink="$errvlcolor" alink="$erralcolor" background="$errimg"&gt;&lt;center&gt;[&lt;a href=$dirkonf/&gt;$thekonf&lt;/a&gt;] [&lt;a href=$dirkonf/$faq&gt;Правила&lt;/a&gt;] &lt;p&gt;$separator&lt;P&gt; &lt;h3&gt;Отправление ответа $tokonf на сообщение &lt;br&gt;&amp;#171;$subj&amp;#187;&lt;/h3&gt; &lt;P&gt;$separator&lt;P&gt; &lt;div align=left&gt;</th><th rowspan=2>Начало и конец формы создания ответа на сообщение</th></tr>
+<tr><th>endansform</th><th>$endbody</th></tr>
+<tr><th>begindex</th><th>&lt;html&gt;&lt;meta http-equiv="pragma" content="no-cache"&gt;&lt;title&gt;$thekonf&lt;/title&gt;&lt;body bgcolor="$indbgcolor" text="$indtcolor" link="$indlcolor" vlink="$indvlcolor" alink="$indalcolor" background="$indimg"&gt;&lt;center&gt;&lt;h1&gt;$thekonf&lt;/h1&gt; &lt;P&gt;$separator&lt;p&gt; &lt;!--#include virtual="$dircgi/wtbservice.cgi?fid=$fid&amp;ins=news"--&gt;[&lt;a href="$dircgi/wtboard.cgi?fid=$fid&amp;root=on"&gt;Написать сообщение&lt;/a&gt;] [&lt;a href=$dirkonf/$service&gt;Сервис&lt;/a&gt;] [&lt;a href=$dirkonf/$archive&gt;Архивы&lt;/a&gt;] [&lt;a href=$dirkonf/$faq&gt;Правила&lt;/a&gt;] &lt;P&gt;$separator&lt;p&gt; &lt;/center&gt;&lt;div align=left&gt;</th><th rowspan=2>Начало и конец файла основной страницы (параметр indname). Для вставки новостной строки и различных извещений необходима вставка: &lt;!--#include virtual="$dircgi/ wtbservice.cgi?fid= $fid&ins=news"--&gt;, при этом расширение файла основной страницы должно быть shtml или stm</th></tr>
+<tr><th>endindex</th><th>&lt;!--end--&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt; &lt;P&gt;&lt;center&gt;$separator&lt;p&gt; [&lt;a href="$dircgi/wtboard.cgi?fid=$fid&amp;root=on"&gt;Написать сообщение&lt;/a&gt;] [&lt;a href=$dirkonf/$service&gt;Сервис&lt;/a&gt;] [&lt;a href=$dirkonf/$archive&gt;Архивы&lt;/a&gt;] [&lt;a href=$dirkonf/$faq&gt;Правила&lt;/a&gt;] &lt;P&gt;$separator&lt;p&gt;&lt;/center&gt; &lt;div align=left&gt;&lt;font size="-1"&gt;&lt;i&gt;&amp;copy; 2000, $thekonf&lt;br&gt;$cprt&lt;/I&gt;$endbody</th></tr>
+<tr><th>begarchive</th><th>&lt;html&gt;&lt;title&gt;Архив $ofkonf&lt;/title&gt;&lt;body bgcolor="$indbgcolor" text="$indtcolor" link="$indlcolor" vlink="$indvlcolor" alink="$indalcolor" background="$indimg"&gt;&lt;center&gt;&lt;h1&gt;Архив $ofkonf&lt;/h1&gt; &lt;P&gt;$separator&lt;p&gt; [&lt;a href=$dirkonf/&gt;$thekonf&lt;/a&gt;] [&lt;a href=$dirkonf/$service&gt;Сервис&lt;/a&gt;] [&lt;a href=$dirkonf/$faq&gt;Правила&lt;/a&gt;] &lt;P&gt;$separator&lt;p&gt; &lt;/center&gt;&lt;div align=left&gt;</th><th rowspan=2>Начало и конец файлов архивации основной страницы</th></tr>
+<tr><th>endarchive</th><th>&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt; &lt;P&gt;&lt;center&gt;$separator&lt;p&gt; [&lt;a href=$dirkonf/&gt;$thekonf&lt;/a&gt;] [&lt;a href=$dirkonf/$service&gt;Сервис&lt;/a&gt;] [&lt;a href=$dirkonf/$faq&gt;Правила&lt;/a&gt;] &lt;P&gt;&lt;/center&gt;$separator&lt;p&gt; &lt;div align=left&gt;&lt;font size="-1"&gt;&lt;i&gt;&amp;copy; 2000, $thekonf&lt;br&gt;$cprt&lt;/i&gt;$endbody</th></tr>
+<tr><th>begmes</th><th>&lt;html&gt;&lt;meta http-equiv="pragma" content="no-cache"&gt;&lt;title&gt;$subj&lt;/title&gt;&lt;body bgcolor="$mesbgcolor" text="$mestcolor" link="$meslcolor" vlink="$mesvlcolor" alink="$mesalcolor" background="$mesimg"&gt;&lt;center&gt;&lt;h2&gt;&lt;a name=top&gt;$subj&lt;/a&gt;&lt;/h2&gt; &lt;p&gt;$separator&lt;p&gt; [&lt;a href=./&gt;$thekonf&lt;/a&gt;] [&lt;a href=#ans&gt;Ответы и комментарии&lt;/a&gt;] [&lt;a href="$dircgi/wtboard.cgi?$command"&gt;Написать ответ&lt;/a&gt;]&lt;/center&gt; &lt;p&gt;$separator&lt;p&gt; &lt;div align=left&gt;</th><th rowspan=2>Начало и конец генерируемого сообщения</th></tr>
+<tr><th>endmes</th><th>&lt;center&gt;$separator&lt;p&gt; [&lt;a href=$dirkonf/&gt;$thekonf&lt;/a&gt;] [&lt;a href=#top&gt;Начало&lt;/a&gt;] [&lt;a href="$dircgi/wtboard.cgi?$command"&gt;Написать ответ&lt;/a&gt;] [&lt;a href="$dirkonf/$prev"&gt;Предыдущее сообщение&lt;/a&gt;] [&lt;a href="$dirkonf/$next"&gt;Следующее сообщение&lt;/a&gt;]&lt;p&gt;$endbody</th></tr>
+<tr><th>searchmes</th><th>lang,668<sup><a href=#comment>*</a></sup></th><th>Шаблон для страницы со списком найденных сообщений. Должен иметь ключ $searched, вместо которого подставляется результат поиска</th></tr>
+<tr><th>about</th><th>lang,669</th><th>Шаблон сообщения, информируюшего о назначении и прочих регалиях форума, задаваемых параметром info. Должен иметь ключ $info</th></tr>
+<tr><th>statistics</th><th>lang,670</th><th>Шаблон сообщения, демонстрирующего статистику форума. Должен иметь ключ $statinfo</th></tr>
+<tr><th>contexthelp</th><th>lang,671</th><th>Шаблон контекстной подсказки, реализованной в некоторых общедоступных страницах форума. Должен иметь ключ $helpstring</th></tr>
+<tr><th>setnewsstring</th><th>&lt;div align=center&gt;&lt;b&gt;$shour:$smin $sday $swmonth $fullyear г. &lt;i&gt;Создан архив форума: &lt;a href="$href"&gt;$interval&lt;/a&gt;.&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;</th><th>Шаблон новостной строки, автоматически генерируемой при создании архива</th></tr>
+<tr><th>regstring</th><th>&lt;li&gt;Архив форума: &lt;a href="$href"&gt;$interval&lt;/a&gt; (создан $shour:$smin, $sday $swmonth $fullyear)</th><th>Шаблон строки для регистрации архива в файле archive.htm</th></tr>
+<tr><th>regtext</th><th>lang,21</th><th>Определяет шаблон текста, выдаваемого при регистрации на форуме нового участника. Вариант по умолчанию содержится в файле ресурса.</th></tr>
+<tr><th>warntext</th><th>lang,26</th><th>Определяет шаблон текста, выдаваемого при регистрации на форуме нового сообщения. Вариант по умолчанию содержится в файле ресурса.</th></tr>
+<tr><th>begsettings</th><th>lang,35</th><th>Определяет шаблон шапки формы настроек пользователя</th></tr>
+<tr><th>endsettings</th><th>lang,654</th><th>Определяет шаблон подвала формы настроек пользователя</th></tr>
+<tr><th>savedsettings</th><th>lang,658</th><th>Определяет вид извещения, выдаваемого при успешном сохранении параметров пользователя</th></tr>
+<tr><th>newmesanstext</th><th>lang,280</th><th>Шаблон извещения о новых сообщениях и ответах</th></tr>
+<tr><th>newmestext</th><th>lang,281</th><th>Шаблон извещения о новых сообщениях</th></tr>
+<tr><th>newanstext</th><th>lang,282</th><th>Шаблон извещения о новых ответах</th></tr>
+<tr><th>privatebegin</th><th>lang,687</th><th>Шаблон сообщения о приватности форума</th></tr>
+<tr><th>addedbegin</th><th>lang,688</th><th>Шаблон сообщения о принятии сообщения</th></tr>
+<tr><th>existbegin</th><th>lang,689</th><th>Шаблон сообщения об отказе принятия сообщения по причине того, что оно уже существует на форуме</th></tr>
+<tr><th>readonlybegin</th><th>lang,690</th><th>Шаблон сообщения о статусе участника &#171;только чтение&#187;</th></tr>
+<tr><th>noaccessbegin</th><th>lang,691</th><th>Шаблон сообщения о запрете доступа участника</th></tr>
+<tr><th>delmesbegin</th><th>lang,673</th><th>Шаблон файла, помещаемого вместо удаляемого сообщения</th></tr>
+<tr><th>wrnpasstext</th><th>lang,678</th><th>Уведомление о неверном пароле</th></tr>
+<tr><th>nopasstext</th><th>lang,679</th><th>Уведомление об отсутствии пароля</th></tr>
+<tr><th>nonametext</th><th>lang,680</th><th>Уведомление об отсутствии имени</th></tr>
+<tr><th>nosubjtext</th><th>lang,681</th><th>Уведомление об отсутствии темы</th></tr>
+<tr><th>prevmodetext</th><th>lang,683</th><th>Уведомление о режиме предварительного просмотра</th></tr>
+<tr><th>prevbuttontext</th><th>lang,684</th><th>Надпись на кнопке предварительного просмотра</th></tr>
+<tr><th>resetbuttontext</th><th>lang,685</th><th>Надпись на кнопке сброса</th></tr>
+</table>
+
+
+<table width=100% border=1>
+<tr><td colspan=3>Секция <i>[External Calls]</i> <font size=-1>(запуски внешних команд определены только в основном скрипте)</font></td></tr>
+<tr><th>externalcall0</th><th>&nbsp;</th><th>Внешняя команда. Раздел инициализаций. Запускается непосредственно после инициализации.</th></tr>
+<tr><th>externalcall1</th><th>&nbsp;</th><th>Внешняя команда. Раздел генерации формы создания сообщения. Запускается перед выводом кнопки &#171;Отправить&#187; формы создания сообщения.</th></tr>
+<tr><th>externalcall2</th><th>&nbsp;</th><th>Внешняя команда. Раздел создания сообщения. Запускается после верификации пользователя при приеме сообщения.</th></tr>
+<tr><th>externalcall3</th><th>&nbsp;</th><th>Внешняя команда. Раздел создания сообщения. Запускается перед записью параметра endmes в файл сообщения.</th></tr>
+<tr><th>externalcall4</th><th>&nbsp;</th><th>Внешняя команда. Раздел создания сообщения. Запускается после создания файла сообщения перед обновлением файлов структуры и основной страницы.</th></tr>
+<tr><th>externalcall5</th><th>&nbsp;</th><th>Внешняя команда. Раздел автоархивации. Запускается перед завершением автоматически генерированного извещения о приеме сообщения и проверкой достижения условий автоархивации.</th></tr>
+<tr><th>externalcall6</th><th>&nbsp;</th><th>Внешняя команда. Раздел автоархивации. Запускается после всех архивационных процедур.</th></tr>
+<tr><th>externalcall7</th><th>&nbsp;</th><th>Внешняя команда. Раздел генерации формы настроек пользователя. Запускается перед выводом кнопки &#171;Принять&#187; формы изменения настроек пользователя.</th></tr>
+<tr><th>externalcall8</th><th>&nbsp;</th><th>Внешняя команда. Раздел сохранения настроек пользователя. Запускается после обработки данных пользователя и формирования списка ключей, перед обновлением базы участников.</th></tr>
+<tr><th>externalcall9</th><th>&nbsp;</th><th>Внешняя команда. Раздел сохранения настроек пользователя. Запускается после обновления базы пользователей, перед завершением работы.</th></tr>
+</table>
+
+<center><h3>Таблица параметров форума. Новые параметры в версиях</center></h3>
+
+<a name=to23b></a>
+
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.3b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>verifydbl</th><th>1</th><th>Способ проверки наличия отсылаемого сообщения: 0 &#151; не проверять; 1 &#151; быстрая проверка, 80% надежности; 2 &#151; тщательная, но медленная проверка, 99% надежности</th></tr>
+<tr><td colspan=3>Секция <i>[Form Options]</i></td></tr>
+<tr><th>maxsubj</th><th>500</th><th>Максимальная длина строки темы</th></tr>
+<tr><th>maxurl</th><th>200</th><th>Максимальная длина строк ссылок</th></tr>
+</table>
+
+<a name=to24b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.4b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Archive Options]</i></td></tr>
+<tr><th>archive</th><th>archive.htm</th><th>Название файла для регистрации архивов. В нем должно быть определено ключевое слово &lt;!--archive--&gt;</th></tr>
+<tr><td colspan=3>Секция <i>[Service Options]</i></td></tr>
+<tr><th>advisenew</th><th>on</th><th>Предписывает извещать пользователей о появлении новых сообщений с момента последнего посещения ими форума</th></tr>
+<tr><th>adviseans</th><th>on</th><th>Предписывает извещать пользователей о появлении новых ответов на их сообщения с момента последнего посещения ими форума</th></tr>
+<tr><td colspan=3><i>Дополнительно</i></td></tr>
+<tr><th colspan=3>Необходимо добавить в файл archive.htm или иной, отведенный для регистрации архивов, фрагмент:<br>
+&lt;!--archive--&gt;<br>
+После него будут регистрироваться архивы.</th></tr>
+</table>
+
+<a name=to241b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.41b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Archive Options]</i></td></tr>
+<tr><th>sethtaccess</th><th>on</th><th>Определяет необходимость создания файла .htaccess при архивировании</th></tr>
+</table>
+
+<a name=to244b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.44b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>service</th><th>service.shtml</th><th>Определяется название файла доступа к сервисным возможностям форума</th></tr>
+</table>
+
+<a name=to25b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.5b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>separator</th><th>&lt;hr size=1 width=80% align=center&gt;</th><th>Элемент &#151; разделитель текстов (введен вместо hr)</th></tr>
+<tr><th>service</th><th>service.shtml</th><th>Определяется название файла доступа к сервисным возможностям форума (введен вместо servname)</th></tr>
+<tr><th>maxshowsubj</th><th>500</th><th>Определяет длину темы на основной странице. Если длина темы больше указанной, то урезается с подстановкой многоточия.</th></tr>
+<tr><td colspan=3>Секция <i>[Archive Options]</i></td></tr>
+<tr><th>archive</th><th>archive.htm</th><th>Название файла для регистрации архивов. В нем должно быть определено ключевое слово &lt;!--archive--&gt; (введен вместо filearc)</th></tr>
+<tr><td colspan=3><i>Дополнительно</i></td></tr>
+<tr><th colspan=3>Из конфигурации изъяты параметры hr, servname, filearc и aboutsoft. Это сделано в целях усовершенствования API. Для корректного обновления <b><i>обязательно</i></b> запустите wtbupdate.cgi.</th></tr>
+<tr><th colspan=3>Добавлен файл wtbdev.cgi, реализованный в помощь разработчику для отображения внутренних переменных форума, определяемых в результате отработки подпрограммы params.</th></tr>
+</table>
+
+<a name=to26b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.6b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>externalcalls</th><th>off</th><th>Разрешает или запрещает выполнение внешних команд из раздела [External Calls].</th></tr>
+<tr><th>overdefine</th><th>off</th><th>Разрешает переопределение параметров, инициализированных согласно файлу &lt;wtboard.txt&gt;, одноименными параметрами из командной строки скрипта.</th></tr>
+<tr><th>timeshift</th><th>0</th><th>Задает смещение внутреннего времени форума относительно системного времени сервера (в минутах).</th></tr>
+<tr><td colspan=3>Секция <i>[External Calls]</i> <font size=-1>(запуски внешних команд определены только в основном скрипте)</font></td></tr>
+<tr><th>externalcall0</th><th>&nbsp;</th><th>Внешняя команда. Раздел инициализаций. Запускается непосредственно после инициализации.</th></tr>
+<tr><th>externalcall1</th><th>&nbsp;</th><th>Внешняя команда. Раздел генерации формы создания сообщения. Запускается перед выводом кнопки &#171;Отправить&#187; формы создания сообщения.</th></tr>
+<tr><th>externalcall2</th><th>&nbsp;</th><th>Внешняя команда. Раздел создания сообщения. Запускается после верификации пользователя при приеме сообщения.</th></tr>
+<tr><th>externalcall3</th><th>&nbsp;</th><th>Внешняя команда. Раздел создания сообщения. Запускается перед записью параметра endmes в файл сообщения.</th></tr>
+<tr><th>externalcall4</th><th>&nbsp;</th><th>Внешняя команда. Раздел создания сообщения. Запускается после создания файла сообщения перед обновлением файлов структуры и основной страницы.</th></tr>
+<tr><th>externalcall5</th><th>&nbsp;</th><th>Внешняя команда. Раздел автоархивации. Запускается перед завершением автоматически генерированного извещения о приеме сообщения и проверкой достижения условий автоархивации.</th></tr>
+<tr><th>externalcall6</th><th>&nbsp;</th><th>Внешняя команда. Раздел автоархивации. Запускается после всех архивационных процедур.</th></tr>
+<tr><th>externalcall7</th><th>&nbsp;</th><th>Внешняя команда. Раздел генерации формы настроек пользователя. Запускается перед выводом кнопки &#171;Принять&#187; формы изменения настроек пользователя.</th></tr>
+<tr><th>externalcall8</th><th>&nbsp;</th><th>Внешняя команда. Раздел сохранения настроек пользователя. Запускается после обработки данных пользователя и формирования списка ключей, перед обновлением базы участников.</th></tr>
+<tr><th>externalcall9</th><th>&nbsp;</th><th>Внешняя команда. Раздел сохранения настроек пользователя. Запускается после обновления базы пользователей, перед завершением работы.</th></tr>
+</table>
+
+
+<a name=to27b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.7b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>preview</th><th>on</th><th>Разрешает предпросмотр сообщения.</th></tr>
+<tr><th>resetbutton</th><th>off</th><th>Разрешает добавление кнопки сброса в форму создания сообщения</th></tr>
+<tr><th>quotesize</th><th>0</th><th>Задает длину предложений для разбиения абзацев при цитировании. Если абзац получается длиннее указанной величины, он делится на несколько предложений. При значении <b>0</b> разбиение не производится.</th></tr>
+</table>
+
+
+<a name=to28b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.8b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>selectnul</th><th>2</th><th>Задает способ обработки пустых сообщений (не содержащих в теле текста). При значении 0 пустое сообщение не публикуется (во избежание чата); 1 &#151; публикуется как обычно; 2 &#151; публикуется с выделением цветом (nulcolor).</th></tr>
+<tr><th>passstyle</th><th>1</th><th>Задает парольный режим форума. При значении 0 пароль не проверяется (соответственно нет поля для ввода пароля в форме создания сообщения); 1 &#151; при неверном пароле выдается предупреждение, сообщение не публикуется; 2 &#151; при неверном пароле сообщение публикуется с меткой.</th></tr>
+</table>
+
+
+<a name=to282b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.82b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>imgexts</th><th>jpg/jpeg/gif/png</th><th>Определяет расширения, разрешенные для файла изображения, публикуемого по указанной в форме ссылке</th></tr>
+<tr><td colspan=3>Секция <i>[Form Options]</i></td></tr>
+<tr><th>setimg</th><th>on</th><th>Предписывает добавлять в форму создания сообщения ссылку на изображение в Internet</th></tr>
+<tr><td colspan=3>Секция <i>[Archive Options]</i></td></tr>
+<tr><th>intervaltype</th><th>2</th><th>Способ регистрации интервала: 1 &#151; с указанием номеров граничных сообщений; 2 &#151; с указанием дат</th></tr>
+<tr><td colspan=3><i>Дополнительно</i></td></tr>
+<tr><th colspan=3>Название параметра interval изменено на intervaltype в целях исправления некорректной подстановки интервала при архивировании.</th></tr>
+</table>
+
+
+<a name=to283b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.83b Курбан-Байрам Edition</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>begbody</th><th>&lt;body bgcolor="$errbgcolor" text="$errtcolor" link="$errlcolor" vlink="$errvlcolor" alink="$erralcolor" background="$errimg"&gt;</th><th>Позволяет определить начало технических сообщений форума; этот параметры также можно использовать в шаблонах ([Board Strings]), кроме того, он поддерживает контекстную замену всех прочих стандартных ключей</th></tr>
+<tr><th>endbody</th><th>&lt;/body&gt;&lt;/html&gt;</th><th>Позволяет определить конец технических сообщений форума; этот параметры также можно использовать в шаблонах ([Board Strings]), кроме того, он поддерживает контекстную замену всех прочих стандартных ключей</th></tr>
+</table>
+
+
+
+<a name=to284b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.84b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>converturl</th><th>1</th><th>Определяет необходимость выделения встречающихся в теле сообщения ссылок соответствующими тегами. 0 &#151; выключить, 1 &#151; включить</th></tr>
+<tr><th>convertmail</th><th>1</th><th>Определяет необходимость выделения встречающихся в теле сообщения адресов e-mail соответствующими тегами. 0 &#151; выключить, 1 &#151; включить</th></tr>
+<tr><th>convertselect</th><th>1</th><th>Определяет необходимость выделения встречающихся в теле сообщения примитивных выделений типа *word*, _word_, __word__ соответсвующими тегами &lt;b&gt;, &lt;i&gt;, &lt;u&gt;. 0 &#151; выключить, 1 &#151; включить выделение с заменой обозначений, 2 &#151; включить выделение, при этом обозначение оставлять</th></tr>
+<tr><th>showsuccess</th><th>0</th><th>Позволяет исключить демонстрацию подтверждения о приеме сообщения. 0 &#151; разрешить демонстрацию, 1 &#151; запретить, перенаправлять на сообщение, 2 &#151; запретить, перенаправлять на основную страницу</th></tr>
+</table>
+
+
+<a name=to29b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.9b</b></td></tr>
+<tr><td align=center>Параметр</td><td align=center>Значение по умолчанию</td><td align=center>Комментарий</td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>selftimeout</th><th>1</th><th>Определяет периодичность сканирования состояния форума на предмет выполнения операций самообслуживания, в днях</th></tr>
+<tr><th>contextreplace</th><th>1</th><th>Определяет состояние контекстной замены в соответствии с файлом &lt;wtbreplace.txt&gt;. 0 &#151; отключено, 1 &#151; включено с предоставлением пользователю возможности игнорирования некоторых элементов, 2 &#151; включено безусловно</th></tr>
+<tr><th>copyright</th><th></th><th>Параметр для сохранения информации об авторских правах разработчиков плагинов</th></tr>
+<tr><th>allowroot</th><th>on</th><th>Параметр, определяющий необходимость добавления в форму ответа поля &#171;Поместить в корень&#187;.</th></tr>
+<tr><th>setnroot</th><th>0</th><th>Параметр, предписывающий автоматическую установку галочки &#171;Поместить в корень&#187; при достижении указанного числа ответов в ветке. При значении 0 отключено.</th></tr>
+<tr><th colspan=3>converturl &#151; удален</th></tr>
+<tr><th colspan=3>convertmail &#151; удален</th></tr>
+<tr><th colspan=3>convertselect &#151; удален</th></tr>
+<tr><td colspan=3>Секция <i>[Archive Options]</i></td></tr>
+<tr><th>method</th><th>0</th><th>Способ архивации: 0 &#151; нету; 1 &#151; обычная; 2 &#151; архивация с последующим сжатием в файл формата zip; 3 &#151; удаление архива; 4 &#151; архивация с последующим сжатием в файл формата rar</th></tr>
+<tr><th>arctimeout</th><th>3</th><th>Параметр автоархивации, определяет количество последних дней, сообщения за которые не отправляются в архив</th></tr>
+<tr><th colspan=3>timescan &#151; удален</th></tr>
+<tr><td colspan=3>Секция <i>[Service Options]</i></td></tr>
+<tr><th>statdays</th><th>15</th><th>Параметр, определяющий количество дней, по которым подсчитывается активность форума</th></tr>
+<tr><td colspan=3><i>Дополнительно</i></td></tr>
+<tr><th colspan=3>В связи с реструктуризацией административного скрипта форума изменилось содержимое файла wtbadmin.htm. Поэтому его необходимо обновить.</th></tr>
+<tr><th colspan=3>Существенно расширились возможности настройки контекстной замены. Для полноты ощущений необходимо привести в соответствие файл &lt;wtbreplace.txt&gt;. Если вы вносили в него какие-либо изменения, перенесите их в новый вариант, поставляющийся с дистрибутивом, и обновите файл на форуме.</th></tr>
+<tr><th colspan=3>Появилась возможность поиска по ключевым словам с учетом полей поиска: тело сообщения, тема, автор, адресат, ссылка URL, ссылка на изображение. В связи с этим изменился файл service.shtml. Перед тем, как обновить его на сервере, удалите из html-кода фрагменты, не соответствующие вашему состоянию учета SSI. Для этого откройте файл service.shtml простым (не специализированным) текстовым редактором и отредактируйте его, следуя инструкциям внутри файла.</th></tr>
+</table>
+
+<a name=to291b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.91b</b></td></tr>
+<tr><th colspan=3>В предыдущей версии в файле wtbreplace.txt были допущены два довольно досадных недочета, в результате чего замены производились не всегда корректно. Приведите этот файл в соответствие с новой версией.</th></tr>
+</table>
+
+
+<a name=to292b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.92b</b></td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>faq</th><th>faq.htm</th><th>Определяет название файла с правилами</th></tr>
+</table>
+
+
+<a name=to293b></a>
+<p>
+<table width=100% border=1>
+<tr><td colspan=3 align=center bgcolor=#00aaaa><b>Версия 2.93b</b></td></tr>
+<tr><td colspan=3>Секция <i>[Board Options]</i></td></tr>
+<tr><th>registration</th><th></th><th>Регистрационный код форума</th></tr>
+<tr><th>expirescookie</th><th>Wednesday, 08-Dec-19 23:59:59</th><th>Определяет параметр Expires-Date для cookie. Так как значение является строгим по формату, для его изменения необходимо проконсультироваться с соответствующими справочниками.</th></tr>
+<tr><th>replacedeleted</th><th>on</th><th>Предписывает замещать удаляемые сообщения строкой, определенной в delmesbegin</th></tr>
+<tr><th>treestyle</th><th>1</th><th>Стиль основной страницы форума. <b>1</b> &#151; иерархическая структура, <b>2</b> &#151; список тем</th></tr>
+<tr><th>movenewtop</th><th>on</th><th>При стиле основной страницы &#171;список тем&#187; предписывает переносить последнюю активную тему в верх списка</th></tr>
+<tr><th>mestimeout</th><th>2400</th><th>При стиле основной страницы &#171;список тем&#187; предписывает удалять неактивную тему через указанное количество часов (ПОКА НЕ ЗАДЕЙСТВОВАНО!)</th></tr>
+<tr><td colspan=3>Секция <i>[Board Strings]</i></td></tr>
+<tr><th>regtext</th><th>lang,21</th><th>Определяет шаблон текста, выдаваемого при регистрации на форуме нового участника. Вариант по умолчанию содержится в файле ресурса.</th></tr>
+<tr><th>warntext</th><th>lang,26</th><th>Определяет шаблон текста, выдаваемого при регистрации на форуме нового сообщения. Вариант по умолчанию содержится в файле ресурса.</th></tr>
+<tr><th>begsettings</th><th>lang,35</th><th>Определяет шаблон шапки формы настроек пользователя</th></tr>
+<tr><th>endsettings</th><th>lang,654</th><th>Определяет шаблон подвала формы настроек пользователя</th></tr>
+<tr><th>savedsettings</th><th>lang,658</th><th>Определяет вид извещения, выдаваемого при успешном сохранении параметров пользователя</th></tr>
+<tr><th>newmesanstext</th><th>lang,280</th><th>Шаблон извещения о новых сообщениях и ответах</th></tr>
+<tr><th>newmestext</th><th>lang,281</th><th>Шаблон извещения о новых сообщениях</th></tr>
+<tr><th>newanstext</th><th>lang,282</th><th>Шаблон извещения о новых ответах</th></tr>
+<tr><th>privatebegin</th><th>lang,687</th><th>Шаблон сообщения о приватности форума</th></tr>
+<tr><th>addedbegin</th><th>lang,688</th><th>Шаблон сообщения о принятии сообщения</th></tr>
+<tr><th>existbegin</th><th>lang,689</th><th>Шаблон сообщения об отказе принятия сообщения по причине того, что оно уже существует на форуме</th></tr>
+<tr><th>readonlybegin</th><th>lang,690</th><th>Шаблон сообщения о статусе участника &#171;только чтение&#187;</th></tr>
+<tr><th>noaccessbegin</th><th>lang,691</th><th>Шаблон сообщения о запрете доступа участника</th></tr>
+<tr><th>delmesbegin</th><th>lang,673</th><th>Шаблон файла, помещаемого вместо удаляемого сообщения</th></tr>
+<tr><th>wrnpasstext</th><th>lang,678</th><th>Уведомление о неверном пароле</th></tr>
+<tr><th>nopasstext</th><th>lang,679</th><th>Уведомление об отсутствии пароля</th></tr>
+<tr><th>nonametext</th><th>lang,680</th><th>Уведомление об отсутствии имени</th></tr>
+<tr><th>nosubjtext</th><th>lang,681</th><th>Уведомление об отсутствии темы</th></tr>
+<tr><th>prevmodetext</th><th>lang,683</th><th>Уведомление о режиме предварительного просмотра</th></tr>
+<tr><th>prevbuttontext</th><th>lang,684</th><th>Надпись на кнопке предварительного просмотра</th></tr>
+<tr><th>resetbuttontext</th><th>lang,685</th><th>Надпись на кнопке сброса</th></tr>
+
+<tr><td colspan=3><i>Дополнительно</i></td></tr>
+<tr><th colspan=3>В административном скрипте форума появился еще один пункт. Рекомендуется обновить файл wtbadmin.htm.</th></tr>
+<tr><th colspan=3>Доработаны некоторые элементы контекстной замены, касающиеся выделения тегами адресов Internet. Рекомендуется подкорректировать файл &lt;wtbreplace.txt&gt;.</th></tr>
+</table>
+
+<font face="Arial, Times New Roman" size=2>
+
+<p><hr size=1 width=40% align=center><P>
+
+<dd>Замените файл &lt;wtblang.txt&gt; на сервере на новый. Измените в файле
+&lt;wtbext.cgi&gt; переменные $data и $wtbini на определенные вами. Обновите
+скрипты на сервере. <b><i>Запустите скрипт wtbupdate.cgi для приведения файла
+конфигурации в соответствие с последней версией программы.</i></b>
+<br><br>
+
+<dd>На этом обновление завершено. Сделайте для проверки несколько тестовых сообщений.
+Проследите, не записываются ли они под одним и тем же номером. Если так происходит,
+проверьте все обозначенные права доступа файлов на сервере.
+
+<a name=comment></a><p><font size=-2><sup>*</sup> <i>Примечание.</i> По умолчанию данному
+параметру соответствует указанная строка файла ресурсов &lt;wtblang.txt&gt;.</font>
+
+<P><hr size=1 width=80% align=center><P>
+
+<CENTER><P><B><TT><A HREF="wtboard.htm">назад</A></TT></B></P></CENTER>
+<P><div align=left><FONT SIZE="-2"><B><I>
+Файл создан 7 февраля 1999 года. Последний раз дополнялся 12 июня 2000 года.<br>
+Copyright &#169; 1998-2000, <A HREF="mailto:wtiger@mail.ru">White Tiger</a>
+</BODY>
+</HTML>

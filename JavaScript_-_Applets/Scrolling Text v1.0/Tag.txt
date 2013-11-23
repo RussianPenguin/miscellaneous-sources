@@ -1,0 +1,71 @@
+<APPLET CODE="SIRtext.class" WIDTH=200 HEIGHT=200 ARCHIVE="SIRtext.jar">
+  <PARAM NAME="TITLEFONT" VALUE="1">
+  <PARAM NAME="TITLECOLOR" VALUE="10">
+  <PARAM NAME="BGCOLOR" VALUE="2">
+  <PARAM NAME="BORDERWIDTH" VALUE="0">
+  <PARAM NAME="BORDERCOLOR" VALUE="2">
+  <PARAM NAME="SCROLLSPEED" VALUE="70">
+  <PARAM NAME="DISPLAYTIME" VALUE="250">
+  <PARAM NAME="MAXLINES" VALUE="45">
+  <PARAM NAME="FONT1" VALUE="Helvetica|B|14">
+  <PARAM NAME="FONT2" VALUE="Helvetica|N|10">
+  <PARAM NAME="FONT3" VALUE="Helvetica|N|12">
+  <PARAM NAME="FONT4" VALUE="Helvetica|B|18">
+  <PARAM NAME="FONT5" VALUE="Helvetica|B|24">
+  <PARAM NAME="FONT6" VALUE="Helvetica|B|18">
+  <PARAM NAME="Color1" VALUE="150|150|150">
+  <PARAM NAME="Color2" VALUE="0|0|0">
+  <PARAM NAME="Color3" VALUE="120|190|190">
+  <PARAM NAME="Color4" VALUE="150|220|220">
+  <PARAM NAME="Color5" VALUE="0|0|0">
+  <PARAM NAME="Color6" VALUE="90|160|160">
+  <PARAM NAME="Color7" VALUE="247|156|57">
+  <PARAM NAME="Color8" VALUE="27|162|67">
+  <PARAM NAME="Color9" VALUE="248|168|77">
+  <PARAM NAME="Color10" VALUE="255|255|255">
+  <PARAM NAME="TEXTLINE1" VALUE="1|10|           ">
+  <PARAM NAME="TEXTLINE2" VALUE="5|10|      Welcome  ">
+  <PARAM NAME="TEXTLINE3" VALUE="5|10|         to the   ">
+  <PARAM NAME="TEXTLINE4" VALUE="5|10|      Scrolling ">
+  <PARAM NAME="TEXTLINE5" VALUE="5|10|         Text    ">
+  <PARAM NAME="TEXTLINE6" VALUE="5|10|        Applet   ">
+  <PARAM NAME="TEXTLINE7" VALUE="5|10|           ">
+  <PARAM NAME="TEXTLINE8" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE9" VALUE="3|10|Increase the amount of information">
+  <PARAM NAME="TEXTLINE10" VALUE="3|10|you   display   on   your    Webpage">
+  <PARAM NAME="TEXTLINE11" VALUE="3|10|without increasing the clutter.">
+  <PARAM NAME="TEXTLINE12" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE13" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE14" VALUE="3|10|With  this  little  Applet  you  will  be">
+  <PARAM NAME="TEXTLINE15" VALUE="3|10|able  to   display   many   pages  of">
+  <PARAM NAME="TEXTLINE16" VALUE="3|10|information in just one area of your">
+  <PARAM NAME="TEXTLINE17" VALUE="3|10|webpage.">
+  <PARAM NAME="TEXTLINE18" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE19" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE20" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE21" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE22" VALUE="3|10|In addition this Applet will give your">
+  <PARAM NAME="TEXTLINE23" VALUE="3|10|web page a dynamic animated feel.">
+  <PARAM NAME="TEXTLINE24" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE25" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE26" VALUE="3|10|This Java Applet is only 7 Kbytes  in">
+  <PARAM NAME="TEXTLINE27" VALUE="3|10|size  and therefore has a very short">
+  <PARAM NAME="TEXTLINE28" VALUE="3|10|load time for your visitors.">
+  <PARAM NAME="TEXTLINE29" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE30" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE31" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE32" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE33" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE34" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE35" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE36" VALUE="3|10|Like all our  Applets, no knowledge">
+  <PARAM NAME="TEXTLINE37" VALUE="3|10|of  Java  programming  is  required ">
+  <PARAM NAME="TEXTLINE38" VALUE="3|10|and with the help and example files ">
+  <PARAM NAME="TEXTLINE39" VALUE="3|10|supplied  you  should   find  it  very">
+  <PARAM NAME="TEXTLINE40" VALUE="3|10|easy to implement.">
+  <PARAM NAME="TEXTLINE41" VALUE="5|10| ">
+  <PARAM NAME="TEXTLINE42" VALUE="5|10| ">
+  <PARAM NAME="TEXTLINE43" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE44" VALUE="3|10| ">
+  <PARAM NAME="TEXTLINE45" VALUE="3|10| ">
+ </APPLET>

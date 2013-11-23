@@ -1,0 +1,8 @@
+BODY { background-color: #FFFFFF; 
+       color: #000000; }
+td, p { font-size: 10pt; }
+.head { background-color: #F0F0F0; }
+A:link { color: #008020; }
+A:visited { color: #008020; }
+A:active { color: #008020; }
+A:hover { color: #000000; }

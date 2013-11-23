@@ -1,0 +1,82 @@
+.head { color: blue; font-size: 10pt; text-decoration: none;  font-family: arial,verdana,geneva,sans-serif; }
+
+.white { text-decoration: none; font-weight: bold; font-size: 12pt;
+		color: white; font-family: arial,verdana,geneva,sans-serif;}
+.white BIG { text-decoration: none; font-weight: bold; font-size: 12pt;
+		color: white; font-family: arial,verdana,geneva,sans-serif;}
+.white SMALL { text-decoration: none; font-weight: bold; font-size: 10pt;
+		color: white; font-family: arial,verdana,geneva,sans-serif;}
+.white A:link { font-weight: bold; font-size: 12pt;
+		color: white; font-family: arial,verdana,geneva,sans-serif;}		
+.white A:visited { font-weight: bold; font-size: 12pt;
+		color: white; font-family: arial,verdana,geneva,sans-serif;}		
+.white A:hover { font-weight: bold; font-size: 12pt;
+		color: white; font-family: arial,verdana,geneva,sans-serif;}
+.white A:active { font-weight: bold; font-size: 12pt;
+		color: white; font-family: arial,verdana,geneva,sans-serif;}		
+		
+.index  A:link { font-weight: 600; color: #000066; 
+              font-size: 12pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+.index  A:visited { font-weight: 600; color: #000033; 
+              font-size: 12pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+.index  A:hover  { font-weight: 600; color: #000099; 
+              font-size: 12pt; text-decoration: none; 
+		font-family: verdana,arial,geneva,sans-serif;} 
+.index  A:active { font-weight: 600; color: #003366; 
+              font-size: 12pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+
+.foot  small { font-weight: 600; color: #000000; 
+              font-size: 10pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+.foot  A:link { font-weight: 600; color: #000066; 
+              font-size: 10pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+.foot  A:visited { font-weight: 600; color: #000033; 
+              font-size: 10pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+.foot  A:hover  { font-weight: 600; color: #000099; 
+              font-size: 10pt; text-decoration: none; 
+		font-family: verdana,arial,geneva,sans-serif;} 
+.foot  A:active { font-weight: 600; color: #003366; 
+              font-size: 10pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+
+
+.sbar  A:link { font-weight: 600; color: #000066; 
+              font-size: 14pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+.sbar  A:visited { font-weight: 600; color: #000033; 
+              font-size: 14pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+.sbar  A:hover  { font-weight: 600; color: #000099; 
+              font-size: 14pt; text-decoration: none; 
+		font-family: verdana,arial,geneva,sans-serif;} 
+.sbar  A:active { font-weight: 600; color: #003366; 
+              font-size: 14pt; text-decoration: none; 
+		font-family: arial,verdana,geneva,sans-serif;} 
+
+
+A:link { font-weight: 600; color: #000066; } 
+A:visited { font-weight: 600; color: #000033; } 
+A:hover  { font-weight: 600; color: #000099; } 
+A:active { font-weight: 600; color: #003366; } 
+	
+STRONG { font-weight: bold;}
+
+EM { font-style: italic; font-weight: bold; } 
+
+SMALL { font-size: 9pt }
+
+H1 { font-family: verdana,geneva,arial,sans-serif; font-weight: bold; font-size: 20pt;  color: #000066 }
+
+H2 { font-family: verdana,geneva,arial,sans-serif; font-weight: bold; font-size: 14pt;  color: #000099; }
+
+H3 { font-family: verdana,geneva,arial,sans-serif; font-weight: bold; font-size: 12pt; color: #0000ff }
+
+H4 { font-family: verdana,geneva,arial,sans-serif; font-weight: bold; font-size: 12pt; color: #0033ff; }
+
+ul { font-weight: 100; }
+

@@ -1,0 +1,4 @@
+<html><title>Форум</title><body bgcolor=#c6e8d9 text=#800000 link=#000000 vlink=#800000 alink=#ffffff background=><center><font face="Times New Roman Cyr"><h1>Форум</h1><P><hr size=1 width=80%><p><!--#include virtual="../cgi-bin/wtbservice.cgi?fid=0&ins=news"-->[<a href="../cgi-bin/wtboard.cgi?root=on&fid=0">Отправить сообщение</a>] [<a href=service.htm>Сервис</a>] [<a href=faq.htm>Правила</a>]<p><hr size=1 width=80% align=center><div align=left>
+<ul>
+<!--home-->
+<!--end--></ul></ul></ul></ul></ul></ul></ul><P><center><hr size=1 width=80%><p>[<a href=../cgi-bin/wtboard.cgi?root=on&fid=0>Написать сообщение</a>] [<a href=service.htm>Сервис</a>] [<a href=faq.htm>Правила</a>]<P></center><hr size=1 width=80% align=center><p><div align=left><font size="-1"><i>&copy; 1999, <a href=./>Форум</a><br>&copy; 1998-1999, <a href=http://wtiger.ncport.ru>White Tiger</a></I><br></body></html>

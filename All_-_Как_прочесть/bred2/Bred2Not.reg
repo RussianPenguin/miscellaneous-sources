@@ -1,0 +1,67 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\*\shell]
+
+[HKEY_CLASSES_ROOT\*\shell\open]
+@="Открыть в блокноте"
+
+[HKEY_CLASSES_ROOT\*\shell\open\command]
+@="Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\.htm\OpenWithList\Текстовый редактор "Блокнот"\shell\edit\command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\batfile\shell\edit\command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\batfile\shell\print\command]
+@="C:\\WINDOWS\\Notepad.exe /p %1"
+
+[HKEY_CLASSES_ROOT\ChannelFile\Shell\Edit\Command]
+@="Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\inffile\shell\open\command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\inffile\shell\print\command]
+@="C:\\WINDOWS\\Notepad.exe /p %1"
+
+[HKEY_CLASSES_ROOT\inifile\shell\open\command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\inifile\shell\print\command]
+@="C:\\WINDOWS\\Notepad.exe /p %1"
+
+[HKEY_CLASSES_ROOT\JSFile\Shell\Edit\Command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\JSFile\Shell\Print\Command]
+@="C:\\WINDOWS\\Notepad.exe /p %1"
+
+[HKEY_CLASSES_ROOT\regfile\shell\edit\command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\regfile\shell\print\command]
+@="C:\\WINDOWS\\Notepad.exe /p %1"
+
+[HKEY_CLASSES_ROOT\scpfile\shell\open\command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\scpfile\shell\print\command]
+@="C:\\WINDOWS\\Notepad.exe /p %1"
+
+[HKEY_CLASSES_ROOT\scriptletfile\Shell\Open\command]
+@="\"C:\\WINDOWS\\Notepad.exe\" \"%1\""
+
+[HKEY_CLASSES_ROOT\txtfile\shell\open\command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\txtfile\shell\print\command]
+@="C:\\WINDOWS\\Notepad.exe /p %1"
+
+[HKEY_CLASSES_ROOT\VBSFile\Shell\Edit\Command]
+@="C:\\WINDOWS\\Notepad.exe %1"
+
+[HKEY_CLASSES_ROOT\VBSFile\Shell\Print\Command]
+@="C:\\WINDOWS\\Notepad.exe /p %1"
+

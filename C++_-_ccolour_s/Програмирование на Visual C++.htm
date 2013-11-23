@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0045)http://vnews.uka.ru/html/Components/comp2.htm -->
+<HTML><HEAD>
+<TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="софт,клуб, программистов, компоненты,Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80><font face=System></font></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%"><font face=System></font></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width=450>
+      <CENTER><FONT color=#800000 face=ARIAL size=5><B>Компоненты</B></FONT><BR>
+      <HR width=300>
+
+      <P></CENTER>
+      <DIV align=center>
+      <TABLE border=0 width="90%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>
+            <DD>Добавление этого класса к вам в проект сделает возможным очень 
+            легко работать с выбором цвета, не используя стандартное диалоговое 
+            окно Windows. Поддерживает ToolTip text. <BR><BR>Для того что бы 
+            начать использовать класс CColourPicker необходимо: 
+            <OL>
+              <LI>Нужно создать объект класса CColourPicker pPicker и вызвать 
+              функцию Create() для вывода контрола на экран; 
+              <LI>pPicker.Сreate(CPoint(200,200), RGB(0,0,0), this, "Default 
+              Color"); </LI></OL>Это приведет к выводу пикера на экран. 
+            <BR><BR>Остановимся подробнее на членах класса CColourPicker. 
+            <BR><BR><B>Функции создания:</B> <PRE>BOOL Create(CPoint p, COLORREF crColour, CWnd* pParentWnd, 
+                LPCTSTR szDefaultText);</PRE>
+            <DD>Параметры: <BR><BR><B>CPoint p</B> - Точка для вывода 
+            пикера<BR><B>COLORREF crColour</B>- Цвет, который будет выделен по 
+            умолчанию<BR><B>CWnd* pParentWnd</B> - Указатель на окно, которому 
+            будут посылаться сообщения.<BR><B>LPCTSTR szDefaultText</B> -Строка 
+            для отображения цвета по умолчанию <BR><BR><B>Операции:</B> 
+            <DD>GetColor() возращает выбранный цвет. <BR><BR>
+            <DD>Контрол посылает родительскому окну следующие сообщения: <PRE>ST_CANCEL	WM_USER+500 Ничего не выбрано	
+ST_SELOK	WM_USER+501 Цвет выбран, передается 
+			    одни параметр (WPARAM)
+			    содержащий выбранный цвет. 
+ST_SELCHANGE	WM_USER+502 Посылается при перемещении по 
+			    контролу мышой, передается
+                            выбранный цвет.</PRE><BR><BR><B>Пример 
+            использования:</B> <BR><BR>... Добавляем к примеру обработчик 
+            нажатия на кнопку, и в к нему прикрепляем вывод Пикера. <PRE>void CMyClass::OnColourButton()
+{
+	CColourPicker *pPicker= 
+
+	  
+
+	  
+
+	 new CColourPicker;
+	pPicker-&gt;Create(CPoint(200,200),    // Point to display popup
+                    RGB(0,0,0),     // Selected colour
+                    this,          // parent
+                    "Default Color");   
+}</PRE><B>Добавьте ссылку на обработчик для события :</B> <PRE>BEGIN_MESSAGE_MAP(CMyClass, CMyClassParent)
+  ...
+  ON_MESSAGE(ST_SELOK, OnSelOk)
+  ON_MESSAGE(ST_CANCEL, OnSelCancel)
+  ON_MESSAGE(ST_SELCHANGE, OnSelChange)
+END_MESSAGE_MAP()</PRE><B>Добавьте сам обработчик события:</B> <PRE>LONG CMyClass::OnSelOK(UINT lParam,LONG /*wParam*/)
+{
+    COLORREF m_SelColor=(COLORREF)lParam;
+
+    return TRUE;	
+}
+
+LONG CmyClass::OnSelChange(UINT lParam,LONG /*wParam*/)
+{
+    COLORREF m_SelColor=   
+
+     
+
+     	
+
+
+   
+
+        
+
+     
+
+     	
+
+
+   
+
+        
+
+     
+
+     	
+
+
+   
+
+     (COLORREF)lParam;
+    ....
+    SetTextColor(m_SelColor);	
+    TextOut(0,0,"Hello !");
+    ......
+
+    return TRUE;	
+}
+
+LONG CmyClass::OnSelCancel(UINT lParam,LONG /*wParam*/)
+{
+    MessageBox("Слушай ничего нету почему-то!");
+    return TRUE;	
+}
+
+
+</PRE>
+            <P>
+            <LI><B class=comp>Описание: - Куклин Алексей <A 
+            href="mailto:vnews@mail.ru">vnews@mail.ru</A> </B>
+            <P></P>
+            <LI><B class=comp>Реализация: - Куклин Алексей <A 
+            href="mailto:vnews@mail.ru">vnews@mail.ru</A> </B>
+            <P>
+            <P></P>
+            <LI><B class=comp>Скачать <A 
+            href="http://vnews.uka.ru/Visual%20Progs/Components/ccolour_s.zip">исходник</A> 
+            </B>
+            <P><!--<LI><b class=comp>Скачать <a href="../../Visual%20Progs/Components/ccolour_e.zip"> пример</a> </b><p>  --><font 
+            face=System></font><font face=System></font><BR><BR></P></FONT></LI></DD></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2><font 
+face=System></font></TD></TR></TBODY></TABLE></DIV></BODY></HTML>

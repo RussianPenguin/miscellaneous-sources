@@ -1,0 +1,107 @@
+<html><meta no-cache="YES"><head><title>Сервисная служба форума</title>
+</head>
+<body bgcolor="#c6e8d9" text="#800000" link="#000000" vlink="#0f0f0f" alink="#FFFFFF" topmargin="0" leftmargin="0">
+<center><h1>Сервис </h1>
+<P><hr size=1 width=80% align=center><p>
+[<a href=./>Форум</a>] [<a href=faq.htm>Правила</a>]<P>
+<hr size=1 width=80% align=center><p>
+
+
+<form action=../cgi-bin/wtbservice.cgi method=post><input type=hidden name=fid value=0><input type=hidden name=oper value=search>
+<table width=100% align=center border=0 cellspacing=0 cellpadding=0>
+<tr valign=middle><th colspan=8><center>Поиск сообщений</center><br></th></tr>
+<tr valign=middle><td colspan=3 align=left>Введите ключевые слова:
+<td colspan=5 align=left><input type=text name=keysearch size=45></td></tr>
+<tr valign=middle><td colspan=8>Диапазон поиска:</td></tr>
+<tr valign=middle bgcolor=#c6e8aa><td colspan=3>интервал по номерам,</td><td colspan=2>от&nbsp; 
+<!--ЭТОТ ВАРИАНТ БЕЗ SSI--><input type=text name=begsearch size=10>
+<!--ЭТОТ ВАРИАНТ С SSI--><input type=text name=begsearch value="<!--#include virtual="../cgi-bin/wtbservice.cgi?fid=0&ins=begsearch"-->" size=10>
+</td>
+<td colspan=3>до 
+<!--ЭТОТ ВАРИАНТ БЕЗ SSI--><input type=text name=endsearch size=10>
+<!--ЭТОТ ВАРИАНТ С SSI--><input type=text name=endsearch value="<!--#include virtual="../cgi-bin/wtbservice.cgi?fid=0&ins=endsearch"-->" size=10>
+</td></tr>
+<tr valign=middle bgcolor=#c6ccd9><td colspan=3>интервал по дате,</td><td colspan=2>с 
+<!--ЭТОТ ВАРИАНТ БЕЗ SSI--><input type=text name=begdata size=15>
+<!--ЭТОТ ВАРИАНТ С SSI--><input type=text name=begdata value="<!--#include virtual="../cgi-bin/wtbservice.cgi?fid=0&ins=begdata"-->"  size=15>
+</td>
+<td colspan=3>по 
+<!--ЭТОТ ВАРИАНТ БЕЗ SSI--><input type=text name=enddata size=15>
+<!--ЭТОТ ВАРИАНТ С SSI--><input type=text name=enddata value="<!--#include virtual="../cgi-bin/wtbservice.cgi?fid=0&ins=enddata"-->"  size=15>
+</td></tr>
+<tr valign=middle bgcolor=#c6e8ff><td colspan=2 width=25%>Искать:</td><td colspan=2 width=25%><input type=radio name=typesearch value=1> одно из слов</td>
+<td colspan=2 width=25%><input type=radio name=typesearch value=2 checked> все слова</td>
+<td colspan=2 width=25%><input type=radio name=typesearch value=3> словосочетание</td></tr>
+<tr valign=middle bgcolor=#c6ffd9><td colspan=2>Сортировать по:</td><td colspan=2><input type=radio name=sorttype value=1> темам</td>
+<td colspan=2><input type=radio name=sorttype value=2> именам</td>
+<td colspan=2><input type=radio name=sorttype value=3> дате и времени</td></tr>
+<td rowspan=4 colspan=2>Область поиска:</td>
+<td colspan=3><input type=checkbox name=bodyonly checked> только сообщение</td>
+<td colspan=3><input type=checkbox name=srhsubj> тема</td></tr>
+<tr><td colspan=3><input type=checkbox name=srhauthor> имя автора</td>
+<td colspan=3><input type=checkbox name=srhaddr> имя адресата</td></tr>
+<tr><td colspan=3><input type=checkbox name=srhurl> ссылка и ее название</td>
+<td colspan=3><input type=checkbox name=srhimg> ссылка на изображение</td></tr>
+<tr><td colspan=3><input type=checkbox name=srhall> везде</td></tr>
+<tr valign=middle bgcolor=#bbe8ff><td colspan=5>Обратная сортировка результатов поиска <input type=checkbox name=reverse checked></td>
+<td colspan=3>Поиск в архивах <input type=checkbox name=searcharchive unchecked></td></tr>
+<tr valign=middle><td colspan=8><br><center><input type=submit value=Искать></td></tr>
+</table></form>
+
+
+<p><hr size=1 width=80% align=center><p>
+
+<!--ЕСЛИ SSI НЕ ПОДДЕРЖИВАЕТСЯ, УБРАТЬ ОТСЮДА...-->
+<script language="JavaScript">
+temp_date=new Date();day=temp_date.getDate()-3;month=temp_date.getMonth()+1;year=temp_date.getYear();
+if(day<10){day="0"+day;}
+if(month<10){month="0"+month;}
+function FirstFunction(){document.lst.getdata.value='<!--#include virtual="../cgi-bin/wtbservice.cgi?fid=0&ins=getdata"-->'}
+function SecondFunction(){document.lst.getdata.value='<!--#include virtual="../cgi-bin/wtbservice.cgi?fid=0&ins=begsearch"-->';}
+</script>
+<!--...И ДО СЮДА-->
+
+<form name=lst action=../cgi-bin/wtbservice.cgi method=post><input type=hidden name=fid value=0><input type=hidden name=oper value=lastest>
+<table width=100% align=center border=0 cellspacing=0 cellpadding=0>
+<tr><th colspan=8>Список последних сообщений</center><br></th></tr>
+<tr><td colspan=8>Вывести сообщения, полученные после указанной даты <input type=radio name=gettype value=1 onclick="FirstFunction(); return true;" checked>&nbsp;&nbsp;
+начиная с указанного номера <input type=radio name=gettype value=2 onclick="SecondFunction(); return true;"></td></tr>
+<tr bgcolor=#c6ccd9><td colspan=3>Критерий (дата или номер):</td><td colspan=5>
+<!--ЭТОТ ВАРИАНТ БЕЗ SSI--><input type=text name=getdata size=15>
+<!--ЭТОТ ВАРИАНТ С SSI--><input type=text name=getdata value="<!--#include virtual="../cgi-bin/wtbservice.cgi?fid=0&ins=getdata"-->" size=15>
+</td></tr>
+<tr valign=middle bgcolor=#c6ffd9><td colspan=2>Сортировать по:</td><td colspan=2><input type=radio name=sorttype value=1> темам</td>
+<td colspan=2><input type=radio name=sorttype value=2> именам</td>
+<td colspan=2><input type=radio name=sorttype value=3> дате и времени</td></tr>
+<tr valign=middle bgcolor=#bbe8ff><td colspan=8>Обратная сортировка результатов поиска <input type=checkbox name=reverse checked></td></tr>
+<tr valign=middle><td colspan=8>&nbsp;<center><input type=submit value=Вывести></td></tr>
+</table></form>
+
+
+<p><hr size=1 width=80% align=center><p>
+<center><h4>Информация</h4></center>
+<center>
+<table align=center border=0 cellpadding=0 cellspacing=0><tr valign=top align=center>
+<td><form action=../cgi-bin/wtbservice.cgi method=post>
+<input type=hidden name=oper value=about>
+<input type=hidden name=fid value=0>
+<input type=submit name=oper value="О форуме"></form></td>
+
+<td><form action=../cgi-bin/wtbservice.cgi method=post>
+<input type=hidden name=oper value=statist>
+<input type=hidden name=fid value=0>
+<input type=submit name=oper value=Статистика></form></td>
+
+<td><form action=../cgi-bin/wtbservice.cgi method=post>
+<input type=hidden name=oper value=aboutsoft>
+<input type=hidden name=fid value=0>
+<input type=submit name=oper value="О программном обеспечении"></form></td>
+</tr></table>
+</center>
+<P> <center><hr size=1 width=80%><p>
+[<a href=./>Форум</a>] [<a href=faq.htm>Правила</a>]<P>
+</center><hr size=1 width=80%><p>
+<div align=left>
+<font size=-1><i>&#169; 2000, Форум<br>
+&#169; 1998-2000, <a href=http://wtiger.ncport.ru>White Tiger</a></I><br>
+</body></html>

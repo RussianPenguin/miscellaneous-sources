@@ -1,0 +1,656 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>6</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><font color="#a0a099">&nbsp;<p align="center"><big><strong>Класс для
+    протокола SMTP</strong></big> </font></p>
+    <p>Автор: <a href="mailto:aasif@khi.compol.com">Asif Rasheed</a>.</p>
+    <p>SMTP (Simple Mail Transfer Protocol) используется для отправки
+    почты по назначению. Полное описание протокола
+    SMTP содержится в RCF 821. Данный класс можно
+    использовать в различных приложениях, которые
+    отправляют почту через протокол SMTP.</p>
+    <p>В классе содержится несколько методов. Для
+    удобства программирования методы названы по
+    аналогии с командами протокола SMTP. В этом классе
+    используется CSocket как член класса, с той целью,
+    чтобы можно было работать с потоками.</p>
+    <p>Вот собственно код класса. </p>
+    <tt><tt><tt><tt><tt><tt><tt><font color="#990000"><pre><tt><font color="#009900">//////////////////////////////////////////////////////////////////////</font>
+// SMTP.h: </font><font
+color="#009900">файл заголовка CSMTP класса.</font><font color="#990000">
+<font
+color="#009900">//</font>
+<font color="#009900">//////////////////////////////////////////////////////////////////////</font>
+
+#<font
+color="#0000ff">if</font> !defined(AFX_SMTP_H__617F7E82_7F4D_11D1_88A0_00001C302581__INCLUDED_)
+#define AFX_SMTP_H__617F7E82_7F4D_11D1_88A0_00001C302581__INCLUDED_
+
+#<font
+color="#0000ff">if</font> _MSC_VER &gt;= 1000
+#pragma once
+#endif <font color="#009900">// _MSC_VER &gt;= 1000</font>
+
+#define CONNECTION_CHECK 0
+#define HELLO_CHECK 1
+#define MAIL_CHECK 2
+#define RCPT_CHECK 3
+#define DATA_START_CHECK 4
+#define DATA_END_CHECK 5
+#define QUIT_CHECK 6
+#define DATA_CHECK 7
+
+
+<font
+color="#0000ff">class</font> CSMTP 
+{
+<font color="#0000ff">public</font>:
+	BOOL Mail(); <font
+color="#009900">// </font>
+	CString GetErrorMessage();
+	BOOL Data(CString Subject, CString Body);
+	CString GetTo();
+	BOOL SetTo(CString to);
+	CString GetFrom();
+	<font
+color="#0000ff">void</font> SetFrom(CString from);
+	BOOL Mail(CString from);
+	BOOL Disconnect();
+	CString GetHost();
+	<font
+color="#0000ff">void</font> SetHost(CString Host);
+	BOOL Connect(CString Host, CString Me);
+	BOOL Connect();
+	CSMTP();
+	<font
+color="#0000ff">virtual</font> ~CSMTP();
+	
+<font color="#0000ff">private</font>:
+	CString GetError(CString Response);
+	CString m_ErrorMessage;
+	BOOL CheckResponse(<font
+color="#0000ff">int</font> Type);
+	<font color="#0000ff">int</font> m_NoOfTo;
+	CStringArray m_To;
+	CString m_From;
+	CSocket m_SMTPServer;
+	CString m_Host;
+   };
+
+#endif <font
+color="#009900">// !defined(AFX_SMTP_H__617F7E82_7F4D_11D1_88A0_00001C302581__INCLUDED_)</font>
+
+
+<font
+color="#009900">//////////////////////////////////////////////////////////////////////////</font>
+// SMTP.cpp: </font><font
+color="#009900">методы класса CSMTP.</font><font color="#990000">
+<font
+color="#009900">//</font>
+<font color="#009900">//////////////////////////////////////////////////////////////////////</font>
+
+#include &quot;stdafx.h&quot;
+#include &quot;SMTP.h&quot;
+
+#ifdef _DEBUG
+#undef THIS_FILE
+<font
+color="#0000ff">static</font> <font color="#0000ff">char</font> THIS_FILE[]=__FILE__;
+#define <font
+color="#0000ff">new</font> DEBUG_NEW
+#endif
+
+<font color="#009900">//////////////////////////////////////////////////////////////////////</font>
+// </font><font
+color="#009900">Конструктор/Деструктор</font><font color="#990000">
+<font
+color="#009900">//////////////////////////////////////////////////////////////////////</font>
+
+CSMTP::CSMTP()
+{
+	m_NoOfTo = 0;
+	m_SMTPServer.Create();
+}
+
+CSMTP::~CSMTP()
+{
+	m_SMTPServer.Close();
+}
+
+// </font><font
+color="#009900">Коннектимся к SMTP Серверу</font><font color="#990000">
+BOOL CSMTP::Connect()
+{
+	<font
+color="#0000ff">return</font> Connect(m_Host,m_From);
+}
+
+// </font><font color="#009900">Коннектимся к SMTP Серверу</font><font
+color="#990000">
+BOOL CSMTP::Connect(CString Host,CString From)
+{
+	<font color="#0000ff">if</font> (!m_SMTPServer.Connect(Host,25)) // 25 </font><font
+color="#009900">- это SMTP порт</font><font color="#990000">
+	{
+		m_ErrorMessage = _T(&quot;Server cannot be connected&quot;);
+		<font
+color="#0000ff">return</font> FALSE;
+	}
+	<font color="#0000ff">else</font>
+	{
+		<font
+color="#0000ff">if</font>(CheckResponse(CONNECTION_CHECK)==FALSE)
+			<font color="#0000ff">return</font> FALSE;
+		
+		<font
+color="#0000ff">char</font> buf [512];
+		
+		wsprintf (buf, &quot;HELO %s\r\n&quot;, (LPCSTR) From);
+		m_SMTPServer.Send(buf, strlen (buf)); 
+		<font
+color="#0000ff">if</font> (CheckResponse(HELLO_CHECK)==FALSE)
+			<font color="#0000ff">return</font> FALSE;
+		<font
+color="#0000ff">else</font> 
+			<font color="#0000ff">return</font> TRUE; 
+		
+		<font
+color="#0000ff">return</font> TRUE;
+	}
+}
+
+// </font><font color="#009900">Устанавливает адрес хоста</font><font
+color="#990000">
+<font color="#0000ff">void</font> CSMTP::SetHost(CString Host)
+{
+	m_Host = Host;
+}
+
+// </font><font
+color="#009900">Возвращаем адрес хоста</font><font color="#990000">
+CString CSMTP::GetHost()
+{
+	<font
+color="#0000ff">return</font> m_Host;
+}
+
+// </font><font color="#009900">Посылаем SMTP серверу команду &quot;QUIT&quot;</font><font
+color="#990000">
+BOOL CSMTP::Disconnect()
+{
+	<font color="#0000ff">char</font> buf[256];
+	
+	wsprintf (buf, &quot;QUIT \r\n&quot;);
+	m_SMTPServer.Send(buf, strlen (buf)); 
+	<font
+color="#0000ff">if</font> (CheckResponse(QUIT_CHECK)==FALSE)
+		<font color="#0000ff">return</font> FALSE;
+	<font
+color="#0000ff">else</font> 
+		<font color="#0000ff">return</font> TRUE;
+}
+
+// </font><font
+color="#009900">Посылаем SMTP серверу команду &quot;MAIL&quot;</font><font
+color="#990000">
+BOOL CSMTP::Mail(CString from)
+{
+	<font color="#0000ff">char</font> buf[256];
+	
+	wsprintf (buf, &quot;MAIL From:&lt;%s&gt;\r\n&quot;, (LPCSTR) from);
+	m_SMTPServer.Send(buf, strlen (buf)); 
+	<font
+color="#0000ff">if</font> (CheckResponse(MAIL_CHECK)==FALSE)
+		<font color="#0000ff">return</font> FALSE;
+	<font
+color="#0000ff">else</font> 
+		<font color="#0000ff">return</font> TRUE; 
+}
+
+// </font><font
+color="#009900">Устанавливаем строку From</font><font color="#990000">
+<font
+color="#0000ff">void</font> CSMTP::SetFrom(CString from)
+{
+	m_From = from;
+}
+
+// </font><font
+color="#009900">Возвращаем строку From</font><font color="#990000">
+CString CSMTP::GetFrom()
+{
+	<font
+color="#0000ff">return</font> m_From;
+}
+
+// </font><font color="#009900">Устанавливаем строку TO</font><font
+color="#990000">
+BOOL CSMTP::SetTo(CString to)
+{
+	<font color="#0000ff">char</font> buf[256];
+	m_To.Add(to); // </font><font
+color="#009900">Сохраняем содержимое &quot;to&quot;</font><font
+color="#990000">
+	
+	wsprintf (buf, &quot;RCPT TO:&lt;%s&gt;\r\n&quot;, (LPCSTR) to);
+	m_SMTPServer.Send(buf, strlen (buf)); 
+	<font
+color="#0000ff">if</font> (CheckResponse(RCPT_CHECK)==FALSE)
+		<font color="#0000ff">return</font> FALSE;
+	<font
+color="#0000ff">else</font> 
+		<font color="#0000ff">return</font> TRUE; 
+	
+}
+
+// </font><font
+color="#009900">Возвращаем строку TO</font><font color="#990000">
+CString CSMTP::GetTo()
+{ 
+	<font
+color="#0000ff">if</font>(m_To.GetSize()&gt;=m_NoOfTo)
+	{
+		m_NoOfTo++;
+		<font color="#0000ff">return</font> m_To[m_NoOfTo-1];
+	}
+	<font
+color="#0000ff">else</font>
+		<font color="#0000ff">return</font> _T(&quot;No more To available&quot;);
+}
+
+// </font><font
+color="#009900">Посылаем SMTP серверу команду &quot;DATA&quot;</font><font
+color="#990000">
+BOOL CSMTP::Data(CString Subject, CString Body)
+{
+	<font color="#0000ff">char</font> buf[256];
+	
+	wsprintf (buf, &quot;DATA\r\n&quot;);
+	
+	m_SMTPServer.Send(buf, strlen (buf)); 
+	<font
+color="#0000ff">if</font> (CheckResponse(DATA_CHECK)==FALSE)
+		<font color="#0000ff">return</font> FALSE;
+	<font
+color="#0000ff">else</font> 
+	{
+		wsprintf (buf, &quot;SUBJECT:%s\r\n&quot;, (LPCSTR) Subject);
+		m_SMTPServer.Send(buf, strlen (buf)); 
+		
+		wsprintf (buf, &quot;%s\r\n&quot;, (LPCSTR) Body);
+		m_SMTPServer.Send(buf, strlen (buf)); 
+		
+		wsprintf (buf, &quot;.\r\n&quot;);
+		m_SMTPServer.Send(buf, strlen (buf)); 
+		
+		<font
+color="#0000ff">return</font> TRUE;
+	}
+}
+
+// </font><font color="#009900">Этот метод проверяет ответы от сервера</font><font
+color="#990000">
+BOOL CSMTP::CheckResponse(<font color="#0000ff">int</font> Type)
+{
+	<font
+color="#0000ff">char</font> buf [1000];
+	<font color="#0000ff">char</font> temp[3];
+	
+	<font
+color="#0000ff">for</font> (<font color="#0000ff">int</font> i=0;i &lt; 512;i++)
+		buf[i]='\0';
+	
+	// </font><font
+color="#009900">Получаем данные от сервера</font><font color="#990000">
+	m_SMTPServer.Receive(buf, <font
+color="#0000ff">sizeof</font>(buf));
+	strncpy(temp,buf,3);
+	<font color="#0000ff">int</font> temp2 = atoi(temp);
+	<font
+color="#0000ff">switch</font> (Type)
+	{
+	<font color="#0000ff">case</font> CONNECTION_CHECK:
+		<font
+color="#0000ff">if</font> (temp2 != 220)
+		{
+			m_ErrorMessage = GetError((LPCTSTR)buf);
+			<font
+color="#0000ff">return</font> FALSE;
+		} 
+		<font color="#0000ff">break</font>;
+		
+	<font
+color="#0000ff">case</font> HELLO_CHECK:
+		<font color="#0000ff">if</font> (temp2 != 250)
+		{
+			m_ErrorMessage = GetError((LPCTSTR)buf);
+			<font
+color="#0000ff">return</font> FALSE;
+		} 
+		<font color="#0000ff">break</font>;
+	<font
+color="#0000ff">case</font> MAIL_CHECK:
+		<font color="#0000ff">if</font> (temp2 != 250)
+		{
+			m_ErrorMessage = GetError((LPCTSTR)buf);
+			<font
+color="#0000ff">return</font> FALSE;
+		} 
+		<font color="#0000ff">break</font>;
+	<font
+color="#0000ff">case</font> RCPT_CHECK:
+		<font color="#0000ff">if</font> (temp2 != 250)
+		{
+			m_ErrorMessage = GetError((LPCTSTR)buf);
+			<font
+color="#0000ff">return</font> FALSE;
+		} 
+		<font color="#0000ff">break</font>;
+	<font
+color="#0000ff">case</font> DATA_START_CHECK:
+		<font color="#0000ff">if</font> (temp2 != 354)
+		{
+			m_ErrorMessage = GetError((LPCTSTR)buf);
+			<font
+color="#0000ff">return</font> FALSE;
+		} 
+		<font color="#0000ff">break</font>;
+	<font
+color="#0000ff">case</font> DATA_END_CHECK:
+		<font color="#0000ff">if</font> (temp2 != 250)
+		{
+			m_ErrorMessage = GetError((LPCTSTR)buf);
+			<font
+color="#0000ff">return</font> FALSE;
+		} 
+		<font color="#0000ff">break</font>;
+	<font
+color="#0000ff">case</font> QUIT_CHECK:
+		<font color="#0000ff">if</font> (temp2 != 221)
+		{
+			m_ErrorMessage = GetError((LPCTSTR)buf);
+			<font
+color="#0000ff">return</font> FALSE;
+		} 
+		<font color="#0000ff">break</font>;
+	<font
+color="#0000ff">case</font> DATA_CHECK:
+		<font color="#0000ff">if</font> (temp2 != 354)
+		{
+			m_ErrorMessage = GetError((LPCTSTR)buf);
+			<font
+color="#0000ff">return</font> FALSE;
+		} 
+		<font color="#0000ff">break</font>;
+		
+	}
+	<font
+color="#0000ff">return</font> TRUE;
+}
+
+// </font><font color="#009900">Получаем сообщение об ошибке</font><font
+color="#990000">
+CString CSMTP::GetErrorMessage()
+{
+	<font color="#0000ff">return</font> m_ErrorMessage;
+}
+
+// </font><font
+color="#009900">Сопоставляем сообщению об ошибке - номер ошибки</font><font
+color="#990000">
+CString CSMTP::GetError(CString Response)
+{
+	<font color="#0000ff">if</font>(Response.Find(&quot;211&quot;))
+		<font
+color="#0000ff">return</font> _T(&quot;System status or system help reply&quot;);
+	<font
+color="#0000ff">if</font>(Response.Find(&quot;214&quot;))
+		<font color="#0000ff">return</font> _T(&quot;Help Message&quot;);
+	<font
+color="#0000ff">if</font>(Response.Find(&quot;220&quot;))
+		<font color="#0000ff">return</font> _T(&quot;Service is ready&quot;);
+	<font
+color="#0000ff">if</font>(Response.Find(&quot;221&quot;))
+		<font color="#0000ff">return</font> _T(&quot;Service closing transmission channel&quot;);
+	<font
+color="#0000ff">if</font>(Response.Find(&quot;250&quot;))
+		<font color="#0000ff">return</font> _T(&quot;Requested mail action okay, completed&quot;);
+	<font
+color="#0000ff">if</font>(Response.Find(&quot;251&quot;))
+		<font color="#0000ff">return</font> _T(&quot;user not local: will forward to forward path&quot;);
+	<font
+color="#0000ff">if</font>(Response.Find(&quot;354&quot;))
+		<font color="#0000ff">return</font> _T(&quot;Start mail input; end with &lt;CRLF&gt;.&lt;CRLF&gt;&quot;);
+	
+	<font
+color="#0000ff">return</font> _T(&quot;No Error Number is matched with &quot;)+Response;
+}
+
+// </font><font
+color="#009900">Метод Mail без параметров</font><font color="#990000">
+BOOL CSMTP::Mail()
+{
+	<font
+color="#0000ff">return</font> Mail(m_From);
+}
+</font></tt></tt></tt></tt></tt></tt></tt></tt></pre>
+    <p>А теперь небольшой пример использования класса,
+    </p>
+    <tt><font color="#990000"><tt><tt><tt><tt><tt><tt><pre><tt>CSMTP m_smtp;
+m_smtp.Connect(&quot;khi.compol.com&quot;,&quot;aasif@khi.compol.com&quot;);
+m_smtp.Mail(&quot;aasif@khi.compol.com&quot;);
+m_smtp.SetTo(&quot;zafir@home.com&quot;);
+m_smtp.Data(&quot;test message&quot;,&quot;Это тестовое сообщение ... &quot;);
+m_smtp.Disconnect(); </tt></tt></tt></tt></tt></tt></tt></font></tt></pre>
+    <p><!-- Article Ends --> </p>
+<p>Не забудьте вкючить в заголовочный файл Вашего проекта #include &lt;afxsock.h> <br><br><br></td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

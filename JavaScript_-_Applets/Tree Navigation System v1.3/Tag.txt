@@ -1,0 +1,54 @@
+<APPLET CODE="SIRtree.class" WIDTH=235 HEIGHT=275 ARCHIVE="SIRtree.jar">
+  <PARAM NAME="ICONS" VALUE="nicon.gif">
+  <PARAM NAME="NODEFONT" VALUE="1">
+  <PARAM NAME="BGCOLOR" VALUE="1">
+  <PARAM NAME="HBGCOLOR" VALUE="2">
+  <PARAM NAME="TXTCOLOR" VALUE="3">
+  <PARAM NAME="HTXTCOLOR" VALUE="1">
+  <PARAM NAME="LINECOLOR" VALUE="5">
+  <PARAM NAME="FONT1" VALUE="Arial|I">
+  <PARAM NAME="Color1" VALUE="0|0|81">
+  <PARAM NAME="Color2" VALUE="150|150|231">
+  <PARAM NAME="Color3" VALUE="255|255|255">
+  <PARAM NAME="Color4" VALUE="150|220|220">
+  <PARAM NAME="Color5" VALUE="150|150|150">
+
+  <PARAM NAME="NODE0" VALUE="ROOT|Applets|0|http://www.1stjavasoft.com/catalogue|_top|./|top|1|11|1">
+  <PARAM NAME="NODE1" VALUE="ROOT|About|0|http://www.1stjavasoft.com/about|_top|./|_top|1|11|1">
+  <PARAM NAME="NODE2" VALUE="ROOT|Help|5|http://www.1stjavasoft.com/help|_top|./|_top|0">
+
+  <PARAM NAME="NODE3" VALUE="Applets|Menu & Navigation|0|http://www.1stjavasoft.com/catalogue/menunavigation|_top|./|_top|1|11|1">
+  <PARAM NAME="NODE4" VALUE="Applets|Graphs & Charts|0|http://www.1stjavasoft.com/catalogue/graphscharts|_top|./|_top|1|11|1">
+  <PARAM NAME="NODE5" VALUE="Applets|Special Effects|0|http://www.1stjavasoft.com/catalogue/specialeffects|_top|./|_top|1|11|1">
+  <PARAM NAME="NODE6" VALUE="Applets|Data Display|0|http://www.1stjavasoft.com/catalogue/datadisplay|_top|./|_top|1|11|1">
+  <PARAM NAME="NODE7" VALUE="Applets|Applet Collections|2|http://www.1stjavasoft.com/catalogue/appletcollections|_top|./|_top|0">
+  <PARAM NAME="NODE8" VALUE="Applets|Applets with Source Code|2|http://www.1stjavasoft.com/catalogue/javasourcecode|_top|./|_top|0">
+  <PARAM NAME="NODE9" VALUE="Applets|Collections with Source Code|2|http://www.1stjavasoft.com/catalogue/sourcecollections|_top|./|_top|0">
+
+  <PARAM NAME="NODE10" VALUE="About|Secure Shopping|2|http://www.1stjavasoft.com/about/secure.htm|_top|./|_top|0">
+  <PARAM NAME="NODE11" VALUE="About|Ordering|2|http://www.1stjavasoft.com/about/ordering.htm|_top|./|_top|0">
+  <PARAM NAME="NODE12" VALUE="About|Company Profile|2|http://www.1stjavasoft.com/about|_top|./|_top|0">
+  <PARAM NAME="NODE13" VALUE="About|Contact Us|2|http://www.1stjavasoft.com/contacts|_top|./|_top|0">
+
+  <PARAM NAME="NODE14" VALUE="Menu & Navigation|Tree Applet V1.3  |2|http://www.1stjavasoft.com/products/treemenu|_top|./|_top|0">
+  <PARAM NAME="NODE15" VALUE="Menu & Navigation|3 State Button|2|http://www.1stjavasoft.com/products/threestatebutton|_top|./|_top|0">
+  <PARAM NAME="NODE16" VALUE="Menu & Navigation|Alternative Menu System|2|http://www.1stjavasoft.com/products/alternativemenu|_top|./|_top|0">
+  <PARAM NAME="NODE17" VALUE="Menu & Navigation|Horizontal Menu, Standard Edition|2|http://www.1stjavasoft.com/products/hmenustd|_top|./|_top|0">
+  <PARAM NAME="NODE18" VALUE="Menu & Navigation|Horizontal Menu, Professional Edition|2|http://www.1stjavasoft.com/products/hmenupro|_top|./|_top|0">
+  <PARAM NAME="NODE19" VALUE="Menu & Navigation|Vertical Menu, Standard Edition|2|http://www.1stjavasoft.com/products/vmenustd|_top|./|_top|0">
+  <PARAM NAME="NODE20" VALUE="Menu & Navigation|Vertical Menu, Professional Edition|2|http://www.1stjavasoft.com/products/vmenupro|_top|./|_top|0">
+
+  <PARAM NAME="NODE21" VALUE="Graphs & Charts|Bar Chart|8|http://www.1stjavasoft.com/products/barchart|_top|./|_top|0">
+  <PARAM NAME="NODE22" VALUE="Graphs & Charts|Column Chart|7|http://www.1stjavasoft.com/products/columnchart|_top|./|_top|0">
+  <PARAM NAME="NODE23" VALUE="Graphs & Charts|Line Graph|3|http://www.1stjavasoft.com/products/linegraph|_top|./|_top|0">
+  <PARAM NAME="NODE24" VALUE="Graphs & Charts|Pie Chart|9|http://www.1stjavasoft.com/products/piechart|_top|./|_top|0">
+
+  <PARAM NAME="NODE25" VALUE="Special Effects|Typewriter Effects|2|http://www.1stjavasoft.com/products/typewritereffects|_top|./|_top|0">
+  <PARAM NAME="NODE26" VALUE="Special Effects|Fading Text Banner|2|http://www.1stjavasoft.com/products/fadingtext|_top|./|_top|0">
+  <PARAM NAME="NODE27" VALUE="Special Effects|Scrolling Text|2|http://www.1stjavasoft.com/products/scrollingtext|_top|./|_top|0">
+  <PARAM NAME="NODE28" VALUE="Special Effects|Fading Images 2 - Pro Edition|2|http://www.1stjavasoft.com/fadingimages2/fade2Pro.htm|_top|./|_top|0">
+  <PARAM NAME="NODE29" VALUE="Special Effects|Fading Images 2 - Standard Edition|2|http://www.1stjavasoft.com/fadingimages2/fade2SE.htm|_top|./|_top|0">
+
+  <PARAM NAME="NODE30" VALUE="Data Display|A Self Sorting Table|6|http://www.1stjavasoft.com/products/selfsortingtable|_top|./|_top|0">
+  <PARAM NAME="NODE31" VALUE="Data Display|A Self Sorting Table TXT|6|http://www.1stjavasoft.com/products/selfsortingtabletxt|_top|./|_top|0">
+</APPLET>

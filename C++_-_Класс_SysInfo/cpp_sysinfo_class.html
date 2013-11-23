@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left"><font face=System></font>&nbsp;
+</form>
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <p>Автор <a href="mailto:m_blue_bird@yahoo.com">Tien Tran Ngoc</a>.</p>
+    <p><u>Платформа:</u>Windows 9x, Visual C++ 5.0</p>
+    <p>Этот класс позволяет получить массу информации
+    о параметрах компьютера и операционной системы,
+    при этом используя <b>всего две строки кода</b>.
+    Возвращаемая информация включает в себя: </p>
+    <h3>Информация, возвращаемая классом SysInfo</h3>
+    <ul>
+      <li>Версия Windows 
+ 
+      <li>Информация о процессоре <ul>
+          <li>Тип 
+          <li>MMX совместимый? 
+          <li>MHZ 
+          <li>CoProcessor Присутствует? 
+          <li>Количество CPUs </li>
+        </ul>
+      <li>Сеть <ul>
+          <li>Имя компьютера 
+          <li>Имя пользователя 
+          <li>Modems installed 
+          <li>Info of Modem #1 
+          <li>PortSubClass 
+          <li>Driver 
+          <li>Manufacturer 
+          <li>Модель 
+          <li>Info of Modem #2 
+          <li>LANcard: 
+          <li>NIC Адресс 
+          <li>Имя 
+          <li>InfFile 
+          <li>NetClient 
+          <li>Сетевые протоколы 
+          <li>TCP/IP (the protocol you use to connect to 
+          the Internet and wide-area networks) 
+          <li>IPX/SPX-совместимый Протокол (протокол NetWare и Windows NT
+            servers, и Windows 95 computers use to communicate) </li>
+        </ul>
+      <li>Директории <ul>
+          <li>Директория Windows 
+          <li>Директория System 
+          <li>Директория Temp </li>
+        </ul>
+      <li>Информация о дисках <ul>
+          <li>Тип Диска (например Fixed Disk, и т. д.) 
+          <li>Имя тома 
+          <li>Serial номер 
+          <li>Весь объём 
+          <li>Свободно на диске </li>
+        </ul>
+      <li>Информация о дисплее <ul>
+          <li>Display Resolution: 640 x 480 
+          <li>Display Colors: 65536 -16bits HighColor </li>
+        </ul>
+      <li>Информация о памяти <ul>
+          <li>Всего физической RAM 
+          <li>Свободно физической RAM 
+          <li>Объём Page File 
+          <li>Свободно в Page File 
+          <li>Всего Virtual Memory 
+          <li>Свободно Virtual Memory </li>
+        </ul>
+      <li>Информация о принтере <ul>
+          <li>ServerName 
+          <li>PrinterName 
+          <li>ShareName 
+          <li>PortName 
+          <li>DriverName 
+          <li>Description 
+          <li>Location 
+          <li>Processor 
+          <li>Processor param 
+          <li>DataType 
+          <li>Status 
+          <li>Текущие задания на печать 
+          <li>Текущая скорость печати: ? Страниц в минуту 
+          <li>Печать в порт: \\YOURSERVER\.Print_Queue.??? </li>
+        </ul>
+      </li>
+    </ul>
+    <h3>Использование класса SysInfo</h3>
+    <ol>
+      <li>Скопируйте файл Sysinfo.h в ваш проект 
+ 
+      <li>Добавьте строку #include "Sysinfo.h" в 
+        заголовок Вашего диалогового класса 
+ 
+      <li>Создайте объект Sysinfo и вызовите функцию-член:
+        TNTGetInfo(). </li>
+    </ol>
+    <h3>Пример</h3>
+    <p>Функция TNTGetInfo возвращает объект CString ,
+    содержащию всю информацию (включая переносы
+    строк). </p>
+    <pre>Sysinfo m_system;
+CString m_content= 
+ m_system.TNTGetInfo();</pre>
+    <h3>Downloads</h3>
+    <a href="sysinfo.zip"><p>Скачать исходник (включая демку) - 30
+    Kb</a> 
+    </P> </td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+<div align="center"><center>&nbsp;
+</center></div>
+</body>
+</html>

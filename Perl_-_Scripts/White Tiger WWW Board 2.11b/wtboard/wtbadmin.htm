@@ -1,0 +1,31 @@
+<html><title>Администрирование</title>
+<body bgcolor="#c6e8d9" text="#800000" link="#000000" vlink="#0f0f0f" alink="#FFFFFF" topmargin="0" leftmargin="0">
+&nbsp;<P><center><h2>Администрирование форума</h2>
+<P><hr size=1 width=80%><p>
+[<a href=./>Форум</a>]<P>
+<hr size=1 width=80%><p>
+
+<form action=../cgi-bin/wtbedit.cgi method=post><p>
+<table width=100%>
+<tr><td colspan=4><center>Выберите тип изменений:</center><br>
+<input type=radio name=oper value=admin checked>изменить элементы интерфейса форума, статус, список администраторов;<br>
+<input type=radio name=oper value=ignor>изменить список участников, игнор-лист;<br>
+<input type=radio name=oper value=sedit>редактировать строку в Index;<br>
+<input type=radio name=oper value=modif>удалить выбранные сообщения;<br>
+<input type=radio name=oper value=arhiv>переместить часть сообщений в архив;<br>
+<input type=radio name=oper value=news>создать новостную строку;<br>
+<input type=radio name=oper value=restore>сервис восстановления Index.<p>
+</td></tr><tr><td><p>&nbsp;</p></td></tr>
+<tr><td width=10%><div align=right>Имя:</td> <td width=30%><input type=text name=login size=20></td> 
+<td width=20%><div align=right>Пароль:</td> <td width=30%><input type=password name=pass size=20></td></tr>
+<tr><td><p>&nbsp;</p></td></tr>
+<tr><td colspan=4><input type=hidden name=fid value=0><center><input type=submit value=Послать!><input type=reset value=Очистить></tr></td>
+</table></form>
+
+<P><center><hr size=1 width=80%><p>
+[<a href=./>Форум</a>]<P>
+</center><hr size=1 width=80%><p>
+<div align=left>
+<font size=-1><i>&#169; 1999, Форум<br>
+&#169; 1998-1999, <a href=http://wtiger.ncport.ru>White Tiger</a></I><br>
+</body></html>

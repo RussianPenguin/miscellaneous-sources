@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ticktest", "Ticktest.vcproj", "{49AA0697-D320-4FFA-93F1-28348C1B79CB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{49AA0697-D320-4FFA-93F1-28348C1B79CB}.Debug.ActiveCfg = Debug|Win32
+		{49AA0697-D320-4FFA-93F1-28348C1B79CB}.Debug.Build.0 = Debug|Win32
+		{49AA0697-D320-4FFA-93F1-28348C1B79CB}.Release.ActiveCfg = Release|Win32
+		{49AA0697-D320-4FFA-93F1-28348C1B79CB}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

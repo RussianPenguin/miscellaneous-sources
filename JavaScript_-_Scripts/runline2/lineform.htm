@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://www.superbest.com/examples/1/2.htm -->
+<HTML><HEAD><TITLE>Бегущая строка в форме</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff onload=JavaStart()>
+<SCRIPT language=JavaScript>
+<!-- Hide the Script from old browser
+var id;
+var msg=" * * *  БЕГУЩИЕ СТРОКИ ";
+function scroll()
+{
+var lchar;
+  lchar =  msg.substring(0,1);
+  msg += lchar;
+  msg= msg.substring(1,msg.length);
+  document.JavaForm.display.value = msg.substring(0,73);
+  id = setTimeout("scroll()",250);
+}
+function JavaStart()
+         {
+         scroll()
+         return
+         }
+// End of JavaScript -->
+</SCRIPT>
+
+<FORM action="" method=post name=JavaForm>
+<P align=center><INPUT name=display size=24> <BR></P></FORM>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P align=center>&nbsp; </P></BODY></HTML>

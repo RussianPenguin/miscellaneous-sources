@@ -1,0 +1,440 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+IDR_RT_MANIFEST         24      MOVEABLE PURE   "res\\StickyNotes.exe.manifest"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\StickyNotes.exe.manifest""\r\n"
+    "\0"
+END
+
+4 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TRAYNOTE            ICON    DISCARDABLE     "res\\TrayNote.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 187, 102
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About StickyNotes"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,81,50,14,BS_FLAT
+    CTEXT           "StickyNotes Application v 1.8\nAuthor - Igor Vigdorchik\n(c) Copyright 2002-2004",
+                    IDC_STATIC,25,41,78,32
+    ICON            IDI_TRAYNOTE,IDC_STATIC,53,14,20,20
+    GROUPBOX        "",IDC_STATIC,7,7,115,88
+    CTEXT           "MailTo",IDC_ABOUT_MAILTO,33,78,65,13,SS_CENTERIMAGE
+END
+
+IDD_NOTEDLG DIALOGEX 0, 0, 144, 95
+STYLE WS_POPUP | WS_BORDER
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Current Time",IDC_STATIC_TIME,4,84,115,8
+    LTEXT           "",IDC_STATIC_BAR,42,2,71,12
+    CONTROL         "",IDC_EDIT,"RichEdit20A",WS_TABSTOP | 0x144,23,22,90,48
+END
+
+IDD_SEARCHDLG DIALOG DISCARDABLE  0, 0, 244, 169
+STYLE DS_3DLOOK | DS_CENTER | WS_CAPTION | WS_THICKFRAME
+CAPTION "Search"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_SEARCH_EDIT,51,50,126,14
+    PUSHBUTTON      "Find Now",IDC_FIND,187,49,50,14
+    PUSHBUTTON      "New note",IDC_NEW,187,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,7,50,14
+    CTEXT           "Find Note",IDC_STATIC_FIND,75,21,79,13
+    CTEXT           "Look for:",IDC_STATIC_LOOK,10,47,39,18,SS_CENTERIMAGE
+    CONTROL         "",IDC_SEARCH_LIST,"SysListView32",LVS_SMALLICON | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_NOLABELWRAP | LVS_AUTOARRANGE | LVS_ALIGNLEFT | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,72,230,89
+END
+
+IDD_TITLEDLG DIALOG DISCARDABLE  0, 0, 194, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set note's title"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TITLE_EDIT,7,15,119,15
+    DEFPUSHBUTTON   "OK",IDOK,137,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,24,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_NOTEDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 131
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_SEARCHDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_TITLEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,8,0,0
+ PRODUCTVERSION 1,8,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Author - Igor Vigdorchik\0"
+            VALUE "FileDescription", "StickyNotes application\0"
+            VALUE "FileVersion", "1.8\0"
+            VALUE "InternalName", "StickyNotes.exe\0"
+            VALUE "LegalCopyright", "Copyright 2002-2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "StickyNotes.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "StickyNotes Module\0"
+            VALUE "ProductVersion", "1.8\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAYMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Bring All Notes To Front",   ID_POPUP_TOP
+        MENUITEM SEPARATOR
+        POPUP "&Recent Notes"
+        BEGIN
+            MENUITEM "&Empty",                      ID_POPUP_EMPTY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&New Note",                   ID_POPUP_NEWNOTE
+        MENUITEM "&Search",                     ID_POPUP_SEARCH
+        MENUITEM "&About",                      ID_POPUP_ABOUT
+        MENUITEM "&Exit",                       ID_POPUP_EXIT
+    END
+END
+
+IDR_MENU_NOTES MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&New Note",                   IDR_MENU_NEWNOTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Save Note",                  IDR_MENU_SAVE
+        MENUITEM "Save &To File",               IDR_MENU_SAVETOFILE
+        MENUITEM "&Import From File",           IDR_MENU_IMPORTFROMFILE
+        MENUITEM "&Delete Note",                IDR_MENU_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Set &Font...",                IDR_MENU_SETFONT
+        MENUITEM "S&et Title",                  ID_EDIT_SETTITLE
+        POPUP "&Make Transparent"
+        BEGIN
+            MENUITEM "Opaque",                      IDR_MENU_0
+            MENUITEM "10%",                         IDR_MENU_10
+            MENUITEM "20%",                         IDR_MENU_20
+            MENUITEM "30%",                         IDR_MENU_30
+            MENUITEM "40%",                         IDR_MENU_40
+            MENUITEM "50%",                         IDR_MENU_50
+            MENUITEM "60%",                         IDR_MENU_60
+            MENUITEM "70%",                         IDR_MENU_70
+            MENUITEM "80%",                         IDR_MENU_80
+            MENUITEM "90%",                         IDR_MENU_90
+        END
+        POPUP "C&olor"
+        BEGIN
+            MENUITEM "&Blue",                       IDR_MENU_BLUE
+            MENUITEM "&Green",                      IDR_MENU_GREEN
+            MENUITEM "&Pink",                       IDR_MENU_PINK
+            MENUITEM "&Yellow",                     IDR_MENU_YELLOW
+            MENUITEM "&White",                      IDR_MENU_WHITE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Pa&ge Setup...",              ID_FILE_PAGE_SETUP
+        MENUITEM "&Print...",                   ID_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      IDR_MENU_CLOSE
+    END
+    MENUITEM "",                            ID_Menu
+END
+
+IDR_CONTEXTMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Popup Menu"
+    BEGIN
+        MENUITEM "&Undo",                       ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM "&Delete",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All",                 ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Set &Font...",                ID_EDIT_SETFONT
+    END
+END
+
+IDR_DELETE_NOTE MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Delete",                     ID_POPUP_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_NOTE                BITMAP  MOVEABLE PURE   "res\\Note.bmp"
+IDB_PINOPEN             BITMAP  DISCARDABLE     "res\\PinOpen.bmp"
+IDB_PINCLOSE            BITMAP  DISCARDABLE     "res\\PinClose.bmp"
+IDB_PINHOOVER           BITMAP  DISCARDABLE     "res\\PinHoover.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_POPUPMENU_UNDO       "Undo the last action\nUndo"
+    ID_POPUPMENU_CUT        "Cut the selection and put it on the Clipboard\nCut"
+    32782                   "Save To File"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\StickyNotes.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

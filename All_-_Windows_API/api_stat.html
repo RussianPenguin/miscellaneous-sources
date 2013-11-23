@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>6</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+
+<table border="0" cellpadding="20" cellspacing="0" width="700">
+  <tr>
+    <td>Данный пример представляет собой небольшую
+    программку, при запуске которой, в строке статуса
+    (там где в Windows показывается время) появляется
+    иконка, которая может обрабатывать различные
+    события, такие как двойное нажатие мышкой, и
+    нажатие правой кнопкой на иконке. &nbsp;
+    Соответственно в зависимости от события, главный
+    модуль программы выполняет определённые
+    действия (открытие всплывающего меню либо
+    открытие различных диалоговых окон и т.д.)<p>Исходный
+    текст был откомпилирован в Visual C++ 4.2.&nbsp; Выбор
+    данного компилятора ни чем не обоснован, просто
+    мне удобно в нём работать, вот и всё.</p>
+    <p>А теперь по-порядку. Сразу представлю исходный
+    код , а в конце подробно его прокомментирую.</td>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="750" bgcolor="#A5E4A7"><font style="font-size: 10pt" size="2" face="Tahoma"><b>&nbsp;
+    Листинг 1 (status_ico.cpp)</b></font></td>
+  </tr>
+</table>
+
+<pre>
+#include &lt;windows.h&gt;
+#include &lt;windowsx.h&gt;
+
+LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+BOOL WndProc_OnCreate(HWND hWnd, LPCREATESTRUCT lpCreateStruct);
+void WndProc_OnDestroy(HWND hWnd);
+void AddStatusIcon(HWND hWnd, DWORD dwMessage);
+void HandlePopupMenu (HWND hwnd, POINT point);
+
+#define WM_NOTIFYICONMSG (WM_USER + 2)
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+{
+	MSG msg;
+	HWND hWnd;
+	WNDCLASSEX wndclass;
+
+	hInst = hInstance;
+
+	wndclass.style = 0;
+	wndclass.lpfnWndProc = (WNDPROC)WndProc;
+	wndclass.cbClsExtra = 0;
+	wndclass.cbWndExtra = 0;
+	wndclass.hInstance = hInst;
+	wndclass.hIcon = NULL;
+	wndclass.hCursor = NULL;
+	wndclass.hbrBackground = NULL;
+	wndclass.lpszMenuName = NULL;
+	wndclass.lpszClassName = &quot;WSCLAS&quot;;
+	
+	if(!RegisterClassEx(&amp;wndclass))
+		if(!RegisterClass((LPWNDCLASS)&amp;wndclass.style))  return FALSE;
+
+	hWnd=CreateWindow(&quot;WSCLAS&quot;, &quot;&quot;, 0, 0, 0, 1, 1, HWND_DESKTOP, NULL, hInst, NULL);
+
+	AddStatusIcon(hWnd, NIM_ADD);
+
+	while(GetMessage(&amp;msg, NULL, 0, 0))  {
+		TranslateMessage(&amp;msg);
+		DispatchMessage(&amp;msg);
+	}
+
+	return msg.wParam;
+}
+
+LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+	POINT pt;
+
+		case WM_NOTIFYICONMSG:
+			switch(lParam)  {
+				case WM_LBUTTONDBLCLK:
+					MessageBox(NULL, &quot;Двойной щелчок по иконке&quot;, &quot;Сообщение от иконки&quot;, MB_OK);
+				break;
+
+				case WM_RBUTTONDOWN:	// нажатие на иконку правой кнопкой мыши
+					GetCursorPos(&amp;pt);	//вычисляем текущее положение курсора
+					HandlePopupMenu (hWnd, pt);  //рисуем меню от координат курсора
+					break;
+
+				default:
+					break;
+			}
+			break;
+
+		HANDLE_MSG(hWnd, WM_CREATE, WndProc_OnCreate);		//стандартный обработчик создания окна
+		HANDLE_MSG(hWnd, WM_DESTROY, WndProc_OnDestroy);	//стандартный обработчик уничтожения окна
+
+		default:
+			return(DefWindowProc(hWnd, msg, wParam, lParam));
+	}
+	return 0;
+}
+
+BOOL WndProc_OnCreate(HWND hWnd, LPCREATESTRUCT lpCreateStruct)
+{
+	return TRUE;
+}
+
+void WndProc_OnDestroy(HWND hWnd)
+{
+	PostQuitMessage(0);
+}
+
+void AddStatusIcon(HWND hWnd, DWORD dwMessage)
+{
+	HICON hStatusIcon;			// Хэндл иконки в статус-баре
+	LPCSTR pszIDStatusIcon;		// Указатель на Иконку в статус-баре
+	NOTIFYICONDATA tnd;
+
+	pszIDStatusIcon = MAKEINTRESOURCE(IDI_ICON1);
+
+	hStatusIcon = LoadIcon( hInst,pszIDStatusIcon );
+	tnd.cbSize = sizeof(NOTIFYICONDATA);
+	tnd.hWnd = hWnd;
+	tnd.uID = 1;
+	tnd.uFlags = NIF_MESSAGE|NIF_ICON|NIF_TIP;
+	tnd.uCallbackMessage = WM_NOTIFYICONMSG;
+	tnd.hIcon = hStatusIcon;
+	lstrcpyn(tnd.szTip, &quot;Пример&quot;, sizeof(tnd.szTip));
+	Shell_NotifyIcon( dwMessage, &amp;tnd );
+}
+
+void HandlePopupMenu (HWND hWnd, POINT point)
+{
+	HMENU hMenu;
+	HMENU hMenuTrackPopup;
+	LPCSTR pszIDMenu;
+
+	pszIDMenu = MAKEINTRESOURCE(IDM_POPUPMENU1);
+	hMenu = LoadMenu (hInst, pszIDMenu);
+	if (!hMenu)  return;
+	hMenuTrackPopup = GetSubMenu (hMenu, 0);
+	TrackPopupMenu (hMenuTrackPopup, 0, point.x, point.y, 0, hWnd, NULL);
+	DestroyMenu (hMenu);
+}
+</pre>
+
+<table border="0" cellpadding="20" cellspacing="0" width="700">
+  <tr>
+    <td><font size="4"><strong>Комментарии:</strong></font><br>
+    <br>
+    В самом начале идёт обязательное включение
+    Виндузовых заголовков (как и в любой программе
+    под Windows. Далее я объявляю используемые в
+    программе функции. Обычно такое объявление
+    делается в файле-заголовке (.h) , но когда функций
+    не так много, то я обычно эти описания вставляю в
+    главный файл. Описание главной функции&nbsp; <strong>WinMain
+    </strong>не нужно добавлять.<p>Далее идёт определение
+    идентификатора сообщения (<strong>#define WM_NOTIFYICONMSG (WM_USER
+    + 2)</strong>), которое будет поступать от иконки.
+    Впринципе этому идентификатору можно приствоить
+    любое число, но чтобы быть уверенным, что такое
+    число не используется каким-нибудь другим
+    идентификатором, обычно присваивают&nbsp; WM_USER + n
+    &nbsp; , где n - любое число.</p>
+    <p>Далее идёт основная функция, с которой начинает
+    работать данная программа. Вообще-то в разных
+    версиях API данная функция описывается по-разному.
+    Например в API 16 её описание начинается с
+    дескриптора <strong>PASCAL</strong>, но в API 32 - это <strong>WINAPI</strong>.</p>
+    <p>Следующим шагом программа создаёт окно, но не
+    простое, а невидимое. То есть запущенная
+    программа не будет видна в панели задач. Вообще
+    процесс создания окна в Windows состоит из двух
+    шагов. Первый ( <strong>RegisterClassEx(&amp;wndclass)</strong> )- это
+    регистрация класса окна в системе, и второй ( <strong>hWnd=CreateWindow(....</strong>
+    )- создание непосредственно окна. Параметр <strong>wndclass.lpfnWndProc
+    = (WNDPROC)WndProc;</strong> указывает классу окна, что все
+    сообщения, поступающие окну будут
+    обрабатываться функцией <strong>WndProc</strong>. Все
+    описания данных функций и их входных параметров
+    Вы можете найти во многих книгах по
+    программированию в API 32, поэтому здесь я не буду
+    отвлекаться на эти вопросы.</p>
+    <p>Далее вызывается функция <strong>AddStatusIcon(hWnd, NIM_ADD)</strong>
+    , задача которой заключается в том, чтобы
+    нарисовать в панели статуса нужную иконку.
+    Параметр <strong>hWnd</strong> означает, что все сообщения
+    (...нажатия на ней мышкой...) от иконки будут
+    передаваться главному окну нашей программы.
+    Параметр <strong>NIM_ADD</strong> указывает функции, что
+    иконка будет добавлена в статус-бар. Этот
+    параметр может принимать значение <strong>NIM_MODIFY</strong>,
+    означающий, что уже существующая иконка будет
+    изменена или будет изменена её информационная
+    надпись, которая появляется при навидении на
+    иконку мышкой.</p>
+    <p>И наконец функция <strong>WinMain</strong> завершается
+    бесконечным циклом, задача которого
+    обрабатывать сообщения, поступающие главному
+    окну. Естевственно этот цикл не такой уж и
+    бесконечный, при поступлении определённых
+    сообщений (например <strong>WM_CLOSE</strong> ) цикл может
+    звершиться, и соответственно завершится сама
+    программа. Например, если послать окну сообщение <strong>WM_DESTROY</strong>
+    , то функция обработки оконных сообщений ( <strong>WndProc</strong>
+    ) вызовет <strong>WndProc_OnDestroy</strong> , и наша программа
+    завершит свою работу в системе. Соответственно
+    при создании окна окно получает сообщение <strong>WM_CREATE</strong>
+    и оконная функция вызывает <strong>WndProc_OnCreate()</strong>.
+    Ещё можно добавить, что все неопознанные
+    сообщения, или те, для которых Вы не
+    предусмотрите обработчики сообщений
+    напрвляются <strong>DefWindowProc(hWnd, msg, wParam, lParam)</strong> ,
+    вызов каторой находится в конце <strong>WndProc</strong>.</td>
+  </tr>
+</table>
+
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

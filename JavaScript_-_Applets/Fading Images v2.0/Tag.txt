@@ -1,0 +1,40 @@
+<!-- Begin Fading Images Code -->
+<applet width="192" height="128" code="SIRfade2PRO.class" archive="SIRfade2PRO.jar">
+
+  <!--Start Up-->
+  <param name="startupcolor" value="0,0,0">
+  <param name="startupimage" value="Images/start.gif">
+  <param name="textcolor" value="255,255,255">
+  <param name="loadingmessage" value="Please Wait Loading Image...">
+  <param name="loadall" value="no">
+
+  <!--Images-->
+  <param name="image1" value="Images/img1.jpg">
+  <param name="image2" value="Images/img2.jpg">
+  <param name="image3" value="Images/img3.jpg">
+  <param name="image4" value="Images/img4.jpg">
+  <param name="image5" value="Images/img5.jpg">
+  <param name="image6" value="Images/img6.jpg">
+
+  <!--Links-->
+  <param name="link1" value="http://www.1stjavasoft.com">
+  <param name="link2" value="http://www.1stjavasoft.com">
+  <param name="link3" value="http://www.1stjavasoft.com">
+  <param name="link4" value="http://www.1stjavasoft.com">
+  <param name="link5" value="http://www.1stjavasoft.com">
+  <param name="link6" value="http://www.1stjavasoft.com">
+
+  <!--Image Display Times-->
+  <param name="time1" value="3000">
+  <param name="time2" value="3000">
+  <param name="time3" value="3000">
+  <param name="time4" value="3000">
+  <param name="time5" value="3000">
+  <param name="time6" value="3000">
+
+  <!--Advanced Options-->
+  <param name="fps" value="24">
+  <param name="timefading" value="500">
+
+</applet>
+<!-- End Fading Images Code -->

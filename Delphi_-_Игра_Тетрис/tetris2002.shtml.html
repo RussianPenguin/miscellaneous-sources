@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ <HTML>
+    <HEAD>
+     <STYLE type="text/css">
+     A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:link {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:visited {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:hover {COLOR: #2776FA; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} .b {text-decoration: none; color:#FF0000;}  .b:hover {color:#7785FF;} .c {text-decoration: none; color:#000000;}  .c:hover {color:#FFFFFF;}  pre {color: blue;} PRE.a {color: black;} TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt} </STYLE>
+     <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+     <META content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+     <META NAME="RESOURCE-TYPE" CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+     <TITLE>
+    Информационный сервер для программистов - исходники со всего света.</TITLE>
+   </HEAD>
+    <BODY topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+      <FORM action="http://www.sources.ru/cgi-bin/sources/search/search.cgi" method="get" align="left">
+         <INPUT type="hidden" name="stpos" value="0">
+           <TABLE border="0" cellpadding="0"   cellspacing="0" width="750">
+	     <TR>
+	       <TD valign="top" rowspan="2">
+	    	 <TABLE border="0" cellpadding="0" cellspacing="0" width="287">
+	           <TR>
+		     <TD colspan="2" bgcolor="#A5E4A7" valign="middle" align="center">
+		     <B>WWW.ИСХОДНИКИ.РУ</B>
+		     </TD>
+		     <TD bgcolor="#000080" valign="middle" align="center">
+		     <B><FONT face="Tahoma" style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    cpp.sources.ru</FONT>
+		  </B>
+		</TD>
+	               </TR>
+	               <TR>
+		           <TD bgcolor="#000080" valign="middle" align="center">
+		  <B>
+		    <FONT face="Tahoma"           style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    java.sources.ru</FONT>
+		  </B>
+		</TD>
+		           <TD bgcolor="#C0C0C0" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    web.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#A5E4A7" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    soft.sources.ru</B>
+		  </FONT>
+		</TD>
+	               </TR>
+	               <TR>
+		           <TD bgcolor="#C0C0C0" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    jdbc.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#A5E4A7" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    asp.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#000080" valign="middle" align="center">
+		  <B>
+		    <FONT face="Tahoma"           style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    api.sources.ru</FONT>
+		  </B>
+		</TD>
+	      </TR>
+	    </TABLE>
+	    <TABLE border="0" cellpadding="0" cellspacing="0" width="100%">
+	      <TR>
+		<TD>
+		  <FONT style="font-size: 8pt" size="2" face="Tahoma">
+		    &nbsp; Поиск по           программированию :<BR>
+		             </FONT>
+		  &nbsp; <INPUT type="text" size="13" name="query">
+		   <INPUT type="submit"           value="Поиск">
+		  <FONT size="1">
+		    <INPUT TYPE="Radio" NAME="stype" VALUE="AND" checked>
+		    &quot;AND&quot; <INPUT TYPE="Radio"           NAME="stype" VALUE="OR">
+		  &quot;OR&quot;</FONT>
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="top10000.gif" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ 
+"&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+
+<!-- HotLog -->
+<script language="javascript">
+hotlog_js="1.0";hotlog_d=document; hotlog_n=navigator;hotlog_rn=Math.random();
+hotlog_n_n=(hotlog_n.appName.substring(0,3)=="Mic")?0:1;
+hotlog_r=""+hotlog_rn+"&s=14399&r="+escape(hotlog_d.referrer)+"&pg="+
+escape(window.location.href);
+hotlog_d.cookie="hotlog=1"; hotlog_r+="&c="+(hotlog_d.cookie?"Y":"N");
+hotlog_d.cookie="hotlog=1; expires=Thu, 01-Jan-70 00:00:01 GMT"</script>
+<script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+<script language="javascript1.2">
+hotlog_js="1.2";hotlog_s=screen;
+hotlog_r+="&wh="+hotlog_s.width+'x'+hotlog_s.height+"&px="+((hotlog_n_n==0)?
+hotlog_s.colorDepth:hotlog_s.pixelDepth)</script>
+<script language="javascript1.3">hotlog_js="1.3"</script>
+<script language="javascript">hotlog_r+="&js="+hotlog_js;
+hotlog_d.write("<img src=\"http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&\" border=0 width=1 height=1>")</script>
+<noscript><img src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=14399" border=0 
+width=1 height=1></noscript>
+<!-- /HotLog -->
+
+		 </TD>
+	       </TR>
+	     </TABLE>
+	   </TD>
+	   <TD align="center">
+	     <A class=blue href="http://pascal.sources.ru/cd/index.htm">
+	     <IMG border=0 height=14 width=14 src="cd000000.gif">
+	     <B>Все исходники с сайта на компакт-диске!</B>
+	     <!-- <font style="font-size: 15pt" color="#4904B1" size="4" face="Times New Roman">
+             Информационный сервер</FONT>
+	     -->
+       </TD>
+     </TR>
+     <TR>
+         <TD>
+
+
+
+
+  <!-- SCALA
+      <A href=http://bs.boro.ru/click.php?bs=996 target=_blank>
+      <IMG src=http://www.sources.ru/scala5.gif width=468 height=60 border=0 alt="Всемирный разработчик и поставщик программного обеспечения по управлению бизнесом, финансами и производством для местных и международных компаний.">
+    </A>
+    <BR>
+   SCALA -->
+
+
+
+ <!-- БАННЕР IMHO
+   <a href="http://santa.imho.ru/click.ng/impt=imp&place=sources468x60&id=280404" target="_blank">
+    <IMG src="http://santa.imho.ru/image.ng/impt=imp&place=sources468x60&id=280404" width=468 height=60 border=0>
+</A>
+    БАННЕР IMHO -->
+
+
+
+
+   <!-- БАННЕР TBN -->
+
+ 	<CENTER>
+ <SCRIPT language='JavaScript'>
+ var loc = ''; </SCRIPT>
+ <SCRIPT language='JavaScript1.4'>
+try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+ <SCRIPT language='JavaScript'>
+  document.write("<SC"+"RIPT language='JavaScript' src='http://ad.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2845047&pg=2&r=js&ssi=nofillers&vbn=188&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>"); </SCRIPT>
+ </CENTER>
+ <CENTER>
+  <FONT SIZE=1>
+    <A HREF="http://www.tbn.ru/" target = "_top" >
+    TBN.ru - СЕТЬ, ЖИВУЩАЯ ПО ПРАВИЛАМ</A>
+  </FONT>
+</CENTER>
+<!-- БАННЕР TBN-->
+
+
+
+           </TD>
+     </TR>
+     <TR>
+         <TD colspan="2">
+    <TABLE border="0" cellpadding="0" cellspacing="1" width="100%">
+               <TR>
+	           <TD align="center" width="11%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/index.html">
+	    <FONT color="#000000" size="2">
+	    На главную</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="20%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/subscribe.shtml">
+	    <FONT color="#000000" size="2">
+	    Подписаться на новости</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="11%" bgcolor="#E0E0C6">
+	  <A href="http://forum.sources.ru/">
+	    <FONT color="#000000" size="2">
+	    Форум</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="9%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/books/index.html">
+	    <FONT color="#000000" size="2">
+	    Книги</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="9%" bgcolor="#E0E0C6">
+	  <A href="http://www.titl.ru/">
+	    <FONT color="#000000" size="2">
+	    Хостинг</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="13%" bgcolor="#E0E0C6">
+	  <A href="http://www.countries.ru/">
+	    <FONT color="#000000" size="2">
+	    Страны мира</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="29%" bgcolor="#E0E0C6">
+	  <b>14</b> пользователей на сервере.
+
+	</TD>
+               </TR>
+           </TABLE>
+         </TD>
+     </TR>
+   </TABLE>
+ </FORM>
+
+<!-- ТЕКСТОВЫЙ БАННЕР CERTIFICATION   <center>
+ <TABLE border="1" width="322" cellspacing="0">
+     <TR>
+         <TD width="318">
+      <SMALL>
+	<FONT face="Arial">
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <B>
+	  Сертификация специалистов</B>
+	  <BR>
+	       - Как устроиться на высокооплачиваемую работу ?<BR>
+	       - Как получить прибавку к зарплате ?<BR>
+	       - Как завоевать уважение коллег ?<BR>
+	       - <A href="http://www.certifications.ru" target="_blank">
+	  Пройти     сертификацию</A>
+	   и продемонстрировать<BR>
+	       &nbsp;&nbsp; свой профессионализм. <A href="http://www.certifications.ru/about/whatgives.php" target="_blank">
+	  Подробнее...</A>
+	</FONT>
+      </SMALL>
+    </TD>
+     </TR>
+ </TABLE>
+ </CENTER>
+ТЕКСТОВЫЙ БАННЕР CERTIFICATION --> 
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h3 align="center"><font color="#a0a099">Игра Тетрис</font></h3>
+    <hr>
+    <p>Автор: <a href="mailto:basicfan@mail.ru">Москалёв Андрей</a></p>
+    <p>Наверное, каждый программист в своей жизни
+    должен написать игру тетрис. Одни это сделают для
+    того, чтобы сдать курсовую, другие для получения
+    морального удовлетворения. Но игра всегда
+    останется примером того, как простая идея может
+    жить вечно.</p>
+    <p>Компилятор: Delphi 5</p>
+    <p><img src="tetris20.gif" width="250" height="357"></p>
+    <p><a href="http://www.sources.ru/delphi/games/tetris2002.zip">Скачать исходник - 16 Кб</a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</center></div>
+
+
+<div align="center">
+<hr width="700">
+
+<SCRIPT language='JavaScript'> var loc = ''; </SCRIPT>
+<SCRIPT language='JavaScript1.4'>try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+<SCRIPT language='JavaScript'>
+ document.write("<SC"+"RIPT language='JavaScript' src='http://ad.strict.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2850676&pg=3&r=js&ssi=nofillers&vbn=353&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>");
+</SCRIPT>
+</div>
+</body>
+</html>
+
+<!-- This document saved from http://www.sources.ru/delphi/games/tetris2002.shtml -->

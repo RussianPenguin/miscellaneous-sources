@@ -1,0 +1,241 @@
+<html><head><title>Inertia 3D Rendering System - Графика - Исходники.Ру</title></head>
+<body><center>
+
+<table cellspacing="0" cellpadding="0" width="97%" border="0">
+
+<tbody><tr><td colspan="3"><p style="margin-left: 50px;">
+</p><center><img alt="" width="497" height="105" src="inertia_files/inertia_title.jpeg"></center>
+<br>
+<img alt="" width="274" height="57" src="inertia_files/inertia_what.jpeg">
+<dir>
+<b>Inertia</b> - это библиотека для трехмерного рендеринга
+в реальном времени, которую вы можете встроить в вашу собственную программу.
+Первоначально этот трехмерный движок был частью графической библиотеки
+GFXFX3 by Bas van Gaalen.
+И хотя библиотека GFXFX3 в настоящее время безнадежно устарела,
+движок <b>Inertia</b> не потерял своей актуальности
+и продолжает развиваться, и будет поддерживаться еще долгое время.
+<br>
+<br>
+
+Изначально Inertia была разработана весной 1996 года
+для Borland Turbo Pascal 6/7, и представляла из себя полностью
+16-битную библиотеку с необольшими 32-битными расширениями
+для растеризации и трансформации.
+Зимой 1996-97 я поддерживал и дорабатывал движок Inertia в соответствии
+с возможностями моего новенького сияющего Пентиума,
+и в результате появились более продвинутые версии
+для 32-разрядных компиляторов TMT Pascal и Watcom C.
+В связи с этим внутреннее устройство движка претерпело значительные изменения.
+Я полностью переработал системы трансформации с использованием арифметики
+с плавающей точкой, и добавил модули растеризации
+с коррекцией перспективы и текстурирования.
+</dir>
+
+<br>
+
+<img alt="" width="219" height="46" src="inertia_files/inertia_news.jpeg">
+<dir>
+
+Движок Inertia разрабатывался в течение долгого времени
+(ну, может, и не очень долгого, но по крайней мере всё,
+что было разработано до того, как Windows превратилась
+в игровую платформу, и до массового внедрения аппаратных 3D акселераторов,
+можно уже считать историей древнего мира :).
+<br>
+Более 90% всех функций, ранее заложенных мной в движок Inertia,
+на сегодняшний день могут быть легко реализованы
+с помощью 3D API OpenGL или Direct3D.
+В связи с этим, я решил открыть исходный код, который я когда-либо
+написал для Inertia, для всех желающих.
+Мне кажется, что эти исходники могкт послужить хорошим учебным
+пособием для тех, кто изучает машинную графику.
+<br>
+В общем, если у вас появятся вопросы по исходному коду,
+не стесняйтесть обращаться ко мне по
+<a href="mailto:alexchalfin@yahoo.com">email</a>.
+
+</dir>
+<br>
+
+<img alt="" width="316" height="53" src="inertia_files/inertia_features.jpeg">
+<br>
+
+<table>
+<tbody><tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Различные модели затенения: Ambient, Lambert, Gouraud, Phong, без затенения
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Сглаживание, текстурирование и отражение поверхностей
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Любая комбинация эффектов сглаживания и затенения
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Эффект прозрачности для любой модели сглаживания и затенения
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Поддержка множественных объектов и камер
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Импорт моделей объектов из 3D Studio .ASC и .3DS файлов
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Поддержка текстур, хранимых в PCX файлах
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Совместимость с компиляторами: Turbo Pascal 6/7. Borland Pascal 7
+(16-bit DPMI), TMT Pascal (32-bit DOS), Watcom C v10 &amp; v11,
+и MSVC++ v5 &amp; v6.
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Оптимизация операций с плавающей точкой для процессоров Pentium
+(только для TMT Pascal и C/C++).
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Супер-точная растеризация для sub-pixel и sub-texel полигонов
+со 100%-ной оптимизацией ассемблерного кода для процессоров Pentium
+(только для TMT Pascal и C/C++).
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Коррекция перспективы при текстурировании с использованием метода
+16-пиксельных афинных преобразований (только для TMT Pascal и C/C++).
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Быстрое 3D отсечение многоугольников (только для TMT Pascal и C/C++). 
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Поддержа 3DFX с помощью API библиотеки Glide Rasterization (только для Watcom C).
+</td></tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td>Полностью открытый исходный код.
+</td></tr>
+</tbody></table>
+<br>
+<br>
+
+<img alt="" width="224" height="50" src="inertia_files/inershot.jpeg">
+
+<br>
+
+<table border="0" cellpadding="2" width="100%">
+  <tbody><tr>
+    <td align="right"><img alt="" height="200" src="inertia_files/ex06.jpeg" width="320"></td>
+    <td align="left"><img alt="" height="200" src="inertia_files/ex07.jpeg" width="320"></td>
+    </tr>
+  <tr>
+    <td align="right"><img alt="" height="240" src="inertia_files/skull.gif" width="320"></td>
+    <td align="left"><img alt="" height="240" src="inertia_files/scr2.jpeg" width="320"></td></tr>
+  <tr>
+    <td align="right"><img alt="" height="240" src="inertia_files/scr.jpeg" width="320"></td>
+    <td align="left" valign="top"><img alt="" height="200" src="inertia_files/fongduck.jpeg" width="320"></td>
+    </tr>
+</tbody></table>
+
+<br>
+<br>
+
+<img alt="" height="51" src="inertia_files/inertia_dl.jpeg" width="311">
+<br>
+
+<table>
+<tbody><tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td><a href="inerdoc.zip">Документация к Inertia</a>
+Включает в себя всю документацию, поставляемую с Inertia.
+Основная часть документации подготовлена в формате MS Word.
+Включена информация о регистрации библиотеки
+(в связи с выпуском иходников она, разумеется, уже не актульна),
+история изменений, описание формата файлов GVO,
+руководство программиста,
+руководство по программированию с использованием Glide
+(для тех моментов, которые специфичны для версии Glide,
+используемой в Inertia), a также справочник по Inertia.
+</td>
+</tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td><a href="ir16src.zip">Inertia/16.</a>
+Полный исходный код версии Inertia для Turbo Pascal v6 &amp; v7
+и Borland Pascal 7 (16-bit DPMI). Статус - "как есть" (as is).
+</td>
+</tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td><a href="irtmtsrc.zip">Inertia/TMT</a>.
+Полный исходный код версии Inertia для TMT Pascal.
+Статус - "как есть" (as is).
+</td>
+</tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td><a href="irwcsrc.zip">Inertia/Watcom C</a>.
+Полный исходный код версии Inertia для Watcom C.
+Статус - "как есть" (as is).
+</td>
+</tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td><a href="irwinsrc.zip">Inertia/Windows</a>.
+Полный исходный код версии Inertia для Windows (MSVC).
+Представлены только файлы исходников (без файлов проекта).
+Статус - "как есть" (as is).
+</td>
+</tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td><a href="irexsrc.zip">Примеры и Демо</a>.
+Несколько примеров использования движка, демонстрирующих возможности Inertia.
+Включены исполняемые модули, файлы данных
+(модели, текстуры, таблицы затенения), и исходники для TMT, Watcom C,
+и MSVC.
+Статус - "как есть" (as is).
+</td>
+</tr>
+
+<tr>
+<td valign="top"><img alt="" width="61" height="13" src="inertia_files/inertia_check.jpeg"></td>
+<td><a href="irtoolsrc.zip">Inertia/Tool Set</a>.
+Набор дополнительных утилит, входящих в состав пакета Inertia.
+Приведены исполняемые модули и исходники.
+В основном, это старые паскальные утилиты для конвертирования
+3DS и ASC файлов в формат GVO, а также рад других утилит.
+</td>
+</tr>
+
+</tbody></table>
+</td></tr>
+</tbody></table></center>
+  </body></html>

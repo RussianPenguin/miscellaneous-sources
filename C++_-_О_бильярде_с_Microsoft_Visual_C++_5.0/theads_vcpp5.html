@@ -1,0 +1,745 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>4</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<div align="center"><center>
+
+<table width="650" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <table>
+      <tr>
+        <td><h2 align="center">О бильярде с Microsoft Visual C++ 5.0</h2>
+        <p align="left"><i>Вячеслав Любченко</i> </p>
+        <hr>
+        </td>
+      </tr>
+      <tr>
+        <td align="left"><br>
+        <br>
+        <dl>
+          <dt><b><font size="-1"><a href="#part_1">Наша цель - FSA</a></font></b> </dt>
+          <dt><b><font size="-1"><a href="#part_2">Редактирование основного
+            класса программы</a></font></b> </dt>
+          <dt><b><font size="-1"><a href="#part_3">Редактирование прикладного
+            класса</a></font></b> </dt>
+          <dt><b><font size="-1"><a href="#part_4">Применение библиотеки STL</a></font></b>
+          </dt>
+          <dt><b><font size="-1"><a href="#part_5">Таймер</a></font></b> </dt>
+          <dt><b><font size="-1"><a href="#part_6">От теннисного мячика к
+            бильярдным шарам</a></font></b> </dt>
+          <dt><b><font size="-1"><a href="#part_7">Лучшее - враг хорошего?</a></font></b>
+          </dt>
+          <hr>
+          <p><b>Средства, которые мы применяем, оказывают
+          глубокое (и тонкое) влияние на наши способы
+          мышления и, следовательно, на нашу способность
+          мыслить.</b></p>
+          <div align="right"><address>
+            Э. Дейкстра. Как быть, если правда колет глаза?
+          </address>
+          </div><p>&quot;Фирменные&quot; примеры, помогающие
+          освоению среды программирования, - непременная
+          принадлежность современных пакетов
+          разработчика. Поставляются они и с системой
+          программирования Visual C++ 5.0 корпорации Microsoft.
+          Однако это именно учебные примеры, практические
+          их возможности весьма ограничены.</p>
+          <p>Ниже будет по шагам описана процедура
+          модификации одного из таких примеров,
+          превращающая его в &quot;трехмерную&quot; программу.
+          Применяемые приемы универсальны и подходят для
+          решении практически любых задач на Visual C++. Вместе
+          они составляют особую технологию разработки
+          программ, называемую далее технологией
+          конечноавтоматного параллельного
+          программирования (КА-технология).</p>
+          <p>Стандартный пример, который мы будем
+          рассматривать, называется MDI (от Multiple Document Interface -
+          многодокументный интерфейс). Он демонстрирует
+          простейшие приемы работы с графическим
+          контекстом устройств и построение программы с
+          многодокументным интерфейсом. Получающаяся
+          программа порождает окна двух типов: с
+          сообщением &quot;Hello World!&quot; и с мячиком, который
+          летает внутри окна, отскакивая от его границ.
+          Первые окна не очень интересны, зато вторые можно
+          развивать, ставя более сложные задачи.</p>
+          <p>Для создания работающего примера вам
+          потребуется библиотека FSA (Finite State Automation),
+          обеспечивающая работу с КА-технологией в среде
+          Windows. Она имеется в составе пректа MDI,
+          приложенного к электронной версии статьи (<i><a
+          href="http://cppclub.newmail.ru/articles/msvcpool/fsamdi.zip">fsamdi.zip</a></i>;
+          можно также попытаться написать нужные функции
+          самостоятельно или обратиться к автору этих
+          строк). Однако разбираемый пример достаточно
+          элементарен, и для понимания сути статьи
+          реализовывать его не обязательно.</p>
+          <h3><a name="part_1"></a>Наша цель - FSA</h3>
+          <p><b>Вы программист, вы инженер программного
+          обеспечения, и, как любой другой инженер, вы
+          должны ставить трудные проблемы и решать их,
+          делая мир удобнее и совершеннее.</b></p>
+          <div align="right"><address>
+            Ч. Петзолд. 
+          </address>
+          </div><div align="right"><address>
+            Программирование для Windows 95
+          </address>
+          </div><p>В стандартном варианте примера в окне
+          перемещается всего один мячик.
+          Запрограммировать в рамках предоставляемых
+          механизмов и существующей технологии разработки
+          программ для Windows движение хотя бы двух мячиков -
+          это уже достаточно нетривиальная задача. В
+          языках программирования средств для описания
+          параллелизма обычно нет совсем, а в теории
+          объектно-ориентированного программировани
+          параллельная работа объектов не рассматривается.</p>
+          <p>В КА-технологии поведение каждого объекта
+          задается моделью конечного автомата, а сами
+          автоматы на формальном уровне объединены в сеть,
+          что позволяет описывать также параллельное
+          функционирование объектов. Поэтому, определив
+          мячик как КА-объект, мы сможем &quot;внедрить&quot; в
+          окно любое число мячиков.</p>
+          <p>Библиотека классов FSA - это своего рода
+          надстройка над операционной средой и языком Си++,
+          обеспечивающая интерпретацию конечных
+          автоматов и среду для их параллельного
+          функционирования. Из FSA нам понадобятся класс
+          TNetFsa, отвечающий за автоматную среду, которая
+          управляет параллельной работой КА-объектов,
+          класс LArc, описывающий таблицу переходов
+          конечного автомата (т. е. собственно поведение
+          объекта), и LFsaAppl - базовый класс, инкапсулирующий
+          данные и методы автоматного объекта.</p>
+          <p>Среди методов LFsaAppl различаются предикаты и
+          действия. Содержательно первые отвечают за
+          анализ, вторые - за преобразование данных.
+          Предикаты, обозначаемые как x1, ..., xN,
+          соответствуют входным каналам автомата и
+          возвращают логическое значение. Действия,
+          обозначаемые как y1, ..., yN, соответствуют переходам
+          между внутренними состояниями автомата и не
+          возвращают никаких значений.</p>
+          <p>Автомат задается таблицей переходов. Начальное
+          его состояние определяется первой строкой этой
+          таблицы, заключительное (если оно есть) носит имя
+          &quot;00&quot;. Безусловный переход помечается в
+          таблице прочерком на месте предикатов. Если
+          автомат оказывается в состоянии, для которого
+          переход не определен, он не производит никаких
+          действий.</p>
+          <p>Первоначальное распараллеливание в автомате
+          осуществляется уже на уровне предикатов и
+          действий. Поэтому, чтобы автомат работал
+          корректно, желательно выполнение следующих двух
+          условий. Во-первых, предикаты не должны изменять
+          внешние данные (вообще, лучше любые изменения
+          данных &quot;поручить&quot; действиям). Во-вторых,
+          данные, которые доступны действиям, выполняемым
+          при переходе в следующее состояние, не должны
+          пересекаться. При нарушении этих условий автомат
+          работать будет, но, вероятно, не так, как нужно или
+          как хотелось бы.</p>
+          <p>Конечные автоматы функционируют в дискретном
+          времени. Благодаря общей среде и встроенному
+          механизму отсчета времени методы КА-объекта
+          оказываются связаны между собой общим
+          алгоритмом поведения. Минимальная физическая
+          продолжительность одного такта формального
+          автоматного времени определяется временем,
+          фактически необходимым для запуска и выполнения
+          предикатов и действий, т. е. зависит от качества
+          реализации библиотеки FSA и быстродействия
+          вычислительной системы. Естественно, чем она
+          меньше, тем быстрее сможет работать автоматная
+          модель и тем точнее удастся воспроизводить с
+          помощью этой модели поведение реального объекта.
+          При необходимости FSA позволяет увеличивать
+          продолжительность такта, замедляя таким образом
+          работу автомата.</p>
+          <h3><a name="part_2"></a>Редактирование основного класса
+          программы</h3>
+          <p>Начнем с внесения изменений в основной класс
+          программы CMdiApp, производный от CWinApp. Нам
+          необходимо включить в него виртуальный метод OnIdle
+          и две переменные. Первая - pNetFsa - представляет
+          собой указатель на объект типа TNetFsa - автоматную
+          среду для поддержки параллельной работы Windows-объектов.
+          Вторая - lCountTime - это длинное целое число,
+          определяющее продолжительность одного такта
+          работы автоматной среды (нулевое значение
+          соответствует минимальной продолжительности).
+          Кроме того, для удаления дополнительно созданных
+          объектов потребуется деструктор класса (в
+          исходном примере его нет).</p>
+          <p>Метод OnIdle запускается операционной средой,
+          когда очередь сообщений программы пуста, и
+          выполняет один или несколько тактов автоматной
+          среды. Модифицированное определение класса CMdiApp
+          приведено в листинге 1.</p>
+          <h4>Листинг 1. Описание класса CMdiApp </h4>
+          <pre>class CMdiApp : public CWinApp
+{
+public:
+             ~CMdiApp() ;
+        TNetFsa* pNetFsa;
+        long lCountTime;
+        CMdiApp();
+public:
+        virtual BOOL InitInstance();
+             virtual BOOL OnIdle(LONG lCount);
+        DECLARE_MESSAGE_MAP()
+};</pre>
+          <p>Реализация нового класса (конструктор,
+          деструктор и метод OnIdle) показана в листинге 2.
+          Конструктор создает экземпляр автоматной среды,
+          которому через переменную lCountTime передается
+          скорость работы (в данном случае - максимальная).
+          Деструктор при завершении работы программы
+          удаляет созданный в конструкторе объект
+          автоматной среды. Метод PerformanceQuantum, определенный
+          в классе TNetFsa, выполняет один такт работы
+          автоматной среды при каждом запуске метода OnIdle.</p>
+          <h4>Листинг 2. Реализация класса CMdiApp </h4>
+          <pre>CMdiApp::CMdiApp()
+{
+        lCountTime=0;
+        pNetFsa= new TNetFsa(&amp;lCountTime);
+}
+
+CMdiApp::~CMdiApp()
+{
+        delete pNetFsa;
+}
+
+BOOL CMdiApp::OnIdle(LONG lCount)
+{
+             pNetFsa-&gt;PerformanceQuantum();
+        CWinApp::OnIdle(lCount);
+        return TRUE;
+}</pre>
+          <p>Изменения, которые были сделаны на этом шаге, не
+          затрагивают прикладного алгоритма и,
+          следовательно, подходят для любого примера.
+          Основной класс для MDI-приложений остался таким же
+          стандартным, каким был исходный.</p>
+          <h3><a name="part_3"></a>Редактирование прикладного класса</h3>
+          <p><b>Для ряда объектов... временной порядок
+          настолько существенен, что наилучшим способом
+          описания такого объекта является теория
+          конечных автоматов.</b></p>
+          <div align="right"><address>
+            Г. Буч. Объектно-ориентированное 
+          </address>
+          </div><div align="right"><address>
+            проектирование с примерами применения
+          </address>
+          </div><p>Перейдем теперь к алгоритмической стороне
+          прикладной задачи; естественно, мы будем
+          модифицировать ее в сторону качественного
+          улучшения. Здесь возможно множество вариантов.
+          Несложно было бы, скажем, наделить автоматными
+          свойствами класс CBounceWnd из стандартного примера.
+          Однако мы применим другой, более логичный подход:
+          создадим отдельный класс для объекта-мячика, а
+          классу-окну оставим только функции создания
+          мячиков.</p>
+          <p>Назовем новый класс TBounce и сделаем его
+          производным от класса LFsaAppl, инкапсулирующего
+          автоматные свойства. Члены-данные, необходимые
+          для задания характеристик самого мячика (размера,
+          положения, цвета и т. д.), перенесем в TBounce из
+          класса CBounceWnd (см. листинг 3). Обратите внимание на
+          указатель pApp, необходимый для обеспечения более
+          простого доступа к автоматной среде из объекта.</p>
+          <h4><a name="list_3"></a>Листинг 3. Класс TBounce (определения) </h4>
+          <pre>class CMdiApp;
+class TBounce : public LFsaAppl
+
+{
+public:
+        TBounce();
+        TBounce(CWnd* pW, int nNum, CSize sz);
+        virtual ~TBounce();
+        void SetNum(int nNum);
+        int GetNum();
+        void Size(CSize sz);
+        void Color (COLORREF nColor);
+
+public:
+        COLORREF m_clrBall;
+protected:
+        int nNumBounce;
+        CWnd*   pParentWnd;
+        CMdiApp* pApp;
+        void y1();
+        void y2();
+
+        CPoint m_ptPixel;    // pixel size
+        CSize m_sizeRadius;  // radius of ball
+        CSize m_sizeMove;    // move speed
+        CSize m_sizeTotal;   // total size for ball bitmap
+        CPoint m_ptCenter;   // current center for the ball
+
+        // for replicating bouncing ball
+        CBitmap m_bmBall;
+
+        void MakeNewBall();
+};
+typedef vector&lt;TBounce*&gt; TIArrayBounce;
+typedef vector&lt;TBounce*&gt;::iterator TIIteratorBounce;</pre>
+          <p>Функции y1 и y2 соответствуют действиям автомата,
+          реализующего поведение мячика. Для описания
+          этого поведения достаточно автомата с двумя
+          состояниями - обозначим их как b1 и b2. При переходе
+          от b1 к b2 выполняется действие y1, при переходе от b2
+          к b1 - действие y2. Соответствующая таблица
+          переходов задается так:</p>
+          <pre>LArc BounceTBL[] = {
+LArc(&quot;b1&quot;,&quot;b2&quot;, &quot;-&quot;, &quot;y1&quot;),
+LArc(&quot;b2&quot;,&quot;b1&quot;, &quot;-&quot;, &quot;y2&quot;),
+LArc()
+};</pre>
+          <p>Конструктору класса (см. листинг 4) передаются
+          адрес окна, создавшего мячик, текущий номер
+          мячика и параметр, определяющий его размеры и
+          начальное положение. Адрес окна нужен для
+          доступа к его различным характеристикам, а также
+          для получения графического контекста. При
+          создании объект подключается к автоматной среде
+          и запускается в ней.</p>
+          <h4>Листинг 4. Конструктор класса TBounce. </h4>
+          <pre>TBounce::TBounce(CWnd* pW, int nNum, CSize sz): LFsaAppl(BounceTBL)
+{
+  pParentWnd = pW;
+  m_clrBall = RGB(0,0,0);
+
+  CDC* pDC = pParentWnd-&gt;GetDC();
+  m_ptPixel.x = pDC-&gt;GetDeviceCaps(ASPECTX);
+  m_ptPixel.y = pDC-&gt;GetDeviceCaps(ASPECTY);
+  pParentWnd-&gt;ReleaseDC(pDC);
+
+  SetNum(nNum);      //  присвоить мячику номер
+  Size(sz);          //  определить его размер и положение
+
+  pApp = (CMdiApp*)AfxGetApp();
+  LoadFSA(pApp-&gt;pNetFsa,1);    //   подключение объекта к среде
+  pApp-&gt;pNetFsa-&gt;go_task();    //   запуск объекта в работу
+}</pre>
+          <p>Коды действий y1 и y2 (см. листинг 5) полностью
+          основаны на методе OnTime стандартного примера: y1
+          рисует мячик, а y2 вычисляет для него следующее
+          положение. Можно было бы, конечно, обойтись и
+          одним действием, которое в этом случае полностью
+          соответствовало бы методу из примера. Метод
+          разбит на две части, во-первых, чтобы отделить
+          работу с графикой от вычисления положения мячика,
+          а во-вторых, чтобы &quot;усложнить&quot; автомат в
+          учебных целях.</p>
+          <h4>Листинг 5. Рисование и вычисление положений
+          мячика </h4>
+          <pre>void TBounce::y1() //      рисование мячика
+{
+   if (m_bmBall.m_hObject == NULL)
+     return;      // no bitmap for the ball
+   CClientDC dc(pParentWnd);
+   CBitmap* pbmOld = NULL;
+
+   CDC dcMem;
+   dcMem.CreateCompatibleDC(&amp;dc);
+   pbmOld = dcMem.SelectObject(&amp;m_bmBall);
+
+   dc.BitBlt(m_ptCenter.x - m_sizeTotal.cx / 2,
+     m_ptCenter.y - m_sizeTotal.cy / 2,
+     m_sizeTotal.cx, m_sizeTotal.cy,
+     &amp;dcMem, 0, 0, SRCCOPY);
+
+   dcMem.SelectObject(pbmOld);
+   dcMem.DeleteDC();
+}
+
+void TBounce::y2() // вычисление следующего положения мячика
+{
+   CRect rcClient;
+   pParentWnd-&gt;GetClientRect(rcClient);
+
+   m_ptCenter += m_sizeMove;
+
+   if ((m_ptCenter.x + m_sizeRadius.cx &gt;= rcClient.right) ||
+       (m_ptCenter.x - m_sizeRadius.cx &lt;= 0))
+   {
+     m_sizeMove.cx = -m_sizeMove.cx;
+   }
+
+   if ((m_ptCenter.y + m_sizeRadius.cy &gt;= rcClient.bottom) ||
+       (m_ptCenter.y - m_sizeRadius.cy &lt;= 0))
+   {
+     m_sizeMove.cy = -m_sizeMove.cy;
+   }
+}</pre>
+          <p>Методы MakeNewBall, Size и Color повторяют
+          соответствующие методы класса CBounceWnd с тем
+          отличием, что вместо указателя на оконный объект
+          в них используется переменная pParentWnd - указатель
+          на окно, создавшее шарик.</p>
+          <h3><a name="part_4"></a>Применение библиотеки STL</h3>
+          <p>Создание специального класса для мячика
+          упростило класс CBounceWnd из стандартного примера.
+          Он теперь отвечает только за создание объектов-мячиков
+          и управление ими. Чтобы реализовать эти функции
+          достаточно компактно, мячики нужно объединить,
+          например, создав массив указателей на
+          соответствующие объекты.</p>
+          <p>Для создания массива воспользуемся
+          библиотекой STL (Standard Template Library - стандартная
+          библиотека шаблонов). Она имеется в составе
+          компиляторов, поставляемых разными фирмами, и
+          тем самым позволяет создавать легко переносимые
+          программы1.</p>
+          <p>Описание класса TBounce (см. <a href="#list_3">листинг 3</a>)
+          содержит два оператора typedef; первый определяет
+          сокращенную запись типа для массива указателей
+          на объекты TBounce, второй - для соответствующего
+          итератора. Чтобы включить массив мячиков в
+          определение класса CBounceWnd, добавим туда строку</p>
+          <pre>TIArrayBounce IArrayBounce;</pre>
+          <p>Теперь можно легко создать массив, например из
+          трех мячиков, включив несколько дополнительных
+          строк в метод OnCreate (листинг 6).</p>
+          <h4>Листинг 6. Создание массива из трех мячиков </h4>
+          <pre>CRect r;
+   GetClientRect(r);
+   CSize szR = r.Size();
+
+   IArrayBounce.push_back(new TBounce(this, 1, szR));
+   IArrayBounce.push_back(new TBounce(this, 2, CSize(szR.cx/2,szR.cy/2)));
+   IArrayBounce.push_back(new TBounce(this, 3, CSize(szR.cx/3,szR.cy/3)));</pre>
+          <p>После этого доступ к мячикам осуществляется
+          уже совсем просто. В листинге 7 приведен
+          модифицированный вариант метода OnSize, который
+          запускается при изменении MDI-окна программы и на
+          который возложено оперативное изменение размера
+          мячиков.</p>
+          <h4>Листинг 7. Модифицированный метод OnSize </h4>
+          <pre>void CBounceWnd::OnSize(UINT nType, int cx, int cy)
+{
+  if (!IArrayBounce.empty())  {
+    TIIteratorBounce iterBounce; int n=1;
+    iterBounce = IArrayBounce.begin();
+    TBounce* currentBounce= *iterBounce++;
+    currentBounce-&gt;Size(CSize(cx/n,cy/n));
+    while (iterBounce != IArrayBounce.end()) {
+      currentBounce= *iterBounce++;  n++;
+      currentBounce-&gt;Size(CSize(cx/n,cy/n));
+      }
+    }
+
+  CMDIChildWnd::OnSize(nType, cx, cy);
+}</pre>
+          <p>Аналогичные изменения (с заменой метода Size на
+          метод Color) вносятся в метод OnColor, а также в
+          деструктор, удаляющий динамически созданные
+          объекты-мячики.</p>
+          <h3><a name="part_5"></a>Таймер</h3>
+          <p>Когда пользователь выбирает команды из меню,
+          функция OnIdle не вызывается, так что мячик на это
+          время будет останавливаться. Однако сообщения от
+          таймера программа получает постоянно, и если в их
+          обработку вставить запуск одного или нескольких
+          тактов автоматной среды (листинг 8), &quot;замирания&quot;
+          прекратятся.</p>
+          <h4>Листинг 8. Обработка прерываний от таймера </h4>
+          <pre>void CBounceWnd::OnTimer(UINT /* wParam */)
+{
+  for (int n=0; n&lt;=50; n++)
+  {
+  pApp-&gt;pNetFsa-&gt;PerformanceQuantum();
+  }
+}</pre>
+          <p>Число тактов, выполняемых при получении одного
+          сообщения, в примере выбрано равным 50; это
+          предельное значение для процессора Pentium-100 с 24
+          Мбайт ОЗУ: при дальнейшем повышении коэффициента
+          окно не успевает перерисовываться. Чтобы еще
+          увеличить скорость, необходимо использовать
+          специальные приемы работы с графикой.</p>
+          <h3><a name="part_6"></a>От теннисного мячика к бильярдным
+          шарам</h3>
+          <p><b>Но так уж устроено на свете, что человек,
+          перестав беспокоиться об одном, начинает
+          беспокоиться о другом.</b></p>
+          <div align="right"><address>
+            Марк Твен. Янки из Коннектикута 
+          </address>
+          </div><div align="right"><address>
+            при дворе короля Артура
+          </address>
+          </div><p>После введения множества параллельно
+          существующих объектов-мячиков пример можно
+          развивать дальше, усложняя поведение объектов и
+          совершенствуя приемы работы с их графическими
+          изображениями, создавать на его основе другие,
+          более интересные и полезные примеры. Но при этом
+          сразу возникают две проблемы - системная и
+          прикладная.</p>
+          <p>Так, в исходном примере мячик один, и он
+          производит только одно действие - отталкивается
+          от границ окна. В случае множества мячиков они,
+          кроме того, могут сталкиваться, т. е. надо
+          определять их взаимное расположение и
+          рассчитывать эффект от соударения. Это
+          прикладная проблема, родственная тем, которые
+          возникают при разработке игр типа тенниса или
+          бильярда. Проблемы этого рода мы пока не
+          затрагиваем, хотя сами по себе они, безусловно,
+          интересны (например, работа со спрайтами).</p>
+          <p>Системная (алгоритмическая) проблема связана с
+          самой организацией работы и обменом информацией
+          между объектами-мячиками, образующими множество.
+          Тем самым это уже проблема параллельного
+          программирования, универсальная и фактически
+          независимая от физического содержания задачи.
+          Некоторые приемы организации параллельной или
+          фоновой работы демонстрирует уже рассмотренный
+          пример, однако простой эксплуатации метода OnIdle и
+          сообщений от таймера (как и любых других
+          сообщений) явно недостаточно - слишком
+          ограничены возможности этих приемов. Механизм
+          порождения параллельных процессов и нитей в
+          среде Windows очень сложен и громоздок, что особенно
+          бросается в глаза при решении задач &quot;мелкоблочного&quot;
+          распараллеливания.</p>
+          <p>КА-технология предлагает более эффективное
+          решение системных проблем, а часто помогает и при
+          описании физической стороны задачи.</p>
+          <h3><a name="part_7"></a>Лучшее - враг хорошего?</h3>
+          <p>Итак, приобрел ли пример новые качества, из-за
+          которых следовало затевать весь этот сыр-бор?
+          Безусловно. Перечислим, чего нам удалось
+          добиться.</p>
+          <p>1. Мы улучшили структуру задачи, разделив
+          функции прикладного окна и объекта, который в нем
+          создается.</p>
+          <p>2. Созданный объект-мячик унаследовал
+          автоматные свойства, которые позволяют легко и
+          просто задать для него любой алгоритм работы.
+          Прежде сделать это было гораздо сложнее.</p>
+          <p>3. Выше мы не только познакомились с основами
+          применения библиотеки STL, но и убедились,
+          насколько просто можно создавать множество
+          параллельно работающих объектов. Попробуйте-ка
+          сделать это, применяя стандартные средства и
+          библиотеки!</p>
+          <p>4. Освободившись от оков таймера, программа
+          более чем в сорок раз увеличила скорость работы!
+          И это не предел, так как она автоматически
+          учитывает аппаратные и алгоритмические нюансы,
+          работая с максимально возможной скоростью.</p>
+          <p>5. Автоматная среда просто и эффективно
+          организует параллельную работу, которую сложно,
+          да и накладно организовывать стандартными
+          средствами.</p>
+          <p>Автоматная технология программирования,
+          безусловно, требует определенного понимания
+          основ теории конечных автоматов, но эти основы
+          просты и интуитивно понятны. </p>
+          <p>Она легко переносится на уже имеющиеся решения:
+          обратите внимание на то, что объем изменений в
+          примере был минимальным.</p>
+          <p>Главный эффект от применения КА-технологии,
+          может быть, не вполне очевидный в рамках
+          приведенного примера, связан с переходом от
+          расплывчатых системных понятий (механизм
+          обработки сообщений, методы создания
+          параллельных процессов) к строгой теории и
+          формальной модели. Он ярче проявляется на более
+          сложных задачах, таких как синхронизация
+          параллельных объектов (см. пример из [3]).</p>
+          <p>Вместе с КА-технологией можно без каких бы то ни
+          было ограничений использовать любые другие
+          приемы и средства программирования: подключать
+          библиотеки, обрабатывать сообщения системы и т. д.,
+          даже использовать встроенные системные
+          механизмы порождения параллельных процессов.</p>
+          <p>Автоматные свойства придают объектам
+          совершенно новые качества, выводя процесс
+          программирования на более высокий уровень. В
+          этом, я надеюсь, нам еще предстоит убедиться в
+          дальнейшем.</p>
+          <hr width="100%">
+          <p>Вячеслав Селиверстович Любченко - программист,
+          автор ряда статей по проблемам программирования.
+          Живет во Владимирской области. E-mail: <a
+          href="mailto:post@thermo.vladimir.su">post@thermo.vladimir.su</a> </p>
+        </dl>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

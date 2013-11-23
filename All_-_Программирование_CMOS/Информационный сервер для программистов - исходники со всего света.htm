@@ -1,0 +1,529 @@
+<HTML><HEAD><TITLE>Информационный сервер для программистов - исходники со всего света.</TITLE>
+</HEAD>
+<BODY bgColor=white leftMargin=0 topMargin=0 marginheigth="0" marginwidth="0">
+
+<DIV align=center>
+<CENTER>
+<TABLE cellPadding=0 cellSpacing=0 width=680>
+  <TBODY>
+  <TR>
+    <TD>
+      <HR>
+
+      <H3 align=center>Программирование CMOS</H3>
+      <P align=right><A href="mailto:diam@softhome.net">Д. Крупорницкий</A></P>
+      <P>Так сказать </FONT><FONT face=Arial>DISCLAIMER</FONT></B><FONT 
+      face="Arial CYR" size=2></P>
+      <P align=justify>Вся информация, представленная в данной статье несет 
+      только информативные цели. Автор не несет ответственности за некорректное 
+      использование приведённых ниже фактов. </FONT><FONT 
+      face="Arial CYR"><B></P>
+      <P>ВВЕДЕНИЕ</B></I></P>
+      <P align=justify>В эпоху интенсивного развития высоких технологий и 
+      технологий </FONT><FONT face=Arial>Internet </FONT><FONT 
+      face="Arial CYR">программирование для «железа» отошло на второй план. А 
+      между тем практически невозможно реализовать ничего стоящего без 
+      правильной конфигурации оборудования, в частности </FONT><FONT 
+      face=Arial>CMOS - </FONT><FONT face="Arial CYR">энергонезависимой памяти 
+      компьютера. В данной статье мы рассмотрим устройство </FONT><FONT 
+      face=Arial>CMOS, </FONT><FONT face="Arial CYR">его структуру и возможности 
+      программирования. Сразу оговорюсь, что программировать </FONT><FONT 
+      face=Arial>CMOS </FONT><FONT face="Arial CYR">желательно из реального 
+      режима ОС</FONT><FONT face=Arial>; </FONT><FONT face="Arial CYR">под ОС 
+      </FONT><FONT face=Arial>Windows </FONT><FONT face="Arial CYR">это делается 
+      с помощью специальных драйверов </FONT><FONT face=Arial>VxD </FONT><FONT 
+      face="Arial CYR">или </FONT><FONT face=Arial>SYS. </FONT><FONT 
+      face="Arial CYR">В Сети существует достаточно источников документации по 
+      построению таковых, поэтому я на них останавливаться не буду. Естественно, 
+      что проводить все ниже перечисленные действия по записи значений в 
+      </FONT><FONT face=Arial>CMOS </FONT><FONT face="Arial CYR">следует с 
+      особой осторожностью; иногда (!) можно потерять практически все значения 
+      конфигурации ПК. В таковом случае необходимо очистить </FONT><FONT 
+      face=Arial>CMOS; </FONT><FONT face="Arial CYR">как это сделать - смотрите 
+      в документации к вашей материнской плате. Также я буду использовать язык 
+      ассемблера для иллюстрации конкретных примеров, а так же широко 
+      распространенный отладчик </FONT><FONT face=Arial>DEBUG.EXE, </FONT><FONT 
+      face="Arial CYR">который прилагается практически с каждой версией ОС 
+      </FONT><FONT face=Arial>Windows/DOS.</FONT><I><B><FONT 
+      face="Arial CYR"></P>
+      <P>ДАННЫЕ </FONT><FONT face=Arial>CMOS</B></I></P>
+      <P align=justify>CMOS </FONT><FONT face="Arial CYR">является нечто вроде 
+      базы данных, которая предназначена для хранения информации о конфигурации 
+      ПК. Однако, в отличие от реальной БД, которая имеет реальный образ на 
+      магнитном носителе, </FONT><FONT face=Arial>CMOS </FONT><FONT 
+      face="Arial CYR">хранит свои данные на микросхеме многократной записи 
+      (</FONT><FONT face=Arial>write many-read many). </FONT><FONT 
+      face="Arial CYR">Программа установки BIOS SETUP при записи сохраняет в ней 
+      свою системную информацию, которую впоследствии сама же и считывает (при 
+      загрузке ПК). <B>Каждая ячейка имеет размер в 1 байт.</B></FONT><FONT 
+      face=Arial></P>
+      <P align=justify></FONT><FONT face="Arial CYR">&nbsp;</P>
+      <P align=justify>Таблица данных имеет следующий вид:</FONT><FONT 
+      face=Arial></P>
+      <P align=justify></FONT>&nbsp;</P>
+      <TABLE border=1 cellPadding=7 cellSpacing=1 width=560>
+        <TBODY>
+        <TR>
+          <TD width="20%"><FONT face="Arial CYR"><B>Адрес</B></FONT></TD>
+          <TD width="80%"><FONT 
+face="Arial CYR"><B>Назначение</B></FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>00H-0DH</B></FONT></TD>
+          <TD width="80%"><FONT face=Arial>RTC (Real Time Clock) - 
+            </FONT><FONT face="Arial CYR">часы реального времени 
+          (таймер)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>0EH</B></FONT></TD>
+          <TD width="80%"><FONT face="Arial CYR">Байт статуса процедуры POST 
+            (результат загрузки ПК)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>0FH</B></FONT></TD>
+          <TD width="80%"><FONT face="Arial CYR">Байт завершения работы 
+            ПК</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>10</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Тип дисковода</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>11</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Зарезервировано</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>12</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Тип(ы) винчестера (если 
+            значение </FONT><FONT face=Arial>&lt; 15)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>13</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Зарезервировано</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>14</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Байт конфигурации 
+            оборудования</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>15</FONT><FONT 
+            face="Arial CYR">Н-16Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Размр базовой 
+        памяти</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>17</FONT><FONT 
+            face="Arial CYR">Н-18Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Размер памяти за пределом 1 
+            Мб</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>19</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Тип винчестера С</FONT><FONT 
+            face=Arial>: (</FONT><FONT face="Arial CYR">если значение 
+            </FONT><FONT face=Arial>&gt; 15)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>1</FONT><FONT 
+            face="Arial CYR">АН</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Тип винчестера </FONT><FONT 
+            face=Arial>D: (</FONT><FONT face="Arial CYR">если значение 
+            </FONT><FONT face=Arial>&gt; 15)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>1BH-20H</B></FONT></TD>
+          <TD width="80%"><FONT face="Arial CYR">Зарезервировано</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>21H-2DH</B></FONT></TD>
+          <TD width="80%"><FONT face="Arial CYR">Зарезервировано</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>2EH-2FH</B></FONT></TD>
+          <TD width="80%"><FONT face="Arial CYR">Контрольная сумма 
+            </FONT><FONT face=Arial>CMOS (</FONT><FONT face="Arial CYR">от 10Н - 
+            20Н)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>30</FONT><FONT 
+            face="Arial CYR">Н-31Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Размер расширенной памяти за 
+            пределом 1 Мб</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>32</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Номер текущего века в 
+            </FONT><FONT face=Arial>BCD </FONT><FONT face="Arial CYR">нотации 
+            (например 17Н)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>33</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Другая 
+информация</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>34</FONT><FONT 
+            face="Arial CYR">Н-3АН</FONT></B></TD>
+          <TD width="80%"><FONT 
+        face="Arial CYR">Зарезервировано</FONT></TD></TR></TBODY></TABLE>
+      <P><FONT face=Arial>&nbsp;</P>
+      <P align=justify></FONT><FONT face="Arial CYR">&nbsp;</P>
+      <P align=justify>Ячейки таблицы, показанные </FONT><FONT color=#ff0000 
+      face="Arial CYR"><B>красным </B></FONT><FONT face="Arial CYR">цветом, 
+      представляют собой адреса </FONT><FONT face=Arial>CMOS, </FONT><FONT 
+      face="Arial CYR">защищенные контрольной суммой. То есть запись в диапазон 
+      адресов 10Н-20Н должен сопровождаться корректировкой значений в ячейках 
+      2ЕН-2</FONT><FONT face=Arial>FH. </FONT><FONT face="Arial CYR">Иначе можно 
+      получить сообщение о неправильной установке параметров или о «усохшей» 
+      батарее </FONT><FONT face=Arial>CMOS. </FONT><FONT 
+      face="Arial CYR">Контрольная сумма представляет собой 16-битную сумму всех 
+      значений, записанных в ячейки </FONT><FONT face=Arial>CMOS </FONT><FONT 
+      face="Arial CYR">с 10Н по 20Н. В ячейку 2ЕН пишется старший байт суммы, а 
+      в 2</FONT><FONT face=Arial>FH - </FONT><FONT face="Arial CYR">младший. В 
+      любом случае, мой вам совет - сначала сохраните старое значение 
+      </FONT><FONT face=Arial>CMOS (</FONT><FONT face="Arial CYR">да и вообще 
+      все значения CMOS)</FONT><FONT face=Arial> </FONT><FONT face="Arial CYR">а 
+      потом просто вычитайте или складывайте нужные значения с полученной 
+      контрольной суммой. Так проще.</P>
+      <P><B><I>&nbsp;</P>
+      <P>ЧТЕНИЕ И ЗАПИСЬ </FONT><FONT face=Arial>CMOS</P>
+      <BLOCKQUOTE></FONT></I><FONT face="Arial CYR"><U>
+        <P align=justify>Чтение</U></FONT></B><FONT face=Arial>: </FONT><FONT 
+        face="Arial CYR">для чтения значения из ячейки, запишите значение в порт 
+        70Н адрес интересующей вас ячейки, а затем считайте значение из порта 
+        71Н - это и будет интересующие вас значение. Например получим номер 
+        текущего века (</FONT><FONT face=Arial>MS Debug):</P></FONT></BLOCKQUOTE>
+      <P><FONT face="Arial CYR">&nbsp;</P>
+      <P>Нумерация веков идёт с 00Н (если так можно выразиться), поэтому 
+      значение 20Н вполне адекватно.</P>
+      <BLOCKQUOTE><B><U>
+        <P align=justify>Запись: </U></B>для записи значения в </FONT><FONT 
+        face=Arial>CMOS </FONT><FONT face="Arial CYR">запишите значение адреса в 
+        порт 70Н, а затем новое значение в порт 71Н. Установим для примера новое 
+        значение века (так сказать «машина времени» </FONT><FONT 
+        face=Wingdings>J</FONT><FONT face=Arial>):</FONT></P></BLOCKQUOTE>
+      <P><FONT face="Arial CYR">&nbsp;</P>
+      <P align=justify>Теперь чтобы вернуть все как было, введем в порт 70Н 
+      значение 32Н, а в 71Н - 20Н:</FONT><FONT face=Arial></P>
+      <P align=justify></FONT><FONT face="Arial CYR">&nbsp;</P>
+      <P align=justify>Пусть вас не смущает отсутствие символа “Н” после цифр - 
+      все значения в MS Debug идут только в шестнадцатеричном виде. </P>
+      <P align=justify>&nbsp;</P>
+      <P><I><B>&nbsp;</P>
+      <P>ПОДРОБНЕЕ ОБ АДРЕСАХ </FONT><FONT face=Arial>CMOS</FONT></B></I><FONT 
+      face="Arial CYR"></P>
+      <P align=justify>Итак, остановимся на подробном рассмотрении значений, 
+      хранящихся в </FONT><FONT face=Arial>CMOS. </FONT></P>
+      <TABLE border=1 cellPadding=7 cellSpacing=1 width=560>
+        <TBODY>
+        <TR>
+          <TD width="20%"><B><FONT face="Arial CYR">Адрес (</FONT><FONT 
+            face=Arial>HEX)</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR"><B>Описание</B></FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>00</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Текущая секунда</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>01</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Сигнальная 
+        секунда</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>02</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Текущая минута</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>03</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Сигнальная 
+минута</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>04</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Текущий час</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>05</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Сигнальный час</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>06</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Текущий день недели (1 - 
+            Воскресенье)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>07</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Текущий день 
+        месяца</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>08</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Текущий месяц</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>09</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR">Текущий год (только 2 
+            последние цифры, напр. 98)</FONT></TD></TR></TBODY></TABLE>
+      <P><FONT color=#0000ff face=Arial>&nbsp;</P>
+      <P align=justify></FONT><I><FONT face="Arial CYR">&nbsp;</P>
+      <P align=justify>Все значения </FONT><FONT face=Arial>RTC </FONT><FONT 
+      face="Arial CYR">храняться в </FONT><FONT face=Arial>BCD </FONT><FONT 
+      face="Arial CYR">формате как 2 полубайта но в десятичном формате. Например 
+      31 (</FONT><FONT face=Arial>dec) </FONT><FONT face="Arial CYR">хранится 
+      как 31</FONT><FONT face=Arial> (hex).</P>
+      <P align=justify></FONT></I>&nbsp;</P>
+      <TABLE border=1 cellPadding=7 cellSpacing=1 width=560>
+        <TBODY>
+        <TR>
+          <TD width="20%"><B><FONT face="Arial CYR">Адрес (</FONT><FONT 
+            face=Arial>HEX)</FONT></B></TD>
+          <TD width="80%"><FONT face="Arial CYR"><B>Описание</B></FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>0AH</B></FONT></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Регистр статуса 
+            RTC (# A): </FONT><FONT face="Arial CYR" size=2><B>Биты 0-3 - 
+            </B>Селектор уровня (установлены в 0110) <B>Биты 4-6 - 
+            </B></FONT><FONT face=Arial size=2>22-</FONT><FONT face="Arial CYR" 
+            size=2>уровневый делитель (установлен в 010) <B>Бит 7 - </B>В данный 
+            момент производится обновление (если == 0 то разрешено 
+          чтение)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>0BH</B></FONT></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Регистр статуса 
+            RTC (# B): </FONT><FONT face="Arial CYR" size=2><B>Бит 0 - 
+            </B>Включен режим экономии времени (летнее); (0 = стандартное время; 
+            по умолч. = 0) <B>Бит 1 - </B></FONT><FONT face=Arial size=2>12 
+            </FONT><FONT face="Arial CYR" size=2>или 24 часовой режим времени 
+            (если 0 то 12 часовой; по умолч. = 1) <B>Бит 2 - </B>Режим 
+            </FONT><FONT face=Arial size=2>BCD </FONT><FONT face="Arial CYR" 
+            size=2>даты (1=двоичный, 0 =</FONT><FONT face=Arial size=2>BCD, 
+            </FONT><FONT face="Arial CYR" size=2>по умолч. = 0) <B>Бит 
+            3</B></FONT><FONT face=Arial size=2> - </FONT><FONT face="Arial CYR" 
+            size=2>Включить </FONT><FONT face=Arial size=2>Square Wave 
+            (1=</FONT><FONT face="Arial CYR" size=2>включить; по умолч. = 0) 
+            <B>Бит 4 - </B>Включить прерывание обновления (0=отключить, по 
+            умолч. = 0) <B>Бит 5 - </B>Включить сигнальное прерывание 
+            (0=отключить, по умолч </FONT><FONT face=Arial size=2>= 0) 
+            </FONT><FONT face="Arial CYR" size=2><B>Бит 6 - </B>Включить 
+            периодическое прерывание (0=отключить, по умолч. = 0) <B>Бит 7 - 
+            </B></FONT><FONT face=Arial size=2>UIP </FONT><FONT face="Arial CYR" 
+            size=2>флаг (</FONT><FONT face=Arial size=2>Update In Progress), 0 - 
+            </FONT><FONT face="Arial CYR" size=2>можно читать </FONT><FONT 
+            face=Arial size=2>CMOS</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>0CH</B></FONT></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Регистр статуса 
+            RTC (# С):</FONT><FONT face=Arial> </FONT><FONT face="Arial CYR">в 
+            основном не используется</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>0DH</B></FONT></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Регистр статуса 
+            RTC (# D):</FONT><FONT face=Arial> </FONT><FONT face="Arial CYR" 
+            size=2>если бит 7=1, то питание </FONT><FONT face=Arial size=2>CMOS 
+            </FONT><FONT face="Arial CYR" size=2>включено, если бит 7=0 - то 
+            батарея разряжена.</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>0EH</B></FONT></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Байт 
+            диагностики загрузки (</FONT><FONT color=#ff00ff face=Arial>POST 
+            Byte): </FONT><FONT face="Arial CYR" size=2><B>Биты 0 и 1 всегда 
+            равны 0. Бит 2 - </B>Время правильное (1=верно, что сегодня не 30 
+            февраля) <B>Бит 3 - </B>Неверный загрузочный жесткий диск (1=нельзя 
+            загрузиться с винчестера) <B>Бит 4 - </B>Ошибка размера </FONT><FONT 
+            face=Arial size=2>RAM (1=POST </FONT><FONT face="Arial CYR" 
+            size=2>нашла неверный размер </FONT><FONT face=Arial size=2>RAM) 
+            </FONT><FONT face="Arial CYR" size=2><B>Бит 5</B></FONT><FONT 
+            face=Arial size=2> - </FONT><FONT face="Arial CYR" size=2>Неверная 
+            запись об оборудовании (1=неверное оборудование) <B>Бит 6 - 
+            </B>Неверная контрольная сумма (1=неверная сумма </FONT><FONT 
+            face=Arial size=2>CMOS) </FONT><FONT face="Arial CYR" size=2><B>Бит 
+            7 - </B>Утеря питания батареи </FONT><FONT face=Arial size=2>CMOS 
+            (1=</FONT><FONT face="Arial CYR" size=2>утеря питания)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>0FH</B></FONT></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Байт статуса 
+            завершения работы ПК.</FONT><FONT face=Arial> </FONT><FONT 
+            face="Arial CYR">Применяется чаще всего после перезагрузки ПК 
+            процедурой </FONT><FONT face=Arial>SETUP. </FONT><FONT 
+            face="Arial CYR">Значения могут быть следующие: </FONT><FONT 
+            face=Arial size=2><B>0 </B>, </FONT><FONT face="Arial CYR" 
+            size=2>если была перезагр. по нажатии </FONT><FONT face=Arial 
+            size=2>Ctrl-Alt-Del </FONT><FONT face="Arial CYR" size=2>или 
+            неожиданный перезапуск. В любом случае - процедура POST <B>НЕ 
+            </B>выполняется </FONT><FONT face=Arial size=2><B>1 </B></FONT><FONT 
+            face="Arial CYR" size=2>перезапуск после определения размера памяти 
+            </FONT><FONT face=Arial size=2><B>2 </B></FONT><FONT 
+            face="Arial CYR" size=2>перезапуск</FONT><FONT face=Arial size=2> 
+            </FONT><FONT face="Arial CYR" size=2>после теста памяти</FONT><FONT 
+            face=Arial size=2><B> 3 </B></FONT><FONT face="Arial CYR" 
+            size=2>перезапуск после обнаружения ошибки памяти </FONT><FONT 
+            face=Arial size=2><B>4 </B></FONT><FONT face="Arial CYR" 
+            size=2>перезапуск по запросу загрузчика ОС </FONT><FONT face=Arial 
+            size=2><B>5 </B></FONT><FONT face="Arial CYR" size=2>перезапуск 
+            вследствие дальнего перехода (</FONT><FONT face=Arial size=2>FAR 
+            JMP) </FONT><FONT face="Arial CYR" size=2>на адрес 0:0467Н 
+            </FONT><FONT face=Arial size=2><B>6,7,8 </B></FONT><FONT 
+            face="Arial CYR" size=2>перезапуск после проверки защищ. режима 
+            80286 </FONT><FONT face=Arial size=2><B>9 </B></FONT><FONT 
+            face="Arial CYR" size=2>перезапуск после переназначения блока памяти 
+            (ф-я 0х87 прерыв. 0х15)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>10</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Байт типа 
+            дисковода: </FONT><FONT face="Arial CYR" size=2><B>Биты 0-3: 
+            </B>первый дисковод</FONT><B><FONT face=Arial size=2> </FONT><FONT 
+            face="Arial CYR" size=2>Биты 4</FONT></B><FONT face=Arial 
+            size=2>-<B>7: </B></FONT><FONT face="Arial CYR" size=2>второй 
+            дисковод В любом случае, значения битов могут быть следующими: 
+            </FONT><B><FONT face=Arial size=2>0000 = 0 = </FONT><FONT 
+            face="Arial CYR" size=2>дисковод не установлен </FONT><FONT 
+            face=Arial size=2>0001 = 1 = 360</FONT><FONT face="Arial CYR" 
+            size=2>К </FONT><FONT face=Arial size=2>0010 = 2 = 1,2 </FONT><FONT 
+            face="Arial CYR" size=2>Мб </FONT><FONT face=Arial size=2>0011 = 3 = 
+            720</FONT><FONT face="Arial CYR" size=2>К </FONT><FONT face=Arial 
+            size=2>0100 = 4 = 1,44 </FONT><FONT face="Arial CYR" size=2>Мб 
+            </FONT><FONT color=#0000ff face="Arial CYR" size=2>Например: 24Н - 
+            это диск А: размером 1,2М и диск В: размером 1,44М</FONT></B></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>11</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff 
+        face="Arial CYR">РЕЗЕРВ</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>12</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Тип винчестера 
+            (для дисков С: и </FONT><FONT color=#ff00ff face=Arial>D:, 
+            </FONT><FONT color=#ff00ff face="Arial CYR">когда байт наход. В 
+            промежутке от 1 до 14).</FONT><B><FONT color=#ff00ff face=Arial> 
+            </FONT><FONT face="Arial CYR" size=2>Биты 0-3: </B>первый 
+            винчестер</FONT><B><FONT face=Arial size=2> </FONT><FONT 
+            face="Arial CYR" size=2>Биты 4</FONT></B><FONT face=Arial 
+            size=2>-<B>7: </B></FONT><FONT face="Arial CYR" size=2>второй 
+            винчестер В любом случае, значения битов могут быть следующими: 
+            </FONT><B><FONT face=Arial size=2>0000 = 0 = </FONT><FONT 
+            face="Arial CYR" size=2>диск не установлен другое_значение = тип 
+            диска </FONT><FONT face=Arial size=2>1111 = </FONT><FONT 
+            face="Arial CYR" size=2>см. адреса 19Н и 1АН</FONT></B></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>13</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff 
+        face="Arial CYR">РЕЗЕРВ</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>14</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Байт 
+            оборудования: </FONT><FONT face="Arial CYR" size=2><B>Бит 0 = 
+            1</B></FONT><FONT face=Arial size=2>, </FONT><FONT face="Arial CYR" 
+            size=2>если присутствует дисковод(ы) <B>Бит 1 = 1</B></FONT><FONT 
+            face=Arial size=2>, </FONT><FONT face="Arial CYR" size=2>если 
+            присутствует матем. сопроцессор <B>Биты 2, 3</B></FONT><FONT 
+            face=Arial size=2> </FONT><FONT face="Arial CYR" size=2>не 
+            используются и равны 0 <B>Биты 5, 4</B></FONT><FONT face=Arial 
+            size=2> - </FONT><FONT face="Arial CYR" size=2>основной 
+            видеоадаптер: </FONT><FONT face=Symbol size=2>· </FONT><FONT 
+            face=Arial size=2>00 - </FONT><FONT face="Arial CYR" size=2>нет или 
+            </FONT><FONT face=Arial size=2>EGA </FONT><FONT face=Symbol size=2>· 
+            </FONT><FONT face=Arial size=2>01 - 40*25 EGA, CGA, VGA </FONT><FONT 
+            face=Symbol size=2>· </FONT><FONT face=Arial size=2>10 - 80*25 EGA, 
+            CGA, VGA </FONT><FONT face=Symbol size=2>· </FONT><FONT face=Arial 
+            size=2>11 - </FONT><FONT face="Arial CYR" size=2>монохромный 
+            (ч/б)</FONT><FONT face="Times New Roman" size=2> </FONT><FONT 
+            face="Arial CYR" size=2><B>Биты 6, 7</B></FONT><FONT face=Arial 
+            size=2> - </FONT><FONT face="Arial CYR" size=2>количество дисководов 
+            - 1 (00=1, 01=2, 10=3, 11=4)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>15</FONT><FONT 
+            face="Arial CYR">Н, 16Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Базовая память 
+            </FONT><FONT face=Arial size=2>15</FONT><FONT face="Arial CYR" 
+            size=2>Н - младший байт </FONT><FONT face=Arial 
+            size=2>16</FONT><FONT face="Arial CYR" size=2>Н - старший байт Могут 
+            быть равны: </FONT><FONT face=Symbol size=2>· </FONT><FONT 
+            face=Arial size=2>0100</FONT><FONT face="Arial CYR" size=2>Н = 256К 
+            </FONT><FONT face=Symbol size=2>· </FONT><FONT face=Arial 
+            size=2>0200</FONT><FONT face="Arial CYR" size=2>Н = 512К 
+            </FONT><FONT face=Symbol size=2>· </FONT><FONT face=Arial 
+            size=2>0280</FONT><FONT face="Arial CYR" size=2>Н = 
+640К</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>17</FONT><FONT 
+            face="Arial CYR">Н, 18Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Дополнительная 
+            память свыше 1 Мб </FONT><FONT face=Arial size=2>17</FONT><FONT 
+            face="Arial CYR" size=2>Н - младший байт </FONT><FONT face=Arial 
+            size=2>18</FONT><FONT face="Arial CYR" size=2>Н - старший байт 
+            </FONT><FONT color=#007f7f face="Arial CYR" size=2><I><B>Размер 
+            записан в Кб.</B></I></FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>19</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Тип диска № 0 
+            (С:), </FONT><FONT face="Arial CYR">если значение адреса 
+            </FONT><FONT face=Arial>(12</FONT><FONT face="Arial CYR">Н 
+            </FONT><FONT face=Arial>&amp; 0FH) = 0FH</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>20</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Тип диска № 1 
+            (</FONT><FONT color=#ff00ff face=Arial>D:), </FONT><FONT 
+            face="Arial CYR">если значение адреса </FONT><FONT 
+            face=Arial>(12</FONT><FONT face="Arial CYR">Н </FONT><FONT 
+            face=Arial>&amp; F0H) = F0H</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>1BH-2DH</B></FONT></TD>
+          <TD width="80%"><FONT color=#ff00ff 
+        face="Arial CYR">РЕЗЕРВ</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>2</FONT><FONT 
+            face="Arial CYR">ЕН, 2</FONT><FONT face=Arial>FH</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Контрольная 
+            сумма значений адресов от 10Н по 20Н </FONT><FONT face=Symbol 
+            size=2>· </FONT><FONT face=Arial size=2>2</FONT><FONT 
+            face="Arial CYR" size=2>ЕН - старший байт </FONT><FONT face=Symbol 
+            size=2>· </FONT><FONT face=Arial size=2>2FH - </FONT><FONT 
+            face="Arial CYR" size=2>младший байт</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>30</FONT><FONT 
+            face="Arial CYR">Н-31Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff 
+        face="Arial CYR">РЕЗЕРВ</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>32</FONT><FONT 
+            face="Arial CYR">Н</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Век в формате 
+            </FONT><FONT color=#ff00ff face=Arial>BCD</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><FONT face=Arial><B>33H</B></FONT></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">Другая 
+            информация (специфич. для машин </FONT><FONT color=#ff00ff 
+            face=Arial>AT/PS-2 </FONT><FONT color=#ff00ff 
+            face="Arial CYR">класса</FONT><FONT color=#ff00ff 
+          face=Arial>)</FONT></TD></TR>
+        <TR>
+          <TD width="20%"><B><FONT face=Arial>34</FONT><FONT 
+            face="Arial CYR">Н-3FH</FONT></B></TD>
+          <TD width="80%"><FONT color=#ff00ff face="Arial CYR">РЕЗЕРВ. 
+            </FONT><FONT face="Arial CYR">Как показывает практика, эта область 
+            чаще всего свободна от системных данных </FONT><B><FONT 
+            face=Arial>(</FONT><FONT face="Arial CYR">но не всегда!), 
+            </B>поэтому можете записывать сюда свои личные данные (но не много 
+            </FONT><FONT face=Wingdings>J</FONT><FONT face=Arial>) </FONT><FONT 
+            face="Arial CYR">для сохранения между 
+        перезагрузками)</FONT></TD></TR></TBODY></TABLE>
+      <P><FONT face=Arial><I>&nbsp;</P>
+      <P align=justify></I></FONT><FONT face="Arial CYR">&nbsp;</P>
+      <P align=justify>Итак, мы рассмотрели CMOS, его логическое строение и 
+      структуру. Конечно, в таблице приведены лишь общие для всех машин значения 
+      параметров </FONT><FONT face=Arial>CMOS, </FONT><FONT face="Arial CYR">но 
+      тем не менее даже с этим «набором» можно сделать много «чего», например 
+      подключить отключенный администратором дисковод (см. адреса 14Н, 10Н, 2ЕН, 
+      2АР) и т.д. В любом случае: будьте </FONT><FONT color=#ff0000 
+      face="Arial CYR"><U><B>крайне</B></U></FONT><FONT color=#ff0000 
+      face=Arial> </FONT><FONT face="Arial CYR">осторожны, <B>не делайте ничего 
+      такого, чего потом вы не сможете вернуть обратно</B></FONT><FONT 
+      face=Arial>. </FONT><FONT face="Arial CYR">Всё же буду надеяться, что 
+      данная статья принесёт вам пользу. </FONT><FONT face=Arial></P>
+      <P align=justify></FONT><I><B><FONT face="Arial CYR">&nbsp;</P>
+      <P align=center>ИСТОЧНИКИ:</P>
+      <BLOCKQUOTE></FONT><FONT face=Arial>
+        <P>Cris L. Menzock. </B>System programming as it is (1989)</P><B>
+        <P>TV Help support system by EduWare</B></FONT></I></P></BLOCKQUOTE>
+      <P>&nbsp;</P>
+      <P>&nbsp;</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<HR>
+
+</BODY></HTML>

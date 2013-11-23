@@ -1,0 +1,88 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "UCheckPath.h"
+#include <registry.hpp>
+#include <FileCtrl.hpp>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+TRegistry *Reg = new TRegistry;
+AnsiString PathStr;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BAddClick(TObject *Sender)
+{
+  AnsiString AddedPath;
+  if(SelectDirectory("Select folder","",AddedPath))
+  {
+    LBPath->Items->Add(AddedPath);
+  }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BDelClick(TObject *Sender)
+{
+  LBPath->Items->Delete(LBPath->ItemIndex);
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::BCheckClick(TObject *Sender)
+{
+  int a;
+  int b;
+  int k;
+  LBPath->Clear();
+  Reg->RootKey = HKEY_LOCAL_MACHINE;
+  if(Reg->KeyExists("\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment"))
+  {
+    Reg->OpenKey("\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment",false);
+    PathStr = Reg->ReadString("Path");
+    a = 0;
+    k = PathStr.Length();
+    while(1)
+    {
+      b = PathStr.Pos(";");
+      if((b == 0)||(b == k))
+      {
+        LBPath->Items->Add(PathStr.SubString(a+1,(b==k)?(b-a-1):(k-a)));
+        break;
+      }
+      LBPath->Items->Add(PathStr.SubString(a+1,b-a-1));
+      a = b;
+      PathStr[b] = ' ';
+    }
+  }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BSaveClick(TObject *Sender)
+{
+  PathStr = "";
+  for(int i = 0;i < LBPath->Items->Count;i++)
+  {
+    PathStr = PathStr + LBPath->Items->Strings[i] + ";";
+  }
+  if(Reg->KeyExists("\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment"))
+  {
+    Reg->OpenKey("\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment",false);
+    Reg->WriteString("Path",PathStr);
+  }
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::FormDestroy(TObject *Sender)
+{
+  delete Reg;
+}
+//---------------------------------------------------------------------------
+

@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>4</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <p><b>Классы синхронизации С++ в Win32 и Solaris 2.x</b></p>
+    <h2>Класс Mutex</h2>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        Так выглядит реализация этого класса в Win32</b></font></td>
+      </tr>
+    </table>
+    <pre>
+class Mutex {
+ private:
+   CRITICAL_SECTION lock;
+
+ public:
+   Mutex(void) { InitializeCriticalSection(&amp;lock); }
+   void Lock(void) { EnterCriticalSection(&amp;lock); }
+   void Unlock(void) { LeaveCriticalSection(&amp;lock); }
+}; 
+</pre>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        А так класс Mutex выглядит для Solaris 2.x</b></font></td>
+      </tr>
+    </table>
+    <pre>
+class Mutex {
+ private:
+   mutex_t structure_lock;   // structure access lock
+   mutex_t lock;             // mutex
+   thread_t owner;           // owner of mutex
+   unsigned int count;       // # of times owner locked mutex
+
+ public:
+   Mutex(void) { 
+          mutex_init(&amp;structure_lock, USYNC_THREAD, (void*)0);
+          mutex_init(&amp;lock, USYNC_THREAD, (void*)0);
+   }
+
+   ~Mutex(void) {
+          mutex_destroy(&amp;structure_lock);
+          mutex_destroy(&amp;lock);
+   }
+
+   void Lock(void) {
+          mutex_lock(&amp;structure_lock);
+          if (owner == thr_self()) {   // this thread already owns the lock
+             count++;
+             mutex_unlock(&amp;structure_lock);
+          }
+          else { 
+             // try to obtain the mutex. if we cannot do so immediately, release 
+             // the structure lock and wait on the mutex.
+             if (mytex_trylock(&amp;lock) != 0) {
+                  mutex_unlock(&amp;structure_lock);
+                  mutex_lock(&amp;lock);
+                  mutex_lock(&amp;structure_lock);
+                  owner = thr_self();
+             }
+             mutex_unlock(&amp;structure_lock);
+          }
+   }
+
+   void Unlock(void) {
+          mutex_lock(&amp;structure_lock);
+          if ((owner == thr_self()) &amp;&amp; (--count == 0)) 
+                  mutex_unlock(&amp;lock);
+          mutex_unlock(&amp;structure_lock);
+   }
+}; 
+</pre>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        А это примерчик использования класса Mutex</b></font></td>
+      </tr>
+    </table>
+    <pre>
+class SafeInteger : private Mutex {
+ private:
+   int value;
+
+ public:
+   void SetValue(int new_value) {
+          Lock();
+          value = new_value;
+          Unlock();
+   }
+
+   int GetValue(void) {
+          Lock();
+          int ret_value = value;
+          Unlock();
+          return ret_value;
+   }
+}; 
+
+</pre>
+    <h2>Класс Semaphore</h2>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        Так выглядит реализация класса Semaphore в Win32</b></font></td>
+      </tr>
+    </table>
+    <pre>
+class Semaphore {
+ private:
+    HANDLE semaphore;
+
+ public:
+    Semaphore(void) {
+             CreateSemaphore((void *)0, 0, 0x7ffffff, (void*)0);
+    }
+
+    Semaphore(int available) {
+             CreateSemaphore((void *)0, available, 0x7ffffff, (void*)0);
+    }
+
+    ~Semaphore(void) {
+                CloseHandle(semaphore);
+    }
+
+    void Wait(void) {
+                WaitForSingleObject(semaphore, INFINITE);
+    }
+
+    void Post(void) {
+                ReleaseSemaphore(semaphore, 1, (void*)0);
+    }
+
+    void Post(int how_many) {
+                ReleaseSemaphore(semaphore, how_many, (void*)0);
+    }
+}; 
+</pre>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        А так класс Semaphore выглядит для Solaris 2.x</b></font></td>
+      </tr>
+    </table>
+    <pre>
+class Semaphore {
+ private:
+    sema_t semaphore;
+
+ public:
+    Semaphore(void) {
+              sema_init(&amp;semaphore, 0, USYNC_PROCESS, (void*)0);
+    }
+
+    Semaphore(int available) {
+            sema_init(&amp;semaphore, available, USYNC_PROCESS, (void*)0);
+    }
+
+    ~Semaphore(void) {
+            sema_destroy(&amp;semaphore);
+    }
+
+    void Post(void) {
+           sema_post(&amp;semaphore);
+    }
+
+    void Post(int how_many) {
+            while (how_many-- 0) sema_post(&amp;semaphore);
+    }
+
+    void Wait(void) {
+            sema_wait(&amp;semaphore);
+    }
+}; 
+</pre>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        А это примерчик использования класса Semaphore</b></font></td>
+      </tr>
+    </table>
+    <pre>
+template class QueueEntry : public T {
+    public:
+          T value;
+          QueueEntry* next;
+
+          QueueEntry(const T&amp; item_value) {
+                 value = item_value;
+                 next = (QueueEntry*)0;
+         }
+};
+
+template class Queue : private Semaphore : private Mutex {
+    private:
+           QueueEntry* head;
+           QueueEntry* tail;
+
+    public:
+           Queue(void) {
+                   head = tail = (QueueEntry*)0;
+          }
+
+          void Add(const T&amp; item_value) {
+                   Lock();
+                   if (tail == QueueEntry*)0)
+                                  head = tail = new QueueEntry(item_value);
+                   else {
+                                  tail-next = new QueueEntry(item_value);
+                                  tail = tail-next;
+                   }
+                   Unlock();
+                   Post(); // wake up any waiting threads
+        }
+
+        T Wait(void) {
+                   Semaphore::Wait(); // wait for something to show up
+                   Lock();
+                   T value = head-value;
+                   QueueEntry* old = head;
+                   head = head-next;
+                   delete old;
+                   if (head == (QueueEntry*)0)
+                               tail = (QueueEntry*)0;
+                   Unlock();
+                   return value;
+        }
+};
+</pre>
+    <h2>Класс Event</h2>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        Так выглядит реализация класса Event в Win32</b></font></td>
+      </tr>
+    </table>
+    <pre>
+class Event {
+ private:
+   HANDLE event;
+
+ public:
+   Event(void) {
+       event = CreateEvent((void*)0, TRUE, FALSE, (void)0);
+   }
+
+   ~Event(void) {
+       CloseHandle(event);
+   }
+
+   void Signal(void) {
+       PulseEvent(event);
+   }
+
+   void Wait(void) {
+       WaitForSingleObject(event, INFINITE);
+   }
+}; 
+</pre>
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+        А так класс Event выглядит для Solaris 2.x</b></font></td>
+      </tr>
+    </table>
+    <pre>
+class Event {
+ private:
+   cond_t event;
+
+   // in order to wait on a condition variable you must have a locked
+   // mutex, which we don't really need.
+   mutex_t dummy_mutex;
+
+ public:
+   Event(void) {
+        cond_init(&amp;event, USYNC_PROCESS, (void*)0);
+        mutex_init(&amp;dummy_mutex, USYNC_PROCESS, (void*)0);
+   }
+
+   ~Event(void) {
+        event_destroy(&amp;event);
+   }
+
+   void Signal(void) {
+        cond_broadcast(&amp;event);
+   }
+
+   void Wait(void) {
+        mutex_lock(&amp;dummy_mutex);
+        cond_wait(&amp;event, &amp;dummy_mutex);
+        mutex_unlock(&amp;dummy_mutex);
+   }
+};
+</pre>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

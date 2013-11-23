@@ -1,0 +1,97 @@
+<!-- 2000 copyright AML development -->
+
+<HTML>
+<HEAD>
+	<TITLE>Scriptsnetwork ::: Демонстрационная версия</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<SCRIPT LANGUAGE = "JavaScript">
+
+/*   by Langami   (langami@bigfoot.com   )          */
+function go(arg){
+location.href = arg.expr.value + ".html";
+}
+function enter(arg, string){
+arg.expr.value += string
+}
+function cler(arg){
+arg.expr.value = ''
+}
+
+</SCRIPT>
+</HEAD>
+<style type="text/css">
+A:link	 	{ color: #003399; text-decoration: underline	}
+A:visited	{ color:#003399;	text-decoration: underline	}
+A:hover		{ color:#003399; text-decoration: none      }
+.copy	 {  font: 8pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333}
+.copy1	 {  font: bold 10pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333 }
+.copy2	 {  font: 9pt/normal  Verdana, Arial, Helvetica, sans-serif; text-transform: super; text-decoration: none; color: #333333 }
+
+</style>
+<BODY bgcolor="#FFFFFF">
+<div align="center">
+<table border="0" width="500" cellspacing="0" cellpadding="0">
+<tr>
+    <td><a href="http://www.cgi.ru"><img src="topl.gif" width=500 height=29 border=0 alt="Scriptsnetwork"></a></td>
+</tr>
+</table>
+<table border="0" width="500" cellspacing="2" cellpadding="2">
+<tr>
+    <td align="center" class="copy1" valign="top">
+	Демонстрационная версия!
+	</td>
+</tr>
+<tr>
+    <td align="center" class="copy2" valign="top">
+	<br><br><br>
+	<form>
+<table border=1>
+<tr>
+<td bgcolor="dcdcdc" colspan=3 align=center class="copy2">Введите пароль</td>
+</tr>
+<tr>
+<td align="center" colspan=3><input type="password" name="expr" size=8 action="calculate(this.form)"></td>
+</tr>
+<tr>
+<td align="center"><input type="button" value=" 1 " onClick="enter(this.form, 1)"></td>
+<td align="center"><input type="button" value=" 2 " onClick="enter(this.form, 2)"></td>
+<td align="center"><input type="button" value=" 3 " onClick="enter(this.form, 3)"></td>
+</tr>
+<tr>
+<td align="center"><input type="button" value=" 4 " onClick="enter(this.form, 4)"></td>
+<td align="center"><input type="button" value=" 5 " onClick="enter(this.form, 5)"></td>
+<td align="center"><input type="button" value=" 6 " onClick="enter(this.form, 6)"></td>
+</tr>
+<tr>
+<td align="center"><input type="button" value=" 7 " onClick="enter(this.form, 7)"></td>
+<td align="center"><input type="button" value=" 8 " onClick="enter(this.form, 8)"></td>
+<td align="center"><input type="button" value=" 9 " onClick="enter(this.form, 9)"></td>
+</tr>
+<tr>
+<td align="center"><input type="button" value="Cl" onClick="cler(this.form)"></td>
+<td align="center"><input type="button" value=" 0 " onClick="enter(this.form, 0)"></td>
+<td align="center"><input type="button" value=" = " onClick="go(this.form)"></td>
+</tr>
+</table>
+</form>
+	
+	<br><br><br>
+	</td>
+</tr>
+</table>
+<table border="0" width="500" cellspacing="2" cellpadding="2">
+<tr>
+    <td align="center" class="copy" valign="top">
+	<hr noshade size="1">
+	<a href="http://www.cgi.ru">Посетите наш сервер и подпишитесь на наши рассылки!</a>
+	<hr noshade size="1">
+2000 Copyright &copy <a class="copy" href="http://www.cgi.ru">scriptsnetwork</a>. All rights reserved.<br>
+	</td>
+
+</tr>
+</table>
+
+
+</div>
+</BODY>
+</HTML>

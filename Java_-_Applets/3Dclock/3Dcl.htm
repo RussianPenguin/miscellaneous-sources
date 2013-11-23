@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0037)http://www.superbest.com/examples/52/ -->
+<HTML><HEAD><TITLE>3D часы вращающиеся в пространстве.</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content=ru http-equiv=Content-Language><LINK 
+href="mailto:webmaster@superbest.com" rev=made>
+<META content="Script, Scripts, DHTML, Java, WEB" name=keywords>
+<META content="Красивый Java апплет." name=description>
+<META content=General name=rating>
+<META content=ALL name=ROBOTS>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY vLink=#0000ff>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="75%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD bgColor=#ffffff height=5>&nbsp;</TD></TR>
+  <TR vAlign=top>
+    <TD bgColor=#ccccff><FONT face=Arial,Helvetica size=-1><B>&nbsp;<A 
+      name=opis>Описание</A></B></FONT></TD></TR>
+  <TR>
+    <TD height=4><SPACER height="4" width="1" 
+type="block"></TD></TR></TBODY></TABLE>
+<P><FONT face="Arial, Helvetica" size=2>Этот апплет создает 3D часы вращающиеся 
+в пространстве. С помощью специальных параметров можно изменять внешний вид 
+апплета. Для использования возьмите файл <A 
+href="http://www.superbest.com/examples/52/Clock3D.class">Clock3D.class</A> 
+.</FONT> </P>
+<P><FONT face="Arial, Helvetica" size=2><B>Параметры:</B><BR><STRONG><FONT 
+color=#ff0000>FPS</FONT></STRONG><BR>Количество фреймов в секунду (по умолчанию 
+13).<BR></FONT><FONT face="Arial, Helvetica" size=2><STRONG><FONT 
+color=#ff0000>STYLE</FONT></STRONG><BR>Стиль представления часов: 1 - 
+вращающиеся; 2 - скручивающиеся (по умолчанию 1).<BR><STRONG><FONT 
+color=#ff0000>12HOUR</FONT></STRONG><BR>12-и часовые часы - 1, 24-х часовые - 0 
+(по умолчанию 0).<BR><STRONG><FONT 
+color=#ff0000>PIXD</FONT></STRONG><BR>Расстояние между двумя точками. При 
+STYLE=1 - по вертикали, при STYLE=2 - по вертикали и горизонтали (по умолчанию 
+16).<BR><STRONG><FONT color=#ff0000>PIXANGLE</FONT></STRONG><BR>Для STYLE=1 угол 
+между думяа горизонтально-соседними точками. Для STYLE=2 степень "скручивания" 
+между двумя точками (по умолчанию 8).<BR><STRONG><FONT 
+color=#ff0000>RADIUS</FONT></STRONG><BR>Для STYLE=1 радиус окружности вращения 
+(по умолчанию 15).<BR></FONT><FONT face="Arial, Helvetica" size=2><STRONG><FONT 
+color=#ff0000>A1</FONT></STRONG><BR>Дистанция между часами и экраном монитора, 
+чем она меньше, тем изобоажение больше (по умолчанию 5000).<BR><STRONG><FONT 
+color=#ff0000>ROTX</FONT></STRONG><BR>Скорость вращения вокруг оси X (по 
+умолчанию 0).<BR><STRONG><FONT color=#ff0000>ROTY</FONT></STRONG><BR>Скорость 
+вращения вокруг оси Y (по умолчанию 4).<BR><STRONG><FONT 
+color=#ff0000>ROTZ</FONT></STRONG><BR>Скорость вращения вокруг оси Z (по 
+умолчанию 0).<BR><STRONG><FONT color=#ff0000>IROTX</FONT></STRONG><BR>Угол 
+вращения (циклического сдвига) вокруг оси X (по умолчанию 0).<BR><STRONG><FONT 
+color=#ff0000>IROTY</FONT></STRONG><BR>Угол вращения (циклического сдвига) 
+вокруг оси Y (по умолчанию 0).<BR><STRONG><FONT 
+color=#ff0000>IROTZ</FONT></STRONG><BR>Угол вращения (циклического сдвига) 
+вокруг оси Z (по умолчанию 0).<BR><STRONG><FONT 
+color=#ff0000>COLOR</FONT></STRONG><BR>Цвет точек (по умолчанию #FF0000 - 
+красный).<BR><STRONG><FONT color=#ff0000>BGCOLOR</FONT></STRONG><BR>Цвет фона 
+(по умолчанию #000000 - черный).</FONT> </P>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="75%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD bgColor=#ffffff height=5>&nbsp;</TD></TR>
+  <TR vAlign=top>
+    <TD bgColor=#ccccff><FONT face=Arial,Helvetica size=-1><B>&nbsp;Код<A 
+      name=cod></A></B></FONT></TD></TR>
+  <TR>
+    <TD height=4><SPACER height="4" width="1" 
+type="block"></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="75%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD bgColor=#ffffff height=5></TD></TR>
+  <TR vAlign=top>
+    <TD>
+      <FORM action=../9/--WEBBOT-SELF-- method=post>
+      <P>
+      <SCRIPT language=JavaScript>
+function highlight(x){
+document.forms[x].elements[0].focus()
+document.forms[x].elements[0].select()
+}
+</SCRIPT>
+      <A href="javascript:highlight(2)"><IMG border=0 height=14 
+      src="3D часы вращающиеся в пространстве_files/select.gif" 
+width=96></A><BR><TEXTAREA cols=47 name=S1 rows=8 style="WIDTH: 98%" wrap=virtual>&lt;APPLET CODE="Clock3D.class" WIDTH=200 HEIGHT=200&gt;
+&lt;PARAM NAME=fps VALUE=18&gt;
+&lt;PARAM NAME=a1 VALUE=12500&gt;
+&lt;PARAM NAME=pixd VALUE=29&gt;
+&lt;PARAM NAME=pixangle VALUE=5&gt;
+&lt;PARAM NAME=radius VALUE=26&gt;
+&lt;PARAM NAME=roty VALUE=-4&gt;
+&lt;PARAM NAME=rotx VALUE=0&gt;
+&lt;PARAM NAME=rotz VALUE=0.401&gt;
+&lt;PARAM NAME=irotx VALUE=0&gt;
+&lt;PARAM NAME=iroty VALUE=0&gt;
+&lt;PARAM NAME=irotz VALUE=0&gt;
+&lt;PARAM NAME=style VALUE=1&gt;
+&lt;PARAM NAME=color VALUE=#00FF66&gt;
+&lt;PARAM NAME=bgcolor VALUE=#000000&gt;
+&lt;PARAM NAME=12hour VALUE=0&gt;
+&lt;/APPLET&gt;</TEXTAREA></P></FORM></TD></TR>
+  <TR>
+    <TD height=4><SPACER height="4" width="1" 
+type="block"></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="75%">
+  <TBODY>
+  <TR vAlign=top>
+    <TD bgColor=#ffffff height=5>&nbsp;</TD></TR>
+  <TR vAlign=top>
+    <TD bgColor=#ccccff><FONT face=Arial,Helvetica size=-1><B>&nbsp;Примеры<A 
+      name=prim></A></B></FONT></TD></TR>
+  <TR>
+    <TD height=4><SPACER height="4" width="1" 
+type="block"></TD></TR></TBODY></TABLE>
+<P align=left><APPLET code=Clock3D.class height=150 width=150><PARAM NAME="fps" VALUE="18"><PARAM NAME="a1" VALUE="12500"><PARAM NAME="pixd" VALUE="29"><PARAM NAME="pixangle" VALUE="5"><PARAM NAME="radius" VALUE="22"><PARAM NAME="roty" VALUE="-4"><PARAM NAME="rotx" VALUE="0"><PARAM NAME="rotz" VALUE="0.401"><PARAM NAME="irotx" VALUE="0"><PARAM NAME="iroty" VALUE="0"><PARAM NAME="irotz" VALUE="0"><PARAM NAME="style" VALUE="1"><PARAM NAME="color" VALUE="#00FF66"><PARAM NAME="bgcolor" VALUE="#000000"><PARAM NAME="12hour" VALUE="0"><PARAM NAME="code" VALUE="Clock3D.class"><PARAM NAME="height" VALUE="150"><PARAM NAME="width" VALUE="150"><PARAM NAME="codeBase" VALUE="http://www.superbest.com/examples/52/"></APPLET> 
+<APPLET code=Clock3D.class height=150 width=150><PARAM NAME="fps" VALUE="18"><PARAM NAME="a1" VALUE="12500"><PARAM NAME="pixd" VALUE="29"><PARAM NAME="radius" VALUE="22"><PARAM NAME="pixangle" VALUE="5"><PARAM NAME="rotx" VALUE="-0.6"><PARAM NAME="rotz" VALUE="0.3"><PARAM NAME="roty" VALUE="4.2"><PARAM NAME="irotx" VALUE="0"><PARAM NAME="iroty" VALUE="0"><PARAM NAME="irotz" VALUE="0"><PARAM NAME="style" VALUE="1"><PARAM NAME="color" VALUE="#99FFFF"><PARAM NAME="bgcolor" VALUE="#000033"><PARAM NAME="12hour" VALUE="1"><PARAM NAME="code" VALUE="Clock3D.class"><PARAM NAME="height" VALUE="150"><PARAM NAME="width" VALUE="150"><PARAM NAME="codeBase" VALUE="http://www.superbest.com/examples/52/"></APPLET> 
+<APPLET code=Clock3D.class height=150 width=150><PARAM NAME="12hour" VALUE="0"><PARAM NAME="a1" VALUE="12500"><PARAM NAME="bgcolor" VALUE="#000000"><PARAM NAME="color" VALUE="#FFFF00"><PARAM NAME="fps" VALUE="18"><PARAM NAME="irotx" VALUE="0"><PARAM NAME="iroty" VALUE="0"><PARAM NAME="irotz" VALUE="0"><PARAM NAME="pixangle" VALUE="5"><PARAM NAME="pixd" VALUE="29"><PARAM NAME="radius" VALUE="20"><PARAM NAME="rotx" VALUE="0"><PARAM NAME="roty" VALUE="-4"><PARAM NAME="rotz" VALUE="0"><PARAM NAME="style" VALUE="1"><PARAM NAME="code" VALUE="Clock3D.class"><PARAM NAME="height" VALUE="150"><PARAM NAME="width" VALUE="150"><PARAM NAME="codeBase" VALUE="http://www.superbest.com/examples/52/"></APPLET> 
+<BR></P>
+<P align=left><APPLET code=Clock3D.class height=100 width=460><PARAM NAME="fps" VALUE="18"><PARAM NAME="pixd" VALUE="25"><PARAM NAME="pixangle" VALUE="3"><PARAM NAME="radius" VALUE="20"><PARAM NAME="roty" VALUE="-12"><PARAM NAME="rotz" VALUE="0"><PARAM NAME="rotx" VALUE="1"><PARAM NAME="irotx" VALUE="0"><PARAM NAME="iroty" VALUE="0"><PARAM NAME="irotz" VALUE="90"><PARAM NAME="style" VALUE="2"><PARAM NAME="color" VALUE="#ff0000"><PARAM NAME="bgcolor" VALUE="#330000"><PARAM NAME="12hour" VALUE="1"><PARAM NAME="a1" VALUE="12000"><PARAM NAME="code" VALUE="Clock3D.class"><PARAM NAME="height" VALUE="100"><PARAM NAME="width" VALUE="460"><PARAM NAME="codeBase" VALUE="http://www.superbest.com/examples/52/"></APPLET> 
+</P>
+<P align=right>&nbsp;</P>
+<P align=right><B><FONT color=#ff0000 face=Arial,Helvetica size=2>Успешного 
+применения !</FONT></B></P>
+</BODY></HTML>

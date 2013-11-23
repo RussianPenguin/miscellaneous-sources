@@ -1,0 +1,12 @@
+<APPLET CODE="HorScrollerEval.class" WIDTH=500 HEIGHT=30>
+	<param name=text value="This is sample text from an applet parameter.">
+	<param name=copyright value="ConsultScroll Horizontal Scroller v1.0 Copyright (c) 1999, consulting.com Inc.">
+	<param name=backgroundColor value="black">
+	<param name=textColor value="white">
+	<param name=border value="yes">
+	<param name=borderColor value="lightGray">
+	<param name=borderRaised value="yes">
+	<param name=fontStyle value="ITALIC">
+	<param name=font value="TimesRoman">
+	<param name=fontSize value="15">
+</APPLET>

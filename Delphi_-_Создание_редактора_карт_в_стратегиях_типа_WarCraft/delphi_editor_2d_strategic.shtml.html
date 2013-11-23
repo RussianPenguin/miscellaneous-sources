@@ -1,0 +1,1234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ <HTML>
+    <HEAD>
+     <STYLE type="text/css">
+     A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:link {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:visited {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:hover {COLOR: #2776FA; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} .b {text-decoration: none; color:#FF0000;}  .b:hover {color:#7785FF;} .c {text-decoration: none; color:#000000;}  .c:hover {color:#FFFFFF;}  pre {color: blue;} PRE.a {color: black;} TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt} </STYLE>
+     <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+     <META content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+     <META NAME="RESOURCE-TYPE" CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+     <TITLE>
+    Информационный сервер для программистов - исходники со всего света.</TITLE>
+   </HEAD>
+    <BODY topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+      <FORM action="http://www.sources.ru/cgi-bin/sources/search/search.cgi" method="get" align="left">
+         <INPUT type="hidden" name="stpos" value="0">
+           <TABLE border="0" cellpadding="0"   cellspacing="0" width="750">
+	     <TR>
+	       <TD valign="top" rowspan="2">
+	    	 <TABLE border="0" cellpadding="0" cellspacing="0" width="287">
+	           <TR>
+		     <TD colspan="2" bgcolor="#A5E4A7" valign="middle" align="center">
+		     <B>WWW.ИСХОДНИКИ.РУ</B>
+		     </TD>
+		     <TD bgcolor="#000080" valign="middle" align="center">
+		     <B><FONT face="Tahoma" style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    cpp.sources.ru</FONT>
+		  </B>
+		</TD>
+	               </TR>
+	               <TR>
+		           <TD bgcolor="#000080" valign="middle" align="center">
+		  <B>
+		    <FONT face="Tahoma"           style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    java.sources.ru</FONT>
+		  </B>
+		</TD>
+		           <TD bgcolor="#C0C0C0" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    web.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#A5E4A7" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    soft.sources.ru</B>
+		  </FONT>
+		</TD>
+	               </TR>
+	               <TR>
+		           <TD bgcolor="#C0C0C0" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    jdbc.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#A5E4A7" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    asp.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#000080" valign="middle" align="center">
+		  <B>
+		    <FONT face="Tahoma"           style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    api.sources.ru</FONT>
+		  </B>
+		</TD>
+	      </TR>
+	    </TABLE>
+	    <TABLE border="0" cellpadding="0" cellspacing="0" width="100%">
+	      <TR>
+		<TD>
+		  <FONT style="font-size: 8pt" size="2" face="Tahoma">
+		    &nbsp; Поиск по           программированию :<BR>
+		             </FONT>
+		  &nbsp; <INPUT type="text" size="13" name="query">
+		   <INPUT type="submit"           value="Поиск">
+		  <FONT size="1">
+		    <INPUT TYPE="Radio" NAME="stype" VALUE="AND" checked>
+		    &quot;AND&quot; <INPUT TYPE="Radio"           NAME="stype" VALUE="OR">
+		  &quot;OR&quot;</FONT>
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="top10000.gif" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ 
+"&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+
+<!-- HotLog -->
+<script language="javascript">
+hotlog_js="1.0";hotlog_d=document; hotlog_n=navigator;hotlog_rn=Math.random();
+hotlog_n_n=(hotlog_n.appName.substring(0,3)=="Mic")?0:1;
+hotlog_r=""+hotlog_rn+"&s=14399&r="+escape(hotlog_d.referrer)+"&pg="+
+escape(window.location.href);
+hotlog_d.cookie="hotlog=1"; hotlog_r+="&c="+(hotlog_d.cookie?"Y":"N");
+hotlog_d.cookie="hotlog=1; expires=Thu, 01-Jan-70 00:00:01 GMT"</script>
+<script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+<script language="javascript1.2">
+hotlog_js="1.2";hotlog_s=screen;
+hotlog_r+="&wh="+hotlog_s.width+'x'+hotlog_s.height+"&px="+((hotlog_n_n==0)?
+hotlog_s.colorDepth:hotlog_s.pixelDepth)</script>
+<script language="javascript1.3">hotlog_js="1.3"</script>
+<script language="javascript">hotlog_r+="&js="+hotlog_js;
+hotlog_d.write("<img src=\"http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&\" border=0 width=1 height=1>")</script>
+<noscript><img src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=14399" border=0 
+width=1 height=1></noscript>
+<!-- /HotLog -->
+
+		 </TD>
+	       </TR>
+	     </TABLE>
+	   </TD>
+	   <TD align="center">
+	     <A class=blue href="http://pascal.sources.ru/cd/index.htm">
+	     <IMG border=0 height=14 width=14 src="cd000000.gif">
+	     <B>Все исходники с сайта на компакт-диске!</B>
+	     <!-- <font style="font-size: 15pt" color="#4904B1" size="4" face="Times New Roman">
+             Информационный сервер</FONT>
+	     -->
+       </TD>
+     </TR>
+     <TR>
+         <TD>
+
+
+
+
+  <!-- SCALA
+      <A href=http://bs.boro.ru/click.php?bs=996 target=_blank>
+      <IMG src=http://www.sources.ru/scala5.gif width=468 height=60 border=0 alt="Всемирный разработчик и поставщик программного обеспечения по управлению бизнесом, финансами и производством для местных и международных компаний.">
+    </A>
+    <BR>
+   SCALA -->
+
+
+
+ <!-- БАННЕР IMHO
+   <a href="http://santa.imho.ru/click.ng/impt=imp&place=sources468x60&id=280404" target="_blank">
+    <IMG src="http://santa.imho.ru/image.ng/impt=imp&place=sources468x60&id=280404" width=468 height=60 border=0>
+</A>
+    БАННЕР IMHO -->
+
+
+
+
+   <!-- БАННЕР TBN -->
+
+ 	<CENTER>
+ <SCRIPT language='JavaScript'>
+ var loc = ''; </SCRIPT>
+ <SCRIPT language='JavaScript1.4'>
+try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+ <SCRIPT language='JavaScript'>
+  document.write("<SC"+"RIPT language='JavaScript' src='http://ad.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2845047&pg=2&r=js&ssi=nofillers&vbn=188&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>"); </SCRIPT>
+ </CENTER>
+ <CENTER>
+  <FONT SIZE=1>
+    <A HREF="http://www.tbn.ru/" target = "_top" >
+    TBN.ru - СЕТЬ, ЖИВУЩАЯ ПО ПРАВИЛАМ</A>
+  </FONT>
+</CENTER>
+<!-- БАННЕР TBN-->
+
+
+
+           </TD>
+     </TR>
+     <TR>
+         <TD colspan="2">
+    <TABLE border="0" cellpadding="0" cellspacing="1" width="100%">
+               <TR>
+	           <TD align="center" width="11%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/index.html">
+	    <FONT color="#000000" size="2">
+	    На главную</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="20%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/subscribe.shtml">
+	    <FONT color="#000000" size="2">
+	    Подписаться на новости</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="11%" bgcolor="#E0E0C6">
+	  <A href="http://forum.sources.ru/">
+	    <FONT color="#000000" size="2">
+	    Форум</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="9%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/books/index.html">
+	    <FONT color="#000000" size="2">
+	    Книги</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="9%" bgcolor="#E0E0C6">
+	  <A href="http://www.titl.ru/">
+	    <FONT color="#000000" size="2">
+	    Хостинг</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="13%" bgcolor="#E0E0C6">
+	  <A href="http://www.countries.ru/">
+	    <FONT color="#000000" size="2">
+	    Страны мира</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="29%" bgcolor="#E0E0C6">
+	  <b>19</b> пользователей на сервере.
+
+	</TD>
+               </TR>
+           </TABLE>
+         </TD>
+     </TR>
+   </TABLE>
+ </FORM>
+
+<!-- ТЕКСТОВЫЙ БАННЕР CERTIFICATION   <center>
+ <TABLE border="1" width="322" cellspacing="0">
+     <TR>
+         <TD width="318">
+      <SMALL>
+	<FONT face="Arial">
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <B>
+	  Сертификация специалистов</B>
+	  <BR>
+	       - Как устроиться на высокооплачиваемую работу ?<BR>
+	       - Как получить прибавку к зарплате ?<BR>
+	       - Как завоевать уважение коллег ?<BR>
+	       - <A href="http://www.certifications.ru" target="_blank">
+	  Пройти     сертификацию</A>
+	   и продемонстрировать<BR>
+	       &nbsp;&nbsp; свой профессионализм. <A href="http://www.certifications.ru/about/whatgives.php" target="_blank">
+	  Подробнее...</A>
+	</FONT>
+      </SMALL>
+    </TD>
+     </TR>
+ </TABLE>
+ </CENTER>
+ТЕКСТОВЫЙ БАННЕР CERTIFICATION --> 
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <p>&nbsp;</p>
+    <p align="center"><b>Создание редактора карт в стратегиях
+    типа WarCraft</b></p>
+    <blockquote>
+      <p><font face="Times New Roman, Times, serif" size="2"><font size="3">Довелось
+      мне как-то озадачиться идеей написать редактор
+      карт для моей новой игры. Скажу сразу, что задача
+      эта не из простых. Приступим сразу к делу. Как
+      правило, в двумерных стратегических играх типа
+      Warcraft, Heroes of Might and Magic, Z и т. д. карты строятся из
+      ячеек. Иными словами, карта - это матрица с
+      некоторыми числовыми значениями внутри ячеек.
+      Эти значения есть номера текстур( растровых
+      картинок с изображениями земли, воды, камней и т.
+      д., из которых и будет склеиваться Ваш уникальный
+      ландшафт )</font></font></p>
+      <p align="center"><img src="2d_8_100.gif" width="254" height="257"></p>
+      <p align="center"><font color="#33ccff" face="Times New Roman, Times, serif" size="3">Рисунок
+      1</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">На рисунке
+      изображена ну очень маленькая карта с размером
+      матрицы 3х3. Для создания подобной карты задается
+      двумерный массив ( Map : Array[3,3] of Byte ), записываются,
+      каким-либо образом, в каждую ячейку порядковые
+      номера текстур и при выводе карты на экран эти
+      номера читаются из массива. Ну например:</font></p>
+      <blockquote>
+        <font face="Courier New, Courier, mono" size="2"><p>...<br>
+        For i := 0 to 2 do <br>
+        For j := 0 to 2 do <br>
+        Begin <br>
+        Number := Map[i,j]; <br>
+        X := J * TextureWidth; <br>
+        Y := i * TextureHeight; <br>
+        DrawTexture(X,Y,Number); <br>
+        End;<br>
+        ... </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Где Number - номер
+      текстуры, <br>
+      Х - координата текстуры на экране, <br>
+      Y - то же самое,<br>
+      DrawTexture - некая процедура вывода текстуры на экран.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Совет!!! <br>
+      Если Вам заранее не известно из какого
+      количества ячеек будет состоять Ваша карта, не
+      используйте Tlist в Tlist'e для ее создания. Советую
+      воспользоваться PbyteArray. <br>
+      ( GetMem(PbyteArray,MapWidth*MapHeight*SizeOf(Тип ячейки)) ). <br>
+      Тип ячейки в нашем случае - Byte. Обращение в этом
+      случае будет таким: Number := PbyteArray[Y*MapWidth + X]; Где X,Y -
+      координаты нужной ячейки в матрице. </font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Все что мы
+      рассмотрели выше подходит для карт на основе
+      только лишь одного типа земли. Взгляните на
+      рисунок расположенный выше. Вы увидите, что
+      поскольку все текстуры разные - карта как-бы
+      состоит из квадратиков. Кому она такая нужна?
+      Хочется чтобы эти текстуры плавно перетекали
+      друг в друга. Отсюда есть три выхода:</font><ul>
+        <li><font face="Times New Roman, Times, serif" size="3">Создавать карту из
+          текстур мало отличающихся друг от друга и при
+          рисовании карты выбирать их случайным образом.</font>
+        </li>
+        <li><font face="Times New Roman, Times, serif" size="3">Налепить целю кучу
+          &quot;пересекающихся&quot; между собой текстур и
+          класть их на карту вручную.</font> </li>
+        <li><font face="Times New Roman, Times, serif" size="3">Так же налепить ту
+          же кучу текстур и написать программу позволяющую
+          автоматически распределять их на карте. </font></li>
+      </ul>
+      <font face="Times New Roman, Times, serif" size="3"><p align="left">Первый
+      способ не очень интересен. Он скорее подходит для
+      создания ролевых игр. Где, как правило,
+      присутствует базовый тип земли, а все остальное,
+      такое как вода, камни, травка представляется
+      объектами. Второй способ легок по реализации, но
+      очень утомительно будет потом создавать карты в
+      таком редакторе. </font></p>
+    </blockquote>
+    <p>&nbsp;<font color="black" face="Times New Roman" size="2"></p>
+    <blockquote>
+      <blockquote>
+        <div align="left"></div>
+      </blockquote>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Посмотрите
+      на рисунок. Если у Вас вся карта состоит из
+      текстур с травой, а </font></p>
+      <p align="center"><img src="2d_8_200.gif" width="252" height="253"> </p>
+      <p align="center"><font color="#33ccff" face="Times New Roman, Times, serif" size="3">Рисунок
+      2 </font></font></p>
+    </blockquote>
+    <blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Вам надо добавить
+      участок воды, то мы видим, что для того чтобы
+      добиться плавного перетекания Вам придется
+      добавить еще 8 промежуточных текстур окружающих
+      текстуру с водой. Если делать это вручную( по
+      второму способу ), то это займет слишком много
+      времени и сил. Поэтому нам второй способ тоже не
+      подходит. Мы остановимся на третьем способе и
+      будем создавать карту подобно тому, как это
+      происходит в WarCraft'e. При добавлении текстуры на
+      карту( фактически - записи номера текстуры в
+      определенную ячейку матрицы ), окружающие ее
+      текстуры будут рассчитываться автоматически.
+      Как этого добиться?</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Я достаточно долго
+      ломал голову над этой проблемой. Я пытался найти
+      какой-нибудь способ позволяющий не утруждать
+      компьютер громоздкими вычислениями и работать
+      максимально быстро и эффективно. Один раз я даже
+      вывел формулу, по которой рассчитывались новые
+      значения ячеек, но она увы имела ограниченное
+      действие( только 2 типа земли ) и плохо подходила
+      для создания карт, где требуется максимальное
+      разнообразие. Но достаточно лирики, давайте
+      вернемся к нашим баранам.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Прежде всего
+      необходимо выяснить - какое количество
+      переходных текстур нам понадобится для
+      обеспечения плавного перетекания между двумя
+      типами земель. Здесь есть свои тонкости.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Представим, что у
+      нас имеется два типа земли: ВОДА и ЗЕМЛЯ, тогда: Во-первых
+      нам понадобятся две базовых текстуры , это
+      текстуры полностью заполненные водой или землей.
+      </font></p>
+      <p align="center"><font face="Times New Roman, Times, serif" size="3"><img
+      src="2d_8_300.gif" width="158" height="77"></font></p>
+      <p align="center"><font color="#33ccff" face="Times New Roman, Times, serif" size="3">Рисунок
+      3 </font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Во вторых
+      нам понадобятся промежуточные текстуры. Сколько
+      их нужно мы сейчас посчитаем.</font></p>
+      <p align="center"><font face="Times New Roman, Times, serif" size="3"><img
+      src="2d_8_400.gif" width="520" height="150"></font></p>
+      <p align="center"><font color="#33ccff" face="Times New Roman, Times, serif" size="3">Рисунок
+      4 </font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Оказалось,
+      что для плавного перетекания двух земель друг в
+      друга надо 14 промежуточных текстур, плюс две
+      базовых. Итого 16. Всякий программист знает, что
+      это хорошая цифра.</font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Возможно
+      кто-то спросит: А зачем так много? Не достаточно
+      ли 8 текстур, как на рисунке 2 - где трава
+      пересекается с водой? Нет не достаточно. Ведь
+      ситуации бывают разные. Окружающие ячейки могут
+      быть не полностью забиты травой ( в данном случае
+      землей ), и тогда понадобятся дополнительные
+      текстуры.</font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Тогда может
+      последовать другой вопрос: Почему так мало
+      текстур? Где например текстуры когда вода с трех
+      сторон окружена землей, и с четырех, и другие? Не
+      следует ли предусмотреть все случаи? </font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">И это
+      правильный вопрос, но здесь все зависит от
+      конкретной реализации алгоритма
+      автоматического вычисления необходимой
+      текстуры. В моем примере он реализован так, что
+      остальные текстуры не нужны. Объясню наглядно: </font></p>
+      <blockquote>
+        <p align="left"><font face="Times New Roman, Times, serif" size="3"><b>1.</b>
+        Текстуры воды окруженные землей с двух
+        противоположных сторон превращаются в базовую
+        текстуру земли ( в текстуру заполненную только
+        землей ). Соответственно то же самое происходит
+        когда вода окружена с трех или четырех сторон.</font></p>
+        <div align="center"><p><font face="Times New Roman, Times, serif" size="3"><img
+        src="2d_8_500.gif" width="187" height="74"></font></p>
+        <p><font color="#33ccff" face="Times New Roman, Times, serif" size="3">Рисунок 5 </font></p>
+        </div><p><font face="Times New Roman, Times, serif" size="3"><b>2.</b> Текстуры
+        воды окруженные с двух уголков на одной стороне
+        превращаются в текстуры полностью окруженные
+        землей с одной стороны.( если уголки с трех сторон,
+        то вода оказывается окружена полностью с двух
+        сторон, если уголков 4, то вода превращается в
+        землю совсем).</font></p>
+        <p align="center"><font face="Times New Roman, Times, serif" size="3"><img
+        src="2d_8_6.gif" width="187" height="74"></font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Теперь, я надеюсь,
+      все ясно. С помощью применения подобной техники
+      количество промежуточных текстур удалось
+      уменьшить ровно в два раза! Это существенная
+      экономия памяти, особенно если учесть, что типов
+      земель будет больше. Кстати в WarCraft'e, если я не
+      ошибаюсь, используется такой же набор текстур.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Ну хорошо, теперь
+      давайте еще посчитаем. Для &quot;слияния&quot; двух
+      земель нам понадобилось 16 текстур. Но если к
+      земле и воде добавить еще траву, то придется
+      создавать также переходные текстуры для трава-земля
+      и трава-вода. Это еще 32 текстуры. Добавим еще
+      каменистую почву( надо же сделать карту
+      разнообразнее). Еще 48 текстур. И так далее и так
+      далее. А если мы хотим сделать несколько видов
+      одной и той же текстуры( опять таки для
+      разнообразия )? Количество текстур растет как на
+      дрожжах. Что делать?</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Но тут на помощь
+      пришел опять-таки старый, добрый, затертый до дыр
+      мышкой WarCraft. Никогда не замечали, что если в
+      WarCraft'e, вернее в War Editor'e, &quot;кладешь&quot; воду на
+      траву, то между травой и водой появляется
+      прослойка земли? Вот и я заметил.</font></p>
+      <p align="center"><img src="2d_8_700.gif" width="302" height="302"><img src="2d_8_800.gif"
+      width="302" height="302"></p>
+      <table border="0" width="100%">
+<TBODY>
+        <tr>
+          <td><font color="#3399ff"><p align="center">Рисунок 6а</font></td>
+          <td><font color="#3399ff"><p align="center">Рисунок 6б</font></td>
+        </tr>
+</TBODY>
+      </table>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Посмотрите
+      на эти два рисунка. Из них видно, что вода
+      граничит только с землей, трава тоже граничит
+      только с землей. Земля в данном случае является
+      &quot;переходным&quot; типом земли. Достаточно
+      создать текстуры вода-земля, трава-земля, камни-земля,
+      песок-земля и т. д. По 16 штук на каждую землю и все.
+      Можно больше не беспокоится. Земли будут
+      соединяться между собой через &quot;переходный&quot;
+      тип земли. Спасибо WarCraft'у. </font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Итак, с
+      количеством текстур и тем какими они должны быть
+      мы разобрались, и вот наконец-то мы приступаем к
+      самой реализации данной задачи.</font></p>
+      <blockquote>
+        <p><font face="Times New Roman, Times, serif" size="3">Условимся, что:</font></p>
+        <p><font face="Times New Roman, Times, serif" size="3">1. Ячейку с номером
+        12 я буду называть активной или текущей. <br>
+        2. Землю которой мы рисуем я также буду называть
+        активной или текущей. <br>
+        3. Землю которая была прежде была в ячейке 12 я буду
+        называть прежней. <br>
+        4. Ячейки под номерами 6,7,8,11,13,16,17,18 я буду называть
+        первым кругом. <br>
+        5. Ячейки под номером 0,1,2,3,4,5,9,10,14,15,19,20,21,22,23,24 я буду
+        называть вторым кругом. <br>
+        6. Все текстуры имеющие в себе участок некоторого
+        типа кроме переходного есть эта земля. То есть, к
+        примеру, ячейки в первом круге - это вода.(см.
+        Рисунок 6б)</font></p>
+      </blockquote>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Пусть для
+      данного примера у нас будет три типа земли: ВОДА,
+      ТРАВА, КАМНИ. Плюс переходный тип - ЗЕМЛЯ. Нам
+      понадобится 48 текстур. Почему 48, а не 64? - спросите
+      вы, - ведь типов-то 4. Потому, что переходный тип и
+      так есть в каждом из трех первых типов, в
+      промежуточных текстурах. </font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Допустим,
+      что текстуры у Вас будут храниться в компоненте
+      ImageList, для нашего случая это удобнее всего.
+      Разместим мы их следующим образом: за номером 0
+      будет располагаться цельная текстура воды,
+      номера 1 - 14 займут промежуточные текстуры ВОДА-ЗЕМЛЯ
+      (как на Рисунке 4), номер 15 займет цельная текстура
+      ЗЕМЛИ. Следующий элемент ТРАВА займет номера 16 - 31
+      по тому же принципу, элемент КАМНИ займет номера
+      с 32 - 47. Как Вы наверное заметили, номера 15,31,47
+      оказываются заняты одинаковыми цельными
+      текстурами земли. Их можно сделать немного
+      отличающимися друг от друга для обеспечения
+      большего разнообразия, а затем выбирать
+      случайным образом.</font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Введем
+      базовые индексы типов земель. Пусть базовый
+      индекс воды равен 0, базовый индекс травы равен 1,
+      камней - 2. Тогда, узнав порядковый номер текстуры,
+      мы можем выяснить какому типу земли она
+      принадлежит, достаточно разделить целочисленным
+      делением (Div) порядковый номер текстуры на 16. Если
+      же мы разделим этот номер делением по остатку (Mod)
+      на 16, то узнаем смещение или номер промежуточной
+      текстуры внутри интервала номеров
+      принадлежащего данному типу земли. Например, мы
+      обратились к ячейке и получили номер 23. Поделив
+      этот номер целочисленным делением на 16 получим 1.
+      Это тип земли - ТРАВА. Поделив делением по модулю
+      остатка на 16 получим 7. Это номер промежуточной
+      текстуры.(См. Рисунок 4, только в данном случае
+      была бы трава с землей) Заметьте, если бы вместо 7
+      мы получили 0, это означало бы цельную текстуру
+      данной земли, 15 означало бы цельную текстуру
+      переходного типа - ЗЕМЛЯ.</font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Теперь
+      давайте немного попишем:</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">PMap : PbyteArray; //
+        указатель на матрицу содержащую нашу карту <br>
+        WorldWidth, WorldHeight : Integer; // Ширина и высота карты в
+        ячейках </font></p>
+        <p><font face="Courier New, Courier, mono" size="2"><br>
+        <b>Procedure</b> CreateNewMap(WorldWidth,WorldHeigth : Integer); <br>
+        Begin // Выделение памяти под матрицу <br>
+        GetMem(pMap,WodrldWidth*WorldHeight); <br>
+        // Заполнение этого участка нулями <br>
+        FillChar(pMap,WorldWidth*WorldHeight,0); <br>
+        End; </font></p>
+        <p><font face="Courier New, Courier, mono" size="2"><br>
+        <b>funcion</b> GetElement(x,y : Integer):byte; <br>
+        Begin // Получить значение ячейки <br>
+        Result := pMap[y*WorldWidth + x]; <br>
+        End; </font></p>
+        <p><font face="Courier New, Courier, mono" size="2"><br>
+        <b>Procedure</b> PutElement(x,y : Integer; Index : Byte); <br>
+        Begin // Записать значение в ячейку<br>
+        PMap[y*WorldWidth + x] := Index; <br>
+        End; </font></p>
+        <p><font face="Courier New, Courier, mono" size="2"><br>
+        <b>Function</b> GetBaseIndex(Index : byte): byte; <br>
+        Begin // Получить тип земли в виде номера(индекса) <br>
+        Result := Index div 16; <br>
+        End;</font></p>
+        <p><font face="Courier New, Courier, mono" size="2"><br>
+        <b>Function</b> GetAdditionalIndex(Index : byte):byte; <br>
+        Begin // Получить номер переходной текстуры <br>
+        Result := Index mod 16; <br>
+        End; <br>
+        </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Вот.
+      Вспомогательные функции мы написали, перейдем к
+      рассмотрению технологии. </font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Посмотрите на
+      Рисунок 6(б). Видно, что когда мы заменяем значение
+      одной ячейки, эти изменения влияют, как на первый
+      так и на второй круги ячеек. Возникает резонный
+      вопрос: не случится ли такой ситуации, когда
+      помещение на карту новой текстуры потребует
+      перерисовки всей карты, так, словно кто-то бросил
+      камень в воду? Если следовать принципам
+      изложенным в этой статье, то не случится. Я
+      проверял все варианты. Изменения касаются лишь
+      первого и второго круга. Кто не верит, может
+      проверить, посчитать, прикинуть, но это займет
+      много времени. Теперь мы подходим к главному - по
+      какому принципу рассчитывать новые значения
+      изменяемых текстур. Возможно я Вас немного
+      удивлю, но рассчитывать нам больше ничего не
+      придется. Нам понадобится создать три массива (таблицы)16
+      на 25 элементов, записать в них заранее
+      расчитанные значения, а затем их считывать в ходе
+      выполнения программы. Сейчас поясню.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Поскольку в общей
+      сумме у нас по максимуму может измениться 25
+      элементов на карте (Рисунок 6(б)), мы создадим
+      вспомогательную матрицу 5х5, куда будем считывать
+      с карты значения соответствующих ячеек. Затем мы
+      изменим значения в этой матрице и поместим ее
+      снова на карту откуда взяли.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">В каждой ячейке
+      может быть следующее значение:</font></p>
+      <blockquote>
+        <p><font face="Times New Roman, Times, serif" size="3">Index + GroundIndex*16 , где</font></p>
+        <p><font face="Times New Roman, Times, serif" size="3">Index - число от 0 до 15
+        указывающее на номер переходной текстуры. GroundIndex
+        - число от 0 до 2 указывающее на тип земли - ВОДА,
+        ТРАВА, КАМНИ </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Итак мы знаем номер
+      лежащей в ячейке переходной текстуры (GetAdditionalIndex),
+      мы также знаем номер этой ячейки в матрице 5х5.
+      Этого вполне достаточно. Мы создадим массив-таблицу
+      ширина которого равна количеству возможных
+      переходных текстур 16, а высота равна количеству
+      ячеек в матрице 5х5=25. Дальше мы действуем
+      следующим образом: Считываем в матрицу 5х5
+      участок карты центром которого является ячейка в
+      которую мы &quot;кладем&quot; новую землю, в ячейку 12
+      кладем цельную текстуру той земли которой мы
+      рисуем. Затем для всех ячеек матрицы 5х5 кроме 12-ой
+      делаем следующее: Поучаем номер переходной
+      текстуры (GetAdditionalIndex) и обращаемся к таблице 16х25.
+      Где номер переходной текстуры это положение
+      ячейки таблицы 16х25 по горизонтали, а номер </font></p>
+      <p align="center"><font face="Times New Roman, Times, serif" size="3"><img
+      src="2d_8_900.gif" width="436" height="244"></font></p>
+      <p align="center"><font color="#33ccff" face="Times New Roman, Times, serif" size="3">Рисунок
+      7 </font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">ячейки в
+      матрице 5х5 это положение ячейки таблицы 16х25 по
+      вертикали. На рисунке 7 , цифра 6 по горизонтали
+      это GetAdditionalIndex от текстуры, которая прячется в
+      матрице 5х5 в ячейке номер 17, а &quot;Х&quot; в красной
+      клетке это тот самый новый номер для этой
+      текстуры. Фактически смысл сводится к следующему:
+      посмотрели какая была текстура - заглянув в
+      таблицу, узнали какая стала.</font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Вы наверное
+      спросите - а как узнать какие значения должны
+      быть в таблице 16х25? Никак. Они рассчитываются в
+      уме и записываются в таблицу ручками. Но вы
+      можете не задумываться над этим, я уже рассчитал
+      и записал их в своем примере. Смотрите в
+      исходниках.</font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Кстати в
+      тексте статьи я упоминал о том, что нам придется
+      создать три таблицы 16х25. Я не оговорился. Дело в
+      том, что у нас возможны три варианта, когда
+      значения одной и той же ячейки в таблице должны
+      быть разными:</font></p>
+      <blockquote>
+        <p><font face="Times New Roman, Times, serif" size="3">1. Активная земля
+        равняется прежней земле. Например, мы рисуем
+        ТРАВОЙ, а в рассчитываемой ячейке тоже ТРАВА или
+        ТРАВА с ЗЕМЛЕЙ.<br>
+        2. Активная земля не равна прежней земле. Например,
+        мы рисуем ТРАВОЙ, а в рассчитываемой ячейке ВОДА
+        или ВОДА с ЗЕМЛЕЙ.<br>
+        3. Рисуем переходным типом земли - ЗЕМЛЯ.</font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3"><br>
+      Если кому-нибудь еще что-то не понятно, то надеюсь
+      после рассмотрения исходных текстов программы
+      все встанет на свои места. </font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Пример написан на
+      Delphi 3 Professional, с использованием компонент
+      библиотеки <a href="http://www.mda.hotmail.ru/lib/delphix.zip">DelphiX </a>для
+      DirectX 6.0</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">Модуль MapDat: <br>
+        // Определение класса Matrix5 <br>
+        Type TMatrix5 = class(TObject) <br>
+        private <br>
+        Matrix : array[0..4,0..4] of byte; <br>
+        Vector : array[0..24] of byte; <br>
+        public <br>
+        function GetBaseIndex( ElementIndex : Integer ): Integer; <br>
+        Function GetAdditionalIndex( ElementIndex : Integer ): Integer; <br>
+        procedure Fill(X,Y : Integer); <br>
+        procedure Place(X,Y : Integer); <br>
+        procedure Culculate(X,Y : Integer; BrushIndex : Integer ); <br>
+        procedure Draw(X,Y : Integer; BrushIndex : Integer ); <br>
+        end; </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Внутри класса
+      определены переменные в виде матрицы 5х5 и
+      вектора. Некогда я думал, что это упростит
+      написание программы, сейчас я думаю, что можно
+      воспользоваться только вектором. Методы GetBaseIndex и
+      GetAdditionalIndex мы уже рассматривали, рассмотрим
+      остальные:</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">Метод <b>Fill</b>(X,Y : Integer);<br>
+        procedure TMatrix5.Fill(X,Y : Integer); <br>
+        var i,j : Integer; <br>
+        begin for j := 0 to 4 do <br>
+        for i := 0 to 4 do <br>
+        Matrix[i,j] := MainForm.GetElement(X - 2 + i,Y - 2 + j); <br>
+        for j :=0 to 4 do <br>
+        for i := 0 to 4 do <br>
+        Vector[j*5 + i] := Matrix[i,j]; <br>
+        end;</font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Заполняет матрицу
+      и вектор 25-ю элементами карты. Х,Y - указывает на
+      центральный элемент.</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">Метод <b>Place</b>(x,y :
+        Integer); <br>
+        procedure TMatrix5.Place(X,Y : Integer); <br>
+        var i,j : Integer; <br>
+        begin <br>
+        for j := 0 to 4 do <br>
+        for i := 0 to 4 do <br>
+        Matrix[i,j] := Vector[j*5 + i]; <br>
+        for j := 0 to 4 do <br>
+        for i := 0 to 4 do <br>
+        MainForm.PutElement(X - 2 + i,Y - 2 + j, Matrix[i,j] );<br>
+        end;</font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Выполняет
+      процедуру обратную методу Fill. То есть кладет
+      матрицу 5х5 на карту.</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">Метод <b>Draw</b>(X,Y : Integer;
+        BrushIndex : Integer); <br>
+        procedure TMatrix5.Draw(X,Y : Integer; BrushIndex : Integer); <br>
+        begin Self.Culculate(X,Y,BrushIndex);<br>
+        Self.Place(X,Y); <br>
+        end; </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Выполняет методы
+      Culculate , а затем Place. X,Y - указывают центральный
+      элемент в матрице 5х5, BrushIndex - индекс активной
+      земли. (0-вода,1-трава,2-камни,3- переходный тип -
+      земля).</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Прежде чем перейти
+      к основному методу данного модуля - Culculate, покажу
+      вам созданные таблицы.</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">const <b>BasicTable</b> :
+        array[0..24,0..15] of byte = ( <br>
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16), <br>
+        ( 9, 1, 6, 8, 4, 5, 6,15, 8, 9, 1,14, 4, 5,14,16), <br>
+        ( 1, 1, 6,15, 5, 5, 6,15,15, 1, 1, 6, 5, 5, 6,16), <br>
+        (10, 1, 2, 7,15, 5, 6, 7,15, 1,10, 2, 7,13, 6,16), <br>
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16), <br>
+        ( 4, 5,15, 8, 4, 5,15,15, 8, 4, 5, 8, 4, 5, 8,16), <br>
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16), <br>
+        ( 2, 6, 2, 7,15,15, 6, 7,15, 6, 2, 2, 7, 7, 6,16), <br>
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16), <br>
+        (12, 5, 7, 3, 4, 5,15, 7, 8, 4,13, 3,12,13, 8,16), <br>
+        ( 3,15, 7, 3, 8,15,15, 7, 8, 8, 7, 3, 3, 7, 8,16),<br>
+        (11, 6, 2, 3, 8,15, 6, 7, 8,14, 2,11, 3, 7,14,16), <br>
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)); </font></p>
+        <p><font face="Courier New, Courier, mono" size="2"><b>EqualTable</b> : array[0..24,0..15]
+        of byte = ( (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),<br>
+        (16,10,16,16,12,13, 2,16, 3, 0,16,16,16,16,11, 7),<br>
+        (16, 0,11,16,12,12,11, 3, 3, 0, 0,16,16,12,11, 3),<br>
+        (16, 9,11,16,16, 4,14, 3,16,16, 0,16,16,12,16, 8),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16), <br>
+        (16,10,16,11, 0,10, 2, 2,11, 0,16,16, 0,10,11, 2),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),<br>
+        (16, 9, 0,12,16, 4, 9,12, 4,16, 0, 0,16,12, 9, 4),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),<br>
+        (16,16,16,11, 9, 1,16, 2,14,16,16,16, 0,10,16, 6), <br>
+        (16,16,10, 0, 9, 1, 1,10, 9,16,16, 0, 0,10, 9, 1),<br>
+        (16,16,10,12,16,16, 1,13, 4,16,16, 0,16,16, 9, 5),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)); </font></p>
+        <p><font face="Courier New, Courier, mono" size="2"><b>NotEqualTable</b> :
+        array[0..24,0..15] of byte = ( <br>
+        ( 9, 1, 6, 8, 4, 5, 6,15, 8, 9, 1,14, 4, 5,14,15), <br>
+        ( 1, 1, 6,15, 5, 5, 6,15,15, 1, 1, 6, 5, 5, 6,15),<br>
+        ( 1, 1, 6,15, 5, 5, 6,15,15, 1, 1, 6, 5, 5, 6,15), <br>
+        ( 1, 1, 6,15, 5, 5, 6,15,15, 1, 1, 6, 5, 5, 6,15),<br>
+        (10, 1, 2, 7, 5, 5, 6, 7,15, 1,10, 2,13,13, 6,15),<br>
+        ( 4, 5,15, 8, 4, 5,15,15, 8, 4, 5, 8, 4, 5, 8,15),
+        (23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23),
+        (19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19),
+        (24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24), <br>
+        ( 2, 6, 2, 7,15,15, 6, 7,15, 6, 2, 2, 7, 7, 6,15),<br>
+        ( 4, 5,15, 8, 4, 5,15,15, 8, 4, 5, 8, 4, 5, 8,15),
+        (18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18),
+        (16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16),
+        (20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20), <br>
+        ( 2, 6, 2, 7,15,15, 6, 7,15, 6, 2, 2, 7, 7, 6,15),<br>
+        ( 4, 5,15, 8, 4, 5,15,15, 8, 4, 5, 8, 4, 5, 8,15),
+        (22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22),
+        (17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17),
+        (21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21), <br>
+        ( 2, 6, 2, 7,15,15, 6, 7,15, 6, 2, 2, 7, 7, 6,15),<br>
+        (12, 5, 7, 3, 4, 5,15, 7, 8, 4,15,13,12,13, 8,15), <br>
+        ( 3,15, 7, 3, 8,15,15, 7, 8, 8, 7, 3, 3, 7, 8,15),<br>
+        ( 3,15, 7, 3, 8,15,15, 7, 8, 8, 7, 3, 3, 7, 8,15), <br>
+        ( 3,15, 7, 3, 8,15,15, 7, 8, 8, 7, 3, 3, 7, 8,15),<br>
+        (11, 6, 2, 3,15,15, 6, 7, 8,14, 2,11, 3, 7,14,15)); </font></p>
+        <p><font face="Times New Roman, Times, serif" size="3"><b>BasicTable</b> -
+        используется, когда мы рисуем переходным типом
+        земли. <br>
+        <b>EqualTable</b> - испльзуется, когда прежняя земля в
+        ячейке равна активной. <b>NotEqualTable</b> - испльзуется,
+        когда прежняя земля в ячейке не равна активной. </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Заметьте, что в
+      таблицах иногда используется число 16, а в таблице
+      NotEqualTable и больше. Число 16 указывает, что текстура
+      не изменится в результате наших воздействий.
+      Честно говоря, я просто не помню зачем я вводил
+      числа больше 16-ти, я написал эту программу год
+      назад. В дальнейшем в теле модуля Culculate я от этих
+      чисел отнимаю 16, а зачем - Бог его знает. Кому
+      охота - можете исправить, но программа работает.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Да, на первый
+      взгляд таблицы выглядят немного устрашающе. Кто-то
+      может спросить: Зачем громоздить такие кошмары?
+      Неужели не найти формулу для расчета? Ведь так
+      будет намного компактнее. Но я отвечу, что
+      программы на ассемблере выглядят тоже
+      страшновато, зато работают намного быстрее, чем
+      на других языках. Может и есть формула, но я
+      уверен, что она непростая, а стало быть работать
+      будет намного медленнее чем простое обращение к
+      массиву.</font></p>
+      <p><font face="Courier New, Courier, mono" size="2">Модуль <b>Culculate</b>(X,Y :
+      Integer; BrushIndex : Integer);</font></p>
+      <p><font face="Courier New, Courier, mono" size="2">procedure TMatrix5.Culculate(X,Y :
+      Integer ; BrushIndex : Integer ); <br>
+      var<br>
+      i : Integer; <br>
+      BaseIndex, AdditionalIndex : Integer; <br>
+      Begin // Заполнить матрицу считав значения с карты <br>
+      Self.Fill(X,Y); <br>
+      if BrushIndex = 3 then // Если рисуем переходной землей </font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">begin <br>
+        Vector[12] := 15;// Заносим центральный элемент <br>
+        for i := 0 to 24 do</font></p>
+        <blockquote>
+          <p><font face="Courier New, Courier, mono" size="2">begin // Получить тип
+          земли в виде индекса(0,1,2) <br>
+          BaseIndex := GetBaseIndex(Vector[i]); <br>
+          // и прежний номер переходной текстуры <br>
+          AdditionalIndex := GetAdditionalIndex(Vector[i]); <br>
+          // Если число в таблице BasicTable не равно 16 то,<br>
+          // к индексу типа земли умноженному на 16 <br>
+          // прибавляем новое смещение <br>
+          // и заносим в Vector<br>
+          // ,иначе ничего не меняется<br>
+          if BasicTable[i,AdditionalIndex] &lt;&gt; 16 then Vector[i] := BaseIndex*16 +
+          BasicTable[i,AdditionalIndex];<br>
+          end; </font></p>
+        </blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">end { Конец обработки
+        варианта &quot;Переходная земля&quot;}<br>
+        else // Иначе, если рисуем не переходной землей </font></p>
+        <blockquote>
+          <p><font face="Courier New, Courier, mono" size="2"><br>
+          begin <br>
+          Vector[12] := BrushIndex*16;// Заносим центральный элемент <br>
+          for i := 0 to 24 do </font></p>
+          <blockquote>
+            <p><font face="Courier New, Courier, mono" size="2">begin // Получить тип
+            земли в виде индекса(0,1,2) <br>
+            BaseIndex := GetBaseIndex(Vector[i]); <br>
+            // и прежний номер переходной текстуры <br>
+            AdditionalIndex := GetAdditionalIndex(Vector[i]); <br>
+            // Если прежняя земля имеет тот же тип, что и
+            активная <br>
+            if BaseIndex = BrushIndex then </font></p>
+            <blockquote>
+              <p><font face="Courier New, Courier, mono" size="2"><br>
+              begin <br>
+              // Если число в таблице EqualTable не равно 16 то, <br>
+              // к индексу типа земли умноженному на 16 <br>
+              // прибавляем новое смещение <br>
+              // и заносим в Vector <br>
+              // ,иначе ничего не меняется <br>
+              if EqualTable[i,AdditionalIndex] &lt;&gt; 16 then Vector[i] := BaseIndex*16 +
+              EqualTable[i,AdditionalIndex]; <br>
+              end </font></p>
+              <p><font face="Courier New, Courier, mono" size="2">else // Если заменяемая
+              и замещающая земля имеют разные типы <br>
+              begin // Если число в таблице NotEqualTable не равно 16 то, <br>
+              // к индексу типа земли умноженному на 16 <br>
+              // прибавляем новое смещение <br>
+              // и заносим в Vector <br>
+              // ,иначе ничего не меняется<br>
+              if NotEqualTable[i,AdditionalIndex] &lt; 16 then Vector[i] := BaseIndex*16 +
+              NotEqualTable[i,AdditionalIndex] else if NotEqualTable[i,AdditionalIndex] &gt; 16 then
+              Vector[i] := BrushIndex*16+ NotEqualTable[i,AdditionalIndex] - 16;<br>
+              end;</font></p>
+            </blockquote>
+            <p><font face="Courier New, Courier, mono" size="2"><br>
+            end; </font></p>
+          </blockquote>
+          <p><font face="Courier New, Courier, mono" size="2">end;</font></p>
+        </blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">end; </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Разберем все по
+      полочкам: Первая строчка Self.Fill(X,Y); заполняет
+      матрицу 5х5 значениями считанными с карты. Дальше
+      следует такой кусок кода: </font></p>
+      <p><font face="Courier New, Courier, mono" size="2">if BrushIndex = 3 then<br>
+      begin</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2"><br>
+        Vector[12] := 15; <br>
+        for i := 0 to 24 do <br>
+        begin <br>
+        BaseIndex := GetBaseIndex(Vector[i]);<br>
+        AdditionalIndex := GetAdditionalIndex(Vector[i]);<br>
+        if BasicTable[i,AdditionalIndex] &lt;&gt; 16 then Vector[i] := BaseIndex*16 +
+        BasicTable[i,AdditionalIndex]; <br>
+        end; </font></p>
+      </blockquote>
+      <p><font face="Courier New, Courier, mono" size="2">end</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">В нем мы
+      рассчитываем случай, когда рисуем переходным
+      типом земли - ЗЕМЛЯ(if BrushIndex = 3 then). Строка Vector[12] := 15;
+      заносит в центральный элемент №12 цельную
+      текстуру активной земли, для нашего случая это
+      могут быть числа 15,31,47. Как мы помним именно под
+      этими номерами в нашем ImageListe находятся цельные
+      текстуры ЗЕМЛИ. Далее в цикле, для каждого
+      элемента взятого с карты и положенного в матрицу
+      ( в данном виде - в вектор, для упрощения
+      организации цикла) получаем индекс типа земли(BaseIndex
+      := GetBaseIndex(Vector[i]);) , получаем номер переходной
+      текстуры (AdditionalIndex := GetAdditionalIndex(Vector[i]);), и лезем в
+      соответсвующую таблицу ( входные параметры
+      которой это номер ячейки i и номер переходной
+      текстуры AdditionalIndex). Если на выходе получим число
+      16, то ничего не меняем, если другое число, то
+      индекс типа земли умножаем на 16 - это номер
+      цельной текстуры данного типа земли, и
+      прибавляем число полученное из таблицы - это
+      новый номер переходной текстуры.</font></p>
+      <p align="center"><img src="2d_8_101.gif" width="606" height="132"></p>
+      <p align="center"><font color="#33ccff" face="Times New Roman, Times, serif" size="3">Рисунок
+      8</font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">Как видно из
+      рисунка 8, если в матрице 5х5 лежит в некоторой
+      ячейке число 20, то индекс переходной текстуры
+      будет равен 4 ( 20 mod 16), индекс типа земли равен 1 (20
+      div 16), а индекс цельной текстуры земли равен 16 (
+      Индекс типа земли * 16 ). Номер ячейки, где лежит
+      число 20, и индекс переходной текстуры (4) - входные
+      параметры в таблицу BaseTable. Если мы на выходе
+      получим, к примеру число 8, то нужно к индексу
+      цельной текстуры прибавить 8, чтобы получить
+      индекс новой переходной текстуры. ( Индекс типа
+      земли * 16 + 8 = 24 ) Это будет новое число, которое мы
+      поместим на карту.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Следующий кусок
+      кода: </font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">else </font></p>
+        <p><font face="Courier New, Courier, mono" size="2">begin<br>
+        Vector[12] := BrushIndex*16; <br>
+        for i := 0 to 24 do <br>
+        begin <br>
+        BaseIndex := GetBaseIndex(Vector[i]); <br>
+        AdditionalIndex := GetAdditionalIndex(Vector[i]); <br>
+        if BaseIndex = BrushIndex then begin </font></p>
+        <blockquote>
+          <p><font face="Courier New, Courier, mono" size="2">if EqualTable[i,AdditionalIndex]
+          &lt;&gt; 16 then Vector[i] := BaseIndex*16 + EqualTable[i,AdditionalIndex]; <br>
+          end <br>
+          else <br>
+          begin <br>
+          if NotEqualTable[i,AdditionalIndex] &lt; 16 then Vector[i] := BaseIndex*16 +
+          NotEqualTable[i,AdditionalIndex] <br>
+          else <br>
+          if NotEqualTable[i,AdditionalIndex] &gt; 16 then Vector[i] := BrushIndex*16+
+          NotEqualTable[i,AdditionalIndex] - 16;<br>
+          end; <br>
+          end; <br>
+          end;</font></p>
+        </blockquote>
+        <p><font face="Courier New, Courier, mono" size="2"><br>
+        end;</font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Делает все то же
+      самое, для двух оставшихся случаев. Голубым
+      выделены те строчки, которые по моему мнению
+      можно удалить, но при этом исправить в таблице
+      NotEqualTable числа больше 16 на эти же числа минус 16. Все,
+      с технологией покончено!!! </font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Следующие страницы
+      я посвящу некоторым особенностям вывода карты на
+      экран в моем примере. Кого интересовала только
+      технология расчета плавных перетеканий текстур,
+      дальше, если нет желания, могут не читать.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Как я уже говорил, в
+      примере я использовал компоненты для DirectX,
+      написанные каким-то хорошим китайцем. Имя у него
+      соответственно самое что ни на есть китайское, по
+      этому я его не помню. </font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Конкретно для
+      вывода карты на экран использовались компоненты
+      TDXDraw, TDXImageList и TDXTimer.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3"><b>TDXDraw</b> - в
+      основном используется для переключения страниц
+      видеопамяти. Что это такое объяснять не буду.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3"><b>TDXImageList</b> - хранит
+      в качестве элементов файлы со спрайтами
+      выстроенными в одну цепочку. Соответственно к
+      конкретному спрайту можно обратится по имени
+      файла и номеру спрайта в нем. Также в этом
+      компоненте есть две переменные PatternWidth, PatternHeight
+      для указания ширины и высоты спрайтов, и
+      переменная TransparentColor для указание прозрачного
+      цвета.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3"><b>TDXTimer</b> -
+      используется для генерации события DXTimerTimer с
+      частотой заданной или рассчитанной в ходе
+      выполнения программы.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Итак, текстуры
+      выполнены в виде одного файла внутри которого
+      выстроены в цепочку в соответствии с принципами
+      изложенными выше и помещены в TDXImageList под именем
+      &quot;West&quot;. ( TDXImageList позволяет находить файлы
+      внутри себя по их имени) </font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Нам нужно вывести
+      на экран некоторую часть карты, причем карта наша
+      состоит из кусочков и нам нужно вывести только те
+      кусочки, которые видны в данный момент.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Можно сделать окно
+      вывода кратным размеру текстур, а скроллинг
+      организовать потекстурно с шагом равным ширине/высоте
+      текстуры, тогда нет проблем, но это смотрится не
+      очень красиво. Наша задача состоит в том, чтобы
+      организовать скроллинг попиксельно и дать
+      возможность задать окно вывода любого размера.
+      Для того, чтобы это сделать нужно рассчитать
+      сколько текстур по горизонтали и сколько текстур
+      по вертикали мы должны отрисовать в окне вывода,
+      включая и те текстуры которые в данный момент
+      времени видны только частично.</font></p>
+      <p align="center"><img src="2d_8_110.gif" width="726" height="611"></p>
+      <p align="center"><font color="#33ccff" face="Times New Roman, Times, serif" size="3">Рисунок
+      9</font></p>
+      <p align="left"><font face="Times New Roman, Times, serif" size="3">На рисунке 9
+      клеточками изображена карта. Черным контуром
+      показано окно вывода. Как видно - не все ячейки
+      карты целиком влезли в окно, но их тоже надо
+      отрисовать. Положение окна вывода на карте
+      определяется координатами его левого верхнего
+      угла относительно карты.( TopLeftCorner.x, TopLeftCorner.y) Их
+      величины в пикселях(Нам же надо сделать
+      попиксельный скроллинг) При создании новой карты
+      они приравниваются нулям, и в дальнейшем
+      определяются положением полос прокрутки. Вот
+      часть кода:</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">procedure TMainForm.RedrawMap;<br>
+        Var <br>
+        OffsPoint : TPoint; <br>
+        TopLeftElem : TPoint; <br>
+        ElemCount : TPoint; <br>
+        HelpVar1 : Integer; <br>
+        HelpVar2 : Integer;<br>
+        i,j : Integer; <br>
+        x,y : Integer; <br>
+        Index : Integer; <br>
+        begin </font></p>
+        <p><font face="Courier New, Courier, mono" size="2">OffsPoint.x := TopLeftCorner.x mod
+        ElemWidth; <br>
+        OffsPoint.y := TopLeftCorner.y mod ElemHeight; </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Данные две строчки
+      позволяют получить смешение левого верхнего
+      угла экрана внутри левой верхней ячейки(См.
+      рисунок 9). Глобальные переменные ElemWidth,ElemHeight это
+      высота и ширина ячейки(текстуры). Теперь нам
+      необходимо получить номер строки и столбца
+      ячейки где находится левый верхний угол окна
+      вывода: </font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">TopLeftElem.x := TopLeftCorner.x div
+        ElemWidth; <br>
+        TopLeftElem.y := TopLeftCorner.y div ElemHeight;</font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Далее необходимо
+      рассчитать сколько у нас целых текстур влезает в
+      окно вывода по вертикали и горизонтали:</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">HelpVar1 := DXDraw.Width - (ElemWidth
+        - OffsPoint.x ); <br>
+        HelpVar2 := DXDraw.Height - (ElemHeight - OffsPoint.y );<br>
+        ElemCount.x := HelpVar1 div ElemWidth; <br>
+        ElemCount.y := HelpVar2 div Elemheight;</font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Где DXDraw.Width, DXDraw.Height
+      - это ширина и высота окна вывода. Если у нас есть
+      нецелые текстуры снизу и справа окна вывода, то
+      добавляем к ElemCount.x, ElemCount.y по единице:</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">if (HelpVar1 mod ElemWidth) &gt; 0
+        Then Inc( ElemCount.x );<br>
+        if (HelpVar2 mod ElemHeight) &gt; 0 Then Inc( ElemCount.y ); </font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Далее следует
+      вывод на экран:</font></p>
+      <blockquote>
+        <p><font face="Courier New, Courier, mono" size="2">For j := 0 to ElemCount.y do <br>
+        For i := 0 to ElemCount.x do <br>
+        Begin // Вычислить координаты куда выводить <br>
+        X := i * ElemWidth - OffsPoint.x; <br>
+        Y := j * ElemHeight - OffsPoint.y;<br>
+        // Вычислить номер текстуры <br>
+        Index := GetElement(TopLeftElem.X + i,TopLeftElem.Y + j);<br>
+        // Вывести текстуру на экран<br>
+        // Учтите что LandType это не тип земли, а тип мира <br>
+        // Snow,West и т.д. <br>
+        ImageList.Items.Find(LandType).Draw(DXDraw.Surface,x,y,Index);<br>
+        end;</font></p>
+      </blockquote>
+      <p><font face="Times New Roman, Times, serif" size="3">Строка :Index :=
+      GetElement(TopLeftElem.X + i,TopLeftElem.Y + j); обращается к матрице
+      карты и считывает оттуда номер текстуры,
+      следующая строка выводит ее на экран.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Возможно вы
+      спросите: А как же нецелые текстуры слева и
+      сверху окна вывода? Их-то ты не учел? Посмотрите
+      на кусок кода отвечающий за вывод на экран.
+      Циклическая переменная инициализируется от 0 до
+      ElemCount.(x,y). Это значит, что всегда выводится на одну
+      текстуру больше, чем в ElemCount, а если слева и сверху
+      нет нецелых текстур, то переменная OffsPoint.(x,y) будет
+      равна размерам ячейки. Переменные HelpVar(1,2) станут
+      на размер ячейки меньше, и следовательно
+      переменные ElemCount.(x,y) станут на единицу меньше. Все.
+      Смотрите исходники в модуле Main.pas.</font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">В программе не
+      отловлены все баги. Например определен только
+      один тип мира &quot;West&quot;, да и текстуры нарисованы
+      чисто схематически. </font></p>
+      <p><font face="Times New Roman, Times, serif" size="3">Если данный
+      материал оказался чем-нибудь полезен для Вас, то
+      благодарности отсылайте Дмитрию Мироводину.
+      Если бы не он я бы никогда не написал эту статью.
+      Если возникнут какие- нибудь вопросы пишите мне
+      по адресу: Иван Дышленко <a href="mailto:as@vc1.rgec.spb.su">as@vc1.rgec.spb.su</a></font></p>
+      <p><font face="Times New Roman, Times, serif">Исходные тексты Вы
+      можете скачать <a href="http://www.mda.hotmail.ru/source/2d_8.zip">тут</a>,
+      а библиотеку DelphiX найдете в разделе <a
+      href="http://www.mda.hotmail.ru/lib/delphix.zip">Lib</a></font></p>
+    </blockquote>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+
+<div align="center">
+<hr width="700">
+
+<SCRIPT language='JavaScript'> var loc = ''; </SCRIPT>
+<SCRIPT language='JavaScript1.4'>try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+<SCRIPT language='JavaScript'>
+ document.write("<SC"+"RIPT language='JavaScript' src='http://ad.strict.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2850676&pg=3&r=js&ssi=nofillers&vbn=353&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>");
+</SCRIPT>
+</div>
+</body>
+</html>
+
+<!-- This document saved from http://www.sources.ru/delphi/delphi_editor_2d_strategic.shtml -->

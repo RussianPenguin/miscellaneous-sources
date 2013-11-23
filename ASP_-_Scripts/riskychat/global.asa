@@ -1,0 +1,60 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server> 
+
+Sub Session_OnStart
+	Session.Timeout = 1
+End Sub
+
+Sub Session_OnEnd
+	If Application("Status") = 1 Then
+		If Session("nome_utente") <> "" Then
+			colore_utente = Session("colore_utente")
+			nome_utente = Session("nome_utente")
+			LocalLista = Application("StoredLista")
+
+			LocalEvent =  "<I><B>" & Session("nome_utente") & "</B><BR> has timed OUT<BR>at " & Now & "</I>"
+
+			a = 0
+			While a <= 8
+				If LocalLista(a,0) = "<FONT COLOR=#" & colore_utente & ">" & nome_utente & "</FONT>" Then
+					c = a
+					While c <= 8
+						LocalLista(c,0) = LocalLista(c+1,0)
+						LocalLista(c,1) = LocalLista(c+1,1)
+						c = c + 1
+						Wend
+					End If
+				a = a + 1
+			Wend
+			Session("nome_utente") = ""
+			Session("logged_in") = "false"
+			Session("colore_utente") = ""
+
+			Application.Lock
+			Application("StoredEvent") = LocalEvent
+			Application("StoredLista") = LocalLista
+			Application.Unlock
+
+			ContaLista = Application("StoredLista")
+			LocalContaUtenti = 0
+			For u = 0 To 9
+				If ContaLista(u,0) <> "none" Then
+					If ContaLista(u,0) <> "" Then
+						LocalContaUtenti = LocalContaUtenti + 1
+					End If
+				End If
+			Next
+			percorso = Server.MapPath("/") & "/chatchat/conta_file.txt"
+
+			Set CF = CreateObject("Scripting.FileSystemObject") 
+			Set conta_file = CF.CreateTextFile(percorso, True)
+			conta_file.WriteLine(LocalContaUtenti)
+			conta_file.Close
+		Else
+			'LocalEvent =  "nessuno has timed out <BR>at " & Now & "</I>"
+			'Application.Lock
+			'Application("StoredEvent") = LocalEvent
+			'Application.Unlock
+		End If
+	End If
+End Sub
+</SCRIPT>

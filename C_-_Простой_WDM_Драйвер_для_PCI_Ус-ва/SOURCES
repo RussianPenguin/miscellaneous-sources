@@ -1,0 +1,27 @@
+MAJORCOMP=ntos
+MINORCOMP=osr
+
+TARGETNAME=pci-wdm
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=NTPNP
+
+INCLUDES=$(BASEDIR)\inc
+
+SOURCES=pci_sample.c \
+		isr_dpc.c \
+		read_write.c \
+		create_close.c \
+		cancel.c \
+		misc.c \
+		pnp.c
+
+PRECOMPILED_INCLUDE=osr-pci.h
+PRECOMPILED_PCH=osr-pci.pch
+PRECOMPILED_OBJ=osr-pci.obj
+
+BROWSER_INFO=1
+BROWSERFILE=WDMPCI.BSC
+
+NTTARGETFILES=osrwdmpnp.inf
+

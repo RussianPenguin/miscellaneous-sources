@@ -1,0 +1,30 @@
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+Sub Application_OnStart
+	Dim Stats(100, 3)
+	Dim TempArray(50)
+	Application( "Stats"      ) = Stats
+	Application( "Talk"       ) = TempArray
+	Application( "TPlace"     ) = 0
+	Application( "SwearWords" ) = Split("FUCK SHIT ASSHOLE NIGGER IDIOT CUNT KUNT ARSE KAFFIR HONKY WETBACK", " ")
+End Sub
+
+Sub Session_OnStart
+	Session.Timeout      = 5
+	Session( "Start"   ) = Now
+	Session( "Refresh" ) = "7"
+End Sub
+
+Sub Session_OnEnd
+	Dim localStats, i
+	Application.Lock
+	localStats = Application( "Stats" )
+	For i = 0 to UBound( localStats, 2 )
+		If localStats( 0, i ) = Session("ID") Then
+		localStats( 0, i ) = ""
+		Exit For
+	End If
+	Next
+	Application( "Stats" ) = localStats
+	Application.UnLock
+End Sub
+</SCRIPT>

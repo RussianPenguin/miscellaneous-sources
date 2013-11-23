@@ -1,0 +1,50 @@
+;
+[Version]
+Signature="$WINDOWS NT$"
+Class=OsrHardware
+ClassGuid={cfb15040-5bc7-11d3-b194-0060b0efd4aa}
+Provider="OSR Open Systems Resources, Inc."
+
+[SourceDisksNames]
+1=%DiskId%
+
+[SourceDisksFiles]
+pci-wdmsample.sys=1
+
+[ClassInstall32]
+Addreg=OsrHwClass
+
+[OsrHwClass]
+HKR,,,,%ClassName%
+HKR,,Icon,,"-5"
+
+[DestinationDirs]
+DefaultDestDir=12
+
+[Manufacturer]
+%Mfg%=MfgDeviceSection
+
+[MfgDeviceSection]
+%DeviceDesc% = OsrAmccPci, PCI\VEN_10E8&DEV_4750
+
+[OsrAmccPci]
+CopyFiles=@pci-wdmsample.sys
+
+[OsrAmccPci.Services]
+AddService = pci-wdmsample,%SPSVCINST_ASSOCSERVICE%,Amcc_Service_Inst
+
+[Amcc_Service_Inst]
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType          = %SERVICE_MANUAL_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary = %12%\pci-wdmsample.sys 
+
+[Strings]
+ClassName ="OSR Sample Hardware Drivers"
+DeviceDesc = "OSR AMCC WDM Pci Sample Driver V1.3"
+DiskId = "Install disk (1)"
+Mfg = "Open Systems Resources, Inc."
+SPSVCINST_ASSOCSERVICE = 0x00000002
+SERVICE_KERNEL_DRIVER  = 1
+SERVICE_MANUAL_START    = 3
+SERVICE_ERROR_NORMAL  = 1

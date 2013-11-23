@@ -1,0 +1,11 @@
+BODY { background-color: #FFFFFF; 
+       color: #000000; }
+P, TD, LI { font-size: 12px; }
+.forms { font-face: arial;
+         font-size: 12px; }
+.tab { background-color: #F5F5F5; }
+A:link { color: #0B0066; }
+A:visited { color: #0B0066; }
+A:active { color: #0B0066; }
+A:hover { color: #000000;
+          text-decoration: none; }

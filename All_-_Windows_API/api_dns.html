@@ -1,0 +1,548 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<style type="text/css">
+A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt}
+.b {text-decoration: none; color:#FF0000;} 
+.b:hover {color:#7785FF;}
+.c {text-decoration: none; color:#000000;} 
+.c:hover {color:#FFFFFF;}
+ pre {color: blue;}
+TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+<meta NAME="RESOURCE-TYPE"
+CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+<title>Информационный сервер для программистов - исходники со всего света.</title>
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+
+
+
+<!-- Spidersoft WebZIP Banner Ad Insert -->
+<!-- For removal instructions see:  http://www.spidersoft.com/webzip/help/noads.asp  -->
+
+<SCRIPT FOR=window EVENT=onload LANGUAGE="JScript">
+  initAd();
+</SCRIPT>
+
+<script language="JScript">
+<!--
+
+function initAd() {
+  document.all.AdLayer.style.posTop = -200;
+  document.all.AdLayer.style.visibility = 'visible'
+  MoveLayer('AdLayer');
+}
+
+function MoveLayer(layerName) {
+  var x = 10;
+  var y = 10;
+  var diff = (document.body.scrollTop + y - document.all.AdLayer.style.posTop)*.40;
+  var y = document.body.scrollTop + y - diff;
+  eval("document.all." + layerName + ".style.posTop =  y");
+  eval("document.all." + layerName + ".style.posLeft = x");
+  setTimeout("MoveLayer('AdLayer');", 60);
+}
+
+if (navigator.onLine){
+  document.write("<div bgcolor=#000000 style='height=70px;'></div>");
+  document.write("<div id=AdLayer style='position:absolute; width:100%; height:80px; z-index:20; visibility:hidden;'>");
+  document.write("<IFRAME SRC='http://www.spidersoft.com/ads/bwz468_60.asp' width=100% height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></IFRAME>");
+  document.write("</div>");
+}
+ //-->
+</script>
+
+<!-- /Spidersoft WebZIP Banner Ad Insert -->
+
+
+
+
+<form action="/cgi-bin/sources/search/search.pl" method="get" align="left">
+  <input type="hidden" name="stpos" value="0"><table border="0" cellpadding="0"
+  cellspacing="0" width="750">
+    <tr>
+      <td valign="top" rowspan="2"><table border="0" cellpadding="0" cellspacing="0" width="287">
+        <tr>
+          <td colspan="2" bgcolor="#A5E4A7" valign="middle" align="center"><b>WWW.ИСХОДНИКИ.РУ</b></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">cpp.sources.ru</font></b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">java.sources.ru</font></b></td>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>web.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>soft.sources.ru</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C0C0C0" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>jdbc.sources.ru</b></font></td>
+          <td bgcolor="#A5E4A7" valign="middle" align="center"><font face="Tahoma"
+          style="font-size: 8pt" size="-1"><b>asp.sources.ru</b></font></td>
+          <td bgcolor="#000080" valign="middle" align="center"><b><font face="Tahoma"
+          style="font-size: 8pt" size="-1" color="#FFFFFF">api.sources.ru</font></b></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td><font style="font-size: 8pt" size="2" face="Tahoma">&nbsp; Поиск по
+          программированию :<br>
+          </font>&nbsp; <input type="text" size="13" name="query"> <input type="submit"
+          value="Поиск"><font size="1"><input
+          TYPE="Radio" NAME="stype" VALUE="AND" checked>&quot;AND&quot; <input TYPE="Radio"
+          NAME="stype" VALUE="OR">&quot;OR&quot;</font>
+
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ "&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+</td>
+        </tr>
+      </table>
+      </td>
+      <td align="center"><font style="font-size: 15pt" color="#4904B1" size="4"
+      face="Times New Roman">Информационный сервер</font></td>
+    </tr>
+    <tr>
+      <td>
+
+
+<!-- LBE -->
+<script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://www.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://www.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE ismap></a><br>");
+// -->
+</script>
+<noscript>
+                                                                                                                                                                <br>
+</noscript>
+<!-- LBE -->
+
+
+
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><table border="0" cellpadding="0" cellspacing="1" width="100%">
+        <tr>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a
+          href="../www.sources.html"><font color="#000000" size="2">На главную</font></a></td>
+          <td align="center" width="20%" bgcolor="#E0E0C6"><a
+          href="../subscribe.html"><font color="#000000" size="2">Подписаться на новости</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../cgi-bin/sources/Ultimate.pl"><font color="#000000" size="2">Форум</font></a></td>
+          <td align="center" width="11%" bgcolor="#E0E0C6"><a href="../books.html"><font color="#000000" size="2">Книги</font></a></td>
+          <td align="center" width="7%" bgcolor="#E0E0C6"><a href="http://chat.vidcenter.ru:82/"><font color="#000000" size="2">Чат</font></a></td>
+          <td align="center" width="13%" bgcolor="#E0E0C6"><a href="http://www.countries.ru/"><font color="#000000" size="2">Страны мира</font></a></td>
+          <td align="center" width="29%" bgcolor="#E0E0C6"><b>6</b> пользователей на сервере.
+</td>
+        </tr>
+      </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+
+<p>&nbsp;</p>
+
+<p align="justify"><font face="Times New Roman" size="2">В соответствии с
+правилами Интернет, каждой зоне соответствует
+один первичный (primary) и один или несколько
+вторичных (secondary) серверов. Вторичные серверы
+вступают в работу, когда первичный оказывается
+перегруженным или выходит из строя.</font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Исходная
+информация для первичного сервера DNS хранится на
+его дисках, то есть загружается при запуске из
+файлов. Вторичные серверы получают информацию от
+первичного. Процесс получения информации
+вторичным сервером от первичного называется <i>передачей
+зоны</i> (zone transfer). Как правило, обновление
+информации вторичного сервера (передача зоны)
+происходит один раз за несколько часов.</font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Первичные и
+вторичные серверы DNS независимы. Информация,
+которую они содержат, как правило, избыточна.
+Цель наличия нескольких серверов DNS в одной и той
+же зоне — обеспечить надежность
+функционирования. Сбой в работе одного из
+серверов DNS не повлечет за собой полной остановки
+работы этой службы.</font> </p>
+
+<p><font face="Arial" size="4"><b>Преобразование имен в IP-адреса</b></font>
+</p>
+
+<p align="justify"><font face="Times New Roman" size="2">Идеальная картина
+работы преобразователя адресов значительно
+отличается от реального положения вещей. На
+самом деле, программа-клиент (преобразователь)
+связывается с сервером имен из своей зоны. Сервер
+рассматривает запрос, чтобы выяснить, в каком
+домене находится указанное там имя и кто его
+обслуживает. Если указанный домен входит в зону
+ответственности этого сервера, сервер
+преобразует имя в IP-адрес, пользуясь
+собственными таблицами, а затем отправляет ответ
+клиенту.</font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Если сервер не в
+состоянии обслужить запрос, то есть домен
+находится вне его зоны, дальнейшее его поведение
+зависит от типа запроса клиента. Преобразователь
+устанавливает один из двух типов запросов.
+Сперва он просит сервер произвести полное
+преобразование. В официальной терминологии этот
+тип запроса называется <i>«рекурсивное
+выполнение*</i> (recursive resolution). Если клиент
+запрашивает рекурсивное выполнение и сервер не в
+состоянии выполнить преобразование, он должен
+обратиться к тому серверу, который сможет
+выполнить запрос, а затем возвращает ответ
+клиенту.</font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Второй тип
+запроса — <i>выполнение методом итераций</i> (iterative
+resolution). Запрос на выполнение методом итераций
+просит сервер либо выполнить преобразование,
+либо, в случае неудачи, указать клиенту следующий
+сервер, к которому можно обратиться. Когда сервер
+получает запрос на выполнение методом итераций,
+он либо успешно преобразует имя в IP-адрес, либо
+его ответ содержит адрес следующего сервера,
+который, возможно, имеет больше информации. При
+этом, как видим, наш сервер не делает полного
+преобразования для клиента.</font> </p>
+
+<p><font face="Arial" size="4"><b>Взаимодействие между
+серверами DNS</b></font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Серверу DNS не
+обязательно знать имена или IP-адреса остальных
+серверов в Интернет. Достаточно располагать
+информацией о корневых серверах. Файлы
+конфигурации каждого первичного сервера
+содержат IP-адреса корневых серверов. Корневые
+серверы должны знать имена и IP-адреса каждого
+сервера DNS второго уровня. В табл. 9.2 приведен
+список корневых серверов DNS по состоянию на май
+1994 г.</font> </p>
+
+<p><font face="Times New Roman" size="2"><i>Таблица 9.2. Корневые
+серверы системы имен доменов Интернет по
+состоянию на май 1994 г.</i></font> </p>
+
+<table align="left" border="0">
+  <tr>
+    <td><font face="Times New Roman" size="2">Имя хоста</font> </td>
+    <td><font face="Times New Roman" size="2">Сетевой адрес</font> </td>
+    <td><font face="Times New Roman" size="2">Программа-сервер</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">NS.NIC.DDN.MIL</font> </td>
+    <td><font face="Times New Roman" size="2">192.112.36.4</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">AOS.BRL.MIL</font> </td>
+    <td><font face="Times New Roman" size="2">128.63.4.82 26.3.0.29 192.5.25.82</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">C.NYSER.NET</font> </td>
+    <td><font face="Times New Roman" size="2">192.33.4.12</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">TERP.UMD.EDU</font> </td>
+    <td><font face="Times New Roman" size="2">128.8.10.90</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">NS.NASA.GOV</font> </td>
+    <td><font face="Times New Roman" size="2">192.52.195.10 128.102.16.10</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">NIC.NORDU.NET</font> </td>
+    <td><font face="Times New Roman" size="2">192.36.148.17</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">NS1.ISI.EDU</font> </td>
+    <td><font face="Times New Roman" size="2">128.9.0.107</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">NS.ISC.ORG</font> </td>
+    <td><font face="Times New Roman" size="2">192.5.5.241</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+  <tr>
+    <td><font face="Times New Roman" size="2">NS.INTERNIC.NET</font> </td>
+    <td><font face="Times New Roman" size="2">198.41.0.4</font> </td>
+    <td><font face="Times New Roman" size="2">bind (UNIX)</font> </td>
+  </tr>
+</table>
+
+<p><br clear="all">
+</p>
+
+<p align="justify"><font face="Arial" size="2"><i><b>Примечание:</b></i>
+Наиболее свежая информация о корневых серверах
+DNS находится в файле netinfo/root-servers.txt по адресу
+nic.ddn.mil. Файл можно получить при помощи анонимного
+ftp.</font> </p>
+
+<p><font face="Arial" size="4"><b>Как устроен преобразователь
+адресов?</b></font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Специальное
+программное обеспечение, работающее на стороне
+клиента в составе DNS, называется
+«преобразователь» (resolver) или «преобразователь
+имен». Windows API обеспечивает выполнение двух
+функций преобразователя: gethos-tbyaddr и gethostbyname. Обе
+функции получают информацию о сетевом
+компьютере. Прикладные программы пользуются
+этими функциями, чтобы преобразовать IP-адрес или
+имя компьютера. В обоих случаях функции
+связываются с серверами DNS для выполнения этого
+преобразования. Другими словами, программа
+вызывает эти функции, чтобы преобразовать
+IP-адрес в имя или наоборот. Функция, в свою
+очередь, открывает коммуникационный канал и
+посылает запрос к серверу имен доменов. Получив
+необходимую информацию, она закрывает канал и
+возвращает полученное значение вызывавшей
+прикладной программе.</font></p>
+
+<p align="justify"><font face="Times New Roman" size="2">Рассмотрим
+следующую небольшую программу, QLookup (Quick Lookup). Она
+демонстрирует основные шаги, которые нужно
+предпринять для обращения к серверу имен
+доменов. Из программы выброшено все, не
+относящееся к делу. Оставлены только детали,
+необходимые для работы с функциями gethostbyaddr и
+gethostbyname. Жестко заданные значения переменных и
+панели сообщений освобождают нас от
+необходимости программировать пользовательский
+интерфейс Windows. Программа подробно обсуждается в
+этом разделе, и здесь же приведен ее исходный
+текст:</font> </p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+    Листинг 1 (QLOOKUP.CPP)</b></font></td>
+  </tr>
+</table>
+
+<pre>
+#include &quot;..\winsock.h&quot;             // Файл заголовков Winsock 
+#define PROG_NAME &quot;Simple DNS Lookup&quot; 
+#define HOST_NAME &quot;CERFNET.COM&quot;     // Может быть любым (настоящим именем компьютера 
+#define WINSOCK_VERSION 0х0101      // Необходим Winsock версии 1.1 
+#define PF_INET_LENGTH 4            // Длина адреса в протоколах Интернет всегда равна 4 байтам 
+#define HOST_ADDR &quot;129.79.26.27&quot;    // winftp.cica.indiana.edu 
+
+int PASCAL WinMain(HANDLE hInstance, HANDLE hPrevInstance, LPSTR lpszCmdParam, int nCmdShow) 
+{ 
+    WSADATA wsaData;     // Сведения о реализации Winsock 
+    LPHOSTENT lpHostEnt; // Структура с информацией о сетевом компьютере Интернет 
+    DWORD dwIPAddr;      // IP-адрес в виде беззнакового целого двойной длины 
+    LPSTR szIPAddr;      // IP-адрес в виде &quot;десятичное с точкой&quot; 
+
+    if (WSAStartup(WINSOCK_VERSION, &amp;wsaData)) 
+        MessageBox(NULL, &quot;Could not load Windows Sockets
+             DLL.&quot;, PROG_NAME, MB_OK|MB_ICONSTOP); 
+    else {               // Преобразуем имя сетевого хоста 
+
+        lpHostEnt = gethostbyname(HOST_NAME); 
+
+        if (!lpHostEnt) 
+            MessageBox(NULL, &quot;Could not get IP address!&quot;,
+                 HOST_NAME, MB_OK|MB_ICONSTOP);
+        else {           // IP-адрес преобразуется в нотацию &quot;десятичное с точкой&quot; 
+            szIPAddr = inet_ntoa(*(LPIN_ADDR)*(lpHostEnt-&gt;h_addr_list));
+            MessageBox(NULL, szIPAddr, IpHostEnt-&gt;h_name, 
+                 MB_OK|MB_ICONINFORMATION);
+        }  
+
+        // Формат &quot;десятичное с точкой&quot; преобразуется в 32-разрядный IP-адрес
+
+        dwIPAddr = inet_addr(HOST_ADDR); 
+
+        if (dwIPAddr == INADDR_NONE) 
+            MessageBox(NULL, &quot;Invalid Internet address!&quot;, 
+                 HOST_ADDR, MB_OK|MB_ICONSTOP);
+        else {           // Преобразуем IP-адрес 
+
+            lpHostEnt = gethostbyaddr((LPSTR) &amp;dwIPAddr, PF_INET_LENGTH, PF_INET); 
+
+            if (!lpHostEnt)
+                MessageBox(NULL, &quot;Could not get host name!&quot;, 
+                     HOST_ADDR, MB_OK|MB_ICONSTOP);
+            else 
+                MessageBox(NULL, lpHostEnt-&gt;h_name, 
+                     HOST__ADDR, MB_OK|MB_ICONINFORMATION);
+            }
+        }
+
+    WSACleanup();        // Программа освобождает занятые ресурсы
+                         // и завершается 
+    return(NULL);
+} 
+</pre>
+
+<p>&nbsp;</p>
+
+<p><font face="Times New Roman" size="2">Оператор в первой строчке
+листинга включает файл заголовков функций
+интерфейса Windows Sockets — WINSOCK.DLL.</font> </p>
+
+<p><font face="Times New Roman" size="2">#include &quot; . . Winsock.h&quot;</font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Вы знаете, что
+файл winsock.h необходимо включать в каждую
+программу, использующую интерфейс
+программирования Windows Sockets. В нем заданы
+константы и определены прототипы функций для
+всего Winsock API.</font> </p>
+
+<p><font face="Arial" size="3"><b>Значения констант</b></font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Сразу после
+оператора, включающего winsock.h, следуют пять
+операторов, задающих значения необходимых для
+работы констант:</font> </p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+    Листинг 2</b></font></td>
+  </tr>
+</table>
+
+<pre>
+#define PROG_NAME &quot;Simple DNS Lookup&quot;
+#define HOST_NAME &quot;CERFNET.COM&quot;         // Любое (настоящее) имя компьютера
+#define WINSOCK_VERSION 0х0101          // Необходим Winsock версии 1.1
+#define PF_INET_LENGTH 4                // Длина адреса в протоколах Интернет всегда равна 4 байтам
+#define HOST_ADDR &quot;129.79.26.27&quot;        // winftp.cica.indiana.edu
+
+
+</pre>
+
+<p align="justify"><font face="Times New Roman" size="2">WINSOCK_VERSION
+обозначает версию интерфейса Winsock (1.1). Константа
+AF_INET_LENGTH определяет длину (в байтах) адреса,
+указываемого в вызове функции gethostbyaddr. Эти
+константы используются во всех
+программах-примерах, приведенных в этой книге.</font>
+</p>
+
+<p align="justify"><font face="Times New Roman" size="2">Константа PROG_NAME
+определяет название (краткое описание)
+программы, которое можно использовать в
+дальнейшем. Если вы решите сменить имя программы,
+просто замените значение этой константы на
+другое.</font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">HOST_NAME и HOST_ADDR
+задают имя и адрес сетевого компьютера в
+Интернет. В их качестве можно использовать имя и
+адрес любого реально существующего сетевого
+компьютера.</font> </p>
+
+<p><font face="Arial" size="3"><b>Значения переменных</b></font> </p>
+
+<p align="justify"><font face="Times New Roman" size="2">Следующие
+несколько строк листинга QLookup начинают
+определение функции WinMain (она нужна для всех
+программ под Windows) и определяют три локальные
+переменные: dwIPAddr, wsaData и IpHostEnt.</font></p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="750" bgcolor="#A5E4A7"><font face="Tahoma" style="font-size: 10pt" size="-1"><b>&nbsp;
+    Листинг 3</b></font></td>
+  </tr>
+</table>
+
+<pre>
+int PASCAL WinMain(HANDLE hInstance, HANDLE hPrevInstance, LPSTR lpszCmdParam, int nCmdShow)
+{
+     WSADATA wsaData;       // Сведения о реализации Winsock
+     LPHOSTENT IpHostEnt;   // Структура с информацией о сетевом компьютере
+</pre>
+
+<p align="center"><br>
+<br>
+<br>
+<br>
+Продолжение следует .... </p>
+
+
+
+<hr>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="3" width="468">
+  <tr>
+    <td width="154"><!-- LBE_LITE --> <script>
+// <!--
+rand = Math.round((Math.random() * (10000 - 1)));
+document.write("<a href=http://lite.lbe.ru/cgi-bin/href/castle?" + rand + " target=_blank><img src=http://lite.lbe.ru/cgi-bin/banner/castle?" + rand + " width=468 height=60 border=0 alt=LBE_LITE ismap></a><br>");
+// -->
+</script> <noscript> <br>
+</noscript><!-- LBE_LITE --></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

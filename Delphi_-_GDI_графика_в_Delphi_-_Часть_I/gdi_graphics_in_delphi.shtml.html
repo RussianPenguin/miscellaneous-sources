@@ -1,0 +1,862 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ <HTML>
+    <HEAD>
+     <STYLE type="text/css">
+     A.black:link {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.black:visited {COLOR: #000000; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.black:hover {COLOR: #FFFFFF; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:link {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:visited {COLOR: #0441A6; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} A.blue:hover {COLOR: #2776FA; TEXT-DECORATION: none;FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt} .b {text-decoration: none; color:#FF0000;}  .b:hover {color:#7785FF;} .c {text-decoration: none; color:#000000;}  .c:hover {color:#FFFFFF;}  pre {color: blue;} PRE.a {color: black;} TD.colon {COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt} </STYLE>
+     <META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+     <META content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" name="keywords">
+     <META NAME="RESOURCE-TYPE" CONTENT="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx">
+     <TITLE>
+    Информационный сервер для программистов - исходники со всего света.</TITLE>
+   </HEAD>
+    <BODY topmargin="0" leftmargin="0" marginwidth="0" marginheigth="0" bgcolor=white>
+      <FORM action="http://www.sources.ru/cgi-bin/sources/search/search.cgi" method="get" align="left">
+         <INPUT type="hidden" name="stpos" value="0">
+           <TABLE border="0" cellpadding="0"   cellspacing="0" width="750">
+	     <TR>
+	       <TD valign="top" rowspan="2">
+	    	 <TABLE border="0" cellpadding="0" cellspacing="0" width="287">
+	           <TR>
+		     <TD colspan="2" bgcolor="#A5E4A7" valign="middle" align="center">
+		     <B>WWW.ИСХОДНИКИ.РУ</B>
+		     </TD>
+		     <TD bgcolor="#000080" valign="middle" align="center">
+		     <B><FONT face="Tahoma" style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    cpp.sources.ru</FONT>
+		  </B>
+		</TD>
+	               </TR>
+	               <TR>
+		           <TD bgcolor="#000080" valign="middle" align="center">
+		  <B>
+		    <FONT face="Tahoma"           style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    java.sources.ru</FONT>
+		  </B>
+		</TD>
+		           <TD bgcolor="#C0C0C0" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    web.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#A5E4A7" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    soft.sources.ru</B>
+		  </FONT>
+		</TD>
+	               </TR>
+	               <TR>
+		           <TD bgcolor="#C0C0C0" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    jdbc.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#A5E4A7" valign="middle" align="center">
+		  <FONT face="Tahoma"           style="font-size: 8pt" size="-1">
+		    <B>
+		    asp.sources.ru</B>
+		  </FONT>
+		</TD>
+		           <TD bgcolor="#000080" valign="middle" align="center">
+		  <B>
+		    <FONT face="Tahoma"           style="font-size: 8pt" size="-1" color="#FFFFFF">
+		    api.sources.ru</FONT>
+		  </B>
+		</TD>
+	      </TR>
+	    </TABLE>
+	    <TABLE border="0" cellpadding="0" cellspacing="0" width="100%">
+	      <TR>
+		<TD>
+		  <FONT style="font-size: 8pt" size="2" face="Tahoma">
+		    &nbsp; Поиск по           программированию :<BR>
+		             </FONT>
+		  &nbsp; <INPUT type="text" size="13" name="query">
+		   <INPUT type="submit"           value="Поиск">
+		  <FONT size="1">
+		    <INPUT TYPE="Radio" NAME="stype" VALUE="AND" checked>
+		    &quot;AND&quot; <INPUT TYPE="Radio"           NAME="stype" VALUE="OR">
+		  &quot;OR&quot;</FONT>
+
+<!--TopList COUNTER--><a target=_top
+href="http://top.list.ru/jump?from=89876"><script language="JavaScript"><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=89876;t=57"
+border=0 height=1 width=1
+alt="TopList"></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')//--></script></a><!--TopList COUNTER-->
+
+
+<a href="http://counter.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?163871" alt="Rambler's Top100" width=1 height=1 border=0></a>
+
+<!-- SpyLOG f:0211 --> 
+<script language="javascript"> 
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ 
+"&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></script><noscript> 
+<a href="http://u1624.10.spylog.com/cnt?f=3&p=1" target=_blank> 
+<img src="http://u1624.10.spylog.com/cnt?p=1" alt='SpyLOG' border='0' width=1 height=1 > 
+</a></noscript><script language="javascript1.2"><!-- 
+if(!n) { d.write("--"+">"); }//--></script> 
+<!-- SpyLOG -->
+
+
+
+<!-- HotLog -->
+<script language="javascript">
+hotlog_js="1.0";hotlog_d=document; hotlog_n=navigator;hotlog_rn=Math.random();
+hotlog_n_n=(hotlog_n.appName.substring(0,3)=="Mic")?0:1;
+hotlog_r=""+hotlog_rn+"&s=14399&r="+escape(hotlog_d.referrer)+"&pg="+
+escape(window.location.href);
+hotlog_d.cookie="hotlog=1"; hotlog_r+="&c="+(hotlog_d.cookie?"Y":"N");
+hotlog_d.cookie="hotlog=1; expires=Thu, 01-Jan-70 00:00:01 GMT"</script>
+<script language="javascript1.1">
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</script>
+<script language="javascript1.2">
+hotlog_js="1.2";hotlog_s=screen;
+hotlog_r+="&wh="+hotlog_s.width+'x'+hotlog_s.height+"&px="+((hotlog_n_n==0)?
+hotlog_s.colorDepth:hotlog_s.pixelDepth)</script>
+<script language="javascript1.3">hotlog_js="1.3"</script>
+<script language="javascript">hotlog_r+="&js="+hotlog_js;
+hotlog_d.write("<img src=\"http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&\" border=0 width=1 height=1>")</script>
+<noscript><img src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=14399" border=0 
+width=1 height=1></noscript>
+<!-- /HotLog -->
+
+		 </TD>
+	       </TR>
+	     </TABLE>
+	   </TD>
+	   <TD align="center">
+	     <A class=blue href="http://pascal.sources.ru/cd/index.htm">
+	     <IMG border=0 height=14 width=14 src="cd000000.gif">
+	     <B>Все исходники с сайта на компакт-диске!</B>
+	     <!-- <font style="font-size: 15pt" color="#4904B1" size="4" face="Times New Roman">
+             Информационный сервер</FONT>
+	     -->
+       </TD>
+     </TR>
+     <TR>
+         <TD>
+
+
+
+
+  <!-- SCALA
+      <A href=http://bs.boro.ru/click.php?bs=996 target=_blank>
+      <IMG src=http://www.sources.ru/scala5.gif width=468 height=60 border=0 alt="Всемирный разработчик и поставщик программного обеспечения по управлению бизнесом, финансами и производством для местных и международных компаний.">
+    </A>
+    <BR>
+   SCALA -->
+
+
+
+ <!-- БАННЕР IMHO
+   <a href="http://santa.imho.ru/click.ng/impt=imp&place=sources468x60&id=280404" target="_blank">
+    <IMG src="http://santa.imho.ru/image.ng/impt=imp&place=sources468x60&id=280404" width=468 height=60 border=0>
+</A>
+    БАННЕР IMHO -->
+
+
+
+
+   <!-- БАННЕР TBN -->
+
+ 	<CENTER>
+ <SCRIPT language='JavaScript'>
+ var loc = ''; </SCRIPT>
+ <SCRIPT language='JavaScript1.4'>
+try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+ <SCRIPT language='JavaScript'>
+  document.write("<SC"+"RIPT language='JavaScript' src='http://ad.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2845047&pg=2&r=js&ssi=nofillers&vbn=188&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>"); </SCRIPT>
+ </CENTER>
+ <CENTER>
+  <FONT SIZE=1>
+    <A HREF="http://www.tbn.ru/" target = "_top" >
+    TBN.ru - СЕТЬ, ЖИВУЩАЯ ПО ПРАВИЛАМ</A>
+  </FONT>
+</CENTER>
+<!-- БАННЕР TBN-->
+
+
+
+           </TD>
+     </TR>
+     <TR>
+         <TD colspan="2">
+    <TABLE border="0" cellpadding="0" cellspacing="1" width="100%">
+               <TR>
+	           <TD align="center" width="11%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/index.html">
+	    <FONT color="#000000" size="2">
+	    На главную</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="20%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/subscribe.shtml">
+	    <FONT color="#000000" size="2">
+	    Подписаться на новости</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="11%" bgcolor="#E0E0C6">
+	  <A href="http://forum.sources.ru/">
+	    <FONT color="#000000" size="2">
+	    Форум</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="9%" bgcolor="#E0E0C6">
+	  <A href="http://www.sources.ru/books/index.html">
+	    <FONT color="#000000" size="2">
+	    Книги</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="9%" bgcolor="#E0E0C6">
+	  <A href="http://www.titl.ru/">
+	    <FONT color="#000000" size="2">
+	    Хостинг</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="13%" bgcolor="#E0E0C6">
+	  <A href="http://www.countries.ru/">
+	    <FONT color="#000000" size="2">
+	    Страны мира</FONT>
+	  </A>
+	</TD>
+	           <TD align="center" width="29%" bgcolor="#E0E0C6">
+	  <b>12</b> пользователей на сервере.
+
+	</TD>
+               </TR>
+           </TABLE>
+         </TD>
+     </TR>
+   </TABLE>
+ </FORM>
+
+<!-- ТЕКСТОВЫЙ БАННЕР CERTIFICATION   <center>
+ <TABLE border="1" width="322" cellspacing="0">
+     <TR>
+         <TD width="318">
+      <SMALL>
+	<FONT face="Arial">
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <B>
+	  Сертификация специалистов</B>
+	  <BR>
+	       - Как устроиться на высокооплачиваемую работу ?<BR>
+	       - Как получить прибавку к зарплате ?<BR>
+	       - Как завоевать уважение коллег ?<BR>
+	       - <A href="http://www.certifications.ru" target="_blank">
+	  Пройти     сертификацию</A>
+	   и продемонстрировать<BR>
+	       &nbsp;&nbsp; свой профессионализм. <A href="http://www.certifications.ru/about/whatgives.php" target="_blank">
+	  Подробнее...</A>
+	</FONT>
+      </SMALL>
+    </TD>
+     </TR>
+ </TABLE>
+ </CENTER>
+ТЕКСТОВЫЙ БАННЕР CERTIFICATION --> 
+
+<div align="center"><center>
+
+<table width="680" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><hr>
+    <h3>GDI: графика в Delphi - Часть I.</h3>
+    <p>Автор: <a href="mailto:akeys@icscotland.net">Alistair Keys</a></p>
+    <p>&nbsp;&nbsp;<b><font color="#000080">Жаргон GDI.</font></b><br>
+    GDI расшифровывается как Graphics Device Interface, и
+    представляет собой интерфейс, который Windows
+    использует для рисования 2D графики. Также это
+    самый медленный способ отображения графики из
+    существующих, однако самый простой для понимания
+    основ. Итак, для начала, поговорим об основных
+    понятиях и терминах в GDI.</p>
+    <p>Начнём с того, что GDI обычно не используют для
+    создания крутых графических эффектов, для этого
+    есть DirectX, OpenGL, или любые графические библиотеки
+    (такие как: DelphiX, FastLib, DIBUltra, Graphics32...). Однако, для
+    создание простых эффектов с минимальными
+    усилиями GDI вполне сгодится.</p>
+    <p>С GDI тесно связана ещё одна аббревиатура - DC
+    (&quot;Device Context&quot; - контекст устройства). Это то, на
+    чём мы рисуем, и в Delphi контекст устройства
+    представлен как TCanvas. Идея контекста устройства
+    заключается в том, что это универсальное
+    устройство вывода, поэтому можно использовать
+    одинаковые функции как для экрана, так и для
+    принтера.</p>
+    <p>Все графические функции в Delphi являются
+    надстройками над стандартными GDI функциями Windows.
+    Позже мы поговорим об этих функциях.</p>
+    <p>А теперь самое время приступить к рассмотрению
+    того, как устроен GDI. Ниже, в таблице, представлены
+    некоторые важные классы:</p>
+    <table cellSpacing="1" cellPadding="2" width="100%" bgColor="#000000" border="0">
+<TBODY>
+      <tr bgColor="#808080">
+        <td><b><font size="-1">ИМЯ</font></b></td>
+        <td><b><font size="-1">ОПИСАНИЕ</font></b></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><b><font size="-1">Pen</font></b></td>
+        <td><font size="-1">Используется для рисования простых
+        линий. Обычно применяется для функции LineTo или при
+        рисовании рамки для определённой фигуры
+        (например для функции Rectangle).</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>Brush</b></font></td>
+        <td><font size="-1">Кисть используется для заполнения
+        области определённым цветом. Применяется в
+        функциях Rectangle, FillRect или FloodFill.</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>Font</b></font></td>
+        <td><font size="-1">Используется для задания шрифта,
+        которым будет нарисован текст. Можно указать имя
+        шрифта, размер и т.д.</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>Region</b></font></td>
+        <td><font size="-1">Позволяет задать регион (замкнутое
+        пространство). Регионом может быть круг, квадрат
+        или произвольная фигура. Позволяет так же делать
+        дырки в фигурах.</font></td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Однако, пора переходить от слов к делу, а именно,
+    начать рисовать линии и фигуры.</p>
+    <p>&nbsp;&nbsp;&nbsp;<b><font color="#000080">Рисование линий</font></b></p>
+    <p>Сперва необходимо чётко уяснить, что
+    координата <i>(0,0) это верхний левый угол экрана</i>.
+    То есть значения по <i>оси y увеличиваются вниз
+    экрана</i>. Соответственно, координата (0, 50)
+    означает, что мы просто отступили на 50 пикселей
+    от верха экрана.</p>
+    <p>Самое главное, что надо знать при рисовании
+    линий и фигур, это различие между пером (Pen) и
+    кистью (Brush). Всё очень просто: перо (Pen)
+    используется при рисовании линий или рамок, а
+    кисть (Brush) для заполнения фигуры.</p>
+    <p>Ниже приведены две функции, которые
+    используются для рисования линий и обе
+    принадлежат TCanvas: </p>
+    <table cellSpacing="1" cellPadding="2" width="400" bgColor="#000000" border="0">
+<TBODY>
+      <tr bgColor="#808080">
+        <td><b><font size="-1">ИМЯ</font></b></td>
+        <td><b><font size="-1">ОПИСАНИЕ</font></b></td>
+        <td><b><font size="-1">ПРИМЕР</font></b></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><b><font size="-1">MoveTo</font></b></td>
+        <td><font size="-1">Перемещает точку начала рисования
+        линии в указанные координаты x и y</font></td>
+        <td><font size="-1">Canvas.MoveTo(50, 100);</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>LineTo</b></font></td>
+        <td><font size="-1">Рисует линию начиная с текущей
+        позиции (см. MoveTo) до указанных координат x и y.</font></td>
+        <td><font size="-1">Canvas.LineTo(50, 100);</font></td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Эффект перемещения точки начала рисования
+    линии так же достигается при помощи установки
+    своства PenPos в канвасе... например, &quot;Canvas.PenPos.x :=
+    20;&quot;, &quot;Canvas.PenPos.y := 50&quot;, или &quot;Canvas.PenPos :=
+    Point(20,50);&quot;.</p>
+    <p>По умолчанию, точка начала рисования
+    установлена в (0,0), то есть, если сразу вызвать
+    &quot;Canvas.LineTo(100,100);&quot; то будет нарисована линия из
+    точки (0,0) в точку (100, 100). Точка начала рисования
+    автоматически переместится в (100, 100), то есть, если
+    выполнить команду &quot;Canvas.LineTo(200, 100);&quot;, то
+    следующая линия будет нарисована из точки (100, 100)
+    в (200, 100). Поэтому, если мы хотим рисовать линии
+    несоединённые друг с другом, то придётся
+    воспользоваться методом MoveTo.</p>
+    <p>Линия, нарисованная при помощи LineTo использует
+    текущее перо канваса (типа TPen). Основные свойства
+    пера, это ширина - &quot;Canvas.Pen.Width := 4;&quot; (при помощи
+    которого можно задавать различную ширину линий),
+    и цвет &quot;Canvas.Pen.Color := clLime;&quot;.</p>
+    <p>Взглянем на простой пример беспорядочного
+    рисования разноцветных линий:</p>
+    <p>&nbsp;</p>
+    <table width="100%" bgColor="#ffffcc" border="1">
+<TBODY>
+      <tr>
+        <td><pre><b>procedure</b> TForm1.FormCreate(Sender: TObject);
+<b>begin</b>
+  <i><font
+color="navy">// инициализируем генератор</font></i>
+  <i><font color="navy">// случайных чисел</font></i>
+  Randomize;
+<b>end</b>;
+
+<b>const</b> NUM_LINES = 2000;
+
+<b>procedure</b> TForm1.DrawLines;
+<b>var</b>
+  i: Integer;
+<b>begin</b>
+  <b>for</b> i := 0 <b>to</b> NUM_LINES - 1 <b>do</b>
+  <b>begin</b>
+    Canvas.Pen.Color :=
+         RGB(Random(256),
+             Random(256),
+             Random(256)
+             );
+    Canvas.LineTo
+       (Random(ClientWidth),
+        Random(ClientHeight));
+  <b>end</b>;
+<b>end</b>;
+</pre>
+        </td>
+      </tr>
+</TBODY>
+    </table>
+    <p>&nbsp;</p>
+    <p>Процедура DrawLines вызывается из обработчика
+    кнопки OnClick. Количество линий задаётся в
+    константе NUM_LINES. Между прочим, функция RGB,
+    составляет цвет каждой линии из трёх основных
+    составляющих: красного, зелёного и синего
+    (значения от 0 до 255) и возвращает нам цвет в виде
+    TColor. О цветах поговорим немного позже, а вот так
+    выглядит нарисованный пейзаж:</p>
+    <p align="center"><img height="264" src="gdi10000.gif" width="318"></p>
+    <p><br>
+    Теперь, когда линии нарисованы, попробуйте
+    немножко подвигать форму. Если форму переместить
+    за края экрана, то Вы увидите, что линии частично
+    стёрлись. Это не глюк, и решается эта проблема
+    очень просто. Но не сейчас ;-). Сперва посмотрим,
+    как рисовать различные фигуры.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;&nbsp;<b><font color="#000080">Рисование фигур</font></b></p>
+    <p>Для рисования фигур, в TCanvas предусмотрены
+    следующие функции:</p>
+    <table cellSpacing="1" cellPadding="2" width="400" bgColor="#000000" border="0">
+<TBODY>
+      <tr bgColor="#808080">
+        <td><b><font size="-1">ИМЯ</font></b></td>
+        <td><b><font size="-1">ОПИСАНИЕ</font></b></td>
+        <td><b><font size="-1">ПРИМЕР</font></b></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><b><font size="-1">Ellipse</font></b></td>
+        <td><font size="-1">Рисует элипс, вписанный в невидимый
+        квадрат с координатами верхнего левого угла и
+        правого нижнего. Если координаты х и y у углов
+        будут совпадать, то получится круг.</font></td>
+        <td><font size="-1">Canvas.Ellipse(0,0,50,50);</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>FillRect</b></font></td>
+        <td><font size="-1">Заполняет прямоугольник цветом
+        текущей кисти (brush), но никак не за пределами него.</font></td>
+        <td><font size="-1">Canvas.FillRect( Bounds(0,0,100,100));</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>FloodFill</b></font></td>
+        <td><font size="-1">Заполняет данную область цветом
+        текущей кисти, до тех пор пока не будет достигнут
+        край.</font></td>
+        <td><font size="-1">Canvas.FloodFill(10, 10, clBlack, fsBorder);</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>Rectangle</b></font></td>
+        <td><font size="-1">Рисует прямоугольник (или квадрат),
+        заполненный цветом текущей кисти и обрамлённый
+        цветом текущего пера</font></td>
+        <td><font size="-1">Canvas.Rectangle( Bounds(20, 20, 50, 50));</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>RoundRect</b></font></td>
+        <td><font size="-1">Тоже, что и Rectangle, но с загруглёнными
+        углами.</font></td>
+        <td><font size="-1">Canvas.RoundRect( 20, 20, 50, 50, 3, 3);</font></td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Ещё есть очень нужная функция TextOut, которая
+    позволяет рисовать текст, используя шрифт,
+    заданный в канвасе:</p>
+    <table cellSpacing="1" cellPadding="2" width="400" bgColor="#000000" border="0">
+<TBODY>
+      <tr bgColor="#808080">
+        <td><b><font size="-1">ИМЯ</font></b></td>
+        <td><b><font size="-1">ОПИСАНИЕ</font></b></td>
+        <td><b><font size="-1">ПРИМЕР</font></b></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><b><font size="-1">TextOut</font></b></td>
+        <td><font size="-1">Рисует данную строку на канвасе
+        начиная с координат (x,y) - фон текста заполняется
+        текущим цветом кисти.</font></td>
+        <td><font size="-1">Canvas.TextOut(10, 10, 'Some text');</font></td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Кстати, функция позволяет рисовать текст, не
+    заполняя его фон. Если Вам необходимо изменить
+    шрифт, используемый в TextOut, то необходимо
+    изменить свойство Font канваса (это свойство имеет
+    тип TFont) - например &quot;Canvas.Font.Name := 'Verdana';&quot;,
+    &quot;Canvas.Font.Size := 24;&quot; или &quot;Canvas.Font.Color := clRed;&quot;.</p>
+    <p>Вкратце хотелось бы обратить Ваше внимание на довольно
+    полезный класс TRect, который умеет хранить в себе
+    значения лево, право, верха и низа (кстати, в Windows
+    API это RECT). То ест, достаточно указать левую и
+    верхнюю координату и ширину и высоту области, а
+    TRect автоматически подставит в виде (лево, верх,
+    лево + ширина, верх + высота). Ещё есть другая
+    функция Rect(), которая делает тоже самое, но
+    координаты в ней задаются напрямую как лево,
+    право, верх и низ. Ну и по желанию, можно
+    использовать API функцию SetRect.</p>
+    <p>Ниже представлен пример, который рисует
+    случайным образом различные фигуры:</p>
+    <p>&nbsp;</p>
+    <table width="100%" bgColor="#ffffcc" border="1">
+<TBODY>
+      <tr>
+        <td><pre><b>const</b> NUM_SHAPES = 200;
+
+<b>procedure</b> TForm1.DrawShapes;
+<b>var</b>
+  i,
+  ShapeLeft,
+  ShapeTop: Integer;
+<b>begin</b>
+  <b>for</b> i := 0 <b>to</b> NUM_SHAPES - 1 <b>do</b>
+  <b>begin</b>
+    Canvas.Brush.Color :=
+       RGB(Random(256),
+           Random(256),
+           Random(256));
+    ShapeLeft := Random(ClientWidth);
+    ShapeTop := Random(ClientHeight);
+    <i><font
+color="navy">// теперь, случайным образом, решаем что рисовать</font></i>
+    <b>case</b> Random(3) <b>of</b>
+      0: Canvas.Rectangle(ShapeLeft,
+                          ShapeTop,
+                          ShapeLeft + Random(50),
+                          ShapeTop + Random(50));
+      1: Canvas.Ellipse(ShapeLeft,
+                        ShapeTop,
+                        ShapeLeft + Random(50),
+                        ShapeTop + Random(50));
+      2: <b>begin</b>
+           Canvas.Font.Size := 10 + Random(7); <i><font
+color="navy">// от 10 до 16</font></i>
+           Canvas.TextOut ( ShapeLeft, ShapeTop, <font
+color="blue">'Some text'</font>);
+         <b>end</b>;
+    <b>end</b>;
+  <b>end</b>;
+<b>end</b>;
+</pre>
+        </td>
+      </tr>
+</TBODY>
+    </table>
+    <p>&nbsp;</p>
+    <p align="center"><img height="264" src="gdi20000.gif" width="318"> </p>
+    <p>Как Вы уже успели заметить, некоторые фигурки
+    имеют цвет рамки, отличающийся от того цвета,
+    которым заполнена фигура. Это как раз тот момент,
+    о котором я упоминал выше. Кистью мы заполняем
+    объекты, а пером обрамляем. Если цвет кисти (brush)
+    меняется случайным образом, то цвет пера(pen)
+    остаётся постоянным. Из-за этого и получается
+    такая картина.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;<b><font color="#000080">Перерисовка окна</font></b><br>
+    Теперь давайте разберёмся, почему в самом первом
+    примере у нас стирались линии при перемещении
+    формы за границы экрана. А именно, нам нужно
+    выяснить разницу между &quot;рисованием&quot; и
+    &quot;перерисовкой&quot;.</p>
+    <p><b>Рисование</b>, это то, что мы делали выше. То
+    есть, рисовали любые линии и графические фигуры.
+    Однако, рисунок сохранялся до тех пор, пока
+    окно(форма) не было обновлено.</p>
+    <p><b>Перерисовка</b> несколько отличается от
+    понятия &quot;рисование&quot;. Когда окну необходимо
+    перерисоваться, то Windows посылает определённое
+    сообщение. Это сообщение поступает в обработчик
+    события &quot;OnPaint&quot;. Любой код, который поместить
+    в обработчик OnPaint будет вызван каждый раз, когда
+    форме необходимо обновиться.</p>
+    <p>Для примера, поместите следующий код в проект:</p>
+    <p>&nbsp;</p>
+    <table width="100%" bgColor="#ffffcc" border="1">
+<TBODY>
+      <tr>
+        <td><pre><b>procedure</b> TForm1.DrawSomeText;
+<b>begin</b>
+  Canvas.TextOut(10, 10, <font
+color="blue">'Some text'</font>);
+<b>end</b>; 
+</pre>
+        </td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Если поместить на форму кнопку и вызывать
+    DrawSomeText из обработчика кнопки OnClick, то проблема с
+    исчезновением текста при перемещении формы
+    останется. ОДНАКО, если вызвать DrawSomeText из
+    обработчика формы OnPaint, то текст останется на
+    своём месте окончательно.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;<b><font color="#000080">Дескрипторы, или как
+    пользоваться аналогичными API функциями</font></b></p>
+    <p>Итак, мы научились рисовать линии, различные
+    фигуры, научились делать так, чтобы наше творение
+    не стиралось при перемещении формы, и проделали
+    мы всё это при помощи стандартных функций VCL
+    (таких как Canvas.TextOut и т.д.). Однако, что делать, если
+    Вы не хотите пользоваться графическими
+    функциями VCL, которые всего навсего являются
+    надстройками над аналогичными функциями из Windows
+    API? Пожалуйста! Никто нам не запрещает
+    пользоваться API функциями напрямую! Но
+    постойте-ка, все они требуют какого-то HDC! Что
+    такое HDC?</p>
+    <p>Почти всё в Windows использует &quot;Дескриптор&quot;
+    (Handle). Дескриптор, это способ идентификации
+    Вашего объекта в системе. У каждого окна есть
+    свой дескриптор, у каждой кнопки тоже есть свой
+    дескриптор и т.д. Именно поэтому все наши объекты
+    имеют дескриптор в качестве свойства - например,
+    &quot;MyForm.Canvas.Handle&quot;.</p>
+    <p>Тип HDC это Дескриптор(Handle) Контекста Устройства
+    (Device Context). Я уже говорил в самом начале, что TCanvas
+    включает в себя большинство функций DC. Поэтому,
+    мы спокойно можем подставлять свойство канваса
+    Handle везде, где нам это потребуется.</p>
+    <p>Ради интереса можно взглянуть на таблицу, в
+    которой представлены примеры вызовов некоторых
+    функций из VCL и их аналогов из Windows API.</p>
+    <p>&nbsp;</p>
+    <table cellSpacing="1" cellPadding="2" width="100%" bgColor="#000000" border="0">
+<TBODY>
+      <tr bgColor="#808080">
+        <td><b><font size="-1">VCL</font></b></td>
+        <td><b><font size="-1">WINDOWS API</font></b></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><b><font size="-1">Canvas.TextOut(x,y,myString);</font></b></td>
+        <td><font size="-1">TextOut(Canvas.Handle, x, y, PChar(myString), Length(String));</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>Canvas.FloodFill(X, Y, Color,fsBorder);</b></font></td>
+        <td><font size="-1">ExtFloodFill(Canvas.Handle, x, y, YourColour, FLOODFILLBORDER);</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>Canvas.LineTo(x,y);</b></font></td>
+        <td><font size="-1">LineTo(Canvas.Handle, x, y);</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>Canvas.MoveTo(x,y);</b></font></td>
+        <td><font size="-1">MoveToEx(Canvas.Handle, x, y, nil);</font></td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Так же можно использовать разные дескрипторы,
+    чтобы рисовать в разных местах. Например, можно
+    использовать &quot;SomeBmp.Canvas.Handle&quot; для рисования на
+    картинке (битмапе), либо &quot;Form1.Canvas.Handle&quot;, чтобы
+    рисовать на форме.</p>
+    <p>В API версии функции TextOut необходимо передавать
+    строку завершённую нулём. Это значит, что вместо
+    того, чтобы передать строку в функцию напрямую,
+    необходимо передать её как PChar. Так же не
+    забывайте передавать в функцию длину строки. Для
+    этого можно воспользоваться функцией Length.</p>
+    <p>Ну что, Вам уже захотелось поместить на форму
+    какую-нибудь красивую картинку ?</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;<b><font color="#000080">Что такое Битмапы (Bitmaps)?</font></b><br>
+    Рисование линий, это, конечно, хорошо, но&nbsp; рано
+    или поздно Вам понадобится нарисовать более
+    реалистичную картнику в своём приложении.
+    Поэтому совершенно необходимо научиться
+    работать с растровыми изображениями, или как их
+    называют в среде программистов - битмапами.</p>
+    <p>Битмап, это графический объект, который
+    содержит заголовок, необходимую информацию о
+    картинке (такую как высота, ширина, цвета и т.д.) и,
+    собственно, само изображение (большой массив,
+    содержащий цвет каждой точки). В Delphi для этой цели
+    уже предусмотрен класс TBitmap.</p>
+    <p>Битмапы можно рисовать не только на форме, но и
+    по всему экрану. Может это и может показаться
+    немного странным, но иногда это бывает полезно,
+    особенно при создании скринсейвера. Однако,
+    сначала нам необходимо разобраться с тем, как
+    работать с битмапами. Вот небольшой пример:</p>
+    <p>&nbsp;</p>
+    <table width="100%" bgColor="#ffffcc" border="1">
+<TBODY>
+      <tr>
+        <td><pre><b>procedure</b> Form1.DrawBitmap(<b>const</b> Filename: <b>String</b>; <b>const</b> x,y: Integer);
+<b>var</b>
+  Bmp: TBitmap;
+<b>begin</b>
+  <i><font
+color="navy">// Сперва убедимся, что файл существует!</font></i>
+  <b>if</b> <b>not</b> FileExists(Filename) <b>then</b>
+  <b>begin</b>
+    ShowMessage(<font
+color="blue">'The bitmap '</font> + Filename + <font color="blue">' was not found!'</font>);
+    Exit;
+  <b>end</b>;
+
+  Bmp := TBitmap.Create;
+  <b>try</b>
+    Bmp.LoadFromFile(Filename);
+    Canvas.Draw(x, y, Bmp);
+  <b>finally</b>
+    Bmp.Free;
+  <b>end</b>;
+<b>end</b>; 
+</pre>
+        </td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Эта функция пытается загрузить и показать
+    картинку, (с именем Filename, например 'myBitmap.bmp')
+    начиная с точки (x,y).</p>
+    <p>Сразу скажу, что эта функция довольно
+    неэффективна. Она создаёт и уничтожает битмап
+    каждый раз когда вызывается, а так же каждый раз
+    проверяет существование файла. Лучше объявлять
+    объект TBitmap как часть формы, создавать и
+    загружать картинку в FormCreate, а освобождать её в
+    FormDestroy.</p>
+    <p>&nbsp;&nbsp;&nbsp;<b><font color="#000080">Функции рисования в GDI</font></b><br>
+    TCanvas имеет несколько полезных функций, которые
+    работают с типом TGraphic. Тип TGraphic является базовым
+    классом для графических объектов в Delphi, таких
+    как: битмапы (TBitmap), иконки (TIcon), метафайлы (TMetafile) и
+    JPEG-и (TJPEGImage). Все они используют одни и те же
+    функции, которые приведены в таблице:</p>
+    <p>Все эти функции являются методами TCanvas.</p>
+    <table cellSpacing="1" cellPadding="2" width="100%" bgColor="#000000" border="0">
+<TBODY>
+      <tr bgColor="#808080">
+        <td><b><font size="-1">ИМЯ</font></b></td>
+        <td><b><font size="-1">ОПИСАНИЕ</font></b></td>
+        <td><b><font size="-1">ПРИМЕР ИСПОЛЬЗОВАНИЯ</font></b></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><b><font size="-1">Draw</font></b></td>
+        <td><font size="-1">Рисует TGraphic на канвасе так как он есть,
+        не растягивая.</font></td>
+        <td><font size="-1">Canvas.Draw(5,10,MyGraphic);</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>StrechDraw</b></font></td>
+        <td><font size="-1">Рисует TGraphic на канвасе, подгоняя
+        (растягивая) его под заданную область.</font></td>
+        <td><font size="-1">Canvas.StretchDraw( Bounds(0,0,32,32), MyGraphic);</font></td>
+      </tr>
+      <tr bgColor="#ffffff">
+        <td><font size="-1"><b>CopyRect</b></font></td>
+        <td><font size="-1">Копирует часть TCanvas-а в другой, при
+        необходимости растягивая его.</font></td>
+        <td><font size="-1">Canvas.CopyRect( Bounds(0,0,32,32), MyBmp.Canvas, Bounds(0, 0, 640,
+        480));</font></td>
+      </tr>
+</TBODY>
+    </table>
+    <p>TCanvas.Draw является обёрткой для API функции BitBlt:</p>
+    <p>&nbsp;</p>
+    <table width="100%" bgColor="#ffffcc" border="1">
+<TBODY>
+      <tr>
+        <td><pre><b>function</b> BitBlt(
+  hdcDest: HDC;     <i><font color="navy">// дескриптор конечного контекста устройства</font></i>
+  nXDest,         <i><font
+color="navy">// коорд. x верхнего левого угла конечного прямоугольника</font></i>
+  nYDest,         <i><font
+color="navy">// коорд. y верхнего левого угла конечного прямоугольника</font></i>
+  nWidth,           <i><font
+color="navy">// ширина конечного прямоугольника</font></i>
+  nHeight: Integer; <i><font
+color="navy">// высота конечного прямоугольника</font></i>
+  hdcSrc: HDC;      <i><font
+color="navy">// дескриптор исходного контекста устройства</font></i>
+  nXSrc,          <i><font
+color="navy">// коорд. x верхнего левого угла исходного прямоугольника</font></i>
+  nYSrc: Integer; <i><font
+color="navy">// коорд. y верхнего левого угла исходного прямоугольника</font></i>
+  dwRop: DWORD      <i><font
+color="navy">// код растровой операции</font></i>
+): Boolean; 
+</pre>
+        </td>
+      </tr>
+</TBODY>
+    </table>
+    <p>Описанный выше способ позволяет рисовать
+    битмап в run-time. Конечно, проще поместить на форму
+    TImage и установить в ней картинку. Изображение
+    будет постоянно оставаться на том месте, где Вы
+    его поместили, но это скучно ;-). Куда интереснее
+    сделать при помощи битмапов анимацию.</p>
+    <p>С другой стороны, поняв принципы работы с
+    битмапами, Вам будет легче перейти к другим
+    графическим библиотекам (например DirectX).</p>
+    <p>&nbsp;</p>
+    <p>Продолжение следует ...</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+</center></div>
+
+
+<div align="center">
+<hr width="700">
+
+<SCRIPT language='JavaScript'> var loc = ''; </SCRIPT>
+<SCRIPT language='JavaScript1.4'>try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+<SCRIPT language='JavaScript'>
+ document.write("<SC"+"RIPT language='JavaScript' src='http://ad.strict.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2850676&pg=3&r=js&ssi=nofillers&vbn=353&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>");
+</SCRIPT>
+</div>
+</body>
+</html>
+
+<!-- This document saved from http://www.sources.ru/delphi/graphics/gdi_graphics_in_delphi.shtml -->
