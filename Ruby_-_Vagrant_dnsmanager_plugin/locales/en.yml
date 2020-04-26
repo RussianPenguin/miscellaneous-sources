@@ -1,0 +1,8 @@
+en:
+  vagrant_dnsmanager:
+    action:
+      update: "[vagrant-dnsmanager:guests] Updating dns records for active virtual machines..."
+    config:
+      not_a_bool: "[vagrant-dnsmanager:config:error] A value for %{config_key} can only be true or false, not type '%{value}'"
+      not_an_array_or_string: "[vagrant-dnsmanager:config:error] A value for %{config_key} must be an Array or String, not type '%{is_class}'"
+      not_a_proc: "[vagrant-dnsmanager:config:error] A value for %{config_key} must be a Proc, not type '%{is_class}'"
