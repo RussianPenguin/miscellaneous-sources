@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://bookmarkFinder/skin/skin.css" type="text/css"?>
+<!DOCTYPE bookmarkFinder SYSTEM "chrome://bookmarkFinder/locale/translations.dtd">
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+		<script src="bookmarkFinderInit.js" />
+
+		<menupopup id="menu_ToolsPopup">
+			<menuitem label="&exportbookmarkstocsv;" key="bookmark-finder-run-key" oncommand="bookmarkFinder.run()"/>
+		</menupopup>
+
+		<keyset>
+			<key id="bookmark-finder-run-key" modifiers="accel alt shift" key="L" oncommand="bookmarkFinder.run()"/>
+		</keyset>
+</overlay>

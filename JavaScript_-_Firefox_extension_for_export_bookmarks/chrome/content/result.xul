@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window
+    id="bokmarkfinder-result-window"
+    title="Export Bookmark to CSV"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="text/javascript">
+		window.addEventListener('load', function(){
+			document.getElementById("bookmarkfinder-result-textbox").value = window.opener.bookmarkFinder.export();
+		}, false);
+
+	</script>
+	<textbox style="heigth:100%" flex="1" multiline="true" id="bookmarkfinder-result-textbox"/>
+</window>
